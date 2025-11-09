@@ -1,0 +1,1128 @@
+{
+  "kind": "Korea marathon",
+  "date": "2025-11-03",
+  "count": 12,
+  "item": [
+    {
+      "name": "2025 MBN 서울마라톤",
+      "slug": "2025-mbn-seoul-marathon",
+      "description": "광화문에서 잠실까지, 서울의 심장을 가로지르는 도심 러닝 축제! 도로 위를 가득 메운 러너들의 열정과 함성이 함께 어우러지는 ‘2025 MBN 서울마라톤’은 서울의 랜드마크를 따라 달리며 완주의 짜릿함을 만끽할 수 있는 대한민국 대표 마라톤 대회입니다.",
+      "scale": 25000,
+      "highlights": ["MBN", "서울"],
+      "registration": {
+        "start": "2025-07-25 00:00",
+        "end": "2025-07-29 00:00",
+        "status": "접수마감",
+        "site": "https://mbn-seoulmarathon.com/ko/reservation/"
+      },
+      "event": {
+        "date": "2025-11-16",
+        "start_time": "08:00"
+      },
+      "location": {
+        "text": "광화문광장",
+        "latitude": 37.572389,
+        "longitude": 126.9769117
+      },
+      "price": {
+        "half": 80000,
+        "10km": 60000
+      },
+      "hosts": {
+        "organizer": "MBN 매일경제",
+        "operator": "",
+        "sponsor": [],
+        "souvenir": ["완주 메달", "MBN 서울마라톤 기념티셔츠"]
+      },
+      "images": {
+        "main": "2025-mbn-seoul-marathon.jpg",
+        "sub": [""]
+      },
+      "contacts": {
+        "home": "https://mbn-seoulmarathon.com",
+        "tel": "",
+        "email": "spomax_marathon@naver.com",
+        "instagram": "mbn_seoulmarathon",
+        "kakao": "https://pf.kakao.com/_wDxnWn"
+      }
+    },
+    {
+      "name": "2025 YTN 서울 투어 마라톤",
+      "slug": "2025-ytn-seoul-tour-marathon",
+      "description": "YTN 서울 투어 마라톤은 YTN을 달리며 YTN의 아름다움을 느끼고, YTN의 자연과 사람들의 삶을 되새기는 마라톤 축제입니다.",
+      "scale": 15000,
+      "highlights": ["YTN", "서울", "광화문"],
+      "registration": {
+        "start": "2025-07-28 11:00",
+        "end": "2025-09-30 17:00",
+        "status": "접수마감",
+        "text": "선착순 마감",
+        "site": "https://run.ytn.co.kr/apply/index02.php"
+      },
+      "event": {
+        "date": "2025-11-23",
+        "start_time": "08:00"
+      },
+      "location": {
+        "text": "광화문광장",
+        "latitude": 37.572389,
+        "longitude": 126.9769117
+      },
+      "price": {
+        "half": 70000,
+        "10km": 60000
+      },
+      "hosts": {
+        "organizer": "YTN",
+        "operator": "YTN 서울투어마라톤 사무국",
+        "sponsor": [
+          "프로스펙스",
+          "유진투자증권",
+          "고려은단",
+          "고려기프트 판촉물",
+          "셀렉스",
+          "포카리 스웨트",
+          "유진홈센터",
+          "머거본",
+          "비비고"
+        ],
+        "souvenir": [
+          "프로스펙스 기념티셔츠",
+          "재클라 스포츠 양말",
+          "고려은단 메가도스 이문샷",
+          "혜민원 진관진프리미엄",
+          "YTN 로고 필기구",
+          "아미노바이탈 아미노셧",
+          "완주 메달",
+          "고려기프트 무릎담요",
+          "위니비니 젤리",
+          "유진샘풀 생수",
+          "동아오츠카 포카리스웨트",
+          "삼다수",
+          "셀렉스프로핏",
+          "아몬드 머거본",
+          "허니버터 아몬드",
+          "바나나"
+        ]
+      },
+      "images": {
+        "main": "2025-ytn-seoul-tour-marathon.jpg",
+        "sub": [""]
+      },
+      "contacts": {
+        "home": "https://run.ytn.co.kr/",
+        "tel": "070-7725-6258",
+        "email": "run.ytn@gmail.com",
+        "instagram": "ytn_marathon",
+        "kakao": ""
+      }
+    },
+    {
+      "name": "2025 인천마라톤",
+      "slug": "2025-incheon-marathon",
+      "description": "2025 인천마라톤은 인천을 달리며 인천의 아름다움을 느끼고, 인천의 자연과 사람들의 삶을 되새기는 마라톤 축제입니다.",
+      "scale": 15000,
+      "highlights": ["인천", "풀코스"],
+      "registration": {
+        "start": "2025-08-13 10:00",
+        "end": "2025-11-23 00:00",
+        "status": "접수마감",
+        "text": "선착순 마감",
+        "site": "https://incheonmarathon.or.kr/entryperson.php"
+      },
+      "event": {
+        "date": "2025-11-23",
+        "start_time": "08:30"
+      },
+      "location": {
+        "text": "인천문학경기장",
+        "latitude": 37.4350619,
+        "longitude": 126.6907212
+      },
+      "price": {
+        "full": 70000,
+        "10km": 40000,
+        "5km": 30000
+      },
+      "hosts": {
+        "organizer": "인천광역시, 대한육상연맹",
+        "operator": "이상커뮤니케이션즈",
+        "sponsor": ["신한은행", "NH농협은행"],
+        "souvenir": ["완주 메달", "기능성 티셔츠", "로브", "양말", "간식"]
+      },
+      "images": {
+        "main": "2025-incheon-marathon.jpg",
+        "sub": [""]
+      },
+      "contacts": {
+        "home": "https://incheonmarathon.or.kr/",
+        "tel": "1866-1718",
+        "email": "isang2025@naver.com",
+        "instagram": "",
+        "kakao": "https://pf.kakao.com/_cxfHxhn"
+      }
+    },
+    {
+      "name": "2025 미니언즈런 부산",
+      "slug": "2025-minions-run-busan",
+      "description": "2025 미니언즈런 부산은 부산을 달리며 부산의 아름다움을 느끼고, 부산의 자연과 사람들의 삶을 되새기는 마라톤 축제입니다.",
+      "scale": 7000,
+      "highlights": ["부산", "미니언즈"],
+      "registration": {
+        "start": "2025-11-13 10:00",
+        "end": "",
+        "status": "접수대기",
+        "text": "선착순 마감",
+        "site": "https://brand.naver.com/universalkorea/products/12579512421"
+      },
+      "event": {
+        "date": "2025-11-23",
+        "start_time": "09:00"
+      },
+      "location": {
+        "text": "삼락생태공원",
+        "latitude": 35.1687484,
+        "longitude": 128.9735403
+      },
+      "price": {
+        "10km": 75000,
+        "5km": 70000
+      },
+      "hosts": {
+        "organizer": "미니언즈런",
+        "operator": "에스브리지픽쳐스",
+        "sponsor": ["신한카드", "네이버 스토어", "네이버", "삼성 헬스"],
+        "souvenir": [
+          "완주 메달",
+          "미니언즈 기념티셔츠",
+          "팀 미니언즈 가방과 넘버 카드",
+          "미니언즈 헤드밴드",
+          "아이헤이트먼데이 미니언즈 러닝삭스",
+          "미니언즈 리유저블백",
+          "간식보감 미니뻥즈",
+          "풀무원 비타미니즈",
+          "동아제약 박카스",
+          "만전식품 어린이 공룡김",
+          "오뚜기 컵누들"
+        ]
+      },
+      "images": {
+        "main": "2025-minions-run-busan.jpg",
+        "sub": [""]
+      },
+      "contacts": {
+        "home": "https://www.minionsrun.kr/",
+        "tel": "",
+        "email": "info@minionsrun.kr",
+        "instagram": "minionsrun.kr",
+        "kakao": ""
+      }
+    },
+    {
+      "name": "2025 JTBC 서울마라톤",
+      "slug": "2025-jtbc-seoul-marathon",
+      "description": "서울의 중심, 상암월드컵경기장을 출발점으로 도심을 누비는 2025 JTBC 서울마라톤입니다",
+      "scale": 34000,
+      "highlights": ["JTBC", "서울"],
+      "registration": {
+        "start": "2025-03-17 10:00",
+        "end": "",
+        "status": "접수마감",
+        "text": "선착순 마감",
+        "site": "https://runable.me/"
+      },
+      "event": {
+        "date": "2025-11-02",
+        "start_time": "08:00"
+      },
+      "location": {
+        "text": "서울월드컵경기장",
+        "latitude": 37.5682859,
+        "longitude": 126.8972585
+      },
+      "price": {
+        "full": 100000,
+        "10km": 80000
+      },
+      "hosts": {
+        "organizer": "JTBC, 대한육상연맹, 러너블",
+        "operator": "러너블",
+        "sponsor": [
+          "서울특별시",
+          "AIA",
+          "제나벨",
+          "서울특별시 장애인체육회",
+          "문화체육관광부",
+          "데상트",
+          "이온더핏 제로",
+          "카스라이트 제로슈가",
+          "아미노바이탈",
+          "스키틀즈",
+          "안티푸라민",
+          "무백",
+          "샥즈",
+          "미루꾸커피",
+          "월치",
+          "깨끗한나라",
+          "한국관광공사",
+          "롯데렌터카"
+        ],
+        "souvenir": [
+          "데상트 기능성 티셔츠",
+          "완주 메달",
+          "제나벨 마일드 테카 유브이 디펜스 선스크린",
+          "제나벨 레이저 수딩 선스크린",
+          "카스라이트 스포츠테이프",
+          "스키틀즈 쇼퍼팩",
+          "스키틀즈 젤리 믹스 후르츠",
+          "유한양행 안티푸라민 쿨 에어파스",
+          "무백(MOO100) 3종 SET",
+          "월치 파워풀 액티브 캡슐세제"
+        ]
+      },
+      "images": {
+        "main": "2025-jtbc-seoul-marathon.jpg",
+        "sub": [""]
+      },
+      "contacts": {
+        "home": "https://marathon.jtbc.com/",
+        "tel": "",
+        "email": "",
+        "instagram": "jtbc_seoul_marathon",
+        "kakao": ""
+      }
+    },
+    {
+      "name": "2025 스포츠서울 하프 마라톤",
+      "slug": "2025-sportsseoul-half-marathon",
+      "description": "서울 도심을 가로지르며 건강과 열정을 함께 느낄 수 있는 시민 참여형 러닝 축제, 2025 스포츠서울 하프마라톤입니다.",
+      "scale": 15000,
+      "highlights": ["스포츠서울", "하프 마라톤"],
+      "registration": {
+        "start": "2025-09-16 10:00",
+        "end": "2025-11-11 10:00",
+        "status": "접수중",
+        "text": "선착순 마감",
+        "site": "https://sshmarathon.co.kr/apply/index02.php"
+      },
+      "event": {
+        "date": "2025-11-30",
+        "start_time": "08:00"
+      },
+      "location": {
+        "text": "광화문광장",
+        "latitude": 37.572389,
+        "longitude": 126.9769117
+      },
+      "price": {
+        "half": 70000,
+        "10km": 60000
+      },
+      "hosts": {
+        "organizer": "스포츠서울, 월드21HQ",
+        "operator": "스포츠서울 하프 마라톤 사무국",
+        "sponsor": [
+          "서울시",
+          "강서K병원",
+          "FCMM",
+          "RX recovery x",
+          "올리바나",
+          "KEYDOC",
+          "바이탈솔루션",
+          "관세청",
+          "리얼베리어",
+          "삼다수"
+        ],
+        "souvenir": [
+          "FCMM 아노락 바람막이",
+          "RX 리커버리젤",
+          "올리바나 리커버리 크림",
+          "바이탈솔루션 에너지젤"
+        ]
+      },
+      "images": {
+        "main": "2025-sportsseoul-half-marathon.jpg",
+        "sub": [""]
+      },
+      "contacts": {
+        "home": "https://sshmarathon.co.kr/",
+        "tel": "02-338-0344",
+        "email": "sshalfmarathon@gmail.com",
+        "instagram": "",
+        "kakao": ""
+      }
+    },
+    {
+      "name": "2026 고양 하프 마라톤",
+      "slug": "2026-goyang-half-marathon",
+      "description": "2026 고양 하프마라톤은 고양시 일대를 가로지르는 하프 러닝 코스를 통해 도시와 자연이 어우러진 활기찬 달리기 경험을 제공하는 시민 참가형 이벤트입니다.",
+      "scale": 15000,
+      "highlights": ["고양", "하프 마라톤"],
+      "registration": {
+        "start": "2025-11-11 10:00",
+        "end": "2025-11-12 17:00",
+        "status": "접수대기",
+        "text": "선착순 마감",
+        "site": "https://runable.me/"
+      },
+      "event": {
+        "date": "2026-03-08",
+        "start_time": "08:00"
+      },
+      "location": {
+        "text": "고양종합운동장",
+        "latitude": 37.6757812,
+        "longitude": 126.742595
+      },
+      "price": {
+        "half": 70000,
+        "10km": 60000,
+        "5km": 60000
+      },
+      "hosts": {
+        "organizer": "",
+        "operator": "러너블",
+        "sponsor": [],
+        "souvenir": []
+      },
+      "images": {
+        "main": "2026-goyang-half-marathon.jpg",
+        "sub": [""]
+      },
+      "contacts": {
+        "home": "https://www.goyangmarathon.com/",
+        "tel": "",
+        "email": "runable@joins.com",
+        "instagram": "",
+        "kakao": "https://pf.kakao.com/_eUxejn"
+      }
+    },
+    {
+      "name": "2025 춘천마라톤",
+      "slug": "2025-chuncheon-marathon",
+      "description": "춘천 절경을 달린다. 가을의 전설을 쓴다.",
+      "scale": 22000,
+      "highlights": ["춘천", "풀코스"],
+      "registration": {
+        "start": "2025-06-24 14:00",
+        "end": "",
+        "status": "접수마감",
+        "text": "선착순 마감",
+        "site": "https://www.chuncheonmarathon.com/apply/part-application.html"
+      },
+      "event": {
+        "date": "2025-10-26",
+        "start_time": "09:00"
+      },
+      "location": {
+        "text": "춘천 공지천교",
+        "latitude": 37.8733,
+        "longitude": 127.71121
+      },
+      "price": {
+        "full": 100000,
+        "10km": 80000
+      },
+      "hosts": {
+        "organizer": "조선일보, 춘천시, 스포츠조선, 대한육상연맹",
+        "operator": "강원육상연맹",
+        "sponsor": ["강원특별자치도", "AIMS"],
+        "souvenir": [
+          "완주 메달",
+          "기념 티셔츠",
+          "기념 양말",
+          "얼티밋포텐셜 러닝에너지젤",
+          "얼티밋포텐셜 러닝에너지젤 프리",
+          "비레 하이드로 스웻프루프 선크림",
+          "자일리멜츠"
+        ]
+      },
+      "images": {
+        "main": "2025-chuncheon-marathon.jpg",
+        "sub": [
+          "2025-chuncheon-marathon01.jpg(https://blog.naver.com/runner_amy)"
+        ]
+      },
+      "contacts": {
+        "home": "https://board.chosun.com/",
+        "tel": "02-724-6333~6336",
+        "email": "chuncheon@chosun.com",
+        "instagram": "chuncheon_marathon",
+        "kakao": ""
+      }
+    },
+    {
+      "name": "10k 챌린지 서울",
+      "slug": "10k-challenge-seoul",
+      "description": "10K 챌린지 서울은 서울 도심을 달리는 10km 거리의 단거리 러닝 이벤트예요. 주로 초보 러너나 가볍게 즐기려는 참가자들을 위해 기획된 축제형 마라톤으로, 음악 공연·체험 부스·스폰서 이벤트 등이 함께 열려 러닝과 페스티벌이 결합된 행사입니다.",
+      "scale": 15000,
+      "highlights": ["서울", "10km"],
+      "registration": {
+        "start": "2025-09-09 09:00",
+        "end": "",
+        "status": "접수마감",
+        "text": "선착순 마감",
+        "site": "https://10kchallenge.co.kr/apply/index02.php"
+      },
+      "event": {
+        "date": "2025-10-26",
+        "start_time": "09:00"
+      },
+      "location": {
+        "text": "여의도공원",
+        "latitude": 37.526496,
+        "longitude": 126.922867
+      },
+      "price": {
+        "10km": 60000
+      },
+      "hosts": {
+        "organizer": "MBC PLUS, WORLD21HQ",
+        "operator": "10K 챌린지 마라톤 사무국",
+        "sponsor": [
+          "서울특별시",
+          "카스",
+          "강서K병원",
+          "동아제약",
+          "몽베스트",
+          "FCMM",
+          "뉴트리",
+          "고려은단",
+          "켈로그",
+          "센시안"
+        ],
+        "souvenir": [
+          "완주 메달",
+          "기념 티셔츠",
+          "챌린저 캡",
+          "동아제약 에너지포",
+          "그래놀라",
+          "미닛메이드 조이",
+          "밀크카라멜",
+          "돌아온 치토스 체스터 쿵",
+          "초코파이"
+        ]
+      },
+      "images": {
+        "main": "10k-challenge-seoul.jpg",
+        "sub": ["10k-challenge-seoul01.jpg"]
+      },
+      "contacts": {
+        "home": "https://10kchallenge.co.kr/",
+        "tel": "02-338-0344",
+        "email": "10kchallengeseoul@gmail.com",
+        "instagram": "10k_challenge_seoul",
+        "kakao": ""
+      }
+    },
+    {
+      "name": "제23회 동계국제마라톤대회",
+      "slug": "23rd-winter-international-marathon",
+      "description": "희망드림 제23회 동계국제마라톤대회는 겨울 시즌 서울 도심 속 러닝 이벤트로, 매년 다양한 거리의 코스로 러닝 애호가들을 초대하는 국내 대표 마라톤 중 하나입니다",
+      "scale": 5000,
+      "highlights": ["서울", "물빛광장"],
+      "registration": {
+        "start": "2025-11-03 11:00",
+        "end": "",
+        "status": "접수중",
+        "text": "선착순 마감",
+        "site": "https://dkrun.co.kr/marathon_application/app2.asp"
+      },
+      "event": {
+        "date": "2026-02-21",
+        "start_time": "08:00"
+      },
+      "location": {
+        "text": "여의도 한강공원 물빛광장",
+        "latitude": 37.531031,
+        "longitude": 126.928343
+      },
+      "price": {
+        "32.195km": 60000,
+        "half": 50000,
+        "10km": 50000,
+        "5km": 40000
+      },
+      "hosts": {
+        "organizer": "세계일보, 한국마라톤협회",
+        "operator": "한국마라톤연맹",
+        "sponsor": ["비즈스포츠월드", "일화"],
+        "souvenir": [
+          "완주 메달",
+          "긴팔 기모 티셔츠",
+          "번호표",
+          "마스크팩",
+          "스포츠가방"
+        ]
+      },
+      "images": {
+        "main": "23rd-winter-international-marathon.jpg",
+        "sub": [""]
+      },
+      "contacts": {
+        "home": "https://dkrun.co.kr",
+        "tel": "02-2647-4488, 4499",
+        "email": "",
+        "instagram": "",
+        "kakao": ""
+      }
+    },
+    {
+      "name": "2026 머니투데이방송 삼일절 마라톤대회",
+      "slug": "2026-moneytoday-march-1-marathon",
+      "description": "3.1운동 106주년을 맞아 뚝섬한강공원 수변무대에서 새봄맞이 마라톤 대회를 개최합니다. 겨우내 웅크렸던 가슴을 활짝 펴고 새로운 기운을 맞이하기 위해 힘차게 달려봅니다",
+      "scale": 7000,
+      "highlights": ["서울"],
+      "registration": {
+        "start": "2025-10-27 09:00",
+        "end": "",
+        "status": "접수중",
+        "text": "선착순 마감",
+        "site": "http://www.samilrun.com/application/index.php?sub=sub01_m03_c01"
+      },
+      "event": {
+        "date": "2026-03-01",
+        "start_time": "09:00"
+      },
+      "location": {
+        "text": "뚝섬한강공원 수변무대",
+        "latitude": 37.529103,
+        "longitude": 127.068596
+      },
+      "price": {
+        "full": 65000,
+        "half": 60000,
+        "10km": 60000,
+        "5km": 35000
+      },
+      "hosts": {
+        "organizer": "머니투데이방송",
+        "operator": "전국마라톤협회",
+        "sponsor": [
+          "신한금융그룹",
+          "하나금융그룹",
+          "캐리어에어컨",
+          "자담치킨",
+          "농심 백산수",
+          "르피랩"
+        ],
+        "souvenir": [
+          "기념티셔츠",
+          "선글라스",
+          "손태극기",
+          "완주메달",
+          "웹-모바일기록증"
+        ]
+      },
+      "images": {
+        "main": "2026-moneytoday-march-1-marathon.jpg",
+        "sub": [""]
+      },
+      "contacts": {
+        "home": "http://www.samilrun.com/",
+        "tel": "",
+        "email": "",
+        "instagram": "",
+        "kakao": ""
+      }
+    },
+    {
+      "name": "제18회 진해 마라톤대회",
+      "slug": "18th-jinhae-marathon",
+      "description": "경남 창원시 진해구 해군 창설 80주년을 기념하며 펼쳐지는 도심＋항구 도시 러닝 대회입니다",
+      "scale": 3000,
+      "highlights": ["진해"],
+      "registration": {
+        "start": "2025-08-12 00:00",
+        "end": "2025-10-13 00:00",
+        "status": "접수마감",
+        "text": "선착순 마감",
+        "site": "https://www.jinhaemarathon.co.kr/ko/sub2_3.html"
+      },
+      "event": {
+        "date": "2025-11-08",
+        "start_time": "09:00"
+      },
+      "location": {
+        "text": "진해공설운동장",
+        "latitude": 35.149175,
+        "longitude": 128.654782
+      },
+      "price": {
+        "11.11km": 30000,
+        "5km": 20000
+      },
+      "hosts": {
+        "organizer": "경남신문",
+        "operator": "진해마라톤대회조직위원회",
+        "sponsor": [
+          "창원특례시",
+          "해군본부",
+          "해군사관학교",
+          "해군진해기지사령부"
+        ],
+        "souvenir": ["완주메달", "기념티셔츠"]
+      },
+      "images": {
+        "main": "18th-jinhae-marathon.jpg",
+        "sub": [""]
+      },
+      "contacts": {
+        "home": "https://www.jinhaemarathon.co.kr",
+        "tel": "055-210-6103",
+        "email": "marathon@knnews.co.kr",
+        "instagram": "",
+        "kakao": ""
+      }
+    },
+    {
+      "name": "제25회 순천 남승룡마라톤대회",
+      "slug": "25th-suncheon-namseungryong-marathon",
+      "description": "제25회 순천 남승룡마라톤대회는 한국 마라톤의 개척자이자 전설적인 선수인 남승룡 선생을 기리고, 시민들의 건강 증진과 지역 스포츠 문화 발전을 위해 개최되는 대회입니다. 올해로 25회를 맞이하며, 순천시를 대표하는 체육행사이자 전라남도의 대표적인 마라톤 대회로 자리 잡았습니다.",
+      "scale": 7000,
+      "highlights": ["순천", "풀코스"],
+      "registration": {
+        "start": "2025-08-01 00:00",
+        "end": "2025-10-15 00:00",
+        "status": "접수마감",
+        "text": "선착순 마감",
+        "site": "http://sc-marathon.kr/participation/person"
+      },
+      "event": {
+        "date": "2025-11-08",
+        "start_time": "09:00"
+      },
+      "location": {
+        "text": "순천팔마종합운동장",
+        "latitude": 34.936309,
+        "longitude": 127.518941
+      },
+      "price": {
+        "full": 40000,
+        "haft": 15000,
+        "10km": 15000,
+        "5km": 15000
+      },
+      "hosts": {
+        "organizer": "순천시,순천시체육",
+        "operator": "마라톤대회 사무국",
+        "sponsor": [""],
+        "souvenir": ["완주메달", "혼합잡곡", "현미"]
+      },
+      "images": {
+        "main": "25th-suncheon-namseungryong-marathon.jpg",
+        "sub": [""]
+      },
+      "contacts": {
+        "home": "http://sc-marathon.kr",
+        "tel": "061-921-5500",
+        "email": "scmarathon@naver.com",
+        "instagram": "",
+        "kakao": ""
+      }
+    },
+    {
+      "name": "2025 블루런",
+      "slug": "2025-blue-run",
+      "description": "푸른 빛을 통한 건강과 희망의 메시지를 담은 러닝 이벤트입니다. 특히 세계당뇨병연맹(IDF) 및 세계보건기구(WHO)가 제정한 세계 당뇨병의 날을 기념하며, 참가를 통해 당뇨병 예방 및 인식 제고에도 기여하는 의미 있는 행사입니다",
+      "scale": 5000,
+      "highlights": ["성남", "탄천종합운동장"],
+      "registration": {
+        "start": "2025-10-02 00:00",
+        "end": "2025-10-31 00:00",
+        "status": "접수마감",
+        "text": "선착순 마감",
+        "site": "https://bluerun1114.co.kr/entryperson"
+      },
+      "event": {
+        "date": "2025-11-09",
+        "start_time": "08:30"
+      },
+      "location": {
+        "text": "탄천종합운동장",
+        "latitude": 37.410169,
+        "longitude": 127.120956
+      },
+      "price": {
+        "10km": 50000,
+        "5km": 40000
+      },
+      "hosts": {
+        "organizer": "스포티비, 한국당뇨협회",
+        "operator": "블루런 사무국",
+        "sponsor": [
+          "보건복지부",
+          "대한당뇨병학회",
+          "동국제약",
+          "정관장",
+          "링티"
+        ],
+        "souvenir": [
+          "완주메달",
+          "기념티셔츠",
+          "정관장 GLPro 더블컷 1박스",
+          "마사지볼",
+          "엔진오일 할인권",
+          "롯데시네마 영화관람권",
+          "이지스마트 필름",
+          "덱스트 에너지젤",
+          "참가자 간식"
+        ]
+      },
+      "images": {
+        "main": "2025-blue-run.jpg",
+        "sub": [""]
+      },
+      "contacts": {
+        "home": "http://bluerun1114.co.kr/",
+        "tel": "031-725-7100~3",
+        "email": "spotv.spotime@gmail.com",
+        "instagram": "",
+        "kakao": ""
+      }
+    },
+    {
+      "name": "Save Race 2025",
+      "slug": "save-race-2025",
+      "description": "카카오뱅크와 유니세프가 함께 준비한 친환경 기부 마라톤에 동참해 지구와 미래 세대를 지켜주세요!",
+      "scale": 5000,
+      "highlights": ["서울", "평화의공원"],
+      "registration": {
+        "start": "2025-09-01 10:00",
+        "end": "2025-09-19 18:00",
+        "status": "접수마감",
+        "text": "랜덤추첨",
+        "site": "https://www.saverace.co.kr"
+      },
+      "event": {
+        "date": "2025-11-09",
+        "start_time": "08:00"
+      },
+      "location": {
+        "text": "평화의공원 평화광장",
+        "latitude": 37.565645,
+        "longitude": 126.896163
+      },
+      "price": {
+        "10km": 50000
+      },
+      "hosts": {
+        "organizer": "카카오뱅크, 유니세프",
+        "operator": "세이브 레이스 운영 사무국",
+        "sponsor": ["국제약품", "러쉬", "삼다수", "빙그레", "롯데마트"],
+        "souvenir": [
+          "춘식이 완주메달",
+          "기념티셔츠",
+          "핸드솝",
+          "단백질바",
+          "게토레이",
+          "롯데마트 쿠폰",
+          "뱅오쇼콜라",
+          "리유저블백",
+          "오틀리 초코",
+          "리플렉터"
+        ]
+      },
+      "images": {
+        "main": "save-race-2025.jpg",
+        "sub": [""]
+      },
+      "contacts": {
+        "home": "https://www.saverace.co.kr",
+        "tel": "070-7725-6368",
+        "email": "info@saverace.co.kr",
+        "instagram": "",
+        "kakao": ""
+      }
+    },
+    {
+      "name": "2025 영천댐 마라톤대회",
+      "slug": "2025-yeongcheondam-marathon",
+      "description": "2025 영천댐 마라톤대회는 맑고 깨끗한 수변 경관을 자랑하는 영천댐 일원에서 열리는 가을 러닝 축제입니다.",
+      "scale": 3000,
+      "highlights": ["영천"],
+      "registration": {
+        "start": "2025-09-01 09:00",
+        "end": "2025-09-30 00:00",
+        "status": "접수마감",
+        "text": "선착순 마감",
+        "site": "https://runyc.kr/"
+      },
+      "event": {
+        "date": "2025-11-08",
+        "start_time": "09:40"
+      },
+      "location": {
+        "text": "영천댐공원",
+        "latitude": 36.070366,
+        "longitude": 129.013617
+      },
+      "price": {
+        "half": 30000,
+        "10km": 25000,
+        "5km": 15000
+      },
+      "hosts": {
+        "organizer": "영천시육상연맹, 채널경북",
+        "operator": "영천시육상연맹 사무국",
+        "sponsor": [
+          "경상북도",
+          "경상북도의회",
+          "영천시",
+          "영천시의회",
+          "영천시체육회",
+          "K-water 포항권지사",
+          "영천상공회의소",
+          "대한불교조계종 충효사",
+          "NH농협",
+          "아이엠뱅크",
+          "DKS GLOBAL"
+        ],
+        "souvenir": ["완주메달", "기념티셔츠"]
+      },
+      "images": {
+        "main": "2025-yeongcheondam-marathon.jpg",
+        "sub": [""]
+      },
+      "contacts": {
+        "home": "https://runyc.kr",
+        "tel": "054-331-6029",
+        "email": "",
+        "instagram": "",
+        "kakao": ""
+      }
+    },
+    {
+      "name": "2025 해남 땅끝 전국마라톤대회",
+      "slug": "2025-haman-land-end-national-marathon",
+      "description": "한반도의 최남단, 전라남도 해남군에서 펼쳐지는 가을 대표 러닝 축제입니다. 땅끝에서 시작되는 도전을 슬로건으로 내걸고, 전국의 러너들이 모여 자연과 함께 호흡하며 달리는 특별한 대회입니다.",
+      "scale": 3000,
+      "highlights": ["해남", "풀코스"],
+      "registration": {
+        "start": "2025-03-31 00:00",
+        "end": "2025-09-19 00:00",
+        "status": "접수마감",
+        "text": "선착순 마감",
+        "site": "http://haenam.run1080.com/application/index.php?sub=sub01_m03_c01"
+      },
+      "event": {
+        "date": "2025-11-08",
+        "start_time": "09:00"
+      },
+      "location": {
+        "text": "해남 우슬경기장",
+        "latitude": 34.568935,
+        "longitude": 126.622537
+      },
+      "price": {
+        "full": 45000,
+        "half": 40000,
+        "10km": 40000,
+        "5km": 25000
+      },
+      "hosts": {
+        "organizer": "해남군육상연맹",
+        "operator": "해남군육상연맹, 전국마라톤협회",
+        "sponsor": ["해남군", "해남군의회", "해남군체육회"],
+        "souvenir": ["완주메달", "기념티셔츠"]
+      },
+      "images": {
+        "main": "2025-haman-land-end-national-marathon.jpg",
+        "sub": [""]
+      },
+      "contacts": {
+        "home": "http://haenam.run1080.com/",
+        "tel": "042-638-1080",
+        "email": "",
+        "instagram": "",
+        "kakao": ""
+      }
+    },
+    {
+      "name": "2025 Go Free Run",
+      "slug": "2025-go-free-run",
+      "description": "2025 Go Free Run은 서울 도심, 여의도공원 문화의 마당을 출발지로 삼아 '자유롭게 달리자(Go Free)'는 메시지를 담은 도시형 러닝 이벤트입니다.",
+      "scale": 5000,
+      "highlights": ["서울", "여의도공원"],
+      "registration": {
+        "start": "2025-09-26 09:00",
+        "end": "",
+        "status": "접수마감",
+        "text": "선착순 마감",
+        "site": "https://gofree.seoul.co.kr/marathon/code/8040/apply02.php"
+      },
+      "event": {
+        "date": "2025-11-09",
+        "start_time": "08:30"
+      },
+      "location": {
+        "text": "여의도공원",
+        "latitude": 37.526496,
+        "longitude": 126.922867
+      },
+      "price": {
+        "10km": 70000,
+        "5km": 60000
+      },
+      "hosts": {
+        "organizer": "서울신문",
+        "operator": "런코리아",
+        "sponsor": [
+          "호반건설",
+          "아식스",
+          "삼성화재",
+          "에스오일",
+          "서울특별시",
+          "식품의약품안전처",
+          "관세청",
+          "한국마약퇴치운동본부"
+        ],
+        "souvenir": ["완주 메달", "기념 티셔츠", "FILA 러닝벨트", "간식패키지"]
+      },
+      "images": {
+        "main": "2025-go-free-run.jpg",
+        "sub": [""]
+      },
+      "contacts": {
+        "home": "https://gofree.seoul.co.kr",
+        "tel": "1566-1936",
+        "email": "emara@hanmail.net",
+        "instagram": "",
+        "kakao": ""
+      }
+    },
+    {
+      "name": "2025 버닝런 일레븐",
+      "slug": "2025-burning-run-eleven",
+      "description": "버닝런 일레븐은 서울 상암 월드컵공원 일대에서 열리는 도심형 러닝 축제로, 기록 경쟁보다 '함께 달리는 즐거움'과 '에너지 넘치는 분위기'를 중심으로 한 캐주얼 마라톤 대회입니다.",
+      "scale": 3000,
+      "highlights": ["서울", "평화의공원", "반려동물", "유모차"],
+      "registration": {
+        "start": "2025-09-22 13:00",
+        "end": "2025-11-14",
+        "status": "접수중",
+        "text": "선착순 마감",
+        "site": "http://burningrun.kr/sub_inquiry/join.php"
+      },
+      "event": {
+        "date": "2025-11-30",
+        "start_time": "09:00"
+      },
+      "location": {
+        "text": "평화의공원 평화광장",
+        "latitude": 37.565645,
+        "longitude": 126.896163
+      },
+      "price": {
+        "10km": 40000,
+        "7km": 37500,
+        "5km": 35000
+      },
+      "hosts": {
+        "organizer": "비즈한국",
+        "operator": "",
+        "sponsor": ["리복", "피죤", "뚜레주르", "일요신문"],
+        "souvenir": ["완주 메달", "workup 러닝조끼", "간식", "음료"]
+      },
+      "images": {
+        "main": "2025-burning-run-eleven.jpg",
+        "sub": [""]
+      },
+      "contacts": {
+        "home": "http://www.burningrun.co.kr/",
+        "tel": "070-7706-1011",
+        "email": "",
+        "instagram": "burning_run",
+        "kakao": ""
+      }
+    },
+    {
+      "name": "제22회 한강시민 마라톤대회",
+      "slug": "22nd-hangang-citizens-marathon",
+      "description": "제22회 한강시민 마라톤대회는 서울의 중심, 여의도 한강공원에서 펼쳐지는 시민 참여형 러닝 축제입니다. 탁 트인 한강변을 따라 도심의 활기와 자연의 여유를 동시에 느낄 수 있는 코스로 구성되어, 초보 러너부터 숙련된 러너까지 모두가 함께 즐길 수 있는 열린 마라톤 대회입니다.",
+      "scale": 15000,
+      "highlights": ["서울", "한강"],
+      "registration": {
+        "start": "2025-09-29 09:00",
+        "end": "2025-11-03 00:00",
+        "status": "접수마감",
+        "text": "선착순 마감",
+        "site": "http://www.hangangmarathon.kr/run/9000.asp?T=1&wgu=1"
+      },
+      "event": {
+        "date": "2025-12-06",
+        "start_time": "09:00"
+      },
+      "location": {
+        "text": "여의도 너른들판",
+        "latitude": 37.531678,
+        "longitude": 126.928418
+      },
+      "price": {
+        "half": 50000,
+        "10km": 50000,
+        "5km": 45000
+      },
+      "hosts": {
+        "organizer": "대한생활체육회",
+        "operator": "대한생활체육회",
+        "sponsor": ["대한생활체육마라톤협회", "TV서울", "SAMIK"],
+        "souvenir": ["완주 메달", "기념품 티셔츠", "간식"]
+      },
+      "images": {
+        "main": "22nd-hangang-citizens-marathon.jpg",
+        "sub": [""]
+      },
+      "contacts": {
+        "home": "http://www.hangangmarathon.kr",
+        "tel": "1644-4219",
+        "email": "km4219@daum.net",
+        "instagram": "",
+        "kakao": ""
+      }
+    },
+    {
+      "name": "2026 인사이더런 W",
+      "slug": "2026-insaiderun-w",
+      "description": "2026 인사이더런 W는 날씨나 계절의 제약 없이 즐길 수 있는 새로운 형태의 실내 러닝 페스티벌입니다. 1km 순환 트랙을 여러 바퀴 돌아 완주하는 인도어 서킷 방식으로 진행되며, 겨울에도 달리고 싶은 러너들을 위해 설계된 색다른 도심형 러닝 이벤트입니다.",
+      "scale": 12000,
+      "highlights": ["킨텍스", "실내"],
+      "registration": {
+        "start": "2025-11-06 14:00",
+        "end": "2025-12-31 17:00",
+        "status": "접수마감",
+        "text": "선착순 마감",
+        "site": "https://runable.me/product/3182?comp=3176"
+      },
+      "event": {
+        "date": "2025-01-31",
+        "start_time": "10:00"
+      },
+      "location": {
+        "text": "킨텍스",
+        "latitude": 37.670078,
+        "longitude": 126.745232
+      },
+      "price": {
+        "10km": 50000
+      },
+      "hosts": {
+        "organizer": "러너블",
+        "operator": "코틴스포츠",
+        "sponsor": [""],
+        "souvenir": ["완주 메달", "헤어밴드"]
+      },
+      "images": {
+        "main": "2026-insaiderun-w.jpg",
+        "sub": [""]
+      },
+      "contacts": {
+        "home": "https://runable.me/",
+        "tel": "",
+        "email": "runable@joins.com",
+        "instagram": "runable.original",
+        "kakao": ""
+      }
+    }
+  ]
+}
