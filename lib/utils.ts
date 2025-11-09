@@ -10,8 +10,27 @@ export function cn(...inputs: ClassValue[]) {
  * @param eventDate - 이벤트 날짜 (YYYY-MM-DD 형식의 문자열)
  * @returns D-30, D-Day, 종료 형태의 문자열
  */
+export function getDateAtLocalMidnight(dateString: string): Date | null {
+  if (!dateString) return null;
+
+  const [year, month, day] = dateString.split("-").map(Number);
+
+  if (
+    [year, month, day].some(
+      (value) => Number.isNaN(value) || value === undefined || value === null
+    )
+  ) {
+    return null;
+  }
+
+  return new Date(year, month - 1, day);
+}
+
 export function calculateDDay(eventDate: string): string {
-  const targetDate = new Date(eventDate);
+  const targetDate = getDateAtLocalMidnight(eventDate);
+  if (!targetDate) {
+    return "-";
+  }
   const today = new Date();
   today.setHours(0, 0, 0, 0);
 
@@ -87,7 +106,10 @@ export function formatPrice(price: Record<string, number>): string {
  * @returns 남은 일수 (양수: 남은 일수, 0: 오늘, 음수: 지난 일수)
  */
 export function calculateDiffDays(eventDate: string): number {
-  const targetDate = new Date(eventDate);
+  const targetDate = getDateAtLocalMidnight(eventDate);
+  if (!targetDate) {
+    return 0;
+  }
   const today = new Date();
   today.setHours(0, 0, 0, 0);
 

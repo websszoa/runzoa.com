@@ -1,4 +1,4 @@
-// import MarathonList from "@/components/marathon/marathon-list";
+import MarathonList from "@/components/marathon/marathon-list";
 import { createServerSupabase } from "@/lib/supabase-server";
 
 export default async function HomePage() {
@@ -24,7 +24,7 @@ export default async function HomePage() {
 
   return (
     <main className="main__container">
-      {/* <MarathonList marathons={marathons || []} /> */}
+      <MarathonList marathons={marathons || []} />
     </main>
   );
 }
