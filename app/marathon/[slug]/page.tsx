@@ -7,6 +7,7 @@ import { APP_SLOGAN, APP_DESCRIPTION } from "@/lib/constants";
 import MarathonComments from "@/components/marathon/marathon-comments";
 import NaverMap from "@/components/marathon/marathon-naver-map";
 import MarathonRegistering from "@/components/marathon/marathon-registering";
+import MarathonRegisteringRandom from "@/components/marathon/marathon-registering-random";
 import {
   calculateDiffDays,
   formatTime,
@@ -194,17 +195,41 @@ export default async function MarathonDetailPage({ params }: PageProps) {
               </div>
 
               {/* 모집 규모 */}
-              {marathon.scale && (
-                <div className="flex items-start gap-3 p-4 bg-orange-50 rounded-lg border border-orange-200">
-                  <Users className="w-5 h-5 text-orange-600 mt-0.5 shrink-0" />
-                  <div>
-                    <p className="text-sm text-gray-600 mb-1">모집 규모</p>
-                    <p className="font-bold text-gray-900">
-                      {marathon.scale.toLocaleString()}명
-                    </p>
-                  </div>
+              <div className="flex items-start gap-3 p-4 bg-orange-50 rounded-lg border border-orange-200">
+                <Users className="w-5 h-5 text-orange-600 mt-0.5 shrink-0" />
+                <div>
+                  <p className="text-sm text-gray-600 mb-1">모집 규모</p>
+                  <p className="font-bold text-gray-900">
+                    {marathon.scale > 0
+                      ? `${marathon.scale.toLocaleString()}명`
+                      : "미정"}
+                  </p>
                 </div>
-              )}
+              </div>
+
+              {/* 추가접수 */}
+              {marathon.registration?.restart &&
+                marathon.registration.restart.length > 0 && (
+                  <div className="flex items-start gap-3 p-4 bg-brand/5 rounded-lg border border-brand/20">
+                    <BellRing className="w-5 h-5 text-brand mt-0.5 shrink-0" />
+                    <div className="flex-1">
+                      <p className="text-sm text-brand font-semibold mb-1">
+                        추가 접수
+                      </p>
+                      <ul className="space-y-1 text-sm text-gray-700">
+                        {marathon.registration.restart
+                          .split("\n")
+                          .map((line: string) => line.trim())
+                          .filter((line: string) => line.length > 0)
+                          .map((line: string, idx: number) => (
+                            <li key={`${line}-${idx}`}>
+                              {formatDateWithDay(line)}
+                            </li>
+                          ))}
+                      </ul>
+                    </div>
+                  </div>
+                )}
             </div>
           </div>
 
@@ -435,18 +460,20 @@ export default async function MarathonDetailPage({ params }: PageProps) {
             </h3>
             <div>
               {/* 이미지 */}
-              {marathon.images?.main && (
-                <div className="w-full rounded-sm overflow-hidden mb-4">
-                  <Image
-                    src={`/marathon/${marathon.images.main}`}
-                    alt={marathon.name}
-                    width={600}
-                    height={400}
-                    loading="eager"
-                    className="w-full h-auto"
-                  />
-                </div>
-              )}
+              <div className="w-full rounded-sm overflow-hidden mb-4">
+                <Image
+                  src={`/marathon/${
+                    marathon.images?.main && marathon.images.main !== ""
+                      ? marathon.images.main
+                      : "no-image.jpg"
+                  }`}
+                  alt={marathon.name}
+                  width={600}
+                  height={400}
+                  loading="eager"
+                  className="w-full h-auto"
+                />
+              </div>
               {/* 주최 */}
               <div className="space-y-3">
                 {marathon.hosts.organizer && (
@@ -500,6 +527,9 @@ export default async function MarathonDetailPage({ params }: PageProps) {
 
           {/* 댓글 */}
           <MarathonComments marathonId={marathon.id} />
+
+          {/* 접수중인 마라톤 */}
+          <MarathonRegisteringRandom excludeSlug={marathon.slug} />
         </div>
       </div>
     </main>

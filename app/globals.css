@@ -197,6 +197,9 @@
   .contact__container {
     @apply max-w-xl mx-auto px-4 md:px-6;
   }
+  .amdin__container {
+    @apply max-w-[2000px] mr-10 ml-10 px-4 md:px-6;
+  }
 
   /* loading */
   .loading {

@@ -124,7 +124,7 @@ export default function HeaderRight() {
                 {APP_NAME} v1.0.0
               </p>
               <p className="font-nanumNeo text-xs text-gray-400">
-                {APP_COPYRIGHT}
+                <a href="/admin">{APP_COPYRIGHT}</a>
               </p>
             </div>
           </div>

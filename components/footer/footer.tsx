@@ -1,7 +1,7 @@
 "use client";
 
 import Link from "next/link";
-import { Heart, Hamburger } from "lucide-react";
+import { Heart, Hamburger, Cannabis, Flower } from "lucide-react";
 import {
   APP_COPYRIGHT,
   APP_DESCRIPTION,
@@ -24,10 +24,10 @@ export default function Footer() {
             {APP_DESCRIPTION}
           </p>
           {/* 알림설정 및 문의사항 */}
-          <div className="flex gap-2">
+          <div className="flex items-center flex-wrap gap-3 text-sm font-nanumNeo text-muted-foreground">
             <Link
-              href="#"
-              className="flex items-center gap-1 text-sm mt-1 text-muted-foreground hover:text-brand transition-colors font-nanumNeo"
+              href="/contact"
+              className="flex items-center gap-1 hover:text-brand transition-colors"
               onClick={(e) => {
                 e.preventDefault();
                 // TODO: 문의사항 dialog 열기
@@ -35,6 +35,18 @@ export default function Footer() {
             >
               <Hamburger className="w-4 h-4" />
               문의사항
+            </Link>
+            <Link
+              href="/privacy"
+              className="flex items-center gap-1 hover:text-brand transition-colors"
+            >
+              <Cannabis className="w-4 h-4" /> 개인정보처리방침
+            </Link>
+            <Link
+              href="/terms"
+              className="flex items-center gap-1 hover:text-brand transition-colors"
+            >
+              <Flower className="w-4 h-4" /> 이용약관
             </Link>
           </div>
         </div>

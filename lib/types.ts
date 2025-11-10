@@ -13,6 +13,7 @@ export interface Marathon {
     status: string;
     site: string;
     text?: string;
+    restart?: string;
   };
   event: {
     date: string;
