@@ -74,7 +74,8 @@ export default function MarathonList({ marathons }: MarathonListProps) {
 
   // 최종 필터링된 마라톤 목록 (상태 + 검색어 필터 포함)
   const filteredMarathons = useMemo(() => {
-    let result = yearMonthFiltered;
+    const hasSearch = searchQuery.trim().length > 0;
+    let result = hasSearch ? marathons : yearMonthFiltered;
 
     // 상태 필터
     if (selectedStatus) {
@@ -82,7 +83,7 @@ export default function MarathonList({ marathons }: MarathonListProps) {
     }
 
     // 검색어 필터
-    if (searchQuery.trim()) {
+    if (hasSearch) {
       const query = searchQuery.toLowerCase().trim();
       result = result.filter(
         (m) =>
@@ -92,8 +93,14 @@ export default function MarathonList({ marathons }: MarathonListProps) {
       );
     }
 
-    return result;
-  }, [yearMonthFiltered, selectedStatus, searchQuery]);
+    // 검색이 없으면 이미 연/월 필터링 된 yearMonthFiltered 사용
+    return hasSearch
+      ? [...result].sort(
+          (a, b) =>
+            new Date(a.event.date).getTime() - new Date(b.event.date).getTime()
+        )
+      : result;
+  }, [marathons, yearMonthFiltered, selectedStatus, searchQuery]);
 
   // 검색 핸들러
   const handleSearch = (e: React.FormEvent) => {
