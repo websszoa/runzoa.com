@@ -1,5 +1,6 @@
 import Link from "next/link";
 import type { Marathon } from "@/lib/marathons";
+import { formatMarathonDate } from "@/lib/utils";
 import {
   Asterisk,
   ArrowUpRight,
@@ -8,7 +9,6 @@ import {
   CalendarDays,
   HandHeart,
 } from "lucide-react";
-import { formatMarathonDate } from "@/lib/utils";
 
 export default function DetailRegistration({
   marathon,
@@ -97,7 +97,7 @@ export default function DetailRegistration({
         </div>
       </article>
 
-      <article className="flex min-h-80 flex-col overflow-hidden rounded-2xl border bg-card shadow-none">
+      <article className="flex flex-col overflow-hidden rounded-2xl border bg-card shadow-none lg:min-h-80">
         <div className="flex min-h-16 items-center gap-2.5 border-b px-5 sm:px-6">
           <CalendarCheck
             className="size-5 shrink-0 text-brand"

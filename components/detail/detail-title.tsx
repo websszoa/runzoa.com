@@ -1,4 +1,5 @@
 import { Badge } from "@/components/ui/badge";
+import { CalendarDays, MapPin, Users } from "lucide-react";
 import type { Marathon } from "@/lib/marathons";
 import {
   formatMarathonDate,
@@ -6,7 +7,6 @@ import {
   getRegistrationLabel,
   getRegistrationStatus,
 } from "@/lib/utils";
-import { CalendarDays, MapPin, Users } from "lucide-react";
 
 export default function DetailTitle({ marathon }: { marathon: Marathon }) {
   const registrationStatus = getRegistrationStatus(marathon);
@@ -43,15 +43,15 @@ export default function DetailTitle({ marathon }: { marathon: Marathon }) {
           </Badge>
         </div>
 
-        <h1 className="font-paperlogy text-4xl leading-[1.15] font-semibold tracking-tight text-balance sm:text-5xl lg:text-6xl">
+        <h1 className="font-paperlogy text-3xl leading-[1.15] font-semibold tracking-tight text-balance sm:text-5xl lg:text-6xl">
           {marathon.name}
         </h1>
 
-        <p className="mt-5 text-sm leading-6 text-muted-foreground sm:text-[15px]">
+        <p className="mt-3 sm:mt-4 text-sm leading-6 text-muted-foreground sm:text-[15px]">
           {marathon.description}
         </p>
 
-        <div className="mt-7 flex flex-col gap-3 font-anyvid text-sm text-muted-foreground sm:flex-row sm:flex-wrap sm:gap-x-7">
+        <div className="mt-5 sm:mt-7 flex flex-col gap-2 sm:gap-3 font-anyvid text-sm text-muted-foreground sm:flex-row sm:flex-wrap sm:gap-x-7">
           <span className="flex items-center gap-2">
             <CalendarDays
               aria-hidden="true"

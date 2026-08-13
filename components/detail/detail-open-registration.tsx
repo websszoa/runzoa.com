@@ -86,7 +86,7 @@ export default function DetailOpenRegistration({
                   )}
                 </div>
 
-                <div className="flex shrink-0 flex-col items-center gap-1.5">
+                <div className="hidden shrink-0 flex-col items-center gap-1.5 sm:flex">
                   <span className="font-anyvid text-[11px] font-semibold whitespace-nowrap text-brand">
                     {getClosingLabel(marathon.registration.endDate)}
                   </span>

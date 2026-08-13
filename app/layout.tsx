@@ -68,11 +68,20 @@ export const metadata: Metadata = {
     siteName: APP_NAME,
     title: `${APP_NAME} | 전국 마라톤 대회 정보`,
     description: APP_DESCRIPTION,
+    images: [
+      {
+        url: "/icons/icon512.png",
+        width: 512,
+        height: 512,
+        alt: `${APP_NAME} 로고`,
+      },
+    ],
   },
   twitter: {
     card: "summary",
     title: `${APP_NAME} | 전국 마라톤 대회 정보`,
     description: APP_DESCRIPTION,
+    images: ["/icons/icon512.png"],
   },
   robots: {
     index: true,

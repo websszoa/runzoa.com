@@ -35,8 +35,8 @@ export default function MarathonHeader({
           </h1>
           <p className="mt-5 max-w-2xl font-anyvid text-sm leading-6 text-muted-foreground sm:text-[15px]">
             {description.map((line, index) => (
-              <span key={line}>
-                {index > 0 ? <br /> : null}
+              <span key={line} className={index > 0 ? "hidden sm:inline" : undefined}>
+                {index > 0 ? <br className="hidden sm:block" /> : null}
                 {line}
               </span>
             ))}

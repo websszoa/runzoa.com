@@ -34,7 +34,7 @@ export function getRegistrationLabel(status: RegistrationStatus) {
 export function getRegistrationBadgeClassName(status: RegistrationStatus) {
   return cn(
     status === "접수중" && "border-brand bg-brand text-white",
-    status === "접수예정" && "border-blue-500/30 bg-blue-500/10 text-blue-700",
+    status === "접수예정" && "border-blue-500 bg-blue-500 text-white",
     status === "접수마감" && "border border-gray-400 text-muted-foreground",
     status === "접수미정" && "border border-gray-400 text-muted-foreground",
   );

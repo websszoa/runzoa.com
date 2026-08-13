@@ -259,9 +259,20 @@ function RaceList({ marathons }: { marathons: Marathon[] }) {
                   }
                 </span>
               </p>
+              <div className="ml-auto flex gap-1.5 sm:hidden">
+                <Badge variant="outline" className="border-brand/40 text-brand">
+                  {marathon.info.type ?? "러닝"}
+                </Badge>
+                <Badge
+                  variant="outline"
+                  className={getRegistrationBadgeClassName(status)}
+                >
+                  {getRegistrationLabel(status)}
+                </Badge>
+              </div>
             </div>
-            <div className="min-w-0 flex-1 sm:border-l sm:pl-5">
-              <div className="mb-1.5 flex flex-wrap gap-1.5">
+            <div className="min-w-0 flex-1 border-t pt-3 sm:border-t-0 sm:border-l sm:pt-0 sm:pl-5">
+              <div className="mb-1.5 hidden flex-wrap gap-1.5 sm:flex">
                 <Badge variant="outline" className="border-brand/40 text-brand">
                   {marathon.info.type ?? "러닝"}
                 </Badge>
