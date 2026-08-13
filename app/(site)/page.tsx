@@ -5,6 +5,7 @@ import MainPromoBanner from "@/components/main/main-promo-banner";
 import MainRaceFinder from "@/components/main/main-race-finder";
 import MainRegistrationSoon from "@/components/main/main-registration-soon";
 import MainThisMonth from "@/components/main/main-this-month";
+import DialogSiteMaintenance from "@/components/dialog/dialog-site-maintenance";
 
 import { getMarathons } from "@/lib/marathons";
 import {
@@ -42,6 +43,7 @@ export default async function Home() {
 
   return (
     <>
+      <DialogSiteMaintenance />
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{
