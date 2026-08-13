@@ -1,0 +1,49 @@
+[
+  {
+    "id": "2027-seoul-marathon",
+    "slug": "2027-seoul-marathon",
+    "name": "2027 서울 마라톤",
+    "description": "대한민국을 대표하는 국제 마라톤 대회로, 도심 한복판을 달리는 상징적인 코스를 경험할 수 있는 대회입니다. 광화문을 출발해 서울 주요 랜드마크를 지나며 약 4만 명 규모의 러너들이 함께하는 국내 최고 수준의 대회로, 세계육상연맹 플래티넘 라벨을 보유한 글로벌 마라톤입니다.",
+    "info": {
+      "type": "마라톤",
+      "scale": 40000,
+      "site": "https://seoul-marathon.com",
+      "park": null,
+      "souvenir": "완주메달, 기념품",
+      "program": null,
+      "memo": null
+    },
+    "event": {
+      "startDate": "2027-03-21",
+      "endDate": "2027-03-21",
+      "startTime": "07:30",
+      "endTime": null
+    },
+    "registration": {
+      "startDate": "2026-06-01",
+      "endDate": "2026-06-03",
+      "startTime": null,
+      "endTime": null,
+      "price": {
+        "10KM": 100000,
+        "FULL": 150000
+      }
+    },
+    "location": {
+      "country": "KR",
+      "region": "서울",
+      "venue": "광화문광장",
+      "address": null,
+      "latitude": 37.572576,
+      "longitude": 126.976965
+    },
+    "hosts": {
+      "organizer": "서울마라톤 조직위원회",
+      "manager": null,
+      "sponsor": null,
+      "phone": "02-312-1998",
+      "email": null,
+      "instagram": "seoul_marathon"
+    }
+  }
+]
