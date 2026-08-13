@@ -2,7 +2,6 @@
 
 import { useState } from "react";
 import { Construction, Sparkles, TentTree } from "lucide-react";
-
 import { Button } from "@/components/ui/button";
 import {
   Dialog,
@@ -28,8 +27,8 @@ export default function DialogSiteMaintenance() {
             현재 사이트를 다듬고 있어요! 🚧
           </DialogTitle>
           <DialogDescription className="break-keep font-anyvid text-sm leading-6">
-            더 편리한 런조아를 위해 일부 기능을 업데이트하고 있습니다.
-            이용 중 화면이나 기능이 잠시 불안정할 수 있어요.
+            더 편리한 런조아를 위해 일부 기능을 업데이트하고 있습니다. 현재
+            정보는 정확하지 않습니다. 참고바랍니다.
           </DialogDescription>
         </DialogHeader>
 
