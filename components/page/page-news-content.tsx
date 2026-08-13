@@ -1,6 +1,14 @@
 import Link from "next/link";
-import { ArrowRight, CalendarDays, Inbox, Rss } from "lucide-react";
+import {
+  ArrowRight,
+  CalendarDays,
+  HandHeart,
+  Inbox,
+  MailOpen,
+  Rss,
+} from "lucide-react";
 
+import DialogNewsletter from "@/components/dialog/dialog-newsletter";
 import { getNewsPosts, type NewsItem } from "@/lib/news";
 
 type PageNewsContentProps = {
@@ -32,7 +40,7 @@ export default async function PageNewsContent({ item }: PageNewsContentProps) {
             {item.description}
           </p>
 
-          <div className="mt-9 border-t pt-6 border-b pb-6 mb-10">
+          <div className="mt-9 border-y py-6">
             <h3 className="flex items-center gap-2 font-paperlogy text-lg font-semibold">
               <Rss aria-hidden="true" className="size-5" />
               새로운 소식
@@ -42,6 +50,36 @@ export default async function PageNewsContent({ item }: PageNewsContentProps) {
               안내는 공지사항을 통해 먼저 전달합니다.
             </p>
           </div>
+
+          {item.type === "newsletter" && (
+            <div className="relative mt-8 overflow-hidden rounded-2xl border border-brand/15 bg-linear-to-br from-brand/[0.06] via-background to-amber-50 p-5">
+              <span
+                className="absolute -top-8 -right-8 size-24 rounded-full bg-brand/[0.07]"
+                aria-hidden="true"
+              />
+              <div className="relative">
+                <div className="flex items-center gap-2.5">
+                  <span className="flex size-9 shrink-0 items-center justify-center rounded-full bg-brand text-white shadow-sm">
+                    <MailOpen className="size-4" aria-hidden="true" />
+                  </span>
+                  <h3 className="break-keep font-paperlogy text-base font-semibold">
+                    매주 정보를 받고 싶다면
+                  </h3>
+                </div>
+                <p className="mt-3 break-keep font-anyvid text-sm leading-6 text-muted-foreground">
+                  새로 등록된 대회와 접수 일정, 놓치기 아쉬운 러닝 소식을
+                  한눈에 보기 좋게 정리해 보내드려요.
+                </p>
+                <DialogNewsletter
+                  subscriptionSource="뉴스레터 페이지"
+                  className="mt-4 inline-flex h-10 w-full items-center justify-center gap-2 rounded-xl bg-brand px-5 font-anyvid text-sm font-semibold text-white transition-colors hover:bg-brand/90 sm:w-auto"
+                >
+                  <HandHeart className="size-4" aria-hidden="true" />
+                  뉴스레터 구독하기
+                </DialogNewsletter>
+              </div>
+            </div>
+          )}
         </section>
 
         <section aria-labelledby="news-list-title">

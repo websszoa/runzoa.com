@@ -1,5 +1,5 @@
-import Link from "next/link";
 import { ArrowRight, Mail } from "lucide-react";
+import DialogNewsletter from "@/components/dialog/dialog-newsletter";
 
 export default function MainNewsletter() {
   return (
@@ -63,13 +63,13 @@ export default function MainNewsletter() {
               한눈에 전해드려요.
             </p>
 
-            <Link
-              href="/news?type=newsletter"
+            <DialogNewsletter
+              subscriptionSource="메인 구독 배너"
               className="mt-8 inline-flex h-11 items-center justify-center gap-2 rounded-full bg-brand px-6 font-anyvid text-sm font-semibold text-white transition-all hover:-translate-y-0.5 hover:bg-brand/90"
             >
               뉴스레터 구독하기
               <ArrowRight className="size-4" aria-hidden="true" />
-            </Link>
+            </DialogNewsletter>
           </div>
         </div>
       </div>

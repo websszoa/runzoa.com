@@ -4,26 +4,13 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import {
   CalendarDays,
-  ChevronUp,
   ExternalLink,
-  Heart,
   LayoutDashboard,
-  LogOut,
   Mail,
   MessagesSquare,
-  ShieldCheck,
   Users,
 } from "lucide-react";
 
-import { Avatar, AvatarBadge, AvatarFallback } from "@/components/ui/avatar";
-import {
-  DropdownMenu,
-  DropdownMenuContent,
-  DropdownMenuItem,
-  DropdownMenuLabel,
-  DropdownMenuSeparator,
-  DropdownMenuTrigger,
-} from "@/components/ui/dropdown-menu";
 import { APP_ENG_NAME } from "@/lib/constants";
 
 const navigation = [
@@ -32,7 +19,6 @@ const navigation = [
   { icon: Users, label: "회원관리", href: "/admin/users" },
   { icon: CalendarDays, label: "마라톤", href: "/admin/marathons" },
   { icon: Mail, label: "뉴스레터", href: "/admin/newsletter" },
-  { icon: Heart, label: "리액션", href: "/admin/reactions" },
 ];
 
 export default function AdminSidebar() {
@@ -92,46 +78,6 @@ export default function AdminSidebar() {
           사이트 바로가기
           <ExternalLink className="size-3.5" aria-hidden="true" />
         </Link>
-      </div>
-
-      <div className="hidden border-t p-4 lg:block">
-        <DropdownMenu>
-          <DropdownMenuTrigger className="flex w-full items-center gap-3 rounded-xl border bg-background p-2.5 text-left outline-none transition-colors hover:bg-muted focus-visible:ring-2 focus-visible:ring-ring">
-            <Avatar size="lg">
-              <AvatarFallback className="bg-brand/10 font-paperlogy font-semibold text-brand">
-                A
-              </AvatarFallback>
-              <AvatarBadge className="bg-emerald-500" />
-            </Avatar>
-            <span className="min-w-0 flex-1">
-              <span className="block truncate font-paperlogy text-sm font-semibold">
-                런조아 관리자
-              </span>
-              <span className="mt-0.5 flex items-center gap-1.5 font-anyvid text-xs text-muted-foreground">
-                <span className="size-1.5 rounded-full bg-emerald-500" />
-                로그인됨
-              </span>
-            </span>
-            <ChevronUp
-              className="size-4 text-muted-foreground"
-              aria-hidden="true"
-            />
-          </DropdownMenuTrigger>
-          <DropdownMenuContent side="top" align="start" className="w-52">
-            <DropdownMenuLabel className="font-anyvid">
-              관리자 계정
-            </DropdownMenuLabel>
-            <DropdownMenuSeparator />
-            <DropdownMenuItem disabled className="font-anyvid">
-              <ShieldCheck aria-hidden="true" />
-              관리자 권한
-            </DropdownMenuItem>
-            <DropdownMenuItem disabled className="font-anyvid">
-              <LogOut aria-hidden="true" />
-              로그아웃 준비 중
-            </DropdownMenuItem>
-          </DropdownMenuContent>
-        </DropdownMenu>
       </div>
     </aside>
   );

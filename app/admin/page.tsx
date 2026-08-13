@@ -2,62 +2,120 @@ import AdminDashboard, {
   type DashboardContact,
   type DashboardMember,
   type DashboardNewsletter,
-  type DashboardReaction,
   type DashboardStats,
 } from "@/components/admin/admin-dashboard";
-import { getMarathons } from "@/lib/marathons";
+import { createClient } from "@/lib/supabase/server";
 
-const recentMembers: DashboardMember[] = [
-  { id: "1", name: "김런너", email: "runner01@example.com", provider: "google" },
-  { id: "2", name: "박마라", email: "runner02@example.com", provider: "naver" },
-  { id: "3", name: "이페이스", email: "runner03@example.com", provider: "kakao" },
-  { id: "4", name: "최완주", email: "runner04@example.com", provider: "google" },
-  { id: "5", name: "정하프", email: "runner05@example.com", provider: "naver" },
-];
+type ProfileRow = {
+  id: string;
+  full_name: string | null;
+  email: string | null;
+  signup_provider: string | null;
+};
 
-const recentContacts: DashboardContact[] = [
-  { id: "1", title: "대회 등록 방법에 대해 문의드립니다.", type: "문의사항", status: "대기중", createdAt: "2026.08.11" },
-  { id: "2", title: "캘린더에서 대회 일정이 표시되지 않아요.", type: "불편신고", status: "처리중", createdAt: "2026.08.10" },
-  { id: "3", title: "마라톤 개최 장소 정보 수정을 요청합니다.", type: "수정요청", status: "대기중", createdAt: "2026.08.09" },
-  { id: "4", title: "뉴스레터 구독 해지는 어디에서 하나요?", type: "문의사항", status: "처리완료", createdAt: "2026.08.07" },
-  { id: "5", title: "지도에서 현재 위치 버튼이 동작하지 않습니다.", type: "불편신고", status: "처리완료", createdAt: "2026.08.04" },
-];
+type ContactRow = {
+  id: string;
+  title: string;
+  type: string;
+  status: DashboardContact["status"];
+  created_at: string;
+};
 
-const recentNewsletters: DashboardNewsletter[] = [
-  { id: "1", email: "runner01@example.com", source: "메인 구독 배너", status: "구독중" },
-  { id: "2", email: "runner02@example.com", source: "뉴스레터 페이지", status: "구독중" },
-  { id: "3", email: "runner03@example.com", source: "대회 상세페이지", status: "구독취소" },
-  { id: "4", email: "runner04@example.com", source: "메인 구독 배너", status: "구독중" },
-  { id: "5", email: "runner05@example.com", source: "뉴스레터 페이지", status: "구독취소" },
-];
-
-const topReactions: DashboardReaction[] = [
-  { id: "1", slug: "gyeongju-cherry-marathon-2026", name: "제33회 경주 벚꽃 마라톤대회", views: 12840, likes: 328, favorites: 194, shares: 87 },
-  { id: "2", slug: "incheon-night-race-2026", name: "2026 인천 나이트 레이스", views: 9420, likes: 275, favorites: 168, shares: 64 },
-  { id: "3", slug: "seoul-race-2026", name: "2026 서울레이스", views: 8150, likes: 221, favorites: 143, shares: 58 },
-  { id: "4", slug: "815-run-2026", name: "2026 815런", views: 6370, likes: 184, favorites: 96, shares: 45 },
-  { id: "5", slug: "pyeongchang-daegwallyeong-half-marathon-2026", name: "2026 HAPPY700 평창 대관령 전국 하프마라톤 대회", views: 4890, likes: 132, favorites: 74, shares: 31 },
-];
-
-const stats: DashboardStats = {
-  member: { total: 5, google: 2, kakao: 1, naver: 2 },
-  contact: { total: 9, pending: 3, processing: 2, completed: 4 },
-  newsletter: { total: 5, active: 3, canceled: 2 },
-  reaction: { views: 41670, likes: 1140, favorites: 675, shares: 285 },
+type NewsletterRow = {
+  id: string;
+  email: string;
+  subscription_source: string;
+  status: DashboardNewsletter["status"];
 };
 
 export default async function AdminDashboardPage() {
-  const { marathons, error } = await getMarathons();
+  const supabase = await createClient();
+  const [profilesResult, contactsResult, newslettersResult] = await Promise.all([
+    supabase
+      .from("profiles")
+      .select("id, full_name, email, signup_provider")
+      .order("created_at", { ascending: false }),
+    supabase
+      .from("contacts")
+      .select("id, title, type, status, created_at")
+      .order("created_at", { ascending: false }),
+    supabase
+      .from("newsletters")
+      .select("id, email, subscription_source, status")
+      .order("created_at", { ascending: false }),
+  ]);
+
+  const profiles = (profilesResult.data ?? []) as ProfileRow[];
+  const contacts = (contactsResult.data ?? []) as ContactRow[];
+  const newsletters = (newslettersResult.data ?? []) as NewsletterRow[];
+
+  const recentMembers: DashboardMember[] = profiles.slice(0, 5).map((profile) => ({
+    id: profile.id,
+    name: profile.full_name?.trim() || "이름 없음",
+    email: profile.email ?? "이메일 없음",
+    provider: normalizeProvider(profile.signup_provider),
+  }));
+  const recentContacts: DashboardContact[] = contacts.slice(0, 5).map((contact) => ({
+    id: contact.id,
+    title: contact.title,
+    type: contact.type,
+    status: contact.status,
+    createdAt: formatKoreanDate(contact.created_at),
+  }));
+  const recentNewsletters: DashboardNewsletter[] = newsletters
+    .slice(0, 5)
+    .map((newsletter) => ({
+      id: newsletter.id,
+      email: newsletter.email,
+      source: newsletter.subscription_source,
+      status: newsletter.status,
+    }));
+
+  const stats: DashboardStats = {
+    member: {
+      total: profiles.length,
+      google: profiles.filter((profile) => normalizeProvider(profile.signup_provider) === "google").length,
+      kakao: profiles.filter((profile) => normalizeProvider(profile.signup_provider) === "kakao").length,
+      naver: profiles.filter((profile) => normalizeProvider(profile.signup_provider) === "naver").length,
+    },
+    contact: {
+      total: contacts.length,
+      pending: contacts.filter((contact) => contact.status === "대기중").length,
+      processing: contacts.filter((contact) => contact.status === "처리중").length,
+      completed: contacts.filter((contact) => contact.status === "처리완료").length,
+    },
+    newsletter: {
+      total: newsletters.length,
+      active: newsletters.filter((newsletter) => newsletter.status === "구독중").length,
+      canceled: newsletters.filter((newsletter) => newsletter.status === "구독취소").length,
+    },
+  };
 
   return (
     <AdminDashboard
-      marathons={marathons}
-      hasMarathonError={error}
+      hasDataError={Boolean(profilesResult.error || contactsResult.error || newslettersResult.error)}
       stats={stats}
       recentMembers={recentMembers}
       recentContacts={recentContacts}
       recentNewsletters={recentNewsletters}
-      topReactions={topReactions}
     />
   );
+}
+
+function normalizeProvider(provider: string | null): DashboardMember["provider"] {
+  if (provider === "naver" || provider === "custom:naver") return "naver";
+  if (provider === "kakao") return "kakao";
+  return "google";
+}
+
+function formatKoreanDate(value: string) {
+  return new Intl.DateTimeFormat("ko-KR", {
+    timeZone: "Asia/Seoul",
+    year: "numeric",
+    month: "2-digit",
+    day: "2-digit",
+  })
+    .format(new Date(value))
+    .replace(/\. /g, ".")
+    .replace(/\.$/, "");
 }

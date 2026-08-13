@@ -3,13 +3,15 @@
 import Link from "next/link";
 import { Send } from "lucide-react";
 import { zodResolver } from "@hookform/resolvers/zod";
+import { useState } from "react";
 import { Controller, useForm } from "react-hook-form";
 import { Button } from "@/components/ui/button";
+import DialogContactSuccess from "@/components/dialog/dialog-contact-success";
 import { Checkbox } from "@/components/ui/checkbox";
 import { Field, FieldError, FieldLabel } from "@/components/ui/field";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
-import { APP_EMAIL } from "@/lib/constants";
+import { createClient } from "@/lib/supabase/client";
 import type { SupportItem } from "@/lib/support";
 import { contactFormSchema, type ContactFormValues } from "@/lib/validations";
 
@@ -18,10 +20,14 @@ type PageSupportFormProps = {
 };
 
 export default function PageSupportForm({ item }: PageSupportFormProps) {
+  const [submitStatus, setSubmitStatus] = useState<
+    "idle" | "success" | "error" | "unavailable"
+  >("idle");
   const {
     register,
     control,
     handleSubmit,
+    reset,
     formState: { errors, isSubmitting },
   } = useForm<ContactFormValues>({
     resolver: zodResolver(contactFormSchema),
@@ -36,20 +42,27 @@ export default function PageSupportForm({ item }: PageSupportFormProps) {
     },
   });
 
-  const onSubmit = (values: ContactFormValues) => {
-    const subject = `[런조아 ${item.label}] ${values.subject}`;
-    const body = [
-      `문의 유형: ${item.label} (${item.type})`,
-      `이름: ${values.name}`,
-      `회신 이메일: ${values.email}`,
-      `관련 페이지: ${values.relatedUrl || "없음"}`,
-      "",
-      values.content,
-    ].join("\n");
+  const onSubmit = async (values: ContactFormValues) => {
+    setSubmitStatus("idle");
 
-    window.location.assign(
-      `mailto:${APP_EMAIL}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`,
-    );
+    const supabase = createClient();
+    const { error } = await supabase.rpc("submit_contact", {
+      contact_name: values.name,
+      contact_email: values.email,
+      contact_type: item.label,
+      contact_title: values.subject,
+      contact_content: values.content,
+      contact_related_url: values.relatedUrl || null,
+      privacy_agreed: values.privacyConsent,
+    });
+
+    if (error) {
+      setSubmitStatus(error.code === "PGRST202" ? "unavailable" : "error");
+      return;
+    }
+
+    reset();
+    setSubmitStatus("success");
   };
 
   return (
@@ -74,6 +87,23 @@ export default function PageSupportForm({ item }: PageSupportFormProps) {
         noValidate
         className="mt-7 space-y-6"
       >
+        {submitStatus === "error" && (
+          <p
+            role="alert"
+            className="rounded-lg border border-red-200 bg-red-50 px-4 py-3 font-anyvid text-sm text-red-700"
+          >
+            문의를 접수하지 못했습니다. 잠시 후 다시 시도해 주세요.
+          </p>
+        )}
+        {submitStatus === "unavailable" && (
+          <p
+            role="alert"
+            className="rounded-lg border border-amber-200 bg-amber-50 px-4 py-3 font-anyvid text-sm text-amber-800"
+          >
+            현재 문의 접수 기능을 준비하고 있습니다. 잠시 후 다시 이용해
+            주세요.
+          </p>
+        )}
         <div className="grid gap-5 sm:grid-cols-2">
           <Field data-invalid={Boolean(errors.name)}>
             <FieldLabel htmlFor="support-name" className="font-anyvid">
@@ -196,11 +226,15 @@ export default function PageSupportForm({ item }: PageSupportFormProps) {
             disabled={isSubmitting}
             className="bg-brand px-5 text-white hover:bg-brand/85"
           >
-            {isSubmitting ? "확인 중..." : "문의하기"}
+            {isSubmitting ? "접수 중..." : "문의하기"}
             <Send aria-hidden="true" />
           </Button>
         </div>
       </form>
+      <DialogContactSuccess
+        open={submitStatus === "success"}
+        onOpenChange={(open) => !open && setSubmitStatus("idle")}
+      />
     </section>
   );
 }

@@ -127,7 +127,7 @@ export default function MarathonCalendar({
           </EmptyState>
         ) : (
           <>
-            <div className="overflow-hidden rounded-2xl border bg-card">
+            <div className="overflow-hidden rounded-t-2xl border bg-card">
               <div className="flex items-center justify-between border-b px-4 py-4 sm:px-6">
                 <Button
                   variant="outline"
@@ -188,7 +188,7 @@ export default function MarathonCalendar({
                     >
                       <span
                         className={cn(
-                          "inline-flex size-7 items-center justify-center rounded-full font-anyvid text-xs tabular-nums sm:text-sm",
+                          "mx-auto flex size-7 items-center justify-center rounded-full font-anyvid text-xs tabular-nums sm:mx-0 sm:text-sm",
                           date === today && "bg-brand font-semibold text-white",
                         )}
                       >

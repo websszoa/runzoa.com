@@ -1,6 +1,6 @@
 "use client";
 
-import { useMemo, useState } from "react";
+import { useMemo, useState, useTransition } from "react";
 import {
   Mail,
   Megaphone,
@@ -10,6 +10,10 @@ import {
   UserX,
 } from "lucide-react";
 
+import {
+  deleteNewsletter,
+  updateNewsletterStatus,
+} from "@/app/admin/newsletter/actions";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import {
@@ -35,7 +39,8 @@ export type AdminNewsletterItem = {
   id: string;
   email: string;
   age: string | null;
-  source: string | null;
+  acquisitionSource: string | null;
+  contentPreference: string | null;
   agreeAds: boolean;
   status: NewsletterStatus;
   createdAt: string;
@@ -43,11 +48,15 @@ export type AdminNewsletterItem = {
 
 export default function AdminNewsletter({
   initialNewsletters,
+  hasError = false,
 }: {
   initialNewsletters: AdminNewsletterItem[];
+  hasError?: boolean;
 }) {
   const [newsletters, setNewsletters] = useState(initialNewsletters);
   const [confirmDeleteId, setConfirmDeleteId] = useState<string | null>(null);
+  const [operationError, setOperationError] = useState<string | null>(null);
+  const [isPending, startTransition] = useTransition();
   const stats = useMemo(
     () => ({
       total: newsletters.length,
@@ -60,24 +69,42 @@ export default function AdminNewsletter({
   );
 
   const handleToggle = (id: string) => {
-    setNewsletters((current) =>
-      current.map((item) =>
-        item.id === id
-          ? {
-              ...item,
-              status: item.status === "구독중" ? "구독취소" : "구독중",
-            }
-          : item,
-      ),
-    );
+    const item = newsletters.find((newsletter) => newsletter.id === id);
+    if (!item) return;
+
+    const nextStatus = item.status === "구독중" ? "구독취소" : "구독중";
+    setOperationError(null);
+    startTransition(async () => {
+      try {
+        await updateNewsletterStatus(id, nextStatus);
+        setNewsletters((current) =>
+          current.map((newsletter) =>
+            newsletter.id === id
+              ? { ...newsletter, status: nextStatus }
+              : newsletter,
+          ),
+        );
+      } catch {
+        setOperationError("구독 상태를 변경하지 못했습니다.");
+      }
+    });
   };
 
   const handleDelete = () => {
     if (!confirmDeleteId) return;
-    setNewsletters((current) =>
-      current.filter(({ id }) => id !== confirmDeleteId),
-    );
-    setConfirmDeleteId(null);
+    const id = confirmDeleteId;
+    setOperationError(null);
+    startTransition(async () => {
+      try {
+        await deleteNewsletter(id);
+        setNewsletters((current) =>
+          current.filter((newsletter) => newsletter.id !== id),
+        );
+        setConfirmDeleteId(null);
+      } catch {
+        setOperationError("구독자를 삭제하지 못했습니다.");
+      }
+    });
   };
 
   return (
@@ -88,6 +115,12 @@ export default function AdminNewsletter({
           뉴스레터 구독자 목록을 확인하고 관리하세요.
         </p>
       </header>
+
+      {(hasError || operationError) && (
+        <p className="rounded-lg border border-red-200 bg-red-50 px-4 py-3 font-anyvid text-sm text-red-700">
+          {operationError ?? "뉴스레터 구독자 정보를 불러오지 못했습니다."}
+        </p>
+      )}
 
       <dl className="grid grid-cols-2 gap-4 sm:grid-cols-4">
         <div className="rounded-lg border bg-white p-4">
@@ -150,7 +183,10 @@ export default function AdminNewsletter({
               <TableHead>이메일</TableHead>
               <TableHead className="w-[80px] text-center">나이대</TableHead>
               <TableHead className="hidden w-[160px] text-center md:table-cell">
-                구독 경로
+                유입 경로
+              </TableHead>
+              <TableHead className="hidden w-[180px] text-center lg:table-cell">
+                관심 정보
               </TableHead>
               <TableHead className="w-[60px] text-center">광고</TableHead>
               <TableHead className="w-[80px] text-center">상태</TableHead>
@@ -163,7 +199,7 @@ export default function AdminNewsletter({
           <TableBody>
             {newsletters.length === 0 ? (
               <TableRow>
-                <TableCell colSpan={8} className="py-12 text-center">
+                <TableCell colSpan={9} className="py-12 text-center">
                   <div className="flex flex-col items-center gap-2 text-muted-foreground">
                     <Mail className="size-8" aria-hidden="true" />
                     <p className="font-anyvid text-sm">
@@ -193,7 +229,14 @@ export default function AdminNewsletter({
                     {item.age ?? <span className="text-gray-300">-</span>}
                   </TableCell>
                   <TableCell className="hidden text-center text-sm md:table-cell">
-                    {item.source ?? <span className="text-gray-300">-</span>}
+                    {item.acquisitionSource ?? (
+                      <span className="text-gray-300">-</span>
+                    )}
+                  </TableCell>
+                  <TableCell className="hidden text-center text-sm lg:table-cell">
+                    {item.contentPreference ?? (
+                      <span className="text-gray-300">-</span>
+                    )}
                   </TableCell>
                   <TableCell className="text-center">
                     <Badge
@@ -211,6 +254,7 @@ export default function AdminNewsletter({
                     <button
                       type="button"
                       onClick={() => handleToggle(item.id)}
+                      disabled={isPending}
                       className="rounded-full focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring"
                       aria-label={`${item.email} 구독 상태 변경`}
                     >
@@ -258,7 +302,7 @@ export default function AdminNewsletter({
               구독자를 삭제하시겠습니까?
             </DialogTitle>
             <DialogDescription className="font-anyvid">
-              현재 샘플 화면에서 삭제한 데이터는 새로고침하면 복원됩니다.
+              삭제한 구독자 정보는 복구할 수 없습니다.
             </DialogDescription>
           </DialogHeader>
           <DialogFooter>
@@ -267,6 +311,7 @@ export default function AdminNewsletter({
               variant="outline"
               className="font-anyvid"
               onClick={() => setConfirmDeleteId(null)}
+              disabled={isPending}
             >
               취소
             </Button>
@@ -274,8 +319,9 @@ export default function AdminNewsletter({
               type="button"
               className="bg-red-500 font-anyvid text-white hover:bg-red-600"
               onClick={handleDelete}
+              disabled={isPending}
             >
-              삭제
+              {isPending ? "처리 중" : "삭제"}
             </Button>
           </DialogFooter>
         </DialogContent>

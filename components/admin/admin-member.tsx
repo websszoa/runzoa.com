@@ -1,4 +1,5 @@
 import {
+  CircleAlert,
   Settings,
   Share2,
   UserCheck,
@@ -7,6 +8,7 @@ import {
 } from "lucide-react";
 
 import { Badge } from "@/components/ui/badge";
+import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { Button } from "@/components/ui/button";
 import {
   Table,
@@ -23,8 +25,9 @@ export type AdminMemberProfile = {
   id: string;
   fullName: string;
   email: string;
+  avatarUrl: string | null;
   signupProvider: MemberProvider;
-  role: "admin" | "member";
+  role: "admin" | "user";
   visitCount: number;
   isDeleted: boolean;
   createdAt: string;
@@ -48,9 +51,11 @@ const providerStyles: Record<MemberProvider, string> = {
 export default function AdminMember({
   profiles,
   stats,
+  hasError = false,
 }: {
   profiles: AdminMemberProfile[];
   stats: AdminMemberStats;
+  hasError?: boolean;
 }) {
   return (
     <div className="space-y-8 p-6 lg:p-8">
@@ -60,6 +65,16 @@ export default function AdminMember({
           가입 회원 정보와 활동 상태를 확인하고 계정을 관리하세요.
         </p>
       </header>
+
+      {hasError && (
+        <div
+          role="alert"
+          className="flex items-center gap-2 rounded-lg border border-red-200 bg-red-50 px-4 py-3 font-anyvid text-sm text-red-700"
+        >
+          <CircleAlert className="size-4 shrink-0" aria-hidden="true" />
+          회원 정보를 불러오지 못했습니다. SQL 정책 적용 상태를 확인해 주세요.
+        </div>
+      )}
 
       <dl className="grid grid-cols-2 gap-4 md:grid-cols-4">
         <div className="rounded-lg border bg-white p-4">
@@ -134,19 +149,30 @@ export default function AdminMember({
             </TableRow>
           </TableHeader>
           <TableBody>
-            {profiles.map((profile, index) => (
+            {profiles.length === 0 ? (
+              <TableRow>
+                <TableCell colSpan={10} className="py-12 text-center text-sm text-muted-foreground">
+                  등록된 회원이 없습니다.
+                </TableCell>
+              </TableRow>
+            ) : profiles.map((profile, index) => (
               <TableRow
                 key={profile.id}
                 className="text-muted-foreground hover:bg-gray-50"
               >
                 <TableCell className="text-center">{index + 1}</TableCell>
                 <TableCell>
-                  <div
-                    className={`mx-auto flex size-9 items-center justify-center rounded-full text-xs font-semibold uppercase ${providerStyles[profile.signupProvider]}`}
-                    aria-label={`${profile.fullName} 프로필 이미지`}
-                  >
-                    {profile.fullName.charAt(0)}
-                  </div>
+                  <Avatar className="mx-auto size-9">
+                    <AvatarImage
+                      src={profile.avatarUrl ?? undefined}
+                      alt={`${profile.fullName} 프로필 이미지`}
+                    />
+                    <AvatarFallback
+                      className={`text-xs font-semibold uppercase ${providerStyles[profile.signupProvider]}`}
+                    >
+                      {profile.fullName.charAt(0)}
+                    </AvatarFallback>
+                  </Avatar>
                 </TableCell>
                 <TableCell className="text-sm text-foreground">
                   {profile.fullName}

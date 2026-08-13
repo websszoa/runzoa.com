@@ -1,4 +1,5 @@
 import Link from "next/link";
+import DialogNewsletter from "@/components/dialog/dialog-newsletter";
 import type { Marathon } from "@/lib/marathons";
 import { formatMarathonDate } from "@/lib/utils";
 import {
@@ -222,13 +223,13 @@ export default function DetailRegistration({
               </span>
             </div>
 
-            <Link
-              href="/news?type=newsletter"
+            <DialogNewsletter
+              subscriptionSource="대회 상세페이지"
               className="relative mt-6 inline-flex h-11 items-center justify-center gap-2 rounded-full bg-brand px-6 text-sm font-semibold text-white shadow-sm transition-colors hover:bg-brand/90"
             >
               <HandHeart className="size-4" aria-hidden="true" />
               구독하기
-            </Link>
+            </DialogNewsletter>
           </div>
         </div>
       </article>

@@ -1,4 +1,3 @@
-import Link from "next/link";
 import {
   ArrowRight,
   BellRing,
@@ -6,6 +5,7 @@ import {
   CalendarDays,
   HandHeart,
 } from "lucide-react";
+import DialogNewsletter from "@/components/dialog/dialog-newsletter";
 
 export default function MainNewsletterV2() {
   return (
@@ -69,8 +69,8 @@ export default function MainNewsletterV2() {
           </div>
 
           <div className="mt-6 flex flex-col items-center">
-            <Link
-              href="/news?type=newsletter"
+            <DialogNewsletter
+              subscriptionSource="메인 구독 배너"
               className="group inline-flex h-11 items-center justify-center gap-2 rounded-full bg-brand px-6 font-anyvid text-sm font-semibold text-white shadow-sm transition-all hover:-translate-y-0.5 hover:bg-brand/90"
             >
               <HandHeart className="size-4" aria-hidden="true" />
@@ -79,7 +79,7 @@ export default function MainNewsletterV2() {
                 className="size-4 transition-transform group-hover:translate-x-0.5"
                 aria-hidden="true"
               />
-            </Link>
+            </DialogNewsletter>
           </div>
         </div>
       </div>
