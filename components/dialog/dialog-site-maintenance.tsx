@@ -28,7 +28,7 @@ export default function DialogSiteMaintenance() {
           </DialogTitle>
           <DialogDescription className="break-keep font-anyvid text-sm leading-6">
             더 편리한 런조아를 위해 일부 기능을 업데이트하고 있습니다. 현재
-            정보는 정확하지 않습니다. 참고바랍니다.
+            정보는 정확하지 않습니다.
           </DialogDescription>
         </DialogHeader>
 
