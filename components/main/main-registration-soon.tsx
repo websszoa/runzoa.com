@@ -18,7 +18,7 @@ import {
   WalletCards,
 } from "lucide-react";
 
-export default function MainUpcoming({
+export default function MainRegistrationSoon({
   marathons,
 }: {
   marathons: Marathon[];
@@ -65,7 +65,7 @@ export default function MainUpcoming({
 
           <Link
             href="/marathon-list?status=upcoming"
-            className="inline-flex min-h-11 items-center gap-1.5 self-start font-anyvid text-sm font-semibold text-brand md:self-auto"
+            className="inline-flex items-center gap-1.5 self-end font-anyvid text-sm text-brand md:self-auto"
           >
             전체 대회 살펴보기
             <ArrowRight className="size-4" aria-hidden="true" />
@@ -83,7 +83,8 @@ export default function MainUpcoming({
 
           <div className="divide-y">
             {upcomingMarathons.map((marathon) => {
-              const registrationDate = marathon.registration.startDate as string;
+              const registrationDate = marathon.registration
+                .startDate as string;
               const registrationStatus = getRegistrationStatus(marathon);
               const distances = Object.keys(marathon.registration.price);
               const location = [
@@ -116,10 +117,26 @@ export default function MainUpcoming({
                       >
                         {getMarathonDDay(marathon.event.startDate)}
                       </Badge>
+                      <div className="ml-auto flex gap-1.5 sm:hidden">
+                        <Badge
+                          variant="outline"
+                          className="border-brand/40 text-brand"
+                        >
+                          {marathon.info.type ?? "러닝"}
+                        </Badge>
+                        <Badge
+                          variant="outline"
+                          className={getRegistrationBadgeClassName(
+                            registrationStatus,
+                          )}
+                        >
+                          {getRegistrationLabel(registrationStatus)}
+                        </Badge>
+                      </div>
                     </div>
 
-                    <div className="min-w-0 flex-1 sm:border-l sm:pl-5">
-                      <div className="mb-1.5 flex flex-wrap gap-1.5">
+                    <div className="min-w-0 flex-1 border-t pt-3 sm:border-t-0 sm:border-l sm:pt-0 sm:pl-5">
+                      <div className="mb-1.5 hidden flex-wrap gap-1.5 sm:flex">
                         <Badge
                           variant="outline"
                           className="border-brand/40 text-brand"
@@ -181,7 +198,9 @@ export default function MainUpcoming({
                         <AlarmClock className="size-4" aria-hidden="true" />
                       </span>
                       <div className="min-w-0 font-anyvid">
-                        <p className="text-xs text-muted-foreground">접수 시작일</p>
+                        <p className="text-xs text-muted-foreground">
+                          접수 시작일
+                        </p>
                         <p className="mt-0.5 truncate text-sm font-semibold text-foreground">
                           {formatMarathonDate(registrationDate)}
                         </p>

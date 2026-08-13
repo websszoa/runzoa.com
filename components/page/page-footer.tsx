@@ -80,7 +80,7 @@ export default function Footer() {
           </div>
         </div>
 
-        <div className="font-anyvid mt-14 flex flex-col gap-3 border-t pt-6 text-xs text-muted-foreground sm:flex-row sm:items-center sm:justify-between">
+        <div className="mt-14 flex flex-col items-center gap-2 sm:gap-3 border-t pt-6 text-center font-anyvid text-xs text-muted-foreground sm:flex-row sm:justify-between sm:text-left">
           <p>{APP_COPYRIGHT}</p>
           <p>{APP_SLOGAN}</p>
         </div>

@@ -51,7 +51,7 @@ export default function MainThisMonth({
 
           <Link
             href="/marathon-calendar"
-            className="inline-flex min-h-11 items-center gap-1.5 self-start font-anyvid text-sm font-semibold text-brand md:self-auto"
+            className="inline-flex min-h-11 items-center gap-1.5 self-end font-anyvid text-sm font-semibold text-brand md:self-auto"
           >
             전체 달력 보기
             <ArrowRight className="size-4" aria-hidden="true" />

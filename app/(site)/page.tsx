@@ -4,8 +4,8 @@ import MainNewsletterV2 from "@/components/main/main-newsletter-v2";
 import MainOpenRegistration from "@/components/main/main-open-registration";
 import MainPromoBanner from "@/components/main/main-promo-banner";
 import MainRaceFinder from "@/components/main/main-race-finder";
+import MainRegistrationSoon from "@/components/main/main-registration-soon";
 import MainThisMonth from "@/components/main/main-this-month";
-import MainUpcoming from "@/components/main/main-upcoming";
 
 import { getMarathons } from "@/lib/marathons";
 import {
@@ -78,7 +78,7 @@ export default async function Home() {
       <MainHero marathons={marathons} />
       <MainRaceFinder />
       <MainPromoBanner />
-      <MainUpcoming marathons={marathons} />
+      <MainRegistrationSoon marathons={marathons} />
       <MainThisMonth marathons={marathons} />
       <MainOpenRegistration marathons={marathons} />
       <MainNewsletterV2 />

@@ -1,6 +1,5 @@
 import Link from "next/link";
 import { ArrowRight, CalendarCheck, MapPin } from "lucide-react";
-
 import { Badge } from "@/components/ui/badge";
 import type { Marathon } from "@/lib/marathons";
 import {
@@ -56,7 +55,7 @@ export default function MainOpenRegistration({
 
           <Link
             href="/marathon-list?status=open"
-            className="inline-flex min-h-11 items-center gap-1.5 self-start font-anyvid text-sm font-semibold text-brand md:self-auto"
+            className="inline-flex min-h-11 items-center gap-1.5 self-end font-anyvid text-sm text-brand md:self-auto"
           >
             접수중 대회 전체 보기
             <ArrowRight className="size-4" aria-hidden="true" />

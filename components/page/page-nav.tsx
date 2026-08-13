@@ -17,7 +17,7 @@ export default function PageNav({ ariaLabel, items }: PageNavProps) {
   return (
     <nav
       aria-label={ariaLabel}
-      className="sticky top-16 z-30 border-b bg-background/90 backdrop-blur"
+      className="border-b bg-background/90 backdrop-blur"
     >
       <div className="mx-auto flex max-w-7xl gap-1 overflow-x-auto px-4 py-3 sm:px-6 lg:px-8">
         {items.map((item) => (

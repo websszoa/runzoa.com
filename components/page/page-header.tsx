@@ -35,7 +35,7 @@ export default function Header() {
         <Link
           href="/"
           aria-label="런조아 홈으로"
-          className="flex items-center font-paperlogy text-xl sm:text-2xl font-black uppercase leading-none text-brand"
+          className="flex items-center font-paperlogy text-2xl font-black uppercase leading-none text-brand"
         >
           {APP_ENG_NAME}
         </Link>

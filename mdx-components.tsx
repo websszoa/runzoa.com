@@ -10,13 +10,7 @@ type NewsImageProps = {
   caption?: string;
 };
 
-function NewsImage({
-  src,
-  alt,
-  width,
-  height,
-  caption,
-}: NewsImageProps) {
+function NewsImage({ src, alt, width, height, caption }: NewsImageProps) {
   return (
     <figure className="mt-7 overflow-hidden rounded-xl border bg-muted/20">
       <Image
@@ -41,7 +35,8 @@ function getTextContent(node: React.ReactNode): string {
   if (Array.isArray(node)) return node.map(getTextContent).join("");
   if (node && typeof node === "object" && "props" in node) {
     return getTextContent(
-      (node as React.ReactElement<{ children?: React.ReactNode }>).props.children,
+      (node as React.ReactElement<{ children?: React.ReactNode }>).props
+        .children,
     );
   }
   return "";
@@ -99,9 +94,7 @@ const components = {
   li: ({ children }) => (
     <li className="ml-3 list-disc pl-1 marker:text-brand">{children}</li>
   ),
-  strong: ({ children }) => (
-    <strong className="font-semibold text-foreground">{children}</strong>
-  ),
+  strong: ({ children }) => <strong className="text-black">{children}</strong>,
   blockquote: ({ children }) => (
     <blockquote className="mt-6 border-l-4 border-brand bg-brand/5 px-5 py-4 font-nanumNeo [&>p]:mt-0">
       {children}

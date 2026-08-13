@@ -48,14 +48,14 @@ export default function MainPromoBanner() {
           <div className="mt-7 flex flex-col gap-3 sm:flex-row">
             <Link
               href="/marathon-map"
-              className="inline-flex h-11 items-center justify-center gap-2 rounded-full bg-white px-5 font-anyvid text-sm font-semibold text-brand transition-colors hover:bg-white/90"
+              className="inline-flex h-11 items-center justify-center gap-2 rounded-full bg-white px-5 font-anyvid text-sm text-brand transition-colors hover:bg-white/90"
             >
               대회 지도 열기
               <ArrowRight className="size-4" aria-hidden="true" />
             </Link>
             <Link
               href="/marathon-calendar"
-              className="inline-flex h-11 items-center justify-center gap-2 rounded-full border border-white/30 bg-white/10 px-5 font-anyvid text-sm font-semibold text-white transition-colors hover:bg-white/20"
+              className="inline-flex h-11 items-center justify-center gap-2 rounded-full border border-white/30 bg-white/10 px-5 font-anyvid text-sm text-white transition-colors hover:bg-white/20"
             >
               <CalendarDays className="size-4" aria-hidden="true" />
               달력으로 일정 보기

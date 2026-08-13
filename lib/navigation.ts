@@ -53,11 +53,7 @@ export const SHEET_NAVIGATION: MenuItem[][] = [
     { icon: ScrollText, label: "운영방침", href: "/policy" },
   ],
   [
-    {
-      icon: UserRound,
-      label: "마이페이지",
-      href: "/mypage",
-    },
+    { icon: UserRound, label: "마이페이지", href: "/mypage" },
     { icon: Heart, label: "즐겨찾기", href: "/favorites" },
     { icon: ShieldCheck, label: "관리자", href: "/admin" },
   ],

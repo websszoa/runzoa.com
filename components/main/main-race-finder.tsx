@@ -1,5 +1,4 @@
 import Link from "next/link";
-
 import {
   ArrowRight,
   CalendarDays,
@@ -47,13 +46,13 @@ export default function MainRaceFinder() {
       className="bg-[linear-gradient(180deg,#fff8f5_0%,#fffdfb_48%,#ffffff_100%)]"
     >
       <div className="mx-auto max-w-7xl px-4 py-16 sm:px-6 sm:py-20 lg:px-8 lg:py-24">
-        <div className="max-w-2xl">
+        <div>
           <p className="font-paperlogy text-sm tracking-wide text-brand uppercase">
             Race finder
           </p>
           <h2
             id="race-finder-title"
-            className="mt-2 -ml-px font-paperlogy text-3xl leading-[1.1] font-semibold tracking-tight sm:text-5xl"
+            className="mt-2 -ml-px font-paperlogy text-3xl leading-[1.2] font-semibold tracking-tight sm:text-5xl sm:leading-[1.1]"
           >
             원하는 마라톤을
             <br />
