@@ -330,7 +330,7 @@ export default function MarathonList({
           <>
             <div className="divide-y overflow-hidden rounded-2xl border bg-card">
               {filteredMarathons.slice(0, visibleCount).map((marathon) => (
-                <MarathonListRow key={marathon.id} marathon={marathon} />
+                <MarathonListRow key={marathon.slug} marathon={marathon} />
               ))}
             </div>
             {visibleCount < filteredMarathons.length && (

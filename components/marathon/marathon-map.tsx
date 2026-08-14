@@ -223,7 +223,7 @@ export default function MarathonMap({
           anchor: { x: 15, y: 30 },
         },
       });
-      maps.Event.addListener(marker, "click", () => setSelectedId(marathon.id));
+      maps.Event.addListener(marker, "click", () => setSelectedId(marathon.slug));
       markersRef.current.push(marker);
     });
   }, [filteredMarathons, mapInitialized]);
@@ -278,7 +278,7 @@ export default function MarathonMap({
   }, [selectedId]);
 
   const selectMarathon = (marathon: Marathon) => {
-    setSelectedId(marathon.id);
+    setSelectedId(marathon.slug);
     if (!mapRef.current || !window.naver) return;
     mapRef.current.panTo(
       new window.naver.maps.LatLng(
@@ -386,9 +386,9 @@ export default function MarathonMap({
               {filteredMarathons.length ? (
                 filteredMarathons.map((marathon) => (
                   <MapRaceItem
-                    key={marathon.id}
+                    key={marathon.slug}
                     marathon={marathon}
-                    active={selectedId === marathon.id}
+                    active={selectedId === marathon.slug}
                     onSelect={() => selectMarathon(marathon)}
                   />
                 ))
@@ -444,7 +444,7 @@ function MapRaceItem({
   const distances = Object.keys(marathon.registration.price);
   return (
     <article
-      id={`map-race-${marathon.id}`}
+      id={`map-race-${marathon.slug}`}
       className={cn(
         "border-b p-4 transition-colors last:border-b-0",
         active ? "bg-brand/[0.08]" : "hover:bg-muted/40",

@@ -318,7 +318,7 @@ export default function AdminMarathon({
 
                   return (
                     <TableRow
-                      key={marathon.id}
+                      key={marathon.slug}
                       className="text-muted-foreground hover:bg-gray-50"
                     >
                       <TableCell className="text-center text-sm tabular-nums">

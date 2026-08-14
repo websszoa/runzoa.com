@@ -489,7 +489,7 @@ export default function MarathonSearch({
             <>
               <div className="grid gap-4 xl:grid-cols-2">
                 {filteredMarathons.slice(0, visibleCount).map((marathon) => (
-                  <MarathonDetailCard key={marathon.id} marathon={marathon} />
+                  <MarathonDetailCard key={marathon.slug} marathon={marathon} />
                 ))}
               </div>
               {visibleCount < filteredMarathons.length && (

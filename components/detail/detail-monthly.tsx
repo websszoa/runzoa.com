@@ -50,7 +50,7 @@ export default function DetailMonthly({
 
           return (
             <article
-              key={marathon.id}
+              key={marathon.slug}
               className="group min-w-0 bg-background"
             >
               <Link

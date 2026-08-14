@@ -197,7 +197,7 @@ export default function MarathonCalendar({
                       <div className="mt-1 hidden space-y-1 sm:block">
                         {events.slice(0, 2).map((event) => (
                           <div
-                            key={event.id}
+                            key={event.slug}
                             title={event.name}
                             className="truncate rounded bg-brand/10 px-1.5 py-1 font-anyvid text-[11px] font-semibold text-brand"
                           >
@@ -245,7 +245,7 @@ function RaceList({ marathons }: { marathons: Marathon[] }) {
         const distances = Object.keys(marathon.registration.price);
         return (
           <article
-            key={marathon.id}
+            key={marathon.slug}
             className="flex flex-col gap-3 p-4 transition-colors hover:bg-muted/35 sm:flex-row sm:items-center sm:p-5"
           >
             <div className="flex min-w-24 items-center gap-3 sm:flex-col sm:gap-1.5 sm:text-center">

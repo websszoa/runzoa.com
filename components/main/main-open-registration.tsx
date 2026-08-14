@@ -85,7 +85,7 @@ export default function MainOpenRegistration({
 
               return (
                 <article
-                  key={marathon.id}
+                  key={marathon.slug}
                   className="group min-w-0 bg-background"
                 >
                   <Link

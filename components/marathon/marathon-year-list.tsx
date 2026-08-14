@@ -77,7 +77,7 @@ export default function MarathonYearList({ datasets, initialYear }: Props) {
                 const site = marathon.event.site ?? marathon.registration.site;
 
                 return (
-                  <TableRow key={marathon.id} className="text-muted-foreground hover:bg-gray-50">
+                  <TableRow key={marathon.slug} className="text-muted-foreground hover:bg-gray-50">
                     <TableCell className="text-center text-sm tabular-nums">
                       {index + 1}
                     </TableCell>

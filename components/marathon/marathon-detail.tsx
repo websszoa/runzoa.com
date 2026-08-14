@@ -36,7 +36,7 @@ export default function MarathonDetail({
         <div className="order-1 h-full lg:order-2 lg:col-span-1">
           <DetailGallery
             name={marathon.name}
-            images_cover={`/marathon/cover/${marathon.id}.webp`}
+            images_cover={`/marathon/cover/${marathon.slug}.webp`}
             eventSite={marathon.event.site}
           />
         </div>

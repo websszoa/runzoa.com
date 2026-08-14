@@ -87,7 +87,6 @@ export async function createMarathon(
     if (values.email && !email) return { error: "이메일 형식을 확인해 주세요." };
 
     const marathon: Marathon = {
-      id: slug,
       slug,
       name: values.name,
       description: values.description,

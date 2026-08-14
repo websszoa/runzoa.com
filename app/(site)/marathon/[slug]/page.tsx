@@ -38,7 +38,7 @@ export default async function MarathonDetailPage({
   const upcomingMarathons = marathons
     .filter(
       (item) =>
-        item.id !== marathon.id &&
+        item.slug !== marathon.slug &&
         getRegistrationStatus(item) === "접수예정" &&
         item.registration.startDate,
     )
@@ -52,7 +52,7 @@ export default async function MarathonDetailPage({
   const openMarathons = marathons
     .filter(
       (item) =>
-        item.id !== marathon.id &&
+        item.slug !== marathon.slug &&
         getRegistrationStatus(item) === "접수중" &&
         item.event.startDate >= getCurrentKoreanDate(),
     )
@@ -67,7 +67,8 @@ export default async function MarathonDetailPage({
   const monthlyMarathons = marathons
     .filter(
       (item) =>
-        item.id !== marathon.id && item.event.startDate.startsWith(eventMonth),
+        item.slug !== marathon.slug &&
+        item.event.startDate.startsWith(eventMonth),
     )
     .sort((a, b) => a.event.startDate.localeCompare(b.event.startDate));
   const monthlyMarathonCount = monthlyMarathons.length;

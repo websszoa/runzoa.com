@@ -4,6 +4,7 @@ import type { Marathon } from "@/lib/marathons";
 import {
   formatMarathonDate,
   formatMarathonPrices,
+  getCurrentKoreanDate,
   getMarathonDDay,
   getRegistrationBadgeClassName,
   getRegistrationLabel,
@@ -23,18 +24,18 @@ export default function MainRegistrationSoon({
 }: {
   marathons: Marathon[];
 }) {
+  const today = getCurrentKoreanDate();
   const upcomingMarathons = marathons
     .filter(
       (marathon) =>
         getRegistrationStatus(marathon) === "접수예정" &&
-        marathon.registration.startDate,
+        marathon.event.startDate >= today,
     )
     .sort((a, b) =>
-      (a.registration.startDate as string).localeCompare(
-        b.registration.startDate as string,
+      (a.registration.startDate ?? "9999-12-31").localeCompare(
+        b.registration.startDate ?? "9999-12-31",
       ),
-    )
-    .slice(0, 4);
+    );
 
   if (upcomingMarathons.length === 0) return null;
 
@@ -83,8 +84,7 @@ export default function MainRegistrationSoon({
 
           <div className="divide-y">
             {upcomingMarathons.map((marathon) => {
-              const registrationDate = marathon.registration
-                .startDate as string;
+              const registrationDate = marathon.registration.startDate;
               const registrationStatus = getRegistrationStatus(marathon);
               const distances = Object.keys(marathon.registration.price);
               const location = [
@@ -95,7 +95,7 @@ export default function MainRegistrationSoon({
                 .join(" · ");
 
               return (
-                <article key={marathon.id} className="group min-w-0">
+                <article key={marathon.slug} className="group min-w-0">
                   <Link
                     href={`/marathon/${marathon.slug}`}
                     className="flex min-w-0 flex-col gap-3 p-4 transition-colors hover:bg-muted/35 sm:flex-row sm:items-center sm:p-5"

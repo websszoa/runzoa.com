@@ -106,7 +106,6 @@ export const MARATHON_HEADERS = {
 } as const satisfies Record<string, MarathonHeaderContent>;
 
 export type Marathon = {
-  id: string;
   slug: string;
   name: string;
   description: string | null;

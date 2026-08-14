@@ -50,7 +50,7 @@ export default function DetailUpcoming({
             .join(" · ");
 
           return (
-            <article key={marathon.id} className="group min-w-0">
+            <article key={marathon.slug} className="group min-w-0">
               <Link
                 href={`/marathon/${marathon.slug}`}
                 className="flex min-w-0 flex-col gap-3 p-4 transition-colors hover:bg-muted/35 sm:flex-row sm:items-center sm:p-5"

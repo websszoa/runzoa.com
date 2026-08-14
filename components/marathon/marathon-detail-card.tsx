@@ -2,6 +2,7 @@
 
 import Image from "next/image";
 import Link from "next/link";
+import { useState } from "react";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
@@ -9,6 +10,8 @@ import {
   CalendarCheck,
   CalendarDays,
   ArrowRight,
+  Fan,
+  LoaderCircle,
   MapPin,
   Tag,
   Users,
@@ -31,6 +34,8 @@ export default function MarathonDetailCard({
 }: {
   marathon: Marathon;
 }) {
+  const [imageError, setImageError] = useState(false);
+  const [imageLoading, setImageLoading] = useState(true);
   const registrationStatus = getRegistrationStatus(marathon);
   const distances = Object.keys(marathon.registration.price);
 
@@ -68,18 +73,39 @@ export default function MarathonDetailCard({
 
           <div className="grid grid-cols-[104px_minmax(0,1fr)] gap-4 sm:grid-cols-[120px_minmax(0,1fr)]">
             <div className="group/image relative aspect-[3/4] overflow-hidden rounded bg-muted">
-              <Image
-                src={`/marathon/cover/${marathon.id}.webp`}
-                alt={`${marathon.name} 포스터`}
-                fill
-                sizes="120px"
-                quality={65}
-                className="object-cover"
-                onError={(event) => {
-                  event.currentTarget.src =
-                    "/marathon/cover/Illustratorzoa1-8.webp";
-                }}
-              />
+              {!imageError ? (
+                <Image
+                  src={`/marathon/cover/${marathon.slug}.webp`}
+                  alt={`${marathon.name} 포스터`}
+                  fill
+                  sizes="120px"
+                  quality={65}
+                  className={cn(
+                    "object-cover transition-opacity",
+                    imageLoading ? "opacity-0" : "opacity-100",
+                  )}
+                  onLoad={() => setImageLoading(false)}
+                  onError={() => {
+                    setImageError(true);
+                    setImageLoading(false);
+                  }}
+                />
+              ) : null}
+              {imageLoading ? (
+                <div className="absolute inset-0 flex items-center justify-center text-muted-foreground">
+                  <LoaderCircle
+                    className="size-6 animate-spin"
+                    aria-hidden="true"
+                  />
+                  <span className="sr-only">이미지 불러오는 중</span>
+                </div>
+              ) : null}
+              {imageError ? (
+                <div className="absolute inset-0 flex items-center justify-center text-muted-foreground">
+                  <Fan className="size-7 animate-spin" aria-hidden="true" />
+                  <span className="sr-only">이미지 준비 중입니다.</span>
+                </div>
+              ) : null}
               <div className="absolute inset-0 flex items-center justify-center bg-black/45 opacity-0 transition-opacity duration-200 group-hover/image:opacity-100 group-focus-within/image:opacity-100 motion-reduce:transition-none">
                 <Button
                   nativeButton={false}

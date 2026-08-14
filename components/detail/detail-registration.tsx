@@ -128,7 +128,7 @@ export default function DetailRegistration({
               <span>
                 접수 시작 :{" "}
                 {marathon.registration.startDate
-                  ? formatMarathonDate(marathon.registration.startDate)
+                  ? `${formatMarathonDate(marathon.registration.startDate)}${marathon.registration.startTime ? ` · ${marathon.registration.startTime}` : ""}`
                   : "일정 미정"}
               </span>
             </p>
@@ -140,7 +140,7 @@ export default function DetailRegistration({
               <span>
                 접수 마감 :{" "}
                 {marathon.registration.endDate
-                  ? formatMarathonDate(marathon.registration.endDate)
+                  ? `${formatMarathonDate(marathon.registration.endDate)}${marathon.registration.endTime ? ` · ${marathon.registration.endTime}` : ""}`
                   : marathon.registration.startDate
                     ? "선착순 마감"
                     : "-"}
