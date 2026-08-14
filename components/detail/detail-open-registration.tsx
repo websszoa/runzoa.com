@@ -19,7 +19,7 @@ export default function DetailOpenRegistration({
       <div className="flex min-h-16 items-center gap-2.5 border-b px-5 sm:px-6">
         <CalendarCheck className="size-5 shrink-0 text-brand" aria-hidden="true" />
         <h2 className="font-paperlogy text-lg font-semibold">
-          지금 접수중인 대회
+          지금 접수 중인 대회
         </h2>
         <Link
           href="/marathon-list?status=open"
@@ -69,7 +69,7 @@ export default function DetailOpenRegistration({
                       variant="outline"
                       className="shrink-0 border-brand bg-brand font-anyvid text-white"
                     >
-                      접수중
+                      접수 중
                     </Badge>
                     <h3 className="min-w-0 truncate font-paperlogy text-base font-semibold transition-colors group-hover:text-brand sm:text-lg">
                       {marathon.name}

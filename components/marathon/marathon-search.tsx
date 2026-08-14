@@ -23,7 +23,7 @@ type MarathonSearchProps = {
   hasError?: boolean;
 };
 
-type RegistrationStatus = "접수미정" | "접수예정" | "접수중" | "접수마감";
+type RegistrationStatus = "접수예정" | "접수중" | "접수마감";
 type ScaleFilter = "5천명 이하" | "5천~1만명" | "1만~2만명" | "2만명 이상";
 type SortOrder = "개최일 빠른순" | "개최일 느린순";
 type DistanceFilter = "5K" | "10K" | "HALF" | "FULL";
@@ -34,10 +34,9 @@ const REGISTRATION_FILTERS: readonly {
   value: RegistrationStatus;
   label: string;
 }[] = [
-  { value: "접수미정", label: "접수 미정" },
   { value: "접수예정", label: "접수 예정" },
-  { value: "접수중", label: "접수중" },
-  { value: "접수마감", label: "접수마감" },
+  { value: "접수중", label: "접수 중" },
+  { value: "접수마감", label: "접수 마감" },
 ];
 const PAST_RACE_FILTERS = [
   { value: "exclude", label: "비포함" },

@@ -44,12 +44,12 @@ export default function MainOpenRegistration({
               id="open-registration-title"
               className="mt-2 font-paperlogy text-3xl leading-[1.15] font-semibold tracking-tight text-balance sm:text-5xl"
             >
-              지금 접수중인
+              지금 접수 중인
               <br />
               대회를 확인하세요!
             </h2>
             <p className="mt-4 font-anyvid text-sm leading-6 text-muted-foreground sm:text-[15px]">
-              현재 접수중인 대회를 마감이 가까운 순서로 확인해 보세요.
+              현재 접수 중인 대회를 마감이 가까운 순서로 확인해 보세요.
             </p>
           </div>
 
@@ -57,7 +57,7 @@ export default function MainOpenRegistration({
             href="/marathon-list?status=open"
             className="inline-flex min-h-11 items-center gap-1.5 self-end font-anyvid text-sm text-brand md:self-auto"
           >
-            접수중 대회 전체 보기
+            접수 중 대회 전체 보기
             <ArrowRight className="size-4" aria-hidden="true" />
           </Link>
         </div>
@@ -65,7 +65,7 @@ export default function MainOpenRegistration({
         <div className="mt-10 overflow-hidden rounded-2xl border bg-background shadow-sm shadow-red-950/[0.03] sm:mt-12">
           <div className="flex items-center gap-2 border-b bg-brand/[0.035] px-5 py-3 font-anyvid text-xs text-muted-foreground sm:px-6">
             <CalendarCheck className="size-4 text-brand" aria-hidden="true" />
-            현재 접수중
+            현재 접수 중
             <strong className="font-semibold text-brand">
               {openMarathons.length.toLocaleString("ko-KR")}개
             </strong>
@@ -107,7 +107,7 @@ export default function MainOpenRegistration({
                           variant="outline"
                           className="shrink-0 border-brand bg-brand font-anyvid text-white"
                         >
-                          접수중
+                          접수 중
                         </Badge>
                         <h3 className="min-w-0 truncate font-paperlogy text-base font-semibold transition-colors group-hover:text-brand sm:text-lg">
                           {marathon.name}

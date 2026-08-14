@@ -138,7 +138,7 @@ export default function MainHero({ marathons }: { marathons: Marathon[] }) {
                     <CalendarCheck className="size-5" aria-hidden="true" />
                   </span>
                   <span className="inline-flex items-center gap-1 rounded-full bg-white px-2.5 py-1 font-anyvid text-[11px] font-semibold text-brand">
-                    접수중
+                    접수 중
                     <ArrowRight
                       className="size-3 transition-transform group-hover:translate-x-0.5"
                       aria-hidden="true"
@@ -147,7 +147,7 @@ export default function MainHero({ marathons }: { marathons: Marathon[] }) {
                 </span>
                 <span>
                   <span className="font-anyvid text-sm text-white/75">
-                    지금 접수중인 대회
+                    지금 접수 중인 대회
                   </span>
                   <strong className="mt-1 block font-paperlogy text-5xl leading-none font-semibold tracking-tight tabular-nums">
                     {openCount.toLocaleString("ko-KR")}

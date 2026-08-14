@@ -132,7 +132,7 @@ export type Marathon = {
     startTime: string | null;
     endTime: string | null;
     site: string | null;
-    status: string;
+    status: string | null;
     price: Record<string, number | string>;
   };
   location: {

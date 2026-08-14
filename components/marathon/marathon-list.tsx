@@ -25,6 +25,7 @@ import {
   formatMarathonDate,
   formatMarathonPrices,
   getCurrentKoreanDate,
+  getCurrentKoreanTodayLabel,
   getMarathonDDay,
   getRegistrationBadgeClassName,
   getRegistrationLabel,
@@ -48,7 +49,6 @@ type ScaleFilter =
   | "2만명 이상";
 type RegistrationFilter =
   | "전체"
-  | "접수미정"
   | "접수예정"
   | "접수중"
   | "접수마감";
@@ -190,7 +190,7 @@ export default function MarathonList({
               마라톤 리스트
             </h2>
             <p className="mt-1 font-anyvid text-sm text-muted-foreground">
-              조건에 맞는 대회{" "}
+              오늘은 {getCurrentKoreanTodayLabel()}, 조건에 맞는 대회{" "}
               <strong className="font-black text-brand">
                 {filteredMarathons.length.toLocaleString("ko-KR")}
               </strong>
@@ -232,9 +232,8 @@ export default function MarathonList({
                 }
                 options={[
                   { value: "전체", label: "모든 상태" },
-                  { value: "접수미정", label: "접수 미정" },
                   { value: "접수예정", label: "접수 예정" },
-                  { value: "접수중", label: "접수중" },
+                  { value: "접수중", label: "접수 중" },
                   { value: "접수마감", label: "접수 마감" },
                 ]}
               />
@@ -361,23 +360,34 @@ export default function MarathonList({
 function MarathonListRow({ marathon }: { marathon: Marathon }) {
   const registrationStatus = getRegistrationStatus(marathon);
   const distances = Object.keys(marathon.registration.price);
+  const site = marathon.event.site ?? marathon.registration.site;
+  const weekday = formatMarathonDate(marathon.event.startDate).match(
+    /\((.+)\)/,
+  )?.[1];
 
   return (
     <article className="flex flex-col gap-3 p-4 transition-colors hover:bg-muted/35 sm:flex-row sm:items-center sm:p-5">
       <div className="flex min-w-24 items-center gap-3 sm:flex-col sm:gap-1 sm:text-center">
         <p className="flex items-baseline gap-1 font-paperlogy text-lg font-semibold tabular-nums">
           {marathon.event.startDate.slice(5).replace("-", ".")}
-          <span className="relative -top-0.5 font-anyvid text-xs font-normal text-muted-foreground">
-            {
-              formatMarathonDate(marathon.event.startDate).match(
-                /\((.+)\)/,
-              )?.[1]
-            }
-          </span>
+          {site ? (
+            <a
+              href={site}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="relative -top-0.5 font-anyvid text-xs font-normal text-muted-foreground no-underline"
+            >
+              {weekday}
+            </a>
+          ) : (
+            <span className="relative -top-0.5 font-anyvid text-xs font-normal text-muted-foreground">
+              {weekday}
+            </span>
+          )}
         </p>
         <Badge
           variant="outline"
-          className="min-w-14 justify-center border-brand bg-brand font-semibold text-white tabular-nums"
+          className="min-w-14 justify-center border-brand/40 font-semibold text-brand tabular-nums"
         >
           {getMarathonDDay(marathon.event.startDate)}
         </Badge>

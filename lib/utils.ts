@@ -7,36 +7,56 @@ export function cn(...inputs: ClassValue[]) {
   return twMerge(clsx(inputs));
 }
 
-export type RegistrationStatus =
-  | "접수미정"
-  | "접수예정"
-  | "접수중"
-  | "접수마감";
+export type RegistrationStatus = "접수예정" | "접수중" | "접수마감";
 
 export function getRegistrationStatus(marathon: Marathon): RegistrationStatus {
-  const today = getCurrentKoreanDate();
-  const { startDate, endDate } = marathon.registration;
-  if (!startDate && !endDate) return "접수미정";
-  if (startDate && today < startDate) return "접수예정";
-  if (endDate && today > endDate) return "접수마감";
+  const explicitStatus = marathon.registration.status?.trim();
+  if (explicitStatus) {
+    const normalizedStatus = explicitStatus.replace(/\s/g, "");
+    if (["접수중", "진행중", "진행"].includes(normalizedStatus)) {
+      return "접수중";
+    }
+    if (["접수마감", "접수종료", "마감", "종료"].includes(normalizedStatus)) {
+      return "접수마감";
+    }
+    if (["접수예정", "접수미정", "예정", "미정"].includes(normalizedStatus)) {
+      return "접수예정";
+    }
+  }
+
+  const now = Date.now();
+  const { startDate, endDate, startTime, endTime } = marathon.registration;
+  if (!startDate && !endDate) return "접수예정";
+  if (
+    startDate &&
+    now < getKoreanDateTime(startDate, startTime ?? "00:00").getTime()
+  ) {
+    return "접수예정";
+  }
+  if (
+    endDate &&
+    now >= getKoreanDateTime(endDate, endTime ?? "23:59:59.999").getTime()
+  ) {
+    return "접수마감";
+  }
   return "접수중";
 }
 
+function getKoreanDateTime(date: string, time: string) {
+  return new Date(`${date}T${time}+09:00`);
+}
+
 export function getRegistrationLabel(status: RegistrationStatus) {
-  return {
-    접수미정: "접수 미정",
-    접수예정: "접수 예정",
-    접수중: "접수중",
-    접수마감: "접수 마감",
-  }[status];
+  if (status === "접수예정") return "접수 예정";
+  if (status === "접수중") return "접수 중";
+  if (status === "접수마감") return "접수 마감";
 }
 
 export function getRegistrationBadgeClassName(status: RegistrationStatus) {
   return cn(
     status === "접수중" && "border-brand bg-brand text-white",
     status === "접수예정" && "border-blue-500 bg-blue-500 text-white",
-    status === "접수마감" && "border border-gray-400 text-muted-foreground",
-    status === "접수미정" && "border border-gray-400 text-muted-foreground",
+    status === "접수마감" && "border border-gray-400 text-foreground",
   );
 }
 
@@ -87,6 +107,15 @@ export function getCurrentKoreanDate() {
     year: "numeric",
     month: "2-digit",
     day: "2-digit",
+  }).format(new Date());
+}
+
+export function getCurrentKoreanTodayLabel() {
+  return new Intl.DateTimeFormat("ko-KR", {
+    timeZone: "Asia/Seoul",
+    month: "long",
+    day: "numeric",
+    weekday: "short",
   }).format(new Date());
 }
 

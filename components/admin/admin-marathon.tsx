@@ -7,7 +7,6 @@ import {
   Activity,
   CalendarClock,
   CircleAlert,
-  CirclePlus,
   Clock3,
   Search,
   Settings,
@@ -72,8 +71,6 @@ export default function AdminMarathon({
         open: registrationStatuses.filter((status) => status === "접수중")
           .length,
         waiting: registrationStatuses.filter((status) => status === "접수예정")
-          .length,
-        unknown: registrationStatuses.filter((status) => status === "접수미정")
           .length,
         closed: registrationStatuses.filter((status) => status === "접수마감")
           .length,
@@ -157,7 +154,7 @@ export default function AdminMarathon({
         </div>
       )}
 
-      <dl className="grid grid-cols-2 gap-4 md:grid-cols-3 xl:grid-cols-5">
+      <dl className="grid grid-cols-2 gap-4 md:grid-cols-4">
         <StatCard
           label="전체 대회"
           value={stats.total}
@@ -166,25 +163,19 @@ export default function AdminMarathon({
           featured
         />
         <StatCard
-          label="접수중"
+          label="접수 중"
           value={stats.open}
           icon={Activity}
           color="text-rose-500"
         />
         <StatCard
-          label="접수대기"
+          label="접수 예정"
           value={stats.waiting}
           icon={CalendarClock}
           color="text-sky-500"
         />
         <StatCard
-          label="접수미정"
-          value={stats.unknown}
-          icon={CirclePlus}
-          color="text-amber-500"
-        />
-        <StatCard
-          label="접수마감"
+          label="접수 마감"
           value={stats.closed}
           icon={Clock3}
           color="text-violet-500"
