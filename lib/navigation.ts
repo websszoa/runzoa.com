@@ -96,6 +96,12 @@ export const FOOTER_NAVIGATION: NavigationSection[] = [
       { label: "운영정책", href: "/policy" },
     ],
   },
+  {
+    title: "아카이브",
+    links: [
+      { label: "연도별 대회", href: "/marathon-year" },
+    ],
+  },
 ];
 
 // 소셜 메뉴

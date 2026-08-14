@@ -148,6 +148,7 @@ SET search_path = ''
 AS $$
 DECLARE
   subscriber_id UUID;
+  existing_status TEXT;
   normalized_email TEXT := LOWER(BTRIM(subscriber_email));
 BEGIN
   IF privacy_agreed IS NOT TRUE THEN
@@ -192,6 +193,32 @@ BEGIN
     RAISE EXCEPTION 'invalid_subscription_source';
   END IF;
 
+  SELECT id, status
+  INTO subscriber_id, existing_status
+  FROM public.newsletters
+  WHERE LOWER(BTRIM(email)) = normalized_email
+  FOR UPDATE;
+
+  IF subscriber_id IS NOT NULL AND existing_status = '구독중' THEN
+    RAISE EXCEPTION 'already_subscribed';
+  END IF;
+
+  IF subscriber_id IS NOT NULL THEN
+    UPDATE public.newsletters
+    SET
+      age = subscriber_age,
+      acquisition_source = subscriber_acquisition_source,
+      content_preference = NULLIF(BTRIM(subscriber_content_preference), ''),
+      subscription_source = subscriber_subscription_source,
+      agree_privacy = TRUE,
+      agree_ads = ads_agreed,
+      status = '구독중',
+      unsubscribed_at = NULL
+    WHERE id = subscriber_id;
+
+    RETURN subscriber_id;
+  END IF;
+
   INSERT INTO public.newsletters (
     email,
     age,
@@ -214,22 +241,17 @@ BEGIN
     '구독중',
     NULL
   )
-  ON CONFLICT (LOWER(BTRIM(email))) DO UPDATE
-  SET
-    age = EXCLUDED.age,
-    acquisition_source = EXCLUDED.acquisition_source,
-    content_preference = EXCLUDED.content_preference,
-    subscription_source = EXCLUDED.subscription_source,
-    agree_privacy = TRUE,
-    agree_ads = EXCLUDED.agree_ads,
-    status = '구독중',
-    unsubscribed_at = NULL
   RETURNING id INTO subscriber_id;
 
   RETURN subscriber_id;
+EXCEPTION
+  WHEN unique_violation THEN
+    RAISE EXCEPTION 'already_subscribed';
 END;
 $$;
 
 REVOKE ALL ON FUNCTION public.subscribe_newsletter(TEXT, TEXT, TEXT, TEXT, TEXT, BOOLEAN, BOOLEAN) FROM PUBLIC;
 GRANT EXECUTE ON FUNCTION public.subscribe_newsletter(TEXT, TEXT, TEXT, TEXT, TEXT, BOOLEAN, BOOLEAN)
   TO anon, authenticated;
+
+NOTIFY pgrst, 'reload schema';

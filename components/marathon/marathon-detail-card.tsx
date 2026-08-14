@@ -8,7 +8,7 @@ import { Card, CardContent } from "@/components/ui/card";
 import {
   CalendarCheck,
   CalendarDays,
-  ExternalLink,
+  ArrowRight,
   MapPin,
   Tag,
   Users,
@@ -80,25 +80,21 @@ export default function MarathonDetailCard({
                     "/marathon/cover/Illustratorzoa1-8.webp";
                 }}
               />
-              {marathon.event.site && (
-                <div className="absolute inset-0 flex items-center justify-center bg-black/45 opacity-0 transition-opacity duration-200 group-hover/image:opacity-100 group-focus-within/image:opacity-100 motion-reduce:transition-none">
-                  <Button
-                    nativeButton={false}
-                    render={
-                      <a
-                        href={marathon.event.site}
-                        target="_blank"
-                        rel="noreferrer"
-                        aria-label={`${marathon.name} 자세히 보기`}
-                      />
-                    }
-                    size="icon"
-                    className="translate-y-2 rounded-full bg-white text-foreground shadow-lg transition-transform duration-200 group-hover/image:translate-y-0 group-focus-within/image:translate-y-0 hover:bg-white/90 motion-reduce:translate-y-0 motion-reduce:transition-none"
-                  >
-                    <ExternalLink aria-hidden="true" className="size-4" />
-                  </Button>
-                </div>
-              )}
+              <div className="absolute inset-0 flex items-center justify-center bg-black/45 opacity-0 transition-opacity duration-200 group-hover/image:opacity-100 group-focus-within/image:opacity-100 motion-reduce:transition-none">
+                <Button
+                  nativeButton={false}
+                  render={
+                    <Link
+                      href={`/marathon/${marathon.slug}`}
+                      aria-label={`${marathon.name} 상세페이지 바로가기`}
+                    />
+                  }
+                  size="icon"
+                  className="translate-y-2 rounded-full bg-white text-foreground shadow-lg transition-transform duration-200 group-hover/image:translate-y-0 group-focus-within/image:translate-y-0 hover:bg-white/90 motion-reduce:translate-y-0 motion-reduce:transition-none"
+                >
+                  <ArrowRight aria-hidden="true" className="size-4" />
+                </Button>
+              </div>
             </div>
 
             <div className="min-w-0 space-y-1">

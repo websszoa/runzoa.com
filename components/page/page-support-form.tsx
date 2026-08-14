@@ -11,7 +11,7 @@ import { Checkbox } from "@/components/ui/checkbox";
 import { Field, FieldError, FieldLabel } from "@/components/ui/field";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
-import { createClient } from "@/lib/supabase/client";
+import { submitSupportRequest } from "@/lib/email/support-action";
 import type { SupportItem } from "@/lib/support";
 import { contactFormSchema, type ContactFormValues } from "@/lib/validations";
 
@@ -45,19 +45,10 @@ export default function PageSupportForm({ item }: PageSupportFormProps) {
   const onSubmit = async (values: ContactFormValues) => {
     setSubmitStatus("idle");
 
-    const supabase = createClient();
-    const { error } = await supabase.rpc("submit_contact", {
-      contact_name: values.name,
-      contact_email: values.email,
-      contact_type: item.label,
-      contact_title: values.subject,
-      contact_content: values.content,
-      contact_related_url: values.relatedUrl || null,
-      privacy_agreed: values.privacyConsent,
-    });
+    const result = await submitSupportRequest(values, item.label);
 
-    if (error) {
-      setSubmitStatus(error.code === "PGRST202" ? "unavailable" : "error");
+    if (!result.success) {
+      setSubmitStatus(result.unavailable ? "unavailable" : "error");
       return;
     }
 

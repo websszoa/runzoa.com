@@ -27,46 +27,8 @@ BEFORE UPDATE ON public.profiles
 FOR EACH ROW
 EXECUTE FUNCTION public.fn_trg_set_updated_at();
 
--- ============================================
--- 일별 방문 횟수 보호
--- 사용자가 전달한 값은 무시하고 트리거가 하루 한 번만 증가시킨다.
--- ============================================
-CREATE OR REPLACE FUNCTION public.fn_trg_record_daily_visit()
-RETURNS TRIGGER
-LANGUAGE plpgsql
-SECURITY DEFINER
-SET search_path = ''
-AS $$
-BEGIN
-  IF OLD.is_deleted = FALSE
-    AND (
-      OLD.last_visited_at IS NULL
-      OR OLD.last_visited_at < (
-        DATE_TRUNC('day', NOW() AT TIME ZONE 'Asia/Seoul')
-        AT TIME ZONE 'Asia/Seoul'
-      )
-    )
-  THEN
-    NEW.visit_count := OLD.visit_count + 1;
-    NEW.last_visited_at := NOW();
-  ELSE
-    NEW.visit_count := OLD.visit_count;
-    NEW.last_visited_at := OLD.last_visited_at;
-  END IF;
-
-  RETURN NEW;
-END;
-$$;
-
-REVOKE ALL ON FUNCTION public.fn_trg_record_daily_visit() FROM PUBLIC;
-REVOKE ALL ON FUNCTION public.fn_trg_record_daily_visit() FROM anon;
-REVOKE ALL ON FUNCTION public.fn_trg_record_daily_visit() FROM authenticated;
-
 DROP TRIGGER IF EXISTS trg_profiles_record_daily_visit ON public.profiles;
-CREATE TRIGGER trg_profiles_record_daily_visit
-BEFORE UPDATE OF last_visited_at ON public.profiles
-FOR EACH ROW
-EXECUTE FUNCTION public.fn_trg_record_daily_visit();
+DROP FUNCTION IF EXISTS public.fn_trg_record_daily_visit();
 
 -- ============================================
 -- 회원가입 시 프로필 자동 생성
@@ -162,25 +124,83 @@ REVOKE ALL ON FUNCTION public.is_my_account_deleted() FROM anon;
 GRANT EXECUTE ON FUNCTION public.is_my_account_deleted() TO authenticated;
 
 -- ============================================
--- 일별 방문 기록 요청
--- 실제 횟수와 시간은 위 보호 트리거에서 결정한다.
+-- 로그인 방문 기록 요청
+-- OAuth 로그인이 완료될 때마다 방문 횟수를 한 번 증가시킨다.
 -- ============================================
+DROP FUNCTION IF EXISTS public.increment_visit_count();
+
 CREATE OR REPLACE FUNCTION public.increment_visit_count()
-RETURNS VOID
-LANGUAGE sql
+RETURNS INTEGER
+LANGUAGE plpgsql
 VOLATILE
-SECURITY INVOKER
+SECURITY DEFINER
 SET search_path = ''
 AS $$
+DECLARE
+  updated_visit_count INTEGER;
+BEGIN
   UPDATE public.profiles
-  SET last_visited_at = NOW()
+  SET
+    visit_count = visit_count + 1,
+    last_visited_at = NOW()
   WHERE id = (SELECT auth.uid())
-    AND is_deleted = FALSE;
+    AND is_deleted = FALSE
+  RETURNING visit_count INTO updated_visit_count;
+
+  RETURN updated_visit_count;
+END;
 $$;
 
 REVOKE ALL ON FUNCTION public.increment_visit_count() FROM PUBLIC;
 REVOKE ALL ON FUNCTION public.increment_visit_count() FROM anon;
 GRANT EXECUTE ON FUNCTION public.increment_visit_count() TO authenticated;
+
+-- ============================================
+-- 본인 회원 탈퇴 처리
+-- profiles 직접 UPDATE 권한을 열지 않고 현재 로그인한 본인 행만 처리한다.
+-- ============================================
+DROP FUNCTION IF EXISTS public.withdraw_my_account();
+
+CREATE OR REPLACE FUNCTION public.withdraw_my_account()
+RETURNS BOOLEAN
+LANGUAGE plpgsql
+VOLATILE
+SECURITY DEFINER
+SET search_path = ''
+AS $$
+DECLARE
+  current_user_id UUID := (SELECT auth.uid());
+  withdrawn BOOLEAN := FALSE;
+BEGIN
+  IF current_user_id IS NULL THEN
+    RAISE EXCEPTION 'authentication_required';
+  END IF;
+
+  UPDATE public.profiles
+  SET
+    is_deleted = TRUE,
+    deleted_at = COALESCE(deleted_at, NOW())
+  WHERE id = current_user_id
+    AND is_deleted = FALSE;
+
+  IF FOUND THEN
+    withdrawn := TRUE;
+  ELSE
+    SELECT EXISTS (
+      SELECT 1
+      FROM public.profiles
+      WHERE id = current_user_id
+        AND is_deleted = TRUE
+    ) INTO withdrawn;
+  END IF;
+
+  RETURN withdrawn;
+END;
+$$;
+
+REVOKE ALL ON FUNCTION public.withdraw_my_account() FROM PUBLIC;
+REVOKE ALL ON FUNCTION public.withdraw_my_account() FROM anon;
+GRANT EXECUTE ON FUNCTION public.withdraw_my_account() TO authenticated;
 
 -- ============================================
 -- 기존 Auth 회원 프로필 백필

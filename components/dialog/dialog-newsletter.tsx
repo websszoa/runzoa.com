@@ -3,6 +3,7 @@
 import { z } from "zod";
 import { cn } from "@/lib/utils";
 import { APP_ENG_NAME } from "@/lib/constants";
+import { subscribeNewsletter } from "@/lib/email/newsletter-action";
 import { createClient } from "@/lib/supabase/client";
 import { useEffect, useState, type ReactNode } from "react";
 import { Heart, MailCheck, Send, Sparkles, TentTree } from "lucide-react";
@@ -70,6 +71,7 @@ export default function DialogNewsletter({
     "form" | "submitting" | "success" | "error"
   >("form");
   const [errors, setErrors] = useState<NewsletterErrors>({});
+  const [submitError, setSubmitError] = useState<string | null>(null);
 
   useEffect(() => {
     if (!open) return;
@@ -100,11 +102,16 @@ export default function DialogNewsletter({
     setConsent(false);
     setStatus("form");
     setErrors({});
+    setSubmitError(null);
   };
 
   const handleOpenChange = (nextOpen: boolean) => {
     setOpen(nextOpen);
-    if (!nextOpen) resetDialog();
+  };
+
+  const handleTriggerClick = () => {
+    resetDialog();
+    setOpen(true);
   };
 
   const handleSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
@@ -132,20 +139,42 @@ export default function DialogNewsletter({
     }
 
     setErrors({});
+    setSubmitError(null);
 
     setStatus("submitting");
-    const supabase = createClient();
-    const { error } = await supabase.rpc("subscribe_newsletter", {
-      subscriber_email: email,
-      subscriber_age: age,
-      subscriber_acquisition_source: acquisitionSource,
-      subscriber_content_preference: contentPreference.trim() || null,
-      subscriber_subscription_source: subscriptionSource,
-      privacy_agreed: true,
-      ads_agreed: true,
-    });
+    try {
+      const result = await subscribeNewsletter({
+        email: validation.data.email,
+        age: validation.data.age as
+          | "10대"
+          | "20대"
+          | "30대"
+          | "40대"
+          | "50대"
+          | "60대 이상",
+        acquisitionSource: validation.data.acquisitionSource as
+          | "검색"
+          | "인스타그램·SNS"
+          | "러닝 크루·지인 추천"
+          | "커뮤니티·카페"
+          | "대회 또는 행사"
+          | "기타",
+        contentPreference: validation.data.contentPreference,
+        subscriptionSource,
+        consent: true,
+      });
 
-    setStatus(error ? "error" : "success");
+      if (result.success) {
+        setStatus("success");
+        return;
+      }
+
+      setSubmitError(result.message);
+      setStatus("error");
+    } catch {
+      setSubmitError("서버에 연결하지 못했습니다. 잠시 후 다시 시도해 주세요.");
+      setStatus("error");
+    }
   };
 
   return (
@@ -153,27 +182,44 @@ export default function DialogNewsletter({
       <button
         type="button"
         className={cn(className)}
-        onClick={() => setOpen(true)}
+        onClick={handleTriggerClick}
       >
         {children}
       </button>
       <DialogContent className="max-h-[90vh] overflow-y-auto sm:max-w-md">
-        {status === "success" ? (
-          <NewsletterSuccess onClose={() => handleOpenChange(false)} />
-        ) : (
-          <form onSubmit={handleSubmit} className="space-y-5">
-            <DialogHeader className="border-b pb-4 text-center">
-              <div className="mx-auto flex items-center gap-2 font-paperlogy text-lg font-extrabold text-brand uppercase">
-                <TentTree className="size-7" aria-hidden="true" />
-                {APP_ENG_NAME}
-              </div>
-              <DialogTitle className="font-paperlogy text-xl">
-                놓치기 아쉬운 러닝 소식 💌
-              </DialogTitle>
-              <DialogDescription className="break-keep font-anyvid leading-6">
-                필요한 소식만 골라서 가볍게 보내드릴게요.
-              </DialogDescription>
-            </DialogHeader>
+        <DialogHeader
+          className={cn(
+            "text-center",
+            status !== "success" && "border-b pb-4",
+          )}
+        >
+          <div className="mx-auto flex items-center gap-2 font-paperlogy text-lg font-extrabold text-brand uppercase">
+            <TentTree className="size-7" aria-hidden="true" />
+            {APP_ENG_NAME}
+          </div>
+          <DialogTitle className="font-paperlogy text-xl">
+            <span className={cn(status === "success" && "hidden")}>
+              놓치기 아쉬운 러닝 소식 💌
+            </span>
+            <span className={cn(status !== "success" && "hidden")}>
+              구독 신청이 완료됐어요! 🌱
+            </span>
+          </DialogTitle>
+          <DialogDescription className="break-keep font-anyvid leading-6">
+            <span className={cn(status === "success" && "hidden")}>
+              필요한 소식만 골라서 가볍게 보내드릴게요.
+            </span>
+            <span className={cn(status !== "success" && "hidden")}>
+              반가운 러닝 소식을 정성껏 모아 보내드릴게요.
+            </span>
+          </DialogDescription>
+        </DialogHeader>
+
+        <form
+          onSubmit={handleSubmit}
+          className={cn("space-y-5", status === "success" && "hidden")}
+          aria-hidden={status === "success"}
+        >
 
             <div className="space-y-2">
               <Label htmlFor="newsletter-email" className="font-anyvid">
@@ -245,26 +291,39 @@ export default function DialogNewsletter({
             </label>
             <FieldMessage message={errors.consent} />
 
-            {status === "error" && (
-              <p
-                role="alert"
-                className="rounded-lg border border-red-200 bg-red-50 p-3 text-center font-anyvid text-sm text-red-700"
-              >
-                구독 신청을 완료하지 못했습니다. 잠시 후 다시 시도해 주세요.
-              </p>
-            )}
+            <p
+              role="alert"
+              className={cn(
+                "rounded-lg border border-red-200 bg-red-50 p-3 text-center font-anyvid text-sm text-red-700",
+                status !== "error" && "hidden",
+              )}
+            >
+              {submitError ??
+                "구독 신청을 완료하지 못했습니다. 잠시 후 다시 시도해 주세요."}
+            </p>
 
             <Button
               type="submit"
               size="lg"
-              aria-disabled={status === "submitting"}
+              disabled={status === "submitting"}
               className="w-full bg-brand font-anyvid text-white hover:bg-brand/90"
             >
-              {status === "submitting" ? "신청 중..." : "뉴스레터 구독하기"}
+              <span className={cn(status === "submitting" && "hidden")}>
+                뉴스레터 구독하기
+              </span>
+              <span className={cn(status !== "submitting" && "hidden")}>
+                신청 중...
+              </span>
               <Send className="size-4" aria-hidden="true" />
             </Button>
-          </form>
-        )}
+        </form>
+
+        <div
+          className={cn(status !== "success" && "hidden")}
+          aria-hidden={status !== "success"}
+        >
+          <NewsletterSuccess onClose={() => handleOpenChange(false)} />
+        </div>
       </DialogContent>
     </Dialog>
   );
@@ -321,18 +380,6 @@ function FieldMessage({ message }: { message?: string }) {
 function NewsletterSuccess({ onClose }: { onClose: () => void }) {
   return (
     <div className="space-y-5 text-center">
-      <DialogHeader>
-        <div className="mx-auto flex items-center gap-2 font-paperlogy text-lg font-extrabold text-brand uppercase">
-          <TentTree className="size-7" aria-hidden="true" />
-          {APP_ENG_NAME}
-        </div>
-        <DialogTitle className="font-paperlogy text-xl">
-          구독 신청이 완료됐어요! 🌱
-        </DialogTitle>
-        <DialogDescription className="break-keep font-anyvid leading-6">
-          반가운 러닝 소식을 정성껏 모아 보내드릴게요.
-        </DialogDescription>
-      </DialogHeader>
       <div
         className="relative mx-auto flex h-36 w-52 items-center justify-center overflow-hidden"
         aria-hidden="true"

@@ -1,0 +1,57 @@
+[
+  {
+    "id": "",
+    "slug": "",
+    "name": "",
+    "description": "",
+    "info": {
+      "type": "마라톤",
+      "scale": null,
+      "park": null,
+      "souvenir": null,
+      "program": null,
+      "memo": null
+    },
+    "event": {
+      "startDate": "2026-04-02",
+      "endDate": "2026-04-02",
+      "startTime": null,
+      "endTime": null,
+      "site": null,
+      "schedule": {
+        "06:30": "대회 시작",
+        "11:00": "대회 종료"
+      }
+    },
+    "registration": {
+      "startDate": null,
+      "endDate": null,
+      "startTime": null,
+      "endTime": null,
+      "site": null,
+      "status": "",
+      "price": {
+        "5km": 30000,
+        "10km": 50000,
+        "하프": 50000
+      }
+    },
+    "location": {
+      "country": "한국",
+      "region": null,
+      "venue": null,
+      "address": null,
+      "latitude": null,
+      "longitude": null
+    },
+    "hosts": {
+      "organizer": null,
+      "manager": null,
+      "sponsor": null,
+      "phone": null,
+      "email": null,
+      "instagram": null,
+      "blog": []
+    }
+  }
+]

@@ -3,6 +3,7 @@
 import { useState } from "react";
 import { Construction, Sparkles, TentTree } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { APP_ENG_NAME } from "@/lib/constants";
 import {
   Dialog,
   DialogContent,
@@ -10,7 +11,6 @@ import {
   DialogHeader,
   DialogTitle,
 } from "@/components/ui/dialog";
-import { APP_ENG_NAME } from "@/lib/constants";
 
 export default function DialogSiteMaintenance() {
   const [open, setOpen] = useState(true);

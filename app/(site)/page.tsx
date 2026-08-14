@@ -1,11 +1,14 @@
 import MainHero from "@/components/main/main-hero";
-import MainNewsletterV2 from "@/components/main/main-newsletter-v2";
+import MainNewsletter from "@/components/main/main-newsletter";
 import MainOpenRegistration from "@/components/main/main-open-registration";
 import MainPromoBanner from "@/components/main/main-promo-banner";
 import MainRaceFinder from "@/components/main/main-race-finder";
 import MainRegistrationSoon from "@/components/main/main-registration-soon";
 import MainThisMonth from "@/components/main/main-this-month";
-import DialogSiteMaintenance from "@/components/dialog/dialog-site-maintenance";
+import DialogAccountNotice, {
+  type AccountNotice,
+} from "@/components/dialog/dialog-account-notice";
+// import DialogSiteMaintenance from "@/components/dialog/dialog-site-maintenance";
 
 import { getMarathons } from "@/lib/marathons";
 import {
@@ -15,8 +18,26 @@ import {
   APP_SITE_URL,
 } from "@/lib/constants";
 
-export default async function Home() {
+type HomeProps = {
+  searchParams: Promise<{
+    error?: string | string[];
+    account?: string | string[];
+  }>;
+};
+
+export default async function Home({ searchParams }: HomeProps) {
   const { marathons } = await getMarathons();
+  const params = await searchParams;
+  const error = Array.isArray(params.error) ? params.error[0] : params.error;
+  const account = Array.isArray(params.account)
+    ? params.account[0]
+    : params.account;
+  const accountNotice: AccountNotice | null =
+    error === "deleted"
+      ? "deleted"
+      : account === "withdrawn"
+        ? "withdrawn"
+        : null;
   const structuredData = {
     "@context": "https://schema.org",
     "@graph": [
@@ -43,7 +64,8 @@ export default async function Home() {
 
   return (
     <>
-      <DialogSiteMaintenance />
+      {accountNotice && <DialogAccountNotice notice={accountNotice} />}
+      {/* <DialogSiteMaintenance /> */}
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{
@@ -56,7 +78,7 @@ export default async function Home() {
       <MainRegistrationSoon marathons={marathons} />
       <MainThisMonth marathons={marathons} />
       <MainOpenRegistration marathons={marathons} />
-      <MainNewsletterV2 />
+      <MainNewsletter />
     </>
   );
 }

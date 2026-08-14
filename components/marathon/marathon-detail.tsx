@@ -1,5 +1,5 @@
 import type { Marathon } from "@/lib/marathons";
-import DetailButtons from "@/components/detail/detail-buttons";
+// import DetailButtons from "@/components/detail/detail-buttons";
 import DetailGallery from "@/components/detail/detail-gallery";
 import DetailInfo from "@/components/detail/detail-info";
 import DetailLocation from "@/components/detail/detail-location";
@@ -40,9 +40,9 @@ export default function MarathonDetail({
             eventSite={marathon.event.site}
           />
         </div>
-        <div className="order-3 lg:col-span-3">
+        {/* <div className="order-3 lg:col-span-3">
           <DetailButtons marathonName={marathon.name} />
-        </div>
+        </div> */}
         <div className="order-4 lg:col-span-3">
           <DetailRegistration marathon={marathon} />
         </div>

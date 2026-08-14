@@ -28,6 +28,7 @@ type HeaderProfile = {
   fullName: string;
   avatarUrl: string | null;
   visitCount: number;
+  role: "admin" | "user";
 };
 
 export default function Header() {
@@ -53,7 +54,7 @@ export default function Header() {
 
       const { data } = await supabase
         .from("profiles")
-        .select("full_name, avatar_url, visit_count")
+        .select("full_name, avatar_url, visit_count, role")
         .eq("id", currentUser.id)
         .maybeSingle();
 
@@ -71,6 +72,7 @@ export default function Header() {
           currentUser.user_metadata.picture ??
           null,
         visitCount: data?.visit_count ?? 1,
+        role: data?.role === "admin" ? "admin" : "user",
       });
     };
 
@@ -95,6 +97,20 @@ export default function Header() {
     router.push("/");
     router.refresh();
   };
+
+  const sheetNavigation = SHEET_NAVIGATION.map((group) =>
+    group.filter((item) => {
+      if (item.href === "/mypage" || item.href === "/favorites") {
+        return Boolean(user);
+      }
+
+      if (item.href === "/admin") {
+        return profile?.role === "admin";
+      }
+
+      return true;
+    }),
+  ).filter((group) => group.length > 0);
 
   return (
     <header
@@ -220,7 +236,7 @@ export default function Header() {
 
             <ScrollArea className="relative z-0 -mt-2 mb-12 h-[calc(100vh-400px)] flex-1">
               <nav aria-label="사이드 메뉴" className="mt-1 space-y-1">
-                {SHEET_NAVIGATION.map((group, groupIndex) => (
+                {sheetNavigation.map((group, groupIndex) => (
                   <div key={groupIndex}>
                     {groupIndex > 0 && <Separator className="my-3" />}
                     {group.map((item) => {

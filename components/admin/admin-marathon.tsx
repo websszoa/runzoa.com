@@ -15,6 +15,8 @@ import {
 } from "lucide-react";
 
 import { Badge } from "@/components/ui/badge";
+import AdminMarathonTabs from "@/components/admin/admin-marathon-tabs";
+import AdminMarathonForm from "@/components/admin/admin-marathon-form";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import {
@@ -58,6 +60,7 @@ export default function AdminMarathon({
   const [period, setPeriod] = useState("include");
   const [sort, setSort] = useState("dateAsc");
   const [page, setPage] = useState(1);
+  const [activeTab, setActiveTab] = useState<"list" | "create">("list");
   const today = getCurrentKoreanDate();
 
   const { stats, years, types } = useMemo(() => {
@@ -136,10 +139,12 @@ export default function AdminMarathon({
   return (
     <div className="space-y-8 p-6 lg:p-8">
       <header>
-        <h1 className="font-paperlogy text-2xl font-semibold">마라톤</h1>
-        <p className="mt-1 font-anyvid text-sm text-muted-foreground">
-          API에서 불러온 마라톤 대회 정보와 등록 상태를 확인하세요.
-        </p>
+        <div>
+          <h1 className="font-paperlogy text-2xl font-semibold">마라톤</h1>
+          <p className="mt-1 font-anyvid text-sm text-muted-foreground">
+            로컬 JSON의 마라톤 대회 정보와 등록 상태를 확인하세요.
+          </p>
+        </div>
       </header>
 
       {hasError && (
@@ -188,6 +193,9 @@ export default function AdminMarathon({
       </dl>
 
       <section className="space-y-4" aria-label="마라톤 대회 관리">
+        <AdminMarathonTabs current={activeTab} onChange={setActiveTab} />
+        {activeTab === "list" ? (
+          <>
         <div className="grid gap-3 md:grid-cols-[minmax(280px,0.75fr)_minmax(320px,1.75fr)]">
           <div className="relative">
             <Search
@@ -423,6 +431,10 @@ export default function AdminMarathon({
               </Button>
             </div>
           </nav>
+        )}
+          </>
+        ) : (
+          <AdminMarathonForm onCancel={() => setActiveTab("list")} />
         )}
       </section>
     </div>

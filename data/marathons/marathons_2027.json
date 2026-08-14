@@ -7,7 +7,6 @@
     "info": {
       "type": "마라톤",
       "scale": 40000,
-      "site": "https://seoul-marathon.com",
       "park": null,
       "souvenir": "완주메달, 기념품",
       "program": null,
@@ -17,13 +16,17 @@
       "startDate": "2027-03-21",
       "endDate": "2027-03-21",
       "startTime": "07:30",
-      "endTime": null
+      "endTime": null,
+      "site": "https://seoul-marathon.com",
+      "schedule": null
     },
     "registration": {
       "startDate": "2026-06-01",
       "endDate": "2026-06-03",
       "startTime": null,
       "endTime": null,
+      "site": "https://seoul-marathon.com",
+      "status": "",
       "price": {
         "10KM": 100000,
         "FULL": 150000
@@ -43,7 +46,8 @@
       "sponsor": null,
       "phone": "02-312-1998",
       "email": null,
-      "instagram": "seoul_marathon"
+      "instagram": "seoul_marathon",
+      "blog": []
     }
   }
 ]

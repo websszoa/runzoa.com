@@ -35,6 +35,7 @@
       "startTime": null,
       "endTime": null,
       "site": "https://www.cherrymarathon.co.kr/",
+      "status": "",
       "price": {
         "5km": 30000,
         "10km": 50000,
@@ -55,7 +56,8 @@
       "sponsor": null,
       "phone": "070-7725-6258",
       "email": "admin@cherrymarathon.co.kr",
-      "instagram": "gj_cherry_marathon"
+      "instagram": "gj_cherry_marathon",
+      "blog": []
     }
   },
   {
@@ -85,6 +87,7 @@
       "startTime": null,
       "endTime": null,
       "site": "https://dnewsrun.co.kr/ko/",
+      "status": "",
       "price": {
         "10KM": 50000,
         "HALF": 60000,
@@ -105,7 +108,8 @@
       "sponsor": null,
       "phone": "02-3485-8434",
       "email": "dnewsrun@dnews.co.kr",
-      "instagram": null
+      "instagram": null,
+      "blog": []
     }
   },
   {
@@ -135,6 +139,7 @@
       "startTime": null,
       "endTime": null,
       "site": "http://mokporun.com",
+      "status": "",
       "price": null
     },
     "location": {
@@ -151,7 +156,8 @@
       "sponsor": null,
       "phone": "070-4797-2135",
       "email": "choihwaa@naver.com",
-      "instagram": null
+      "instagram": null,
+      "blog": []
     }
   },
   {
@@ -181,6 +187,7 @@
       "startTime": null,
       "endTime": null,
       "site": "http://kw-marathon.com",
+      "status": "",
       "price": {
         "5km": 45000,
         "10km": 50000,
@@ -201,7 +208,8 @@
       "sponsor": null,
       "phone": "033-264-1365",
       "email": null,
-      "instagram": null
+      "instagram": null,
+      "blog": []
     }
   },
   {
@@ -231,6 +239,7 @@
       "startTime": null,
       "endTime": null,
       "site": "https://mara1080.com/event/e40f1082-eb59-40b3-9fbe-b05afe6bf741",
+      "status": "",
       "price": {
         "4km": 30000,
         "10km": 45000,
@@ -252,7 +261,8 @@
       "sponsor": null,
       "phone": "042-638-1080",
       "email": "jeonmahyeop@naver.com",
-      "instagram": null
+      "instagram": null,
+      "blog": []
     }
   },
   {
@@ -282,6 +292,7 @@
       "startTime": null,
       "endTime": null,
       "site": "https://www.seoulhalfmarathon.com/",
+      "status": "",
       "price": {
         "10km": 70000,
         "HALF": 80000
@@ -301,7 +312,8 @@
       "sponsor": null,
       "phone": "02-724-6336",
       "email": "seoulhalf@chosun.com",
-      "instagram": null
+      "instagram": null,
+      "blog": []
     }
   },
   {
@@ -331,6 +343,7 @@
       "startTime": null,
       "endTime": null,
       "site": "https://giverun.co.kr/",
+      "status": "",
       "price": {
         "5km": 40000,
         "10km": 40000
@@ -350,7 +363,8 @@
       "sponsor": null,
       "phone": "061-921-9902",
       "email": "namdotour89@naver.com",
-      "instagram": null
+      "instagram": null,
+      "blog": []
     }
   },
   {
@@ -380,6 +394,7 @@
       "startTime": null,
       "endTime": null,
       "site": "https://phrun.co.kr/",
+      "status": "",
       "price": {
         "5KM": 25000,
         "10KM": 35000,
@@ -400,7 +415,8 @@
       "sponsor": null,
       "phone": "054-241-0855",
       "email": null,
-      "instagram": null
+      "instagram": null,
+      "blog": []
     }
   },
   {
@@ -430,6 +446,7 @@
       "startTime": null,
       "endTime": null,
       "site": "https://mara1080.com/event/8921cdef-67fc-4e1c-9237-763520b90c80",
+      "status": "",
       "price": {
         "5km": 25000,
         "10km": 45000,
@@ -451,7 +468,8 @@
       "sponsor": null,
       "phone": "042-638-1080",
       "email": "jeonmahyeop@naver.com",
-      "instagram": null
+      "instagram": null,
+      "blog": []
     }
   },
   {
@@ -481,6 +499,7 @@
       "startTime": null,
       "endTime": null,
       "site": "http://www.bankimoonmarathon.kr/marathon/code/8044/",
+      "status": "",
       "price": {
         "10KM": 40000,
         "FULL": 40000,
@@ -502,7 +521,8 @@
       "sponsor": null,
       "phone": "1566-1936",
       "email": "emara@daum.net",
-      "instagram": null
+      "instagram": null,
+      "blog": []
     }
   },
   {
@@ -532,6 +552,7 @@
       "startTime": null,
       "endTime": null,
       "site": "https://lifemarathon.co.kr/",
+      "status": "",
       "price": {
         "5KM": 49000,
         "10KM": 55000
@@ -551,7 +572,8 @@
       "sponsor": null,
       "phone": null,
       "email": "1986@1986.co.kr",
-      "instagram": null
+      "instagram": null,
+      "blog": []
     }
   },
   {
@@ -581,6 +603,7 @@
       "startTime": null,
       "endTime": null,
       "site": "https://www.sc.or.kr/marathon/main.do",
+      "status": "",
       "price": {
         "4km": 30000
       }
@@ -599,7 +622,8 @@
       "sponsor": null,
       "phone": "02-6900-4400",
       "email": "marathon@sc.or.kr",
-      "instagram": null
+      "instagram": null,
+      "blog": []
     }
   },
   {
@@ -629,6 +653,7 @@
       "startTime": null,
       "endTime": null,
       "site": "https://www.womenmarathon.co.kr/dorun/",
+      "status": "",
       "price": {
         "3KM": 30000,
         "5KM": 40000,
@@ -650,7 +675,8 @@
       "sponsor": null,
       "phone": "02-2036-9264",
       "email": "wincb@womennews.co.kr",
-      "instagram": "womenmarathon"
+      "instagram": "womenmarathon",
+      "blog": []
     }
   },
   {
@@ -680,6 +706,7 @@
       "startTime": null,
       "endTime": null,
       "site": "https://www.sc.or.kr/marathon/main.do",
+      "status": "",
       "price": {
         "4km": 30000
       }
@@ -698,7 +725,8 @@
       "sponsor": null,
       "phone": "02-6900-4400",
       "email": "marathon@sc.or.kr",
-      "instagram": null
+      "instagram": null,
+      "blog": []
     }
   },
   {
@@ -728,6 +756,7 @@
       "startTime": null,
       "endTime": null,
       "site": "https://urmarathon.com/ko/index.html",
+      "status": "",
       "price": {
         "5KM": 20000,
         "10KM": 35000,
@@ -750,7 +779,8 @@
       "sponsor": null,
       "phone": null,
       "email": null,
-      "instagram": null
+      "instagram": null,
+      "blog": []
     }
   },
   {
@@ -780,6 +810,7 @@
       "startTime": null,
       "endTime": null,
       "site": "https://runten.co.kr/competitions/d452648b-848e-4198-83b4-464b9dce838f",
+      "status": "",
       "price": {
         "5KM": 45000,
         "10KM": 50000
@@ -799,7 +830,8 @@
       "sponsor": null,
       "phone": "042-710-2058",
       "email": "runningbreaker@naver.com",
-      "instagram": null
+      "instagram": null,
+      "blog": []
     }
   },
   {
@@ -829,6 +861,7 @@
       "startTime": null,
       "endTime": null,
       "site": "https://www.sc.or.kr/marathon/main.do",
+      "status": "",
       "price": {
         "4km": 30000
       }
@@ -847,7 +880,8 @@
       "sponsor": null,
       "phone": "02-6900-4400",
       "email": "marathon@sc.or.kr",
-      "instagram": null
+      "instagram": null,
+      "blog": []
     }
   },
   {
@@ -877,6 +911,7 @@
       "startTime": null,
       "endTime": null,
       "site": "http://grrun.kr",
+      "status": "",
       "price": {
         "5KM": 20000,
         "10KM": 35000,
@@ -897,7 +932,8 @@
       "sponsor": null,
       "phone": "061-921-6600",
       "email": null,
-      "instagram": null
+      "instagram": null,
+      "blog": []
     }
   },
   {
@@ -927,6 +963,7 @@
       "startTime": null,
       "endTime": null,
       "site": "https://2026darangrun.org/",
+      "status": "",
       "price": {
         "5KM": 35000,
         "10KM": 35000
@@ -946,7 +983,8 @@
       "sponsor": null,
       "phone": "010-5503-8005",
       "email": "nh8005@naver.com",
-      "instagram": "darangrun"
+      "instagram": "darangrun",
+      "blog": []
     }
   },
   {
@@ -976,6 +1014,7 @@
       "startTime": null,
       "endTime": null,
       "site": "https://www.sc.or.kr/marathon/main.do",
+      "status": "",
       "price": {
         "4km": 30000
       }
@@ -994,7 +1033,8 @@
       "sponsor": null,
       "phone": "02-6900-4400",
       "email": "marathon@sc.or.kr",
-      "instagram": null
+      "instagram": null,
+      "blog": []
     }
   },
   {
@@ -1024,6 +1064,7 @@
       "startTime": null,
       "endTime": null,
       "site": "https://heartsignalrunfesta.com/",
+      "status": "",
       "price": {
         "10km": 70000
       }
@@ -1042,7 +1083,8 @@
       "sponsor": null,
       "phone": null,
       "email": "heartsignalrunfesta@gmail.com",
-      "instagram": "heartsignal.runningfesta"
+      "instagram": "heartsignal.runningfesta",
+      "blog": []
     }
   },
   {
@@ -1072,6 +1114,7 @@
       "startTime": null,
       "endTime": null,
       "site": "https://www.sc.or.kr/marathon/main.do",
+      "status": "",
       "price": {
         "4km": 30000
       }
@@ -1090,7 +1133,8 @@
       "sponsor": null,
       "phone": "02-6900-4400",
       "email": "marathon@sc.or.kr",
-      "instagram": null
+      "instagram": null,
+      "blog": []
     }
   },
   {
@@ -1120,6 +1164,7 @@
       "startTime": null,
       "endTime": null,
       "site": "https://518run.com",
+      "status": "",
       "price": {
         "10km": 30000,
         "5.18km": 15000
@@ -1139,7 +1184,8 @@
       "sponsor": null,
       "phone": null,
       "email": null,
-      "instagram": null
+      "instagram": null,
+      "blog": []
     }
   },
   {
@@ -1169,6 +1215,7 @@
       "startTime": null,
       "endTime": null,
       "site": "https://mara1080.com/event/6c02d9f8-cbe9-4a7b-ba9d-6e1f93a18b1a",
+      "status": "",
       "price": {
         "5KM": 25000,
         "10KM": 45000,
@@ -1190,7 +1237,8 @@
       "sponsor": null,
       "phone": "042-638-1080",
       "email": null,
-      "instagram": null
+      "instagram": null,
+      "blog": []
     }
   },
   {
@@ -1220,6 +1268,7 @@
       "startTime": null,
       "endTime": null,
       "site": "https://goobne-ovenrun.com/",
+      "status": "",
       "price": {
         "5KM": 45000
       }
@@ -1238,7 +1287,8 @@
       "sponsor": null,
       "phone": "070-7613-6119",
       "email": null,
-      "instagram": null
+      "instagram": null,
+      "blog": []
     }
   },
   {
@@ -1268,6 +1318,7 @@
       "startTime": null,
       "endTime": null,
       "site": "https://www.lccl.co.kr/veryberryrun",
+      "status": "",
       "price": {
         "러닝코스": 15000
       }
@@ -1286,7 +1337,8 @@
       "sponsor": null,
       "phone": "010-4945-9556",
       "email": "dy.gorani@gmail.com",
-      "instagram": null
+      "instagram": null,
+      "blog": []
     }
   },
   {
@@ -1316,6 +1368,7 @@
       "startTime": null,
       "endTime": null,
       "site": "https://hscity-marathon.com",
+      "status": "",
       "price": {
         "10km": 40000,
         "HALF": 40000,
@@ -1340,7 +1393,8 @@
       "sponsor": null,
       "phone": "1600-3962",
       "email": "road42195@naver.com",
-      "instagram": null
+      "instagram": null,
+      "blog": []
     }
   },
   {
@@ -1370,6 +1424,7 @@
       "startTime": null,
       "endTime": null,
       "site": "https://solorun.kr",
+      "status": "",
       "price": {
         "10km": 70000
       }
@@ -1388,7 +1443,8 @@
       "sponsor": null,
       "phone": "1566-1936",
       "email": "emara@hanmail.net",
-      "instagram": "iamsolo_run"
+      "instagram": "iamsolo_run",
+      "blog": []
     }
   },
   {
@@ -1418,6 +1474,7 @@
       "startTime": null,
       "endTime": null,
       "site": "https://www.busan-50k.com",
+      "status": "",
       "price": {
         "12k": 80000,
         "24k": 110000,
@@ -1439,7 +1496,8 @@
       "sponsor": null,
       "phone": "010-6635-4199",
       "email": "info@bprideofficial.com",
-      "instagram": "busan50k_official"
+      "instagram": "busan50k_official",
+      "blog": []
     }
   },
   {
@@ -1469,6 +1527,7 @@
       "startTime": null,
       "endTime": null,
       "site": "https://www.sc.or.kr/marathon/main.do",
+      "status": "",
       "price": {
         "4km": 30000
       }
@@ -1487,7 +1546,8 @@
       "sponsor": null,
       "phone": "02-6900-4400",
       "email": "marathon@sc.or.kr",
-      "instagram": null
+      "instagram": null,
+      "blog": []
     }
   },
   {
@@ -1517,6 +1577,7 @@
       "startTime": null,
       "endTime": null,
       "site": "https://yonginmarathon.net/",
+      "status": "",
       "price": {
         "5km": 40000,
         "10km": 45000,
@@ -1538,7 +1599,8 @@
       "sponsor": null,
       "phone": "1600-3962",
       "email": null,
-      "instagram": null
+      "instagram": null,
+      "blog": []
     }
   },
   {
@@ -1568,6 +1630,7 @@
       "startTime": null,
       "endTime": null,
       "site": "https://www.sc.or.kr/marathon/main.do",
+      "status": "",
       "price": {
         "4km": 30000
       }
@@ -1586,7 +1649,8 @@
       "sponsor": null,
       "phone": "02-6900-4400",
       "email": "marathon@sc.or.kr",
-      "instagram": null
+      "instagram": null,
+      "blog": []
     }
   },
   {
@@ -1616,6 +1680,7 @@
       "startTime": null,
       "endTime": null,
       "site": "https://brrun.co.kr/",
+      "status": "",
       "price": {
         "5KM": 25000,
         "10KM": 35000,
@@ -1636,7 +1701,8 @@
       "sponsor": null,
       "phone": "02-785-0583",
       "email": "brmarathon@naver.com",
-      "instagram": null
+      "instagram": null,
+      "blog": []
     }
   },
   {
@@ -1666,6 +1732,7 @@
       "startTime": null,
       "endTime": null,
       "site": "https://seoulstrollerrun.co.kr/",
+      "status": "",
       "price": {
         "2인권": 60000,
         "3인권": 80000,
@@ -1686,7 +1753,8 @@
       "sponsor": null,
       "phone": "02-338-0344",
       "email": "strollerrun25@gmail.com",
-      "instagram": null
+      "instagram": null,
+      "blog": []
     }
   },
   {
@@ -1716,6 +1784,7 @@
       "startTime": null,
       "endTime": null,
       "site": "https://coffeebbangrun.com/",
+      "status": "",
       "price": {
         "5km": 55000,
         "10km": 59000
@@ -1735,7 +1804,8 @@
       "sponsor": null,
       "phone": null,
       "email": null,
-      "instagram": null
+      "instagram": null,
+      "blog": []
     }
   },
   {
@@ -1765,6 +1835,7 @@
       "startTime": null,
       "endTime": null,
       "site": "http://xn--o39a84ke5dgxc710an6as16b.kr",
+      "status": "",
       "price": {
         "5KM": 50000,
         "10KM": 50000
@@ -1784,7 +1855,8 @@
       "sponsor": null,
       "phone": "1644-4219",
       "email": "km4219@daum.net",
-      "instagram": null
+      "instagram": null,
+      "blog": []
     }
   },
   {
@@ -1814,6 +1886,7 @@
       "startTime": null,
       "endTime": null,
       "site": "https://www.tjrace.net",
+      "status": "",
       "price": {
         "5KM": 15000,
         "10KM": 35000,
@@ -1835,7 +1908,8 @@
       "sponsor": null,
       "phone": null,
       "email": "djib3311@gmail.com",
-      "instagram": null
+      "instagram": null,
+      "blog": []
     }
   },
   {
@@ -1865,6 +1939,7 @@
       "startTime": null,
       "endTime": null,
       "site": "https://hyroxsouthkorea.com",
+      "status": "",
       "price": {
         "더블": 200000,
         "싱글": 200000,
@@ -1885,7 +1960,8 @@
       "sponsor": null,
       "phone": null,
       "email": "info@hyrox.kr",
-      "instagram": null
+      "instagram": null,
+      "blog": []
     }
   },
   {
@@ -1915,6 +1991,7 @@
       "startTime": null,
       "endTime": null,
       "site": "https://www.samsung.com/sec/event/galaxywatchrun2026/",
+      "status": "",
       "price": {
         "4.82KM": 0
       }
@@ -1933,7 +2010,8 @@
       "sponsor": null,
       "phone": "02-2088-3989",
       "email": "galaxys26_studio@naver.com",
-      "instagram": null
+      "instagram": null,
+      "blog": []
     }
   },
   {
@@ -1963,6 +2041,7 @@
       "startTime": null,
       "endTime": null,
       "site": "https://www.science.go.kr/mps/0/bbs/431/moveBbsNttDetail.do?nttSn=49006",
+      "status": "",
       "price": {
         "5km": 20000,
         "10km": 20000
@@ -1982,7 +2061,8 @@
       "sponsor": null,
       "phone": "070-4112-6298",
       "email": null,
-      "instagram": null
+      "instagram": null,
+      "blog": []
     }
   },
   {
@@ -2012,6 +2092,7 @@
       "startTime": null,
       "endTime": null,
       "site": "https://kgseasiderun.co.kr/",
+      "status": "",
       "price": {
         "5km": 50000,
         "10km": 50000,
@@ -2032,7 +2113,8 @@
       "sponsor": null,
       "phone": null,
       "email": null,
-      "instagram": null
+      "instagram": null,
+      "blog": []
     }
   },
   {
@@ -2062,6 +2144,7 @@
       "startTime": null,
       "endTime": null,
       "site": "https://run.seoul.co.kr/",
+      "status": "",
       "price": {
         "5KM": 60000,
         "10km": 70000,
@@ -2082,7 +2165,8 @@
       "sponsor": null,
       "phone": "02-785-1915",
       "email": "help@sportlink.co.kr",
-      "instagram": null
+      "instagram": null,
+      "blog": []
     }
   },
   {
@@ -2112,6 +2196,7 @@
       "startTime": null,
       "endTime": null,
       "site": "https://runable.me",
+      "status": "",
       "price": {
         "10km-1": 60000,
         "10km-2": 50000
@@ -2131,7 +2216,8 @@
       "sponsor": null,
       "phone": null,
       "email": null,
-      "instagram": null
+      "instagram": null,
+      "blog": []
     }
   },
   {
@@ -2161,6 +2247,7 @@
       "startTime": null,
       "endTime": null,
       "site": "https://run518.com/",
+      "status": "",
       "price": {
         "5.18km": 51800
       }
@@ -2179,7 +2266,8 @@
       "sponsor": null,
       "phone": "010-4071-0518",
       "email": "0728shinemkt@naver.com",
-      "instagram": null
+      "instagram": null,
+      "blog": []
     }
   },
   {
@@ -2209,6 +2297,7 @@
       "startTime": null,
       "endTime": null,
       "site": "https://incheonafcup.co.kr/",
+      "status": "",
       "price": {
         "5KM": 40000,
         "10KM": 50000,
@@ -2229,7 +2318,8 @@
       "sponsor": null,
       "phone": "1866-1718",
       "email": null,
-      "instagram": null
+      "instagram": null,
+      "blog": []
     }
   },
   {
@@ -2259,6 +2349,7 @@
       "startTime": null,
       "endTime": null,
       "site": "https://www.sfinder.co.kr/contest/contest_info/390",
+      "status": "",
       "price": {
         "3KM": 35000,
         "5KM": 35000
@@ -2278,7 +2369,8 @@
       "sponsor": null,
       "phone": null,
       "email": null,
-      "instagram": null
+      "instagram": null,
+      "blog": []
     }
   },
   {
@@ -2308,6 +2400,7 @@
       "startTime": null,
       "endTime": null,
       "site": "https://mosirun.co.kr/",
+      "status": "",
       "price": {
         "5KM": 30000,
         "10KM": 30000,
@@ -2328,7 +2421,8 @@
       "sponsor": null,
       "phone": "070-8224-6363",
       "email": null,
-      "instagram": null
+      "instagram": null,
+      "blog": []
     }
   },
   {
@@ -2358,6 +2452,7 @@
       "startTime": null,
       "endTime": null,
       "site": "https://runten.co.kr/competitions/c626ed83-0e41-4830-9ce0-5b33659cc63b",
+      "status": "",
       "price": {
         "5KM": 45000,
         "10km": 50000
@@ -2377,7 +2472,8 @@
       "sponsor": null,
       "phone": "042-710-2058",
       "email": "runningbreaker@naver.com",
-      "instagram": null
+      "instagram": null,
+      "blog": []
     }
   },
   {
@@ -2407,6 +2503,7 @@
       "startTime": null,
       "endTime": null,
       "site": "https://www.thenorthfacekorea.co.kr/tnf100/info",
+      "status": "",
       "price": {
         "10K": 60000,
         "22K": 130000,
@@ -2428,7 +2525,8 @@
       "sponsor": null,
       "phone": "1661-3512",
       "email": null,
-      "instagram": null
+      "instagram": null,
+      "blog": []
     }
   },
   {
@@ -2458,6 +2556,7 @@
       "startTime": null,
       "endTime": null,
       "site": "https://mara1080.com/event/29a34ee9-32a9-4a3b-b92f-37b3772cc183",
+      "status": "",
       "price": {
         "4KM": 25000,
         "10KM": 45000,
@@ -2478,7 +2577,8 @@
       "sponsor": null,
       "phone": "042-638-1087",
       "email": "jeonmahyeop@naver.com",
-      "instagram": null
+      "instagram": null,
+      "blog": []
     }
   },
   {
@@ -2508,6 +2608,7 @@
       "startTime": null,
       "endTime": null,
       "site": "https://daejeon.therace.co.kr/index.php",
+      "status": "",
       "price": {
         "10KM": 50000
       }
@@ -2526,7 +2627,8 @@
       "sponsor": null,
       "phone": null,
       "email": null,
-      "instagram": null
+      "instagram": null,
+      "blog": []
     }
   },
   {
@@ -2556,6 +2658,7 @@
       "startTime": null,
       "endTime": null,
       "site": "https://www.sc.or.kr/marathon/main.do",
+      "status": "",
       "price": {
         "4km": 30000
       }
@@ -2574,7 +2677,8 @@
       "sponsor": null,
       "phone": "02-6900-4400",
       "email": "marathon@sc.or.kr",
-      "instagram": null
+      "instagram": null,
+      "blog": []
     }
   },
   {
@@ -2604,6 +2708,7 @@
       "startTime": null,
       "endTime": null,
       "site": "https://dmzrally.wizrun.com/",
+      "status": "",
       "price": {
         "화천DMZ랠리 명품코스": 50000
       }
@@ -2622,7 +2727,8 @@
       "sponsor": null,
       "phone": "031-821-9940",
       "email": "dmzrally@gmail.com",
-      "instagram": null
+      "instagram": null,
+      "blog": []
     }
   },
   {
@@ -2652,6 +2758,7 @@
       "startTime": null,
       "endTime": null,
       "site": "https://www.sc.or.kr/marathon/main.do",
+      "status": "",
       "price": {
         "4km": 30000
       }
@@ -2670,7 +2777,8 @@
       "sponsor": null,
       "phone": "02-6900-4400",
       "email": "marathon@sc.or.kr",
-      "instagram": null
+      "instagram": null,
+      "blog": []
     }
   },
   {
@@ -2700,6 +2808,7 @@
       "startTime": null,
       "endTime": null,
       "site": "http://badamarathon.com/",
+      "status": "",
       "price": {
         "5KM": 40000,
         "10KM": 45000,
@@ -2720,7 +2829,8 @@
       "sponsor": null,
       "phone": "031-821-9950",
       "email": "badamarathoncs@gmail.com",
-      "instagram": null
+      "instagram": null,
+      "blog": []
     }
   },
   {
@@ -2750,6 +2860,7 @@
       "startTime": null,
       "endTime": null,
       "site": "https://www.harurun.co.kr",
+      "status": "",
       "price": {
         "5km": 40000,
         "10km": 45000
@@ -2769,7 +2880,8 @@
       "sponsor": null,
       "phone": "05-508-1102",
       "email": "hy-harurun@naver.com",
-      "instagram": null
+      "instagram": null,
+      "blog": []
     }
   },
   {
@@ -2799,6 +2911,7 @@
       "startTime": null,
       "endTime": null,
       "site": "https://www.ticketlink.co.kr/product/62816",
+      "status": "",
       "price": {
         "챌린지(6회)": 15000,
         "시그니처(1회)": 15000
@@ -2818,7 +2931,8 @@
       "sponsor": null,
       "phone": "070-5154-0390",
       "email": "2026.63run@gmail.com",
-      "instagram": null
+      "instagram": null,
+      "blog": []
     }
   },
   {
@@ -2848,6 +2962,7 @@
       "startTime": null,
       "endTime": null,
       "site": "https://www.sc.or.kr/marathon/main.do",
+      "status": "",
       "price": {
         "4km": 30000
       }
@@ -2866,7 +2981,8 @@
       "sponsor": null,
       "phone": "02-6900-4400",
       "email": "marathon@sc.or.kr",
-      "instagram": null
+      "instagram": null,
+      "blog": []
     }
   },
   {
@@ -2896,6 +3012,7 @@
       "startTime": null,
       "endTime": null,
       "site": "https://yonginrunfesta.com",
+      "status": "",
       "price": {
         "5KM": 40000,
         "10KM": 45000
@@ -2915,7 +3032,8 @@
       "sponsor": null,
       "phone": "010-4623-0845",
       "email": "yonginrunfesta@gmail.com",
-      "instagram": "yongin_runfesta"
+      "instagram": "yongin_runfesta",
+      "blog": []
     }
   },
   {
@@ -2945,6 +3063,7 @@
       "startTime": null,
       "endTime": null,
       "site": "https://thefast.co.kr/",
+      "status": "",
       "price": {
         "4.34km(1LAP)": 75000,
         "13.04km(3LAP)": 85000,
@@ -2965,7 +3084,8 @@
       "sponsor": null,
       "phone": "031-778-6955",
       "email": "thefast@bloomora.kr",
-      "instagram": null
+      "instagram": null,
+      "blog": []
     }
   },
   {
@@ -2995,6 +3115,7 @@
       "startTime": null,
       "endTime": null,
       "site": "https://roserun.kr",
+      "status": "",
       "price": {
         "5km": 45000,
         "10km": 50000,
@@ -3015,7 +3136,8 @@
       "sponsor": null,
       "phone": "02-2636-7775",
       "email": null,
-      "instagram": null
+      "instagram": null,
+      "blog": []
     }
   },
   {
@@ -3045,6 +3167,7 @@
       "startTime": null,
       "endTime": null,
       "site": "http://www.burningrun.co.kr/",
+      "status": "",
       "price": {
         "5km": 35000,
         "7km": 40000,
@@ -3065,7 +3188,8 @@
       "sponsor": null,
       "phone": "070-7706-1011",
       "email": "dmzrally@gmail.com",
-      "instagram": null
+      "instagram": null,
+      "blog": []
     }
   },
   {
@@ -3095,6 +3219,7 @@
       "startTime": null,
       "endTime": null,
       "site": "https://runten.co.kr/competitions/6b5ee82e-d28d-4a58-a51d-997087ddd8c3",
+      "status": "",
       "price": {
         "5KM": 45000,
         "10km": 50000
@@ -3114,7 +3239,8 @@
       "sponsor": null,
       "phone": "042-710-2058",
       "email": "runningbreaker@naver.com",
-      "instagram": null
+      "instagram": null,
+      "blog": []
     }
   },
   {
@@ -3144,6 +3270,7 @@
       "startTime": null,
       "endTime": null,
       "site": "https://nightrun.busan.com/",
+      "status": "",
       "price": {
         "10km": 60000
       }
@@ -3162,7 +3289,8 @@
       "sponsor": null,
       "phone": "031-821-9949",
       "email": "busannightrun@gmail.com",
-      "instagram": null
+      "instagram": null,
+      "blog": []
     }
   },
   {
@@ -3192,6 +3320,7 @@
       "startTime": null,
       "endTime": null,
       "site": "https://gwangju.therace.co.kr/",
+      "status": "",
       "price": {
         "10km": 50000
       }
@@ -3210,7 +3339,8 @@
       "sponsor": null,
       "phone": "070-7727-1755",
       "email": "spomax_marathon@naver.com",
-      "instagram": null
+      "instagram": null,
+      "blog": []
     }
   },
   {
@@ -3240,6 +3370,7 @@
       "startTime": null,
       "endTime": null,
       "site": "https://gangnam-marathon.com",
+      "status": "",
       "price": {
         "10km": 55000,
         "HALF": 65000
@@ -3259,7 +3390,8 @@
       "sponsor": null,
       "phone": "010-6364-4749",
       "email": "p474900@gmail.com",
-      "instagram": null
+      "instagram": null,
+      "blog": []
     }
   },
   {
@@ -3289,6 +3421,7 @@
       "startTime": null,
       "endTime": null,
       "site": "https://earthrun.kr/",
+      "status": "",
       "price": {
         "5KM": 45000,
         "10KM": 50000
@@ -3308,7 +3441,8 @@
       "sponsor": null,
       "phone": "070-7954-8393",
       "email": "earth_run@naver.com",
-      "instagram": null
+      "instagram": null,
+      "blog": []
     }
   },
   {
@@ -3338,6 +3472,7 @@
       "startTime": null,
       "endTime": null,
       "site": "https://jejubbangrun.com",
+      "status": "",
       "price": {
         "5KM": 55000,
         "10KM": 55000
@@ -3357,7 +3492,8 @@
       "sponsor": null,
       "phone": null,
       "email": null,
-      "instagram": "bbangbbangrun"
+      "instagram": "bbangbbangrun",
+      "blog": []
     }
   },
   {
@@ -3387,6 +3523,7 @@
       "startTime": null,
       "endTime": null,
       "site": "https://www.dawnmarathon.com",
+      "status": "",
       "price": {
         "5KM": 40000,
         "10KM": 55000,
@@ -3407,7 +3544,8 @@
       "sponsor": null,
       "phone": "02-3210-1666",
       "email": "runct@naver.com",
-      "instagram": null
+      "instagram": null,
+      "blog": []
     }
   },
   {
@@ -3437,6 +3575,7 @@
       "startTime": null,
       "endTime": null,
       "site": "https://www.hrun.co.kr/",
+      "status": "",
       "price": {
         "5KM": 35000,
         "10KM": 40000,
@@ -3457,7 +3596,8 @@
       "sponsor": null,
       "phone": null,
       "email": null,
-      "instagram": null
+      "instagram": null,
+      "blog": []
     }
   },
   {
@@ -3487,6 +3627,7 @@
       "startTime": null,
       "endTime": null,
       "site": "https://geoje100.creatorlink.net/",
+      "status": "",
       "price": {
         "P15": 55000,
         "P27": 95000,
@@ -3509,7 +3650,8 @@
       "sponsor": null,
       "phone": "010-6449-5073",
       "email": "jj700430@naver.com",
-      "instagram": "geoje100k"
+      "instagram": "geoje100k",
+      "blog": []
     }
   },
   {
@@ -3539,6 +3681,7 @@
       "startTime": null,
       "endTime": null,
       "site": "https://forms.gle/UBq49fLuxJsKtCPX7",
+      "status": "",
       "price": {
         "2.1km": 20000
       }
@@ -3557,7 +3700,8 @@
       "sponsor": null,
       "phone": null,
       "email": null,
-      "instagram": null
+      "instagram": null,
+      "blog": []
     }
   },
   {
@@ -3587,6 +3731,7 @@
       "startTime": null,
       "endTime": null,
       "site": "https://samsamis.com/47",
+      "status": "",
       "price": {
         "16K": 60000,
         "36K": 90000
@@ -3606,7 +3751,8 @@
       "sponsor": null,
       "phone": "010-2116-0148",
       "email": "samsamis@naver.com",
-      "instagram": "samsam.is"
+      "instagram": "samsam.is",
+      "blog": []
     }
   },
   {
@@ -3636,6 +3782,7 @@
       "startTime": null,
       "endTime": null,
       "site": "https://runforislands.com/",
+      "status": "",
       "price": {
         "10km": 30000
       }
@@ -3654,7 +3801,8 @@
       "sponsor": null,
       "phone": null,
       "email": null,
-      "instagram": null
+      "instagram": null,
+      "blog": []
     }
   },
   {
@@ -3684,6 +3832,7 @@
       "startTime": null,
       "endTime": null,
       "site": "http://bamseom.com",
+      "status": "",
       "price": {
         "5km": 50000,
         "10km": 50000,
@@ -3704,7 +3853,8 @@
       "sponsor": null,
       "phone": "02-569-5551",
       "email": null,
-      "instagram": null
+      "instagram": null,
+      "blog": []
     }
   },
   {
@@ -3734,6 +3884,7 @@
       "startTime": null,
       "endTime": null,
       "site": "https://modern-infinity-9e6.notion.site/2026-317918810cc2809f8ca2d834ac9b549f",
+      "status": "",
       "price": {
         "5KM": 20000,
         "10KM": 30000,
@@ -3754,7 +3905,8 @@
       "sponsor": null,
       "phone": "010-9360-0113",
       "email": null,
-      "instagram": null
+      "instagram": null,
+      "blog": []
     }
   },
   {
@@ -3784,6 +3936,7 @@
       "startTime": null,
       "endTime": null,
       "site": "https://www.namhae250k.com/",
+      "status": "",
       "price": {
         "10KM": 70000,
         "20KM": 100000
@@ -3803,7 +3956,8 @@
       "sponsor": null,
       "phone": "070-7755-5532",
       "email": "namhae250k@gmail.com",
-      "instagram": "namhae250k"
+      "instagram": "namhae250k",
+      "blog": []
     }
   },
   {
@@ -3833,6 +3987,7 @@
       "startTime": null,
       "endTime": null,
       "site": "https://www.hangangmarathon.net",
+      "status": "",
       "price": {
         "4KM": 35000,
         "10KM": 45000,
@@ -3853,7 +4008,8 @@
       "sponsor": null,
       "phone": "1600-3962",
       "email": "road42195@naver.com",
-      "instagram": null
+      "instagram": null,
+      "blog": []
     }
   },
   {
@@ -3883,6 +4039,7 @@
       "startTime": null,
       "endTime": null,
       "site": "https://blueskyrun.kr/?utm_source=marathongo&utm_medium=referral",
+      "status": "",
       "price": {
         "5KM": 50000,
         "10KM": 50000,
@@ -3903,7 +4060,8 @@
       "sponsor": null,
       "phone": "02-2606-8187",
       "email": "run@blueskyrun.kr",
-      "instagram": null
+      "instagram": null,
+      "blog": []
     }
   },
   {
@@ -3933,6 +4091,7 @@
       "startTime": null,
       "endTime": null,
       "site": "https://ccpmarathon.kr/math/index.php",
+      "status": "",
       "price": {
         "5KM": 40000,
         "10KM": 40000,
@@ -3953,7 +4112,8 @@
       "sponsor": null,
       "phone": "033-260-9351",
       "email": "ccpmarathon@daum.net",
-      "instagram": null
+      "instagram": null,
+      "blog": []
     }
   },
   {
@@ -3983,6 +4143,7 @@
       "startTime": null,
       "endTime": null,
       "site": "https://ktra.kr/69",
+      "status": "",
       "price": {
         "10K": 60000,
         "36K": 100000,
@@ -4005,7 +4166,8 @@
       "sponsor": null,
       "phone": null,
       "email": null,
-      "instagram": "ktra.kr"
+      "instagram": "ktra.kr",
+      "blog": []
     }
   },
   {
@@ -4035,6 +4197,7 @@
       "startTime": null,
       "endTime": null,
       "site": "https://citygasonrun.com/",
+      "status": "",
       "price": {
         "12k": 50000,
         "24k": 60000,
@@ -4055,7 +4218,8 @@
       "sponsor": null,
       "phone": "02-3012-0187",
       "email": null,
-      "instagram": null
+      "instagram": null,
+      "blog": []
     }
   },
   {
@@ -4085,6 +4249,7 @@
       "startTime": null,
       "endTime": null,
       "site": "https://simsimrun.com/",
+      "status": "",
       "price": {
         "3KM": 50000,
         "5KM": 50000,
@@ -4105,7 +4270,8 @@
       "sponsor": null,
       "phone": null,
       "email": null,
-      "instagram": "soaamhope"
+      "instagram": "soaamhope",
+      "blog": []
     }
   },
   {
@@ -4135,6 +4301,7 @@
       "startTime": null,
       "endTime": null,
       "site": "https://www.coupangplay.com/promotion/2026MudorunSeoul/",
+      "status": "",
       "price": {
         "10km": 1
       }
@@ -4153,7 +4320,8 @@
       "sponsor": null,
       "phone": "1600–9800",
       "email": "playrepresent@coupang.com",
-      "instagram": null
+      "instagram": null,
+      "blog": []
     }
   },
   {
@@ -4183,6 +4351,7 @@
       "startTime": null,
       "endTime": null,
       "site": "https://www.imrun.kr/marathon/code/8046/index.php",
+      "status": "",
       "price": {
         "5KM": 55000,
         "10KM": 65000,
@@ -4203,7 +4372,8 @@
       "sponsor": null,
       "phone": "1566-1936",
       "email": "emara@hanmail.net",
-      "instagram": null
+      "instagram": null,
+      "blog": []
     }
   },
   {
@@ -4233,6 +4403,7 @@
       "startTime": null,
       "endTime": null,
       "site": "https://jejumarathon.com/",
+      "status": "",
       "price": {
         "10km": 40000,
         "full": 50000,
@@ -4253,7 +4424,8 @@
       "sponsor": null,
       "phone": "064-741-8739",
       "email": "jejumarathon@jta.or.kr",
-      "instagram": null
+      "instagram": null,
+      "blog": []
     }
   },
   {
@@ -4283,6 +4455,7 @@
       "startTime": null,
       "endTime": null,
       "site": "https://runable.me",
+      "status": "",
       "price": {
         "5km": 50000,
         "10km": 60000,
@@ -4303,7 +4476,8 @@
       "sponsor": null,
       "phone": null,
       "email": null,
-      "instagram": null
+      "instagram": null,
+      "blog": []
     }
   },
   {
@@ -4333,6 +4507,7 @@
       "startTime": null,
       "endTime": null,
       "site": "https://daegu.therace.co.kr",
+      "status": "",
       "price": {
         "10KM": 50000
       }
@@ -4351,7 +4526,8 @@
       "sponsor": null,
       "phone": null,
       "email": null,
-      "instagram": null
+      "instagram": null,
+      "blog": []
     }
   },
   {
@@ -4381,6 +4557,7 @@
       "startTime": "10:00",
       "endTime": null,
       "site": "https://bluecrystalmarathon.imweb.me/",
+      "status": "",
       "price": {
         "5km": 39000
       }
@@ -4399,7 +4576,8 @@
       "sponsor": null,
       "phone": "010-4985-5878",
       "email": "doc333@naver.com",
-      "instagram": null
+      "instagram": null,
+      "blog": []
     }
   },
   {
@@ -4429,6 +4607,7 @@
       "startTime": null,
       "endTime": null,
       "site": "https://ktra.kr/33",
+      "status": "",
       "price": {
         "5KM": 35000,
         "10KM": 40000,
@@ -4449,7 +4628,8 @@
       "sponsor": null,
       "phone": null,
       "email": null,
-      "instagram": "ktra.kr"
+      "instagram": "ktra.kr",
+      "blog": []
     }
   },
   {
@@ -4479,6 +4659,7 @@
       "startTime": null,
       "endTime": null,
       "site": "https://www.sbsa.or.kr",
+      "status": "",
       "price": {
         "5KM": 40000,
         "10KM": 50000,
@@ -4499,7 +4680,8 @@
       "sponsor": null,
       "phone": "02-780-0432",
       "email": "kbu0011@kbuseoul.org",
-      "instagram": null
+      "instagram": null,
+      "blog": []
     }
   },
   {
@@ -4529,6 +4711,7 @@
       "startTime": null,
       "endTime": null,
       "site": "https://www.xn--11k-9o7l940cuub9v9gd5a.com/",
+      "status": "",
       "price": {
         "5KM": 50000,
         "11KM": 50000,
@@ -4549,7 +4732,8 @@
       "sponsor": null,
       "phone": "033-651-0112",
       "email": "kadogn@naver.com",
-      "instagram": null
+      "instagram": null,
+      "blog": []
     }
   },
   {
@@ -4579,6 +4763,7 @@
       "startTime": null,
       "endTime": null,
       "site": "https://runten.co.kr/competitions/9a3136da-306a-463f-9fe9-01a6af5a9dc3",
+      "status": "",
       "price": {
         "5KM": 45000,
         "10KM": 50000
@@ -4598,7 +4783,8 @@
       "sponsor": null,
       "phone": "042-710-2058",
       "email": "runningbreaker@naver.com",
-      "instagram": null
+      "instagram": null,
+      "blog": []
     }
   },
   {
@@ -4628,6 +4814,7 @@
       "startTime": null,
       "endTime": null,
       "site": "https://www.goodrunner.co.kr/race/info.html?id=97",
+      "status": "",
       "price": {
         "SKY Run": 80000,
         "SKY Half": 110000,
@@ -4648,7 +4835,8 @@
       "sponsor": null,
       "phone": null,
       "email": null,
-      "instagram": null
+      "instagram": null,
+      "blog": []
     }
   },
   {
@@ -4678,6 +4866,7 @@
       "startTime": null,
       "endTime": null,
       "site": "https://gift.kakao.com/product/13590072?input_channel_id=2630",
+      "status": "",
       "price": {
         "10KM": 75000
       }
@@ -4696,7 +4885,8 @@
       "sponsor": null,
       "phone": null,
       "email": null,
-      "instagram": null
+      "instagram": null,
+      "blog": []
     }
   },
   {
@@ -4726,6 +4916,7 @@
       "startTime": null,
       "endTime": null,
       "site": "https://culturerun.net",
+      "status": "",
       "price": {
         "5KM": 40000,
         "10KM": 50000,
@@ -4746,7 +4937,8 @@
       "sponsor": null,
       "phone": "1600-3962",
       "email": "road42195@naver.com",
-      "instagram": null
+      "instagram": null,
+      "blog": []
     }
   },
   {
@@ -4776,6 +4968,7 @@
       "startTime": "12:00",
       "endTime": null,
       "site": "https://www.jejuoreumtrailrunning.com/",
+      "status": "",
       "price": {
         "10K": 70000,
         "30K": 130000
@@ -4795,7 +4988,8 @@
       "sponsor": null,
       "phone": null,
       "email": null,
-      "instagram": "jeju_oreum_trailrun"
+      "instagram": "jeju_oreum_trailrun",
+      "blog": []
     }
   },
   {
@@ -4825,6 +5019,7 @@
       "startTime": null,
       "endTime": null,
       "site": "http://www.runmp.kr",
+      "status": "",
       "price": {
         "5KM": 35000,
         "10KM": 40000,
@@ -4845,7 +5040,8 @@
       "sponsor": null,
       "phone": "010-5944-2686",
       "email": "pwr2020@daum.net",
-      "instagram": null
+      "instagram": null,
+      "blog": []
     }
   },
   {
@@ -4875,6 +5071,7 @@
       "startTime": null,
       "endTime": null,
       "site": "http://ulmarathon.co.kr",
+      "status": "",
       "price": {
         "5KM": 50000,
         "10KM": 70000,
@@ -4896,7 +5093,8 @@
       "sponsor": null,
       "phone": "1644-4219",
       "email": "km4219@hanmail.net",
-      "instagram": null
+      "instagram": null,
+      "blog": []
     }
   },
   {
@@ -4926,6 +5124,7 @@
       "startTime": null,
       "endTime": null,
       "site": "http://phsteelrun.com/home/introduce/outline/pageView.ubs",
+      "status": "",
       "price": {
         "5KM": 25000,
         "10KM": 35000,
@@ -4946,7 +5145,8 @@
       "sponsor": null,
       "phone": "1600-3949",
       "email": null,
-      "instagram": null
+      "instagram": null,
+      "blog": []
     }
   },
   {
@@ -4976,6 +5176,7 @@
       "startTime": null,
       "endTime": null,
       "site": "https://mara1080.com/event/cc73d8d1-a3d1-410c-9246-5d2eb76dd95e",
+      "status": "",
       "price": {
         "5KM": 79000,
         "10KM": 79000,
@@ -4996,7 +5197,8 @@
       "sponsor": null,
       "phone": "042-638-1080",
       "email": null,
-      "instagram": null
+      "instagram": null,
+      "blog": []
     }
   },
   {
@@ -5026,6 +5228,7 @@
       "startTime": null,
       "endTime": null,
       "site": "https://healthyrun.co.kr/outline.php",
+      "status": "",
       "price": {
         "10km": 35000
       }
@@ -5044,7 +5247,8 @@
       "sponsor": null,
       "phone": "1866-1718",
       "email": "isang102@naver.com",
-      "instagram": null
+      "instagram": null,
+      "blog": []
     }
   },
   {
@@ -5074,6 +5278,7 @@
       "startTime": null,
       "endTime": null,
       "site": "https://ksgaaf.co.kr/",
+      "status": "",
       "price": {
         "5KM": 40000,
         "10KM": 45000
@@ -5093,7 +5298,8 @@
       "sponsor": null,
       "phone": "02-457-0121",
       "email": null,
-      "instagram": null
+      "instagram": null,
+      "blog": []
     }
   },
   {
@@ -5123,6 +5329,7 @@
       "startTime": null,
       "endTime": null,
       "site": "https://www.supgil.com/",
+      "status": "",
       "price": {
         "5KM": 25000,
         "10KM": 35000,
@@ -5143,7 +5350,8 @@
       "sponsor": null,
       "phone": "055-762-1793",
       "email": "aiky1794@naver.com",
-      "instagram": null
+      "instagram": null,
+      "blog": []
     }
   },
   {
@@ -5173,6 +5381,7 @@
       "startTime": null,
       "endTime": null,
       "site": "https://wellmaderun.com/",
+      "status": "",
       "price": {
         "5KM": 40000,
         "10KM": 50000,
@@ -5193,7 +5402,8 @@
       "sponsor": null,
       "phone": "010-8017-1833",
       "email": null,
-      "instagram": "urfesta.official"
+      "instagram": "urfesta.official",
+      "blog": []
     }
   },
   {
@@ -5223,6 +5433,7 @@
       "startTime": null,
       "endTime": null,
       "site": "https://mara1080.com/event/cfa1bea4-b545-4df9-8ae1-5ce280ca0e3d",
+      "status": "",
       "price": {
         "5KM": 45000,
         "10KM": 45000
@@ -5242,7 +5453,8 @@
       "sponsor": null,
       "phone": "02-638-1080",
       "email": null,
-      "instagram": null
+      "instagram": null,
+      "blog": []
     }
   },
   {
@@ -5272,6 +5484,7 @@
       "startTime": null,
       "endTime": null,
       "site": "https://global6kforwater.com/",
+      "status": "",
       "price": {
         "6k": 40000
       }
@@ -5290,7 +5503,8 @@
       "sponsor": null,
       "phone": "070-4154-2561",
       "email": "global6k@worldvision.or.kr",
-      "instagram": "global6k_korea"
+      "instagram": "global6k_korea",
+      "blog": []
     }
   },
   {
@@ -5320,6 +5534,7 @@
       "startTime": null,
       "endTime": null,
       "site": "https://hoperun.kr",
+      "status": "",
       "price": {
         "5KM": 50000,
         "10KM": 50000,
@@ -5340,7 +5555,8 @@
       "sponsor": null,
       "phone": "02-888-8875",
       "email": "hope@hoperun.kr",
-      "instagram": null
+      "instagram": null,
+      "blog": []
     }
   },
   {
@@ -5370,6 +5586,7 @@
       "startTime": null,
       "endTime": null,
       "site": "https://withice.or.kr/shop_view?idx=162",
+      "status": "",
       "price": {
         "3KM": 50000,
         "5KM": 50000,
@@ -5390,7 +5607,8 @@
       "sponsor": null,
       "phone": "02-3453-6865",
       "email": null,
-      "instagram": null
+      "instagram": null,
+      "blog": []
     }
   },
   {
@@ -5420,6 +5638,7 @@
       "startTime": null,
       "endTime": null,
       "site": "https://cjapplemarathon.com/",
+      "status": "",
       "price": {
         "5KM": 30000,
         "10KM": 40000,
@@ -5440,7 +5659,8 @@
       "sponsor": null,
       "phone": "043-851-7330",
       "email": "qhrch2229@naver.com",
-      "instagram": null
+      "instagram": null,
+      "blog": []
     }
   },
   {
@@ -5470,6 +5690,7 @@
       "startTime": null,
       "endTime": null,
       "site": "https://realhappyrun.kr",
+      "status": "",
       "price": {
         "5KM": 50000,
         "10KM": 50000,
@@ -5490,7 +5711,8 @@
       "sponsor": null,
       "phone": "02-3285-5556",
       "email": "run@realhappyrun.kr",
-      "instagram": null
+      "instagram": null,
+      "blog": []
     }
   },
   {
@@ -5520,6 +5742,7 @@
       "startTime": null,
       "endTime": null,
       "site": "https://bamseomrun.kr/",
+      "status": "",
       "price": {
         "3KM": 30000,
         "5KM": 50000,
@@ -5540,7 +5763,8 @@
       "sponsor": null,
       "phone": "02-852-0911",
       "email": "run4me@mapofm.net",
-      "instagram": "bamseomrun"
+      "instagram": "bamseomrun",
+      "blog": []
     }
   },
   {
@@ -5570,6 +5794,7 @@
       "startTime": null,
       "endTime": null,
       "site": "https://wallyrun.kr/",
+      "status": "",
       "price": {
         "5KM": 77000,
         "10KM": 88000
@@ -5589,7 +5814,8 @@
       "sponsor": null,
       "phone": null,
       "email": null,
-      "instagram": null
+      "instagram": null,
+      "blog": []
     }
   },
   {
@@ -5619,6 +5845,7 @@
       "startTime": "14:00",
       "endTime": null,
       "site": "https://sqnc.global/",
+      "status": "",
       "price": {
         "12k": 110000,
         "20k": 80000
@@ -5638,7 +5865,8 @@
       "sponsor": null,
       "phone": null,
       "email": null,
-      "instagram": null
+      "instagram": null,
+      "blog": []
     }
   },
   {
@@ -5668,6 +5896,7 @@
       "startTime": null,
       "endTime": null,
       "site": "https://bigstarrun.kr",
+      "status": "",
       "price": {
         "5KM": 50000,
         "10KM": 50000,
@@ -5688,7 +5917,8 @@
       "sponsor": null,
       "phone": "02-336-1588",
       "email": "star@bigstarrun.kr",
-      "instagram": null
+      "instagram": null,
+      "blog": []
     }
   },
   {
@@ -5718,6 +5948,7 @@
       "startTime": null,
       "endTime": null,
       "site": "https://projectruntrip.com/",
+      "status": "",
       "price": {
         "7km": 50000,
         "14km": 60000
@@ -5737,7 +5968,8 @@
       "sponsor": null,
       "phone": null,
       "email": null,
-      "instagram": null
+      "instagram": null,
+      "blog": []
     }
   },
   {
@@ -5767,6 +5999,7 @@
       "startTime": "14:00",
       "endTime": null,
       "site": "https://rocknrun.kr/program/?idx=248",
+      "status": "",
       "price": {
         "19K": 50000,
         "1박2일": 70000
@@ -5786,7 +6019,8 @@
       "sponsor": null,
       "phone": null,
       "email": "info@rocknrun.kr",
-      "instagram": "rocknrun.kr"
+      "instagram": "rocknrun.kr",
+      "blog": []
     }
   },
   {
@@ -5816,6 +6050,7 @@
       "startTime": null,
       "endTime": null,
       "site": "https://thepacerseries.com/",
+      "status": "",
       "price": {
         "5KM": 60000,
         "10KM": 65000
@@ -5835,7 +6070,8 @@
       "sponsor": null,
       "phone": "010-7734-1481",
       "email": "runcode.kr@gmail.com",
-      "instagram": null
+      "instagram": null,
+      "blog": []
     }
   },
   {
@@ -5865,6 +6101,7 @@
       "startTime": null,
       "endTime": null,
       "site": "https://runsongdo.co.kr/",
+      "status": "",
       "price": {
         "5KM": 50000,
         "10KM": 50000
@@ -5884,7 +6121,8 @@
       "sponsor": null,
       "phone": "1866-1718",
       "email": null,
-      "instagram": null
+      "instagram": null,
+      "blog": []
     }
   },
   {
@@ -5914,6 +6152,7 @@
       "startTime": null,
       "endTime": null,
       "site": "https://refreshrun.kr/",
+      "status": "",
       "price": {
         "5K": 50000,
         "10K": 60000
@@ -5933,7 +6172,8 @@
       "sponsor": null,
       "phone": "02-3141-7745",
       "email": "refreshrun@gmail.com",
-      "instagram": null
+      "instagram": null,
+      "blog": []
     }
   },
   {
@@ -5963,6 +6203,7 @@
       "startTime": null,
       "endTime": null,
       "site": "https://seoulrun.kr/",
+      "status": "",
       "price": {
         "5KM": 50000,
         "10KM": 50000,
@@ -5983,7 +6224,8 @@
       "sponsor": null,
       "phone": "02-2636-6543",
       "email": "start@seoulrun.kr",
-      "instagram": null
+      "instagram": null,
+      "blog": []
     }
   },
   {
@@ -6013,6 +6255,7 @@
       "startTime": null,
       "endTime": null,
       "site": "https://ironrun.kr/ko/",
+      "status": "",
       "price": {
         "3.8KM": 25000,
         "7.87KM": 35000,
@@ -6033,7 +6276,8 @@
       "sponsor": null,
       "phone": "070-7718-7577",
       "email": "sf8844@naver.com",
-      "instagram": null
+      "instagram": null,
+      "blog": []
     }
   },
   {
@@ -6063,6 +6307,7 @@
       "startTime": null,
       "endTime": null,
       "site": "https://osk.run/139/?idx=1333",
+      "status": "",
       "price": {
         "17.5KM": 100000
       }
@@ -6081,7 +6326,8 @@
       "sponsor": null,
       "phone": "010-7325-9060",
       "email": "osk@osk.run",
-      "instagram": "osk_kr"
+      "instagram": "osk_kr",
+      "blog": []
     }
   },
   {
@@ -6111,6 +6357,7 @@
       "startTime": null,
       "endTime": null,
       "site": "https://www.sonohotelsresorts.com/main/event/detail/73961",
+      "status": "",
       "price": {
         "10KM": 50000,
         "성인 버티컬 900m": 50000,
@@ -6131,7 +6378,8 @@
       "sponsor": null,
       "phone": null,
       "email": null,
-      "instagram": "sonohotels"
+      "instagram": "sonohotels",
+      "blog": []
     }
   },
   {
@@ -6161,6 +6409,7 @@
       "startTime": null,
       "endTime": null,
       "site": "https://mara1080.com/event/48dc9d78-292d-4851-9cc9-bbebcfad0a45",
+      "status": "",
       "price": {
         "4KM": 15000,
         "8KM": 15000,
@@ -6183,7 +6432,8 @@
       "sponsor": null,
       "phone": null,
       "email": null,
-      "instagram": null
+      "instagram": null,
+      "blog": []
     }
   },
   {
@@ -6213,6 +6463,7 @@
       "startTime": "14:00",
       "endTime": null,
       "site": "https://triathlon.or.kr/events/tour/overview/?mode=overview&tourcd=2043&page=1&sYear=2026&vType=list&field=&keyword=",
+      "status": "",
       "price": {
         "아쿠아슬론": 120000
       }
@@ -6231,7 +6482,8 @@
       "sponsor": null,
       "phone": null,
       "email": null,
-      "instagram": null
+      "instagram": null,
+      "blog": []
     }
   },
   {
@@ -6261,6 +6513,7 @@
       "startTime": null,
       "endTime": null,
       "site": "https://osk.run/46",
+      "status": "",
       "price": {
         "27KM": 599000,
         "40KM": 599000
@@ -6280,7 +6533,8 @@
       "sponsor": null,
       "phone": "010-7325-9060",
       "email": "osk@osk.run",
-      "instagram": null
+      "instagram": null,
+      "blog": []
     }
   },
   {
@@ -6310,6 +6564,7 @@
       "startTime": "09:00",
       "endTime": "17:00",
       "site": "https://www.trailrun.kr/ko/",
+      "status": "",
       "price": {
         "5km": 35000,
         "10km": 40000,
@@ -6330,7 +6585,8 @@
       "sponsor": null,
       "phone": "070-4443-4392",
       "email": "gjmtrail@gmail.com",
-      "instagram": null
+      "instagram": null,
+      "blog": []
     }
   },
   {
@@ -6360,6 +6616,7 @@
       "startTime": "14:00",
       "endTime": null,
       "site": "https://rocknrun.kr/coolvalleytrailrace",
+      "status": "",
       "price": {
         "18km": 90000
       }
@@ -6378,7 +6635,8 @@
       "sponsor": null,
       "phone": null,
       "email": null,
-      "instagram": null
+      "instagram": null,
+      "blog": []
     }
   },
   {
@@ -6408,6 +6666,7 @@
       "startTime": null,
       "endTime": null,
       "site": "https://koreanightrun.imweb.me",
+      "status": "",
       "price": {
         "7K": 65000,
         "17K": 115000,
@@ -6428,7 +6687,8 @@
       "sponsor": null,
       "phone": null,
       "email": null,
-      "instagram": null
+      "instagram": null,
+      "blog": []
     }
   },
   {
@@ -6458,6 +6718,7 @@
       "startTime": null,
       "endTime": null,
       "site": "https://urbansports.kr/shop_view/?idx=127",
+      "status": "",
       "price": {
         "14k": 46000,
         "22k": 54000,
@@ -6478,7 +6739,8 @@
       "sponsor": null,
       "phone": "070-4705-2008",
       "email": null,
-      "instagram": null
+      "instagram": null,
+      "blog": []
     }
   },
   {
@@ -6508,6 +6770,7 @@
       "startTime": null,
       "endTime": null,
       "site": "https://runable.me",
+      "status": "",
       "price": {
         "10km": 50000
       }
@@ -6526,7 +6789,8 @@
       "sponsor": null,
       "phone": null,
       "email": null,
-      "instagram": null
+      "instagram": null,
+      "blog": []
     }
   },
   {
@@ -6556,6 +6820,7 @@
       "startTime": "11:00",
       "endTime": null,
       "site": "http://www.nightracebusan.co.kr/",
+      "status": "",
       "price": {
         "S(special) Plus": 130000,
         "A-F 일반그룹": 60000,
@@ -6576,7 +6841,8 @@
       "sponsor": null,
       "phone": null,
       "email": null,
-      "instagram": "nightraceinbusan"
+      "instagram": "nightraceinbusan",
+      "blog": []
     }
   },
   {
@@ -6606,6 +6872,7 @@
       "startTime": null,
       "endTime": null,
       "site": "https://www.yangsanuphillrace.kr/ko/index.html",
+      "status": "",
       "price": {
         "개인 1.7Km": "50,000원",
         "단체 2Km + 1.7Km": "100,000원"
@@ -6625,7 +6892,8 @@
       "sponsor": null,
       "phone": "1522-4897",
       "email": "help@sportlink.co.kr",
-      "instagram": null
+      "instagram": null,
+      "blog": []
     }
   },
   {
@@ -6655,6 +6923,7 @@
       "startTime": null,
       "endTime": null,
       "site": "http://icnr.kr/",
+      "status": "",
       "price": {
         "8.15KM": 60000
       }
@@ -6673,7 +6942,8 @@
       "sponsor": null,
       "phone": "070-4098-1114",
       "email": null,
-      "instagram": null
+      "instagram": null,
+      "blog": []
     }
   },
   {
@@ -6703,6 +6973,7 @@
       "startTime": null,
       "endTime": null,
       "site": "https://happybean.naver.com/campaign/2026815run?fbclid=IwY2xjawR0petleHRuA2FlbQIxMABicmlkETFQRDR2b1lOY0lRaWpDRlhQc3J0YwZhcHBfaWQQMjIyMDM5MTc4ODIwMDg5MgABHhyQ09yLfd6C9DtSgx7bUSNvVVDF_KERwYJ28_W1OSq2GYkLJZJ8DhcxVzb4_aem_d3XUwkQPsBniZivi7JbijQ",
+      "status": "",
       "price": {
         "8.15KM": 81500
       }
@@ -6721,7 +6992,8 @@
       "sponsor": null,
       "phone": null,
       "email": null,
-      "instagram": null
+      "instagram": null,
+      "blog": []
     }
   },
   {
@@ -6751,6 +7023,7 @@
       "startTime": null,
       "endTime": "15:00",
       "site": "https://moonnightrun.kr/",
+      "status": "",
       "price": {
         "5km": 50000,
         "10km": 50000
@@ -6770,7 +7043,8 @@
       "sponsor": null,
       "phone": "02-2606-8187",
       "email": "start@moonnightrun.kr",
-      "instagram": null
+      "instagram": null,
+      "blog": []
     }
   },
   {
@@ -6800,6 +7074,7 @@
       "startTime": null,
       "endTime": null,
       "site": "https://jyd.creatorlink.net",
+      "status": "",
       "price": {
         "43K": 120000,
         "85K": 180000
@@ -6819,7 +7094,8 @@
       "sponsor": null,
       "phone": null,
       "email": null,
-      "instagram": null
+      "instagram": null,
+      "blog": []
     }
   },
   {
@@ -6849,6 +7125,7 @@
       "startTime": null,
       "endTime": null,
       "site": "https://rocknrun.kr/jangsunighttrail-info",
+      "status": "",
       "price": {
         "13K": 59000,
         "37K": 109000
@@ -6868,7 +7145,8 @@
       "sponsor": null,
       "phone": null,
       "email": null,
-      "instagram": "jangsutrailrace"
+      "instagram": "jangsutrailrace",
+      "blog": []
     }
   },
   {
@@ -6898,6 +7176,7 @@
       "startTime": null,
       "endTime": null,
       "site": "http://www.ifunrunkorea.co.kr",
+      "status": "",
       "price": {
         "10KM": 40000,
         "HALF": 50000
@@ -6917,7 +7196,8 @@
       "sponsor": null,
       "phone": "1600-3949",
       "email": null,
-      "instagram": null
+      "instagram": null,
+      "blog": []
     }
   },
   {
@@ -6947,6 +7227,7 @@
       "startTime": null,
       "endTime": null,
       "site": "https://www.runnerking.com/geumsusantrailinfo",
+      "status": "",
       "price": {
         "13K": 75000,
         "22K": 95000
@@ -6966,7 +7247,8 @@
       "sponsor": null,
       "phone": null,
       "email": null,
-      "instagram": "runnerking.official"
+      "instagram": "runnerking.official",
+      "blog": []
     }
   },
   {
@@ -6996,6 +7278,7 @@
       "startTime": "11:00",
       "endTime": null,
       "site": "http://danyangmarathon.kr/",
+      "status": "",
       "price": {
         "5km": 30000,
         "10km": 50000
@@ -7015,7 +7298,8 @@
       "sponsor": null,
       "phone": "1600-3949",
       "email": null,
-      "instagram": null
+      "instagram": null,
+      "blog": []
     }
   },
   {
@@ -7045,6 +7329,7 @@
       "startTime": "12:00",
       "endTime": null,
       "site": "https://daegwallyeongrun.com",
+      "status": "",
       "price": {
         "10K": 75000,
         "44K": 125000,
@@ -7065,7 +7350,8 @@
       "sponsor": null,
       "phone": null,
       "email": null,
-      "instagram": "go_dgl"
+      "instagram": "go_dgl",
+      "blog": []
     }
   },
   {
@@ -7095,6 +7381,7 @@
       "startTime": "11:00",
       "endTime": null,
       "site": "https://creative-tour-front.vercel.app/ko/home",
+      "status": "",
       "price": {
         "6KM": 55000,
         "10KM": 55000
@@ -7114,7 +7401,8 @@
       "sponsor": null,
       "phone": null,
       "email": null,
-      "instagram": "p"
+      "instagram": "p",
+      "blog": []
     }
   },
   {
@@ -7144,6 +7432,7 @@
       "startTime": null,
       "endTime": null,
       "site": "http://www.scultra100.net/",
+      "status": "",
       "price": {
         "102KM": 80000
       }
@@ -7162,7 +7451,8 @@
       "sponsor": null,
       "phone": "010-9023-3783",
       "email": null,
-      "instagram": null
+      "instagram": null,
+      "blog": []
     }
   },
   {
@@ -7192,6 +7482,7 @@
       "startTime": null,
       "endTime": null,
       "site": "https://dmzrun.kr/",
+      "status": "",
       "price": {
         "10km": 40000,
         "FULL": 50000,
@@ -7213,7 +7504,8 @@
       "sponsor": null,
       "phone": "031-821-9902",
       "email": "wizrunsol@naver.com",
-      "instagram": "dmzrun"
+      "instagram": "dmzrun",
+      "blog": []
     }
   },
   {
@@ -7243,6 +7535,7 @@
       "startTime": null,
       "endTime": null,
       "site": "https://taebaektrail.com/",
+      "status": "",
       "price": {
         "15K": 75000,
         "24K": 125000,
@@ -7265,7 +7558,8 @@
       "sponsor": null,
       "phone": "010-5605-9059",
       "email": "ecoline2024@naver.com",
-      "instagram": "dynafit_taebaektrail"
+      "instagram": "dynafit_taebaektrail",
+      "blog": []
     }
   },
   {
@@ -7295,6 +7589,7 @@
       "startTime": "10:00",
       "endTime": null,
       "site": "https://www.kottonseed.io/seoleimrun",
+      "status": "",
       "price": {
         "10KM": 64900
       }
@@ -7313,7 +7608,8 @@
       "sponsor": null,
       "phone": null,
       "email": "kottonseed_support@lotte.net",
-      "instagram": "kottonseed"
+      "instagram": "kottonseed",
+      "blog": []
     }
   },
   {
@@ -7343,6 +7639,7 @@
       "startTime": null,
       "endTime": null,
       "site": "https://runten.co.kr/competitions/741aa2b1-e4ef-440d-b631-cfcfcaa528fd",
+      "status": "",
       "price": {
         "5KM": 45000,
         "10KM": 50000
@@ -7362,7 +7659,8 @@
       "sponsor": null,
       "phone": "042-710-2058",
       "email": "runningbreaker@naver.com",
-      "instagram": "run10.official"
+      "instagram": "run10.official",
+      "blog": []
     }
   },
   {
@@ -7392,6 +7690,7 @@
       "startTime": null,
       "endTime": "12:00",
       "site": "http://vrun.kr/run/9000.asp",
+      "status": "",
       "price": {
         "5KM": 50000,
         "10KM": 50000
@@ -7411,7 +7710,8 @@
       "sponsor": null,
       "phone": null,
       "email": "km4219@daum.net",
-      "instagram": null
+      "instagram": null,
+      "blog": []
     }
   },
   {
@@ -7441,6 +7741,7 @@
       "startTime": "14:00",
       "endTime": "17:00",
       "site": "https://run.ytn.co.kr/",
+      "status": "",
       "price": {
         "11KM": 80000,
         "HALF": 70000
@@ -7460,7 +7761,8 @@
       "sponsor": null,
       "phone": "070-7725-6258",
       "email": "run.ytn@gmail.com",
-      "instagram": "ytn_marathon"
+      "instagram": "ytn_marathon",
+      "blog": []
     }
   },
   {
@@ -7490,6 +7792,7 @@
       "startTime": null,
       "endTime": null,
       "site": "http://kdjrun.kr",
+      "status": "",
       "price": {
         "5KM": 50000,
         "10KM": 50000,
@@ -7510,7 +7813,8 @@
       "sponsor": null,
       "phone": "02-569-5551",
       "email": null,
-      "instagram": null
+      "instagram": null,
+      "blog": []
     }
   },
   {
@@ -7540,6 +7844,7 @@
       "startTime": null,
       "endTime": null,
       "site": "https://amarunsb.com/",
+      "status": "",
       "price": {
         "5km": 40000,
         "10km": 50000,
@@ -7561,7 +7866,8 @@
       "sponsor": null,
       "phone": "02-2647-4488",
       "email": "yck0423@hanmail.net",
-      "instagram": null
+      "instagram": null,
+      "blog": []
     }
   },
   {
@@ -7591,6 +7897,7 @@
       "startTime": null,
       "endTime": null,
       "site": "http://bonghwarun.kr/home/main.ubs",
+      "status": "",
       "price": {
         "5KM": 25000,
         "10KM": 40000,
@@ -7611,7 +7918,8 @@
       "sponsor": null,
       "phone": null,
       "email": "2192233@naver.com",
-      "instagram": null
+      "instagram": null,
+      "blog": []
     }
   },
   {
@@ -7641,6 +7949,7 @@
       "startTime": null,
       "endTime": null,
       "site": "https://sandrun.co.kr/",
+      "status": "",
       "price": {
         "4km": 40000,
         "8km": 50000
@@ -7660,7 +7969,8 @@
       "sponsor": null,
       "phone": "010-2584-0474",
       "email": "madeinpeople20@gmail.com",
-      "instagram": "sandrun_"
+      "instagram": "sandrun_",
+      "blog": []
     }
   },
   {
@@ -7690,6 +8000,7 @@
       "startTime": null,
       "endTime": null,
       "site": "https://mara1080.com/event/a9780087-8fc3-4849-a234-7659978f6792",
+      "status": "",
       "price": {
         "5KM": 30000,
         "10KM": 45000,
@@ -7711,7 +8022,8 @@
       "sponsor": null,
       "phone": "042-638-1080",
       "email": null,
-      "instagram": null
+      "instagram": null,
+      "blog": []
     }
   },
   {
@@ -7741,6 +8053,7 @@
       "startTime": "12:00",
       "endTime": "18:00",
       "site": "https://goodrunner.co.kr/race/race.html?id=103",
+      "status": "",
       "price": {
         "SKY Run": 80000,
         "SKY Half": 110000
@@ -7760,7 +8073,8 @@
       "sponsor": null,
       "phone": null,
       "email": null,
-      "instagram": null
+      "instagram": null,
+      "blog": []
     }
   },
   {
@@ -7790,6 +8104,7 @@
       "startTime": null,
       "endTime": null,
       "site": "https://www.yrun.co.kr/",
+      "status": "",
       "price": {
         "5km": 40000,
         "10km": 45000,
@@ -7810,7 +8125,8 @@
       "sponsor": null,
       "phone": "033-248-5019",
       "email": "yruncs@gmail.com",
-      "instagram": "yangyang_marathon"
+      "instagram": "yangyang_marathon",
+      "blog": []
     }
   },
   {
@@ -7840,6 +8156,7 @@
       "startTime": null,
       "endTime": null,
       "site": "https://www.ktra.kr/46",
+      "status": "",
       "price": {
         "16K": 90000,
         "25K": 110000,
@@ -7862,7 +8179,8 @@
       "sponsor": null,
       "phone": null,
       "email": null,
-      "instagram": "ktra.kr"
+      "instagram": "ktra.kr",
+      "blog": []
     }
   },
   {
@@ -7892,6 +8210,7 @@
       "startTime": null,
       "endTime": null,
       "site": "https://mara1080.com/event/9443583f-6577-466c-ab2f-43d1dbd820d4",
+      "status": "",
       "price": {
         "3km": 25000,
         "5km": 30000,
@@ -7914,7 +8233,8 @@
       "sponsor": null,
       "phone": "042-638-1080",
       "email": "jeonmahyeop@naver.com",
-      "instagram": null
+      "instagram": null,
+      "blog": []
     }
   },
   {
@@ -7944,6 +8264,7 @@
       "startTime": null,
       "endTime": null,
       "site": "https://herorace.kr/",
+      "status": "",
       "price": {
         "5KM": 45000,
         "10KM": 45000
@@ -7963,7 +8284,8 @@
       "sponsor": null,
       "phone": "02-2031-1935",
       "email": "runable@joins.com",
-      "instagram": null
+      "instagram": null,
+      "blog": []
     }
   },
   {
@@ -7993,6 +8315,7 @@
       "startTime": "10:00",
       "endTime": null,
       "site": "https://www.hyundai.com/kr/ko/brand/forestrun/forestrun-apply/finalrun",
+      "status": "",
       "price": {
         "10KM": 50000
       }
@@ -8011,7 +8334,8 @@
       "sponsor": null,
       "phone": null,
       "email": null,
-      "instagram": "hyundai_forestrun"
+      "instagram": "hyundai_forestrun",
+      "blog": []
     }
   },
   {
@@ -8041,6 +8365,7 @@
       "startTime": null,
       "endTime": null,
       "site": "https://whiterun.kr/",
+      "status": "",
       "price": {
         "5km": 45000,
         "10km": 50000
@@ -8060,7 +8385,8 @@
       "sponsor": null,
       "phone": "02-556-8879",
       "email": "k-sopung@naver.com",
-      "instagram": null
+      "instagram": null,
+      "blog": []
     }
   },
   {
@@ -8090,6 +8416,7 @@
       "startTime": null,
       "endTime": null,
       "site": "https://rocknrun.kr/REDFOODRACE",
+      "status": "",
       "price": {
         "사과 16K": 50000,
         "오미자 5K": 50000,
@@ -8111,7 +8438,8 @@
       "sponsor": null,
       "phone": "010-5056-1523",
       "email": "info@rocknrun.kr",
-      "instagram": null
+      "instagram": null,
+      "blog": []
     }
   },
   {
@@ -8141,6 +8469,7 @@
       "startTime": null,
       "endTime": null,
       "site": "https://2026.bbangtrailrun.co.kr/",
+      "status": "",
       "price": {
         "12K": 79000,
         "20K": 99000,
@@ -8161,7 +8490,8 @@
       "sponsor": null,
       "phone": null,
       "email": "1986@1986.co.kr",
-      "instagram": null
+      "instagram": null,
+      "blog": []
     }
   },
   {
@@ -8191,6 +8521,7 @@
       "startTime": null,
       "endTime": null,
       "site": "https://www.smilerun.co.kr/",
+      "status": "",
       "price": {
         "5KM": 45000,
         "10KM": 50000,
@@ -8212,7 +8543,8 @@
       "sponsor": null,
       "phone": "02-2632-0912",
       "email": "smilerun15@naver.com",
-      "instagram": null
+      "instagram": null,
+      "blog": []
     }
   },
   {
@@ -8242,6 +8574,7 @@
       "startTime": "10:00",
       "endTime": null,
       "site": "https://energyrun.co.kr/",
+      "status": "",
       "price": {
         "5KM": 35000,
         "10KM": 40000,
@@ -8262,7 +8595,8 @@
       "sponsor": null,
       "phone": "1600-4525",
       "email": null,
-      "instagram": null
+      "instagram": null,
+      "blog": []
     }
   },
   {
@@ -8292,6 +8626,7 @@
       "startTime": null,
       "endTime": null,
       "site": "http://www.ujrun.kr/",
+      "status": "",
       "price": {
         "5km": 45000,
         "10km": 50000,
@@ -8312,7 +8647,8 @@
       "sponsor": null,
       "phone": "010-9853-2686",
       "email": "mplus365@daum.net",
-      "instagram": null
+      "instagram": null,
+      "blog": []
     }
   },
   {
@@ -8342,6 +8678,7 @@
       "startTime": "14:00",
       "endTime": null,
       "site": "https://www.ganghwamarathon.co.kr",
+      "status": "",
       "price": {
         "5KM": 40000,
         "10KM": 45000,
@@ -8362,7 +8699,8 @@
       "sponsor": null,
       "phone": null,
       "email": null,
-      "instagram": null
+      "instagram": null,
+      "blog": []
     }
   },
   {
@@ -8392,6 +8730,7 @@
       "startTime": "10:00",
       "endTime": null,
       "site": "https://runseoulrun.com",
+      "status": "",
       "price": {
         "10KM": "미정",
         "HALF": "미정"
@@ -8411,7 +8750,8 @@
       "sponsor": null,
       "phone": "02-338-0344",
       "email": "runseoulrun.edaily@gmail.com",
-      "instagram": "run.seoul.run"
+      "instagram": "run.seoul.run",
+      "blog": []
     }
   },
   {
@@ -8441,6 +8781,7 @@
       "startTime": "10:00",
       "endTime": null,
       "site": "https://rocknrun.kr/JTR-Fall-2026",
+      "status": "",
       "price": {
         "JTR 5": 60000,
         "JTR 20": 120000,
@@ -8465,7 +8806,8 @@
       "sponsor": null,
       "phone": null,
       "email": null,
-      "instagram": null
+      "instagram": null,
+      "blog": []
     }
   },
   {
@@ -8495,6 +8837,7 @@
       "startTime": null,
       "endTime": null,
       "site": "https://mara1080.com/event/2044eb82-fcdb-4e56-b79b-f3543a6a360d",
+      "status": "",
       "price": {
         "4km": 30000,
         "10km": 45000,
@@ -8515,7 +8858,8 @@
       "sponsor": null,
       "phone": "042-638-1080",
       "email": "jeonmahyeop@naver.com",
-      "instagram": null
+      "instagram": null,
+      "blog": []
     }
   },
   {
@@ -8545,6 +8889,7 @@
       "startTime": null,
       "endTime": null,
       "site": "http://cityforestival.kr",
+      "status": "",
       "price": {
         "RUN PACKAGE": 69000,
         "RUN & FIT PACKAGE": 89000
@@ -8564,7 +8909,8 @@
       "sponsor": null,
       "phone": null,
       "email": null,
-      "instagram": "cityforestival.official"
+      "instagram": "cityforestival.official",
+      "blog": []
     }
   },
   {
@@ -8594,6 +8940,7 @@
       "startTime": "10:00",
       "endTime": null,
       "site": "https://seoul100k.com",
+      "status": "",
       "price": {
         "20K": 250000,
         "50K": 150000,
@@ -8614,7 +8961,8 @@
       "sponsor": null,
       "phone": "02-312-1998",
       "email": null,
-      "instagram": "seoul100k"
+      "instagram": "seoul100k",
+      "blog": []
     }
   },
   {
@@ -8644,6 +8992,7 @@
       "startTime": "12:00",
       "endTime": null,
       "site": "https://www.instagram.com/most267_official/",
+      "status": "",
       "price": {
         "10KM": 99900,
         "HALF": 119900
@@ -8663,7 +9012,8 @@
       "sponsor": null,
       "phone": null,
       "email": null,
-      "instagram": "most267_official"
+      "instagram": "most267_official",
+      "blog": []
     }
   },
   {
@@ -8693,6 +9043,7 @@
       "startTime": "14:00",
       "endTime": null,
       "site": "https://kgseasiderun.co.kr/",
+      "status": "",
       "price": {
         "5KM": 50000,
         "10KM": 50000,
@@ -8713,7 +9064,8 @@
       "sponsor": null,
       "phone": "1588-2341",
       "email": "enticket0@naver.com",
-      "instagram": null
+      "instagram": null,
+      "blog": []
     }
   },
   {
@@ -8743,6 +9095,7 @@
       "startTime": null,
       "endTime": null,
       "site": "https://omijarun.com/",
+      "status": "",
       "price": {
         "5km": 40000,
         "10km": 40000
@@ -8762,7 +9115,8 @@
       "sponsor": null,
       "phone": "010-2805-9016",
       "email": null,
-      "instagram": null
+      "instagram": null,
+      "blog": []
     }
   },
   {
@@ -8792,6 +9146,7 @@
       "startTime": "15:00",
       "endTime": null,
       "site": "https://bac.blackyak.com/bac/clubday2026/",
+      "status": "",
       "price": {
         "트레일런": 100000,
         "라이트트레일": 80000,
@@ -8812,7 +9167,8 @@
       "sponsor": null,
       "phone": null,
       "email": null,
-      "instagram": null
+      "instagram": null,
+      "blog": []
     }
   },
   {
@@ -8842,6 +9198,7 @@
       "startTime": null,
       "endTime": "13:00",
       "site": "https://www.cyber-run.com/",
+      "status": "",
       "price": {
         "5KM": 35000,
         "10KM": 50000,
@@ -8862,7 +9219,8 @@
       "sponsor": null,
       "phone": "070-7706-0912",
       "email": "cyberrun2024@gmail.com",
-      "instagram": null
+      "instagram": null,
+      "blog": []
     }
   },
   {
@@ -8892,6 +9250,7 @@
       "startTime": null,
       "endTime": null,
       "site": "https://runten.co.kr/competitions/694b75d9-2f7c-4d4e-aa20-4163c44e9c82",
+      "status": "",
       "price": {
         "5KM": 45000,
         "10KM": 50000
@@ -8911,7 +9270,8 @@
       "sponsor": null,
       "phone": "042-710-2058",
       "email": "runningbreaker@naver.com",
-      "instagram": null
+      "instagram": null,
+      "blog": []
     }
   },
   {
@@ -8941,6 +9301,7 @@
       "startTime": null,
       "endTime": null,
       "site": "https://dongma.club/",
+      "status": "",
       "price": {
         "10KM": 50000,
         "32KM": 70000,
@@ -8962,7 +9323,8 @@
       "sponsor": null,
       "phone": null,
       "email": null,
-      "instagram": null
+      "instagram": null,
+      "blog": []
     }
   },
   {
@@ -8992,6 +9354,7 @@
       "startTime": null,
       "endTime": null,
       "site": "https://www.gprun.com/",
+      "status": "",
       "price": {
         "5KM": 40000,
         "10KM": 45000,
@@ -9014,7 +9377,8 @@
       "sponsor": null,
       "phone": "02-2647-4488, 4499",
       "email": "yck0423@hanmail.net",
-      "instagram": null
+      "instagram": null,
+      "blog": []
     }
   },
   {
@@ -9044,6 +9408,7 @@
       "startTime": null,
       "endTime": null,
       "site": "https://handonrun.com",
+      "status": "",
       "price": {
         "6KM": 50000,
         "10KM": 50000
@@ -9063,7 +9428,8 @@
       "sponsor": null,
       "phone": "1566-1936",
       "email": "emara@hanmail.net",
-      "instagram": "runkorea"
+      "instagram": "runkorea",
+      "blog": []
     }
   },
   {
@@ -9093,6 +9459,7 @@
       "startTime": "14:00",
       "endTime": null,
       "site": "https://busan7bridges.com/",
+      "status": "",
       "price": {
         "77KM": 80000
       }
@@ -9111,7 +9478,8 @@
       "sponsor": null,
       "phone": null,
       "email": null,
-      "instagram": "busan7bridges"
+      "instagram": "busan7bridges",
+      "blog": []
     }
   },
   {
@@ -9141,6 +9509,7 @@
       "startTime": "09:00",
       "endTime": null,
       "site": "https://ansanrun.com/",
+      "status": "",
       "price": {
         "5KM": 25000,
         "10KM": 40000,
@@ -9161,7 +9530,8 @@
       "sponsor": null,
       "phone": null,
       "email": null,
-      "instagram": null
+      "instagram": null,
+      "blog": []
     }
   },
   {
@@ -9191,6 +9561,7 @@
       "startTime": "10:00",
       "endTime": null,
       "site": "http://www.gomarathon.co.kr",
+      "status": "",
       "price": {
         "5KM": 30000,
         "10KM": 30000,
@@ -9212,7 +9583,8 @@
       "sponsor": null,
       "phone": null,
       "email": null,
-      "instagram": null
+      "instagram": null,
+      "blog": []
     }
   },
   {
@@ -9242,6 +9614,7 @@
       "startTime": "14:00",
       "endTime": null,
       "site": "https://songdorun.net/",
+      "status": "",
       "price": {
         "5KM": 50000,
         "10KM": 55000,
@@ -9262,7 +9635,8 @@
       "sponsor": null,
       "phone": "1866-1718",
       "email": null,
-      "instagram": null
+      "instagram": null,
+      "blog": []
     }
   },
   {
@@ -9292,6 +9666,7 @@
       "startTime": null,
       "endTime": "18:00",
       "site": "http://www.runddm.com",
+      "status": "",
       "price": {
         "5KM": 40000,
         "10KM": 50000,
@@ -9312,7 +9687,8 @@
       "sponsor": null,
       "phone": null,
       "email": null,
-      "instagram": null
+      "instagram": null,
+      "blog": []
     }
   },
   {
@@ -9342,6 +9718,7 @@
       "startTime": "17:00",
       "endTime": null,
       "site": "https://transjeju.utmb.world/ko",
+      "status": "",
       "price": {
         "20KM": 120000,
         "60KM": 220000,
@@ -9363,7 +9740,8 @@
       "sponsor": null,
       "phone": null,
       "email": null,
-      "instagram": "transjeju_by_utmb"
+      "instagram": "transjeju_by_utmb",
+      "blog": []
     }
   },
   {
@@ -9393,6 +9771,7 @@
       "startTime": null,
       "endTime": null,
       "site": "http://gimjesm.co.kr/",
+      "status": "",
       "price": {
         "5KM": 25000,
         "10KM": 45000,
@@ -9413,7 +9792,8 @@
       "sponsor": null,
       "phone": "063-548-0095",
       "email": null,
-      "instagram": null
+      "instagram": null,
+      "blog": []
     }
   },
   {
@@ -9443,6 +9823,7 @@
       "startTime": "14:00",
       "endTime": null,
       "site": "https://runable.me/",
+      "status": "",
       "price": {
         "10KM": 80000
       }
@@ -9461,7 +9842,8 @@
       "sponsor": null,
       "phone": null,
       "email": null,
-      "instagram": null
+      "instagram": null,
+      "blog": []
     }
   },
   {
@@ -9491,6 +9873,7 @@
       "startTime": "11:00",
       "endTime": null,
       "site": "https://smtownrunclub.com/",
+      "status": "",
       "price": {
         "10K": 89000
       }
@@ -9509,7 +9892,8 @@
       "sponsor": null,
       "phone": null,
       "email": "smtownrunclub@smtownrunclub.com",
-      "instagram": "smtown.run.club"
+      "instagram": "smtown.run.club",
+      "blog": []
     }
   },
   {
@@ -9539,6 +9923,7 @@
       "startTime": null,
       "endTime": null,
       "site": "https://global6kforwater.com/frt/application/applicationOverview.do?CMPT_AREA_TYPE=6&utm_source=google&utm_medium=search_ad&utm_campaign=26Running6K&utm_term=%EC%9B%94%EB%93%9C%EB%B9%84%EC%A0%84%EA%B8%80%EB%A1%9C%EB%B2%8C6K&mcode=29082&gad_source=1&gad_campaignid=23844345007&gbraid=0AAAAADnr6LPkZe9Ofd3VG28XSov51-_Bt&gclid=CjwKCAjw2rrQBhBuEiwAarLWHRu23fXFM7x6BScol4vEfJhKlDs3ghsDwK_1sYjVXjFFqxObh65bpBoCNe4QAvD_BwE",
+      "status": "",
       "price": {
         "6K": 40000
       }
@@ -9557,7 +9942,8 @@
       "sponsor": null,
       "phone": "070-4154-2561",
       "email": "global6k@worldvision.or.kr",
-      "instagram": null
+      "instagram": null,
+      "blog": []
     }
   },
   {
@@ -9587,6 +9973,7 @@
       "startTime": "14:00",
       "endTime": "17:00",
       "site": "https://samsamis.com/",
+      "status": "",
       "price": {}
     },
     "location": {
@@ -9603,7 +9990,8 @@
       "sponsor": null,
       "phone": null,
       "email": null,
-      "instagram": "samsam.is"
+      "instagram": "samsam.is",
+      "blog": []
     }
   },
   {
@@ -9633,6 +10021,7 @@
       "startTime": null,
       "endTime": null,
       "site": "https://mara1080.com/event/fcaa0bc8-1489-47c3-8fec-8e5a5c17284e",
+      "status": "",
       "price": {
         "5KM": 25000,
         "10KM": 45000,
@@ -9653,7 +10042,8 @@
       "sponsor": null,
       "phone": "042-6380-1080",
       "email": null,
-      "instagram": null
+      "instagram": null,
+      "blog": []
     }
   },
   {
@@ -9683,6 +10073,7 @@
       "startTime": "10:00",
       "endTime": "17:00",
       "site": "https://www.nbkorea.com/",
+      "status": "",
       "price": {
         "10KM": 80000,
         "SC Rebel 패키지": 259000,
@@ -9703,7 +10094,8 @@
       "sponsor": null,
       "phone": null,
       "email": null,
-      "instagram": "nbrc_seoul"
+      "instagram": "nbrc_seoul",
+      "blog": []
     }
   },
   {
@@ -9733,6 +10125,7 @@
       "startTime": null,
       "endTime": null,
       "site": "https://runbookcity.com/",
+      "status": "",
       "price": {
         "3KM": 30000,
         "5KM": 50000,
@@ -9753,7 +10146,8 @@
       "sponsor": null,
       "phone": null,
       "email": null,
-      "instagram": null
+      "instagram": null,
+      "blog": []
     }
   },
   {
@@ -9783,6 +10177,7 @@
       "startTime": null,
       "endTime": null,
       "site": "http://www.xn--bk1bo0gn4bnwmwqvbue1qa.kr/",
+      "status": "",
       "price": {}
     },
     "location": {
@@ -9799,7 +10194,8 @@
       "sponsor": null,
       "phone": "053-635-8681",
       "email": null,
-      "instagram": null
+      "instagram": null,
+      "blog": []
     }
   },
   {
@@ -9829,6 +10225,7 @@
       "startTime": null,
       "endTime": null,
       "site": "https://admarathon.kr/",
+      "status": "",
       "price": {
         "5KM": 30000,
         "10KM": 50000,
@@ -9850,7 +10247,8 @@
       "sponsor": null,
       "phone": "031-575-7243",
       "email": null,
-      "instagram": null
+      "instagram": null,
+      "blog": []
     }
   },
   {
@@ -9880,6 +10278,7 @@
       "startTime": null,
       "endTime": null,
       "site": "https://seoulopen.or.kr/sub02/sub01_01.php",
+      "status": "",
       "price": {
         "10KM": 60000,
         "HALF": 80000
@@ -9899,7 +10298,8 @@
       "sponsor": null,
       "phone": "070-7766-1238",
       "email": "somarathon@naver.com",
-      "instagram": null
+      "instagram": null,
+      "blog": []
     }
   },
   {
@@ -9929,6 +10329,7 @@
       "startTime": null,
       "endTime": null,
       "site": "https://hk-marathon.com/marathon/code/8048/",
+      "status": "",
       "price": {
         "5KM": 60000,
         "10KM": 70000,
@@ -9949,7 +10350,8 @@
       "sponsor": null,
       "phone": "1566-193",
       "email": "emara@hanmail.net",
-      "instagram": null
+      "instagram": null,
+      "blog": []
     }
   },
   {
@@ -9979,6 +10381,7 @@
       "startTime": "14:00",
       "endTime": null,
       "site": "https://www.shmarathon.kr/shmarathon",
+      "status": "",
       "price": {
         "5KM": 20000,
         "10KM": 35000,
@@ -9999,7 +10402,8 @@
       "sponsor": null,
       "phone": "031-575-7243",
       "email": null,
-      "instagram": null
+      "instagram": null,
+      "blog": []
     }
   },
   {
@@ -10029,6 +10433,7 @@
       "startTime": null,
       "endTime": null,
       "site": "https://amarunhs.com/",
+      "status": "",
       "price": {
         "10KM": 45000,
         "HALF": 45000,
@@ -10050,7 +10455,8 @@
       "sponsor": null,
       "phone": null,
       "email": null,
-      "instagram": null
+      "instagram": null,
+      "blog": []
     }
   },
   {
@@ -10080,6 +10486,7 @@
       "startTime": null,
       "endTime": null,
       "site": "https://bbangrun.com/",
+      "status": "",
       "price": {
         "5K": 59000,
         "10K": 59000,
@@ -10100,7 +10507,8 @@
       "sponsor": null,
       "phone": null,
       "email": null,
-      "instagram": null
+      "instagram": null,
+      "blog": []
     }
   },
   {
@@ -10130,6 +10538,7 @@
       "startTime": "10:00",
       "endTime": null,
       "site": "https://hangeulrun.com/",
+      "status": "",
       "price": {
         "10.9KM": 75000,
         "5.15KM": 55000
@@ -10149,7 +10558,8 @@
       "sponsor": null,
       "phone": null,
       "email": null,
-      "instagram": null
+      "instagram": null,
+      "blog": []
     }
   },
   {
@@ -10179,6 +10589,7 @@
       "startTime": null,
       "endTime": null,
       "site": "https://www.xn--289av7rnxbd06bmrc.com/",
+      "status": "",
       "price": {
         "10KM": 40000,
         "하프": 40000,
@@ -10200,7 +10611,8 @@
       "sponsor": null,
       "phone": null,
       "email": null,
-      "instagram": null
+      "instagram": null,
+      "blog": []
     }
   },
   {
@@ -10230,6 +10642,7 @@
       "startTime": null,
       "endTime": null,
       "site": "https://mara1080.com/event/b43655f0-60be-4c97-ad62-d377f6586ae0",
+      "status": "",
       "price": {
         "4KM": 30000,
         "10KM": 45000,
@@ -10250,7 +10663,8 @@
       "sponsor": null,
       "phone": null,
       "email": null,
-      "instagram": null
+      "instagram": null,
+      "blog": []
     }
   },
   {
@@ -10280,6 +10694,7 @@
       "startTime": "13:00",
       "endTime": null,
       "site": "https://jejuwindmillrun.com/",
+      "status": "",
       "price": {
         "5KM": 50000,
         "10KM": 50000
@@ -10299,7 +10714,8 @@
       "sponsor": null,
       "phone": "010-4281-4624",
       "email": "jejuwindmillrun@gmail.com",
-      "instagram": "jejuwindmillrun"
+      "instagram": "jejuwindmillrun",
+      "blog": []
     }
   },
   {
@@ -10329,6 +10745,7 @@
       "startTime": null,
       "endTime": null,
       "site": "https://georun.kr",
+      "status": "",
       "price": {
         "10KM": 40000,
         "30KM": 40000,
@@ -10351,7 +10768,8 @@
       "sponsor": null,
       "phone": null,
       "email": null,
-      "instagram": null
+      "instagram": null,
+      "blog": []
     }
   },
   {
@@ -10381,6 +10799,7 @@
       "startTime": null,
       "endTime": null,
       "site": "https://www.ptportmarathon.com",
+      "status": "",
       "price": {
         "5KM": 30000,
         "10KM": 35000,
@@ -10401,7 +10820,8 @@
       "sponsor": null,
       "phone": "1600-3962",
       "email": null,
-      "instagram": null
+      "instagram": null,
+      "blog": []
     }
   },
   {
@@ -10431,6 +10851,7 @@
       "startTime": "19:00",
       "endTime": "21:00",
       "site": "https://www.seoul-race.co.kr/",
+      "status": "",
       "price": {
         "10km": 70000,
         "HALF": 80000
@@ -10450,7 +10871,8 @@
       "sponsor": null,
       "phone": null,
       "email": null,
-      "instagram": "seoulrace"
+      "instagram": "seoulrace",
+      "blog": []
     }
   },
   {
@@ -10480,6 +10902,7 @@
       "startTime": null,
       "endTime": null,
       "site": "https://najumarathon.com/",
+      "status": "",
       "price": {
         "5KM": 20000,
         "10KM": 40000,
@@ -10501,7 +10924,8 @@
       "sponsor": null,
       "phone": "1666-0560",
       "email": "najumarathon@gmail.com",
-      "instagram": null
+      "instagram": null,
+      "blog": []
     }
   },
   {
@@ -10531,6 +10955,7 @@
       "startTime": "10:00",
       "endTime": null,
       "site": "https://www.pinkrun.kr/",
+      "status": "",
       "price": {
         "5KM": 50000,
         "10KM": 60000
@@ -10550,7 +10975,8 @@
       "sponsor": null,
       "phone": "070-4633-1233",
       "email": "pinkrun.kbcf@gmail.com",
-      "instagram": "pinkribbon_korea"
+      "instagram": "pinkribbon_korea",
+      "blog": []
     }
   },
   {
@@ -10580,6 +11006,7 @@
       "startTime": "10:00",
       "endTime": null,
       "site": "https://bjlee.casports.or.kr/",
+      "status": "",
       "price": {
         "5KM": "미정",
         "10KM": "미정",
@@ -10600,7 +11027,8 @@
       "sponsor": null,
       "phone": "1600-3962",
       "email": null,
-      "instagram": "casports1963"
+      "instagram": "casports1963",
+      "blog": []
     }
   },
   {
@@ -10630,6 +11058,7 @@
       "startTime": "10:00",
       "endTime": null,
       "site": "https://dtrail.co.kr",
+      "status": "",
       "price": {
         "25KM": 120000,
         "50KM": 160000,
@@ -10650,7 +11079,8 @@
       "sponsor": null,
       "phone": null,
       "email": null,
-      "instagram": null
+      "instagram": null,
+      "blog": []
     }
   },
   {
@@ -10680,6 +11110,7 @@
       "startTime": null,
       "endTime": null,
       "site": "https://jsrun.kr/index.php",
+      "status": "",
       "price": {
         "5KM": 35000,
         "10KM": 40000,
@@ -10702,7 +11133,8 @@
       "sponsor": null,
       "phone": "1600-3962",
       "email": null,
-      "instagram": null
+      "instagram": null,
+      "blog": []
     }
   },
   {
@@ -10732,6 +11164,7 @@
       "startTime": "09:00",
       "endTime": null,
       "site": "https://naver.me/x6JUcr0U",
+      "status": "",
       "price": {
         "20K": 50000
       }
@@ -10750,7 +11183,8 @@
       "sponsor": null,
       "phone": "010-3689-6565",
       "email": null,
-      "instagram": null
+      "instagram": null,
+      "blog": []
     }
   },
   {
@@ -10780,6 +11214,7 @@
       "startTime": "19:00",
       "endTime": null,
       "site": "https://www.gyeongjumarathon.com/",
+      "status": "",
       "price": {
         "10KM": 40000,
         "FULL": 60000,
@@ -10800,7 +11235,8 @@
       "sponsor": null,
       "phone": null,
       "email": null,
-      "instagram": null
+      "instagram": null,
+      "blog": []
     }
   },
   {
@@ -10830,6 +11266,7 @@
       "startTime": "13:00",
       "endTime": null,
       "site": "https://119memorial.com/",
+      "status": "",
       "price": {
         "5KM": 50000,
         "11.9KM": 50000
@@ -10849,7 +11286,8 @@
       "sponsor": null,
       "phone": "070-4350-5636",
       "email": "project@bigwalk.co.kr",
-      "instagram": null
+      "instagram": null,
+      "blog": []
     }
   },
   {
@@ -10879,6 +11317,7 @@
       "startTime": null,
       "endTime": null,
       "site": "https://race.cjsports.or.kr/01/",
+      "status": "",
       "price": {
         "5km": 25000,
         "10km": 45000,
@@ -10900,7 +11339,8 @@
       "sponsor": null,
       "phone": "043-279-8029",
       "email": null,
-      "instagram": null
+      "instagram": null,
+      "blog": []
     }
   },
   {
@@ -10930,6 +11370,7 @@
       "startTime": null,
       "endTime": null,
       "site": "https://mara1080.com/event/edaee6e1-0d92-4248-9927-06ed3b0abfd0",
+      "status": "",
       "price": {
         "4KM": 25000,
         "10KM": 45000,
@@ -10951,7 +11392,8 @@
       "sponsor": null,
       "phone": null,
       "email": null,
-      "instagram": null
+      "instagram": null,
+      "blog": []
     }
   },
   {
@@ -10981,6 +11423,7 @@
       "startTime": "10:00",
       "endTime": null,
       "site": "http://maraton.dbsfa365.co.kr/",
+      "status": "",
       "price": {
         "5KM": 15000,
         "10KM": 25000
@@ -11000,7 +11443,8 @@
       "sponsor": null,
       "phone": null,
       "email": null,
-      "instagram": null
+      "instagram": null,
+      "blog": []
     }
   },
   {
@@ -11030,6 +11474,7 @@
       "startTime": null,
       "endTime": null,
       "site": "https://asiarun.kr/",
+      "status": "",
       "price": {
         "10KM": 60000,
         "HALF": 80000
@@ -11049,7 +11494,8 @@
       "sponsor": null,
       "phone": "02-2647-4488",
       "email": "yck0423@hanmail.net",
-      "instagram": null
+      "instagram": null,
+      "blog": []
     }
   },
   {
@@ -11079,6 +11525,7 @@
       "startTime": "14:00",
       "endTime": null,
       "site": "https://sejongrun26.com/",
+      "status": "",
       "price": {
         "5km": 40000,
         "10km": 50000,
@@ -11100,7 +11547,8 @@
       "sponsor": null,
       "phone": "044-867-2825",
       "email": "sejongrun26@gmail.com",
-      "instagram": "sejongrun26"
+      "instagram": "sejongrun26",
+      "blog": []
     }
   },
   {
@@ -11130,6 +11578,7 @@
       "startTime": "11:00",
       "endTime": null,
       "site": "https://mujutrail.com/",
+      "status": "",
       "price": {
         "10K": 90000,
         "18K": 120000,
@@ -11150,7 +11599,8 @@
       "sponsor": null,
       "phone": null,
       "email": null,
-      "instagram": "mujutrail.korea"
+      "instagram": "mujutrail.korea",
+      "blog": []
     }
   },
   {
@@ -11180,6 +11630,7 @@
       "startTime": null,
       "endTime": "12:00",
       "site": "http://xn--439a68tboh.kr/run/9000.asp",
+      "status": "",
       "price": {
         "5KM": 50000,
         "10KM": 50000
@@ -11199,7 +11650,8 @@
       "sponsor": null,
       "phone": "1644-4219",
       "email": "km4219@daum.net",
-      "instagram": "koreamarathontv"
+      "instagram": "koreamarathontv",
+      "blog": []
     }
   },
   {
@@ -11229,6 +11681,7 @@
       "startTime": "10:00",
       "endTime": null,
       "site": "https://ggcrun.kr/new_sub01/page01.php",
+      "status": "",
       "price": {
         "5KM": 25000,
         "10KM": 25000
@@ -11248,7 +11701,8 @@
       "sponsor": null,
       "phone": "1600-3962",
       "email": "road42195@naver.com",
-      "instagram": null
+      "instagram": null,
+      "blog": []
     }
   },
   {
@@ -11278,6 +11732,7 @@
       "startTime": "10:00",
       "endTime": null,
       "site": "https://disneyrunincheon2026.com/",
+      "status": "",
       "price": {
         "5KM": "미정",
         "10KM": "미정",
@@ -11300,7 +11755,8 @@
       "sponsor": null,
       "phone": "070-4705-2008",
       "email": null,
-      "instagram": null
+      "instagram": null,
+      "blog": []
     }
   },
   {
@@ -11330,6 +11786,7 @@
       "startTime": null,
       "endTime": null,
       "site": "https://www.ydct.org/board/notice/read/671",
+      "status": "",
       "price": {
         "18K": 50000,
         "24K": 100000,
@@ -11350,7 +11807,8 @@
       "sponsor": null,
       "phone": "054-730-5860",
       "email": null,
-      "instagram": null
+      "instagram": null,
+      "blog": []
     }
   },
   {
@@ -11380,6 +11838,7 @@
       "startTime": "11:00",
       "endTime": null,
       "site": "https://gmrun.kr/",
+      "status": "",
       "price": {
         "5KM": 30000,
         "10km": 45000,
@@ -11401,7 +11860,8 @@
       "sponsor": null,
       "phone": "1600-3962",
       "email": null,
-      "instagram": null
+      "instagram": null,
+      "blog": []
     }
   },
   {
@@ -11431,6 +11891,7 @@
       "startTime": null,
       "endTime": null,
       "site": null,
+      "status": "",
       "price": {}
     },
     "location": {
@@ -11447,7 +11908,8 @@
       "sponsor": null,
       "phone": null,
       "email": null,
-      "instagram": "gingerbrave_dev"
+      "instagram": "gingerbrave_dev",
+      "blog": []
     }
   },
   {
@@ -11477,6 +11939,7 @@
       "startTime": "20:00",
       "endTime": null,
       "site": "https://busan.raceplan.co.kr",
+      "status": "",
       "price": {
         "5KM": 50000,
         "10KM": 60000,
@@ -11497,7 +11960,8 @@
       "sponsor": null,
       "phone": "051-461-4046",
       "email": "marathon@busan.com",
-      "instagram": null
+      "instagram": null,
+      "blog": []
     }
   },
   {
@@ -11527,6 +11991,7 @@
       "startTime": null,
       "endTime": null,
       "site": "https://csmarathon.co.kr/",
+      "status": "",
       "price": {
         "5KM": 30000,
         "10KM": 50000,
@@ -11547,7 +12012,8 @@
       "sponsor": null,
       "phone": "031-575-7243",
       "email": null,
-      "instagram": null
+      "instagram": null,
+      "blog": []
     }
   },
   {
@@ -11577,6 +12043,7 @@
       "startTime": "14:00",
       "endTime": null,
       "site": "https://www.chuncheonmarathon.com/",
+      "status": "",
       "price": {
         "10KM": 100000,
         "FULL": 150000
@@ -11596,7 +12063,8 @@
       "sponsor": null,
       "phone": null,
       "email": null,
-      "instagram": "chuncheon_marathon"
+      "instagram": "chuncheon_marathon",
+      "blog": []
     }
   },
   {
@@ -11626,6 +12094,7 @@
       "startTime": null,
       "endTime": null,
       "site": "https://xn--hq1bo4en6bw9cp5mzkpmgi.kr/main.php",
+      "status": "",
       "price": {
         "10km": "45,000원",
         "5.9km": "25,000원",
@@ -11646,7 +12115,8 @@
       "sponsor": null,
       "phone": "1600-3949",
       "email": null,
-      "instagram": null
+      "instagram": null,
+      "blog": []
     }
   },
   {
@@ -11676,6 +12146,7 @@
       "startTime": null,
       "endTime": null,
       "site": "https://www.utnp.kr/",
+      "status": "",
       "price": {
         "2피크": 120000,
         "5피크": 180000,
@@ -11697,7 +12168,8 @@
       "sponsor": null,
       "phone": null,
       "email": null,
-      "instagram": null
+      "instagram": null,
+      "blog": []
     }
   },
   {
@@ -11727,6 +12199,7 @@
       "startTime": null,
       "endTime": null,
       "site": "https://marathon.jtbc.com",
+      "status": "",
       "price": {
         "10km": 100000,
         "FULL": 150000
@@ -11746,7 +12219,8 @@
       "sponsor": null,
       "phone": null,
       "email": "runable@joins.com",
-      "instagram": null
+      "instagram": null,
+      "blog": []
     }
   },
   {
@@ -11776,6 +12250,7 @@
       "startTime": "11:00",
       "endTime": null,
       "site": "http://gcmarathon.co.kr/",
+      "status": "",
       "price": {
         "5KM": 20000,
         "10KM": 40000,
@@ -11797,7 +12272,8 @@
       "sponsor": null,
       "phone": null,
       "email": null,
-      "instagram": null
+      "instagram": null,
+      "blog": []
     }
   },
   {
@@ -11827,6 +12303,7 @@
       "startTime": null,
       "endTime": null,
       "site": "https://www.djmarathon.co.kr/",
+      "status": "",
       "price": {
         "5KM": 30000,
         "10KM": 35000,
@@ -11848,7 +12325,8 @@
       "sponsor": null,
       "phone": "042-255-7917",
       "email": null,
-      "instagram": null
+      "instagram": null,
+      "blog": []
     }
   },
   {
@@ -11878,6 +12356,7 @@
       "startTime": null,
       "endTime": null,
       "site": "https://mara1080.com/event/d596615e-cf32-4f20-bdbe-13b633f51c4e",
+      "status": "",
       "price": {
         "5KM": 30000,
         "10KM": 45000
@@ -11897,7 +12376,8 @@
       "sponsor": null,
       "phone": null,
       "email": null,
-      "instagram": null
+      "instagram": null,
+      "blog": []
     }
   },
   {
@@ -11927,6 +12407,7 @@
       "startTime": null,
       "endTime": null,
       "site": "https://runyc.kr",
+      "status": "",
       "price": {
         "10KM": 40000,
         "HALF": 40000,
@@ -11947,7 +12428,8 @@
       "sponsor": null,
       "phone": "054-331-6029",
       "email": null,
-      "instagram": null
+      "instagram": null,
+      "blog": []
     }
   },
   {
@@ -11977,6 +12459,7 @@
       "startTime": null,
       "endTime": null,
       "site": "https://mara1080.com/event/ffc023fc-7a54-4610-bdd6-2bb9a1028122",
+      "status": "",
       "price": {
         "5KM": 30000,
         "10km": 45000,
@@ -11999,7 +12482,8 @@
       "sponsor": null,
       "phone": "042-638-1080",
       "email": "jeonmahyeop@naver.com",
-      "instagram": null
+      "instagram": null,
+      "blog": []
     }
   },
   {
@@ -12029,6 +12513,7 @@
       "startTime": null,
       "endTime": null,
       "site": null,
+      "status": "",
       "price": {}
     },
     "location": {
@@ -12045,7 +12530,8 @@
       "sponsor": null,
       "phone": null,
       "email": null,
-      "instagram": "purmefoundation"
+      "instagram": "purmefoundation",
+      "blog": []
     }
   },
   {
@@ -12075,6 +12561,7 @@
       "startTime": null,
       "endTime": "12:00",
       "site": "http://xn--oi2bo7bn3do4es0j56afy5b.kr/run/9000.asp?T=1",
+      "status": "",
       "price": {
         "5km": 45000,
         "10km": 50000
@@ -12094,7 +12581,8 @@
       "sponsor": null,
       "phone": "1644-4219",
       "email": "km4219@daum.net",
-      "instagram": null
+      "instagram": null,
+      "blog": []
     }
   },
   {
@@ -12124,6 +12612,7 @@
       "startTime": "14:00",
       "endTime": null,
       "site": "https://k-marathon.or.kr",
+      "status": "",
       "price": {
         "5KM": 40000,
         "10KM": 50000
@@ -12143,7 +12632,8 @@
       "sponsor": null,
       "phone": "010-7766-1238",
       "email": "kstma0320@naver.com",
-      "instagram": null
+      "instagram": null,
+      "blog": []
     }
   },
   {
@@ -12173,6 +12663,7 @@
       "startTime": null,
       "endTime": null,
       "site": "https://pohangmarathon.com/",
+      "status": "",
       "price": {
         "5KM": 30000,
         "10KM": 50000
@@ -12192,7 +12683,8 @@
       "sponsor": null,
       "phone": null,
       "email": null,
-      "instagram": null
+      "instagram": null,
+      "blog": []
     }
   },
   {
@@ -12222,6 +12714,7 @@
       "startTime": "18:00",
       "endTime": null,
       "site": "https://hyroxsouthkorea.com/event/hyrox-seoul/",
+      "status": "",
       "price": {
         "개인전": 215360,
         "관람권": 22000,
@@ -12243,7 +12736,8 @@
       "sponsor": null,
       "phone": null,
       "email": null,
-      "instagram": "hyroxkor"
+      "instagram": "hyroxkor",
+      "blog": []
     }
   },
   {
@@ -12273,6 +12767,7 @@
       "startTime": null,
       "endTime": null,
       "site": "https://marathon.ihalla.com/",
+      "status": "",
       "price": {
         "10KM": 40000,
         "FULL": 55000,
@@ -12293,7 +12788,8 @@
       "sponsor": null,
       "phone": "064-750-2291",
       "email": "hl@ihalla.com",
-      "instagram": null
+      "instagram": null,
+      "blog": []
     }
   },
   {
@@ -12323,6 +12819,7 @@
       "startTime": null,
       "endTime": null,
       "site": "http://www.gcrun.com",
+      "status": "",
       "price": {
         "5KM": 10000,
         "10KM": 35000,
@@ -12343,7 +12840,8 @@
       "sponsor": null,
       "phone": "063-561-5211",
       "email": null,
-      "instagram": null
+      "instagram": null,
+      "blog": []
     }
   },
   {
@@ -12373,6 +12871,7 @@
       "startTime": null,
       "endTime": null,
       "site": "https://www.mara1080.com/event/c8dc2c22-a83a-4743-9e34-c884e9809dbb",
+      "status": "",
       "price": {
         "10KM": 50000,
         "FULL": 55000,
@@ -12393,7 +12892,8 @@
       "sponsor": null,
       "phone": "042-638-1080",
       "email": null,
-      "instagram": null
+      "instagram": null,
+      "blog": []
     }
   },
   {
@@ -12423,6 +12923,7 @@
       "startTime": "14:00",
       "endTime": "17:00",
       "site": "https://runable.me/product/18977?comp=18962",
+      "status": "",
       "price": {
         "10KM": 60000,
         "HALF": 80000
@@ -12442,7 +12943,8 @@
       "sponsor": null,
       "phone": null,
       "email": null,
-      "instagram": null
+      "instagram": null,
+      "blog": []
     }
   },
   {
@@ -12472,6 +12974,7 @@
       "startTime": null,
       "endTime": "16:00",
       "site": "https://happytrailrun.com",
+      "status": "",
       "price": {
         "9KM": 60000,
         "29KM": 70000
@@ -12491,7 +12994,8 @@
       "sponsor": null,
       "phone": "02-2647-4488",
       "email": "yck0423@hanmail.net",
-      "instagram": null
+      "instagram": null,
+      "blog": []
     }
   },
   {
@@ -12521,6 +13025,7 @@
       "startTime": null,
       "endTime": null,
       "site": "https://www.cuk-sports.com/%EB%AC%B4%EB%93%B1%EC%82%B0-%ED%8A%B8%EB%A0%88%EC%9D%BC%EB%9F%B0-%EA%B0%9C%EC%9A%94",
+      "status": "",
       "price": {
         "16KM": 90000,
         "36KM": 120000,
@@ -12541,7 +13046,8 @@
       "sponsor": null,
       "phone": null,
       "email": "smileman4u@naver.com",
-      "instagram": null
+      "instagram": null,
+      "blog": []
     }
   },
   {
@@ -12571,6 +13077,7 @@
       "startTime": null,
       "endTime": null,
       "site": "https://sjrun.com/",
+      "status": "",
       "price": {
         "10km": 55000,
         "5km 일반부": 50000,
@@ -12591,7 +13098,8 @@
       "sponsor": null,
       "phone": "044-862-8601",
       "email": null,
-      "instagram": null
+      "instagram": null,
+      "blog": []
     }
   },
   {
@@ -12621,6 +13129,7 @@
       "startTime": "10:00",
       "endTime": null,
       "site": "https://kjmarathon.com",
+      "status": "",
       "price": {
         "5KM": 40000,
         "10KM": 50000,
@@ -12641,7 +13150,8 @@
       "sponsor": null,
       "phone": "1522-4897",
       "email": "help@sportlink.co.kr",
-      "instagram": null
+      "instagram": null,
+      "blog": []
     }
   },
   {
@@ -12671,6 +13181,7 @@
       "startTime": "10:00",
       "endTime": null,
       "site": "https://mbn-seoulmarathon.com/",
+      "status": "",
       "price": {
         "10KM": 70000,
         "HALF": 100000
@@ -12690,7 +13201,8 @@
       "sponsor": null,
       "phone": null,
       "email": null,
-      "instagram": "mbn_marathon"
+      "instagram": "mbn_marathon",
+      "blog": []
     }
   },
   {
@@ -12720,6 +13232,7 @@
       "startTime": "10:00",
       "endTime": null,
       "site": "https://urfesta.com/",
+      "status": "",
       "price": {
         "5KM": 50000,
         "10KM": 50000
@@ -12739,7 +13252,8 @@
       "sponsor": null,
       "phone": null,
       "email": null,
-      "instagram": null
+      "instagram": null,
+      "blog": []
     }
   },
   {
@@ -12769,6 +13283,7 @@
       "startTime": null,
       "endTime": null,
       "site": "https://incheonmarathon.or.kr/",
+      "status": "",
       "price": {
         "5KM": 0,
         "10KM": 0,
@@ -12789,7 +13304,8 @@
       "sponsor": null,
       "phone": null,
       "email": null,
-      "instagram": null
+      "instagram": null,
+      "blog": []
     }
   },
   {
@@ -12819,6 +13335,7 @@
       "startTime": null,
       "endTime": null,
       "site": "https://www.hongkongdisneyland.com/ko/hkdl/2026-magic-run-fest-intl/",
+      "status": "",
       "price": {
         "픽사 5K": "약 235.000원",
         "겨울왕국 3K": "약 235.000원",
@@ -12840,7 +13357,8 @@
       "sponsor": null,
       "phone": null,
       "email": null,
-      "instagram": "hkdisneyland"
+      "instagram": "hkdisneyland",
+      "blog": []
     }
   },
   {
@@ -12870,6 +13388,7 @@
       "startTime": null,
       "endTime": null,
       "site": "https://mara1080.com/event/c2cec79b-c38a-4832-bf4f-7ecb499cdcd5",
+      "status": "",
       "price": {
         "5KM": 30000,
         "10KM": 45000,
@@ -12892,7 +13411,8 @@
       "sponsor": null,
       "phone": "042-638-1080",
       "email": "jeonmahyeop@naver.com",
-      "instagram": null
+      "instagram": null,
+      "blog": []
     }
   },
   {
@@ -12922,6 +13442,7 @@
       "startTime": null,
       "endTime": "12:00",
       "site": "http://www.hangangmarathon.kr/",
+      "status": "",
       "price": {
         "5KM": 50000,
         "10KM": 50000,
@@ -12942,7 +13463,8 @@
       "sponsor": null,
       "phone": "1644-4219",
       "email": "km4219@daum.net",
-      "instagram": null
+      "instagram": null,
+      "blog": []
     }
   },
   {
@@ -12972,6 +13494,7 @@
       "startTime": null,
       "endTime": null,
       "site": "https://mara1080.com/event/df4b4e7d-4fbc-4843-858c-f15c032e92cb",
+      "status": "",
       "price": {
         "5KM": 30000,
         "12KM": 45000
@@ -12991,7 +13514,8 @@
       "sponsor": null,
       "phone": "042-638-1080",
       "email": "jeonmahyeop@naver.com",
-      "instagram": null
+      "instagram": null,
+      "blog": []
     }
   },
   {
@@ -13021,6 +13545,7 @@
       "startTime": null,
       "endTime": null,
       "site": "https://busanmarathon.com/",
+      "status": "",
       "price": {
         "10KM": 60000,
         "FULL": 80000
@@ -13040,7 +13565,8 @@
       "sponsor": null,
       "phone": "070-4111-5620",
       "email": "busanmarathon@knn.co.k",
-      "instagram": "busanmarathon.official"
+      "instagram": "busanmarathon.official",
+      "blog": []
     }
   },
   {
@@ -13053,7 +13579,12 @@
       "scale": null,
       "park": null,
       "souvenir": null,
-      "program": ["캐릭터 러닝", "포토존", "체험 이벤트", "완주 메달 지급"],
+      "program": [
+        "캐릭터 러닝",
+        "포토존",
+        "체험 이벤트",
+        "완주 메달 지급"
+      ],
       "memo": null
     },
     "event": {
@@ -13070,6 +13601,7 @@
       "startTime": null,
       "endTime": null,
       "site": null,
+      "status": "",
       "price": {
         "5KM": null
       }
@@ -13088,7 +13620,8 @@
       "sponsor": null,
       "phone": null,
       "email": null,
-      "instagram": null
+      "instagram": null,
+      "blog": []
     }
   }
 ]

@@ -98,7 +98,10 @@ export default function AdminContact({
     setOperationError(null);
     startTransition(async () => {
       try {
-        await updateContact(selected.id, status, reply);
+        const replyChanged = Boolean(
+          reply.trim() && reply.trim() !== selected.reply?.trim(),
+        );
+        const result = await updateContact(selected.id, status, reply);
         setContacts((current) =>
           current.map((contact) =>
             contact.id === selected.id
@@ -112,6 +115,11 @@ export default function AdminContact({
           ),
         );
         setSelected(null);
+        if (replyChanged && !result.emailSent) {
+          setOperationError(
+            "답변은 저장했지만 사용자 이메일 발송에 실패했습니다.",
+          );
+        }
       } catch {
         setOperationError("문의 내용을 저장하지 못했습니다.");
       }
@@ -324,17 +332,17 @@ export default function AdminContact({
           {selected && (
             <div className="space-y-4 font-anyvid text-muted-foreground">
               <div className="space-y-2">
-                <p className="text-sm text-slate-900">문의자</p>
-                <div className="rounded border p-3 text-sm">
-                  {selected.name}
-                </div>
-              </div>
-              <div className="space-y-2">
-                <p className="text-sm text-slate-900">문의자 이메일</p>
-                <div className="flex items-center justify-center rounded border border-blue-200 bg-blue-50 p-3">
+                <p className="text-sm text-slate-900">문의자 · 이메일</p>
+                <div className="flex flex-wrap items-center gap-x-2 gap-y-1 rounded border border-blue-200 bg-blue-50 p-3 text-sm">
+                  <span className="font-medium text-slate-900">
+                    {selected.name}
+                  </span>
+                  <span className="text-slate-300" aria-hidden="true">
+                    ·
+                  </span>
                   <a
                     href={`mailto:${selected.email}`}
-                    className="break-all text-sm text-brand underline underline-offset-4 hover:text-brand/80"
+                    className="break-all text-brand underline underline-offset-4 hover:text-brand/80"
                   >
                     {selected.email}
                   </a>
