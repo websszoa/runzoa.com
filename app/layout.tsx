@@ -1,5 +1,6 @@
 import type { Metadata, Viewport } from "next";
 import localFont from "next/font/local";
+import { GoogleAnalytics } from "@next/third-parties/google";
 import { cn } from "@/lib/utils";
 
 import {
@@ -7,6 +8,7 @@ import {
   APP_KEYWORDS,
   APP_NAME,
   APP_SITE_URL,
+  GOOGLE_ANALYTICS_ID,
 } from "@/lib/constants";
 
 import "./globals.css";
@@ -123,6 +125,9 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
       )}
     >
       <body className="min-h-full font-sans">{children}</body>
+      {process.env.NODE_ENV === "production" && (
+        <GoogleAnalytics gaId={GOOGLE_ANALYTICS_ID} />
+      )}
     </html>
   );
 }

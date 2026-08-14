@@ -4,6 +4,7 @@ export const APP_SLOGAN = "마라톤 여정을 위한 완벽한 가이드";
 export const APP_COPYRIGHT = "© 2026 webstoryboy. All rights reserved.";
 
 export const APP_SITE_URL = "https://runzoa.com";
+export const GOOGLE_ANALYTICS_ID = "G-SJT6MVPQJ";
 export const APP_EMAIL = "webstoryboy@naver.com";
 export const APP_INSTAGRAM_URL = "https://www.instagram.com/runzoa_official";
 export const APP_THREADS_URL = "https://www.threads.com/@runzoa_official";
