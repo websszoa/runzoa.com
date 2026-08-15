@@ -1,11 +1,12 @@
 import { NextResponse, type NextRequest } from "next/server";
 
 import { completeLogin } from "@/lib/auth/complete-login";
+import { APP_SITE_URL } from "@/lib/constants";
 import { createClient } from "@/lib/supabase/server";
 
 export async function GET(request: NextRequest) {
   const requestUrl = new URL(request.url);
-  const baseUrl = getBaseUrl(request, requestUrl.origin);
+  const baseUrl = getBaseUrl(requestUrl.origin);
   const code = requestUrl.searchParams.get("code");
   const requestedNext = requestUrl.searchParams.get("next") ?? "/";
   const next =
@@ -14,14 +15,14 @@ export async function GET(request: NextRequest) {
       : "/";
 
   if (!code) {
-    return redirectWithAuthError(requestUrl, "missing_code");
+    return redirectWithAuthError(baseUrl, "missing_code");
   }
 
   const supabase = await createClient();
   const { data, error } = await supabase.auth.exchangeCodeForSession(code);
 
   if (error) {
-    return redirectWithAuthError(requestUrl, "exchange_failed");
+    return redirectWithAuthError(baseUrl, "exchange_failed");
   }
 
   if (data.user) {
@@ -43,18 +44,15 @@ export async function GET(request: NextRequest) {
     }
   }
 
-  return redirectWithAuthError(new URL(baseUrl), "profile_failed");
+  return redirectWithAuthError(baseUrl, "profile_failed");
 }
 
-function redirectWithAuthError(url: URL, reason: string) {
-  const destination = new URL("/", url.origin);
+function redirectWithAuthError(baseUrl: string, reason: string) {
+  const destination = new URL("/", baseUrl);
   destination.searchParams.set("authError", reason);
   return NextResponse.redirect(destination);
 }
 
-function getBaseUrl(request: NextRequest, origin: string): string {
-  const forwardedHost = request.headers.get("x-forwarded-host");
-  return process.env.NODE_ENV !== "development" && forwardedHost
-    ? `https://${forwardedHost}`
-    : origin;
+function getBaseUrl(origin: string): string {
+  return process.env.NODE_ENV === "development" ? origin : APP_SITE_URL;
 }
