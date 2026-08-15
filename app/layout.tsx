@@ -31,7 +31,8 @@ const paperlogy = localFont({
       style: "normal",
     },
   ],
-  display: "swap",
+  display: "block",
+  preload: true,
   variable: "--font-paperlogy-local",
 });
 

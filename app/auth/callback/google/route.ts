@@ -1,12 +1,11 @@
 import { NextResponse, type NextRequest } from "next/server";
 
 import { completeLogin } from "@/lib/auth/complete-login";
-import { APP_SITE_URL } from "@/lib/constants";
 import { createClient } from "@/lib/supabase/server";
 
 export async function GET(request: NextRequest) {
   const requestUrl = new URL(request.url);
-  const baseUrl = getBaseUrl(requestUrl.origin);
+  const baseUrl = requestUrl.origin;
   const code = requestUrl.searchParams.get("code");
   const requestedNext = requestUrl.searchParams.get("next") ?? "/";
   const next =
@@ -51,8 +50,4 @@ function redirectWithAuthError(baseUrl: string, reason: string) {
   const destination = new URL("/", baseUrl);
   destination.searchParams.set("authError", reason);
   return NextResponse.redirect(destination);
-}
-
-function getBaseUrl(origin: string): string {
-  return process.env.NODE_ENV === "development" ? origin : APP_SITE_URL;
 }
