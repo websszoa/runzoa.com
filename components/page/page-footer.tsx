@@ -13,7 +13,7 @@ export default function Footer() {
   return (
     <footer id="site-footer" className="bg-muted/20 border-t">
       <div className="mx-auto max-w-7xl px-4 py-14 sm:px-6 lg:px-8 lg:py-20">
-        <div className="grid gap-12 lg:grid-cols-[1fr_2.4fr]">
+        <div className="grid gap-12 lg:grid-cols-[0.9fr_2.1fr] lg:gap-16">
           <div className="max-w-sm">
             <Link
               href="/"
@@ -51,7 +51,7 @@ export default function Footer() {
             </div>
           </div>
 
-          <div className="grid grid-cols-2 gap-8 sm:grid-cols-3 xl:grid-cols-5">
+          <div className="grid grid-cols-2 gap-x-8 gap-y-10 sm:grid-cols-3 xl:grid-cols-5 xl:gap-x-10">
             {FOOTER_NAVIGATION.map((group) => (
               <nav key={group.title} aria-label={group.title}>
                 <h2 className="font-paperlogy text-[15px] font-semibold">

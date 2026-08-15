@@ -2,6 +2,7 @@ import { APP_EMAIL, APP_INSTAGRAM_URL, APP_THREADS_URL } from "@/lib/constants";
 import {
   CalendarDays,
   Heart,
+  Info,
   List,
   Map,
   MessageCircle,
@@ -48,6 +49,7 @@ export const SHEET_NAVIGATION: MenuItem[][] = [
     { icon: Map, label: "지도", href: "/marathon-map" },
   ],
   [
+    { icon: Info, label: "런조아 소개", href: "/about" },
     { icon: Newspaper, label: "공지사항", href: "/news?type=notice" },
     { icon: MessageCircle, label: "문의사항", href: "/support?type=inquiry" },
     { icon: ScrollText, label: "운영방침", href: "/policy" },
@@ -73,6 +75,7 @@ export const FOOTER_NAVIGATION: NavigationSection[] = [
   {
     title: "소식",
     links: [
+      { label: "소개", href: "/about" },
       { label: "공지사항", href: "/news?type=notice" },
       { label: "블로그", href: "/news?type=blog" },
       { label: "업데이트", href: "/news?type=updates" },
@@ -98,9 +101,7 @@ export const FOOTER_NAVIGATION: NavigationSection[] = [
   },
   {
     title: "아카이브",
-    links: [
-      { label: "연도별 대회", href: "/marathon-year" },
-    ],
+    links: [{ label: "연도별 대회", href: "/marathon-year" }],
   },
 ];
 

@@ -12,6 +12,7 @@ const PUBLIC_ROUTES = [
   { path: "/marathon-map", changeFrequency: "daily", priority: 0.8 },
   { path: "/marathon-year", changeFrequency: "monthly", priority: 0.7 },
   { path: "/news", changeFrequency: "weekly", priority: 0.8 },
+  { path: "/about", changeFrequency: "monthly", priority: 0.6 },
   { path: "/support", changeFrequency: "monthly", priority: 0.5 },
   { path: "/policy", changeFrequency: "yearly", priority: 0.3 },
   { path: "/privacy", changeFrequency: "yearly", priority: 0.3 },

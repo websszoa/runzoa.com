@@ -77,6 +77,7 @@ export default async function Home({ searchParams }: HomeProps) {
       <MainPromoBanner />
       <MainRegistrationSoon marathons={marathons} />
       <MainThisMonth marathons={marathons} />
+      {/* <MainMarathonStory /> */}
       <MainOpenRegistration marathons={marathons} />
       <MainNewsletter />
     </>
