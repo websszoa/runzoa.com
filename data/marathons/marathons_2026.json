@@ -137,7 +137,7 @@
       "endTime": null,
       "site": "http://mokporun.com",
       "status": "",
-      "price": null
+      "price": {}
     },
     "location": {
       "country": "KR",
@@ -14118,6 +14118,64 @@
       "email": "jeonmahyeop@naver.com",
       "instagram": null,
       "blog": []
+    }
+  },
+  {
+    "slug": "ulsan-run-festa-u-run-2026",
+    "name": "2026 울산런페스타 U-RUN",
+    "description": "2026 울산런페스타 U-RUN은 울산 문수국제양궁장 일원에서 열리는 대규모 러닝 페스티벌입니다. 하프, 10km, 5km 코스로 총 10,000명이 참가하며, 러닝과 함께 시상식, 경품 추첨, 애프터 파티 등 다양한 프로그램이 진행됩니다.",
+    "info": {
+      "type": "마라톤",
+      "scale": 10000,
+      "park": null,
+      "souvenir": "기능성 티셔츠, 완주메달, 간식 키트, 에너지젤",
+      "program": "버스킹 공연, 미니게임 & 체험존, 포토존, 경품 추첨 이벤트",
+      "memo": null
+    },
+    "event": {
+      "startDate": "2026-10-25",
+      "endDate": "2026-10-25",
+      "startTime": "07:00",
+      "endTime": "13:00",
+      "site": "https://www.ulsanrunfesta.com/",
+      "schedule": {
+        "07:00": "집결 및 물품 보관",
+        "08:00": "개회식 및 내빈 소개",
+        "08:20": "공식 준비 운동",
+        "08:30": "하프 A그룹 출발",
+        "10:30": "하프 시상식, 경품 추첨",
+        "11:00": "AFTER party",
+        "13:00": "행사장 정리 및 폐회"
+      }
+    },
+    "registration": {
+      "startDate": "2026-08-19",
+      "endDate": "2026-09-20",
+      "startTime": "10:00",
+      "endTime": null,
+      "site": "https://www.ulsanrunfesta.com/",
+      "status": null,
+      "price": {
+        "HALF": 50000,
+        "10km": 45000,
+        "5km": 40000
+      }
+    },
+    "location": {
+      "country": "한국",
+      "region": "울산",
+      "venue": "울산 문수국제양궁장",
+      "address": "울산 남구 옥동 848",
+      "latitude": 35.5323134634597,
+      "longitude": 129.2711030961095
+    },
+    "hosts": {
+      "organizer": "울산MBC",
+      "manager": null,
+      "sponsor": null,
+      "phone": "052-295-7779",
+      "email": "contact@ulsanrunfesta.com",
+      "instagram": "ulsanrunfesta"
     }
   }
 ]

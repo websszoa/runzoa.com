@@ -57,6 +57,7 @@ export default function Error({ error, reset }: ErrorProps) {
             다시 시도
           </Button>
           <Button
+            nativeButton={false}
             render={<Link href="/" />}
             variant="outline"
             size="lg"

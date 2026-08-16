@@ -25,7 +25,7 @@ type MarathonSearchProps = {
 
 type RegistrationStatus = "접수예정" | "접수중" | "접수마감";
 type ScaleFilter = "5천명 이하" | "5천~1만명" | "1만~2만명" | "2만명 이상";
-type SortOrder = "개최일 빠른순" | "개최일 느린순";
+type SortOrder = "개최일 빠른순" | "최신 등록순" | "개최일 느린순";
 type DistanceFilter = "5K" | "10K" | "HALF" | "FULL";
 
 const PAGE_SIZE = 12;
@@ -99,6 +99,9 @@ export default function MarathonSearch({
   );
 
   const filteredMarathons = useMemo(() => {
+    const registrationOrder = new Map(
+      marathons.map((marathon, index) => [marathon.slug, index]),
+    );
     const filtered = marathons.filter((marathon) => {
       const searchable = [
         marathon.name,
@@ -127,11 +130,18 @@ export default function MarathonSearch({
       );
     });
 
-    return filtered.sort((a, b) =>
-      sortOrder === "개최일 빠른순"
+    return filtered.sort((a, b) => {
+      if (sortOrder === "최신 등록순") {
+        return (
+          (registrationOrder.get(b.slug) ?? -1) -
+          (registrationOrder.get(a.slug) ?? -1)
+        );
+      }
+
+      return sortOrder === "개최일 빠른순"
         ? a.event.startDate.localeCompare(b.event.startDate)
-        : b.event.startDate.localeCompare(a.event.startDate),
-    );
+        : b.event.startDate.localeCompare(a.event.startDate);
+    });
   }, [
     deferredQuery,
     distance,
@@ -580,11 +590,12 @@ function ResultsHeader({
           onSort((value ?? "개최일 빠른순") as SortOrder)
         }
       >
-        <SelectTrigger size="sm" aria-label="개최일 정렬" className="w-36">
+        <SelectTrigger size="sm" aria-label="대회 정렬" className="w-36">
           <SelectValue />
         </SelectTrigger>
         <SelectContent align="end">
           <SelectItem value="개최일 빠른순">개최일 빠른순</SelectItem>
+          <SelectItem value="최신 등록순">최신 등록순</SelectItem>
           <SelectItem value="개최일 느린순">개최일 느린순</SelectItem>
         </SelectContent>
       </Select>
