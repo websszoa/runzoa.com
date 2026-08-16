@@ -8407,7 +8407,7 @@
       "startTime": "10:00",
       "endTime": null,
       "site": "https://energyrun.co.kr/",
-      "status": "",
+      "status": "접수마감",
       "price": {
         "5KM": 35000,
         "10KM": 40000,
@@ -9537,7 +9537,7 @@
       "startTime": "17:00",
       "endTime": null,
       "site": "https://transjeju.utmb.world/ko",
-      "status": "접수완료",
+      "status": "접수마감",
       "price": {
         "20KM": 120000,
         "60KM": 220000,
@@ -13747,6 +13747,375 @@
       "sponsor": "외교부",
       "phone": "1566-1936",
       "email": "info@saverace.co.kr",
+      "instagram": null,
+      "blog": []
+    }
+  },
+  {
+    "slug": "sasang-eco-marathon-2026",
+    "name": "2026 전국사상에코마라톤",
+    "description": "2026 전국사상에코마라톤은 부산 사상구 삼락생태공원 일원에서 열리는 러닝 대회입니다. 10Km 로드레이스와 5Km 건강달리기, 5Km 슬로조깅으로 구성되며 총 5,000명의 참가자가 부산의 대표 생태공원을 달리는 가을 마라톤입니다.",
+    "info": {
+      "type": "마라톤",
+      "scale": 5000,
+      "park": null,
+      "souvenir": null,
+      "program": "10Km 로드레이스, 5Km 건강달리기, 5Km 슬로조깅",
+      "memo": "환불신청기간 ~ 2026년 9월 10일(목) 18:00까지"
+    },
+    "event": {
+      "startDate": "2026-11-08",
+      "endDate": "2026-11-08",
+      "startTime": "10:00",
+      "endTime": null,
+      "site": "https://ssecorun.co.kr/",
+      "schedule": {}
+    },
+    "registration": {
+      "startDate": "2026-09-01",
+      "endDate": null,
+      "startTime": "09:00",
+      "endTime": null,
+      "site": "https://ssecorun.co.kr/",
+      "status": null,
+      "price": {
+        "10Km": 50000,
+        "5Km 건강달리기": 40000,
+        "5Km 슬로조깅": 40000
+      }
+    },
+    "location": {
+      "country": "한국",
+      "region": "부산",
+      "venue": "삼락생태공원 일원",
+      "address": "부산 사상구 삼락동 29-46",
+      "latitude": 35.16913430208613,
+      "longitude": 128.97318637650778
+    },
+    "hosts": {
+      "organizer": "사상구, 사상구체육회",
+      "manager": "부산광역시육상연맹",
+      "sponsor": null,
+      "phone": "051-310-4128",
+      "email": "movenation1@naver.com",
+      "instagram": null,
+      "blog": []
+    }
+  },
+  {
+    "slug": "namdong-youth-run-2026",
+    "name": "2026 남동청년런",
+    "description": "2026 남동청년런은 청년의 날을 기념해 인천 남동구에서 열리는 러닝 행사입니다. 인천대공원을 무대로 10km와 6km 코스가 운영되며, 러닝과 다양한 프로그램을 함께 즐길 수 있는 청년 참여형 러닝 페스티벌입니다.",
+    "info": {
+      "type": "마라톤",
+      "scale": 2000,
+      "park": null,
+      "souvenir": "스포츠 마스크, 러닝 쇼츠, 러닝백, 스포츠 암슬리브, 생수 및 음료, 간식류",
+      "program": "10km, 5km",
+      "memo": "2026년 남동구 청년의 날을 기념해 진행되는 러닝 행사입니다."
+    },
+    "event": {
+      "startDate": "2026-09-19",
+      "endDate": "2026-09-19",
+      "startTime": "07:00",
+      "endTime": "13:00",
+      "site": "https://namdongrun.kr/",
+      "schedule": {
+        "07:00": "참가자 집결 및 접수",
+        "07:30": "워밍업 및 스트레칭",
+        "08:00": "5KM·10KM 본선 출발",
+        "10:00": "청년의 날 기념식",
+        "11:00": "플리마켓·이벤트존",
+        "12:00": "시상 및 현장 이벤트",
+        "13:00": "행사 종료"
+      }
+    },
+    "registration": {
+      "startDate": "2026-07-28",
+      "endDate": "2026-09-01",
+      "startTime": null,
+      "endTime": null,
+      "site": "https://namdongrun.kr/",
+      "status": "접수중",
+      "price": {
+        "10km": 50000,
+        "5km": 45000
+      }
+    },
+    "location": {
+      "country": "한국",
+      "region": "인천",
+      "venue": "인천대공원",
+      "address": "인천 남동구 장수동 산79",
+      "latitude": 37.45659085797083,
+      "longitude": 126.76060470317374
+    },
+    "hosts": {
+      "organizer": "디지털조선일보",
+      "manager": "아이스타트업랩",
+      "sponsor": null,
+      "phone": "032-710-0260",
+      "email": "hiseoour@istartuplab.co.kr",
+      "instagram": null,
+      "blog": []
+    }
+  },
+  {
+    "slug": "just-run10-pocheon-2026",
+    "name": "2026 JUST RUN10 포천",
+    "description": "2026 JUST RUN10 포천은 경기도 포천 종합운동장에서 열리는 러닝 대회입니다. 10km와 5km 두 종목으로 진행되며, 포천의 가을 풍경과 함께 달리기를 즐길 수 있는 러닝 행사입니다.",
+    "info": {
+      "type": "마라톤",
+      "scale": 3000,
+      "park": null,
+      "souvenir": "티셔츠, 간식, 완주메달,",
+      "program": "10km, 5km",
+      "memo": null
+    },
+    "event": {
+      "startDate": "2026-10-31",
+      "endDate": "2026-10-31",
+      "startTime": "09:00",
+      "endTime": null,
+      "site": "https://runten.co.kr/competitions/46e731b4-252b-4dce-9634-44369aceea25",
+      "schedule": {}
+    },
+    "registration": {
+      "startDate": "2026-08-01",
+      "endDate": "2026-10-30",
+      "startTime": null,
+      "endTime": null,
+      "site": "https://runten.co.kr/competitions/46e731b4-252b-4dce-9634-44369aceea25",
+      "status": "접수중",
+      "price": {
+        "10km": 50000,
+        "5km": 45000
+      }
+    },
+    "location": {
+      "country": "한국",
+      "region": "경기",
+      "venue": "포천 종합운동장",
+      "address": "경기 포천시 군내면 구읍리 691",
+      "latitude": 37.8880225997173,
+      "longitude": 127.200641403371
+    },
+    "hosts": {
+      "organizer": "러닝브레이커",
+      "manager": "전국러닝협회",
+      "sponsor": null,
+      "phone": "042-710-2058",
+      "email": "runningbreaker@naver.com",
+      "instagram": null,
+      "blog": []
+    }
+  },
+  {
+    "slug": "just-run10-cheongju-2026",
+    "name": "2026 JUST RUN10 청주",
+    "description": "2026 JUST RUN10 청주는 충북 청주 무심천체육공원 일원에서 열리는 러닝 대회입니다. 10km와 5km 두 종목으로 진행되며, 무심천을 따라 청주의 가을 풍경과 함께 달리기를 즐길 수 있는 러닝 행사입니다.",
+    "info": {
+      "type": "마라톤",
+      "scale": 3000,
+      "park": null,
+      "souvenir": "티셔츠, 간식, 완주메달",
+      "program": "10km, 5km",
+      "memo": null
+    },
+    "event": {
+      "startDate": "2026-10-03",
+      "endDate": "2026-10-03",
+      "startTime": "08:30",
+      "endTime": null,
+      "site": null,
+      "schedule": {}
+    },
+    "registration": {
+      "startDate": "2026-08-01",
+      "endDate": "2026-10-02",
+      "startTime": null,
+      "endTime": null,
+      "site": null,
+      "status": null,
+      "price": {
+        "10km": 50000,
+        "5km": 45000
+      }
+    },
+    "location": {
+      "country": "한국",
+      "region": "충북",
+      "venue": "청주 무심천체육공원 일원",
+      "address": "충북 청주시 서원구 사직동",
+      "latitude": 36.6392628982389,
+      "longitude": 127.483279186986
+    },
+    "hosts": {
+      "organizer": "러닝브레이커",
+      "manager": "전국러닝협회",
+      "sponsor": null,
+      "phone": "042-710-2058",
+      "email": "runningbreaker@naver.com",
+      "instagram": null,
+      "blog": []
+    }
+  },
+  {
+    "slug": "chungju-angseong-binaegil-marathon-2026",
+    "name": "제20회 충주 앙성 비내길 마라톤 대회",
+    "description": "제20회 충주 앙성 비내길 마라톤 대회는 충주 앙성온천광장에서 열리는 러닝 대회입니다. 충주의 자연을 배경으로 10km와 5km 코스를 달리며, 충주시민을 위한 5km 특별 참가 종목도 함께 운영됩니다.",
+    "info": {
+      "type": "마라톤",
+      "scale": 1500,
+      "park": null,
+      "souvenir": "티셔츠, 완주메달, 모바일기록증",
+      "program": "10km, 5km, 5km 충주시민",
+      "memo": "전 종목 기록칩 사용. 걸을 수 있는 유아부터 참가 가능하며 10km는 중학생 이상 신청 가능합니다."
+    },
+    "event": {
+      "startDate": "2026-10-10",
+      "endDate": "2026-10-10",
+      "startTime": "09:00",
+      "endTime": null,
+      "site": "https://mara1080.com/event/380079d2-ab1c-4351-b1f2-d21ccaba5cdd",
+      "schedule": {
+        "08:00": "참가자 집결",
+        "09:00": "대회 출발"
+      }
+    },
+    "registration": {
+      "startDate": "2026-08-10",
+      "endDate": "2026-10-09",
+      "startTime": null,
+      "endTime": null,
+      "site": "https://mara1080.com/event/380079d2-ab1c-4351-b1f2-d21ccaba5cdd",
+      "status": null,
+      "price": {
+        "10km": 45000,
+        "5km": 30000,
+        "5km 충주시민": 20000
+      }
+    },
+    "location": {
+      "country": "한국",
+      "region": "충북",
+      "venue": "충주 앙성온천광장",
+      "address": "충북 충주시 앙성면 능암리 76",
+      "latitude": 37.0921481408377,
+      "longitude": 127.800945378935
+    },
+    "hosts": {
+      "organizer": "앙성면체육회",
+      "manager": "전국마라톤협회",
+      "sponsor": "충주시, 앙성면",
+      "phone": "042-638-1080",
+      "email": null,
+      "instagram": null,
+      "blog": []
+    }
+  },
+  {
+    "slug": "running-world-10km-run-2026",
+    "name": "달리는 세상 10km 런",
+    "description": "달리는 세상 10km 런은 대전엑스포시민광장에서 개최되는 러닝 대회입니다. 5km와 10km 종목으로 진행되며, 10km 매니아 부문도 운영됩니다. 기록 경쟁부터 가볍게 즐기는 러닝까지 함께할 수 있는 대전 러닝 행사입니다.",
+    "info": {
+      "type": "마라톤",
+      "scale": 3000,
+      "park": null,
+      "souvenir": "월드런 쇼츠 블랙 & 민트, 완주메달, 모바일기록증",
+      "program": "5km, 10km, 10km 매니아",
+      "memo": null
+    },
+    "event": {
+      "startDate": "2026-09-13",
+      "endDate": "2026-09-13",
+      "startTime": "08:30",
+      "endTime": null,
+      "site": "https://mara1080.com/event/0674df45-473c-4182-bed4-d15582fb8c73",
+      "schedule": {
+        "08:30": "대회 출발"
+      }
+    },
+    "registration": {
+      "startDate": "2026-07-01",
+      "endDate": "2026-09-12",
+      "startTime": null,
+      "endTime": null,
+      "site": "https://mara1080.com/event/0674df45-473c-4182-bed4-d15582fb8c73",
+      "status": null,
+      "price": {
+        "5km": 30000,
+        "10km": 45000,
+        "10km 매니아": 35000
+      }
+    },
+    "location": {
+      "country": "한국",
+      "region": "대전",
+      "venue": "대전 엑스포시민광장",
+      "address": "대전 서구 만년동 396",
+      "latitude": 36.368065219673205,
+      "longitude": 127.38808571649619
+    },
+    "hosts": {
+      "organizer": "월드런",
+      "manager": "전국마라톤협회",
+      "sponsor": null,
+      "phone": "042-638-1080",
+      "email": null,
+      "instagram": null,
+      "blog": []
+    }
+  },
+  {
+    "slug": "mapo-gu-mayor-marathon-2026",
+    "name": "제2회 마포구청장배 마라톤 대회",
+    "description": "제2회 마포구청장배 마라톤 대회는 서울 마포구 평화의공원 평화광장에서 개최되는 러닝 대회입니다. 10km와 5km 종목으로 진행되며, 마포구민과 일반 참가자가 함께 도심 속 공원과 한강 주변을 달리며 러닝을 즐길 수 있는 생활체육 마라톤 행사입니다.",
+    "info": {
+      "type": "마라톤",
+      "scale": 2000,
+      "park": null,
+      "souvenir": "기능성 티셔츠, 완주메달, 모바일기록증",
+      "program": "10km, 5km",
+      "memo": "전 종목 기록칩 사용. 걸을 수 있는 유아부터 참가 가능하며 10km는 중학생 이상 신청 가능합니다."
+    },
+    "event": {
+      "startDate": "2026-09-20",
+      "endDate": "2026-09-20",
+      "startTime": "08:00",
+      "endTime": null,
+      "site": "https://mara1080.com/event/53b338c6-d38a-47b3-9479-080b00c6113a",
+      "schedule": {
+        "07:00": "참가자 집결",
+        "08:00": "대회 출발"
+      }
+    },
+    "registration": {
+      "startDate": "2026-06-23",
+      "endDate": "2026-08-20",
+      "startTime": null,
+      "endTime": null,
+      "site": "https://mara1080.com/event/53b338c6-d38a-47b3-9479-080b00c6113a",
+      "status": null,
+      "price": {
+        "10km": 50000,
+        "5km": 30000
+      }
+    },
+    "location": {
+      "country": "한국",
+      "region": "서울",
+      "venue": "평화의공원 평화광장",
+      "address": "서울 마포구 성산동 531",
+      "latitude": 37.5650560057921,
+      "longitude": 126.896211243867
+    },
+    "hosts": {
+      "organizer": "마포구체육회",
+      "manager": "마포구육상연맹, 전국마라톤협회",
+      "sponsor": "마포구청",
+      "phone": "042-638-1080",
+      "email": "jeonmahyeop@naver.com",
       "instagram": null,
       "blog": []
     }

@@ -90,7 +90,10 @@ export default function DetailLocation({
   const [addressCopied, setAddressCopied] = useState(false);
   const hasCoordinates = latitude !== null && longitude !== null;
   const locationLabel = venue || address || [region, country].filter(Boolean).join(" ");
-  const mapSearchQuery = [venue, address, region].filter(Boolean).join(" ") || name;
+  const mapSearchQuery = address || venue || [region, country].filter(Boolean).join(" ") || name;
+  const naverMapUrl = hasCoordinates
+    ? `https://map.naver.com/p/search/${encodeURIComponent(mapSearchQuery)}?c=${longitude},${latitude},15,0,0,0,dh`
+    : `https://map.naver.com/p/search/${encodeURIComponent(mapSearchQuery)}`;
   const kakaoMapUrl = hasCoordinates
     ? `https://map.kakao.com/link/map/${encodeURIComponent(venue || name)},${latitude},${longitude}`
     : `https://map.kakao.com/link/search/${encodeURIComponent(mapSearchQuery)}`;
@@ -178,7 +181,7 @@ export default function DetailLocation({
         {locationLabel && (
           <div className="ml-auto flex items-center gap-1.5">
             <a
-              href={`https://map.naver.com/p/search/${encodeURIComponent(mapSearchQuery)}`}
+              href={naverMapUrl}
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex h-9 items-center justify-center gap-1.5 rounded-full border border-border px-3 font-anyvid text-xs text-muted-foreground transition-colors hover:border-[#03c75a]/40 hover:bg-[#03c75a]/5 hover:text-[#03a94f]"

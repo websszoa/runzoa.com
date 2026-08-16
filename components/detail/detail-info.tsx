@@ -72,7 +72,7 @@ export default function DetailInfo({ marathon }: { marathon: Marathon }) {
       value: formatPeriod(
         marathon.event.startDate,
         marathon.event.endDate,
-        marathon.event.startTime,
+        null,
       ),
     },
     marathon.registration.startDate

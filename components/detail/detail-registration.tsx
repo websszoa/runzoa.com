@@ -154,7 +154,7 @@ export default function DetailRegistration({
                 {prices.map(([distance, price]) => (
                   <div
                     key={distance}
-                    className="grid grid-cols-[105px_minmax(0,1fr)]"
+                    className="grid grid-cols-[130px_minmax(0,1fr)]"
                   >
                     <span className="flex items-center justify-center border-r px-2 py-2.5 text-center text-sm text-muted-foreground">
                       {distance}

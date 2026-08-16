@@ -162,6 +162,7 @@ const madeByWebstoryboy = [
     domain: "apizoa.com",
     href: "https://apizoa.com",
     icon: Code2,
+    image: "/icons/apizoa.png",
     category: "Developer",
     description:
       "웹 서비스에서 활용할 수 있는 API와 데이터를 일관된 방식으로 제공하는 개발자 플랫폼입니다.",

@@ -7,6 +7,8 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import type { Marathon } from "@/lib/marathons";
 import {
+  ArrowRight,
+  Medal,
   MapPin,
   RotateCcw,
   Search,
@@ -418,10 +420,7 @@ function MarathonListRow({ marathon }: { marathon: Marathon }) {
         </div>
 
         <h3 className="truncate font-paperlogy text-xl font-semibold">
-          <Link
-            href={`/marathon/${marathon.slug}`}
-            className="hover:text-brand"
-          >
+          <Link href={`/marathon/${marathon.slug}`}>
             {marathon.name}
           </Link>
         </h3>
@@ -469,10 +468,16 @@ function MarathonListRow({ marathon }: { marathon: Marathon }) {
         <Button
           nativeButton={false}
           render={<Link href={`/marathon/${marathon.slug}`} />}
+          aria-label={`${marathon.name} 대회 보기`}
+          title="대회 보기"
           variant="outline"
-          size="sm"
+          size="icon-sm"
+          className="group/cta rounded-full"
         >
-          대회 보기
+          <span className="relative size-4" aria-hidden="true">
+            <Medal className="absolute inset-0 size-4 transition-[opacity,transform] group-hover/cta:scale-75 group-hover/cta:opacity-0" />
+            <ArrowRight className="absolute inset-0 size-4 -translate-x-1 opacity-0 transition-[opacity,transform] group-hover/cta:translate-x-0 group-hover/cta:opacity-100" />
+          </span>
         </Button>
       </div>
     </article>
