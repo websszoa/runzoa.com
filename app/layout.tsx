@@ -1,6 +1,7 @@
 import type { Metadata, Viewport } from "next";
 import localFont from "next/font/local";
 import { GoogleAnalytics } from "@next/third-parties/google";
+import { PageLoading } from "@/components/page/page-loading";
 import { cn } from "@/lib/utils";
 
 import {
@@ -31,7 +32,7 @@ const paperlogy = localFont({
       style: "normal",
     },
   ],
-  display: "block",
+  display: "swap",
   preload: true,
   variable: "--font-paperlogy-local",
 });
@@ -125,7 +126,13 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
         anyvid.variable,
       )}
     >
-      <body className="min-h-full font-sans">{children}</body>
+      <body className="min-h-full font-sans">
+        <noscript>
+          <style>{`.page-loading{display:none}`}</style>
+        </noscript>
+        <PageLoading />
+        {children}
+      </body>
       {process.env.NODE_ENV === "production" && (
         <GoogleAnalytics gaId={GOOGLE_ANALYTICS_ID} />
       )}

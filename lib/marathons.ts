@@ -133,6 +133,13 @@ export type Marathon = {
     site: string | null;
     status: string | null;
     price: Record<string, number | string>;
+    additional?: {
+      startDate: string | null;
+      endDate: string | null;
+      startTime: string | null;
+      endTime: string | null;
+      memo: string | null;
+    } | null;
   };
   location: {
     country: string | null;

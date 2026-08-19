@@ -11514,11 +11514,11 @@
       "site": "https://disneyrunincheon2026.com/",
       "status": "",
       "price": {
-        "5KM": "미정",
-        "10KM": "미정",
-        "버추얼런2차(모아나)": 40000,
-        "버추얼런3차(주토피아)": 40000,
-        "버추얼런1차(토이스토리)": 40000
+        "5KM": 65000,
+        "10KM": 80000,
+        "버추얼런2차": 40000,
+        "버추얼런3차": 40000,
+        "버추얼런1차": 40000
       }
     },
     "location": {
@@ -14176,6 +14176,614 @@
       "phone": "052-295-7779",
       "email": "contact@ulsanrunfesta.com",
       "instagram": "ulsanrunfesta"
+    }
+  },
+  {
+    "slug": "sbs-run-music-festival-andong-2026",
+    "name": "2026 SBS RUN & MUSIC FESTIVAL in 안동",
+    "description": "2026 SBS RUN&MUSIC FESTIVAL in 안동은 안동댐 준공 50주년을 기념해 열리는 러닝·걷기·음악 페스티벌입니다. 낮에는 K-스타와 함께 안동의 수변 코스를 달리거나 월영가람길을 걷고, 저녁에는 SBS 뮤직페스타 K-POP 콘서트를 즐길 수 있습니다.",
+    "info": {
+      "type": "마라톤",
+      "scale": 24000,
+      "park": null,
+      "souvenir": "티셔츠, 기념 블랭킷, 배번호, 기록칩, 완주메달, 지역상품권, 콘서트 입장권, 간식 및 굿즈",
+      "program": "K-스타런 HALF·10K, 월영가람길 레일워크 약 3km, SBS 뮤직페스타",
+      "memo": "안동댐 준공 50주년 기념 행사. SBS 뮤직페스타 1차 라인업은 YB, 10CM, BTOB, YENA(최예나)"
+    },
+    "event": {
+      "startDate": "2026-10-24",
+      "endDate": "2026-10-24",
+      "startTime": "07:30",
+      "endTime": null,
+      "site": "https://runmusicfestival.localvibehub.com/",
+      "schedule": {
+        "07:30": "K-스타런 집결 - 안동탈춤공원",
+        "08:30": "K-스타런 출발",
+        "09:00": "월영가람길 레일워크 그룹별 분할 출발",
+        "18:00": "SBS 뮤직페스타 관객 입장",
+        "19:00": "SBS 뮤직페스타 공연 시작"
+      }
+    },
+    "registration": {
+      "startDate": "2026-07-24",
+      "endDate": "2026-08-31",
+      "startTime": "14:00",
+      "endTime": null,
+      "site": "https://runmusicfestival.localvibehub.com/",
+      "status": "접수중",
+      "price": {
+        "스타런 패스": 69000,
+        "올인원 패스": 109000,
+        "레일워크 패스": 59000
+      }
+    },
+    "location": {
+      "country": "한국",
+      "region": "경북",
+      "venue": "안동탈춤공원",
+      "address": "경북 안동시 운흥동 300-15",
+      "latitude": 36.560306390662,
+      "longitude": 128.731701895463
+    },
+    "hosts": {
+      "organizer": "기후에너지환경부, 안동시",
+      "manager": "퓨잇",
+      "sponsor": null,
+      "phone": null,
+      "email": "localvibe@fu-it.com",
+      "instagram": "runmusicfestival"
+    }
+  },
+  {
+    "slug": "gyeongsan-gatbawi-sachal-run-2026",
+    "name": "2026 사찰런 : 경산 갓바위 소원길 트레일런 챌린지",
+    "description": "2026 사찰런은 경산 갓바위 소원길에서 진행되는 6.3km 완주형 트레일런 챌린지입니다. 기록 경쟁이 아닌 자유 출발 방식으로 운영되며, 갓바위 소원길을 따라 선본사까지 달린 뒤 소원등 달기, 소리명상, 힐링음악회 등 다양한 프로그램을 함께 즐길 수 있습니다.",
+    "info": {
+      "type": "트레일런",
+      "scale": 300,
+      "park": "경산 지식산업지구 임시주차장",
+      "souvenir": "완주메달, 배번호, 경산 특산물 및 간식, 소원등",
+      "program": "6.3km 트레일런, 소원등 달기, 소리명상, 힐링음악회, 템플스테이",
+      "memo": "기록 경쟁이 아닌 완주형 트레일런 챌린지로 개인 및 단체가 행사 시간 내 자유롭게 참가합니다. 코스 전반이 지속적인 오르막으로 구성되어 있습니다."
+    },
+    "event": {
+      "startDate": "2026-09-19",
+      "endDate": "2026-09-19",
+      "startTime": "08:00",
+      "endTime": "17:00",
+      "site": "https://sachalrun.com/",
+      "schedule": {
+        "08:00": "트레일런 챌린지 시작",
+        "15:00": "출발 마감",
+        "17:00": "도착지 컷오프"
+      }
+    },
+    "registration": {
+      "startDate": "2026-08-07",
+      "endDate": "2026-09-10",
+      "startTime": null,
+      "endTime": null,
+      "site": "https://sachalrun.com/",
+      "status": null,
+      "price": {
+        "6.3km": 30000
+      }
+    },
+    "location": {
+      "country": "한국",
+      "region": "경북",
+      "venue": "경산 갓바위 소원길",
+      "address": "대한민국 대구광역시 동구 갓바위로 229",
+      "latitude": 35.9816369,
+      "longitude": 128.7365038
+    },
+    "hosts": {
+      "organizer": "윌슨컴퍼니",
+      "manager": "윌슨컴퍼니",
+      "sponsor": null,
+      "phone": "070-8670-0781",
+      "email": null,
+      "instagram": "sachalrun"
+    }
+  },
+  {
+    "slug": "binggrae-granfondo-2026",
+    "name": "2026 빙그레 그란폰도",
+    "description": "2026 빙그레 그란폰도는 충남 공주시민운동장을 출발해 공주·청양·부여 일대를 달리는 동호인 자전거 행사입니다. 113km 그란폰도와 106km 메디오폰도 코스로 진행되며, 참가비 전액이 참가자 본인의 이름으로 기부되는 특별한 라이딩 행사입니다.",
+    "info": {
+      "type": "자전거",
+      "scale": 2000,
+      "park": null,
+      "souvenir": null,
+      "program": "그란폰도 113km, 메디오폰도 106km, KOM 시상, 경품 추첨",
+      "memo": " 악천후 시 2026년 10월 24일로 순연될 예정입니다."
+    },
+    "event": {
+      "startDate": "2026-10-09",
+      "endDate": "2026-10-09",
+      "startTime": "06:00",
+      "endTime": "14:30",
+      "site": "https://www.binggraegranfondo.com/main/main.html",
+      "schedule": {
+        "06:00": "행사장 오픈 부스 이벤트 시작",
+        "07:40": "개막식 및 출발 세레머니",
+        "08:00": "그란폰도 CHALLENGE A 출발",
+        "08:10": "메디오폰도 CHALLENGE B 출발",
+        "14:00": "경품 추첨 및 시상식",
+        "14:30": "행사 종료"
+      }
+    },
+    "registration": {
+      "startDate": "2026-08-03",
+      "endDate": "2026-10-08",
+      "startTime": "10:00",
+      "endTime": null,
+      "site": "https://www.binggraegranfondo.com/main/main.html",
+      "status": null,
+      "price": {
+        "그란폰도 113km": 50000,
+        "메디오폰도 106km": 50000
+      },
+      "additional": {
+        "startDate": "2026-08-19",
+        "endDate": null,
+        "startTime": "10:00",
+        "endTime": null,
+        "memo": "1차 접수 취소분에 한해 추가 접수"
+      }
+    },
+    "location": {
+      "country": "한국",
+      "region": "충남",
+      "venue": "공주시민운동장",
+      "address": "충남 공주시 웅진동 300-5",
+      "latitude": 36.461547427252285,
+      "longitude": 127.10906405906118
+    },
+    "hosts": {
+      "organizer": "빙그레",
+      "manager": "XCWORKS",
+      "sponsor": null,
+      "phone": "02-407-0432",
+      "email": "xcworks@xcworks.com",
+      "instagram": null
+    }
+  },
+  {
+    "slug": "bianchi-granfondo-chuncheon-2026",
+    "name": "2026 비앙키 그란폰도 춘천",
+    "description": "2026 비앙키 그란폰도 춘천은 강원 춘천 일대에서 개최되는 동호인 자전거 대회입니다. 그란폰도와 메디오폰도 두 종목으로 운영되며, 총 2,000명의 라이더를 선착순 모집하는 대규모 사이클링 행사입니다.",
+    "info": {
+      "type": "자전거",
+      "scale": 2000,
+      "park": null,
+      "souvenir": "비앙키 물통, 스포츠 양말, 마우스 패드, 헤어밴드, 기념 메달, 상품권",
+      "program": "그란폰도, 메디오폰도, 럭키드로우",
+      "memo": "참가 신청 후 무통장 입금까지 완료해야 최종 참가가 확정됩니다."
+    },
+    "event": {
+      "startDate": "2026-10-18",
+      "endDate": "2026-10-18",
+      "startTime": null,
+      "endTime": null,
+      "site": "https://www.bianchigranfondo.kr/riding/intro",
+      "schedule": {}
+    },
+    "registration": {
+      "startDate": "2026-07-15",
+      "endDate": "2026-10-17",
+      "startTime": "11:00",
+      "endTime": null,
+      "site": "https://www.bianchigranfondo.kr/application/info",
+      "status": null,
+      "price": {
+        "그란폰도": 70000,
+        "메디오폰도": 70000
+      }
+    },
+    "location": {
+      "country": "한국",
+      "region": "강원",
+      "venue": "송암스포츠타운",
+      "address": "강원특별자치도 춘천시 송암동 301",
+      "latitude": 37.855744889481585,
+      "longitude": 127.69111029913238
+    },
+    "hosts": {
+      "organizer": "춘천레저, 춘천시",
+      "manager": "더바이크",
+      "sponsor": null,
+      "phone": "032-322-3379",
+      "email": "kmj53522@hanmail.net",
+      "instagram": null
+    }
+  },
+  {
+    "slug": "yeongsangang-granfondo-naju-2026",
+    "name": "2026 영산강 그란폰도 in 나주",
+    "description": "광주MBC 2026 영산강 그란폰도 in 나주는 전남 나주 영산강 둔치체육공원을 중심으로 열리는 자전거 라이딩 대회입니다. 영산강과 전남의 자연경관을 배경으로 그란폰도 131km와 메디오폰도 106km 코스를 달리는 행사입니다.",
+    "info": {
+      "type": "자전거",
+      "scale": 2000,
+      "park": null,
+      "souvenir": "고글, 완주메달, 지역상품권",
+      "program": "그란폰도 131km, 메디오폰도 106km",
+      "memo": null
+    },
+    "event": {
+      "startDate": "2026-10-31",
+      "endDate": "2026-10-31",
+      "startTime": "06:30",
+      "endTime": "14:30",
+      "site": "http://speedagency.kr/parti_more.html?game_code=114",
+      "schedule": {
+        "06:30": "대회 준비 및 배번호 수령",
+        "07:40": "개회식",
+        "08:00": "출발",
+        "14:30": "경품추첨 및 폐회식"
+      }
+    },
+    "registration": {
+      "startDate": "2026-07-03",
+      "endDate": "2026-10-30",
+      "startTime": "10:00",
+      "endTime": null,
+      "site": "http://speedagency.kr/parti_more.html?game_code=114",
+      "status": null,
+      "price": {
+        "그란폰도 131km": 70000,
+        "메디오폰도 106km": 70000
+      }
+    },
+    "location": {
+      "country": "한국",
+      "region": "전남",
+      "venue": "나주 영산강 둔치체육공원",
+      "address": "전남광주통합특별시 나주시 삼영동",
+      "latitude": 35.0024326570448,
+      "longitude": 126.708466626579
+    },
+    "hosts": {
+      "organizer": "광주MBC",
+      "manager": "광주MBC, 전남사이클연맹",
+      "sponsor": "나주시, 전남광주통합특별시",
+      "phone": null,
+      "email": null,
+      "instagram": null
+    }
+  },
+  {
+    "slug": "yeosu-baekriseomseom-trailrun-2026",
+    "name": "2026 여수 백리섬섬 트레일런",
+    "description": "2026 여수 백리섬섬 트레일런은 여수의 푸른 바다와 해안 절벽, 동백나무 숲길을 달리는 트레일러닝 대회입니다. 2026 여수세계섬박람회와 함께하며 16K, 27K, 40K 세 가지 코스로 진행됩니다.",
+    "info": {
+      "type": "트레일런",
+      "scale": 1000,
+      "park": null,
+      "souvenir": null,
+      "program": "16K, 27K, 40K",
+      "memo": "준자급자족 방식으로 진행되며 GPX를 활용한 코스 확인 능력이 필요합니다. 전자칩으로 기록을 측정하며 순위는 넷타임 기준입니다."
+    },
+    "event": {
+      "startDate": "2026-09-12",
+      "endDate": "2026-09-12",
+      "startTime": "06:00",
+      "endTime": "18:00",
+      "site": "https://speedtrailrun.kr/",
+      "schedule": {
+        "06:00": "참가자 참석 및 배번호 문의",
+        "08:20": "사회자 인사 및 행사소개",
+        "08:30": "개회선언, 국민의례, 내빈소개, 환영사",
+        "08:40": "출발 준비 및 출발",
+        "12:20": "16K 시상식",
+        "13:00": "27K·40K 시상식",
+        "18:00": "컷오프 및 대회 종료"
+      }
+    },
+    "registration": {
+      "startDate": null,
+      "endDate": null,
+      "startTime": null,
+      "endTime": null,
+      "site": "https://speedtrailrun.kr/",
+      "status": "접수마감",
+      "price": {
+        "40K": 130000,
+        "27K": 80000,
+        "16K": 50000
+      }
+    },
+    "location": {
+      "country": "한국",
+      "region": "전남",
+      "venue": "청심국제해양청소년수련원",
+      "address": "전남광주통합특별시 여수시 화양면 장수리 1484",
+      "latitude": 34.64557114236947,
+      "longitude": 127.61047222541222
+    },
+    "hosts": {
+      "organizer": "2026여수세계섬박람회조직위원회, 여수시, 여수시체육회",
+      "manager": "여수시사이클연맹, 스피드에이전시, 블루트레일",
+      "sponsor": "iGPSPORT",
+      "phone": "010-8172-0630",
+      "email": "sa@speedagency.co.kr",
+      "instagram": null
+    }
+  },
+  {
+    "slug": "sangju-mtb-2026",
+    "name": "2026 상주시장배 전국 MTB대회",
+    "description": "위아위스와 함께하는 2026 상주시장배 전국 MTB대회는 경북 상주시 낙동강 자전거이야기촌에서 열리는 산악자전거 대회입니다. 연령과 성별에 따라 다양한 등급으로 나누어 진행되며, 부문별 입상자에게 상금이 수여됩니다.",
+    "info": {
+      "type": "자전거",
+      "scale": 2000,
+      "park": null,
+      "souvenir": "밥차",
+      "program": "MTB",
+      "memo": "만 14세 이상 참가 가능하며, 연령과 성별에 따라 총 9개 참가 부문으로 구분됩니다."
+    },
+    "event": {
+      "startDate": "2026-10-04",
+      "endDate": "2026-10-04",
+      "startTime": "07:00",
+      "endTime": null,
+      "site": null,
+      "schedule": {
+        "07:00": "비번호 배부 및 대회 준비",
+        "08:00": "개회식",
+        "08:30": "부문별 MTB 경기 출발",
+        "11:30": "중식 및 반차",
+        "14:30": "시상 및 폐회식"
+      }
+    },
+    "registration": {
+      "startDate": "2026-07-02",
+      "endDate": null,
+      "startTime": "10:00",
+      "endTime": null,
+      "site": null,
+      "status": "접수마감",
+      "price": {
+        "MTB": 20000
+      }
+    },
+    "location": {
+      "country": "한국",
+      "region": "경북",
+      "venue": "낙동강 자전거이야기촌",
+      "address": "경북 상주시 사벌국면 삼덕리 339",
+      "latitude": 36.457559280292855,
+      "longitude": 128.24023275183418
+    },
+    "hosts": {
+      "organizer": "상주시사이클연맹",
+      "manager": "상주시사이클연맹",
+      "sponsor": "상주시, 상주시의회, 위아위스",
+      "phone": null,
+      "email": null,
+      "instagram": null
+    }
+  },
+  {
+    "slug": "seomseom-yeosu-granfondo-2026",
+    "name": "2026 섬섬여수 그란폰도",
+    "description": "WINSPACE와 함께하는 2026 섬섬여수 그란폰도는 전남 여수 소호요트마리나를 출발해 여수의 아름다운 풍경을 달리는 자전거 대회입니다. 그란폰도 113km와 메디오폰도 93km 두 종목으로 진행되며 선착순 2,000명을 모집합니다.",
+    "info": {
+      "type": "자전거",
+      "scale": 2000,
+      "park": null,
+      "souvenir": "완주 메달, 패딩, 빵, 음료 교환권, 떡국 or 컵라면",
+      "program": "그란폰도 113km, 메디오폰도 93km",
+      "memo": "만 19세 이상 남녀 참가 가능. KOM 구간 및 랜덤 순위 시상이 운영됩니다."
+    },
+    "event": {
+      "startDate": "2026-10-24",
+      "endDate": "2026-10-24",
+      "startTime": "06:30",
+      "endTime": null,
+      "site": "http://speedagency.kr/more.html?game_code=112",
+      "schedule": {
+        "06:30": "대회 준비",
+        "08:00": "개회식",
+        "08:30": "출발",
+        "14:30": "시상 및 폐회식"
+      }
+    },
+    "registration": {
+      "startDate": "2026-06-17",
+      "endDate": null,
+      "startTime": "10:00",
+      "endTime": null,
+      "site": "http://speedagency.kr/more.html?game_code=112",
+      "status": "접수마감",
+      "price": {
+        "그란폰도 113km": 80000,
+        "메디오폰도 93km": 80000
+      }
+    },
+    "location": {
+      "country": "한국",
+      "region": "전남",
+      "venue": "소호요트마리나",
+      "address": "전남광주통합특별시 여수시 소호동 505-2",
+      "latitude": 34.73830786222263,
+      "longitude": 127.65009986324863
+    },
+    "hosts": {
+      "organizer": "여수시, 여수시체육회",
+      "manager": "여수시사이클연맹",
+      "sponsor": "전라남도, WINSPACE, SPEED AGENCY",
+      "phone": null,
+      "email": null,
+      "instagram": null
+    }
+  },
+  {
+    "slug": "mungyeong-saejae-granfondo-2026",
+    "name": "2026 문경새재 그란폰도",
+    "description": "위아위스와 함께하는 2026 문경새재 그란폰도는 경북 문경시민운동장을 출발해 문경 일대를 달리는 자전거 대회입니다. 그란폰도 152.5km와 메디오폰도 107.6km 두 종목으로 진행되며, 선착순 2,000명의 라이더가 참가합니다.",
+    "info": {
+      "type": "자전거",
+      "scale": 2000,
+      "park": null,
+      "souvenir": "안테로브 고글, 완주 메달, 에너지젤",
+      "program": "그란폰도 152.5km, 메디오폰도 107.6km",
+      "memo": "만 19세 이상 남녀 참가 가능."
+    },
+    "event": {
+      "startDate": "2026-09-05",
+      "endDate": "2026-09-05",
+      "startTime": "06:00",
+      "endTime": null,
+      "site": "https://speedagency.kr",
+      "schedule": {
+        "06:00": "대회 준비",
+        "07:00": "개회식",
+        "07:20": "준비체조 및 출발 준비",
+        "07:30": "대회 출발",
+        "15:30": "시상식 및 폐회식"
+      }
+    },
+    "registration": {
+      "startDate": "2026-03-18",
+      "endDate": null,
+      "startTime": "10:00",
+      "endTime": null,
+      "site": "https://speedagency.kr",
+      "status": "접수마감",
+      "price": {
+        "그란폰도 152.5km": 70000,
+        "메디오폰도 107.6km": 70000
+      }
+    },
+    "location": {
+      "country": "한국",
+      "region": "경북",
+      "venue": "문경시민운동장",
+      "address": "경북 문경시 모전동 415-1",
+      "latitude": 36.5933337482213,
+      "longitude": 128.187358887971
+    },
+    "hosts": {
+      "organizer": "문경시체육회",
+      "manager": "문경시사이클연맹",
+      "sponsor": "경상북도, 경상북도의회, 문경시, 문경시의회, 위아위스",
+      "phone": null,
+      "email": null,
+      "instagram": null
+    }
+  },
+  {
+    "slug": "sangju-granfondo-2026",
+    "name": "2026 상주그란폰도",
+    "description": "VioIi와 함께하는 2026 상주그란폰도는 경북 상주시 북천시민공원에서 열리는 자전거 대회입니다. 그란폰도 101.5km와 메디오폰도 61.1km 두 종목으로 진행되며, 상주의 자연을 배경으로 장거리 라이딩을 즐길 수 있습니다.",
+    "info": {
+      "type": "자전거",
+      "scale": null,
+      "park": null,
+      "souvenir": "상주 곶감, 완주 메달, 자전거 양말, 에너지젤",
+      "program": "그란폰도 101.5km, 메디오폰도 61.1km",
+      "memo": "만 19세 이상 남녀 참가 가능."
+    },
+    "event": {
+      "startDate": "2026-10-03",
+      "endDate": "2026-10-03",
+      "startTime": "06:00",
+      "endTime": null,
+      "site": "https://speedagency.kr",
+      "schedule": {
+        "06:00": "대회 준비",
+        "07:30": "개회식",
+        "07:50": "준비체조 및 출발 준비",
+        "08:00": "대회 출발",
+        "13:00": "시상식 및 폐회식"
+      }
+    },
+    "registration": {
+      "startDate": "2026-04-13",
+      "endDate": null,
+      "startTime": "10:00",
+      "endTime": null,
+      "site": "https://speedagency.kr",
+      "status": "접수마감",
+      "price": {
+        "그란폰도 101.5km": 60000,
+        "메디오폰도 61.1km": 60000
+      }
+    },
+    "location": {
+      "country": "한국",
+      "region": "경북",
+      "venue": "상주 북천시민공원",
+      "address": "경상북도 상주시",
+      "latitude": null,
+      "longitude": null
+    },
+    "hosts": {
+      "organizer": "상주시사이클연맹",
+      "manager": "상주시사이클연맹",
+      "sponsor": "상주시, 상주시의회",
+      "phone": null,
+      "email": null,
+      "instagram": null
+    }
+  },
+  {
+    "slug": "oxfam-trailwalker-seoul-20k-2026",
+    "name": "2026 옥스팜 트레일워커 서울 20K",
+    "description": "2026 옥스팜 트레일워커 서울 20K는 4명이 한 팀이 되어 서울 도심 20km 코스를 함께 완주하는 기부 도전 행사입니다. 한국프레스센터에서 출발해 세종로공원까지 이어지며, 참가팀은 최소 50만원 이상의 기부펀딩을 모금해야 합니다.",
+    "info": {
+      "type": "트레일런",
+      "scale": 800,
+      "park": null,
+      "souvenir": "참가자 패키지",
+      "program": "20K",
+      "memo": "4인 1조로 참가하며 제한시간은 8시간입니다."
+    },
+    "event": {
+      "startDate": "2026-10-17",
+      "endDate": "2026-10-17",
+      "startTime": "06:00",
+      "endTime": "17:00",
+      "site": "https://www.oxfamtrailwalker.or.kr",
+      "schedule": {
+        "06:00": "참가자 현장 등록",
+        "07:00": "준비 운동 및 개회식",
+        "07:30": "1조 출발",
+        "08:00": "2조 출발",
+        "08:30": "3조 출발",
+        "09:00": "4조 출발",
+        "17:00": "대회 종료"
+      }
+    },
+    "registration": {
+      "startDate": "2026-08-03",
+      "endDate": "2026-09-17",
+      "startTime": "14:00",
+      "endTime": "17:00",
+      "site": "https://www.oxfamtrailwalker.or.kr",
+      "status": null,
+      "price": {
+        "20K 4인 1팀": 150000
+      },
+      "refundEndDate": "2026-09-11"
+    },
+    "location": {
+      "country": "한국",
+      "region": "서울",
+      "venue": "한국프레스센터",
+      "address": "서울 중구 세종대로 124",
+      "latitude": 37.567418716091005,
+      "longitude": 126.97787106803995
+    },
+    "hosts": {
+      "organizer": "옥스팜코리아",
+      "manager": "옥스팜코리아",
+      "sponsor": null,
+      "phone": "02-739-8091",
+      "email": "trailwalker@oxfam.or.kr",
+      "instagram": "oxfamtrailwalkerkorea",
+      "blog": []
     }
   }
 ]

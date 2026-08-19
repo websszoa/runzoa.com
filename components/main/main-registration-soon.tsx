@@ -152,7 +152,7 @@ export default function MainRegistrationSoon({
                           {getRegistrationLabel(registrationStatus)}
                         </Badge>
                       </div>
-                      <h3 className="truncate font-paperlogy text-xl font-semibold transition-colors group-hover:text-brand">
+                      <h3 className="truncate font-paperlogy text-xl font-semibold">
                         {marathon.name}
                       </h3>
                       <div className="mt-1 flex min-w-0 flex-wrap gap-x-5 gap-y-1.5 font-anyvid text-sm text-muted-foreground">
@@ -201,7 +201,7 @@ export default function MainRegistrationSoon({
                         <p className="text-xs text-muted-foreground">
                           접수 시작일
                         </p>
-                        <p className="mt-0.5 truncate text-sm font-semibold text-foreground">
+                        <p className="mt-0.5 truncate text-sm text-foreground">
                           {formatMarathonDate(registrationDate)}
                         </p>
                       </div>
