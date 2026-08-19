@@ -59,7 +59,10 @@ CREATE POLICY "회원 본인 문의 조회"
 ON public.contacts
 FOR SELECT
 TO authenticated
-USING (user_id = (SELECT auth.uid()));
+USING (
+  user_id = (SELECT auth.uid())
+  OR LOWER(user_email) = LOWER((SELECT auth.jwt() ->> 'email'))
+);
 
 CREATE POLICY "관리자 전체 문의 조회"
 ON public.contacts
