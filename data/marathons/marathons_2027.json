@@ -48,5 +48,56 @@
       "instagram": "seoul_marathon",
       "blog": []
     }
+  },
+  {
+    "slug": "daegu-marathon-2027",
+    "name": "2027 대구마라톤",
+    "description": "2027 대구마라톤은 대구 국채보상공원과 시내 일원에서 열리는 국제 마라톤 대회입니다. 마스터즈 부문은 풀코스, 10km, 건강달리기로 구성되며 총 32,000명 규모로 진행됩니다. 모든 종목은 선착순으로 참가자를 모집합니다.",
+    "info": {
+      "type": "마라톤",
+      "scale": 32000,
+      "park": null,
+      "souvenir": null,
+      "program": "풀코스, 10km, 건강달리기",
+      "memo": "마스터즈 참가자는 총 32,000명으로 풀코스 15,000명, 10km 13,000명, 건강달리기 4,000명을 선착순 모집합니다. 취소 및 미결제로 발생한 잔여 인원은 12월 중 추가 접수 예정입니다."
+    },
+    "event": {
+      "startDate": "2027-02-28",
+      "endDate": "2027-02-28",
+      "startTime": "08:00",
+      "endTime": null,
+      "site": "https://daegumarathon.daegu.go.kr",
+      "schedule": {}
+    },
+    "registration": {
+      "startDate": "2026-10-12",
+      "endDate": "2026-11-22",
+      "startTime": "10:00",
+      "endTime": "23:59",
+      "site": "https://daegumarathon.daegu.go.kr",
+      "status": "접수 대기",
+      "price": {
+        "풀코스": 90000,
+        "10km": 60000,
+        "건강달리기": 30000
+      }
+    },
+    "location": {
+      "country": "한국",
+      "region": "대구",
+      "venue": "국채보상공원",
+      "address": "대구 중구 동인동2가 42",
+      "latitude": 35.8688125525419,
+      "longitude": 128.601899941122
+    },
+    "hosts": {
+      "organizer": null,
+      "manager": null,
+      "sponsor": null,
+      "phone": "053-803-6185~6189",
+      "email": null,
+      "instagram": null,
+      "blog": []
+    }
   }
 ]

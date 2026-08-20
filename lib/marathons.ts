@@ -20,6 +20,10 @@ import {
 
 const MARATHONS_API_URL = "https://www.apizoa.com/api/v1/marathons";
 const USE_LOCAL_MARATHON_DATA = true;
+const LOCAL_MARATHON_DATA_FILES = [
+  "marathons_2026.json",
+  "marathons_2027.json",
+] as const;
 
 export type MarathonHeaderContent = {
   icon: LucideIcon;
@@ -174,14 +178,19 @@ export type MarathonDataResult = {
 export async function getMarathons(): Promise<MarathonDataResult> {
   if (USE_LOCAL_MARATHON_DATA) {
     try {
-      const filePath = path.join(
-        process.cwd(),
-        "data",
-        "marathons",
-        "marathons_2026.json",
+      const datasets = await Promise.all(
+        LOCAL_MARATHON_DATA_FILES.map(async (fileName) => {
+          const filePath = path.join(
+            process.cwd(),
+            "data",
+            "marathons",
+            fileName,
+          );
+          const contents = await readFile(filePath, "utf-8");
+          return JSON.parse(contents) as Marathon[];
+        }),
       );
-      const contents = await readFile(filePath, "utf-8");
-      return { marathons: JSON.parse(contents) as Marathon[], error: false };
+      return { marathons: datasets.flat(), error: false };
     } catch (error) {
       console.error("Failed to load local marathons", error);
       return { marathons: [], error: true };

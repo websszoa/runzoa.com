@@ -11,11 +11,9 @@ import {
   Clock,
   Feather,
   Gift,
-  Globe,
   Handshake,
   ListChecks,
   MapPin,
-  MousePointerClick,
   Phone,
   Tag,
   Users,
@@ -116,13 +114,6 @@ export default function DetailInfo({ marathon }: { marathon: Marathon }) {
           value: `약 ${marathon.info.scale.toLocaleString("ko-KR")}명`,
         }
       : null,
-    marathon.info.program
-      ? {
-          icon: <ListChecks className="size-4 shrink-0 text-violet-500" />,
-          label: "프로그램",
-          value: marathon.info.program,
-        }
-      : null,
     marathon.info.souvenir
       ? {
           icon: <Gift className="size-4 shrink-0 text-pink-500" />,
@@ -158,40 +149,6 @@ export default function DetailInfo({ marathon }: { marathon: Marathon }) {
           ),
         }
       : null,
-    marathon.event.site
-      ? {
-          icon: <Globe className="size-4 shrink-0 text-sky-500" />,
-          label: "대회 사이트",
-          value: (
-            <a
-              href={marathon.event.site}
-              target="_blank"
-              rel="noreferrer"
-              className="underline underline-offset-4 hover:text-brand"
-            >
-              공식 사이트
-            </a>
-          ),
-        }
-      : null,
-    marathon.registration.site
-      ? {
-          icon: (
-            <MousePointerClick className="size-4 shrink-0 text-indigo-500" />
-          ),
-          label: "접수 사이트",
-          value: (
-            <a
-              href={marathon.registration.site}
-              target="_blank"
-              rel="noreferrer"
-              className="underline underline-offset-4 hover:text-brand"
-            >
-              참가 신청
-            </a>
-          ),
-        }
-      : null,
     instagramHref
       ? {
           icon: <Camera className="size-4 shrink-0 text-pink-500" />,
@@ -213,6 +170,13 @@ export default function DetailInfo({ marathon }: { marathon: Marathon }) {
           icon: <Feather className="size-4 shrink-0 text-violet-500" />,
           label: "주차",
           value: marathon.info.park,
+        }
+      : null,
+    marathon.info.program
+      ? {
+          icon: <ListChecks className="size-4 shrink-0 text-violet-500" />,
+          label: "프로그램",
+          value: marathon.info.program,
         }
       : null,
     marathon.info.memo
