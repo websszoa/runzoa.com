@@ -5,6 +5,16 @@ import { useDeferredValue, useEffect, useMemo, useState } from "react";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
+import {
+  Sheet,
+  SheetClose,
+  SheetContent,
+  SheetDescription,
+  SheetFooter,
+  SheetHeader,
+  SheetTitle,
+  SheetTrigger,
+} from "@/components/ui/sheet";
 import type { Marathon } from "@/lib/marathons";
 import {
   ArrowRight,
@@ -12,6 +22,7 @@ import {
   MapPin,
   RotateCcw,
   Search,
+  SlidersHorizontal,
   Tag,
   Users,
   WalletCards,
@@ -86,6 +97,7 @@ export default function MarathonList({
   const [includePast, setIncludePast] = useState(initialIncludePast);
   const [sortOrder, setSortOrder] = useState<SortOrder>("개최일 빠른순");
   const [visibleCount, setVisibleCount] = useState(PAGE_SIZE);
+  const [isFilterOpen, setIsFilterOpen] = useState(false);
   const deferredQuery = useDeferredValue(
     query.trim().toLocaleLowerCase("ko-KR"),
   );
@@ -199,6 +211,15 @@ export default function MarathonList({
     scale !== "전체" ||
     includePast,
   );
+  const activeFilterCount = [
+    raceType !== "전체",
+    status !== "전체",
+    year !== null,
+    month !== null,
+    region !== "전체",
+    scale !== "전체",
+    includePast,
+  ].filter(Boolean).length;
   const updateFilter = (callback: () => void) => {
     callback();
     setVisibleCount(PAGE_SIZE);
@@ -239,22 +260,188 @@ export default function MarathonList({
               개가 있습니다.
             </p>
           </div>
-          <ListFilterSelect
-            label="개최일 정렬"
-            hideLabel
-            value={sortOrder}
-            onChange={(value) =>
-              updateFilter(() => setSortOrder(value as SortOrder))
-            }
-            options={[
-              { value: "개최일 빠른순", label: "개최일 빠른순" },
-              { value: "개최일 느린순", label: "개최일 느린순" },
-            ]}
-            triggerClassName="w-36"
-          />
+          <div className="hidden sm:block">
+            <ListFilterSelect
+              label="개최일 정렬"
+              hideLabel
+              value={sortOrder}
+              onChange={(value) =>
+                updateFilter(() => setSortOrder(value as SortOrder))
+              }
+              options={[
+                { value: "개최일 빠른순", label: "개최일 빠른순" },
+                { value: "개최일 느린순", label: "개최일 느린순" },
+              ]}
+              triggerClassName="w-36"
+            />
+          </div>
         </div>
 
-        <Card className="mb-6 gap-0 border border-border py-0 shadow-none ring-0">
+        <div className="mb-6 sm:hidden">
+          <Sheet open={isFilterOpen} onOpenChange={setIsFilterOpen}>
+            <SheetTrigger
+              render={
+                <Button
+                  type="button"
+                  variant="outline"
+                  className="w-full justify-center"
+                  aria-expanded={isFilterOpen}
+                  aria-haspopup="dialog"
+                />
+              }
+            >
+              <SlidersHorizontal className="size-4" aria-hidden="true" />
+              필터
+              {activeFilterCount > 0 && (
+                <Badge className="min-w-5 justify-center bg-brand px-1.5 text-white">
+                  {activeFilterCount}
+                </Badge>
+              )}
+            </SheetTrigger>
+
+            <SheetContent
+              side="bottom"
+              className="max-h-[88dvh] gap-0 rounded-t-2xl shadow-none"
+            >
+              <SheetHeader className="border-b px-5 py-4">
+                <SheetTitle className="font-paperlogy text-lg font-semibold">
+                  대회 필터
+                </SheetTitle>
+                <SheetDescription>
+                  원하는 조건을 선택해 대회를 찾아보세요.
+                </SheetDescription>
+              </SheetHeader>
+
+              <div className="grid grid-cols-2 gap-x-3 gap-y-4 overflow-y-auto px-4 py-5">
+                <div className="col-span-2">
+                  <ListFilterSelect
+                    label="개최일 정렬"
+                    value={sortOrder}
+                    onChange={(value) =>
+                      updateFilter(() => setSortOrder(value as SortOrder))
+                    }
+                    options={[
+                      { value: "개최일 빠른순", label: "개최일 빠른순" },
+                      { value: "개최일 느린순", label: "개최일 느린순" },
+                    ]}
+                  />
+                </div>
+                <ListFilterSelect
+                  label="대회 종류"
+                  value={raceType}
+                  onChange={(value) => updateFilter(() => setRaceType(value))}
+                  options={[
+                    { value: "전체", label: "모든 종류" },
+                    ...types.map((item) => ({ value: item, label: item })),
+                  ]}
+                />
+                <ListFilterSelect
+                  label="접수 상태"
+                  value={status}
+                  onChange={(value) =>
+                    updateFilter(() =>
+                      setStatus(value as RegistrationFilter),
+                    )
+                  }
+                  options={[
+                    { value: "전체", label: "모든 상태" },
+                    { value: "접수예정", label: "접수 예정" },
+                    { value: "접수중", label: "접수 중" },
+                    { value: "접수마감", label: "접수 마감" },
+                  ]}
+                />
+                <ListFilterSelect
+                  label="개최 연도"
+                  value={year?.toString() ?? "전체"}
+                  onChange={(value) =>
+                    updateFilter(() =>
+                      setYear(value === "전체" ? null : Number(value)),
+                    )
+                  }
+                  options={[
+                    { value: "전체", label: "모든 연도" },
+                    ...years.map((item) => ({
+                      value: String(item),
+                      label: `${item}년`,
+                    })),
+                  ]}
+                />
+                <ListFilterSelect
+                  label="개최 월"
+                  value={month?.toString() ?? "전체"}
+                  onChange={(value) =>
+                    updateFilter(() =>
+                      setMonth(value === "전체" ? null : Number(value)),
+                    )
+                  }
+                  options={[
+                    { value: "전체", label: "모든 월" },
+                    ...MONTHS.map((item) => ({
+                      value: String(item),
+                      label: `${item}월`,
+                    })),
+                  ]}
+                />
+                <ListFilterSelect
+                  label="개최 지역"
+                  value={region}
+                  onChange={(value) => updateFilter(() => setRegion(value))}
+                  options={[
+                    { value: "전체", label: "전국" },
+                    ...regions.map((item) => ({ value: item, label: item })),
+                  ]}
+                />
+                <ListFilterSelect
+                  label="개최 규모"
+                  value={scale}
+                  onChange={(value) =>
+                    updateFilter(() => setScale(value as ScaleFilter))
+                  }
+                  options={[
+                    { value: "전체", label: "모든 규모" },
+                    { value: "5천명 이하", label: "5천명 이하" },
+                    { value: "5천~1만명", label: "5천~1만명" },
+                    { value: "1만~2만명", label: "1만~2만명" },
+                    { value: "2만명 이상", label: "2만명 이상" },
+                  ]}
+                />
+                <ListFilterSelect
+                  label="지난 대회"
+                  value={includePast ? "포함" : "제외"}
+                  onChange={(value) =>
+                    updateFilter(() => setIncludePast(value === "포함"))
+                  }
+                  options={[
+                    { value: "제외", label: "제외" },
+                    { value: "포함", label: "포함" },
+                  ]}
+                />
+              </div>
+
+              <SheetFooter className="grid grid-cols-[auto_minmax(0,1fr)] gap-2 border-t bg-popover p-4">
+                <Button
+                  type="button"
+                  variant="outline"
+                  onClick={resetFilters}
+                  disabled={!hasActiveFilters}
+                >
+                  <RotateCcw className="size-4" aria-hidden="true" />
+                  초기화
+                </Button>
+                <SheetClose
+                  render={
+                    <Button type="button" className="bg-brand text-white" />
+                  }
+                >
+                  {filteredMarathons.length.toLocaleString("ko-KR")}개 대회
+                  보기
+                </SheetClose>
+              </SheetFooter>
+            </SheetContent>
+          </Sheet>
+        </div>
+
+        <Card className="mb-6 hidden gap-0 border border-border py-0 shadow-none ring-0 sm:flex">
           <CardContent className="p-4 sm:p-5">
             <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4 xl:grid-cols-7">
               <ListFilterSelect
