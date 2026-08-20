@@ -1,7 +1,7 @@
 "use client";
 
 import Link from "next/link";
-import { useDeferredValue, useMemo, useState } from "react";
+import { useDeferredValue, useEffect, useMemo, useState } from "react";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
@@ -40,16 +40,22 @@ type MarathonListProps = {
   marathons: Marathon[];
   hasError?: boolean;
   initialStatus?: RegistrationFilter;
+  initialYear?: number | null;
+  initialMonth?: number | null;
+  initialRaceType?: string;
+  initialRegion?: string;
+  initialScale?: ScaleFilter;
+  initialIncludePast?: boolean;
 };
 
 type SortOrder = "개최일 빠른순" | "개최일 느린순";
-type ScaleFilter =
+export type ScaleFilter =
   | "전체"
   | "5천명 이하"
   | "5천~1만명"
   | "1만~2만명"
   | "2만명 이상";
-type RegistrationFilter =
+export type RegistrationFilter =
   | "전체"
   | "접수예정"
   | "접수중"
@@ -62,21 +68,55 @@ export default function MarathonList({
   marathons,
   hasError = false,
   initialStatus = "전체",
+  initialYear = null,
+  initialMonth = null,
+  initialRaceType = "전체",
+  initialRegion = "전체",
+  initialScale = "전체",
+  initialIncludePast = false,
 }: MarathonListProps) {
   const [searchInput, setSearchInput] = useState("");
   const [query, setQuery] = useState("");
-  const [raceType, setRaceType] = useState("전체");
+  const [raceType, setRaceType] = useState(initialRaceType);
   const [status, setStatus] = useState<RegistrationFilter>(initialStatus);
-  const [year, setYear] = useState<number | null>(null);
-  const [month, setMonth] = useState<number | null>(null);
-  const [region, setRegion] = useState("전체");
-  const [scale, setScale] = useState<ScaleFilter>("전체");
-  const [includePast, setIncludePast] = useState(false);
+  const [year, setYear] = useState<number | null>(initialYear);
+  const [month, setMonth] = useState<number | null>(initialMonth);
+  const [region, setRegion] = useState(initialRegion);
+  const [scale, setScale] = useState<ScaleFilter>(initialScale);
+  const [includePast, setIncludePast] = useState(initialIncludePast);
   const [sortOrder, setSortOrder] = useState<SortOrder>("개최일 빠른순");
   const [visibleCount, setVisibleCount] = useState(PAGE_SIZE);
   const deferredQuery = useDeferredValue(
     query.trim().toLocaleLowerCase("ko-KR"),
   );
+
+  useEffect(() => {
+    const url = new URL(window.location.href);
+
+    setFilterParam(url.searchParams, "type", raceType, "전체");
+    setFilterParam(
+      url.searchParams,
+      "status",
+      status === "접수중"
+        ? "open"
+        : status === "접수예정"
+          ? "upcoming"
+          : status === "접수마감"
+            ? "closed"
+            : null,
+    );
+    setFilterParam(url.searchParams, "year", year);
+    setFilterParam(url.searchParams, "month", month);
+    setFilterParam(url.searchParams, "region", region, "전체");
+    setFilterParam(url.searchParams, "scale", scale, "전체");
+    setFilterParam(url.searchParams, "past", includePast ? "true" : null);
+
+    window.history.replaceState(
+      null,
+      "",
+      `${url.pathname}${url.search}${url.hash}`,
+    );
+  }, [includePast, month, raceType, region, scale, status, year]);
 
   const regions = useMemo(
     () =>
@@ -566,4 +606,18 @@ function matchesScale(value: number | null, filter: ScaleFilter) {
   if (filter === "5천~1만명") return value > 5_000 && value <= 10_000;
   if (filter === "1만~2만명") return value > 10_000 && value < 20_000;
   return value >= 20_000;
+}
+
+function setFilterParam(
+  params: URLSearchParams,
+  key: string,
+  value: number | string | null,
+  defaultValue?: string,
+) {
+  if (value === null || value === defaultValue) {
+    params.delete(key);
+    return;
+  }
+
+  params.set(key, String(value));
 }
