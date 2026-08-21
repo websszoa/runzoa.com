@@ -1,7 +1,7 @@
 import { APP_EMAIL, APP_INSTAGRAM_URL, APP_THREADS_URL } from "@/lib/constants";
 import {
+  BarChart3,
   CalendarDays,
-  Heart,
   Info,
   List,
   Map,
@@ -50,6 +50,7 @@ export const SHEET_NAVIGATION: MenuItem[][] = [
   ],
   [
     { icon: Info, label: "런조아 소개", href: "/about" },
+    { icon: BarChart3, label: "사이트 통계", href: "/analytics" },
     { icon: Newspaper, label: "공지사항", href: "/news?type=notice" },
     { icon: MessageCircle, label: "문의사항", href: "/support?type=inquiry" },
     { icon: ScrollText, label: "운영방침", href: "/policy" },
@@ -100,7 +101,10 @@ export const FOOTER_NAVIGATION: NavigationSection[] = [
   },
   {
     title: "아카이브",
-    links: [{ label: "연도별 대회", href: "/marathon-year" }],
+    links: [
+      { label: "연도별 대회", href: "/marathon-year" },
+      { label: "사이트 통계", href: "/analytics" },
+    ],
   },
 ];
 

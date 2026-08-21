@@ -41,17 +41,19 @@ export default function MarathonHeader({
               </span>
             ))}
           </p>
-          <div className="mt-7 flex flex-wrap gap-x-6 gap-y-3 font-anyvid text-sm text-muted-foreground">
-            {features.map(({ icon: FeatureIcon, label }) => (
-              <span key={label} className="flex items-center gap-2">
-                <FeatureIcon
-                  aria-hidden="true"
-                  className="size-4 text-brand"
-                />
-                {label}
-              </span>
-            ))}
-          </div>
+          {features.length > 0 && (
+            <div className="mt-7 flex flex-wrap gap-x-6 gap-y-3 font-anyvid text-sm text-muted-foreground">
+              {features.map(({ icon: FeatureIcon, label }) => (
+                <span key={label} className="flex items-center gap-2">
+                  <FeatureIcon
+                    aria-hidden="true"
+                    className="size-4 text-brand"
+                  />
+                  {label}
+                </span>
+              ))}
+            </div>
+          )}
         </div>
       </div>
     </section>

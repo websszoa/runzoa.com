@@ -21,13 +21,21 @@ type Props = {
   initialYear: number;
 };
 
+const PAGE_SIZE = 200;
+
 export default function MarathonYearList({ datasets, initialYear }: Props) {
   const years = useMemo(
     () => Object.keys(datasets).map(Number).sort((a, b) => b - a),
     [datasets],
   );
   const [year, setYear] = useState(initialYear);
+  const [visibleCount, setVisibleCount] = useState(PAGE_SIZE);
   const marathons = useMemo(() => datasets[year] ?? [], [datasets, year]);
+
+  const selectYear = (nextYear: number) => {
+    setYear(nextYear);
+    setVisibleCount(PAGE_SIZE);
+  };
 
   return (
     <section className="border-t bg-muted/20" aria-label="연도별 마라톤 대회">
@@ -40,7 +48,7 @@ export default function MarathonYearList({ datasets, initialYear }: Props) {
                   key={item}
                   type="button"
                   variant={year === item ? "default" : "outline"}
-                  onClick={() => setYear(item)}
+                  onClick={() => selectYear(item)}
                   aria-pressed={year === item}
                   className={cn(
                     "h-10 min-w-24 font-paperlogy text-sm font-semibold",
@@ -73,7 +81,7 @@ export default function MarathonYearList({ datasets, initialYear }: Props) {
               </TableRow>
             </TableHeader>
             <TableBody>
-              {marathons.map((marathon, index) => {
+              {marathons.slice(0, visibleCount).map((marathon, index) => {
                 const site = marathon.event.site ?? marathon.registration.site;
 
                 return (
@@ -137,6 +145,18 @@ export default function MarathonYearList({ datasets, initialYear }: Props) {
             </TableBody>
           </Table>
         </div>
+        {visibleCount < marathons.length && (
+          <div className="mt-8 flex justify-center">
+            <Button
+              type="button"
+              variant="outline"
+              size="lg"
+              onClick={() => setVisibleCount((count) => count + PAGE_SIZE)}
+            >
+              대회 200개 더보기
+            </Button>
+          </div>
+        )}
       </div>
     </section>
   );

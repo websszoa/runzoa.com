@@ -43,13 +43,9 @@ export const MARATHON_HEADERS = {
     title: ["지난 마라톤 대회를", "연도별로 찾아보세요!"],
     description: [
       "연도를 선택해 국내 마라톤 대회의 개최 정보와 공식 홈페이지를 확인해 보세요.",
-      "2024년과 2025년 전체 대회를 한눈에 비교할 수 있습니다.",
+      "2024년부터 2026년까지 전체 대회를 한눈에 비교할 수 있습니다.",
     ],
-    features: [
-      { icon: CalendarRange, label: "연도별 조회" },
-      { icon: MapPin, label: "개최 장소 확인" },
-      { icon: Rows3, label: "전체 대회 목록" },
-    ],
+    features: [],
   },
   search: {
     icon: Search,
