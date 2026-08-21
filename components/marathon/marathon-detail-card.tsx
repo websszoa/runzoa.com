@@ -37,7 +37,7 @@ export default function MarathonDetailCard({
   const [imageError, setImageError] = useState(false);
   const [imageLoading, setImageLoading] = useState(true);
   const registrationStatus = getRegistrationStatus(marathon);
-  const distances = Object.keys(marathon.registration.price);
+  const distances = Object.keys(marathon.registration.price ?? {});
 
   return (
     <article className="min-w-0">

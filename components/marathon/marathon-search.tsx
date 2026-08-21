@@ -13,7 +13,12 @@ import {
   SelectTrigger,
   SelectValue,
 } from "@/components/ui/select";
-import { cn, getCurrentKoreanDate, getRegistrationStatus } from "@/lib/utils";
+import {
+  cn,
+  getCurrentKoreanDate,
+  getRegistrationStatus,
+  hasRegistrationStartDate,
+} from "@/lib/utils";
 
 import MarathonDetailCard from "@/components/marathon/marathon-detail-card";
 import MarathonSearchForm from "@/components/marathon/marathon-search-form";
@@ -115,6 +120,8 @@ export default function MarathonSearch({
         .toLocaleLowerCase("ko-KR");
 
       return (
+        (hasRegistrationStartDate(marathon) ||
+          (Boolean(deferredQuery) && status === null)) &&
         (!deferredQuery || searchable.includes(deferredQuery)) &&
         (pastRaces === "include" ||
           marathon.event.startDate >= getCurrentKoreanDate()) &&
@@ -643,7 +650,7 @@ function matchesScale(value: number | null, filter: ScaleFilter | null) {
 }
 
 function hasDistance(marathon: Marathon, distance: DistanceFilter) {
-  return Object.keys(marathon.registration.price).some((course) => {
+  return Object.keys(marathon.registration.price ?? {}).some((course) => {
     const normalized = course.toUpperCase().replaceAll(" ", "");
 
     if (distance === "5K") return /^5K(M)?/.test(normalized);

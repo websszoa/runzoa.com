@@ -43,6 +43,7 @@ import {
   getRegistrationBadgeClassName,
   getRegistrationLabel,
   getRegistrationStatus,
+  hasRegistrationStartDate,
 } from "@/lib/utils";
 
 import MarathonSearchForm from "@/components/marathon/marathon-search-form";
@@ -170,6 +171,8 @@ export default function MarathonList({
         .toLocaleLowerCase("ko-KR");
 
       return (
+        (hasRegistrationStartDate(marathon) ||
+          (Boolean(deferredQuery) && status === "전체")) &&
         (!deferredQuery || searchable.includes(deferredQuery)) &&
         (includePast || marathon.event.startDate >= today) &&
         (raceType === "전체" || marathon.info.type === raceType) &&
@@ -588,7 +591,7 @@ export default function MarathonList({
 
 function MarathonListRow({ marathon }: { marathon: Marathon }) {
   const registrationStatus = getRegistrationStatus(marathon);
-  const distances = Object.keys(marathon.registration.price);
+  const distances = Object.keys(marathon.registration.price ?? {});
   const site = marathon.event.site ?? marathon.registration.site;
   const weekday = formatMarathonDate(marathon.event.startDate).match(
     /\((.+)\)/,

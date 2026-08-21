@@ -1,7 +1,11 @@
 import Link from "next/link";
 import { cn } from "@/lib/utils";
 import { buttonVariants } from "@/components/ui/button";
-import { getCurrentKoreanDate, getRegistrationStatus } from "@/lib/utils";
+import {
+  getCurrentKoreanDate,
+  getRegistrationStatus,
+  hasRegistrationStartDate,
+} from "@/lib/utils";
 import type { Marathon } from "@/lib/marathons";
 import { APP_SHORT_DESCRIPTION, APP_SLOGAN } from "@/lib/constants";
 import {
@@ -16,7 +20,8 @@ import {
 export default function MainHero({ marathons }: { marathons: Marathon[] }) {
   const today = getCurrentKoreanDate();
   const availableMarathons = marathons.filter(
-    (marathon) => marathon.event.startDate >= today,
+    (marathon) =>
+      hasRegistrationStartDate(marathon) && marathon.event.startDate >= today,
   );
   const weekendCount = getWeekendMarathonCount(availableMarathons, today);
   const currentMonth = today.slice(0, 7);

@@ -242,7 +242,7 @@ function RaceList({ marathons }: { marathons: Marathon[] }) {
     <div className="divide-y overflow-hidden rounded-2xl border bg-card">
       {marathons.map((marathon) => {
         const status = getRegistrationStatus(marathon);
-        const distances = Object.keys(marathon.registration.price);
+        const distances = Object.keys(marathon.registration.price ?? {});
         return (
           <article
             key={marathon.slug}

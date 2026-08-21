@@ -44,7 +44,7 @@ export default function DetailUpcoming({
         {marathons.map((marathon) => {
           const registrationDate = marathon.registration.startDate as string;
           const registrationStatus = getRegistrationStatus(marathon);
-          const distances = Object.keys(marathon.registration.price);
+          const distances = Object.keys(marathon.registration.price ?? {});
           const location = [marathon.location.region, marathon.location.venue]
             .filter(Boolean)
             .join(" · ");

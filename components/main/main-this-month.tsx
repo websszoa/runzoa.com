@@ -4,6 +4,7 @@ import { ArrowRight, CalendarDays, MapPin } from "lucide-react";
 import {
   formatMarathonDate,
   getCurrentKoreanDate,
+  hasRegistrationStartDate,
 } from "@/lib/utils";
 
 export default function MainThisMonth({
@@ -17,6 +18,7 @@ export default function MainThisMonth({
   const monthlyMarathons = marathons
     .filter(
       (marathon) =>
+        hasRegistrationStartDate(marathon) &&
         marathon.event.startDate.startsWith(currentMonth) &&
         marathon.event.startDate >= today,
     )

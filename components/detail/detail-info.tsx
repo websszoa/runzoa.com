@@ -50,7 +50,12 @@ export default function DetailInfo({ marathon }: { marathon: Marathon }) {
   const location = [marathon.location.region, marathon.location.venue]
     .filter(Boolean)
     .join(" · ");
-  const distances = Object.keys(marathon.registration.price);
+  const distances = Object.keys(marathon.registration.price ?? {});
+  const registrationPrices = Object.fromEntries(
+    Object.entries(marathon.registration.price ?? {}).filter(
+      ([, price]) => price !== null,
+    ),
+  );
   const instagramHref = marathon.hosts.instagram
     ? marathon.hosts.instagram.startsWith("http")
       ? marathon.hosts.instagram
@@ -98,13 +103,13 @@ export default function DetailInfo({ marathon }: { marathon: Marathon }) {
           value: distances.join(", "),
         }
       : null,
-    distances.length
+    Object.keys(registrationPrices).length
       ? {
           icon: (
             <CircleDollarSign className="size-4 shrink-0 text-emerald-500" />
           ),
           label: "참가비",
-          value: formatMarathonPrices(marathon.registration.price),
+          value: formatMarathonPrices(registrationPrices),
         }
       : null,
     marathon.info.scale
@@ -112,13 +117,6 @@ export default function DetailInfo({ marathon }: { marathon: Marathon }) {
           icon: <Users className="size-4 shrink-0 text-sky-500" />,
           label: "규모",
           value: `약 ${marathon.info.scale.toLocaleString("ko-KR")}명`,
-        }
-      : null,
-    marathon.info.souvenir
-      ? {
-          icon: <Gift className="size-4 shrink-0 text-pink-500" />,
-          label: "기념품",
-          value: marathon.info.souvenir,
         }
       : null,
     marathon.hosts.organizer
@@ -170,6 +168,13 @@ export default function DetailInfo({ marathon }: { marathon: Marathon }) {
           icon: <Feather className="size-4 shrink-0 text-violet-500" />,
           label: "주차",
           value: marathon.info.park,
+        }
+      : null,
+    marathon.info.souvenir
+      ? {
+          icon: <Gift className="size-4 shrink-0 text-pink-500" />,
+          label: "기념품",
+          value: marathon.info.souvenir,
         }
       : null,
     marathon.info.program

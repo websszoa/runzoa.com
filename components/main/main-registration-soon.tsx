@@ -9,6 +9,7 @@ import {
   getRegistrationBadgeClassName,
   getRegistrationLabel,
   getRegistrationStatus,
+  hasRegistrationStartDate,
 } from "@/lib/utils";
 import {
   AlarmClock,
@@ -28,6 +29,7 @@ export default function MainRegistrationSoon({
   const upcomingMarathons = marathons
     .filter(
       (marathon) =>
+        hasRegistrationStartDate(marathon) &&
         getRegistrationStatus(marathon) === "접수예정" &&
         marathon.event.startDate >= today,
     )
@@ -86,7 +88,9 @@ export default function MainRegistrationSoon({
             {upcomingMarathons.map((marathon) => {
               const registrationDate = marathon.registration.startDate;
               const registrationStatus = getRegistrationStatus(marathon);
-              const distances = Object.keys(marathon.registration.price);
+              const distances = Object.keys(
+                marathon.registration.price ?? {},
+              );
               const location = [
                 marathon.location.region,
                 marathon.location.venue,

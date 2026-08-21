@@ -6,6 +6,7 @@ import {
   formatMarathonDate,
   getCurrentKoreanDate,
   getRegistrationStatus,
+  hasRegistrationStartDate,
 } from "@/lib/utils";
 
 export default function MainOpenRegistration({
@@ -17,6 +18,7 @@ export default function MainOpenRegistration({
   const openMarathons = marathons
     .filter(
       (marathon) =>
+        hasRegistrationStartDate(marathon) &&
         getRegistrationStatus(marathon) === "접수중" &&
         marathon.event.startDate >= today,
     )

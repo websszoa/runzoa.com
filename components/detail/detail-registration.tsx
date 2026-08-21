@@ -16,9 +16,21 @@ export default function DetailRegistration({
 }: {
   marathon: Marathon;
 }) {
-  const prices = Object.entries(marathon.registration.price);
+  const prices = Object.entries(marathon.registration.price ?? {}).filter(
+    (entry): entry is [string, number | string] => entry[1] !== null,
+  );
   const schedule = Object.entries(marathon.event.schedule ?? {});
   const additionalRegistration = marathon.registration.additional;
+  const hasAdditionalRegistrationInfo = Boolean(
+    additionalRegistration &&
+      Object.values(additionalRegistration).some(Boolean),
+  );
+  const hasRegistrationInfo = Boolean(
+    marathon.registration.startDate ||
+      marathon.registration.endDate ||
+      prices.length > 0 ||
+      hasAdditionalRegistrationInfo,
+  );
   const registrationStatus = getRegistrationStatus(marathon);
 
   return (
@@ -125,94 +137,102 @@ export default function DetailRegistration({
         </div>
 
         <div className="flex flex-1 flex-col p-5 font-anyvid md:p-6">
-          <div className="space-y-1 text-sm text-muted-foreground">
-            <p className="flex items-start gap-2">
-              <Asterisk
-                className="h-4.5 w-4.5 shrink-0 text-red-400"
-                aria-hidden="true"
-              />
-              <span>
-                접수 시작 :{" "}
-                {marathon.registration.startDate
-                  ? `${formatMarathonDate(marathon.registration.startDate)}${marathon.registration.startTime ? ` · ${marathon.registration.startTime}` : ""}`
-                  : "일정 미정"}
-              </span>
-            </p>
-            <p className="flex items-start gap-2">
-              <Asterisk
-                className="h-4.5 w-4.5 shrink-0 text-blue-400"
-                aria-hidden="true"
-              />
-              <span>
-                접수 마감 :{" "}
-                {marathon.registration.endDate
-                  ? `${formatMarathonDate(marathon.registration.endDate)}${marathon.registration.endTime ? ` · ${marathon.registration.endTime}` : ""}`
-                  : marathon.registration.startDate
-                    ? "선착순 마감"
-                    : "-"}
-              </span>
-            </p>
-          </div>
-
-          {prices.length > 0 && (
-            <div className="mt-6 overflow-hidden rounded-xl border bg-muted/20 text-sm">
-              <div className="divide-y">
-                {prices.map(([distance, price]) => (
-                  <div
-                    key={distance}
-                    className="grid grid-cols-[130px_minmax(0,1fr)]"
-                  >
-                    <span className="flex items-center justify-center border-r px-2 py-2.5 text-center text-sm text-muted-foreground">
-                      {distance}
-                    </span>
-                    <span className="min-w-0 px-3 py-2.5 text-right text-sm leading-5 text-muted-foreground">
-                      {formatPrice(price)}
-                    </span>
-                  </div>
-                ))}
-              </div>
-            </div>
-          )}
-
-          {additionalRegistration && (
-            <div className="mt-6 space-y-1 text-sm text-muted-foreground">
-              <p className="flex items-start gap-2">
-                <Asterisk
-                  className="h-4.5 w-4.5 shrink-0 text-red-400"
-                  aria-hidden="true"
-                />
-                <span>
-                  추가 접수 시작 :{" "}
-                  {additionalRegistration.startDate
-                    ? `${formatMarathonDate(additionalRegistration.startDate)}${additionalRegistration.startTime ? ` · ${additionalRegistration.startTime}` : ""}`
-                    : "일정 미정"}
-                </span>
-              </p>
-              <p className="flex items-start gap-2">
-                <Asterisk
-                  className="h-4.5 w-4.5 shrink-0 text-blue-400"
-                  aria-hidden="true"
-                />
-                <span>
-                  추가 접수 마감 :{" "}
-                  {additionalRegistration.endDate
-                    ? `${formatMarathonDate(additionalRegistration.endDate)}${additionalRegistration.endTime ? ` · ${additionalRegistration.endTime}` : ""}`
-                    : additionalRegistration.startDate
-                      ? "선착순 마감"
-                      : "-"}
-                </span>
-              </p>
-              {additionalRegistration.memo && (
+          {hasRegistrationInfo ? (
+            <>
+              <div className="space-y-1 text-sm text-muted-foreground">
                 <p className="flex items-start gap-2">
                   <Asterisk
-                    className="h-4.5 w-4.5 shrink-0 text-amber-400"
+                    className="h-4.5 w-4.5 shrink-0 text-red-400"
                     aria-hidden="true"
                   />
-                  <span className="break-keep">
-                    {additionalRegistration.memo}
+                  <span>
+                    접수 시작 :{" "}
+                    {marathon.registration.startDate
+                      ? `${formatMarathonDate(marathon.registration.startDate)}${marathon.registration.startTime ? ` · ${marathon.registration.startTime}` : ""}`
+                      : "일정 미정"}
                   </span>
                 </p>
+                <p className="flex items-start gap-2">
+                  <Asterisk
+                    className="h-4.5 w-4.5 shrink-0 text-blue-400"
+                    aria-hidden="true"
+                  />
+                  <span>
+                    접수 마감 :{" "}
+                    {marathon.registration.endDate
+                      ? `${formatMarathonDate(marathon.registration.endDate)}${marathon.registration.endTime ? ` · ${marathon.registration.endTime}` : ""}`
+                      : marathon.registration.startDate
+                        ? "선착순 마감"
+                        : "-"}
+                  </span>
+                </p>
+              </div>
+
+              {prices.length > 0 && (
+                <div className="mt-6 overflow-hidden rounded-xl border bg-muted/20 text-sm">
+                  <div className="divide-y">
+                    {prices.map(([distance, price]) => (
+                      <div
+                        key={distance}
+                        className="grid grid-cols-[130px_minmax(0,1fr)]"
+                      >
+                        <span className="flex items-center justify-center border-r px-2 py-2.5 text-center text-sm text-muted-foreground">
+                          {distance}
+                        </span>
+                        <span className="min-w-0 px-3 py-2.5 text-right text-sm leading-5 text-muted-foreground">
+                          {formatPrice(price)}
+                        </span>
+                      </div>
+                    ))}
+                  </div>
+                </div>
               )}
+
+              {hasAdditionalRegistrationInfo && additionalRegistration && (
+                <div className="mt-6 space-y-1 text-sm text-muted-foreground">
+                  <p className="flex items-start gap-2">
+                    <Asterisk
+                      className="h-4.5 w-4.5 shrink-0 text-red-400"
+                      aria-hidden="true"
+                    />
+                    <span>
+                      추가 접수 시작 :{" "}
+                      {additionalRegistration.startDate
+                        ? `${formatMarathonDate(additionalRegistration.startDate)}${additionalRegistration.startTime ? ` · ${additionalRegistration.startTime}` : ""}`
+                        : "일정 미정"}
+                    </span>
+                  </p>
+                  <p className="flex items-start gap-2">
+                    <Asterisk
+                      className="h-4.5 w-4.5 shrink-0 text-blue-400"
+                      aria-hidden="true"
+                    />
+                    <span>
+                      추가 접수 마감 :{" "}
+                      {additionalRegistration.endDate
+                        ? `${formatMarathonDate(additionalRegistration.endDate)}${additionalRegistration.endTime ? ` · ${additionalRegistration.endTime}` : ""}`
+                        : additionalRegistration.startDate
+                          ? "선착순 마감"
+                          : "-"}
+                    </span>
+                  </p>
+                  {additionalRegistration.memo && (
+                    <p className="flex items-start gap-2">
+                      <Asterisk
+                        className="h-4.5 w-4.5 shrink-0 text-amber-400"
+                        aria-hidden="true"
+                      />
+                      <span className="break-keep">
+                        {additionalRegistration.memo}
+                      </span>
+                    </p>
+                  )}
+                </div>
+              )}
+            </>
+          ) : (
+            <div className="flex min-h-24 flex-1 items-center justify-center rounded-xl border bg-muted/20 px-4 text-center text-sm text-muted-foreground">
+              등록된 접수 정보가 없습니다.
             </div>
           )}
         </div>

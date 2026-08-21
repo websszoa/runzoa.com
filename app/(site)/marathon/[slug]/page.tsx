@@ -1,7 +1,11 @@
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import { getMarathons } from "@/lib/marathons";
-import { getCurrentKoreanDate, getRegistrationStatus } from "@/lib/utils";
+import {
+  getCurrentKoreanDate,
+  getRegistrationStatus,
+  hasRegistrationStartDate,
+} from "@/lib/utils";
 import MarathonDetail from "@/components/marathon/marathon-detail";
 
 type MarathonDetailPageProps = {
@@ -39,6 +43,7 @@ export default async function MarathonDetailPage({
     .filter(
       (item) =>
         item.slug !== marathon.slug &&
+        hasRegistrationStartDate(item) &&
         getRegistrationStatus(item) === "접수예정" &&
         item.registration.startDate,
     )
@@ -53,6 +58,7 @@ export default async function MarathonDetailPage({
     .filter(
       (item) =>
         item.slug !== marathon.slug &&
+        hasRegistrationStartDate(item) &&
         getRegistrationStatus(item) === "접수중" &&
         item.event.startDate >= getCurrentKoreanDate(),
     )
@@ -68,6 +74,7 @@ export default async function MarathonDetailPage({
     .filter(
       (item) =>
         item.slug !== marathon.slug &&
+        hasRegistrationStartDate(item) &&
         item.event.startDate.startsWith(eventMonth),
     )
     .sort((a, b) => a.event.startDate.localeCompare(b.event.startDate));

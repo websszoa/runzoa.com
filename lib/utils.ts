@@ -42,6 +42,10 @@ export function getRegistrationStatus(marathon: Marathon): RegistrationStatus {
   return "접수중";
 }
 
+export function hasRegistrationStartDate(marathon: Marathon): boolean {
+  return Boolean(marathon.registration.startDate?.trim());
+}
+
 function getKoreanDateTime(date: string, time: string) {
   return new Date(`${date}T${time}+09:00`);
 }
@@ -78,8 +82,12 @@ export function formatMarathonDate(date: string | null) {
   return `${formattedDate}(${weekday})`;
 }
 
-export function formatMarathonPrices(prices: Record<string, number | string>) {
-  const values = Object.values(prices);
+export function formatMarathonPrices(
+  prices: Record<string, number | string | null> | null,
+) {
+  const values = Object.values(prices ?? {}).filter(
+    (value): value is number | string => value !== null,
+  );
   if (values.length === 0) return "가격 확인";
   if (values.every((value) => typeof value === "number")) {
     const numbers = values as number[];

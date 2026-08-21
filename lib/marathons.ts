@@ -136,7 +136,7 @@ export type Marathon = {
     endTime: string | null;
     site: string | null;
     status: string | null;
-    price: Record<string, number | string>;
+    price: Record<string, number | string | null> | null;
     additional?: {
       startDate: string | null;
       endDate: string | null;
