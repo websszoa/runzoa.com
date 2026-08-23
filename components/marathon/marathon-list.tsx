@@ -43,7 +43,6 @@ import {
   getRegistrationBadgeClassName,
   getRegistrationLabel,
   getRegistrationStatus,
-  hasRegistrationStartDate,
 } from "@/lib/utils";
 
 import MarathonSearchForm from "@/components/marathon/marathon-search-form";
@@ -171,8 +170,6 @@ export default function MarathonList({
         .toLocaleLowerCase("ko-KR");
 
       return (
-        (hasRegistrationStartDate(marathon) ||
-          (Boolean(deferredQuery) && status === "전체")) &&
         (!deferredQuery || searchable.includes(deferredQuery)) &&
         (includePast || marathon.event.startDate >= today) &&
         (raceType === "전체" || marathon.info.type === raceType) &&
