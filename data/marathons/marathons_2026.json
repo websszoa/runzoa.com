@@ -16430,5 +16430,171 @@
       "email": null,
       "instagram": null
     }
+  },
+  {
+    "slug": "heart-run-2026",
+    "name": "2026 하트런",
+    "description": "2026 하트런은 서울 올림픽공원 피크닉장에서 열리는 시각장애아동을 위한 기부 마라톤 대회입니다. 10km와 5km 두 종목으로 진행되며 각 코스 1,000명씩 총 2,000명이 참가합니다. 함께 달리며 시각장애아동의 가능성과 밝은 미래를 응원하는 특별한 기부 러닝입니다.",
+    "info": {
+      "type": "마라톤",
+      "scale": 2000,
+      "park": "주차 공간이 협소하여 대중교통 이용 권장",
+      "souvenir": "티셔츠, 배번호 및 기록칩, 완주메달, 클라뷰 비건 징크 선크림, 우르오스 페이스워시, 퍼니트 링포유, 비소리 온열안대, 크라운제과 롱스·마이쮸, 해태제과 구운감자",
+      "program": "럭키드로우 및 인증 이벤트",
+      "memo": "시각장애아동을 위한 기부 러닝입니다. 현장 레이스는 10km와 5km 각각 1,000명씩 총 2,000명을 모집하며, 별도로 500명 규모의 버추얼런도 운영됩니다."
+    },
+    "event": {
+      "startDate": "2026-10-10",
+      "endDate": "2026-10-10",
+      "startTime": "10:00",
+      "endTime": null,
+      "site": "https://heartrun.co.kr",
+      "schedule": {
+        "10:20": "10km A그룹 출발",
+        "10:25": "10km B그룹 출발",
+        "10:30": "5km C그룹 출발",
+        "10:35": "5km D그룹 출발"
+      }
+    },
+    "registration": {
+      "startDate": "2026-08-19",
+      "endDate": "2026-09-11",
+      "startTime": null,
+      "endTime": null,
+      "site": "https://heartrun.co.kr",
+      "status": "접수마감",
+      "price": {
+        "10km": 50000,
+        "5km": 50000,
+        "버추얼런": 40000
+      }
+    },
+    "location": {
+      "country": "한국",
+      "region": "서울",
+      "venue": "올림픽공원 피크닉장",
+      "address": "서울특별시 송파구 올림픽로 424",
+      "latitude": 37.520934,
+      "longitude": 127.122959
+    },
+    "hosts": {
+      "organizer": "하트-하트재단",
+      "manager": "빅워크",
+      "sponsor": "국민체육진흥공단",
+      "phone": "070-4350-5663",
+      "email": null,
+      "instagram": "heart2heart.intl"
+    }
+  },
+  {
+    "slug": "bamseom-marathon-2026",
+    "name": "제5회 밤섬마라톤",
+    "description": "제5회 밤섬마라톤은 서울 상암동 월드컵공원 평화광장에서 열리는 마라톤 대회입니다. 한강 밤섬과 람사르 습지의 생태적 가치를 알리기 위해 마련된 대회로 HALF, 10km, 5km 세 종목으로 진행됩니다.",
+    "info": {
+      "type": "마라톤",
+      "scale": null,
+      "park": "월드컵공원 주차장 이용 가능(유료)",
+      "souvenir": "기념 티셔츠, 완주메달, 완주 간식",
+      "program": null,
+      "memo": "한강 밤섬과 람사르 습지의 중요성을 알리기 위한 마라톤 대회입니다. 일반 참가와 기념품을 제외한 매니아 참가로 구분해 접수합니다."
+    },
+    "event": {
+      "startDate": "2026-12-13",
+      "endDate": "2026-12-13",
+      "startTime": "08:00",
+      "endTime": null,
+      "site": "https://bamseom.com",
+      "schedule": {
+        "08:00": "대회 출발"
+      }
+    },
+    "registration": {
+      "startDate": "2026-08-06",
+      "endDate": "2026-12-06",
+      "startTime": null,
+      "endTime": null,
+      "site": "https://bamseom.com",
+      "status": null,
+      "price": {
+        "HALF": 60000,
+        "10km": 60000,
+        "5km": 60000,
+        "HALF 매니아": 45000,
+        "10km 매니아": 45000,
+        "5km 매니아": 45000
+      }
+    },
+    "location": {
+      "country": "한국",
+      "region": "서울",
+      "venue": "상암동 월드컵공원 평화광장",
+      "address": "서울 마포구 성산동 53",
+      "latitude": 37.5650560057921,
+      "longitude": 126.896211243867
+    },
+    "hosts": {
+      "organizer": "대한생활체육연맹",
+      "manager": "대한생활체육연맹",
+      "sponsor": null,
+      "phone": "02-569-5551",
+      "email": "admin@bamseom.com",
+      "instagram": null
+    }
+  },
+  {
+    "slug": "ulsan-human-rights-marathon-2026",
+    "name": "제21회 울산인권 마라톤대회",
+    "description": "제21회 울산인권마라톤대회는 차별 없는 세상을 향해 함께 달리는 울산의 인권 마라톤입니다. 울산 태화강 둔치에서 HALF, 10km, 5km 세 종목으로 진행되며 장애인과 아동·청소년을 위한 할인 참가비도 운영합니다.",
+    "info": {
+      "type": "마라톤",
+      "scale": 2000,
+      "park": null,
+      "souvenir": null,
+      "program": "개회식, 준비체조",
+      "memo": "HALF와 10km는 기록계측용 칩을 사용하며 5km는 기록칩을 사용하지 않습니다. 장애인 참가자의 경우 동반 1인의 참가비가 면제됩니다."
+    },
+    "event": {
+      "startDate": "2026-11-01",
+      "endDate": "2026-11-01",
+      "startTime": "09:00",
+      "endTime": "13:00",
+      "site": "https://www.humanrun.org",
+      "schedule": {
+        "09:00": "개회식 및 준비체조",
+        "09:30": "HALF 출발",
+        "09:35": "10km 출발",
+        "09:40": "5km 출발",
+        "13:00": "폐회선언"
+      }
+    },
+    "registration": {
+      "startDate": "2026-08-18",
+      "endDate": "2026-08-21",
+      "startTime": null,
+      "endTime": null,
+      "site": "https://www.humanrun.org",
+      "status": "접수마감",
+      "price": {
+        "HALF": 35000,
+        "10km": 35000,
+        "5km": 25000
+      }
+    },
+    "location": {
+      "country": "한국",
+      "region": "울산",
+      "venue": "태화강 둔치",
+      "address": "울산 남구 신정동 1468",
+      "latitude": 35.5503455,
+      "longitude": 129.3055657
+    },
+    "hosts": {
+      "organizer": "울산인권마라톤대회 조직위원회",
+      "manager": "사단법인 울산인권운동연대",
+      "sponsor": null,
+      "phone": null,
+      "email": null,
+      "instagram": null
+    }
   }
 ]

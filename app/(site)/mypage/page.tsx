@@ -53,6 +53,16 @@ type NewsletterRow = {
   created_at: string;
 };
 
+type CalendarEventRow = {
+  id: string;
+  provider: "naver" | "google" | "kakao";
+  marathon_slug: string;
+  marathon_name: string;
+  event_start_date: string;
+  event_location: string | null;
+  created_at: string;
+};
+
 export default async function MyPage() {
   const supabase = await createClient();
   const {
@@ -61,7 +71,8 @@ export default async function MyPage() {
 
   if (!user?.email) redirect("/");
 
-  const [profileResult, contactsResult, newsletterResult] = await Promise.all([
+  const [profileResult, contactsResult, newsletterResult, calendarResult] =
+    await Promise.all([
     supabase
       .from("profiles")
       .select(
@@ -82,11 +93,20 @@ export default async function MyPage() {
       .order("created_at", { ascending: false })
       .limit(1)
       .maybeSingle(),
+    supabase
+      .from("calendar_events")
+      .select(
+        "id, provider, marathon_slug, marathon_name, event_start_date, event_location, created_at",
+      )
+      .eq("user_id", user.id)
+      .eq("status", "created")
+      .order("event_start_date", { ascending: true }),
   ]);
 
   const profile = profileResult.data as ProfileRow | null;
   const contacts = (contactsResult.data ?? []) as ContactRow[];
   const newsletter = newsletterResult.data as NewsletterRow | null;
+  const calendarEvents = (calendarResult.data ?? []) as CalendarEventRow[];
   const fullName =
     profile?.full_name?.trim() ||
     user.user_metadata.full_name ||
@@ -112,7 +132,7 @@ export default async function MyPage() {
       />
 
       <div className="mx-auto w-full max-w-7xl space-y-6 px-4 py-8 sm:px-6 sm:py-12 lg:px-8">
-        <section className="relative overflow-hidden rounded-3xl bg-slate-950 px-6 py-7 text-white shadow-sm sm:px-8 sm:py-9">
+        <section className="relative overflow-hidden rounded-3xl bg-slate-950 px-6 py-7 text-white sm:px-8 sm:py-9">
           <div
             aria-hidden="true"
             className="absolute -right-12 -top-20 size-64 rounded-full bg-brand/25 blur-3xl"
@@ -183,6 +203,98 @@ export default async function MyPage() {
             color="text-brand"
             background="bg-brand/5"
           />
+        </section>
+
+        <section
+          id="my-calendar"
+          className="scroll-mt-24 overflow-hidden rounded-2xl border bg-white"
+        >
+          <div className="flex flex-col gap-3 border-b px-5 py-4 sm:flex-row sm:items-center sm:justify-between sm:px-6">
+            <div>
+              <h2 className="font-paperlogy text-lg font-semibold">
+                내 캘린더 일정
+              </h2>
+              <p className="mt-1 font-anyvid text-xs text-muted-foreground">
+                외부 캘린더에 추가한 마라톤 일정을 확인하세요.
+              </p>
+            </div>
+            <Button
+              variant="outline"
+              size="sm"
+              nativeButton={false}
+              render={<Link href="/calendar-add" />}
+            >
+              일정 추가하기
+              <ArrowRight aria-hidden="true" />
+            </Button>
+          </div>
+
+          {calendarEvents.length > 0 ? (
+            <div className="divide-y">
+              {calendarEvents.map((event) => (
+                <article
+                  key={event.id}
+                  className="flex flex-col gap-3 px-5 py-4 sm:flex-row sm:items-center sm:justify-between sm:px-6"
+                >
+                  <div className="min-w-0">
+                    <div className="mb-2 flex flex-wrap items-center gap-2">
+                      <Badge variant="outline" className="font-anyvid text-[11px]">
+                        {calendarProviderLabel(event.provider)}
+                      </Badge>
+                      <span className="font-anyvid text-xs text-muted-foreground">
+                        {formatKoreanDate(event.event_start_date)}
+                      </span>
+                    </div>
+                    <Link
+                      href={`/marathon/${encodeURIComponent(event.marathon_slug)}`}
+                      className="font-paperlogy text-sm font-semibold hover:text-brand"
+                    >
+                      {event.marathon_name}
+                    </Link>
+                    {event.event_location && (
+                      <p className="mt-2 flex items-center gap-1.5 font-anyvid text-xs text-muted-foreground">
+                        <MapPin className="size-3.5" aria-hidden="true" />
+                        <span className="truncate">{event.event_location}</span>
+                      </p>
+                    )}
+                  </div>
+                  <div className="flex shrink-0 items-center gap-3">
+                    <span className="font-anyvid text-xs text-muted-foreground">
+                      {formatKoreanDate(event.created_at)} 추가
+                    </span>
+                    {event.provider === "naver" && (
+                      <Button
+                        variant="outline"
+                        size="sm"
+                        nativeButton={false}
+                        render={
+                          <a
+                            href="https://calendar.naver.com/"
+                            target="_blank"
+                            rel="noreferrer"
+                          />
+                        }
+                      >
+                        네이버 캘린더 열기
+                      </Button>
+                    )}
+                  </div>
+                </article>
+              ))}
+            </div>
+          ) : (
+            <div className="flex min-h-44 flex-col items-center justify-center px-6 py-10 text-center">
+              <div className="flex size-11 items-center justify-center rounded-full bg-brand/5 text-brand">
+                <CalendarDays className="size-5" aria-hidden="true" />
+              </div>
+              <p className="mt-3 font-paperlogy text-sm font-semibold">
+                아직 추가한 일정이 없어요.
+              </p>
+              <p className="mt-1 font-anyvid text-xs text-muted-foreground">
+                참가할 대회를 내 캘린더에 저장해 보세요.
+              </p>
+            </div>
+          )}
         </section>
 
         <div className="grid gap-6 lg:grid-cols-[minmax(0,1.35fr)_minmax(280px,.65fr)]">
@@ -361,6 +473,12 @@ function providerLabel(provider: string | null | undefined) {
   if (provider === "naver" || provider === "custom:naver") return "네이버";
   if (provider === "email") return "이메일";
   return "구글";
+}
+
+function calendarProviderLabel(provider: CalendarEventRow["provider"]) {
+  if (provider === "naver") return "네이버 캘린더";
+  if (provider === "kakao") return "카카오 캘린더";
+  return "구글 캘린더";
 }
 
 function formatKoreanDate(value: string) {

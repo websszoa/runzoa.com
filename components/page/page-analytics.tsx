@@ -3,7 +3,7 @@
 import Image from "next/image";
 import { useState } from "react";
 import { Expand, ImageIcon } from "lucide-react";
-import type { AnalyticsReport } from "@/lib/analytics-reports";
+import type { AnalyticsReport } from "@/lib/analytics";
 import {
   Dialog,
   DialogContent,

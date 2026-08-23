@@ -16,6 +16,7 @@ import {
   Rows3,
   Search,
   SlidersHorizontal,
+  Waypoints,
 } from "lucide-react";
 
 const MARATHONS_API_URL = "https://www.apizoa.com/api/v1/marathons";
@@ -37,6 +38,20 @@ export type MarathonHeaderContent = {
 };
 
 export const MARATHON_HEADERS = {
+  geocoder: {
+    icon: Waypoints,
+    eyebrow: "런조아 좌표 변환 도구",
+    title: ["도로명 또는 지번 주소를 입력하고", "정확한 좌표를 확인하세요!"],
+    description: [
+      "현재는 장소명 검색을 지원하지 않습니다. 정확한 주소를 입력해 주세요.",
+      "검색한 위치는 지도에서 바로 확인하고 JSON 형식으로 복사할 수 있습니다.",
+    ],
+    features: [
+      { icon: Search, label: "주소 검색" },
+      { icon: LocateFixed, label: "위도·경도 변환" },
+      { icon: MapPin, label: "지도 위치 확인" },
+    ],
+  },
   archive: {
     icon: Archive,
     eyebrow: "런조아 연도별 아카이브",

@@ -1,7 +1,7 @@
 "use client";
 
 import { useMemo, useState } from "react";
-import { ExternalLink } from "lucide-react";
+import { ChevronLeft, ChevronRight, ExternalLink } from "lucide-react";
 
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
@@ -21,7 +21,7 @@ type Props = {
   initialYear: number;
 };
 
-const PAGE_SIZE = 200;
+const PAGE_SIZE = 100;
 
 export default function MarathonYearList({ datasets, initialYear }: Props) {
   const years = useMemo(
@@ -29,12 +29,16 @@ export default function MarathonYearList({ datasets, initialYear }: Props) {
     [datasets],
   );
   const [year, setYear] = useState(initialYear);
-  const [visibleCount, setVisibleCount] = useState(PAGE_SIZE);
+  const [page, setPage] = useState(1);
   const marathons = useMemo(() => datasets[year] ?? [], [datasets, year]);
+  const totalPages = Math.max(1, Math.ceil(marathons.length / PAGE_SIZE));
+  const pageStart = (page - 1) * PAGE_SIZE;
+  const pageEnd = Math.min(pageStart + PAGE_SIZE, marathons.length);
+  const visibleMarathons = marathons.slice(pageStart, pageEnd);
 
   const selectYear = (nextYear: number) => {
     setYear(nextYear);
-    setVisibleCount(PAGE_SIZE);
+    setPage(1);
   };
 
   return (
@@ -81,13 +85,13 @@ export default function MarathonYearList({ datasets, initialYear }: Props) {
               </TableRow>
             </TableHeader>
             <TableBody>
-              {marathons.slice(0, visibleCount).map((marathon, index) => {
+              {visibleMarathons.map((marathon, index) => {
                 const site = marathon.event.site ?? marathon.registration.site;
 
                 return (
                   <TableRow key={marathon.slug} className="text-muted-foreground hover:bg-gray-50">
                     <TableCell className="text-center text-sm tabular-nums">
-                      {index + 1}
+                      {pageStart + index + 1}
                     </TableCell>
                     <TableCell>
                       {site ? (
@@ -145,17 +149,61 @@ export default function MarathonYearList({ datasets, initialYear }: Props) {
             </TableBody>
           </Table>
         </div>
-        {visibleCount < marathons.length && (
-          <div className="mt-8 flex justify-center">
-            <Button
-              type="button"
-              variant="outline"
-              size="lg"
-              onClick={() => setVisibleCount((count) => count + PAGE_SIZE)}
-            >
-              대회 200개 더보기
-            </Button>
-          </div>
+        {marathons.length > 0 && (
+          <nav
+            className="mt-8 flex flex-col items-center gap-3"
+            aria-label={`${year}년 대회 페이지`}
+          >
+            <p className="font-anyvid text-sm text-muted-foreground" aria-live="polite">
+              전체 {marathons.length.toLocaleString("ko-KR")}개 중{" "}
+              {(pageStart + 1).toLocaleString("ko-KR")}–
+              {pageEnd.toLocaleString("ko-KR")}개 표시
+            </p>
+            <div className="flex items-center gap-1">
+              <Button
+                type="button"
+                variant="outline"
+                size="icon"
+                onClick={() => setPage((current) => Math.max(1, current - 1))}
+                disabled={page === 1}
+                aria-label="이전 페이지"
+              >
+                <ChevronLeft aria-hidden="true" />
+              </Button>
+              {Array.from({ length: totalPages }, (_, index) => index + 1).map(
+                (pageNumber) => (
+                  <Button
+                    key={pageNumber}
+                    type="button"
+                    variant={page === pageNumber ? "default" : "outline"}
+                    size="icon"
+                    onClick={() => setPage(pageNumber)}
+                    aria-current={page === pageNumber ? "page" : undefined}
+                    aria-label={`${pageNumber}페이지`}
+                    className={cn(
+                      "font-anyvid tabular-nums",
+                      page === pageNumber &&
+                        "border-brand bg-brand text-white hover:bg-brand/90",
+                    )}
+                  >
+                    {pageNumber}
+                  </Button>
+                ),
+              )}
+              <Button
+                type="button"
+                variant="outline"
+                size="icon"
+                onClick={() =>
+                  setPage((current) => Math.min(totalPages, current + 1))
+                }
+                disabled={page === totalPages}
+                aria-label="다음 페이지"
+              >
+                <ChevronRight aria-hidden="true" />
+              </Button>
+            </div>
+          </nav>
         )}
       </div>
     </section>

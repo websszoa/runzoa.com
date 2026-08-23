@@ -24,7 +24,7 @@ import {
   ANALYTICS_REPORTS,
   getAnalyticsReport,
   type AnalyticsMetric,
-} from "@/lib/analytics-reports";
+} from "@/lib/analytics";
 
 import MarathonHeader from "@/components/marathon/marathon-header";
 import PageAnalytics from "@/components/page/page-analytics";

@@ -376,7 +376,6 @@ export default function AboutPage() {
                   href,
                   icon: Icon,
                   image,
-                  category,
                   description,
                 }) => (
                   <li key={name} className="bg-background">

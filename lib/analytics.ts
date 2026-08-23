@@ -1,3 +1,4 @@
+// 사이트 및 소셜 채널 통계 보고서 데이터
 export type AnalyticsMetric = {
   label: string;
   value: string;

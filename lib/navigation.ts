@@ -1,6 +1,5 @@
 import { APP_EMAIL, APP_INSTAGRAM_URL, APP_THREADS_URL } from "@/lib/constants";
 import {
-  BarChart3,
   CalendarDays,
   Info,
   List,
@@ -49,14 +48,14 @@ export const SHEET_NAVIGATION: MenuItem[][] = [
     { icon: Map, label: "지도", href: "/marathon-map" },
   ],
   [
-    { icon: Info, label: "런조아 소개", href: "/about" },
-    { icon: BarChart3, label: "사이트 통계", href: "/analytics" },
+    { icon: Info, label: "소개", href: "/about" },
     { icon: Newspaper, label: "공지사항", href: "/news?type=notice" },
     { icon: MessageCircle, label: "문의사항", href: "/support?type=inquiry" },
     { icon: ScrollText, label: "운영방침", href: "/policy" },
   ],
   [
     { icon: UserRound, label: "마이페이지", href: "/mypage" },
+    { icon: CalendarDays, label: "내 캘린더에 추가", href: "/calendar-add" },
     { icon: ShieldCheck, label: "관리자", href: "/admin" },
   ],
 ];
@@ -75,7 +74,6 @@ export const FOOTER_NAVIGATION: NavigationSection[] = [
   {
     title: "소식",
     links: [
-      { label: "소개", href: "/about" },
       { label: "공지사항", href: "/news?type=notice" },
       { label: "블로그", href: "/news?type=blog" },
       { label: "업데이트", href: "/news?type=updates" },
@@ -94,15 +92,18 @@ export const FOOTER_NAVIGATION: NavigationSection[] = [
   {
     title: "정책",
     links: [
+      { label: "소개", href: "/about" },
+      { label: "운영정책", href: "/policy" },
       { label: "이용약관", href: "/terms" },
       { label: "개인정보처리방침", href: "/privacy" },
-      { label: "운영정책", href: "/policy" },
     ],
   },
   {
     title: "아카이브",
     links: [
       { label: "연도별 대회", href: "/marathon-year" },
+      { label: "주소 좌표 변환", href: "/geocoder" },
+      { label: "내 캘린더에 추가", href: "/calendar-add" },
       { label: "사이트 통계", href: "/analytics" },
     ],
   },

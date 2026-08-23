@@ -1,13 +1,13 @@
 import Link from "next/link";
 import { cn } from "@/lib/utils";
 import { buttonVariants } from "@/components/ui/button";
+import { APP_SHORT_DESCRIPTION, APP_SLOGAN } from "@/lib/constants";
+import type { Marathon } from "@/lib/marathons";
 import {
   getCurrentKoreanDate,
   getRegistrationStatus,
   hasRegistrationStartDate,
 } from "@/lib/utils";
-import type { Marathon } from "@/lib/marathons";
-import { APP_SHORT_DESCRIPTION, APP_SLOGAN } from "@/lib/constants";
 import {
   ArrowRight,
   CalendarCheck,
@@ -76,7 +76,7 @@ export default function MainHero({ marathons }: { marathons: Marathon[] }) {
               <span>대회 찾아보기</span>
               <ArrowRight aria-hidden="true" />
             </Link>
-            <Link
+            {/* <Link
               href="/support?type=registration"
               className={cn(
                 buttonVariants({ variant: "outline", size: "lg" }),
@@ -84,7 +84,7 @@ export default function MainHero({ marathons }: { marathons: Marathon[] }) {
               )}
             >
               <span>내 보관함</span>
-            </Link>
+            </Link> */}
           </div>
         </div>
 

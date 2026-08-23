@@ -11,4 +11,5 @@ This block is written and re-added by `next dev` — verify at `node_modules/nex
 ## Project UI rules
 
 - Reuse the project's shadcn UI components whenever an applicable component exists.
+- Use Tailwind CSS v4 canonical utility syntax. Prefer theme-backed utilities and modern shorthand over arbitrary or deprecated forms when an equivalent exists, and resolve editor canonical-class warnings before finishing UI work.
 - Do not add box-shadow or drop-shadow effects to UI components or page sections.
