@@ -16759,5 +16759,62 @@
       "email": null,
       "instagram": null
     }
+  },
+  {
+    "slug": "inje-bear-teddy-circuit-run-2026",
+    "name": "2026 인제베어와 함께하는 테디서킷런",
+    "description": "2026 인제베어와 함께하는 테디서킷런은 강원도 인제 스피디움의 국제 규격 레이싱 서킷을 직접 달리는 이색 러닝 대회입니다. 실제 서킷의 그리드, 헤어핀 코너, 피트인 구간 등을 활용한 10km와 5km 코스로 진행되며 총 5,000명의 참가자를 모집합니다.",
+    "info": {
+      "type": "마라톤",
+      "scale": 5000,
+      "park": "인제 스피디움 참가자 전용 주차장(P1) 이용 가능, 만차 시 예비 주차장(P2·P3) 이용",
+      "souvenir": "기능성 러닝 티셔츠, 러닝 스포츠 수건, 기념 인형, 푸드 이용권, 피니셔 메달 등",
+      "program": "가수 리치 축하공연, EDM DJ Party, 시상식, 럭키드로우, 포토존 및 이벤트",
+      "memo": "인제 스피디움의 실제 레이싱 서킷을 달리는 이색 러닝 대회로, 10km는 기록칩을 이용한 기록 측정이 진행되며 5km는 가족·어린이·유모차 동반 참가가 가능합니다."
+    },
+    "event": {
+      "startDate": "2026-10-05",
+      "endDate": "2026-10-05",
+      "startTime": "06:00",
+      "endTime": "14:40",
+      "site": "https://teddymarathon.com/",
+      "schedule": {
+        "08:00": "참가자 집결, 배번호 확인 및 물품보관소 오픈",
+        "09:30": "오프닝 및 축사",
+        "11:00": "10km 그룹 출발",
+        "11:30": "5km 출발",
+        "13:30": "가수 리치 축하공연 및 EDM DJ Party",
+        "14:00": "10km 시상식 및 럭키드로우",
+        "14:40": "폐회 및 단체촬영"
+      }
+    },
+    "registration": {
+      "startDate": null,
+      "endDate": null,
+      "startTime": null,
+      "endTime": null,
+      "site": null,
+      "status": null,
+      "price": {
+        "10km": 0,
+        "5km": 0
+      }
+    },
+    "location": {
+      "country": "한국",
+      "region": "강원",
+      "venue": "인제 스피디움",
+      "address": "강원특별자치도 인제군 기린면 상하답로 130 인제스피디움",
+      "latitude": 38.0026931,
+      "longitude": 128.2951054
+    },
+    "hosts": {
+      "organizer": "인제발전소",
+      "manager": "테디마라톤조직위, YUL컴퍼니",
+      "sponsor": null,
+      "phone": "1670-9788",
+      "email": "yulcompany12@naver.com",
+      "instagram": null
+    }
   }
 ]
