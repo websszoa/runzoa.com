@@ -43,11 +43,11 @@ export default function DetailTitle({ marathon }: { marathon: Marathon }) {
           </Badge>
         </div>
 
-        <h1 className="font-paperlogy text-3xl leading-[1.15] font-semibold tracking-tight text-balance sm:text-5xl lg:text-6xl">
+        <h1 className="break-keep font-paperlogy text-3xl leading-[1.15] font-semibold tracking-tight text-balance sm:text-5xl lg:text-6xl">
           {marathon.name}
         </h1>
 
-        <p className="mt-3 sm:mt-4 text-sm leading-6 text-muted-foreground sm:text-[15px]">
+        <p className="mt-3 text-sm leading-6 text-muted-foreground sm:mt-4 sm:text-[15px]">
           {marathon.description}
         </p>
 

@@ -13245,7 +13245,7 @@
     "registration": {
       "startDate": "2026-08-24",
       "endDate": null,
-      "startTime": null,
+      "startTime": "10:00",
       "endTime": null,
       "site": "https://ticket.yes24.com/Perf/59670",
       "status": "",
@@ -15564,8 +15564,8 @@
     },
     "registration": {
       "startDate": "2026-09-01",
-      "endDate": "2026-11-20",
-      "startTime": null,
+      "endDate": null,
+      "startTime": "10:00",
       "endTime": null,
       "site": "https://gofree.seoul.co.kr",
       "status": null,
@@ -16592,6 +16592,169 @@
       "organizer": "울산인권마라톤대회 조직위원회",
       "manager": "사단법인 울산인권운동연대",
       "sponsor": null,
+      "phone": null,
+      "email": null,
+      "instagram": null
+    }
+  },
+  {
+    "slug": "water-run-treasure-hunt-2026",
+    "name": "2026 부산 워터런 with 보물찾기",
+    "description": "2026 롯데월드 어드벤처 부산 워터런 with 보물찾기는 테마파크 오픈 전 롯데월드 어드벤처 부산을 달리는 이색 러닝 이벤트입니다. 약 2km 파크런과 런데이 앱을 활용한 약 3km 보물찾기 RUN을 진행하고, 러닝 후에는 워터 어트랙션 조기 탑승과 워터 퍼레이드까지 즐길 수 있습니다.",
+    "info": {
+      "type": "마라톤",
+      "scale": 500,
+      "park": "롯데월드 어드벤처 부산 주차장 이용 가능(유료)",
+      "souvenir": "짐색, 비치타올, 런데이 양말, 런데이 샤워티슈, 포토프레임, 타투스티커",
+      "program": "2km 파크런, 약 3km 보물찾기 RUN, 워터 어트랙션 2종 조기 탑승, 워터 퍼레이드",
+      "memo": "런데이 앱과 연동해 보물찾기 미션을 진행합니다. 워터 어트랙션 2종 조기 탑승 혜택이 제공되며 기상상황 또는 기타 사정에 따라 운영 기종이 변경될 수 있습니다."
+    },
+    "event": {
+      "startDate": "2026-09-06",
+      "endDate": "2026-09-06",
+      "startTime": "07:20",
+      "endTime": null,
+      "site": "https://leisure-web.yanolja.com/leisure/10359880",
+      "schedule": {
+        "07:20": "롯데월드 어드벤처 부산 집결",
+        "08:00": "로얄가든존 집합 및 안내",
+        "08:20": "러닝 시작 전 준비운동",
+        "08:30": "2km 준비 러닝 시작",
+        "09:00": "약 3km 보물찾기 RUN 시작 및 워터 어트랙션 2종 조기 오픈",
+        "10:00": "대회 종료 및 경품 수령, 자유 이용"
+      }
+    },
+    "registration": {
+      "startDate": "2026-08-05",
+      "endDate": "2026-09-05",
+      "startTime": null,
+      "endTime": null,
+      "site": "https://leisure-web.yanolja.com/leisure/10359880",
+      "status": null,
+      "price": {
+        "2km 러닝 + 보물찾기런": 61000
+      }
+    },
+    "location": {
+      "country": "한국",
+      "region": "부산",
+      "venue": "롯데월드 어드벤처 부산",
+      "address": "부산광역시 기장군 기장읍 동부산관광로 42",
+      "latitude": 35.1960289,
+      "longitude": 129.2129714
+    },
+    "hosts": {
+      "organizer": "롯데월드 어드벤처 부산",
+      "manager": "런데이",
+      "sponsor": null,
+      "phone": null,
+      "email": null,
+      "instagram": null
+    }
+  },
+  {
+    "slug": "olympic-day-run-2026",
+    "name": "올림픽데이런 2026",
+    "description": "올림픽데이런 2026은 대한체육회가 주최하는 올림픽 기념 러닝 행사입니다. 서울 올림픽공원 88잔디마당을 중심으로 5K와 10K 코스를 운영할 예정이며, 러닝과 함께 다양한 부대 프로그램이 진행되는 스포츠 축제입니다.",
+    "info": {
+      "type": "마라톤",
+      "scale": 6000,
+      "park": null,
+      "souvenir": "올림픽데이런 티셔츠, 니삭스, 리유저블백, 넥워머, 스티커, 피니셔 메달, IOC 모바일 인증서",
+      "program": "5K·10K 러닝 및 부대 프로그램",
+      "memo": "09.07(월) 당첨자 개별안내"
+    },
+    "event": {
+      "startDate": "2026-11-08",
+      "endDate": "2026-11-08",
+      "startTime": "07:30",
+      "endTime": null,
+      "site": "http://olympicday.co.kr/",
+      "schedule": {
+        "07:30": "출발"
+      }
+    },
+    "registration": {
+      "startDate": "2026-08-24",
+      "endDate": "2026-09-06",
+      "startTime": "14:00",
+      "endTime": "23:59",
+      "site": "https://www.2tm.co.kr/ticket-sport/10645",
+      "status": null,
+      "price": {
+        "10km": 59000,
+        "5km": 59000
+      }
+    },
+    "location": {
+      "country": "한국",
+      "region": "서울",
+      "venue": "올림픽공원 88잔디마당",
+      "address": "서울특별시 송파구 올림픽로 424",
+      "latitude": 37.520934,
+      "longitude": 127.122959
+    },
+    "hosts": {
+      "organizer": "대한체육회",
+      "manager": "대한체육회",
+      "sponsor": "파워웨이드, 카스, cj, 업비트, 비비고",
+      "phone": "02-2039-0049",
+      "email": "odrkorea@naver.com",
+      "instagram": "olympicdayrun_korea"
+    }
+  },
+  {
+    "slug": "saehan-media-marathon-2026",
+    "name": "2026 새한미디어 마라톤",
+    "description": "2026 새한미디어 마라톤은 백범 김구 선생의 '높은 문화의 힘'을 품고 평화의 길을 달리는 국제형 마라톤 대회입니다. 서울 월드컵공원 평화광장에서 하프코스, 10km, 5km 종목으로 진행되며 총 4,000명의 참가자를 모집합니다.",
+    "info": {
+      "type": "마라톤",
+      "scale": 4000,
+      "park": "월드컵공원 주차장 이용 가능(유료)",
+      "souvenir": null,
+      "program": null,
+      "memo": "백범 김구 선생의 '높은 문화의 힘'을 바탕으로 문화와 평화의 가치를 함께 나누는 마라톤 대회"
+    },
+    "event": {
+      "startDate": "2026-11-29",
+      "endDate": "2026-11-29",
+      "startTime": "07:00",
+      "endTime": "14:00",
+      "site": "https://sh-run.co.kr/",
+      "schedule": {
+        "06:00": "운영본부 운영개시",
+        "07:30": "개회식",
+        "07:50": "스트레칭",
+        "08:00": "대회 시작",
+        "11:00": "코스별 시상",
+        "13:00": "대회 종료"
+      }
+    },
+    "registration": {
+      "startDate": "2026-08-15",
+      "endDate": "2026-11-28",
+      "startTime": null,
+      "endTime": null,
+      "site": "https://sh-run.co.kr/",
+      "status": null,
+      "price": {
+        "HALF": 50000,
+        "10km": 50000,
+        "5km": 45000
+      }
+    },
+    "location": {
+      "country": "한국",
+      "region": "서울",
+      "venue": "상암동 월드컵공원 평화광장",
+      "address": "서울 마포구 성산동 53",
+      "latitude": 37.5650560057921,
+      "longitude": 126.896211243867
+    },
+    "hosts": {
+      "organizer": "새한일보",
+      "manager": "새한일보",
+      "sponsor": "백범김구선생기념사업협회",
       "phone": null,
       "email": null,
       "instagram": null

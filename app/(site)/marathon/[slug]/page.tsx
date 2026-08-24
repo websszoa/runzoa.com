@@ -51,8 +51,7 @@ export default async function MarathonDetailPage({
       (a.registration.startDate as string).localeCompare(
         b.registration.startDate as string,
       ),
-    )
-    .slice(0, 4);
+    );
 
   const openMarathons = marathons
     .filter(
