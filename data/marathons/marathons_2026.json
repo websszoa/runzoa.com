@@ -17182,5 +17182,269 @@
       "email": null,
       "instagram": "stanz_official_kr"
     }
+  },
+  {
+    "slug": "mind-run-festival-2026",
+    "name": "2026 마인드런 페스티벌",
+    "description": "2026 마인드런 페스티벌은 서울 여의도공원 문화의마당에서 열리는 정신건강을 위한 특별한 러닝 축제입니다. 10km와 5km 두 종목에 총 7,000명이 참여하며, 달리기를 통해 마음 건강과 공감, 회복의 가치를 함께 나눕니다. 올해는 서울청소년페스티벌과 연계해 러닝뿐 아니라 힐링콘서트, 스포츠·문화 프로그램과 다양한 체험까지 하루 동안 함께 즐길 수 있는 특별한 도심 러닝 페스티벌입니다.",
+    "info": {
+      "type": "마라톤",
+      "scale": 7000,
+      "park": "인근 여의도공원 주차장 이용(유료)",
+      "souvenir": "닥터스킨 티셔츠, 타이즈, 양말, 에르보리앙 CC레드코렉트 15ml, 선크림 및 스킨케어 제품 일부 선착순 제공",
+      "program": "10km·5km 러닝, 서울청소년페스티벌, 힐링콘서트, 스포츠 경연, 약 40개 체험형 부스, 레이저 서바이벌, 뮤직 페스티벌",
+      "memo": "MC 윤형빈, 축하공연 경서, 아웃사이더, 슬리피, 야구 해설위원 박용택, 유희관"
+    },
+    "event": {
+      "startDate": "2026-10-17",
+      "endDate": "2026-10-17",
+      "startTime": "07:30",
+      "endTime": "16:00",
+      "site": "https://www.mindrun.co.kr/",
+      "schedule": {
+        "06:00": "참가자 집결 및 부스 운영 시작",
+        "06:30": "식전 안내 방송",
+        "06:40": "공식행사",
+        "06:50": "내빈소개·개회사·축사",
+        "07:10": "치어리더 공연 및 참가자 몸풀기",
+        "07:20": "출발지 이동",
+        "07:30": "10km 출발",
+        "07:40": "5km 출발",
+        "10:00": "서울청소년페스티벌 개막식 및 시상",
+        "11:00": "힐링콘서트",
+        "12:00": "서울청소년페스티벌"
+      }
+    },
+    "registration": {
+      "startDate": "2026-08-05",
+      "endDate": "2026-10-16",
+      "startTime": "10:00",
+      "endTime": null,
+      "site": "https://www.mindrun.co.kr/",
+      "status": null,
+      "price": {
+        "10KM": 60000,
+        "5KM": 55000
+      }
+    },
+    "location": {
+      "country": "한국",
+      "region": "서울",
+      "venue": "여의도공원 문화의마당",
+      "address": "서울 영등포구 여의공원로 68",
+      "latitude": 37.5268088,
+      "longitude": 126.9222841
+    },
+    "hosts": {
+      "organizer": "KBSN",
+      "manager": "대한신경정신의학회, BTF푸른나무재단, 아침편지문화재단",
+      "sponsor": "서울특별시, 대통령직속 국민생명안전위원회, 보건복지부, 한국도박문제예방치유원",
+      "phone": "02-338-0344",
+      "email": "mindrunfes@gmail.com",
+      "instagram": null
+    }
+  },
+  {
+    "slug": "tongkeun-run-2026",
+    "name": "2026 통큰런",
+    "description": "2026 통큰런은 서울 월드컵공원 평화광장에서 열리는 나눔형 러닝 페스티벌입니다. 10K, 5K, 3K 세 종목에 총 3,000명이 참가하며, 달리는 즐거움을 나눔으로 연결하는 특별한 대회입니다. 참가비 전액은 희망친구 기아대책과 보바스어린이재활센터에 기부되며, 롯데마트·롯데슈퍼와 함께 다양한 레이스 키트와 완주 혜택도 만나볼 수 있는 뜻깊은 서울 러닝 행사입니다.",
+    "info": {
+      "type": "마라톤",
+      "scale": 3000,
+      "park": "월드컵공원 주차장 이용 가능(유료)",
+      "souvenir": "공식 티셔츠, 배번호표, 레이스 키트, 완주 키트",
+      "program": "10K·5K·3K 러닝 및 나눔형 러닝 페스티벌",
+      "memo": "참가비 전액은 희망친구 기아대책과 보바스어린이재활센터에 기부됩니다."
+    },
+    "event": {
+      "startDate": "2026-11-14",
+      "endDate": "2026-11-14",
+      "startTime": "08:00",
+      "endTime": null,
+      "site": "https://tongkeun-run.com/",
+      "schedule": null
+    },
+    "registration": {
+      "startDate": "2026-09-14",
+      "endDate": "2026-10-23",
+      "startTime": "13:00",
+      "endTime": "23:59",
+      "site": "https://tongkeun-run.com/",
+      "status": null,
+      "price": {
+        "10KM": 30000,
+        "5KM": 30000,
+        "3KM": 30000
+      }
+    },
+    "location": {
+      "country": "한국",
+      "region": "서울",
+      "venue": "상암동 월드컵공원 평화광장",
+      "address": "서울 마포구 성산동 53",
+      "latitude": 37.5650560057921,
+      "longitude": 126.896211243867
+    },
+    "hosts": {
+      "organizer": "희망친구 기아대책, 롯데마트·롯데슈퍼",
+      "manager": "브링업",
+      "sponsor": null,
+      "phone": "070-8656-9035",
+      "email": "bringup@bringup.co.kr",
+      "instagram": "tongkeun_run"
+    }
+  },
+  {
+    "slug": "namhae-250k-run-to-village-2026",
+    "name": "2026 남해 250K - RUN TO VILLAGE",
+    "description": "2026 NAMHAE 250K - RUN TO VILLAGE는 경남 남해의 바다와 가을 숲, 저수지와 산길을 연결해 달리는 트레일러닝 대회입니다. 상주한려해상체육공원에서 출발해 남해독일마을까지 이어지는 22K와 36K 원웨이 코스로 진행되며, 완주 후에는 러너들이 독일마을에 모여 함께 먹고 쉬며 서로의 완주를 축하하는 특별한 가을 싱글 스테이지입니다.",
+    "info": {
+      "type": "트레일러닝",
+      "scale": null,
+      "park": null,
+      "souvenir": null,
+      "program": "22K·36K 트레일레이스, 완주 후 RUN TO VILLAGE 러너 커뮤니티 프로그램",
+      "memo": "22K와 36K 모두 상주한려해상체육공원에서 출발해 남해독일마을에 도착하는 원웨이 코스입니다. 참가 기념품과 완주 기념품, 시상 내역은 추후 공개 예정입니다."
+    },
+    "event": {
+      "startDate": "2026-10-31",
+      "endDate": "2026-10-31",
+      "startTime": "08:00",
+      "endTime": "17:10",
+      "site": "https://www.namhae250k.com/RTV-INFO/",
+      "schedule": {
+        "05:30": "36K 레이스팩 수령 시작",
+        "07:30": "22K 레이스팩 수령 시작",
+        "08:00": "36K 레이스 출발",
+        "10:00": "22K 레이스 출발",
+        "17:10": "시상"
+      }
+    },
+    "registration": {
+      "startDate": "2026-08-27",
+      "endDate": "2026-10-30",
+      "startTime": "12:00",
+      "endTime": null,
+      "site": "https://www.namhae250k.com/RTV-INFO/",
+      "status": null,
+      "price": {
+        "22K": 120000,
+        "36K": 150000
+      }
+    },
+    "location": {
+      "country": "한국",
+      "region": "경남",
+      "venue": "남해독일마을",
+      "address": "경남 남해군 삼동면 물건리 1074-2",
+      "latitude": 34.7983538,
+      "longitude": 128.0416086
+    },
+    "hosts": {
+      "organizer": "팜프라",
+      "manager": "팜프라",
+      "sponsor": "남해군, 남해관광문화재단",
+      "phone": "070-7755-5532",
+      "email": "namhae250k@gmail.com",
+      "instagram": null
+    }
+  },
+  {
+    "slug": "kookbang-ilbo-comrade-marathon-2026",
+    "name": "제22회 국방일보 전우 마라톤대회",
+    "description": "제22회 국방일보 전우 마라톤대회는 경기도 파주 임진각 평화누리공원에서 군 장병과 일반 참가자가 함께 달리는 민·군 화합 마라톤입니다. 10km와 5km 두 종목으로 진행되며 참가비는 전 종목 2만원입니다. 기록 경쟁보다는 전우애와 화합의 의미를 나누는 행사로, 완주메달과 완주간식 등이 제공되며 임진각 일대를 달리는 특별한 러닝을 경험할 수 있습니다.",
+    "info": {
+      "type": "마라톤",
+      "scale": null,
+      "park": "행사장 내 금연 협조",
+      "souvenir": "기능성 티셔츠, 번호표, 안내책자, 완주메달, 완주간식",
+      "program": "10km, 5km 마라톤",
+      "memo": "10km와 5km 모두 제한시간은 1시간 30분입니다. 5km는 기록측정용 칩이 제공되지 않으며 시상 및 시상식은 진행되지 않습니다."
+    },
+    "event": {
+      "startDate": "2026-11-07",
+      "endDate": "2026-11-07",
+      "startTime": "09:00",
+      "endTime": null,
+      "site": "https://www.dema.mil.kr/marathon/intro/mainPoint.do",
+      "schedule": {
+        "08:00": "참가자 집결",
+        "09:00": "대회 출발"
+      }
+    },
+    "registration": {
+      "startDate": "2026-09-07",
+      "endDate": "2026-10-08",
+      "startTime": null,
+      "endTime": null,
+      "site": "https://www.dema.mil.kr/marathon/intro/mainPoint.do",
+      "status": null,
+      "price": {
+        "10KM": 20000,
+        "5KM": 20000
+      }
+    },
+    "location": {
+      "country": "한국",
+      "region": "경기",
+      "venue": "임진각 평화누리공원",
+      "address": "경기 파주시 문산읍 임진각로 148-40",
+      "latitude": 37.8895,
+      "longitude": 126.7401
+    },
+    "hosts": {
+      "organizer": "국방홍보원",
+      "manager": null,
+      "sponsor": "포컴퍼니",
+      "phone": "070-7727-1755",
+      "email": "spomax_marathon@naver.com",
+      "instagram": null
+    }
+  },
+  {
+    "slug": "oak-valley-winter-half-marathon-2026",
+    "name": "제1회 오크밸리 윈터 하프 마라톤",
+    "description": "2026 제1회 오크밸리 윈터 하프 마라톤은 강원 원주 오크밸리에서 열리는 겨울 이색 러닝 페스티벌입니다. 오크밸리 골프장과 리조트 일대를 배경으로 겨울 풍경 속을 달리는 특별한 레이스로 진행됩니다. 대회는 12월 5일 개최되며 하프마라톤을 중심으로 한 세부 종목과 참가비, 코스, 참가자 혜택 등 자세한 정보는 추후 공개될 예정입니다.",
+    "info": {
+      "type": "마라톤",
+      "scale": null,
+      "park": null,
+      "souvenir": null,
+      "program": "오크밸리 골프장을 달리는 겨울 이색 러닝 페스티벌",
+      "memo": "2026년 처음 개최되는 오크밸리 윈터 하프 마라톤입니다. 세부 종목, 참가비, 코스 및 참가자 혜택은 추후 공개 예정입니다."
+    },
+    "event": {
+      "startDate": "2026-12-05",
+      "endDate": "2026-12-05",
+      "startTime": null,
+      "endTime": null,
+      "site": null,
+      "schedule": null
+    },
+    "registration": {
+      "startDate": "2026-09-03",
+      "endDate": "2026-12-04",
+      "startTime": "14:00",
+      "endTime": null,
+      "site": null,
+      "status": null,
+      "price": null
+    },
+    "location": {
+      "country": "한국",
+      "region": "강원",
+      "venue": "오크밸리",
+      "address": null,
+      "latitude": null,
+      "longitude": null
+    },
+    "hosts": {
+      "organizer": "오크밸리",
+      "manager": null,
+      "sponsor": null,
+      "phone": null,
+      "email": null,
+      "instagram": "oakvalley.run"
+    }
   }
 ]
