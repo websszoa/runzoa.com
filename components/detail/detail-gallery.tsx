@@ -50,6 +50,7 @@ export default function DetailGallery({
               alt={`${name} 대회 커버 이미지`}
               width={800}
               height={600}
+              unoptimized
               loading="eager"
               priority
               sizes="(max-width: 1024px) 100vw, 33vw"

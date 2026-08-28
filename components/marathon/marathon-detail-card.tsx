@@ -28,6 +28,7 @@ import {
 } from "@/lib/utils";
 
 import type { Marathon } from "@/lib/marathons";
+import { getMarathonCoverUrl } from "@/lib/constants";
 
 export default function MarathonDetailCard({
   marathon,
@@ -75,9 +76,10 @@ export default function MarathonDetailCard({
             <div className="group/image relative aspect-[3/4] overflow-hidden rounded bg-muted">
               {!imageError ? (
                 <Image
-                  src={`/marathon/cover/${marathon.slug}.webp`}
+                  src={getMarathonCoverUrl(`${marathon.slug}.webp`)}
                   alt={`${marathon.name} 포스터`}
                   fill
+                  unoptimized
                   sizes="120px"
                   quality={65}
                   className={cn(

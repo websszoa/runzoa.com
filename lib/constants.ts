@@ -11,6 +11,13 @@ export const APP_THREADS_URL = "https://www.threads.com/@runzoa_official";
 export const APP_GITHUB_URL = "https://github.com/webstoryboy";
 export const APP_YOUTUBE_URL = "https://www.youtube.com/@webstoryboy";
 
+export const MARATHON_COVER_BASE_URL =
+  "https://websszoa.github.io/runzoa.com/public/marathon/cover";
+
+export function getMarathonCoverUrl(fileName: string) {
+  return `${MARATHON_COVER_BASE_URL}/${fileName}`;
+}
+
 export const APP_RUNZOA_URL = "https://runzoa.com";
 export const APP_EVENTZOA_URL = "https://eventzoa.com";
 export const APP_KCALZOA_URL = "https://kcalzoa.com";

@@ -22,6 +22,7 @@ import {
   getRegistrationBadgeClassName,
   getRegistrationLabel,
   getRegistrationStatus,
+  normalizeSearchText,
 } from "@/lib/utils";
 import type { Marathon } from "@/lib/marathons";
 
@@ -45,22 +46,19 @@ export default function MarathonCalendar({
   const [selectedDate, setSelectedDate] = useState(() =>
     initialMonth ? `${initialMonth}-01` : today,
   );
-  const deferredQuery = useDeferredValue(
-    query.trim().toLocaleLowerCase("ko-KR"),
-  );
+  const deferredQuery = useDeferredValue(normalizeSearchText(query));
 
   const filteredMarathons = useMemo(() => {
     return marathons
       .filter((marathon) => {
-        const searchable = [
+        const searchable = normalizeSearchText([
           marathon.name,
           marathon.location.region,
           marathon.location.venue,
           marathon.hosts.organizer,
         ]
           .filter(Boolean)
-          .join(" ")
-          .toLocaleLowerCase("ko-KR");
+          .join(" "));
         return !deferredQuery || searchable.includes(deferredQuery);
       })
       .sort((a, b) => a.event.startDate.localeCompare(b.event.startDate));

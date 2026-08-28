@@ -14,6 +14,7 @@ import {
   getRegistrationBadgeClassName,
   getRegistrationLabel,
   getRegistrationStatus,
+  normalizeSearchText,
 } from "@/lib/utils";
 
 import MarathonSearchForm from "@/components/marathon/marathon-search-form";
@@ -123,12 +124,13 @@ export default function MarathonMap({
     [locatedMarathons],
   );
   const filteredMarathons = useMemo(() => {
-    const keyword = query.trim().toLocaleLowerCase("ko-KR");
+    const keyword = normalizeSearchText(query);
     return locatedMarathons.filter((item) => {
-      const searchable = [item.name, item.location.region, item.location.venue]
-        .filter(Boolean)
-        .join(" ")
-        .toLocaleLowerCase("ko-KR");
+      const searchable = normalizeSearchText(
+        [item.name, item.location.region, item.location.venue]
+          .filter(Boolean)
+          .join(" "),
+      );
       return (
         (!keyword || searchable.includes(keyword)) &&
         (region === "전체" || item.location.region === region)

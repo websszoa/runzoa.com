@@ -9,6 +9,7 @@ import DetailOpenRegistration from "@/components/detail/detail-open-registration
 import DetailRegistration from "@/components/detail/detail-registration";
 import DetailUpcoming from "@/components/detail/detail-upcoming";
 import DetailTitle from "@/components/detail/detail-title";
+import { getMarathonCoverUrl } from "@/lib/constants";
 
 export default function MarathonDetail({
   marathon,
@@ -36,7 +37,7 @@ export default function MarathonDetail({
         <div className="order-1 h-full lg:order-2 lg:col-span-1">
           <DetailGallery
             name={marathon.name}
-            images_cover={`/marathon/cover/${marathon.slug}.webp`}
+            images_cover={getMarathonCoverUrl(`${marathon.slug}.webp`)}
             eventSite={marathon.event.site}
           />
         </div>

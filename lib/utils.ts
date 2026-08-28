@@ -7,6 +7,13 @@ export function cn(...inputs: ClassValue[]) {
   return twMerge(clsx(inputs));
 }
 
+export function normalizeSearchText(value: string) {
+  return value
+    .normalize("NFKC")
+    .toLocaleLowerCase("ko-KR")
+    .replace(/\s+/g, "");
+}
+
 export type RegistrationStatus = "접수예정" | "접수중" | "접수마감";
 
 export function getRegistrationStatus(marathon: Marathon): RegistrationStatus {

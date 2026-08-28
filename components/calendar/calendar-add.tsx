@@ -35,6 +35,7 @@ import {
   getRegistrationBadgeClassName,
   getRegistrationLabel,
   getRegistrationStatus,
+  normalizeSearchText,
 } from "@/lib/utils";
 
 type CalendarAddProps = {
@@ -70,23 +71,20 @@ export default function CalendarAdd({
   const [resultDialog, setResultDialog] = useState<ResultDialog | null>(null);
   const [errorMessage, setErrorMessage] = useState<string | null>(null);
   const [reconnectRequired, setReconnectRequired] = useState(false);
-  const deferredQuery = useDeferredValue(
-    query.trim().toLocaleLowerCase("ko-KR"),
-  );
+  const deferredQuery = useDeferredValue(normalizeSearchText(query));
   const canUseNaver = isLoggedIn && naverConnected && !reconnectRequired;
 
   const filteredMarathons = useMemo(() => {
     if (!deferredQuery) return marathons;
     return marathons.filter((marathon) =>
-      [
+      normalizeSearchText([
         marathon.name,
         marathon.location.region,
         marathon.location.venue,
         marathon.location.address,
       ]
         .filter(Boolean)
-        .join(" ")
-        .toLocaleLowerCase("ko-KR")
+        .join(" "))
         .includes(deferredQuery),
     );
   }, [deferredQuery, marathons]);

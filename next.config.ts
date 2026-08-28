@@ -6,6 +6,13 @@ const nextConfig: NextConfig = {
   pageExtensions: ["js", "jsx", "md", "mdx", "ts", "tsx"],
   images: {
     qualities: [65, 75],
+    remotePatterns: [
+      {
+        protocol: "https",
+        hostname: "websszoa.github.io",
+        pathname: "/runzoa.com/public/marathon/cover/**",
+      },
+    ],
   },
 };
 

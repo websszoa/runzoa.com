@@ -43,6 +43,7 @@ import {
   getRegistrationBadgeClassName,
   getRegistrationLabel,
   getRegistrationStatus,
+  normalizeSearchText,
 } from "@/lib/utils";
 
 import MarathonSearchForm from "@/components/marathon/marathon-search-form";
@@ -98,9 +99,7 @@ export default function MarathonList({
   const [sortOrder, setSortOrder] = useState<SortOrder>("개최일 빠른순");
   const [visibleCount, setVisibleCount] = useState(PAGE_SIZE);
   const [isFilterOpen, setIsFilterOpen] = useState(false);
-  const deferredQuery = useDeferredValue(
-    query.trim().toLocaleLowerCase("ko-KR"),
-  );
+  const deferredQuery = useDeferredValue(normalizeSearchText(query));
 
   useEffect(() => {
     const url = new URL(window.location.href);
@@ -159,15 +158,14 @@ export default function MarathonList({
   const filteredMarathons = useMemo(() => {
     const today = getCurrentKoreanDate();
     const filtered = marathons.filter((marathon) => {
-      const searchable = [
+      const searchable = normalizeSearchText([
         marathon.name,
         marathon.location.region,
         marathon.location.venue,
         marathon.hosts.organizer,
       ]
         .filter(Boolean)
-        .join(" ")
-        .toLocaleLowerCase("ko-KR");
+        .join(" "));
 
       return (
         (!deferredQuery || searchable.includes(deferredQuery)) &&

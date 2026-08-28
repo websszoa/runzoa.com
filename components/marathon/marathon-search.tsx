@@ -18,6 +18,7 @@ import {
   getCurrentKoreanDate,
   getRegistrationStatus,
   hasRegistrationStartDate,
+  normalizeSearchText,
 } from "@/lib/utils";
 
 import MarathonDetailCard from "@/components/marathon/marathon-detail-card";
@@ -73,9 +74,7 @@ export default function MarathonSearch({
   const [distance, setDistance] = useState<DistanceFilter | null>(null);
   const [sortOrder, setSortOrder] = useState<SortOrder>("개최일 빠른순");
   const [visibleCount, setVisibleCount] = useState(PAGE_SIZE);
-  const deferredQuery = useDeferredValue(
-    query.trim().toLocaleLowerCase("ko-KR"),
-  );
+  const deferredQuery = useDeferredValue(normalizeSearchText(query));
 
   const regions = useMemo(
     () =>
@@ -108,7 +107,7 @@ export default function MarathonSearch({
       marathons.map((marathon, index) => [marathon.slug, index]),
     );
     const filtered = marathons.filter((marathon) => {
-      const searchable = [
+      const searchable = normalizeSearchText([
         marathon.name,
         marathon.description,
         marathon.location.region,
@@ -116,8 +115,7 @@ export default function MarathonSearch({
         marathon.hosts.organizer,
       ]
         .filter(Boolean)
-        .join(" ")
-        .toLocaleLowerCase("ko-KR");
+        .join(" "));
 
       return (
         (hasRegistrationStartDate(marathon) ||
