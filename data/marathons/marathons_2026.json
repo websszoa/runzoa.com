@@ -17131,5 +17131,56 @@
       "email": "korea@k-run.kr",
       "instagram": null
     }
+  },
+  {
+    "slug": "harry-potter-run-2026",
+    "name": "2026 해리포터 런",
+    "description": "해리포터 런 2026은 부산역 인근에서 해리포터의 마법 세계를 테마로 펼쳐지는 특별한 5km 러닝 이벤트입니다. 오전과 오후 두 차례에 걸쳐 총 6,000명이 참여하며, 기록 경쟁보다는 달리기 자체와 다양한 무대 프로그램, 체험 부스를 함께 즐기는 비경쟁 러닝으로 진행됩니다. 해리포터 팬은 물론 가족, 친구와 색다른 부산 러닝을 즐기고 싶은 분들에게 특별한 추억을 선사할 테마 레이스입니다.",
+    "info": {
+      "type": "마라톤",
+      "scale": 6000,
+      "park": null,
+      "souvenir": "티셔츠, 스포츠타올, 스트링백, 배번호, 안내문, KIT 박스, 완주메달, 협찬사 기프트",
+      "program": "5km 비경쟁 러닝, 무대 프로그램, 부스 체험",
+      "memo": "5km 비경쟁·비기록 방식으로 오전 9시와 오후 2시 총 2회 진행됩니다. 각 회차별 3,000명을 모집하며 오전·오후 코스는 동일합니다."
+    },
+    "event": {
+      "startDate": "2026-10-03",
+      "endDate": "2026-10-03",
+      "startTime": "09:00",
+      "endTime": null,
+      "site": null,
+      "schedule": {
+        "09:00": "오전 해리포터 런",
+        "14:00": "오후 해리포터 런"
+      }
+    },
+    "registration": {
+      "startDate": "2026-09-04",
+      "endDate": "2026-09-18",
+      "startTime": "11:00",
+      "endTime": null,
+      "site": "https://gift.kakao.com/page/code/forme?killer-card=765&fbclid=PAcGRvZgJleHRuA2FlbQIxMQBzcnRjBmFwcF9pZA85MzY2MTk3NDMzOTI0NTkAAacSUigBb2rLRpX8jOt4UU5z3RJV_dzuDtnH5YaYfRbRyKZL8MOiXY4WKHXtxg_aem_W1XL_GeZVpAZjFMpd7lhSQ",
+      "status": null,
+      "price": {
+        "5KM": 85000
+      }
+    },
+    "location": {
+      "country": "한국",
+      "region": "부산",
+      "venue": "부산역 인근",
+      "address": null,
+      "latitude": null,
+      "longitude": null
+    },
+    "hosts": {
+      "organizer": null,
+      "manager": null,
+      "sponsor": null,
+      "phone": null,
+      "email": null,
+      "instagram": "stanz_official_kr"
+    }
   }
 ]
