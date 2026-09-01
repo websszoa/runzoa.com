@@ -17290,8 +17290,8 @@
       "site": "https://projectruntrip.com/",
       "status": "접수 대기",
       "price": {
-        "29K+": 90000,
-        "9K+": 80000
+        "29K+": 65000,
+        "9K+": 55000
       }
     },
     "location": {
@@ -17934,13 +17934,16 @@
       }
     },
     "registration": {
-      "startDate": null,
-      "endDate": null,
-      "startTime": null,
+      "startDate": "2026-08-24",
+      "endDate": "2026-09-18",
+      "startTime": "20:00",
       "endTime": null,
       "site": "https://youth1strun.com/",
       "status": null,
-      "price": null
+      "price": {
+        "5.8KM(러닝)": 55000,
+        "5.8KM(걷기)": 50000
+      }
     },
     "location": {
       "country": "한국",
