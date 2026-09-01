@@ -27,6 +27,7 @@ type NaverWindow = {
 interface DetailLocationProps {
   name: string;
   venue: string | null;
+  naver?: string | null;
   address: string | null;
   region: string | null;
   country: string | null;
@@ -78,6 +79,7 @@ function loadNaverMaps(naverMapKey: string) {
 export default function DetailLocation({
   name,
   venue,
+  naver,
   address,
   region,
   country,
@@ -90,12 +92,17 @@ export default function DetailLocation({
   const [addressCopied, setAddressCopied] = useState(false);
   const hasCoordinates = latitude !== null && longitude !== null;
   const locationLabel = venue || address || [region, country].filter(Boolean).join(" ");
-  const mapSearchQuery = address || venue || [region, country].filter(Boolean).join(" ") || name;
+  const mapSearchQuery =
+    naver ||
+    address ||
+    venue ||
+    [region, country].filter(Boolean).join(" ") ||
+    name;
   const naverMapUrl = hasCoordinates
     ? `https://map.naver.com/p/search/${encodeURIComponent(mapSearchQuery)}?c=${longitude},${latitude},15,0,0,0,dh`
     : `https://map.naver.com/p/search/${encodeURIComponent(mapSearchQuery)}`;
   const kakaoMapUrl = hasCoordinates
-    ? `https://map.kakao.com/link/map/${encodeURIComponent(venue || name)},${latitude},${longitude}`
+    ? `https://map.kakao.com/link/map/${encodeURIComponent(mapSearchQuery)},${latitude},${longitude}`
     : `https://map.kakao.com/link/search/${encodeURIComponent(mapSearchQuery)}`;
 
   const copyAddress = async () => {

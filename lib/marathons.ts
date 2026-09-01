@@ -160,6 +160,7 @@ export type Marathon = {
     country: string | null;
     region: string | null;
     venue: string | null;
+    naver?: string | null;
     address: string | null;
     latitude: number | null;
     longitude: number | null;

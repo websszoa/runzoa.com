@@ -51,6 +51,7 @@ export default function MarathonDetail({
           <DetailLocation
             name={marathon.name}
             venue={marathon.location.venue}
+            naver={marathon.location.naver}
             address={marathon.location.address}
             region={marathon.location.region}
             country={marathon.location.country}
