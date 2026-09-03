@@ -1,0 +1,10 @@
+User-Agent: *
+Allow: /
+Disallow: /admin/
+Disallow: /auth/
+Disallow: /mypage
+
+Host: https://runzoa.com
+Sitemap: https://runzoa.com/sitemap.xml
+
+#DaumWebMasterTool:4c272e723c1248355b387e17e8cb1d7c6fc60062aebdd7051cbca4e740380e5a:tIsPQHLTdJejayAQtKhhag==
