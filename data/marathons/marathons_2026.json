@@ -15096,9 +15096,9 @@
     "description": "2026 리아는 배불런은 롯데리아가 서울어린이대공원에서 개최하는 러닝 페스티벌입니다. 버거메이트와 함께 5km를 달리는 축제형 러닝 행사로, 함께 뛰고 즐기고 먹는 특별한 러닝 경험을 선보일 예정입니다.",
     "info": {
       "type": "마라톤",
-      "scale": null,
+      "scale": 2000,
       "park": null,
-      "souvenir": null,
+      "souvenir": "레이스 키트, 앞치마 반다나, 공식 배번호표, 성향 테스트 결과 스티커, 롯데리아 버거세트 교환권",
       "program": null,
       "memo": "버거메이트와 함께하는 5km 러닝 페스티벌입니다. 티켓은 롯데잇츠 앱을 통해 예매할 예정이며, 참가비와 모집인원 등 세부 내용은 추후 공개 예정입니다."
     },
@@ -15111,14 +15111,14 @@
       "schedule": null
     },
     "registration": {
-      "startDate": null,
-      "endDate": null,
-      "startTime": null,
-      "endTime": null,
+      "startDate": "2026-09-01",
+      "endDate": "2026-09-03",
+      "startTime": "14:00",
+      "endTime": "11:59",
       "site": null,
-      "status": "접수 대기",
+      "status": null,
       "price": {
-        "5km": null
+        "5km": 50000
       }
     },
     "location": {
@@ -15131,8 +15131,8 @@
       "longitude": 127.08378909469191
     },
     "hosts": {
-      "organizer": "롯데리아",
-      "manager": null,
+      "organizer": "롯데GRS",
+      "manager": "BEOCTANGENT",
       "sponsor": null,
       "phone": null,
       "email": null,
@@ -16847,15 +16847,15 @@
       }
     },
     "registration": {
-      "startDate": null,
-      "endDate": null,
+      "startDate": "2026-08-31",
+      "endDate": "2026-10-04",
       "startTime": null,
       "endTime": null,
-      "site": null,
+      "site": "https://ticket.yes24.com/Perf/59765",
       "status": null,
       "price": {
-        "10km": 0,
-        "5km": 0
+        "10km": 65000,
+        "5km": 65000
       }
     },
     "location": {
