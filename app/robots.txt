@@ -7,4 +7,4 @@ Disallow: /mypage
 Host: https://runzoa.com
 Sitemap: https://runzoa.com/sitemap.xml
 
-#DaumWebMasterTool:4c272e723c1248355b387e17e8cb1d7c6fc60062aebdd7051cbca4e740380e5a:tIsPQHLTdJejayAQtKhhag==
+#DaumWebMasterTool:952f0d42a83361cfeb5cd4e5da4f0561dda11ae3b461ffa9fbeefb83ef086369:tIsPQHLTdJejayAQtKhhag==
