@@ -1,10 +1,10 @@
 import PageNav from "@/components/page/page-nav";
 import PageNewsContent from "@/components/page/page-news-content";
 import PageTitle from "@/components/page/page-title";
-import { NEWS_ITEMS, type NewsItem } from "@/lib/news";
+import { NEWS_SECTIONS, type NewsSection } from "@/lib/news";
 
 type PageNewsProps = {
-  item: NewsItem;
+  item: NewsSection;
 };
 
 export default function PageNews({ item }: PageNewsProps) {
@@ -18,10 +18,10 @@ export default function PageNews({ item }: PageNewsProps) {
       />
       <PageNav
         ariaLabel="런조아 소식 유형"
-        items={NEWS_ITEMS.map((newsItem) => ({
-          label: newsItem.label,
-          href: `/news?type=${newsItem.type}`,
-          active: newsItem.type === item.type,
+        items={NEWS_SECTIONS.map((section) => ({
+          label: section.label,
+          href: section.href,
+          active: section.href === item.href,
         }))}
       />
       <PageNewsContent item={item} />

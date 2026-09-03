@@ -1,5 +1,6 @@
 import { APP_EMAIL, APP_INSTAGRAM_URL, APP_THREADS_URL } from "@/lib/constants";
 import {
+  BookOpenText,
   CalendarDays,
   Info,
   List,
@@ -49,7 +50,8 @@ export const SHEET_NAVIGATION: MenuItem[][] = [
   ],
   [
     { icon: Info, label: "소개", href: "/about" },
-    { icon: Newspaper, label: "공지사항", href: "/news?type=notice" },
+    { icon: Newspaper, label: "소식", href: "/new" },
+    { icon: BookOpenText, label: "블로그", href: "/blog" },
     { icon: MessageCircle, label: "문의사항", href: "/support?type=inquiry" },
     { icon: ScrollText, label: "운영방침", href: "/policy" },
   ],
@@ -74,10 +76,10 @@ export const FOOTER_NAVIGATION: NavigationSection[] = [
   {
     title: "소식",
     links: [
-      { label: "공지사항", href: "/news?type=notice" },
-      { label: "블로그", href: "/news?type=blog" },
-      { label: "업데이트", href: "/news?type=updates" },
-      { label: "뉴스레터", href: "/news?type=newsletter" },
+      { label: "공지사항", href: "/new?type=notice" },
+      { label: "업데이트", href: "/new?type=updates" },
+      { label: "뉴스레터", href: "/newsletter" },
+      { label: "블로그", href: "/blog" },
     ],
   },
   {

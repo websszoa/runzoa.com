@@ -22,8 +22,8 @@ export default function MainThisMonth({
         marathon.event.startDate.startsWith(currentMonth) &&
         marathon.event.startDate >= today,
     )
-    .sort((a, b) => a.event.startDate.localeCompare(b.event.startDate))
-    .slice(0, 12);
+    .sort((a, b) => a.event.startDate.localeCompare(b.event.startDate));
+  const displayedMarathons = monthlyMarathons.slice(0, 12);
 
   if (monthlyMarathons.length === 0) return null;
 
@@ -70,7 +70,7 @@ export default function MainThisMonth({
           </div>
 
           <div className="grid gap-px bg-border md:grid-cols-2">
-            {monthlyMarathons.map((marathon) => {
+            {displayedMarathons.map((marathon) => {
               const weekday = formatMarathonDate(
                 marathon.event.startDate,
               ).match(/\((.+)\)/)?.[1];

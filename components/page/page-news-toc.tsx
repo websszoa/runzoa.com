@@ -21,6 +21,17 @@ type PageNewsTocProps = {
 
 const EMPTY_SECTIONS: NonNullable<NewsPostMetadata["toc"]> = [];
 
+function getPostHref(post: Pick<NewsPostMetadata, "slug" | "type">) {
+  const basePath =
+    post.type === "blog"
+      ? "/blog"
+      : post.type === "newsletter"
+        ? "/newsletter"
+        : "/new";
+
+  return `${basePath}/${post.slug}`;
+}
+
 export default function PageNewsToc({ metadata, posts }: PageNewsTocProps) {
   const router = useRouter();
   const sections = metadata.toc ?? EMPTY_SECTIONS;
@@ -57,7 +68,13 @@ export default function PageNewsToc({ metadata, posts }: PageNewsTocProps) {
   return (
     <div className="sticky top-36">
       <Link
-        href={`/news?type=${metadata.type}`}
+        href={
+          metadata.type === "blog"
+            ? "/blog"
+            : metadata.type === "newsletter"
+              ? "/newsletter"
+              : `/new?type=${metadata.type}`
+        }
         aria-label={`${metadata.category} 목록으로 돌아가기`}
         className="flex size-9 items-center justify-center rounded-md border text-muted-foreground transition-colors hover:border-brand/30 hover:bg-brand/5 hover:text-brand"
       >
@@ -83,7 +100,10 @@ export default function PageNewsToc({ metadata, posts }: PageNewsTocProps) {
           value={metadata.slug}
           onValueChange={(value) => {
             if (value && value !== metadata.slug) {
-              router.push(`/news/${value}`);
+              const post = posts.find((item) => item.slug === value);
+              if (post) {
+                router.push(getPostHref(post));
+              }
             }
           }}
         >

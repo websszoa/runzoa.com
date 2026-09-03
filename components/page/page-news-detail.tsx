@@ -5,8 +5,9 @@ import PageNav from "@/components/page/page-nav";
 import PageNewsToc from "@/components/page/page-news-toc";
 import PageTitle from "@/components/page/page-title";
 import {
-  NEWS_ITEMS,
+  NEWS_SECTIONS,
   getNewsItem,
+  getNewsSection,
   getNewsPosts,
   type NewsPostMetadata,
 } from "@/lib/news";
@@ -21,7 +22,8 @@ export default async function PageNewsDetail({
   children,
 }: PageNewsDetailProps) {
   const newsType = getNewsItem(metadata.type);
-  const relatedPosts = await getNewsPosts(metadata.type);
+  const section = getNewsSection(metadata.type);
+  const relatedPosts = await getNewsPosts(section.types);
 
   return (
     <>
@@ -34,10 +36,10 @@ export default async function PageNewsDetail({
       />
       <PageNav
         ariaLabel="런조아 소식 유형"
-        items={NEWS_ITEMS.map((item) => ({
+        items={NEWS_SECTIONS.map((item) => ({
           label: item.label,
-          href: `/news?type=${item.type}`,
-          active: item.type === metadata.type,
+          href: item.href,
+          active: item.href === section.href,
         }))}
       />
 
@@ -49,7 +51,7 @@ export default async function PageNewsDetail({
         <div className="min-w-0">
           <div className="mb-6 flex items-center lg:hidden">
             <Link
-              href={`/news?type=${metadata.type}`}
+              href={section.href}
               aria-label={`${metadata.category} 목록으로 돌아가기`}
               className="flex size-9 items-center justify-center rounded-md border text-muted-foreground transition-colors hover:border-brand/30 hover:bg-brand/5 hover:text-brand"
             >

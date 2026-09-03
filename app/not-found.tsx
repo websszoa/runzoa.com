@@ -51,7 +51,7 @@ export default function NotFound() {
             홈으로 돌아가기
           </Button>
           <Button
-            render={<Link href="/news" />}
+            render={<Link href="/new" />}
             variant="outline"
             size="lg"
             className="w-full sm:w-auto rounded-full"

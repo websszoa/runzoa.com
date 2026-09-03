@@ -9,15 +9,15 @@ import {
 } from "lucide-react";
 
 import DialogNewsletter from "@/components/dialog/dialog-newsletter";
-import { getNewsPosts, type NewsItem } from "@/lib/news";
+import { getNewsPosts, getPostHref, type NewsSection } from "@/lib/news";
 
 type PageNewsContentProps = {
-  item: NewsItem;
+  item: NewsSection;
 };
 
 export default async function PageNewsContent({ item }: PageNewsContentProps) {
   const Icon = item.icon;
-  const posts = await getNewsPosts(item.type);
+  const posts = await getNewsPosts(item.types);
 
   return (
     <div className="mx-auto max-w-7xl px-4 py-12 sm:px-6 sm:py-14 lg:px-8 lg:py-16">
@@ -51,7 +51,7 @@ export default async function PageNewsContent({ item }: PageNewsContentProps) {
             </p>
           </div>
 
-          {item.type === "newsletter" && (
+          {item.types.includes("newsletter") && (
             <div className="relative mt-8 overflow-hidden rounded-2xl border border-brand/15 bg-linear-to-br from-brand/[0.06] via-background to-amber-50 p-5">
               <span
                 className="absolute -top-8 -right-8 size-24 rounded-full bg-brand/[0.07]"
@@ -100,8 +100,8 @@ export default async function PageNewsContent({ item }: PageNewsContentProps) {
               {posts.map((post) => (
                 <Link
                   key={post.title}
-                  href={`/news/${post.slug}`}
-                  className="group flex min-h-64 flex-col rounded-2xl border bg-background p-5 transition-[border-color,transform,box-shadow] hover:-translate-y-0.5 hover:border-brand/30 hover:shadow-lg hover:shadow-red-950/5 sm:p-6"
+                  href={getPostHref(post)}
+                  className="group flex min-h-64 flex-col rounded-2xl border bg-background p-5 transition-[border-color,transform] hover:-translate-y-0.5 hover:border-brand/30 sm:p-6"
                 >
                   <div className="flex items-center justify-between gap-3">
                     <span className="rounded-full bg-brand/10 px-3 py-1 font-anyvid text-xs font-medium text-brand">

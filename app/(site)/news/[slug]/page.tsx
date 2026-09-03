@@ -1,7 +1,6 @@
 import type { Metadata } from "next";
-import { notFound } from "next/navigation";
-import { getNewsPost, getNewsSlugs, loadNewsPost } from "@/lib/news";
-import PageNewsDetail from "@/components/page/page-news-detail";
+import { notFound, permanentRedirect } from "next/navigation";
+import { getNewsPost, getNewsSlugs } from "@/lib/news";
 
 type NewsDetailPageProps = {
   params: Promise<{ slug: string }>;
@@ -27,7 +26,13 @@ export async function generateMetadata({
     title: post.title,
     description: post.description,
     alternates: {
-      canonical: `/news/${post.slug}`,
+      canonical: `${
+        post.type === "blog"
+          ? "/blog"
+          : post.type === "newsletter"
+            ? "/newsletter"
+            : "/new"
+      }/${post.slug}`,
     },
     openGraph: {
       type: "article",
@@ -40,17 +45,18 @@ export async function generateMetadata({
 
 export default async function NewsDetailPage({ params }: NewsDetailPageProps) {
   const { slug } = await params;
-  const post = await loadNewsPost(slug);
+  const post = await getNewsPost(slug);
 
   if (!post) {
     notFound();
   }
 
-  const { Content, metadata } = post;
+  const basePath =
+    post.type === "blog"
+      ? "/blog"
+      : post.type === "newsletter"
+        ? "/newsletter"
+        : "/new";
 
-  return (
-    <PageNewsDetail metadata={metadata}>
-      <Content />
-    </PageNewsDetail>
-  );
+  permanentRedirect(`${basePath}/${post.slug}`);
 }

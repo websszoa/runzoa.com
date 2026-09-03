@@ -13,7 +13,9 @@ const PUBLIC_ROUTES = [
   { path: "/marathon-map", changeFrequency: "daily", priority: 0.8 },
   { path: "/marathon-year", changeFrequency: "monthly", priority: 0.7 },
   { path: "/geocoder", changeFrequency: "monthly", priority: 0.5 },
-  { path: "/news", changeFrequency: "weekly", priority: 0.8 },
+  { path: "/new", changeFrequency: "weekly", priority: 0.8 },
+  { path: "/newsletter", changeFrequency: "weekly", priority: 0.8 },
+  { path: "/blog", changeFrequency: "weekly", priority: 0.8 },
   { path: "/about", changeFrequency: "monthly", priority: 0.6 },
   { path: "/analytics", changeFrequency: "monthly", priority: 0.5 },
   { path: "/support", changeFrequency: "monthly", priority: 0.5 },
@@ -48,7 +50,13 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     post
       ? [
           {
-            url: `${APP_SITE_URL}/news/${encodeURIComponent(post.slug)}`,
+            url: `${APP_SITE_URL}${
+              post.type === "blog"
+                ? "/blog"
+                : post.type === "newsletter"
+                  ? "/newsletter"
+                  : "/new"
+            }/${encodeURIComponent(post.slug)}`,
             lastModified: toDate(post.updated ?? post.date),
             changeFrequency: "monthly" as const,
             priority: 0.6,

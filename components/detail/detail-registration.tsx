@@ -243,7 +243,7 @@ export default function DetailRegistration({
           <BellRing className="size-5 shrink-0 text-brand" aria-hidden="true" />
           <h2 className="font-paperlogy text-lg font-semibold">런조아 구독</h2>
           <Link
-            href="/news?type=newsletter"
+            href="/newsletter"
             className="ml-auto inline-flex h-6 items-center gap-1 rounded-full border border-brand px-2.5 font-anyvid text-xs font-medium text-brand transition-colors hover:bg-brand hover:text-white"
           >
             뉴스레터

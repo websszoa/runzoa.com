@@ -9078,7 +9078,7 @@
       "startTime": null,
       "endTime": null,
       "site": "https://runten.co.kr/competitions/694b75d9-2f7c-4d4e-aa20-4163c44e9c82",
-      "status": "",
+      "status": "접수마감",
       "price": {
         "5KM": 45000,
         "10KM": 50000
@@ -10136,7 +10136,7 @@
       "startTime": null,
       "endTime": null,
       "site": "https://hk-marathon.com/marathon/code/8048/",
-      "status": "",
+      "status": "접수마감",
       "price": {
         "5KM": 60000,
         "10KM": 70000,
@@ -11051,7 +11051,7 @@
     },
     "registration": {
       "startDate": "2026-07-22",
-      "endDate": "2026-08-21",
+      "endDate": "2026-09-14",
       "startTime": "13:00",
       "endTime": null,
       "site": "https://119memorial.com/",
@@ -11512,7 +11512,7 @@
       "startTime": "10:00",
       "endTime": null,
       "site": "https://disneyrunincheon2026.com/",
-      "status": "",
+      "status": "접수마감",
       "price": {
         "5KM": 65000,
         "10KM": 80000,
@@ -13684,7 +13684,7 @@
       "startTime": "10:00",
       "endTime": null,
       "site": "https://www.lotteon.com/p/product/LE1222343657?mall_no=2",
-      "status": null,
+      "status": "접수마감",
       "price": {
         "10K": 80000,
         "5K": 80000
@@ -13895,7 +13895,7 @@
       "startTime": null,
       "endTime": null,
       "site": "https://runten.co.kr/competitions/46e731b4-252b-4dce-9634-44369aceea25",
-      "status": "접수중",
+      "status": null,
       "price": {
         "10km": 50000,
         "5km": 45000
@@ -13942,10 +13942,10 @@
     "registration": {
       "startDate": "2026-08-01",
       "endDate": "2026-10-02",
-      "startTime": null,
+      "startTime": "08:30",
       "endTime": null,
       "site": null,
-      "status": null,
+      "status": "접수마감",
       "price": {
         "10km": 50000,
         "5km": 45000
@@ -14163,7 +14163,7 @@
       "startTime": "10:00",
       "endTime": null,
       "site": "https://www.ulsanrunfesta.com/",
-      "status": null,
+      "status": "접수마감",
       "price": {
         "HALF": 50000,
         "10km": 45000,
@@ -15171,7 +15171,7 @@
       "startTime": "10:00",
       "endTime": null,
       "site": "https://www.egg-run.com/",
-      "status": "접수중",
+      "status": "접수마감",
       "price": {
         "Half": 45000,
         "10km": 45000,
@@ -15209,7 +15209,7 @@
       "type": "마라톤",
       "scale": null,
       "park": null,
-      "souvenir": null,
+      "souvenir": "티셔츠, 반다나, 배번호, 양말, 스트링백",
       "program": null,
       "memo": "현재 대회 일정과 장소가 우선 공개되었습니다. 참가 신청 일정, 종목, 참가비, 패키지 구성 등 자세한 정보는 추후 공개될 예정입니다."
     },
@@ -15222,13 +15222,16 @@
       "schedule": null
     },
     "registration": {
-      "startDate": null,
-      "endDate": null,
+      "startDate": "2026-09-14",
+      "endDate": "2026-10-15",
       "startTime": null,
       "endTime": null,
       "site": null,
       "status": null,
-      "price": null
+      "price": {
+        "Half": 70000,
+        "10km": 80000
+      }
     },
     "location": {
       "country": "한국",
@@ -15245,7 +15248,7 @@
       "sponsor": null,
       "phone": null,
       "email": null,
-      "instagram": null
+      "instagram": "jurassicparkrun.kr"
     }
   },
   {
@@ -15275,7 +15278,7 @@
     },
     "registration": {
       "startDate": "2026-08-01",
-      "endDate": "2026-08-31",
+      "endDate": "2026-09-22",
       "startTime": null,
       "endTime": null,
       "site": "https://docs.google.com/forms/d/e/1FAIpQLScITbxTg3iX5iLx0n6PDBFH0rpOB8wnDPUDvdy-SXP3anrIMw/viewform",
@@ -16876,7 +16879,7 @@
   {
     "slug": "gaya-kingdom-marathon-2026",
     "name": "가야왕도마라톤 2026",
-    "description": "가야왕도마라톤 2026은 2,000년 가야 건국 신화와 역사가 살아 숨 쉬는 김해 장유 일대를 달리는 마라톤 대회입니다. 장애인과 비장애인이 함께 뛰는 어울림을 지향하며 하프, 10km, 5km 종목으로 진행됩니다.",
+    "description": "2026 가야왕 김해 전국어울림 마라톤대회는 가야 건국 신화의 숨결이 살아있는 김해 장유를 달리는 특별한 마라톤대회입니다. 장애인과 비장애인이 함께 달리며 서로를 응원하고 어울리는 뜻깊은 레이스입니다.",
     "info": {
       "type": "마라톤",
       "scale": 4000,
@@ -17941,8 +17944,8 @@
       "site": "https://youth1strun.com/",
       "status": null,
       "price": {
-        "5.8KM(러닝)": 55000,
-        "5.8KM(걷기)": 50000
+        "5.8KM(러닝)": 30000,
+        "5.8KM(걷기)": 25000
       }
     },
     "location": {
@@ -18063,6 +18066,162 @@
       "sponsor": null,
       "phone": "1866-1718",
       "email": "isang102@naver.com",
+      "instagram": null
+    }
+  },
+  {
+    "slug": "zeiss-smile-race-2026",
+    "name": "2026 자이스 스마일 레이스",
+    "description": "2026 자이스 스마일 레이스는 서울 여의도공원 문화의마당에서 열리는 눈 건강 나눔 마라톤입니다. '다 함께 밝게 보는 세상'을 주제로 10km와 5km 두 종목에 총 7,000명의 러너가 함께합니다. 일반 참가와 하네스가 포함된 참가권을 선택할 수 있으며, 달리기를 통해 눈 건강의 중요성과 나눔의 의미를 함께 전하는 특별한 서울 러닝 행사입니다.",
+    "info": {
+      "type": "마라톤",
+      "scale": 7000,
+      "park": null,
+      "souvenir": "프로스펙스 티셔츠, 경량 백팩, 배번호, 기록칩, 완주메달, 완주 패키지",
+      "program": "10km, 5km 마라톤 및 눈 건강 나눔 캠페인",
+      "memo": "10km 제한시간은 1시간 30분, 5km는 1시간입니다. 5km 일반 참가자는 기록칩이 제공되지 않습니다. 참가비는 일반 참가권과 하네스 포함 참가권으로 구분됩니다."
+    },
+    "event": {
+      "startDate": "2026-11-22",
+      "endDate": "2026-11-22",
+      "startTime": "07:30",
+      "endTime": null,
+      "site": "https://zeiss-smilerace.kr/marathon/code/8050/",
+      "schedule": null
+    },
+    "registration": {
+      "startDate": "2026-09-01",
+      "endDate": "2026-11-21",
+      "startTime": null,
+      "endTime": null,
+      "site": "https://zeiss-smilerace.kr/marathon/code/8050/",
+      "status": null,
+      "price": {
+        "10KM": 65000,
+        "5KM": 55000,
+        "10KM(하네스)": 100000,
+        "5KM(하네스)": 90000
+      }
+    },
+    "location": {
+      "country": "한국",
+      "region": "서울",
+      "venue": "여의도공원 문화의마당",
+      "naver": null,
+      "address": "서울 영등포구 여의공원로 68",
+      "latitude": 37.5268088,
+      "longitude": 126.9222841
+    },
+    "hosts": {
+      "organizer": "칼자이스, 한국실명예방재단",
+      "manager": "런코리아",
+      "sponsor": null,
+      "phone": "1566-1936",
+      "email": "emara@hanmail.net",
+      "instagram": null
+    }
+  },
+  {
+    "slug": "kim-dae-jung-marathon-2026",
+    "name": "2026 김대중마라톤대회",
+    "description": "2026 김대중마라톤대회는 전남 목포종합경기장에서 열리는 마라톤 대회입니다. 하프, 10km, 5km 세 종목으로 진행되며 총 6,000명을 선착순 모집합니다. 하프와 10km 참가비는 4만원, 5km는 1만5천원이며 모든 종목의 제한시간은 3시간입니다. 목포에서 러너들과 함께 달리며 김대중 대통령의 평화와 화합의 의미를 되새길 수 있는 특별한 러닝 행사입니다.",
+    "info": {
+      "type": "마라톤",
+      "scale": 6000,
+      "park": null,
+      "souvenir": null,
+      "program": "Half, 10km, 5km 마라톤",
+      "memo": "총 6,000명을 선착순 모집하며 모집인원 충족 시 조기 마감될 수 있습니다. Half, 10km, 5km 모두 제한시간은 3시간입니다."
+    },
+    "event": {
+      "startDate": "2026-11-22",
+      "endDate": "2026-11-22",
+      "startTime": "09:00",
+      "endTime": null,
+      "site": "http://www.djrun.kr/",
+      "schedule": null
+    },
+    "registration": {
+      "startDate": "2026-09-01",
+      "endDate": "2026-10-01",
+      "startTime": null,
+      "endTime": "23:59",
+      "site": "http://www.djrun.kr/",
+      "status": null,
+      "price": {
+        "HALF": 40000,
+        "10KM": 40000,
+        "5KM": 20000
+      }
+    },
+    "location": {
+      "country": "한국",
+      "region": "전남",
+      "venue": "목포종합경기장",
+      "naver": "목포종합경기장",
+      "address": "전남광주 목포시 대양산단로 23",
+      "latitude": 34.8263623,
+      "longitude": 126.39694
+    },
+    "hosts": {
+      "organizer": "목포시육상연맹",
+      "manager": null,
+      "sponsor": "김대중기념사업회, 목포시, 전라남도, 목포시체육회, 전남육상연맹, 목포경찰서, 목포해상케이블카",
+      "phone": "061-375-1201",
+      "email": "ds4bjt@hanmail.net",
+      "instagram": null
+    }
+  },
+  {
+    "slug": "world-record-international-marathon-festival-2026",
+    "name": "2026 세계기록 국제마라톤대회",
+    "description": "SAWE 2026 세계기록 국제마라톤축전은 충남 금산세계인삼엑스포광장에서 열리는 대규모 국제 러닝 페스티벌입니다. 12월 5일과 6일 이틀 동안 하루 12,000명씩 총 24,000명의 러너가 14km 단일 종목에 참가합니다. 티셔츠 패키지와 페바 카본 마라톤화 패키지로 참가할 수 있으며, 기록에 따라 A·B·C·D 그룹으로 나뉘어 출발하는 특별한 겨울 레이스입니다.",
+    "info": {
+      "type": "마라톤",
+      "scale": 24000,
+      "park": null,
+      "souvenir": "티셔츠 패키지 또는 페바 카본 마라톤화 패키지",
+      "program": "14km 국제 로드레이스",
+      "memo": "12월 5일과 6일 하루 12,000명씩 총 24,000명 규모로 진행됩니다. 참가자는 양일 중 하루만 참가할 수 있으며 중복 참가는 불가능합니다. A그룹 참가자는 최근 1년 이내 10km 기록증을 10월 20일까지 제출해야 합니다."
+    },
+    "event": {
+      "startDate": "2026-12-05",
+      "endDate": "2026-12-06",
+      "startTime": "10:00",
+      "endTime": null,
+      "site": "https://mara1080.com/event/ccf77de8-1b14-4170-afcb-c2eeaee1a78d/guide/overview",
+      "schedule": {
+        "2026-12-05 10:00": "14km 레이스 출발",
+        "2026-12-06 10:00": "14km 레이스 출발"
+      }
+    },
+    "registration": {
+      "startDate": "2026-08-31",
+      "endDate": "2026-09-10",
+      "startTime": "10:00",
+      "endTime": null,
+      "site": "https://mara1080.com/event/ccf77de8-1b14-4170-afcb-c2eeaee1a78d/registration/apply",
+      "status": "접수중",
+      "price": {
+        "14KM_티셔츠패키지": 100000,
+        "14KM_페바카본마라톤화패키지": 250000
+      }
+    },
+    "location": {
+      "country": "한국",
+      "region": "충남",
+      "venue": "금산세계인삼엑스포광장",
+      "naver": null,
+      "address": "충청남도 금산군 금산읍 인삼광장로 19",
+      "latitude": 36.098462,
+      "longitude": 127.5017425
+    },
+    "hosts": {
+      "organizer": "전국마라톤협회",
+      "manager": null,
+      "sponsor": null,
+      "phone": "042-638-1080",
+      "email": "jeonmahyeop@naver.com",
       "instagram": null
     }
   }
