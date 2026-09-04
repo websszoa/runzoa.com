@@ -17721,8 +17721,8 @@
     "registration": {
       "startDate": "2026-09-07",
       "endDate": "2026-10-08",
-      "startTime": null,
-      "endTime": null,
+      "startTime": "10:00",
+      "endTime": "17:00",
       "site": "https://www.dema.mil.kr/marathon/intro/mainPoint.do",
       "status": null,
       "price": {
@@ -18222,6 +18222,459 @@
       "sponsor": null,
       "phone": "042-638-1080",
       "email": "jeonmahyeop@naver.com",
+      "instagram": null
+    }
+  },
+  {
+    "slug": "gyeonggi-hwaseong-eco-marathon-2026",
+    "name": "2026 경기화성 생태마라톤",
+    "description": "2026 경기화성 생태마라톤은 경기도 화성 궁평항과 영종로 일대에서 열리는 생태 러닝 대회입니다. Half, 10km, 5km와 가족 5km까지 다양한 종목으로 구성되며 선착순 10,000명이 참가합니다. 서해의 바다 풍경을 만날 수 있는 궁평항에서 출발해 영종로를 따라 달리는 코스로, 가족부터 마라톤 러너까지 함께 즐길 수 있는 화성의 가을 마라톤입니다.",
+    "info": {
+      "type": "마라톤",
+      "scale": 10000,
+      "park": null,
+      "souvenir": "완주메달, 비치타올",
+      "program": "Half, 10km, 5km, 가족 5km",
+      "memo": "선착순 10,000명을 모집합니다. 5km, 10km, Half 코스는 궁평항 공터에서 출발해 영종로를 따라 달린 뒤 반환하는 코스로 진행됩니다."
+    },
+    "event": {
+      "startDate": "2026-11-08",
+      "endDate": "2026-11-08",
+      "startTime": "08:30",
+      "endTime": "12:00",
+      "site": "https://kiccrace.com/hwasung1",
+      "schedule": null
+    },
+    "registration": {
+      "startDate": "2026-09-04",
+      "endDate": "2026-10-18",
+      "startTime": "13:00",
+      "endTime": null,
+      "site": "https://kiccrace.com/hwasung1",
+      "status": null,
+      "price": {
+        "HALF": 60000,
+        "10KM": 60000,
+        "5KM": 55000,
+        "가족5KM": 55000
+      }
+    },
+    "location": {
+      "country": "한국",
+      "region": "경기",
+      "venue": "화성 궁평항 일대",
+      "naver": "궁평항",
+      "address": "경기 화성시 만세구 서신면 궁평리 749",
+      "latitude": 37.1198584,
+      "longitude": 126.6946982
+    },
+    "hosts": {
+      "organizer": "경기신문",
+      "manager": "경기신문",
+      "sponsor": "화성특례시",
+      "phone": null,
+      "email": null,
+      "instagram": null
+    }
+  },
+  {
+    "slug": "seoul-hidden-trails-international-trailrun-2026",
+    "name": "2026 서울 구석구석 국제 트레일런대회",
+    "description": "2026 서울 구석구석 국제 트레일런대회는 서울광장을 출발해 안산, 인왕산, 북악산 일원을 달리는 도심형 트레일러닝 대회입니다. 15K와 35K 두 종목에 총 1,200명이 참가하며, 서울 도심과 산길을 연결한 색다른 코스를 경험할 수 있습니다. ITRA 및 UTMB INDEX 인증대회로 진행되어 서울의 숨겨진 자연과 도심 풍경을 동시에 만날 수 있는 국제 트레일런입니다.",
+    "info": {
+      "type": "트레일러닝",
+      "scale": 1200,
+      "park": null,
+      "souvenir": "대회 기념품",
+      "program": "35K, 15K 트레일러닝",
+      "memo": "ITRA 및 UTMB INDEX 인증대회입니다. 35K는 700명, 15K는 500명을 선착순 모집합니다. 35K 상승고도는 +2,514m, 제한시간은 10시간이며 15K 상승고도는 +877m, 제한시간은 5시간입니다. 참가자는 만 18세 이상이어야 합니다."
+    },
+    "event": {
+      "startDate": "2026-11-08",
+      "endDate": "2026-11-08",
+      "startTime": "07:00",
+      "endTime": "17:00",
+      "site": "https://cafe.naver.com/seoultrailrun",
+      "schedule": {
+        "05:00": "35K 선수등록 및 준비물 검사",
+        "06:00": "15K 선수등록 및 준비물 검사",
+        "06:25": "35K 환영행사 및 스트레칭",
+        "07:00": "35K 출발",
+        "07:25": "15K 스트레칭 및 환영행사",
+        "08:00": "15K 출발",
+        "10:30": "15K CP2 컷오프",
+        "12:00": "35K CP2 컷오프",
+        "15:00": "CP별 첫 오픈시간에 맞춰 철수 시작",
+        "17:00": "35K 경기 종료 및 시설물 철거"
+      }
+    },
+    "registration": {
+      "startDate": "2026-09-01",
+      "endDate": "2026-09-30",
+      "startTime": null,
+      "endTime": "18:00",
+      "site": "https://cafe.naver.com/seoultrailrun/828",
+      "status": null,
+      "price": {
+        "35KM": 120000,
+        "15KM": 70000
+      }
+    },
+    "location": {
+      "country": "한국",
+      "region": "서울",
+      "venue": "서울신문 서울마당",
+      "naver": "서울신문사",
+      "address": "서울 중구 세종대로 124",
+      "latitude": 37.5674232,
+      "longitude": 126.9778908
+    },
+    "hosts": {
+      "organizer": "서울신문, 한국익스트림앤스포츠",
+      "manager": "서울신문, 한국익스트림앤스포츠",
+      "sponsor": "호반그룹, 에피소드컴퍼니, 서울F&B, 칭따오논알콜릭, 아스티인터내셔널, 유밸눈편한안과",
+      "phone": "070-7719-5788",
+      "email": null,
+      "instagram": null
+    }
+  },
+  {
+    "slug": "yeongjong-skyway-marathon-2026",
+    "name": "2026 영종하늘길 마라톤",
+    "description": "2026 영종하늘길마라톤은 인천 영종도 씨사이드파크에서 열리는 러닝 대회입니다. 영종구 출범과 해안순환도로 완전 개통을 기념해 처음 개최되며, Half, 10km, 5km 세 종목에 총 5,000명을 선착순 모집합니다. 탁 트인 영종의 바다와 하늘을 배경으로 달릴 수 있으며, Half와 10km는 기록칩을 이용한 기록 측정도 제공되는 영종도의 특별한 가을 마라톤입니다.",
+    "info": {
+      "type": "마라톤",
+      "scale": 5000,
+      "park": "씨사이드파크 인근 지정구역 주차 가능, 일부 구간 절대 주차금지",
+      "souvenir": null,
+      "program": "Half, 10km, 5km",
+      "memo": "영종구 출범 및 해안순환도로 완전 개통을 기념해 개최되는 첫 대회입니다. Half와 10km는 기록칩이 제공되며 5km는 기록칩이 제공되지 않습니다. 단체 10인 이상 접수 시 참가비 10% 할인, 20인 이상 접수 시 부스 무상 제공 혜택이 있습니다."
+    },
+    "event": {
+      "startDate": "2026-11-14",
+      "endDate": "2026-11-14",
+      "startTime": "08:30",
+      "endTime": null,
+      "site": "https://www.leaveit.co.kr/match/apply/2026-yeongjong-airway",
+      "schedule": {
+        "07:30": "참가자 집결",
+        "08:30": "대회 시작"
+      }
+    },
+    "registration": {
+      "startDate": "2026-08-24",
+      "endDate": "2026-10-08",
+      "startTime": null,
+      "endTime": null,
+      "site": "https://www.leaveit.co.kr/match/apply/2026-yeongjong-airway",
+      "status": null,
+      "price": {
+        "HALF": 55000,
+        "10KM": 55000,
+        "5KM": 45000
+      }
+    },
+    "location": {
+      "country": "한국",
+      "region": "인천",
+      "venue": "씨사이드파크",
+      "naver": "영종씨사이드파크",
+      "address": "인천광역시 영종구 하늘달빛로2번길 6 씨사이드파크 관리사무실",
+      "latitude": 37.481753,
+      "longitude": 126.5658118
+    },
+    "hosts": {
+      "organizer": "REACT, LEAVE IT",
+      "manager": null,
+      "sponsor": "NOTSEE BACK, CROWN, Kabuto, SILENCE, 영종구체육회, (주)김영후보쌈",
+      "phone": null,
+      "email": "contact@leaveit.co.kr",
+      "instagram": null
+    }
+  },
+  {
+    "slug": "wonbiogen-andong-lake-ramen-granfondo-2026",
+    "name": "2026 원바이오젠 안동호반 라면 그란폰도",
+    "description": "2026 원바이오젠 안동호반 라면 그란폰도는 경북 안동시 세계물포럼기념센터에서 열리는 자전거 라이딩 대회입니다. MCT 21km, 그란폰도 102km, 메디오폰도 74.4km 세 종목으로 진행되며 총 2,020명을 모집합니다. 안동호반 일대를 달리는 레이스와 함께 다양한 시상과 경품, 피니시 행사가 마련되는 안동의 대규모 사이클링 이벤트입니다.",
+    "info": {
+      "type": "자전거",
+      "scale": 2020,
+      "park": null,
+      "souvenir": null,
+      "program": "MCT 21km, 그란폰도 102km, 메디오폰도 74.4km",
+      "memo": "자전거 대회입니다. 모집인원은 총 2,020명으로 그란폰도·메디오폰도 1,900명, MCT 120명입니다. 만 19세 이상 신체 건강한 남녀가 참가할 수 있습니다."
+    },
+    "event": {
+      "startDate": "2026-11-07",
+      "endDate": "2026-11-07",
+      "startTime": "06:00",
+      "endTime": "15:00",
+      "site": "https://speedagency.kr/more.html?game_code=118",
+      "schedule": {
+        "06:00": "대회 준비 및 배번호 수령",
+        "07:50": "개회식",
+        "08:00": "MCT 그룹 스테이지 출발",
+        "08:05": "그란폰도 및 메디오폰도 코스 출발",
+        "10:00": "종목별 피니시 관련 지급",
+        "14:00": "폐회식"
+      }
+    },
+    "registration": {
+      "startDate": "2026-09-07",
+      "endDate": "2026-11-06",
+      "startTime": "10:00",
+      "endTime": null,
+      "site": "https://speedagency.kr/more.html?game_code=118",
+      "status": null,
+      "price": {
+        "21KM": 70000,
+        "102KM": 70000,
+        "74.4KM": 70000
+      }
+    },
+    "location": {
+      "country": "한국",
+      "region": "경북",
+      "venue": "안동시 세계물포럼기념센터",
+      "naver": "세계물포럼기념센터",
+      "address": "경상북도 안동시 석주로 383",
+      "latitude": 36.5806926,
+      "longitude": 128.7763452
+    },
+    "hosts": {
+      "organizer": "원바이오젠",
+      "manager": "안동시사이클연맹, 스피드에이전시",
+      "sponsor": "안동시, 안동시체육회, 안동경찰서, 수자원공사, 메디솝, 농심, 비쉐르",
+      "phone": "033-256-1269",
+      "email": "speed2561269@naver.com",
+      "instagram": null
+    }
+  },
+  {
+    "slug": "freedom-democracy-marathon-2026",
+    "name": "제3회 자유민주 마라톤",
+    "description": "제3회 자유민주 마라톤은 서울시청 광장을 출발해 종로, 숭례문, 을지로 등 서울 도심의 역사적인 장소를 달리는 시민 참여형 마라톤입니다. 4·19혁명과 6월민주항쟁으로 이어지는 대한민국 민주주의의 정신을 기억하기 위해 마련되며, 10km와 의미 있는 숫자를 담은 6.10km 두 종목에 총 8,000명의 참가자를 선착순 모집합니다.",
+    "info": {
+      "type": "마라톤",
+      "scale": 8000,
+      "park": null,
+      "souvenir": "기념 티셔츠, 배번호, 공식 완주 메달, 간식 ",
+      "program": "10km, 6.10km",
+      "memo": "4·19혁명부터 6월민주항쟁으로 이어지는 대한민국 민주주의의 역사적 현장을 달리는 시민 참여형 마라톤입니다. 서울광장을 출발해 종로, 숭례문, 을지로 등 서울 도심을 달리며 모집인원 8,000명 충족 시 선착순 마감됩니다."
+    },
+    "event": {
+      "startDate": "2026-11-08",
+      "endDate": "2026-11-08",
+      "startTime": "07:30",
+      "endTime": null,
+      "site": "https://610run.kr/freerun/",
+      "schedule": {
+        "07:30": "10km 출발",
+        "07:40": "6.10km 출발"
+      }
+    },
+    "registration": {
+      "startDate": "2026-09-04",
+      "endDate": "2026-11-07",
+      "startTime": null,
+      "endTime": null,
+      "site": "https://610run.kr/freerun/",
+      "status": null,
+      "price": {
+        "10KM": 40000,
+        "6.10KM": 35000
+      }
+    },
+    "location": {
+      "country": "한국",
+      "region": "서울",
+      "venue": "서울시청 광장",
+      "naver": "서울광장",
+      "address": "서울 중구 세종대로 110",
+      "latitude": 37.5662952,
+      "longitude": 126.9779451
+    },
+    "hosts": {
+      "organizer": "민주화운동기념사업회",
+      "manager": "민주화운동기념사업회",
+      "sponsor": "행정안전부, 서울특별시",
+      "phone": "070-4135-9684",
+      "email": "help@blueimg.co.kr",
+      "instagram": null
+    }
+  },
+  {
+    "slug": "yangsan-half-marathon-2026",
+    "name": "제20회 양산전국 하프 마라톤대회",
+    "description": "제20회 양산전국하프마라톤대회는 경남 양산종합운동장에서 열리는 양산의 대표 마라톤 대회입니다. Half, 10km, 5km 세 종목으로 진행되며 총 8,000명의 참가자를 선착순 모집합니다. 올해로 20회를 맞는 전통 있는 대회로 가족과 친구, 러닝 동호인이 함께 참여할 수 있으며 Half와 10km부터 가볍게 도전할 수 있는 5km까지 자신의 수준에 맞춰 즐길 수 있습니다.",
+    "info": {
+      "type": "마라톤",
+      "scale": 8000,
+      "park": null,
+      "souvenir": null,
+      "program": "Half, 10km, 5km",
+      "memo": "총 8,000명을 선착순 모집하며 종목별 모집인원은 Half 3,000명, 10km 3,500명, 5km 1,500명입니다. 모집인원 충족 시 접수가 조기 마감될 수 있습니다."
+    },
+    "event": {
+      "startDate": "2026-12-06",
+      "endDate": "2026-12-06",
+      "startTime": "09:00",
+      "endTime": null,
+      "site": "https://ysmarathon.kr/",
+      "schedule": {
+        "08:00": "참가자 집결",
+        "09:00": "대회 출발"
+      }
+    },
+    "registration": {
+      "startDate": "2026-10-01",
+      "endDate": "2026-10-20",
+      "startTime": "09:00",
+      "endTime": "17:00",
+      "site": "https://ysmarathon.kr/",
+      "status": null,
+      "price": {
+        "HALF": 45000,
+        "10KM": 45000,
+        "5KM": 30000
+      }
+    },
+    "location": {
+      "country": "한국",
+      "region": "경남",
+      "venue": "양산종합운동장",
+      "naver": null,
+      "address": "경상남도 양산시 양산대로 849 양산종합운동장",
+      "latitude": 35.3447006,
+      "longitude": 129.0322011
+    },
+    "hosts": {
+      "organizer": "양산시체육회",
+      "manager": "양산시체육회, 양산육상연맹",
+      "sponsor": "경상남도, 양산시, 양산시의회, 양산시설관리공단, 농협, 경동도시가스, BNK경남은행, 콜핑, 비티알, 성광랜드",
+      "phone": "051-867-0517",
+      "email": null,
+      "instagram": null
+    }
+  },
+  {
+    "slug": "changwon-unification-marathon-2026",
+    "name": "제26회 창원 통일 마라톤대회",
+    "description": "제26회 창원통일마라톤대회는 경남 창원종합운동장 보조경기장에서 열리는 시민 참여형 마라톤입니다. '달리고 싶다. 백두산까지!'를 슬로건으로 한반도 평화와 통일에 대한 공감대를 넓히기 위해 마련되며, 올해는 5km 단일 종목으로 총 3,000명을 선착순 모집합니다. 부담 없이 참여할 수 있는 거리와 다양한 현장 행사, 경품 추첨 등을 함께 즐길 수 있는 창원의 대표적인 시민 러닝 행사입니다.",
+    "info": {
+      "type": "마라톤",
+      "scale": 3000,
+      "park": null,
+      "souvenir": "대회 기념품, 배번, 완주메달",
+      "program": "5km, 식전행사, 시상, 대동놀이, 경품추첨",
+      "memo": "5km 단일 종목으로 진행되며 기록칩을 이용한 기록측정과 기록증 발급은 없습니다. 제한시간은 1시간입니다. 참가자 배번을 이용한 사전 및 현장 경품 추첨과 먹거리, 포토존, 체험부스 등이 운영됩니다."
+    },
+    "event": {
+      "startDate": "2026-11-15",
+      "endDate": "2026-11-15",
+      "startTime": "09:30",
+      "endTime": "11:00",
+      "site": "https://www.tongilmarathon.kr/ko/",
+      "schedule": {
+        "08:40": "식전행사",
+        "09:00": "개회식 및 몸풀기 체조",
+        "09:30": "5km 출발",
+        "10:10": "시상",
+        "10:20": "폐회식 및 대동놀이, 경품추첨"
+      }
+    },
+    "registration": {
+      "startDate": "2026-09-14",
+      "endDate": null,
+      "startTime": "10:00",
+      "endTime": null,
+      "site": "https://www.tongilmarathon.kr/ko/",
+      "status": null,
+      "price": {
+        "5KM": 25000,
+        "5KM_초등학생이하": 10000
+      }
+    },
+    "location": {
+      "country": "한국",
+      "region": "경남",
+      "venue": "창원종합운동장 보조경기장",
+      "naver": null,
+      "address": "경남 창원시 성산구 원이대로 450",
+      "latitude": 35.2339885,
+      "longitude": 128.6647016
+    },
+    "hosts": {
+      "organizer": "경남자주통일평화연대",
+      "manager": "창원통일마라톤대회조직위원회",
+      "sponsor": "경상남도, 창원시, 경남은행, 농협은행, 경남개발공사, 경남도민일보, 오마이뉴스, (사)6월항쟁기념사업회",
+      "phone": "055-285-6158",
+      "email": "onekrmarathon@naver.com",
+      "instagram": null
+    }
+  },
+  {
+    "slug": "jinju-marathon-2026",
+    "name": "제36회 진주마라톤대회",
+    "description": "제36회 진주마라톤대회는 경남 진주노을공원과 남강댐 물문화관 일원에서 열리는 시민 참여형 마라톤입니다. 풀코스, 하프코스, 10km, 5km까지 네 종목으로 구성되며 총 5,000명을 선착순 모집합니다. 남강 주변의 자연 풍경을 따라 달릴 수 있으며 풀코스부터 가볍게 참여할 수 있는 5km까지 다양한 러너가 함께 즐길 수 있는 진주의 대표 마라톤 대회입니다.",
+    "info": {
+      "type": "마라톤",
+      "scale": 5000,
+      "park": null,
+      "souvenir": null,
+      "program": "FULL, Half, 10km, 5km",
+      "memo": "전 종목 기록을 측정하며 참가자는 입금 완료 순으로 총 5,000명을 선착순 확정합니다. FULL, Half, 10km는 일반과 매니아 부문으로 신청할 수 있으며 매니아 참가자는 기념품이 제공되지 않습니다."
+    },
+    "event": {
+      "startDate": "2026-12-13",
+      "endDate": "2026-12-13",
+      "startTime": "09:30",
+      "endTime": null,
+      "site": "https://www.jinma.co.kr/ko/",
+      "schedule": {
+        "08:30": "안내 및 식전행사",
+        "09:00": "개회식",
+        "09:20": "준비운동",
+        "09:30": "풀코스 출발",
+        "09:40": "하프코스 출발",
+        "09:50": "10km 코스 출발",
+        "10:00": "5km 건강달리기 출발",
+        "11:00": "5km 건강달리기 시상식",
+        "11:30": "10km 코스 시상식",
+        "12:00": "하프코스 시상식",
+        "13:00": "풀코스 시상식"
+      }
+    },
+    "registration": {
+      "startDate": "2026-09-14",
+      "endDate": "2026-12-12",
+      "startTime": "10:00",
+      "endTime": null,
+      "site": "https://www.jinma.co.kr/ko/",
+      "status": null,
+      "price": {
+        "FULL": 50000,
+        "HALF": 45000,
+        "10KM": 45000,
+        "5KM": 25000,
+        "5KM_학생": 20000
+      }
+    },
+    "location": {
+      "country": "한국",
+      "region": "경남",
+      "venue": "진주노을공원(남강댐 물문화관)",
+      "naver": "남강댐 물문화관",
+      "address": "경남 진주시 내동면 삼계로 455-46",
+      "latitude": 35.1625283,
+      "longitude": 128.0303531
+    },
+    "hosts": {
+      "organizer": "진주시육상연맹",
+      "manager": "제36회 진주마라톤대회추진위원회",
+      "sponsor": "경상남도, 진주시, 진주시체육회, 진주시경찰서, 진주시소방서, 모범운전자, 자원봉사위원회",
+      "phone": "010-3931-1356",
+      "email": "qnjio@naver.com",
       "instagram": null
     }
   }
