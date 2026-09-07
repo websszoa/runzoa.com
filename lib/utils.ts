@@ -137,3 +137,49 @@ export function getCurrentKoreanTodayLabel() {
 export function getCurrentKoreanYear() {
   return Number(getCurrentKoreanDate().slice(0, 4));
 }
+
+export function getUpcomingRegistrations(marathons: Marathon[], now = Date.now()) {
+  const today = getCurrentKoreanDate();
+  return marathons
+    .filter((marathon) => marathon.event.startDate >= today)
+    .map((marathon) => {
+      const additional = marathon.registration.additional;
+      const additionalSchedules = (Array.isArray(additional)
+        ? additional
+        : additional
+          ? [additional]
+          : []
+      )
+        .filter(
+          (schedule) =>
+            schedule.startDate &&
+            new Date(
+              `${schedule.startDate}T${schedule.startTime ?? "00:00"}+09:00`,
+            ).getTime() > now,
+        )
+        .map((schedule) => ({ ...schedule, isAdditional: true }));
+      const regularSchedules =
+        hasRegistrationStartDate(marathon) &&
+        getRegistrationStatus(marathon) === "접수예정"
+          ? [{
+              startDate: marathon.registration.startDate,
+              startTime: marathon.registration.startTime,
+              distance: undefined,
+              isAdditional: false,
+            }]
+          : [];
+      const schedules = [...regularSchedules, ...additionalSchedules].sort(
+        (a, b) =>
+          `${a.startDate}T${a.startTime ?? "00:00"}`.localeCompare(
+            `${b.startDate}T${b.startTime ?? "00:00"}`,
+          ),
+      );
+      return { marathon, schedules };
+    })
+    .filter(({ schedules }) => schedules.length > 0)
+    .sort((a, b) =>
+      `${a.schedules[0].startDate}T${a.schedules[0].startTime ?? "00:00"}`.localeCompare(
+        `${b.schedules[0].startDate}T${b.schedules[0].startTime ?? "00:00"}`,
+      ),
+    );
+}

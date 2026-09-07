@@ -4,12 +4,10 @@ import type { Marathon } from "@/lib/marathons";
 import {
   formatMarathonDate,
   formatMarathonPrices,
-  getCurrentKoreanDate,
   getMarathonDDay,
   getRegistrationBadgeClassName,
   getRegistrationLabel,
-  getRegistrationStatus,
-  hasRegistrationStartDate,
+  getUpcomingRegistrations,
 } from "@/lib/utils";
 import {
   AlarmClock,
@@ -25,19 +23,7 @@ export default function MainRegistrationSoon({
 }: {
   marathons: Marathon[];
 }) {
-  const today = getCurrentKoreanDate();
-  const upcomingMarathons = marathons
-    .filter(
-      (marathon) =>
-        hasRegistrationStartDate(marathon) &&
-        getRegistrationStatus(marathon) === "접수예정" &&
-        marathon.event.startDate >= today,
-    )
-    .sort((a, b) =>
-      (a.registration.startDate ?? "9999-12-31").localeCompare(
-        b.registration.startDate ?? "9999-12-31",
-      ),
-    );
+  const upcomingMarathons = getUpcomingRegistrations(marathons);
 
   if (upcomingMarathons.length === 0) return null;
 
@@ -85,9 +71,13 @@ export default function MainRegistrationSoon({
           </div>
 
           <div className="divide-y">
-            {upcomingMarathons.map((marathon) => {
-              const registrationDate = marathon.registration.startDate;
-              const registrationStatus = getRegistrationStatus(marathon);
+            {upcomingMarathons.map(({ marathon, schedules }) => {
+              const registrationStatus = "접수예정";
+              const registrationLabel = schedules.some(
+                (schedule) => schedule.isAdditional,
+              )
+                ? "추가 접수 예정"
+                : getRegistrationLabel(registrationStatus);
               const distances = Object.keys(
                 marathon.registration.price ?? {},
               );
@@ -134,7 +124,7 @@ export default function MainRegistrationSoon({
                             registrationStatus,
                           )}
                         >
-                          {getRegistrationLabel(registrationStatus)}
+                          {registrationLabel}
                         </Badge>
                       </div>
                     </div>
@@ -153,7 +143,7 @@ export default function MainRegistrationSoon({
                             registrationStatus,
                           )}
                         >
-                          {getRegistrationLabel(registrationStatus)}
+                          {registrationLabel}
                         </Badge>
                       </div>
                       <h3 className="truncate font-paperlogy text-xl font-semibold">
@@ -201,13 +191,19 @@ export default function MainRegistrationSoon({
                       <span className="flex size-9 shrink-0 items-center justify-center rounded-full bg-brand/10 text-brand">
                         <AlarmClock className="size-4" aria-hidden="true" />
                       </span>
-                      <div className="min-w-0 font-anyvid">
-                        <p className="text-xs text-muted-foreground">
-                          접수 시작일
-                        </p>
-                        <p className="mt-0.5 truncate text-sm text-foreground">
-                          {formatMarathonDate(registrationDate)}
-                        </p>
+                      <div className="min-w-0 space-y-2 font-anyvid">
+                        {schedules.map((schedule, index) => (
+                          <div key={`${schedule.distance ?? "all"}-${index}`}>
+                            <p className="text-xs text-muted-foreground">
+                              {schedule.distance && `${schedule.distance} `}
+                              {schedule.isAdditional ? "추가 접수 시작" : "접수 시작일"}
+                            </p>
+                            <p className="mt-0.5 text-sm text-foreground">
+                              {formatMarathonDate(schedule.startDate)}
+                              {schedule.startTime && ` · ${schedule.startTime}`}
+                            </p>
+                          </div>
+                        ))}
                       </div>
                       <ArrowRight
                         className="ml-auto size-4 shrink-0 text-brand transition-transform group-hover:translate-x-1"

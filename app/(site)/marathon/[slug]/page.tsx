@@ -3,6 +3,7 @@ import { notFound } from "next/navigation";
 import { getMarathons } from "@/lib/marathons";
 import {
   getCurrentKoreanDate,
+  getUpcomingRegistrations,
   getRegistrationStatus,
   hasRegistrationStartDate,
 } from "@/lib/utils";
@@ -39,19 +40,9 @@ export default async function MarathonDetailPage({
 
   if (!marathon) notFound();
 
-  const upcomingMarathons = marathons
-    .filter(
-      (item) =>
-        item.slug !== marathon.slug &&
-        hasRegistrationStartDate(item) &&
-        getRegistrationStatus(item) === "접수예정" &&
-        item.registration.startDate,
-    )
-    .sort((a, b) =>
-      (a.registration.startDate as string).localeCompare(
-        b.registration.startDate as string,
-      ),
-    );
+  const upcomingMarathons = getUpcomingRegistrations(
+    marathons.filter((item) => item.slug !== marathon.slug),
+  ).map(({ marathon }) => marathon);
 
   const openMarathons = marathons
     .filter(

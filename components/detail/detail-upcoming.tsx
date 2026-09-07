@@ -15,7 +15,7 @@ import {
   getMarathonDDay,
   getRegistrationBadgeClassName,
   getRegistrationLabel,
-  getRegistrationStatus,
+  getUpcomingRegistrations,
 } from "@/lib/utils";
 
 export default function DetailUpcoming({
@@ -23,7 +23,8 @@ export default function DetailUpcoming({
 }: {
   marathons: Marathon[];
 }) {
-  if (marathons.length === 0) return null;
+  const upcomingMarathons = getUpcomingRegistrations(marathons);
+  if (upcomingMarathons.length === 0) return null;
 
   return (
     <section className="overflow-hidden rounded-2xl border bg-card shadow-none">
@@ -35,15 +36,17 @@ export default function DetailUpcoming({
         <span className="ml-auto font-anyvid text-xs text-muted-foreground">
           예정 대회{" "}
           <strong className="font-semibold text-brand">
-            {marathons.length}개
+            {upcomingMarathons.length}개
           </strong>
         </span>
       </div>
 
       <div className="divide-y">
-        {marathons.map((marathon) => {
-          const registrationDate = marathon.registration.startDate as string;
-          const registrationStatus = getRegistrationStatus(marathon);
+        {upcomingMarathons.map(({ marathon, schedules }) => {
+          const registrationStatus = "접수예정";
+          const registrationLabel = schedules.some((schedule) => schedule.isAdditional)
+            ? "추가 접수 예정"
+            : getRegistrationLabel(registrationStatus);
           const distances = Object.keys(marathon.registration.price ?? {});
           const location = [marathon.location.region, marathon.location.venue]
             .filter(Boolean)
@@ -85,7 +88,7 @@ export default function DetailUpcoming({
                         registrationStatus,
                       )}
                     >
-                      {getRegistrationLabel(registrationStatus)}
+                      {registrationLabel}
                     </Badge>
                   </div>
                 </div>
@@ -104,7 +107,7 @@ export default function DetailUpcoming({
                         registrationStatus,
                       )}
                     >
-                      {getRegistrationLabel(registrationStatus)}
+                      {registrationLabel}
                     </Badge>
                   </div>
                   <h3 className="truncate font-paperlogy text-xl font-semibold transition-colors group-hover:text-brand">
@@ -152,11 +155,19 @@ export default function DetailUpcoming({
                   <span className="flex size-9 shrink-0 items-center justify-center rounded-full bg-brand/10 text-brand">
                     <AlarmClock className="size-4" aria-hidden="true" />
                   </span>
-                  <div className="min-w-0 font-anyvid">
-                    <p className="text-xs text-muted-foreground">접수 시작일</p>
-                    <p className="mt-0.5 truncate text-sm text-foreground">
-                      {formatMarathonDate(registrationDate)}
-                    </p>
+                  <div className="min-w-0 space-y-2 font-anyvid">
+                    {schedules.map((schedule, index) => (
+                      <div key={`${schedule.distance ?? "all"}-${index}`}>
+                        <p className="text-xs text-muted-foreground">
+                          {schedule.distance && `${schedule.distance} `}
+                          {schedule.isAdditional ? "추가 접수 시작" : "접수 시작일"}
+                        </p>
+                        <p className="mt-0.5 text-sm text-foreground">
+                          {formatMarathonDate(schedule.startDate)}
+                          {schedule.startTime && ` · ${schedule.startTime}`}
+                        </p>
+                      </div>
+                    ))}
                   </div>
                   <ArrowRight
                     className="ml-auto size-4 shrink-0 text-brand transition-transform group-hover:translate-x-1"

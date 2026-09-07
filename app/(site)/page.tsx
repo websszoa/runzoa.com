@@ -9,6 +9,7 @@ import DialogAccountNotice, {
   type AccountNotice,
 } from "@/components/dialog/dialog-account-notice";
 // import DialogSiteMaintenance from "@/components/dialog/dialog-site-maintenance";
+// import MainRacePosters from "@/components/main/main-race-posters";
 
 import { getMarathons } from "@/lib/marathons";
 import {
@@ -77,6 +78,7 @@ export default async function Home({ searchParams }: HomeProps) {
       <MainPromoBanner />
       <MainRegistrationSoon marathons={marathons} />
       <MainThisMonth marathons={marathons} />
+      {/* <MainRacePosters marathons={marathons} /> */}
       {/* <MainMarathonStory /> */}
       <MainOpenRegistration marathons={marathons} />
       <MainNewsletter />

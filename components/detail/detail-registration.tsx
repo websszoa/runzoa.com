@@ -21,10 +21,14 @@ export default function DetailRegistration({
   );
   const schedule = Object.entries(marathon.event.schedule ?? {});
   const additionalRegistration = marathon.registration.additional;
-  const hasAdditionalRegistrationInfo = Boolean(
-    additionalRegistration &&
-      Object.values(additionalRegistration).some(Boolean),
-  );
+  const additionalRegistrations = (
+    Array.isArray(additionalRegistration)
+      ? additionalRegistration
+      : additionalRegistration
+        ? [additionalRegistration]
+        : []
+  ).filter((registration) => Object.values(registration).some(Boolean));
+  const hasAdditionalRegistrationInfo = additionalRegistrations.length > 0;
   const hasRegistrationInfo = Boolean(
     marathon.registration.startDate ||
       marathon.registration.endDate ||
@@ -188,11 +192,19 @@ export default function DetailRegistration({
                 </div>
               )}
 
-              {hasAdditionalRegistrationInfo && additionalRegistration && (
-                <div className="mt-6 space-y-1 text-sm text-muted-foreground">
+              {additionalRegistrations.map((additionalRegistration, index) => (
+                <div
+                  key={`${additionalRegistration.distance ?? "all"}-${index}`}
+                  className="mt-6 space-y-1 text-sm text-muted-foreground"
+                >
+                  {additionalRegistration.distance && (
+                    <h3 className="font-medium text-foreground">
+                      {additionalRegistration.distance} 추가 접수
+                    </h3>
+                  )}
                   <p className="flex items-start gap-2">
                     <Asterisk
-                      className="h-4.5 w-4.5 shrink-0 text-red-400"
+                      className="size-4.5 shrink-0 text-red-400"
                       aria-hidden="true"
                     />
                     <span>
@@ -204,7 +216,7 @@ export default function DetailRegistration({
                   </p>
                   <p className="flex items-start gap-2">
                     <Asterisk
-                      className="h-4.5 w-4.5 shrink-0 text-blue-400"
+                      className="size-4.5 shrink-0 text-blue-400"
                       aria-hidden="true"
                     />
                     <span>
@@ -219,7 +231,7 @@ export default function DetailRegistration({
                   {additionalRegistration.memo && (
                     <p className="flex items-start gap-2">
                       <Asterisk
-                        className="h-4.5 w-4.5 shrink-0 text-amber-400"
+                        className="size-4.5 shrink-0 text-amber-400"
                         aria-hidden="true"
                       />
                       <span className="break-keep">
@@ -228,7 +240,7 @@ export default function DetailRegistration({
                     </p>
                   )}
                 </div>
-              )}
+              ))}
             </>
           ) : (
             <div className="flex min-h-24 flex-1 items-center justify-center rounded-xl border bg-muted/20 px-4 text-center text-sm text-muted-foreground">

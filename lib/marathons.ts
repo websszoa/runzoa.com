@@ -120,6 +120,15 @@ export const MARATHON_HEADERS = {
   },
 } as const satisfies Record<string, MarathonHeaderContent>;
 
+export type AdditionalRegistration = {
+  distance?: string;
+  startDate: string | null;
+  endDate: string | null;
+  startTime: string | null;
+  endTime: string | null;
+  memo: string | null;
+};
+
 export type Marathon = {
   slug: string;
   name: string;
@@ -148,13 +157,7 @@ export type Marathon = {
     site: string | null;
     status: string | null;
     price: Record<string, number | string | null> | null;
-    additional?: {
-      startDate: string | null;
-      endDate: string | null;
-      startTime: string | null;
-      endTime: string | null;
-      memo: string | null;
-    } | null;
+    additional?: AdditionalRegistration | AdditionalRegistration[] | null;
   };
   location: {
     country: string | null;

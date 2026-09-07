@@ -11831,7 +11831,25 @@
       "price": {
         "10KM": 100000,
         "FULL": 150000
-      }
+      },
+      "additional": [
+        {
+          "distance": "FULL",
+          "startDate": "2026-09-08",
+          "endDate": null,
+          "startTime": "14:00",
+          "endTime": null,
+          "memo": null
+        },
+        {
+          "distance": "10km",
+          "startDate": "2026-09-09",
+          "endDate": null,
+          "startTime": "14:00",
+          "endTime": null,
+          "memo": null
+        }
+      ]
     },
     "location": {
       "country": "KR",
@@ -11984,6 +12002,13 @@
       "price": {
         "10km": 100000,
         "FULL": 150000
+      },
+      "additional": {
+        "startDate": "2026-09-08",
+        "endDate": null,
+        "startTime": "14:00",
+        "endTime": null,
+        "memo": null
       }
     },
     "location": {
@@ -12936,9 +12961,15 @@
       "startDate": "2026-11-15",
       "endDate": "2026-11-15",
       "startTime": "07:30",
-      "endTime": null,
+      "endTime": "12:00",
       "site": "https://mbn-seoulmarathon.com/",
-      "schedule": null
+      "schedule": {
+        "06:30": "참가자 집결",
+        "07:00": "준비운동 · 단체 스트레칭 및 출발 대기",
+        "07:30": "출발 · 목표기록 그룹별 순차 출발",
+        "10:30": "마라톤 종료",
+        "12:00": "공식 행사 종료 · 시상 및 정리"
+      }
     },
     "registration": {
       "startDate": "2026-06-22",
@@ -12950,7 +12981,33 @@
       "price": {
         "10KM": 70000,
         "HALF": 100000
-      }
+      },
+      "additional": [
+        {
+          "distance": "제휴 사전접수",
+          "startDate": "2026-09-18",
+          "endDate": null,
+          "startTime": "14:00",
+          "endTime": null,
+          "memo": null
+        },
+        {
+          "distance": "10km",
+          "startDate": "2026-09-21",
+          "endDate": null,
+          "startTime": "14:00",
+          "endTime": null,
+          "memo": null
+        },
+        {
+          "distance": "HALF",
+          "startDate": "2026-09-22",
+          "endDate": null,
+          "startTime": "14:00",
+          "endTime": null,
+          "memo": null
+        }
+      ]
     },
     "location": {
       "country": "KR",
@@ -17503,7 +17560,7 @@
       "startTime": "11:00",
       "endTime": null,
       "site": "https://gift.kakao.com/page/code/forme?killer-card=765&fbclid=PAcGRvZgJleHRuA2FlbQIxMQBzcnRjBmFwcF9pZA85MzY2MTk3NDMzOTI0NTkAAacSUigBb2rLRpX8jOt4UU5z3RJV_dzuDtnH5YaYfRbRyKZL8MOiXY4WKHXtxg_aem_W1XL_GeZVpAZjFMpd7lhSQ",
-      "status": null,
+      "status": "접수마감",
       "price": {
         "5KM": 85000
       }
@@ -18675,6 +18732,180 @@
       "sponsor": "경상남도, 진주시, 진주시체육회, 진주시경찰서, 진주시소방서, 모범운전자, 자원봉사위원회",
       "phone": "010-3931-1356",
       "email": "qnjio@naver.com",
+      "instagram": null
+    }
+  },
+  {
+    "slug": "dangdang-run-2026",
+    "name": "댕댕런 2026",
+    "description": "댕댕런2026은 경기 가평 자라섬에서 반려견과 보호자가 함께 달리고 산책하며 특별한 하루를 즐기는 반려견 동반 러닝 행사입니다. 5km 단일 코스로 진행되며 반려견 없이도 참가할 수 있습니다. 기록 경쟁 참가권부터 일반·학생·장애인 할인 참가권까지 다양하게 운영되며, 참가자 1인당 1kg의 사료를 기부하는 의미 있는 캠페인도 함께 진행됩니다.",
+    "info": {
+      "type": "마라톤",
+      "scale": null,
+      "park": "자라섬 주차장 및 행사장 내 지정구역 주차 가능",
+      "souvenir": "공식 티셔츠, 배번호표, 완주메달, 댕가방 등",
+      "program": "5km 러닝, 반려견 동반 러닝, 피크닉, 사료 기부 캠페인",
+      "memo": "5km 단일 코스로 진행되며 반려견 없이도 참가할 수 있습니다. 보호자 1명당 반려견은 최대 1마리까지 동반할 수 있으며 행사장 내 리드줄 착용이 필수입니다. 기록 경쟁 참가권에는 기록칩이 제공되며 일반 참가권은 도착 게이트 타이머를 통해 기록을 확인할 수 있습니다. 참가자 1인당 1kg의 사료를 기부하는 캠페인이 진행됩니다."
+    },
+    "event": {
+      "startDate": "2026-11-01",
+      "endDate": "2026-11-01",
+      "startTime": "08:35",
+      "endTime": null,
+      "site": "https://dangdangrun.com/2026/",
+      "schedule": {
+        "08:35": "1부 A그룹 출발",
+        "08:40": "1부 B그룹 출발",
+        "08:45": "1부 C그룹 출발",
+        "08:50": "1부 D그룹 출발",
+        "09:30": "2부 A그룹 출발",
+        "09:35": "2부 B그룹 출발",
+        "09:40": "2부 C그룹 출발",
+        "10:00": "전체 출발 마감"
+      }
+    },
+    "registration": {
+      "startDate": "2026-07-29",
+      "endDate": "2026-10-01",
+      "startTime": "15:00",
+      "endTime": null,
+      "site": "https://dangdangrun.com/reservation2026",
+      "status": null,
+      "price": {
+        "5KM_기록경쟁": 59000,
+        "5KM_일반": 55000,
+        "5KM_3+1": 165000,
+        "5KM_장애인": 49000,
+        "5KM_학생": 49000,
+        "5KM_온라인": 49000
+      }
+    },
+    "location": {
+      "country": "한국",
+      "region": "경기",
+      "venue": "가평 자라섬",
+      "naver": "자라섬",
+      "address": "경기도 가평군 가평읍 자라섬로 60",
+      "latitude": 37.8208748,
+      "longitude": 127.5209246
+    },
+    "hosts": {
+      "organizer": "1986프로덕션",
+      "manager": "1986프로덕션",
+      "sponsor": null,
+      "phone": "02-364-1986",
+      "email": "1986@1986.co.kr",
+      "instagram": "dangdangfestival"
+    }
+  },
+  {
+    "slug": "gamdong-marathon-2026",
+    "name": "2026 감동의 마라톤",
+    "description": "2026 감동의 마라톤은 국민마라토너 이봉주와 함께 서울 월드컵공원 평화광장을 출발해 하늘공원과 노을공원, 난지 일대를 달리는 나눔 마라톤입니다. S-OIL 창립 50주년을 맞아 도전과 응원, 나눔의 가치를 함께 나누는 행사로 Half, 10km, 5km 세 종목에 약 7,000명이 참가합니다. 참가비는 기부금 영수증 발급이 가능하며 완주자에게 완주메달과 간식이 제공됩니다.",
+    "info": {
+      "type": "마라톤",
+      "scale": 7000,
+      "park": "상암월드컵경기장 인근 주차장 또는 주변 공영주차장 이용 가능",
+      "souvenir": "기능성 반팔 상의, 배번호, 완주메달, 생수, 완주간식, 구도일 키링",
+      "program": "Half, 10km, 5km",
+      "memo": "10km와 Half는 배번호·기록칩 일체형 방식으로 기록을 측정하며 5km는 기록을 측정하지 않습니다. 휠체어 및 유모차 참가자는 5km에 한해 참가할 수 있습니다. 장애인 참가자 또는 발달·시각장애인 동반주자 1인은 무료이며 참가비는 기부금 영수증 발급이 가능합니다."
+    },
+    "event": {
+      "startDate": "2026-10-04",
+      "endDate": "2026-10-04",
+      "startTime": "07:30",
+      "endTime": null,
+      "site": "https://xn--439ar1m25cg1c810a7ro.com/",
+      "schedule": {
+        "07:30": "Half 출발",
+        "07:45": "10km 출발",
+        "08:00": "5km 출발"
+      }
+    },
+    "registration": {
+      "startDate": "2026-08-01",
+      "endDate": "2026-09-09",
+      "startTime": null,
+      "endTime": null,
+      "site": "https://xn--439ar1m25cg1c810a7ro.com/",
+      "status": null,
+      "price": {
+        "HALF": 70000,
+        "10KM": 60000,
+        "5KM": 50000
+      }
+    },
+    "location": {
+      "country": "한국",
+      "region": "서울",
+      "venue": "상암동 월드컵공원 평화광장",
+      "naver": "월드컵공원 평화광장",
+      "address": "서울 마포구 성산동 53",
+      "latitude": 37.5650560057921,
+      "longitude": 126.896211243867
+    },
+    "hosts": {
+      "organizer": "승일희망재단",
+      "manager": null,
+      "sponsor": "S-OIL",
+      "phone": "070-4012-7011",
+      "email": null,
+      "instagram": null
+    }
+  },
+  {
+    "slug": "yangju-cheonilhong-autumn-festa-marathon-2026",
+    "name": "2026 양주 천일홍 가을 페스타 마라톤",
+    "description": "2026 양주 천일홍 가을 페스타 마라톤은 경기 양주시 나리농원에서 천일홍이 만개한 가을 풍경을 배경으로 달리는 마라톤 대회입니다. 약 13만㎡ 규모의 나리농원 일대에서 Half, 10km, 5km 세 종목으로 진행되며, 보라색과 분홍색 등 다채로운 천일홍과 함께 양주의 아름다운 가을 풍경을 즐기며 달릴 수 있는 특별한 러닝 행사입니다.",
+    "info": {
+      "type": "마라톤",
+      "scale": null,
+      "park": null,
+      "souvenir": "대회 기념품, 번호표, 완주메달, 기록증 등",
+      "program": "Half, 10km, 5km",
+      "memo": null
+    },
+    "event": {
+      "startDate": "2026-10-05",
+      "endDate": "2026-10-05",
+      "startTime": "08:00",
+      "endTime": null,
+      "site": "https://yangjurun.kr/",
+      "schedule": {
+        "07:00": "대회 집결",
+        "08:00": "대회 출발"
+      }
+    },
+    "registration": {
+      "startDate": "2026-08-19",
+      "endDate": "2026-10-02",
+      "startTime": null,
+      "endTime": "23:59",
+      "site": "https://yangjurun.kr/",
+      "status": null,
+      "price": {
+        "HALF": 50000,
+        "10KM": 50000,
+        "5KM": 50000,
+        "3KM(걷기)": 15000,
+        "3KM(반려동물)": 15000
+      }
+    },
+    "location": {
+      "country": "한국",
+      "region": "경기",
+      "venue": "양주나리농원",
+      "naver": null,
+      "address": "경기도 양주시 광사동 812",
+      "latitude": 37.7870478,
+      "longitude": 127.0837205
+    },
+    "hosts": {
+      "organizer": "양주시체육회",
+      "manager": "양주시육상연맹",
+      "sponsor": null,
+      "phone": "02-556-8879",
+      "email": "k-sopung@naver.com",
       "instagram": null
     }
   }
