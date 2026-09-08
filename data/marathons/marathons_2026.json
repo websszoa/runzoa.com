@@ -15198,7 +15198,7 @@
   },
   {
     "slug": "egg-marathon-2026",
-    "name": "제6회 2026 계란 마라톤",
+    "name": "제6회 계란 마라톤",
     "description": "제6회 2026 계란 마라톤은 계란의 영양 가치와 저탄소 식생활을 알리고 건강과 나눔을 함께 실천하는 마라톤 대회입니다. 정서진 경인아라뱃길 여객터미널 광장에서 열리며 하프, 10km, 5km와 커플런·가족런으로 진행됩니다.",
     "info": {
       "type": "마라톤",
@@ -18482,7 +18482,7 @@
       "startTime": "10:00",
       "endTime": null,
       "site": "https://speedagency.kr/more.html?game_code=118",
-      "status": null,
+      "status": "접수마감",
       "price": {
         "21KM": 70000,
         "102KM": 70000,
@@ -18906,6 +18906,433 @@
       "sponsor": null,
       "phone": "02-556-8879",
       "email": "k-sopung@naver.com",
+      "instagram": null
+    }
+  },
+  {
+    "slug": "jungnang-gu-rose-marathon-2026",
+    "name": "제19회 중랑구청장배 장미 마라톤대회",
+    "description": "제19회 중랑구청장배 장미 마라톤대회는 서울 중랑구 중화체육공원에서 출발해 중랑천 일대를 달리는 생활체육 마라톤대회입니다. Half, 10km, 5km 세 종목으로 진행되며 남녀노소 누구나 참가할 수 있습니다. 전 종목 기록칩을 사용해 기록을 측정하며, 지역사회 건강 증진과 스포츠 문화 활성화를 위해 러너들이 함께 달리고 응원하는 즐거운 가을 러닝 행사입니다.",
+    "info": {
+      "type": "마라톤",
+      "scale": null,
+      "park": null,
+      "souvenir": "기념 티셔츠, 완주메달, 간식",
+      "program": "Half, 10km, 5km",
+      "memo": "전 종목 기록칩을 사용해 기록을 측정합니다. 제한시간은 5km 2시간, 10km와 Half 3시간입니다. 탈의실과 물품보관소를 운영하며, 휴대용 소형 유모차는 참가할 수 있으나 디럭스 유모차와 웨건은 제한됩니다. 참가비 환불은 2026년 9월 27일까지 신청할 수 있습니다."
+    },
+    "event": {
+      "startDate": "2026-10-18",
+      "endDate": "2026-10-18",
+      "startTime": "08:30",
+      "endTime": null,
+      "site": "https://www.jnrun.co.kr/",
+      "schedule": {
+        "08:30": "대회 출발"
+      }
+    },
+    "registration": {
+      "startDate": "2026-08-07",
+      "endDate": "2026-10-07",
+      "startTime": null,
+      "endTime": null,
+      "site": "https://www.jnrun.co.kr/",
+      "status": null,
+      "price": {
+        "HALF": 50000,
+        "10KM": 50000,
+        "5KM": 50000
+      }
+    },
+    "location": {
+      "country": "한국",
+      "region": "서울",
+      "venue": "중화체육공원",
+      "naver": null,
+      "address": "서울 중랑구 중화동 363",
+      "latitude": 37.6053918,
+      "longitude": 127.0727457
+    },
+    "hosts": {
+      "organizer": "중랑구 체육회",
+      "manager": "중랑구 육상연맹",
+      "sponsor": null,
+      "phone": "02-3285-5556",
+      "email": "run@jnrun.co.kr",
+      "instagram": null
+    }
+  },
+  {
+    "slug": "gyeongnam-marathon-2026",
+    "name": "제23회 경남마라톤대회",
+    "description": "제23회 경남마라톤대회는 경남 창원종합운동장 보조경기장에서 출발해 창원시 일원을 달리는 가을 마라톤대회입니다. 경남신문이 주최하며 10km와 3km 건강달리기 두 종목에 총 4,000명이 참가합니다. 기록에 도전하는 10km부터 가족과 가볍게 즐길 수 있는 3km까지 운영되며, 국민 체력 증진과 지역 간 화합을 함께 나누는 창원의 대표 생활체육 러닝 행사입니다.",
+    "info": {
+      "type": "마라톤",
+      "scale": 4000,
+      "park": null,
+      "souvenir": null,
+      "program": "10km, 3km 건강달리기",
+      "memo": "총 4,000명 선착순으로 모집하며 현재 참가접수가 마감되었습니다. 10km는 남자 청년부·장년부와 여자부로 나누어 시상하며, 3km 건강달리기는 별도 순위 시상이 없습니다. 단체상, 포토제닉상과 가전제품 등 다양한 경품이 제공되는 행운상도 운영됩니다."
+    },
+    "event": {
+      "startDate": "2026-10-04",
+      "endDate": "2026-10-04",
+      "startTime": "08:30",
+      "endTime": null,
+      "site": "https://www.knmarathon.co.kr/ko/",
+      "schedule": {
+        "08:00": "대회 집결",
+        "08:30": "대회 출발"
+      }
+    },
+    "registration": {
+      "startDate": "2026-07-13",
+      "endDate": "2026-08-14",
+      "startTime": null,
+      "endTime": null,
+      "site": "https://www.knmarathon.co.kr/ko/",
+      "status": "접수마감",
+      "price": {
+        "10KM": 30000,
+        "3KM": 20000,
+        "3KM(학생)": 15000
+      }
+    },
+    "location": {
+      "country": "한국",
+      "region": "경남",
+      "venue": "창원종합운동장 보조경기장",
+      "naver": "창원스포츠파크",
+      "address": "경남 창원시 성산구 원이대로 450",
+      "latitude": 35.2339885,
+      "longitude": 128.6647016
+    },
+    "hosts": {
+      "organizer": "경남신문",
+      "manager": "경남마라톤대회조직위원회",
+      "sponsor": "경상남도, 경상남도의회, 창원특례시, 경상남도체육회",
+      "phone": "055-210-6104",
+      "email": "marathon@knnews.co.kr",
+      "instagram": null
+    }
+  },
+  {
+    "slug": "jinan-highland-forestival-2026",
+    "name": "2026 진안고원 포레스티벌 : Run & Heal",
+    "description": "2026 진안고원 포레스티벌 : Run & Heal은 전북 진안 국립진안고원산림치유원과 선각산·덕태산 일원의 숲길을 달리는 웰니스 트레일러닝 행사입니다. 16K Forest Trail과 6K Healing Trail 두 종목을 10월 10일과 11일 양일간 동일하게 운영하며, 순위 경쟁과 시상 없이 완주 기록을 제공합니다. 산림치유와 로컬마켓, 다양한 힐링 프로그램까지 함께 즐길 수 있는 특별한 가을 러닝 축제입니다.",
+    "info": {
+      "type": "트레일러닝",
+      "scale": null,
+      "park": "국립진안고원산림치유원 행사장 내 주차 공간이 제한되어 있어 참가 신청 시 교통수단 사전조사 진행",
+      "souvenir": "배번호, 티셔츠, 완주메달, 간단한 완주 식사, 모바일 기록증",
+      "program": "16K Forest Trail, 6K Healing Trail, 산림치유 프로그램, 로컬마켓, 체험 프로그램",
+      "memo": "순위 경쟁 및 시상 없이 운영되는 비경쟁 트레일러닝으로 16K와 6K 모두 기록을 측정합니다. 16K는 만 18세 이상 참가 가능하며 6K는 연령 제한이 없습니다. 16K는 16.9km, 누적상승고도 1,071m+, 제한시간 6시간이며 완주 시 ITRA 1 포인트 및 UTMB Index 20K 스코어 획득이 가능합니다. 6K는 누적상승고도 315m+, 제한시간 3시간입니다. 동일 종목이 10월 10일과 11일 양일간 진행됩니다."
+    },
+    "event": {
+      "startDate": "2026-10-10",
+      "endDate": "2026-10-11",
+      "startTime": "10:00",
+      "endTime": "17:00",
+      "site": "https://www.rocknrun.kr/Jinangowon_Forestival_Info",
+      "schedule": {
+        "08:00": "참가자 체크인 및 필수 장비 검사",
+        "10:00": "16K 레이스 출발",
+        "10:10": "6K 레이스 출발",
+        "17:00": "레이스 종료"
+      }
+    },
+    "registration": {
+      "startDate": "2026-08-13",
+      "endDate": "2026-10-11",
+      "startTime": "16:00",
+      "endTime": null,
+      "site": "https://rocknrun.kr/jinangowon_forestival_registration",
+      "status": null,
+      "price": {
+        "16KM": 50000,
+        "6KM": 30000
+      }
+    },
+    "location": {
+      "country": "한국",
+      "region": "전북",
+      "venue": "국립진안고원산림치유원",
+      "naver": null,
+      "address": "전북 진안군 백운면 백암리 산1-2",
+      "latitude": 35.6807729,
+      "longitude": 127.4485769
+    },
+    "hosts": {
+      "organizer": "산림청, 전북특별자치도, 진안군, 전북특별자치도문화관광재단",
+      "manager": "진안고원산림치유원",
+      "sponsor": null,
+      "phone": "010-5056-1523",
+      "email": "info@rocknrun.kr",
+      "instagram": null
+    }
+  },
+  {
+    "slug": "youth-family-dolbom-gibu-run-2026",
+    "name": "2026 소년소녀 가장 돌보기 기부런",
+    "description": "2026 소년소녀 가장 돌보기 기부런은 서울 월드컵공원 평화광장에서 열리는 시민 참여형 기부 마라톤입니다. 10km, 5km 러닝과 걷기 종목으로 진행되며 약 5,000명이 함께합니다. 달리기와 기부를 결합해 참가비 일부를 소년소녀 가장 지원에 기부하고, 시민 건강 증진과 나눔 문화 확산, 사회공헌을 함께 실천하는 의미 있는 러닝 행사입니다.",
+    "info": {
+      "type": "마라톤",
+      "scale": 5000,
+      "park": "월드컵공원 주차장 이용 가능(유료)",
+      "souvenir": null,
+      "program": "10km, 5km, 걷기",
+      "memo": "참가자의 자발적 모금을 통해 소년소녀 가장을 직접 후원하는 기부 러닝 행사입니다. 참가비 일부는 기부처인 별도공지 기관을 통해 기부되며, 시민 건강 증진과 나눔 문화 확산, 소년소녀 가장 지원 및 사회공헌 실천을 목적으로 진행됩니다."
+    },
+    "event": {
+      "startDate": "2026-12-12",
+      "endDate": "2026-12-12",
+      "startTime": "07:30",
+      "endTime": null,
+      "site": "https://gibukidsrun.kr/",
+      "schedule": {
+        "06:30": "대회 집결",
+        "07:30": "10km 출발",
+        "07:40": "5km 및 걷기 출발"
+      }
+    },
+    "registration": {
+      "startDate": "2026-08-12",
+      "endDate": "2026-12-11",
+      "startTime": null,
+      "endTime": null,
+      "site": "https://gibukidsrun.kr/",
+      "status": null,
+      "price": {
+        "10KM": 50000,
+        "5KM": 50000,
+        "걷기": 45000
+      }
+    },
+    "location": {
+      "country": "한국",
+      "region": "서울",
+      "venue": "상암동 월드컵공원 평화광장",
+      "naver": "월드컵공원 평화광장",
+      "address": "서울 마포구 성산동 53",
+      "latitude": 37.5650560057921,
+      "longitude": 126.896211243867
+    },
+    "hosts": {
+      "organizer": "소풍",
+      "manager": "소풍",
+      "sponsor": null,
+      "phone": "02-556-8879",
+      "email": "k-sopung@naver.com",
+      "instagram": null
+    }
+  },
+  {
+    "slug": "youth-relay-marathon-2026",
+    "name": "제2회 청춘 릴레이 마라톤",
+    "description": "제2회 청춘 릴레이 마라톤은 서울 상암동 월드컵공원 평화의광장에서 열리는 겨울 마라톤대회입니다. Half, 10km, 5km 세 종목으로 진행되며 신체 건강한 남녀노소 누구나 참가할 수 있습니다. 전 종목 기록칩을 사용해 기록을 측정하며, 월드컵공원 일대를 달리며 한 해의 러닝을 즐겁게 마무리할 수 있는 생활체육 마라톤입니다.",
+    "info": {
+      "type": "마라톤",
+      "scale": null,
+      "park": "월드컵공원 주차장 이용 가능(유료)",
+      "souvenir": null,
+      "program": "Half, 10km, 5km",
+      "memo": "신체 건강한 남녀노소 누구나 참가할 수 있으며 전 종목 기록칩을 사용해 기록을 측정합니다. 대회 당일 탈의실과 물품보관소를 운영합니다. 11월 29일까지 접수한 참가자는 배번호를 택배로 수령하며, 11월 30일 이후 접수자는 대회 당일 현장에서 수령합니다. 배번호가 없으면 기록 측정이 불가능합니다."
+    },
+    "event": {
+      "startDate": "2026-12-19",
+      "endDate": "2026-12-19",
+      "startTime": "08:00",
+      "endTime": null,
+      "site": "https://youngrun.kr/",
+      "schedule": {
+        "07:00": "대회 집결",
+        "08:00": "대회 출발"
+      }
+    },
+    "registration": {
+      "startDate": "2026-08-19",
+      "endDate": "2026-12-09",
+      "startTime": null,
+      "endTime": null,
+      "site": "https://youngrun.kr/join/register.asp",
+      "status": null,
+      "price": {
+        "HALF": 50000,
+        "10KM": 50000,
+        "5KM": 50000
+      }
+    },
+    "location": {
+      "country": "한국",
+      "region": "서울",
+      "venue": "상암동 월드컵공원 평화광장",
+      "naver": "월드컵공원 평화광장",
+      "address": "서울 마포구 성산동 53",
+      "latitude": 37.5650560057921,
+      "longitude": 126.896211243867
+    },
+    "hosts": {
+      "organizer": "재한다문화총연합회",
+      "manager": "재한다문화총연합회",
+      "sponsor": null,
+      "phone": "02-2636-7775",
+      "email": null,
+      "instagram": null
+    }
+  },
+  {
+    "slug": "give-run-busan-2026",
+    "name": "GIVE RUN 2026 부산",
+    "description": "GIVE RUN 2026 부산은 부산에서 함께 달리며 나눔과 기부의 가치를 실천하는 기부 마라톤대회입니다. 10km와 5km 두 종목으로 진행되며 모든 참가자에게 기록칩을 제공해 완주 기록을 확인할 수 있습니다. 러닝을 통해 좋은 변화를 만들어가는 행사로, 완주자에게 완주메달과 간식이 제공되며 참가자들이 함께 나눔의 의미를 경험할 수 있는 특별한 러닝 축제입니다.",
+    "info": {
+      "type": "마라톤",
+      "scale": null,
+      "park": null,
+      "souvenir": "기념품, 배번호, 완주메달, 완주간식",
+      "program": "10km, 5km",
+      "memo": "10km와 5km 전 참가자에게 기록칩을 제공해 기록을 측정합니다. 배번호와 기념품은 택배로 발송되며 완주자는 번호표 확인 후 완주메달과 간식을 받을 수 있습니다. 제한시간은 10km 2시간, 5km 1시간이며 대회장에 남녀 탈의실과 물품보관소가 운영됩니다. 환불 신청은 2026년 10월 17일 18:00까지 가능합니다."
+    },
+    "event": {
+      "startDate": "2026-11-21",
+      "endDate": "2026-11-21",
+      "startTime": "09:00",
+      "endTime": null,
+      "site": "https://giverun.kr/home/main.ubs",
+      "schedule": {
+        "09:00": "대회 출발"
+      }
+    },
+    "registration": {
+      "startDate": null,
+      "endDate": null,
+      "startTime": null,
+      "endTime": null,
+      "site": "https://giverun.kr/home/main.ubs",
+      "status": "접수 대기",
+      "price": null
+    },
+    "location": {
+      "country": "한국",
+      "region": "부산",
+      "venue": "삼락생태공원",
+      "naver": null,
+      "address": "부산광역시 사상구 삼락동 686",
+      "latitude": 35.1688651,
+      "longitude": 128.976488
+    },
+    "hosts": {
+      "organizer": "굿피플",
+      "manager": "굿피플",
+      "sponsor": "케라셀, 농심, 원바이오젠, 한톨",
+      "phone": "1600-3949",
+      "email": "2192233@naver.com",
+      "instagram": null
+    }
+  },
+  {
+    "slug": "give-run-gumi-2026",
+    "name": "GIVE RUN 2026 구미",
+    "description": "GIVE RUN 2026 구미는 경북 구미에서 함께 달리며 나눔과 기부의 가치를 실천하는 기부 마라톤대회입니다. 10km와 5km 두 종목으로 진행되며 총 4,000명을 선착순 모집합니다. 모든 참가자에게 기록칩이 제공되어 완주 기록을 확인할 수 있으며, 달리기를 통해 좋은 변화를 만들어가는 의미를 함께 나누는 특별한 러닝 행사입니다.",
+    "info": {
+      "type": "마라톤",
+      "scale": 4000,
+      "park": null,
+      "souvenir": "기념품, 배번호, 완주메달, 완주간식",
+      "program": "10km, 5km",
+      "memo": "총 4,000명을 선착순 모집하며 10km와 5km 전 참가자에게 기록칩을 제공합니다. 배번호와 기념품은 택배로 발송되며 완주자는 번호표 확인 후 완주메달과 간식을 받을 수 있습니다. 참가비 환불 신청은 2026년 10월 9일 17:00까지 가능합니다."
+    },
+    "event": {
+      "startDate": "2026-11-07",
+      "endDate": "2026-11-07",
+      "startTime": "09:00",
+      "endTime": null,
+      "site": "https://giverun.kr/shop/main.ubs",
+      "schedule": {
+        "09:00": "대회 출발"
+      }
+    },
+    "registration": {
+      "startDate": "2026-08-12",
+      "endDate": "2026-11-01",
+      "startTime": "11:00",
+      "endTime": null,
+      "site": "https://giverun.kr/shop/main.ubs",
+      "status": null,
+      "price": {
+        "10KM": 45000,
+        "5KM": 45000
+      }
+    },
+    "location": {
+      "country": "한국",
+      "region": "경북",
+      "venue": "구미 낙동강체육공원 일대",
+      "naver": "낙동강체육공원",
+      "address": "경상북도 구미시 낙동제방길 200",
+      "latitude": 36.1311328,
+      "longitude": 128.367996
+    },
+    "hosts": {
+      "organizer": "굿피플",
+      "manager": "굿피플",
+      "sponsor": null,
+      "phone": "1600-3949",
+      "email": "m2569109@naver.com",
+      "instagram": null
+    }
+  },
+  {
+    "slug": "haenam-ttangkkeut-marathon-2026",
+    "name": "2026 해남땅끝 전국마라톤대회",
+    "description": "2026 해남땅끝 전국마라톤대회는 전남 해남 대흥사쉼터 일원에서 열리는 가을 마라톤대회입니다. 대한민국 땅끝 해남의 자연과 해안 풍경을 배경으로 FULL, Half, 10km, 5km 네 종목이 진행됩니다. 장거리 기록에 도전하는 러너부터 가볍게 달리기를 즐기는 참가자까지 함께할 수 있으며, 해남의 아름다운 자연을 만끽하며 달릴 수 있는 전국 규모의 러닝 행사입니다.",
+    "info": {
+      "type": "마라톤",
+      "scale": null,
+      "park": null,
+      "souvenir": null,
+      "program": "FULL, Half, 10km, 5km",
+      "memo": "30인 이상 단체 참가 시 단체 부스가 제공됩니다. 풀코스 컷오프 시간과 관련해 공식 홈페이지에 정정 공지가 게시되어 있으므로 참가 전 최신 대회 규정을 확인하는 것이 좋습니다."
+    },
+    "event": {
+      "startDate": "2026-11-08",
+      "endDate": "2026-11-08",
+      "startTime": "08:00",
+      "endTime": null,
+      "site": "http://haenammarathon.co.kr/home/main.ubs",
+      "schedule": {
+        "07:00": "대회 집결",
+        "08:00": "대회 출발"
+      }
+    },
+    "registration": {
+      "startDate": null,
+      "endDate": null,
+      "startTime": null,
+      "endTime": null,
+      "site": "http://haenammarathon.co.kr/home/main.ubs",
+      "status": null,
+      "price": {
+        "FULL": 50000,
+        "HALF": 50000,
+        "10KM": 40000,
+        "5KM": 30000
+      }
+    },
+    "location": {
+      "country": "한국",
+      "region": "전남",
+      "venue": "대흥사쉼터 일원",
+      "naver": "대흥사쉼터",
+      "address": "전남광주통합특별시 해남군 삼산면",
+      "latitude": 34.520825,
+      "longitude": 126.609988
+    },
+    "hosts": {
+      "organizer": "해남군육상연맹",
+      "manager": "해남군육상연맹, 대일기획",
+      "sponsor": "해남군, 해남군의회, 해남군체육회",
+      "phone": "1600-3949",
+      "email": null,
       "instagram": null
     }
   }

@@ -45,7 +45,7 @@ export default function DetailUpcoming({
         {upcomingMarathons.map(({ marathon, schedules }) => {
           const registrationStatus = "접수예정";
           const registrationLabel = schedules.some((schedule) => schedule.isAdditional)
-            ? "추가 접수 예정"
+            ? "추가 접수"
             : getRegistrationLabel(registrationStatus);
           const distances = Object.keys(marathon.registration.price ?? {});
           const location = [marathon.location.region, marathon.location.venue]

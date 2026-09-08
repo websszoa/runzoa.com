@@ -96,8 +96,61 @@
       "sponsor": null,
       "phone": "053-803-6185~6189",
       "email": null,
-      "instagram": null,
-      "blog": []
+      "instagram": null
+    }
+  },
+  {
+    "slug": "haenam-ttangkkeut-marathon-2027",
+    "name": "2027 해남땅끝 전국마라톤대회",
+    "description": "2027 해남땅끝 전국마라톤대회는 대한민국 땅끝 해남에서 새해 러닝을 즐길 수 있는 전국 규모의 마라톤대회입니다. 2027년 2월 14일 전남 해남군 일원에서 FULL, Half, 10km, 5km 네 종목으로 진행되며, 장거리 기록에 도전하는 러너부터 가볍게 달리기를 즐기는 참가자까지 함께할 수 있습니다. 한반도의 시작점인 해남의 겨울 풍경을 달리며 특별한 레이스를 경험할 수 있습니다.",
+    "info": {
+      "type": "마라톤",
+      "scale": null,
+      "park": null,
+      "souvenir": null,
+      "program": "FULL, Half, 10km, 5km",
+      "memo": "대회일시와 장소는 현재 예정 사항으로 세부 집결지는 추후 공지됩니다. 30인 이상 단체 참가 시 단체 부스가 제공됩니다."
+    },
+    "event": {
+      "startDate": "2027-02-14",
+      "endDate": "2027-02-14",
+      "startTime": "08:00",
+      "endTime": null,
+      "site": "http://haenammarathon.co.kr/shop/main.ubs",
+      "schedule": {
+        "08:00": "대회 출발"
+      }
+    },
+    "registration": {
+      "startDate": null,
+      "endDate": null,
+      "startTime": null,
+      "endTime": null,
+      "site": "http://haenammarathon.co.kr/shop/main.ubs",
+      "status": null,
+      "price": {
+        "FULL": 50000,
+        "HALF": 50000,
+        "10KM": 40000,
+        "5KM": 30000
+      }
+    },
+    "location": {
+      "country": "한국",
+      "region": "전남",
+      "venue": "해남군 일원",
+      "naver": null,
+      "address": null,
+      "latitude": null,
+      "longitude": null
+    },
+    "hosts": {
+      "organizer": null,
+      "manager": null,
+      "sponsor": null,
+      "phone": "1600-3949",
+      "email": null,
+      "instagram": null
     }
   }
 ]

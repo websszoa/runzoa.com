@@ -83,7 +83,7 @@ export default async function MainRacePosters({ marathons }: { marathons: Marath
                         </div>
                         <div className="mt-4 flex flex-wrap gap-1.5">
                           <Badge variant="outline" className={getRegistrationBadgeClassName(status)}>
-                            {additional ? "추가 접수 예정" : getRegistrationLabel(status)}
+                            {additional ? "추가 접수" : getRegistrationLabel(status)}
                           </Badge>
                           {race.location.region && <Badge variant="outline">{race.location.region}</Badge>}
                         </div>
