@@ -17,6 +17,8 @@ export const metadata: Metadata = {
 
 export default async function CalendarAddPage({ searchParams }: { searchParams: Promise<{ provider?: string; calendarError?: string }> }) {
   const params = await searchParams;
+  let kakaoConnected = false;
+  let kakaoAddedSlugs: string[] = [];
   let googleConnected = false;
   let googleAddedSlugs: string[] = [];
   const [{ marathons, error }, supabase] = await Promise.all([
@@ -31,7 +33,7 @@ export default async function CalendarAddPage({ searchParams }: { searchParams: 
 
   if (user) {
     const admin = createAdminClient();
-    const [connectionResult, eventsResult, googleConnection, googleEvents] = await Promise.all([
+    const [connectionResult, eventsResult, googleConnection, googleEvents, kakaoConnection, kakaoEvents] = await Promise.all([
       admin
         .from("naver_connections")
         .select("user_id")
@@ -45,7 +47,11 @@ export default async function CalendarAddPage({ searchParams }: { searchParams: 
         .eq("status", "created"),
       admin.from("google_connections").select("user_id").eq("user_id", user.id).maybeSingle(),
       admin.from("calendar_events").select("marathon_slug").eq("user_id", user.id).eq("provider", "google").eq("status", "created"),
+      admin.from("kakao_connections").select("user_id").eq("user_id", user.id).maybeSingle(),
+      admin.from("calendar_events").select("marathon_slug").eq("user_id", user.id).eq("provider", "kakao").eq("status", "created"),
     ]);
+    kakaoConnected = Boolean(kakaoConnection.data);
+    kakaoAddedSlugs = (kakaoEvents.data ?? []).map((item) => item.marathon_slug);
     googleConnected = Boolean(googleConnection.data);
     googleAddedSlugs = (googleEvents.data ?? []).map((item) => item.marathon_slug);
     naverConnected = Boolean(connectionResult.data);
@@ -65,14 +71,16 @@ export default async function CalendarAddPage({ searchParams }: { searchParams: 
         title="내 캘린더에 추가"
         description="참가하고 싶은 마라톤 일정을 선택해 사용하는 캘린더에 바로 저장하세요."
       />
-      {params.calendarError && <p role="alert" className="mx-auto max-w-7xl px-4 pt-4 text-sm text-destructive">구글 캘린더 연결을 완료하지 못했습니다. 권한 동의와 서버 설정을 확인하고 다시 시도해 주세요.</p>}
+      {params.calendarError && <p role="alert" className="mx-auto max-w-7xl px-4 pt-4 text-sm text-destructive">{params.provider === "kakao" ? (params.calendarError === "storage" ? "톡캘린더 연결 저장소 설정이 필요합니다. 관리자에게 문의해 주세요." : params.calendarError === "permission" ? "톡캘린더 이용 동의와 앱 사용 권한을 확인해 주세요. 승인 전에는 앱 멤버만 이용할 수 있습니다." : "톡캘린더 연결을 완료하지 못했습니다. 카카오로 다시 연결해 주세요.") : "구글 캘린더 연결을 완료하지 못했습니다. 권한 동의와 서버 설정을 확인하고 다시 시도해 주세요."}</p>}
       <CalendarAdd
         marathons={upcomingMarathons}
         hasError={error}
         isLoggedIn={Boolean(user)}
+        kakaoConnected={kakaoConnected}
+        initialKakaoAddedSlugs={kakaoAddedSlugs}
         googleConnected={googleConnected}
         initialGoogleAddedSlugs={googleAddedSlugs}
-        initialProvider={params.provider === "google" ? "google" : "naver"}
+        initialProvider={params.provider === "kakao" ? "kakao" : params.provider === "google" ? "google" : "naver"}
         naverConnected={naverConnected}
         initialAddedSlugs={addedSlugs}
       />

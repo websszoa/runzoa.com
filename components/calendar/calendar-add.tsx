@@ -44,7 +44,9 @@ type CalendarAddProps = {
   isLoggedIn: boolean;
   naverConnected: boolean;
   googleConnected: boolean;
-  initialProvider: "naver" | "google";
+  kakaoConnected: boolean;
+  initialKakaoAddedSlugs: string[];
+  initialProvider: "naver" | "google" | "kakao";
   initialGoogleAddedSlugs: string[];
   initialAddedSlugs: string[];
 };
@@ -64,12 +66,16 @@ export default function CalendarAdd({
   isLoggedIn,
   naverConnected,
   googleConnected,
+  kakaoConnected,
+  initialKakaoAddedSlugs,
   initialProvider,
   initialGoogleAddedSlugs,
   initialAddedSlugs,
 }: CalendarAddProps) {
   const [provider, setProvider] = useState<string>(initialProvider);
-  const providerName = provider === "google" ? "구글" : "네이버";
+  const providerName = provider === "kakao" ? "카카오톡" : provider === "google" ? "구글" : "네이버";
+  const [kakaoAddedSlugs, setKakaoAddedSlugs] = useState(() => new Set(initialKakaoAddedSlugs));
+  const [kakaoReconnectRequired, setKakaoReconnectRequired] = useState(false);
   const [googleAddedSlugs, setGoogleAddedSlugs] = useState(() => new Set(initialGoogleAddedSlugs));
   const [googleReconnectRequired, setGoogleReconnectRequired] = useState(false);
   const [query, setQuery] = useState("");
@@ -82,7 +88,7 @@ export default function CalendarAdd({
   const [errorMessage, setErrorMessage] = useState<string | null>(null);
   const [reconnectRequired, setReconnectRequired] = useState(false);
   const deferredQuery = useDeferredValue(normalizeSearchText(query));
-  const canUseCalendar = isLoggedIn && (provider === "google" ? googleConnected && !googleReconnectRequired : naverConnected && !reconnectRequired);
+  const canUseCalendar = isLoggedIn && (provider === "kakao" ? kakaoConnected && !kakaoReconnectRequired : provider === "google" ? googleConnected && !googleReconnectRequired : naverConnected && !reconnectRequired);
 
   const filteredMarathons = useMemo(() => {
     if (!deferredQuery) return marathons;
@@ -119,14 +125,15 @@ export default function CalendarAdd({
 
       if (!response.ok || !result.success) {
         if (result.code === "RECONNECT_REQUIRED" || result.code === "AUTH_REQUIRED") {
-          if (provider === "google") setGoogleReconnectRequired(true);
+          if (provider === "kakao") setKakaoReconnectRequired(true);
+          else if (provider === "google") setGoogleReconnectRequired(true);
           else setReconnectRequired(true);
         }
         setErrorMessage(result.error ?? "일정을 추가하지 못했습니다.");
         return;
       }
 
-      (provider === "google" ? setGoogleAddedSlugs : setAddedSlugs)((current) => new Set(current).add(marathon.slug));
+      (provider === "kakao" ? setKakaoAddedSlugs : provider === "google" ? setGoogleAddedSlugs : setAddedSlugs)((current) => new Set(current).add(marathon.slug));
       setResultDialog({
         marathonName: marathon.name,
         alreadyAdded: Boolean(result.alreadyAdded),
@@ -168,12 +175,12 @@ export default function CalendarAdd({
         </TabsList>
 
         <div className="mx-auto w-full max-w-7xl px-4 py-8 sm:px-6 sm:py-12 lg:px-8">
-          <TabsContent value={provider === "kakao" ? "naver" : provider} className="space-y-6">
+          <TabsContent value={provider} className="space-y-6">
             <ConnectionStatus
               isLoggedIn={isLoggedIn}
-              provider={provider === "google" ? "google" : "naver"}
+              provider={provider === "kakao" ? "kakao" : provider === "google" ? "google" : "naver"}
               connected={canUseCalendar}
-              reconnectRequired={provider === "google" ? googleReconnectRequired : reconnectRequired}
+              reconnectRequired={provider === "kakao" ? kakaoReconnectRequired : provider === "google" ? googleReconnectRequired : reconnectRequired}
             />
 
             {errorMessage && (
@@ -226,7 +233,7 @@ export default function CalendarAdd({
               ) : (
                 <div className="divide-y overflow-hidden bg-card">
                   {filteredMarathons.slice(0, visibleCount).map((marathon) => {
-                    const added = (provider === "google" ? googleAddedSlugs : addedSlugs).has(marathon.slug);
+                    const added = (provider === "kakao" ? kakaoAddedSlugs : provider === "google" ? googleAddedSlugs : addedSlugs).has(marathon.slug);
                     const pending = pendingSlug === marathon.slug;
                     const registrationStatus = getRegistrationStatus(marathon);
                     const distances = Object.keys(
@@ -394,9 +401,6 @@ export default function CalendarAdd({
             </section>
           </TabsContent>
 
-          <TabsContent value="kakao">
-            <ProviderComingSoon provider="카카오 캘린더" />
-          </TabsContent>
         </div>
       </Tabs>
 
@@ -432,7 +436,7 @@ export default function CalendarAdd({
               variant="outline"
               nativeButton={false}
               render={
-                <a href={provider === "google" ? "https://calendar.google.com/" : NAVER_CALENDAR_URL} target="_blank" rel="noreferrer" />
+                <a href={provider === "kakao" ? "https://calendar.kakao.com/" : provider === "google" ? "https://calendar.google.com/" : NAVER_CALENDAR_URL} target="_blank" rel="noreferrer" />
               }
             >
               {providerName} 캘린더에서 확인
@@ -456,13 +460,13 @@ function ConnectionStatus({
   connected,
   reconnectRequired,
 }: {
-  provider: "naver" | "google";
+  provider: "naver" | "google" | "kakao";
   isLoggedIn: boolean;
   connected: boolean;
   reconnectRequired: boolean;
 }) {
-  const providerName = provider === "google" ? "구글" : "네이버";
-  const loginUrl = provider === "google" ? "/auth/google/start" : "/auth/naver/start?next=/calendar-add";
+  const providerName = provider === "kakao" ? "카카오톡" : provider === "google" ? "구글" : "네이버";
+  const loginUrl = provider === "kakao" ? "/auth/kakao/start" : provider === "google" ? "/auth/google/start" : "/auth/naver/start?next=/calendar-add";
   return (
     <section className="flex flex-col gap-4 rounded-2xl border bg-muted/20 p-5 sm:flex-row sm:items-center sm:justify-between sm:p-6">
       <div className="flex items-start gap-3">
@@ -486,8 +490,8 @@ function ConnectionStatus({
                 ? `캘린더 권한이 없거나 연결이 만료되었습니다. ${providerName}로 다시 연결해 주세요.`
                 : `${providerName} 로그인과 캘린더 이용 동의가 필요합니다.`}
           </p>
-          {provider === "google" && !connected && (
-            <p className="mt-1 font-anyvid text-sm text-muted-foreground">선택한 구글 계정으로 런조아에 다시 로그인합니다.</p>
+          {provider !== "naver" && !connected && (
+            <p className="mt-1 font-anyvid text-sm text-muted-foreground">선택한 {providerName} 계정으로 런조아에 다시 로그인합니다.</p>
           )}
         </div>
       </div>
@@ -495,29 +499,11 @@ function ConnectionStatus({
         <Button
           nativeButton={false}
           render={<a href={loginUrl} />}
-          className={provider === "naver" ? "shrink-0 bg-[#03c75a] text-white hover:bg-[#02b351]" : "shrink-0"}
+          className={provider === "naver" ? "shrink-0 bg-[#03c75a] text-white hover:bg-[#02b351]" : provider === "kakao" ? "shrink-0 bg-[#fee500] text-black hover:bg-[#fee500]/80" : "shrink-0"}
         >
           {providerName}로 {isLoggedIn ? "다시 연결" : "로그인"}
         </Button>
       )}
-    </section>
-  );
-}
-
-function ProviderComingSoon({ provider }: { provider: string }) {
-  return (
-    <section className="flex min-h-72 flex-col items-center justify-center rounded-2xl border bg-muted/20 px-6 text-center">
-      <CalendarPlus2
-        className="size-10 text-muted-foreground"
-        aria-hidden="true"
-      />
-      <h2 className="mt-4 font-paperlogy text-xl font-semibold">{provider}</h2>
-      <p className="mt-2 font-anyvid text-sm text-muted-foreground">
-        연동 기능을 준비하고 있습니다.
-      </p>
-      <Badge variant="secondary" className="mt-4 font-anyvid">
-        준비 중
-      </Badge>
     </section>
   );
 }

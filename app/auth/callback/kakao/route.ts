@@ -1,5 +1,6 @@
 import { NextResponse, type NextRequest } from "next/server";
 
+import { createAdminClient } from "@/lib/supabase/admin";
 import { completeLogin } from "@/lib/auth/complete-login";
 import { createClient } from "@/lib/supabase/server";
 
@@ -12,6 +13,10 @@ export async function GET(request: NextRequest) {
     requestedNext.startsWith("/") && !requestedNext.startsWith("//")
       ? requestedNext
       : "/";
+
+  if (!code && requestUrl.searchParams.get("calendar") === "1") {
+    return NextResponse.redirect(new URL("/calendar-add?provider=kakao&calendarError=cancelled", baseUrl));
+  }
 
   if (!code) {
     return redirectWithAuthError(baseUrl, "missing_code");
@@ -34,6 +39,29 @@ export async function GET(request: NextRequest) {
     }
 
     if (result.status === "success") {
+      if (requestUrl.searchParams.get("calendar") === "1") {
+        try {
+          const accessToken = data.session?.provider_token;
+          if (!accessToken || !data.session?.provider_refresh_token) throw new Error("Missing provider token");
+          // Verify the granted permission, including when consent was partially declined.
+          const check = await fetch("https://kapi.kakao.com/v2/api/calendar/calendars", {
+            headers: { Authorization: `Bearer ${accessToken}` }, cache: "no-store",
+          });
+          if (!check.ok) return NextResponse.redirect(new URL("/calendar-add?provider=kakao&calendarError=permission", baseUrl));
+          const admin = createAdminClient();
+          const { error: saveError } = await admin.from("kakao_connections").upsert({
+            user_id: data.user.id,
+            access_token: accessToken,
+            refresh_token: data.session?.provider_refresh_token ?? null,
+            // Supabase session expiry is not the Kakao token expiry. Refresh before use.
+            expires_at: null,
+            updated_at: new Date().toISOString(),
+          }, { onConflict: "user_id" });
+          if (saveError) return NextResponse.redirect(new URL("/calendar-add?provider=kakao&calendarError=storage", baseUrl));
+        } catch {
+          return NextResponse.redirect(new URL("/calendar-add?provider=kakao&calendarError=connection", baseUrl));
+        }
+      }
       const successUrl = new URL(next, baseUrl);
       successUrl.searchParams.set(
         "login",

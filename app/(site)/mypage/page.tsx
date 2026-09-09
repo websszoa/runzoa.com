@@ -262,14 +262,14 @@ export default async function MyPage() {
                     <span className="font-anyvid text-xs text-muted-foreground">
                       {formatKoreanDate(event.created_at)} 추가
                     </span>
-                    {(event.provider === "naver" || event.provider === "google") && (
+                    {(event.provider === "naver" || event.provider === "google" || event.provider === "kakao") && (
                       <Button
                         variant="outline"
                         size="sm"
                         nativeButton={false}
                         render={
                           <a
-                            href={event.provider === "google" ? "https://calendar.google.com/" : "https://calendar.naver.com/"}
+                            href={event.provider === "kakao" ? "https://calendar.kakao.com/" : event.provider === "google" ? "https://calendar.google.com/" : "https://calendar.naver.com/"}
                             target="_blank"
                             rel="noreferrer"
                           />
