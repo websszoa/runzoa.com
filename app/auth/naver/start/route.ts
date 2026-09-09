@@ -22,6 +22,9 @@ export function GET(request: NextRequest) {
   authorizeUrl.searchParams.set("client_id", clientId);
   authorizeUrl.searchParams.set("redirect_uri", callbackUrl.toString());
   authorizeUrl.searchParams.set("state", state);
+  if (next.startsWith("/calendar-add")) {
+    authorizeUrl.searchParams.set("auth_type", "reauthenticate");
+  }
 
   const response = NextResponse.redirect(authorizeUrl);
   const secure = request.nextUrl.protocol === "https:";

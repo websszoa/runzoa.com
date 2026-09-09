@@ -481,11 +481,13 @@ function ConnectionStatus({
         </div>
         <div>
           <h2 className="font-paperlogy text-base font-semibold">
-            {connected ? `${providerName} 캘린더 사용 가능` : `${providerName} 연결이 필요해요`}
+            {connected
+              ? `${providerName} 로그인 및 캘린더 연결 완료`
+              : `${providerName} 연결이 필요해요`}
           </h2>
           <p className="mt-1 break-keep font-anyvid text-sm text-muted-foreground">
             {connected
-              ? `선택한 대회를 ${providerName} 기본 캘린더에 바로 추가할 수 있습니다.`
+              ? `${providerName} 캘린더가 연결되어 선택한 대회를 바로 추가할 수 있습니다.`
               : reconnectRequired
                 ? `캘린더 권한이 없거나 연결이 만료되었습니다. ${providerName}로 다시 연결해 주세요.`
                 : `${providerName} 로그인과 캘린더 이용 동의가 필요합니다.`}
@@ -501,7 +503,7 @@ function ConnectionStatus({
           render={<a href={loginUrl} />}
           className={provider === "naver" ? "shrink-0 bg-[#03c75a] text-white hover:bg-[#02b351]" : provider === "kakao" ? "shrink-0 bg-[#fee500] text-black hover:bg-[#fee500]/80" : "shrink-0"}
         >
-          {providerName}로 {isLoggedIn ? "다시 연결" : "로그인"}
+          {providerName}로 {isLoggedIn ? "다시 로그인" : "로그인"}
         </Button>
       )}
     </section>
