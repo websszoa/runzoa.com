@@ -15,6 +15,13 @@ const requestSchema = z.object({
 });
 
 export async function POST(request: Request) {
+  if (request.headers.get("origin") !== new URL(request.url).origin) {
+    return NextResponse.json(
+      { error: "허용되지 않은 요청입니다.", code: "INVALID_ORIGIN" },
+      { status: 403 },
+    );
+  }
+
   const supabase = await createClient();
   const {
     data: { user },
@@ -52,7 +59,7 @@ export async function POST(request: Request) {
   const accessToken = await getValidNaverAccessToken(
     admin,
     connection as NaverConnection,
-  );
+  ).catch(() => null);
   if (!accessToken) {
     return NextResponse.json(
       { error: "네이버 연결이 만료되었습니다.", code: "RECONNECT_REQUIRED" },
@@ -104,7 +111,7 @@ export async function POST(request: Request) {
     await admin
       .from("calendar_events")
       .update({
-        status: "failed",
+        status: result.uncertain ? "pending" : "failed",
         error_message: result.message,
         updated_at: new Date().toISOString(),
       })
@@ -182,7 +189,7 @@ async function reserveCalendarEvent(
 
   const existing = await admin
     .from("calendar_events")
-    .select("id, status")
+    .select("id, status, updated_at")
     .eq("user_id", values.userId)
     .eq("provider", "naver")
     .eq("marathon_slug", values.slug)
@@ -195,13 +202,19 @@ async function reserveCalendarEvent(
     };
   }
   if (existing.data.status === "created") return { status: "exists" as const };
-  if (existing.data.status === "pending") return { status: "pending" as const };
+  if (
+    existing.data.status === "pending" &&
+    Date.parse(existing.data.updated_at) > Date.now() - 120_000
+  ) {
+    return { status: "pending" as const };
+  }
 
   const retried = await admin
     .from("calendar_events")
     .update({ status: "pending", error_message: null, updated_at: now })
     .eq("id", existing.data.id)
-    .eq("status", "failed")
+    .eq("status", existing.data.status)
+    .eq("updated_at", existing.data.updated_at)
     .select("id")
     .maybeSingle();
 

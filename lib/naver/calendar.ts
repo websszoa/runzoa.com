@@ -36,19 +36,25 @@ export async function getValidNaverAccessToken(
     client_secret: clientSecret,
     refresh_token: connection.refresh_token,
   });
-  const response = await fetch(NAVER_TOKEN_URL, {
-    method: "POST",
-    headers: { "Content-Type": "application/x-www-form-urlencoded" },
-    body,
-    cache: "no-store",
-  });
-  const token = (await response.json()) as {
+  let response: Response;
+  try {
+    response = await fetch(NAVER_TOKEN_URL, {
+      method: "POST",
+      headers: { "Content-Type": "application/x-www-form-urlencoded" },
+      body,
+      cache: "no-store",
+      signal: AbortSignal.timeout(15_000),
+    });
+  } catch {
+    return null;
+  }
+  const token = (await response.json().catch(() => null)) as {
     access_token?: string;
     refresh_token?: string;
     expires_in?: string;
-  };
+  } | null;
 
-  if (!response.ok || !token.access_token) return null;
+  if (!response.ok || !token?.access_token) return null;
 
   const expiresIn = Number(token.expires_in ?? 0);
   const { error: updateError } = await admin
@@ -80,15 +86,27 @@ export async function createNaverCalendarEvent(
     calendarId: "defaultCalendarId",
     scheduleIcalString: buildICalendar(marathon, uid),
   });
-  const response = await fetch(NAVER_CALENDAR_URL, {
-    method: "POST",
-    headers: {
-      Authorization: `Bearer ${accessToken}`,
-      "Content-Type": "application/x-www-form-urlencoded; charset=UTF-8",
-    },
-    body,
-    cache: "no-store",
-  });
+  let response: Response;
+  try {
+    response = await fetch(NAVER_CALENDAR_URL, {
+      method: "POST",
+      headers: {
+        Authorization: `Bearer ${accessToken}`,
+        "Content-Type": "application/x-www-form-urlencoded; charset=UTF-8",
+      },
+      body,
+      cache: "no-store",
+      signal: AbortSignal.timeout(15_000),
+    });
+  } catch {
+    return {
+      success: false as const,
+      uncertain: true as const,
+      reconnectRequired: false,
+      message:
+        "추가 결과를 확인하지 못했습니다. 네이버 캘린더에서 저장 여부를 확인해 주세요.",
+    };
+  }
   const result = (await response.json().catch(() => null)) as {
     result?: string;
     errorCode?: string;
@@ -102,6 +120,7 @@ export async function createNaverCalendarEvent(
   if (!response.ok || result?.result !== "success") {
     return {
       success: false as const,
+      uncertain: response.status >= 500,
       reconnectRequired: response.status === 401 || response.status === 403,
       message:
         result?.errorMessage ?? "네이버 캘린더에 일정을 추가하지 못했습니다.",
@@ -129,7 +148,7 @@ function buildICalendar(marathon: Marathon, uid: string) {
     "런조아에서 추가한 마라톤 일정입니다.",
   ]
     .filter(Boolean)
-    .join("\\n");
+    .join("\n");
   const now = new Date().toISOString().replaceAll(/[-:]/g, "").split(".")[0] + "Z";
 
   return [
