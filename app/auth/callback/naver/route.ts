@@ -69,9 +69,18 @@ export async function GET(request: NextRequest) {
 
     const admin = createAdminClient();
     const supabase = await createClient();
+    const switchAccount =
+      request.cookies.get("naver_oauth_switch_account")?.value === "1";
+
+    if (switchAccount) {
+      await supabase.auth.signOut();
+    }
+
     const {
       data: { user: currentUser },
-    } = await supabase.auth.getUser();
+    } = switchAccount
+      ? { data: { user: null } }
+      : await supabase.auth.getUser();
     const fullName = profile.name || profile.nickname || "이름 없음";
     const { data: mappedConnection, error: mappingError } = await admin
       .from("naver_connections")
@@ -325,6 +334,7 @@ async function saveNaverConnection(
 function clearOAuthCookies(response: NextResponse) {
   response.cookies.delete("naver_oauth_state");
   response.cookies.delete("naver_oauth_next");
+  response.cookies.delete("naver_oauth_switch_account");
   return response;
 }
 
