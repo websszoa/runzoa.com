@@ -27,6 +27,7 @@ import MarathonSearchForm from "@/components/marathon/marathon-search-form";
 type MarathonSearchProps = {
   marathons: Marathon[];
   hasError?: boolean;
+  initialQuery?: string;
 };
 
 type RegistrationStatus = "접수예정" | "접수중" | "접수마감";
@@ -61,9 +62,10 @@ const DISTANCE_FILTERS: readonly {
 export default function MarathonSearch({
   marathons,
   hasError = false,
+  initialQuery = "",
 }: MarathonSearchProps) {
-  const [searchInput, setSearchInput] = useState("");
-  const [query, setQuery] = useState("");
+  const [searchInput, setSearchInput] = useState(initialQuery);
+  const [query, setQuery] = useState(initialQuery);
   const [status, setStatus] = useState<RegistrationStatus | null>(null);
   const [pastRaces, setPastRaces] = useState<"include" | "exclude">("exclude");
   const [year, setYear] = useState<number | null>(null);

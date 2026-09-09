@@ -47,7 +47,18 @@ export async function GET(request: NextRequest) {
           const check = await fetch("https://kapi.kakao.com/v2/api/calendar/calendars", {
             headers: { Authorization: `Bearer ${accessToken}` }, cache: "no-store",
           });
-          if (!check.ok) return NextResponse.redirect(new URL("/calendar-add?provider=kakao&calendarError=permission", baseUrl));
+          if (!check.ok) {
+            const failure = await check.json().catch(() => null) as { code?: unknown } | null;
+            const code = typeof failure?.code === "number" ? failure.code : null;
+            // Log only diagnostic codes, never provider tokens or account details.
+            console.error("톡캘린더 권한 확인 실패", { status: check.status, code });
+            const reason = code === -5 ? "app_permission"
+              : code === -402 ? "consent"
+              : code === -501 ? "talk_account"
+              : check.status === 401 ? "token"
+              : "calendar_api";
+            return NextResponse.redirect(new URL(`/calendar-add?provider=kakao&calendarError=${reason}`, baseUrl));
+          }
           const admin = createAdminClient();
           const { error: saveError } = await admin.from("kakao_connections").upsert({
             user_id: data.user.id,

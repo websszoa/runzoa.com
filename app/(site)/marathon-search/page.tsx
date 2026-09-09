@@ -13,13 +13,15 @@ export const metadata: Metadata = {
   },
 };
 
-export default async function MarathonSearchPage() {
+export default async function MarathonSearchPage({ searchParams }: { searchParams: Promise<{ q?: string | string[] }> }) {
+  const params = await searchParams;
+  const initialQuery = (Array.isArray(params.q) ? params.q[0] : params.q) ?? "";
   const { marathons, error } = await getMarathons();
 
   return (
     <>
       <MarathonHeader {...MARATHON_HEADERS.search} />
-      <MarathonSearch marathons={marathons} hasError={error} />
+      <MarathonSearch key={initialQuery} initialQuery={initialQuery} marathons={marathons} hasError={error} />
     </>
   );
 }

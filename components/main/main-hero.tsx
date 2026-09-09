@@ -1,6 +1,7 @@
 import Link from "next/link";
-import { cn } from "@/lib/utils";
-import { buttonVariants } from "@/components/ui/button";
+import Form from "next/form";
+import { Input } from "@/components/ui/input";
+import { Button } from "@/components/ui/button";
 import { APP_SHORT_DESCRIPTION, APP_SLOGAN } from "@/lib/constants";
 import type { Marathon } from "@/lib/marathons";
 import {
@@ -9,6 +10,7 @@ import {
   hasRegistrationStartDate,
 } from "@/lib/utils";
 import {
+  Search,
   ArrowRight,
   CalendarCheck,
   CalendarDays,
@@ -65,26 +67,32 @@ export default function MainHero({ marathons }: { marathons: Marathon[] }) {
             준비하세요.
           </p>
 
-          <div className="mt-9 flex flex-col gap-3 sm:flex-row">
-            <Link
-              href="/marathon-search"
-              className={cn(
-                buttonVariants({ size: "lg" }),
-                "bg-brand px-5 text-white hover:bg-brand/85 rounded-full",
-              )}
+          <div className="mt-9">
+            <Form
+              action="/marathon-search"
+              role="search"
+              className="flex max-w-lg items-center gap-1 rounded-full border border-brand bg-background p-1.5 transition-colors focus-within:border-brand sm:gap-2 sm:p-2"
             >
-              <span>대회 찾아보기</span>
-              <ArrowRight aria-hidden="true" />
-            </Link>
-            {/* <Link
-              href="/support?type=registration"
-              className={cn(
-                buttonVariants({ variant: "outline", size: "lg" }),
-                "px-5 rounded-full",
-              )}
-            >
-              <span>내 보관함</span>
-            </Link> */}
+              <Search
+                aria-hidden="true"
+                className="ml-3 size-5 shrink-0 text-muted-foreground sm:ml-4"
+              />
+              <label htmlFor="hero-race-query" className="sr-only">
+                대회명, 지역 또는 장소 검색
+              </label>
+              <Input
+                id="hero-race-query"
+                name="q"
+                placeholder="대회명, 지역, 장소 검색"
+                className="h-10 flex-1 border-0 bg-transparent px-2 font-anyvid text-sm shadow-none focus-visible:ring-0"
+              />
+              <Button
+                type="submit"
+                className="h-10 shrink-0 rounded-full bg-brand px-4 font-anyvid text-sm text-white hover:bg-brand/85 sm:px-6"
+              >
+                대회 찾아보기
+              </Button>
+            </Form>
           </div>
         </div>
 
@@ -94,7 +102,7 @@ export default function MainHero({ marathons }: { marathons: Marathon[] }) {
             className="absolute -inset-10 -z-10 rounded-full bg-brand/10 blur-3xl"
           />
 
-          <div className="overflow-hidden rounded-2xl border bg-card shadow-2xl shadow-red-950/10">
+          <div className="overflow-hidden rounded-2xl border bg-card">
             <div className="flex min-h-14 items-center gap-2 border-b px-5 sm:px-6">
               <span className="font-paperlogy text-xl font-black pt-1 tracking-wide text-brand uppercase">
                 Runzoa live
