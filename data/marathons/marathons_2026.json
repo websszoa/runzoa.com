@@ -10494,7 +10494,7 @@
       "startTime": "13:00",
       "endTime": null,
       "site": "https://jejuwindmillrun.com/",
-      "status": "",
+      "status": "접수마감",
       "price": {
         "5KM": 50000,
         "10KM": 50000
@@ -13103,7 +13103,7 @@
       "startTime": "14:00",
       "endTime": null,
       "site": "https://incheonmarathon.or.kr/",
-      "status": "",
+      "status": "접수마감",
       "price": {
         "5KM": 30000,
         "10KM": 50000,
@@ -13407,11 +13407,11 @@
     },
     "registration": {
       "startDate": "2026-08-05",
-      "endDate": "2026-09-08",
+      "endDate": "2026-09-23",
       "startTime": "14:00",
       "endTime": "17:00",
       "site": "https://www.jeongseojin.co.kr/",
-      "status": "접수중",
+      "status": null,
       "price": {
         "5km": 45000,
         "10km": 50000,
@@ -13428,7 +13428,7 @@
       "longitude": 126.60784799484
     },
     "hosts": {
-      "organizer": "(사)인천마라톤조직위원회",
+      "organizer": "인천마라톤조직위원회",
       "manager": "이상커뮤니케이션즈",
       "sponsor": "인천광역시 서해구, 인천광역시서해구체육회, 인천일보, 하나은행",
       "phone": "1866-1718",
@@ -14108,7 +14108,7 @@
       "startTime": null,
       "endTime": null,
       "site": "https://mara1080.com/event/0674df45-473c-4182-bed4-d15582fb8c73",
-      "status": null,
+      "status": "접수마감",
       "price": {
         "5km": 30000,
         "10km": 45000,
@@ -14273,13 +14273,13 @@
     },
     "registration": {
       "startDate": "2026-07-24",
-      "endDate": "2026-08-31",
+      "endDate": "2026-09-30",
       "startTime": "14:00",
       "endTime": null,
       "site": "https://runmusicfestival.localvibehub.com/",
-      "status": "접수중",
+      "status": null,
       "price": {
-        "스타런 패스": 69000,
+        "스타런 패스": 49000,
         "올인원 패스": 109000,
         "레일워크 패스": 59000
       }
@@ -19333,6 +19333,165 @@
       "sponsor": "해남군, 해남군의회, 해남군체육회",
       "phone": "1600-3949",
       "email": null,
+      "instagram": null
+    }
+  },
+  {
+    "slug": "gangnam-half-marathon-2026",
+    "name": "2026 강남하프마라톤",
+    "description": "2026 강남하프마라톤은 서울 강남구 대치유수지 체육공원에서 출발해 양재천과 강남 도심 일대를 달리는 가을 마라톤대회입니다. 제17회 강남구청장배 육상대회로 열리며 Half 21.8km와 10km 두 종목에 총 1,000명이 참가합니다. 익숙한 강남의 도심과 하천 풍경을 러너의 시선으로 새롭게 경험하며 기록과 완주의 즐거움을 함께 나눌 수 있는 도심형 러닝 축제입니다.",
+    "info": {
+      "type": "마라톤",
+      "scale": 1000,
+      "park": null,
+      "souvenir": null,
+      "program": "Half 21.8km, 10km",
+      "memo": "Half 500명, 10km 500명을 모집합니다. 참가 신청 후 2일 이내 참가비를 입금해야 신청이 확정되며 미입금 시 자동 취소됩니다. 모집 마감 전까지는 참가비 100% 환불이 가능하지만 모집 마감 또는 조기 마감 이후에는 환불할 수 없습니다. 참가권 양도와 대리 참가, 명의 변경은 불가합니다."
+    },
+    "event": {
+      "startDate": "2026-11-08",
+      "endDate": "2026-11-08",
+      "startTime": "07:00",
+      "endTime": null,
+      "site": "https://comport11.oopy.io/",
+      "schedule": null
+    },
+    "registration": {
+      "startDate": "2026-09-14",
+      "endDate": "2026-10-23",
+      "startTime": null,
+      "endTime": "17:00",
+      "site": "https://comport11.oopy.io/gangnamhalfmarathon/course",
+      "status": null,
+      "price": {
+        "HALF": 65000,
+        "10KM": 60000
+      }
+    },
+    "location": {
+      "country": "한국",
+      "region": "서울",
+      "venue": "대치유수지 체육공원",
+      "naver": null,
+      "address": "서울특별시 강남구 도곡로 609 3동",
+      "latitude": 37.5024012,
+      "longitude": 127.0692082
+    },
+    "hosts": {
+      "organizer": "강남구체육회",
+      "manager": "강남구육상연맹",
+      "sponsor": null,
+      "phone": null,
+      "email": null,
+      "instagram": "gaaf_run"
+    }
+  },
+  {
+    "slug": "buldak-burning-festa-with-peppo-2026",
+    "name": "불닭버닝페스타 with PEPPO",
+    "description": "불닭버닝페스타 with PEPPO는 강원 평창 삼양라운드힐의 광활한 초원과 백두대간 능선을 달리는 트레일러닝 페스타입니다. 23K, 13K, 5K 세 종목으로 구성되며 난이도에 따라 대관령의 다양한 풍경을 경험할 수 있습니다. 레이스 이후에는 버닝 캠핑과 세레모니, 웰니스, 사우나, 요가, 푸드 등 다채로운 프로그램이 이어져 낮부터 밤까지 러닝과 아웃도어 문화를 함께 즐길 수 있습니다.",
+    "info": {
+      "type": "트레일러닝",
+      "scale": null,
+      "park": null,
+      "souvenir": null,
+      "program": "BURNING TRAIL RUN, BURNING CAMPING, BURNING CEREMONY, BURNING WELLNESS, FOOD, TREASURE HUNT, KNOCK OUT STRESS, SAUNA, YOGA",
+      "memo": "23K는 누적상승고도 860m, 13K는 440m, 5K는 65m입니다. 23K는 UTMB Index 20K 대상 코스입니다. 기본적으로 대회일 기준 만 19세 이상 참가할 수 있으며, 5K는 보호자 동반 시 미성년자도 참가 가능합니다. 1인 1종목만 신청할 수 있고 대리 참가 및 배번 양도는 불가합니다. 친환경 트레일러닝으로 Leave No Trace(LNT)를 준수합니다."
+    },
+    "event": {
+      "startDate": "2026-10-24",
+      "endDate": "2026-10-25",
+      "startTime": "11:00",
+      "endTime": null,
+      "site": "https://sqnc.global/buldak-burning-festa-with-peppo",
+      "schedule": {
+        "11:00": "23K 출발",
+        "12:00": "13K 출발",
+        "12:30": "5K 출발",
+        "15:30": "트레일런 컷오프"
+      }
+    },
+    "registration": {
+      "startDate": "2026-09-08",
+      "endDate": "2026-10-05",
+      "startTime": null,
+      "endTime": null,
+      "site": "https://sqnc.global/buldak-burning-festa-with-peppo",
+      "status": null,
+      "price": {
+        "23KM": 90000,
+        "13KM": 70000,
+        "5KM": 50000
+      }
+    },
+    "location": {
+      "country": "한국",
+      "region": "강원",
+      "venue": "삼양라운드힐",
+      "naver": null,
+      "address": "강원특별자치도 평창군 대관령면 꽃밭양지길 708-9 대관령목장",
+      "latitude": 37.723936,
+      "longitude": 128.7196692
+    },
+    "hosts": {
+      "organizer": "삼양식품",
+      "manager": "프립",
+      "sponsor": "코오롱스포츠, 헬리녹스, 티머니, 에가토스, 나랑드사이다, 크런틴, 알펜시아, 러너킹, 리스페이스, 사우나쉽, 먼데이사우나",
+      "phone": null,
+      "email": "support@sqnc.global",
+      "instagram": null
+    }
+  },
+  {
+    "slug": "gyeongcheong-marathon-2026",
+    "name": "2026 경청마라톤",
+    "description": "2026 경청마라톤은 서울 신정교 하부 영롱이 억새구장에서 열리는 가을 마라톤대회입니다. 달리기를 통해 서로를 응원하고 마음을 나누며, 작은 실천이 더 큰 나눔으로 이어지기를 바라는 취지로 마련되었습니다. Half, 10km, 5km 세 종목으로 진행되며 남녀노소 누구나 참가할 수 있어 기록 도전부터 즐거운 완주까지 함께할 수 있는 러닝 행사입니다.",
+    "info": {
+      "type": "마라톤",
+      "scale": null,
+      "park": null,
+      "souvenir": "기념 티셔츠, 완주메달, 기록증, 간식",
+      "program": "Half, 10km, 5km",
+      "memo": "신체 건강한 남녀노소 누구나 참가할 수 있으며 전 종목 기록을 측정합니다. 참가 신청은 모집인원에 따라 조기 마감될 수 있습니다."
+    },
+    "event": {
+      "startDate": "2026-10-17",
+      "endDate": "2026-10-17",
+      "startTime": "09:00",
+      "endTime": null,
+      "site": "https://storyrun.kr/",
+      "schedule": {
+        "09:00": "대회 출발"
+      }
+    },
+    "registration": {
+      "startDate": "2026-07-07",
+      "endDate": "2026-10-07",
+      "startTime": null,
+      "endTime": "23:59",
+      "site": "https://storyrun.kr/",
+      "status": null,
+      "price": {
+        "HALF": 50000,
+        "10KM": 50000,
+        "5KM": 50000
+      }
+    },
+    "location": {
+      "country": "한국",
+      "region": "서울",
+      "venue": "신정교 하부 영롱이 억새구장",
+      "naver": "영롱이억새2구장",
+      "address": "서울 영등포구 영등포로2길 62",
+      "latitude": 37.5178604,
+      "longitude": 126.8819583
+    },
+    "hosts": {
+      "organizer": "행복한동행",
+      "manager": "행복한동행",
+      "sponsor": null,
+      "phone": "02-2636-7775",
+      "email": "run@storyrun.kr",
       "instagram": null
     }
   }

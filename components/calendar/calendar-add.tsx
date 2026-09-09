@@ -43,6 +43,9 @@ type CalendarAddProps = {
   hasError: boolean;
   isLoggedIn: boolean;
   naverConnected: boolean;
+  googleConnected: boolean;
+  initialProvider: "naver" | "google";
+  initialGoogleAddedSlugs: string[];
   initialAddedSlugs: string[];
 };
 
@@ -60,8 +63,15 @@ export default function CalendarAdd({
   hasError,
   isLoggedIn,
   naverConnected,
+  googleConnected,
+  initialProvider,
+  initialGoogleAddedSlugs,
   initialAddedSlugs,
 }: CalendarAddProps) {
+  const [provider, setProvider] = useState<string>(initialProvider);
+  const providerName = provider === "google" ? "구글" : "네이버";
+  const [googleAddedSlugs, setGoogleAddedSlugs] = useState(() => new Set(initialGoogleAddedSlugs));
+  const [googleReconnectRequired, setGoogleReconnectRequired] = useState(false);
   const [query, setQuery] = useState("");
   const [visibleCount, setVisibleCount] = useState(PAGE_SIZE);
   const [pendingSlug, setPendingSlug] = useState<string | null>(null);
@@ -72,7 +82,7 @@ export default function CalendarAdd({
   const [errorMessage, setErrorMessage] = useState<string | null>(null);
   const [reconnectRequired, setReconnectRequired] = useState(false);
   const deferredQuery = useDeferredValue(normalizeSearchText(query));
-  const canUseNaver = isLoggedIn && naverConnected && !reconnectRequired;
+  const canUseCalendar = isLoggedIn && (provider === "google" ? googleConnected && !googleReconnectRequired : naverConnected && !reconnectRequired);
 
   const filteredMarathons = useMemo(() => {
     if (!deferredQuery) return marathons;
@@ -89,12 +99,12 @@ export default function CalendarAdd({
     );
   }, [deferredQuery, marathons]);
 
-  const addToNaver = async (marathon: Marathon) => {
+  const addToCalendar = async (marathon: Marathon) => {
     setPendingSlug(marathon.slug);
     setErrorMessage(null);
 
     try {
-      const response = await fetch("/api/calendar/naver", {
+      const response = await fetch(`/api/calendar/${provider}`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ slug: marathon.slug }),
@@ -108,12 +118,15 @@ export default function CalendarAdd({
       };
 
       if (!response.ok || !result.success) {
-        if (result.code === "RECONNECT_REQUIRED") setReconnectRequired(true);
+        if (result.code === "RECONNECT_REQUIRED" || result.code === "AUTH_REQUIRED") {
+          if (provider === "google") setGoogleReconnectRequired(true);
+          else setReconnectRequired(true);
+        }
         setErrorMessage(result.error ?? "일정을 추가하지 못했습니다.");
         return;
       }
 
-      setAddedSlugs((current) => new Set(current).add(marathon.slug));
+      (provider === "google" ? setGoogleAddedSlugs : setAddedSlugs)((current) => new Set(current).add(marathon.slug));
       setResultDialog({
         marathonName: marathon.name,
         alreadyAdded: Boolean(result.alreadyAdded),
@@ -130,7 +143,7 @@ export default function CalendarAdd({
     <>
       <DialogAccountNotice notice="calendar-test" />
 
-      <Tabs defaultValue="naver" className="gap-0">
+      <Tabs value={provider} onValueChange={(value) => { if (!pendingSlug && !resultDialog) { setProvider(String(value)); setErrorMessage(null); } }} className="gap-0">
         <TabsList className="block h-auto w-full overflow-visible rounded-none border-b bg-background/90 p-0 backdrop-blur group-data-horizontal/tabs:h-auto">
           <div className="mx-auto flex w-full max-w-7xl gap-1 overflow-x-auto px-4 py-3 sm:px-6 lg:px-8">
             <TabsTrigger
@@ -155,11 +168,12 @@ export default function CalendarAdd({
         </TabsList>
 
         <div className="mx-auto w-full max-w-7xl px-4 py-8 sm:px-6 sm:py-12 lg:px-8">
-          <TabsContent value="naver" className="space-y-6">
+          <TabsContent value={provider === "kakao" ? "naver" : provider} className="space-y-6">
             <ConnectionStatus
               isLoggedIn={isLoggedIn}
-              connected={canUseNaver}
-              reconnectRequired={reconnectRequired}
+              provider={provider === "google" ? "google" : "naver"}
+              connected={canUseCalendar}
+              reconnectRequired={provider === "google" ? googleReconnectRequired : reconnectRequired}
             />
 
             {errorMessage && (
@@ -212,7 +226,7 @@ export default function CalendarAdd({
               ) : (
                 <div className="divide-y overflow-hidden bg-card">
                   {filteredMarathons.slice(0, visibleCount).map((marathon) => {
-                    const added = addedSlugs.has(marathon.slug);
+                    const added = (provider === "google" ? googleAddedSlugs : addedSlugs).has(marathon.slug);
                     const pending = pendingSlug === marathon.slug;
                     const registrationStatus = getRegistrationStatus(marathon);
                     const distances = Object.keys(
@@ -335,15 +349,15 @@ export default function CalendarAdd({
                           size="icon-sm"
                           className="group/calendar self-end rounded-full sm:self-center"
                           disabled={
-                            !canUseNaver || added || Boolean(pendingSlug)
+                            !canUseCalendar || added || Boolean(pendingSlug)
                           }
-                          onClick={() => void addToNaver(marathon)}
+                          onClick={() => void addToCalendar(marathon)}
                           aria-label={
                             pending
                               ? `${marathon.name} 추가 중`
                               : added
                                 ? `${marathon.name} 추가 완료`
-                                : `${marathon.name} 네이버 캘린더에 추가`
+                                : `${marathon.name} ${providerName} 캘린더에 추가`
                           }
                           title={added ? "추가 완료" : "캘린더에 추가"}
                         >
@@ -380,9 +394,6 @@ export default function CalendarAdd({
             </section>
           </TabsContent>
 
-          <TabsContent value="google">
-            <ProviderComingSoon provider="구글 캘린더" />
-          </TabsContent>
           <TabsContent value="kakao">
             <ProviderComingSoon provider="카카오 캘린더" />
           </TabsContent>
@@ -404,7 +415,7 @@ export default function CalendarAdd({
                 : "캘린더에 추가했어요!"}
             </DialogTitle>
             <DialogDescription className="break-keep font-anyvid leading-6">
-              {resultDialog?.marathonName} 일정을 네이버 캘린더에 저장했습니다.
+              {resultDialog?.marathonName} 일정을 {providerName} 캘린더에 저장했습니다.
               마이페이지에서 추가 내역을 확인할 수 있어요.
               {resultDialog?.warning ? ` ${resultDialog.warning}` : ""}
             </DialogDescription>
@@ -421,10 +432,10 @@ export default function CalendarAdd({
               variant="outline"
               nativeButton={false}
               render={
-                <a href={NAVER_CALENDAR_URL} target="_blank" rel="noreferrer" />
+                <a href={provider === "google" ? "https://calendar.google.com/" : NAVER_CALENDAR_URL} target="_blank" rel="noreferrer" />
               }
             >
-              네이버 캘린더에서 확인
+              {providerName} 캘린더에서 확인
             </Button>
             <Button
               nativeButton={false}
@@ -440,15 +451,18 @@ export default function CalendarAdd({
 }
 
 function ConnectionStatus({
+  provider,
   isLoggedIn,
   connected,
   reconnectRequired,
 }: {
+  provider: "naver" | "google";
   isLoggedIn: boolean;
   connected: boolean;
   reconnectRequired: boolean;
 }) {
-  const loginUrl = "/auth/naver/start?next=/calendar-add";
+  const providerName = provider === "google" ? "구글" : "네이버";
+  const loginUrl = provider === "google" ? "/auth/google/start" : "/auth/naver/start?next=/calendar-add";
   return (
     <section className="flex flex-col gap-4 rounded-2xl border bg-muted/20 p-5 sm:flex-row sm:items-center sm:justify-between sm:p-6">
       <div className="flex items-start gap-3">
@@ -463,26 +477,27 @@ function ConnectionStatus({
         </div>
         <div>
           <h2 className="font-paperlogy text-base font-semibold">
-            {connected ? "네이버 캘린더 사용 가능" : "네이버 연결이 필요해요"}
+            {connected ? `${providerName} 캘린더 사용 가능` : `${providerName} 연결이 필요해요`}
           </h2>
           <p className="mt-1 break-keep font-anyvid text-sm text-muted-foreground">
             {connected
-              ? "선택한 대회를 네이버 기본 캘린더에 바로 추가할 수 있습니다."
+              ? `선택한 대회를 ${providerName} 기본 캘린더에 바로 추가할 수 있습니다.`
               : reconnectRequired
-                ? "캘린더 권한이 없거나 연결이 만료되었습니다. 네이버로 다시 연결해 주세요."
-                : isLoggedIn
-                  ? "현재 계정에 네이버 캘린더가 연결되지 않았습니다."
-                  : "네이버 로그인과 캘린더 이용 동의가 필요합니다."}
+                ? `캘린더 권한이 없거나 연결이 만료되었습니다. ${providerName}로 다시 연결해 주세요.`
+                : `${providerName} 로그인과 캘린더 이용 동의가 필요합니다.`}
           </p>
+          {provider === "google" && !connected && (
+            <p className="mt-1 font-anyvid text-sm text-muted-foreground">선택한 구글 계정으로 런조아에 다시 로그인합니다.</p>
+          )}
         </div>
       </div>
       {!connected && (
         <Button
           nativeButton={false}
-          render={<Link href={loginUrl} />}
-          className="shrink-0 bg-[#03c75a] text-white hover:bg-[#02b351]"
+          render={<a href={loginUrl} />}
+          className={provider === "naver" ? "shrink-0 bg-[#03c75a] text-white hover:bg-[#02b351]" : "shrink-0"}
         >
-          네이버로 {isLoggedIn ? "다시 연결" : "로그인"}
+          {providerName}로 {isLoggedIn ? "다시 연결" : "로그인"}
         </Button>
       )}
     </section>

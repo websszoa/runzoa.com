@@ -1,7 +1,6 @@
--- 네이버 로그인 및 캘린더 API 연결 토큰
-CREATE TABLE IF NOT EXISTS public.naver_connections (
+-- 구글 로그인 및 캘린더 API 연결 토큰
+CREATE TABLE IF NOT EXISTS public.google_connections (
   user_id UUID PRIMARY KEY REFERENCES auth.users(id) ON DELETE CASCADE,
-  naver_user_id TEXT UNIQUE NOT NULL,
   access_token TEXT NOT NULL,
   refresh_token TEXT,
   expires_at TIMESTAMPTZ,
@@ -9,24 +8,24 @@ CREATE TABLE IF NOT EXISTS public.naver_connections (
   updated_at TIMESTAMPTZ DEFAULT NOW() NOT NULL
 );
 
-ALTER TABLE public.naver_connections ENABLE ROW LEVEL SECURITY;
+ALTER TABLE public.google_connections ENABLE ROW LEVEL SECURITY;
 
 -- 토큰 테이블은 서버 전용입니다. 일반 API 사용자의 모든 접근을 명시적으로 차단합니다.
 -- service_role은 RLS를 우회하므로 서버의 로그인/토큰 갱신은 유지됩니다.
-DROP POLICY IF EXISTS "naver_connections_deny_client_access"
-  ON public.naver_connections;
-CREATE POLICY "naver_connections_deny_client_access"
-  ON public.naver_connections
+DROP POLICY IF EXISTS "google_connections_deny_client_access"
+  ON public.google_connections;
+CREATE POLICY "google_connections_deny_client_access"
+  ON public.google_connections
   AS RESTRICTIVE
   FOR ALL
   TO anon, authenticated
   USING (false)
   WITH CHECK (false);
 
-REVOKE ALL ON TABLE public.naver_connections FROM PUBLIC;
-REVOKE ALL ON TABLE public.naver_connections FROM anon;
-REVOKE ALL ON TABLE public.naver_connections FROM authenticated;
+REVOKE ALL ON TABLE public.google_connections FROM PUBLIC;
+REVOKE ALL ON TABLE public.google_connections FROM anon;
+REVOKE ALL ON TABLE public.google_connections FROM authenticated;
 
 GRANT SELECT, INSERT, UPDATE, DELETE
-  ON TABLE public.naver_connections
+  ON TABLE public.google_connections
   TO service_role;
