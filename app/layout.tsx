@@ -2,6 +2,7 @@ import type { Metadata, Viewport } from "next";
 import localFont from "next/font/local";
 import { GoogleAnalytics } from "@next/third-parties/google";
 import { PageLoading } from "@/components/page/page-loading";
+import { Toaster } from "@/components/ui/sonner";
 import { cn } from "@/lib/utils";
 
 import {
@@ -132,6 +133,7 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
         </noscript>
         <PageLoading />
         {children}
+        <Toaster />
       </body>
       {process.env.NODE_ENV === "production" && (
         <GoogleAnalytics gaId={GOOGLE_ANALYTICS_ID} />
