@@ -143,22 +143,8 @@ export async function GET(request: NextRequest) {
       );
     }
 
-    // 같은 이메일의 기존 계정은 자동 병합하지 않고, 기존 계정으로
-    // 로그인한 뒤 네이버를 명시적으로 연결하도록 안내합니다.
-    if (!mappedConnection) {
-      const { data: sameEmailProfile, error: sameEmailError } = await admin
-        .from("profiles")
-        .select("id")
-        .eq("email", loginEmail)
-        .maybeSingle();
-      if (sameEmailError) throw sameEmailError;
-      if (sameEmailProfile) {
-        return clearOAuthCookies(
-          redirectWithAuthError(baseUrl, "naver_account_link_required"),
-        );
-      }
-    }
-
+    // Supabase Auth는 이메일을 고유 식별자로 사용하므로 같은 이메일의
+    // 기존 계정이 있으면 해당 계정으로 로그인하고 네이버 연결만 추가합니다.
     const { data: linkData, error: linkError } =
       await admin.auth.admin.generateLink({
         type: "magiclink",

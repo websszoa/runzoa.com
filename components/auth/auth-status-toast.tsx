@@ -12,8 +12,6 @@ const authErrorMessages: Record<string, string> = {
   naver_not_configured: "네이버 로그인 설정에 문제가 있습니다. 잠시 후 다시 시도해 주세요.",
   naver_profile_incomplete: "네이버 계정에서 이메일 정보를 가져오지 못했습니다.",
   naver_already_connected: "이미 다른 계정에 연결된 네이버 아이디예요.",
-  naver_account_link_required:
-    "이미 같은 이메일로 가입된 계정이 있어요. 기존 방식으로 로그인한 뒤 네이버를 연결해 주세요.",
   naver_login_failed: "네이버 로그인에 실패했습니다. 다시 시도해 주세요.",
 };
 

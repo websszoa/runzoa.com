@@ -2,7 +2,11 @@ import Link from "next/link";
 import Form from "next/form";
 import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
-import { APP_SHORT_DESCRIPTION, APP_SLOGAN } from "@/lib/constants";
+import {
+  APP_INSTAGRAM_URL,
+  APP_SHORT_DESCRIPTION,
+  APP_SLOGAN,
+} from "@/lib/constants";
 import type { Marathon } from "@/lib/marathons";
 import {
   getCurrentKoreanDate,
@@ -213,6 +217,38 @@ export default function MainHero({ marathons }: { marathons: Marathon[] }) {
                 </strong>
               </Link>
             </div>
+
+            <a
+              href={APP_INSTAGRAM_URL}
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="런조아 인스타그램 새 창에서 보기"
+              className="group flex items-center gap-3 border-t bg-background px-5 py-4 transition-colors hover:bg-muted/30 focus-visible:bg-muted/30 focus-visible:outline-none sm:px-6"
+            >
+              <span className="flex size-9 shrink-0 items-center justify-center rounded-full bg-brand/10 text-brand">
+                <span
+                  className="size-4.5 bg-brand"
+                  style={{
+                    mask: "url('/svg/instagram.svg') center / contain no-repeat",
+                    WebkitMask:
+                      "url('/svg/instagram.svg') center / contain no-repeat",
+                  }}
+                  aria-hidden="true"
+                />
+              </span>
+              <span className="min-w-0 font-anyvid">
+                <span className="block text-sm font-medium text-foreground">
+                  새로운 대회 소식, 인스타그램에서 만나요
+                </span>
+                <span className="block text-xs text-muted-foreground">
+                  @runzoa_official
+                </span>
+              </span>
+              <ArrowRight
+                className="ml-auto size-4 shrink-0 text-muted-foreground transition-transform group-hover:translate-x-1 group-hover:text-brand"
+                aria-hidden="true"
+              />
+            </a>
           </div>
         </div>
       </div>

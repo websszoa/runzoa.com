@@ -11184,56 +11184,6 @@
     }
   },
   {
-    "slug": "bukgu-sarang-marathon-22",
-    "name": "제22회 북구 사랑 마라톤 대회",
-    "description": "대구 금호강의 아름다운 강변 코스를 따라 달리는 지역 대표 러닝 축제로, 가족과 동호인, 시민 누구나 함께 즐길 수 있는 마라톤 대회입니다. 5km와 10km 종목으로 운영되며, 가을의 시원한 강바람과 함께 건강한 달리기의 즐거움을 만끽할 수 있습니다. 완주 메달과 기념품, 다양한 경품 이벤트까지 마련되어 있어 러너들에게 특별한 추억을 선사하는 지역 스포츠 축제입니다",
-    "info": {
-      "type": "마라톤",
-      "scale": 1400,
-      "park": null,
-      "souvenir": "완주메달, 기념 티셔츠",
-      "program": null,
-      "memo": null
-    },
-    "event": {
-      "startDate": "2026-10-18",
-      "endDate": "2026-10-18",
-      "startTime": null,
-      "endTime": null,
-      "site": "http://maraton.dbsfa365.co.kr/",
-      "schedule": null
-    },
-    "registration": {
-      "startDate": "2026-08-03",
-      "endDate": null,
-      "startTime": "10:00",
-      "endTime": null,
-      "site": "http://maraton.dbsfa365.co.kr/",
-      "status": "접수마감",
-      "price": {
-        "5KM": 15000,
-        "10KM": 25000
-      }
-    },
-    "location": {
-      "country": "KR",
-      "region": "대구",
-      "venue": "금호강 산격야영장",
-      "naver": null,
-      "address": "대구광역시 북구 산격동 1477-1",
-      "latitude": 35.909749,
-      "longitude": 128.603942
-    },
-    "hosts": {
-      "organizer": "대구광역시북구체육회",
-      "manager": "대구광역시 북구육상연맹",
-      "sponsor": null,
-      "phone": null,
-      "email": null,
-      "instagram": null
-    }
-  },
-  {
     "slug": "asia-open-marathon-2026",
     "name": "2026 아시아 오픈 마라톤대회",
     "description": "아시아 러너들이 함께 모여 달리는 국제 규모의 마라톤 행사로, 다양한 국적의 참가자들과 교류하며 달릴 수 있는 글로벌 러닝 이벤트입니다. 도심과 자연을 아우르는 코스를 따라 달리며 기록 도전은 물론, 축제 같은 분위기 속에서 특별한 러닝 경험을 즐길 수 있습니다.",
@@ -17822,26 +17772,30 @@
       "endDate": "2026-12-05",
       "startTime": null,
       "endTime": null,
-      "site": null,
+      "site": "https://cltoo.com/ko/product/341",
       "schedule": null
     },
     "registration": {
-      "startDate": "2026-09-03",
+      "startDate": "2026-09-11",
       "endDate": "2026-12-04",
       "startTime": "14:00",
       "endTime": null,
-      "site": null,
+      "site": "https://cltoo.com/ko/product/341",
       "status": null,
-      "price": null
+      "price": {
+        "HALF": 79000,
+        "10KM": 69000,
+        "5KM": 59000
+      }
     },
     "location": {
       "country": "한국",
       "region": "강원",
       "venue": "오크밸리",
       "naver": null,
-      "address": null,
-      "latitude": null,
-      "longitude": null
+      "address": "강원특별자치도 원주시 지정면 오크밸리1길 66 오크밸리 리조트",
+      "latitude": 37.4343237,
+      "longitude": 127.8175128
     },
     "hosts": {
       "organizer": "오크밸리",
@@ -18859,7 +18813,7 @@
     "description": "2026 양주 천일홍 가을 페스타 마라톤은 경기 양주시 나리농원에서 천일홍이 만개한 가을 풍경을 배경으로 달리는 마라톤 대회입니다. 약 13만㎡ 규모의 나리농원 일대에서 Half, 10km, 5km 세 종목으로 진행되며, 보라색과 분홍색 등 다채로운 천일홍과 함께 양주의 아름다운 가을 풍경을 즐기며 달릴 수 있는 특별한 러닝 행사입니다.",
     "info": {
       "type": "마라톤",
-      "scale": null,
+      "scale": 3000,
       "park": null,
       "souvenir": "대회 기념품, 번호표, 완주메달, 기록증 등",
       "program": "Half, 10km, 5km",
@@ -19492,6 +19446,108 @@
       "sponsor": null,
       "phone": "02-2636-7775",
       "email": "run@storyrun.kr",
+      "instagram": null
+    }
+  },
+  {
+    "slug": "marvel-run-korea-2026",
+    "name": "2026 마블런 KOREA",
+    "description": "MARVEL RUN 2026 KOREA는 강원 인제스피디움에서 마블의 세계관과 러닝을 함께 즐길 수 있는 특별한 테마 러닝 행사입니다. 캡틴 아메리카, 토르, 닥터 둠 등 마블을 대표하는 캐릭터와 함께하는 콘셉트로 진행되며, 2026년 10월 31일 인제스피디움을 무대로 펼쳐집니다. 세부 종목과 참가비, 프로그램 등은 추후 공식 홈페이지를 통해 공개될 예정입니다.",
+    "info": {
+      "type": "마라톤",
+      "scale": null,
+      "park": null,
+      "souvenir": null,
+      "program": null,
+      "memo": "현재 공식 홈페이지에는 대회일과 장소, 접수 오픈 일정만 공개되어 있습니다. 세부 종목, 참가비, 모집 규모, 출발시간 및 프로그램은 추후 공개 예정입니다."
+    },
+    "event": {
+      "startDate": "2026-10-31",
+      "endDate": "2026-10-31",
+      "startTime": null,
+      "endTime": null,
+      "site": "https://marvelrunkorea2026.com/",
+      "schedule": null
+    },
+    "registration": {
+      "startDate": "2026-09-22",
+      "endDate": null,
+      "startTime": "14:00",
+      "endTime": null,
+      "site": "https://marvelrunkorea2026.com/",
+      "status": "접수 대기",
+      "price": null
+    },
+    "location": {
+      "country": "한국",
+      "region": "강원",
+      "venue": "인제스피디움",
+      "naver": null,
+      "address": "강원 인제군 기린면 상하답로 130",
+      "latitude": 38.0026931,
+      "longitude": 128.2951054
+    },
+    "hosts": {
+      "organizer": "ONEUNIVERSE STUDIO",
+      "manager": "FLUX SONIC",
+      "sponsor": null,
+      "phone": null,
+      "email": null,
+      "instagram": null
+    }
+  },
+  {
+    "slug": "daegu-geumhogang-health-run-2026",
+    "name": "2026 대구 금호강 건강달리기",
+    "description": "2026 대구 금호강 건강달리기는 대구 동구 동촌유원지 금호강 둔치에서 열리는 건강달리기 행사입니다. 기록이나 경쟁보다는 가족, 친구, 이웃과 함께 달리는 즐거움에 초점을 맞춰 10km, 5km, 3km 세 종목으로 진행됩니다. 남녀노소 누구나 자신의 건강 상태와 체력에 맞는 거리를 선택해 금호강변을 달리며 가을 러닝을 즐길 수 있습니다.",
+    "info": {
+      "type": "마라톤",
+      "scale": 13000,
+      "park": null,
+      "souvenir": null,
+      "program": "3km 건강달리기, 5km 건강달리기, 10km 건강달리기",
+      "memo": "3km 2,000명, 5km 4,000명, 10km 7,000명으로 총 13,000명을 모집합니다. 종목별 모집인원 도달 시 접수가 조기 마감됩니다. 배번호는 별도 택배 발송 없이 대회 당일 현장에서 참가 확인 후 랜덤으로 배부합니다. 참가신청서 작성 후 참가비 결제가 확인되어야 최종 참가확정 처리됩니다. 11월 아침 기온을 고려해 참가 전 보온 준비를 권장합니다."
+    },
+    "event": {
+      "startDate": "2026-11-07",
+      "endDate": "2026-11-07",
+      "startTime": "08:00",
+      "endTime": null,
+      "site": null,
+      "schedule": {
+        "08:00": "10km 건강달리기 출발",
+        "08:30": "5km 건강달리기 출발",
+        "09:00": "3km 건강달리기 출발"
+      }
+    },
+    "registration": {
+      "startDate": "2026-09-11",
+      "endDate": "2026-10-25",
+      "startTime": null,
+      "endTime": null,
+      "site": null,
+      "status": null,
+      "price": {
+        "10KM": 50000,
+        "5KM": 35000,
+        "3KM": 30000
+      }
+    },
+    "location": {
+      "country": "한국",
+      "region": "대구",
+      "venue": "동촌유원지 금호강 둔치",
+      "naver": "동촌유원지",
+      "address": "대구광역시 동구 효목동 1314",
+      "latitude": 35.883094,
+      "longitude": 128.6498099
+    },
+    "hosts": {
+      "organizer": "국체협",
+      "manager": "국체협",
+      "sponsor": null,
+      "phone": null,
+      "email": "allrunmarathon@gmail.com",
       "instagram": null
     }
   }
