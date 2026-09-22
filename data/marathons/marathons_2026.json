@@ -19550,5 +19550,821 @@
       "email": "allrunmarathon@gmail.com",
       "instagram": null
     }
+  },
+  {
+    "slug": "seoul-peace-marathon-2026",
+    "name": "제9회 서울평화마라톤대회",
+    "description": "제9회 서울평화마라톤대회는 서울 신정교 하부 육상트랙구장을 출발해 안양천 일대를 달리는 도심 러닝 행사입니다. 10km와 5km 종목으로 진행되며 5km는 걷기로도 참여할 수 있어 기록에 도전하는 러너부터 가족과 함께 가볍게 참여하려는 시민까지 즐길 수 있습니다. 11월의 안양천을 달리며 평화의 의미를 함께 나누는 마라톤대회입니다.",
+    "info": {
+      "type": "마라톤",
+      "scale": null,
+      "park": null,
+      "souvenir": "기능성 티셔츠, 기록증",
+      "program": "10km 달리기, 5km 달리기 및 걷기",
+      "memo": "10km는 09:30, 5km는 09:40에 출발하며 5km에는 걷기 부문이 포함됩니다. 참가 신청 후 참가비 입금이 완료되어야 신청이 완료됩니다. 접수기간 내 취소 시 환불이 가능하며 모집 상황에 따라 접수가 조기 마감될 수 있으므로 공식 홈페이지의 최신 안내를 확인해야 합니다."
+    },
+    "event": {
+      "startDate": "2026-11-15",
+      "endDate": "2026-11-15",
+      "startTime": "09:30",
+      "endTime": null,
+      "site": "https://seoultongilrun.org/",
+      "schedule": {
+        "08:00": "집결",
+        "09:30": "10km 출발",
+        "09:40": "5km 달리기 및 걷기 출발"
+      }
+    },
+    "registration": {
+      "startDate": "2026-07-15",
+      "endDate": "2026-10-16",
+      "startTime": null,
+      "endTime": null,
+      "site": "https://seoultongilrun.org/",
+      "status": null,
+      "price": {
+        "10KM": 50000,
+        "5KM": 35000,
+        "청소년": 25000,
+        "초등학생": 25000
+      }
+    },
+    "location": {
+      "country": "한국",
+      "region": "서울",
+      "venue": "신정교 하부 육상트랙구장",
+      "naver": null,
+      "address": "서울특별시 영등포구 영등포로2길 62",
+      "latitude": 37.5178604,
+      "longitude": 126.8819583
+    },
+    "hosts": {
+      "organizer": "서울자주통일평화연대",
+      "manager": null,
+      "sponsor": null,
+      "phone": "010-3408-8150",
+      "email": "seoul.tongilrun@gmail.com",
+      "instagram": null
+    }
+  },
+  {
+    "slug": "rok-army-trail-running-2026",
+    "name": "2026 ROK Army 트레일러닝",
+    "description": "2026 ROK Army 트레일러닝은 건군 제78주년과 국군의 날을 기념해 경기 용인 육군 특전사 훈련코스에서 열리는 특별한 트레일러닝 대회입니다. 실제 특전사 훈련코스를 따라 10.1마일(16.25km)을 달리며 누적 상승고도 +1,075m의 도전적인 코스를 경험할 수 있습니다. 육군과 국민이 함께 한계를 넘어 달리는 대한민국의 이색 트레일러닝 페스티벌입니다.",
+    "info": {
+      "type": "트레일러닝",
+      "scale": 300,
+      "park": null,
+      "souvenir": null,
+      "program": "10.1Mile(16.25km) 육군 특전사 훈련코스 트레일러닝",
+      "memo": "10.1Mile(16.25km), 누적 상승고도 +1,075m, 제한시간 5시간입니다. 참가자는 접수기간 내 신청자 중 무작위 추첨으로 선정하며 선정 후 별도의 참가확정 신청이 필요합니다. 일반부와 군인부 남녀 각 1~3위를 시상하며 기록은 NET TIME 기준입니다. 필수장비는 트레일러닝화, 스마트폰/GPS, 호루라기, 물통 또는 물팩입니다."
+    },
+    "event": {
+      "startDate": "2026-10-03",
+      "endDate": "2026-10-03",
+      "startTime": "09:00",
+      "endTime": null,
+      "site": "https://www.rokatrail.com/",
+      "schedule": {
+        "08:00": "대회 접수 및 참가자 확인",
+        "09:00": "10.1Mile 트레일러닝 출발"
+      }
+    },
+    "registration": {
+      "startDate": "2026-08-31",
+      "endDate": "2026-09-06",
+      "startTime": null,
+      "endTime": null,
+      "site": "https://www.rokatrail.com/",
+      "status": "접수마감",
+      "price": null
+    },
+    "location": {
+      "country": "한국",
+      "region": "경기",
+      "venue": "한국외국어대학교 글로벌캠퍼스 노천극장",
+      "naver": "한국외국어대학교 글로벌캠퍼스",
+      "address": "경기도 용인시 처인구 모현읍 외대로 81 한국외국어대학교글로벌캠퍼스",
+      "latitude": 37.3363361,
+      "longitude": 127.2656232
+    },
+    "hosts": {
+      "organizer": "대한민국 육군",
+      "manager": "코콤포터노벨리",
+      "sponsor": null,
+      "phone": "02-6925-1509 / 02-6925-1511",
+      "email": "2026rokarmy@gmail.com",
+      "instagram": null
+    }
+  },
+  {
+    "slug": "eworld-83-tower-uphill-run-challenge-2026",
+    "name": "83타워 업힐런 챌린지",
+    "description": "EWORLD 83 TOWER UPHILL RUN CHALLENGE는 대구 이월드와 83타워를 무대로 펼쳐지는 이색 업힐 러닝 대회입니다. 이월드 제1주차장 스타트존에서 출발해 약 1.8km의 오르막 구간을 달린 뒤 대구의 랜드마크인 83타워를 수직으로 오르는 특별한 코스로 진행됩니다. 평범한 로드레이스와는 다른 업힐과 계단 레이스의 짜릿한 도전을 경험할 수 있는 러닝 챌린지입니다.",
+    "info": {
+      "type": "마라톤",
+      "scale": 500,
+      "park": null,
+      "souvenir": "완주 메달, 레이스 키트",
+      "program": "약 1.8km 업힐 러닝, 83타워 계단 챌린지, 사우나, 아이스배스, 근막 스트레칭, 요가, 애프터파티, 럭키드로우",
+      "memo": "이월드 제1주차장 스타트존에서 출발해 약 1.8km 업힐 구간을 달린 후 83타워를 수직으로 오르는 이색 러닝 챌린지입니다. 세부 출발시간, 계단 구간 및 참가자 운영 방식은 공식 참가 안내를 확인해야 합니다."
+    },
+    "event": {
+      "startDate": "2026-10-11",
+      "endDate": "2026-10-11",
+      "startTime": "07:00",
+      "endTime": "11:00",
+      "site": null,
+      "schedule": {
+        "06:00": "START ZONE OPEN 및 참가자 확인·물품보관·워밍업",
+        "07:00": "첫 주자 출발 및 레이스 시작",
+        "09:12": "마지막 주자 출발 예정",
+        "10:00": "애프터파티 및 럭키드로우"
+      }
+    },
+    "registration": {
+      "startDate": "2026-08-30",
+      "endDate": "2026-09-30",
+      "startTime": null,
+      "endTime": null,
+      "site": "https://leisure-web.yanolja.com/leisure/10365567?utm_source=ig&utm_medium=social&utm_content=link_in_bio&fbclid=PAcGRvZgJleHRuA2FlbQIxMQBzcnRjBmFwcF9pZA85MzY2MTk3NDMzOTI0NTkAAafP93J0BBKty6PezFF0amqLGZZuPWheQzoMvWAV1WdPzfLT8Nt84jF3GB9wJQ_aem_r_72kfjFvpULfy8iv_-Ggw",
+      "status": null,
+      "price": {
+        "1.8KM_UPHILL": 55000
+      }
+    },
+    "location": {
+      "country": "한국",
+      "region": "대구",
+      "venue": "이월드 제1주차장 스타트존",
+      "naver": "이월드",
+      "address": "대구광역시 달서구 두류공원로 200",
+      "latitude": 35.8530292,
+      "longitude": 128.5657599
+    },
+    "hosts": {
+      "organizer": "이월드",
+      "manager": null,
+      "sponsor": null,
+      "phone": null,
+      "email": null,
+      "instagram": "83run_official"
+    }
+  },
+  {
+    "slug": "starcall-rollingstone-retro-run-jeungpyeong-2026",
+    "name": "스타콜 x 롤링스톤 레트로 런 IN 증평",
+    "description": "스타콜 x 롤링스톤 레트로 런 IN 증평은 충북 증평 보강천 시민체육공원에서 열리는 레트로 콘셉트의 러닝 행사입니다. 5km와 10km 두 종목으로 진행되며 2026년 11월 14일부터 15일까지 이틀간 러닝과 페스티벌을 함께 즐길 수 있습니다. 기록 경쟁을 넘어 음악과 문화, 러닝이 어우러지는 색다른 분위기 속에서 가을의 증평을 달릴 수 있는 이색 러닝 페스티벌입니다.",
+    "info": {
+      "type": "마라톤",
+      "scale": null,
+      "park": null,
+      "souvenir": "RollingStone Korea 2026 Retro Run 한정 기념 티셔츠, 배번호표, 2026 증평 한정 완주 메달, 러너 간식 키트",
+      "program": "5km, 10km 러닝, 피니시 페스티벌, 브랜드 부스존, 지역 플리마켓, 체험·포토존, 레트로 나이트 콘서트, 경품 추첨, 장학금 전달식",
+      "memo": "2026년 11월 14일부터 15일까지 이틀간 진행됩니다. 집결시간은 08:30, 대회 시작은 09:00으로 안내되어 있습니다. 5인 이상 단체 신청은 별도 카카오톡 채널 문의가 필요합니다."
+    },
+    "event": {
+      "startDate": "2026-11-14",
+      "endDate": "2026-11-15",
+      "startTime": "09:00",
+      "endTime": null,
+      "site": "https://n-runplus.co.kr/31/?idx=6",
+      "schedule": {
+        "08:00": "체크인 및 참가자 확인·물품 준비",
+        "09:00": "5km·10km 레이스 스타트",
+        "11:00": "피니시 페스티벌",
+        "15:00": "체험 프로그램",
+        "18:00": "레트로 나이트 콘서트"
+      }
+    },
+    "registration": {
+      "startDate": "2026-08-10",
+      "endDate": "2026-11-10",
+      "startTime": null,
+      "endTime": null,
+      "site": "https://n-runplus.co.kr/31/?idx=6",
+      "status": null,
+      "price": {
+        "10KM": 79000,
+        "5KM": 69000
+      }
+    },
+    "location": {
+      "country": "한국",
+      "region": "충북",
+      "venue": "보강천 시민체육공원",
+      "naver": "증평 보강천체육공원",
+      "address": "충청북도 증평군 증평읍 송산로1길 19",
+      "latitude": 36.7885383,
+      "longitude": 127.5778451
+    },
+    "hosts": {
+      "organizer": null,
+      "manager": "주식회사 유고",
+      "sponsor": null,
+      "phone": "1666-9975",
+      "email": "ugo.headoffice@gmail.com",
+      "instagram": null
+    }
+  },
+  {
+    "slug": "hantangang-ultra-lake-trail-2026",
+    "name": "2026 한탄강 울트라 레이크 트레일",
+    "description": "2026 한탄강 울트라 레이크 트레일은 경기 포천·연천과 강원 철원 일대의 한탄강 세계지질공원과 주상절리길을 달리는 트레일러닝 대회입니다. 대한민국 최초의 지오트레일을 콘셉트로 52km, 25km, 13km 세 종목이 운영되며 한탄강의 협곡과 주상절리, 하늘다리 등 독특한 지질경관을 경험할 수 있습니다. 선수등록과 지오페어부터 본 레이스까지 이틀간 진행되는 트레일러닝 페스티벌입니다.",
+    "info": {
+      "type": "트레일러닝",
+      "scale": 1200,
+      "park": null,
+      "souvenir": null,
+      "program": "52km, 25km, 13km 트레일러닝 및 지오페어",
+      "memo": "52km 400명, 25km 500명, 13km 300명으로 총 1,200명 규모입니다. 52km 제한시간은 12시간, 25km는 5시간 30분이며 13km는 제한시간이 없습니다. 52km 참가자는 10월 17일 선수등록과 필수장비 검사를 완료해야 하며 대회 당일 메인 행사장에서 공식 셔틀버스를 이용해 연천 재인폭포 출발지로 이동해야 합니다. 참가권 양도 및 대리참가는 불가합니다."
+    },
+    "event": {
+      "startDate": "2026-10-17",
+      "endDate": "2026-10-18",
+      "startTime": "06:00",
+      "endTime": null,
+      "site": "https://ultralaketrail.com/",
+      "schedule": {
+        "04:30": "52km 참가자 메인 행사장 집결",
+        "05:00": "52km 출발지 이동 셔틀버스 출발",
+        "06:00": "52km 레이스 출발",
+        "08:00": "25km·13km 참가자 집결",
+        "09:00": "25km·13km 레이스 출발"
+      }
+    },
+    "registration": {
+      "startDate": null,
+      "endDate": null,
+      "startTime": null,
+      "endTime": null,
+      "site": "https://ultralaketrail.com/",
+      "status": "접수중",
+      "price": {
+        "52KM": 160000,
+        "25KM": 100000,
+        "13KM": 60000
+      }
+    },
+    "location": {
+      "country": "한국",
+      "region": "경기",
+      "venue": "한탄강 세계지질공원 내 다목적광장",
+      "naver": null,
+      "address": "경기 포천시 영북면 대회산리 410-2",
+      "latitude": 38.0796935,
+      "longitude": 127.2186785
+    },
+    "hosts": {
+      "organizer": "동아일보",
+      "manager": "동아일보",
+      "sponsor": null,
+      "phone": "02-3012-0187",
+      "email": "inthetrail.official@gmail.com",
+      "instagram": null
+    }
+  },
+  {
+    "slug": "jebudo-sea-road-festival-2026",
+    "name": "2026 제부도 바다 런",
+    "description": "제부도 씨로드 페스티벌 2026은 경기 화성 제부도의 바닷길과 황금해안길을 달리는 해양문화 러닝 페스티벌입니다. 제부도 섬내를 한 바퀴 달리는 5km와 바닷길 왕복 구간에 섬 일주를 더한 10km 코스로 진행됩니다. 기록 경쟁뿐 아니라 친구, 연인, 가족과 함께 바다 풍경을 즐기며 달릴 수 있고, 러닝 후 비치바와 해변 클럽파티까지 이어지는 특별한 제부도 러닝 축제입니다.",
+    "info": {
+      "type": "마라톤",
+      "scale": null,
+      "park": "자가용 이용 시 전곡항 입구 대송지구 임시주차장 이용 후 서해랑 제부도해상케이블카로 이동",
+      "souvenir": "공식 기념 티셔츠, 완주 메달, 에너지젤, 제부도 지역상품권 1만원 상당, 서해랑 제부도해상케이블카 왕복 이용권, 협찬사 할인권 및 혜택",
+      "program": "5km 섬내 일주, 10km 바닷길 왕복·섬 일주, 비치바, 해변 클럽파티",
+      "memo": "5km는 만 8세 이상, 10km는 만 14세 이상 참가할 수 있습니다. 참가비 입금 확인 후 최종 참가가 확정되며 참가권 양도·판매 및 대리참가는 불가합니다. 참가자는 07:30까지 행사장에 도착해야 합니다. 배번호·스마트칩·안내책자는 대회 전 택배 배송되며 기념 티셔츠·완주 메달·에너지젤·지역상품권은 현장에서 지급됩니다. 배번호표가 서해랑 제부도해상케이블카 탑승권을 대신합니다."
+    },
+    "event": {
+      "startDate": "2026-10-04",
+      "endDate": "2026-10-04",
+      "startTime": "08:30",
+      "endTime": "10:30",
+      "site": "https://www.jebudorun.com/",
+      "schedule": {
+        "07:30": "참가자 도착 및 출발 준비",
+        "08:30": "5km·10km 공식 러닝 시작"
+      }
+    },
+    "registration": {
+      "startDate": "2026-08-16",
+      "endDate": "2026-09-16",
+      "startTime": null,
+      "endTime": null,
+      "site": "https://www.jebudorun.com/",
+      "status": null,
+      "price": {
+        "10KM": 60000,
+        "5KM": 60000
+      }
+    },
+    "location": {
+      "country": "한국",
+      "region": "경기",
+      "venue": "제부도 바닷길 일원",
+      "naver": "제부도",
+      "address": "경기 화성시 만세구 서신면 송교리 377-40",
+      "latitude": 37.173035,
+      "longitude": 126.626088
+    },
+    "hosts": {
+      "organizer": "콜스에듀케이션, 플레이위드",
+      "manager": "제부도 씨로드 페스티벌 사무국",
+      "sponsor": null,
+      "phone": null,
+      "email": "jebudorun@awesomecomm.co.kr",
+      "instagram": null
+    }
+  },
+  {
+    "slug": "seongnam-ymca-marathon-2026",
+    "name": "제2회 성남 YMCA 마라톤",
+    "description": "제2회 성남 YMCA 마라톤은 경기 성남 물빛정원 탄천변에서 시민과 함께 달리는 지역 생활체육 마라톤대회입니다. 10km와 5km 두 종목으로 진행되며 청소년, 성인, 가족 등 성남시민 누구나 참여할 수 있습니다. 오리역 낭만축제와 함께 열려 러닝뿐 아니라 먹거리와 공연까지 즐기며 건강과 친목을 함께 나눌 수 있는 가을 러닝 행사입니다.",
+    "info": {
+      "type": "마라톤",
+      "scale": null,
+      "park": null,
+      "souvenir": null,
+      "program": "10km, 5km 마라톤 및 오리역 낭만축제 연계 프로그램",
+      "memo": "성남시민과 청소년, 성인, 가족이 함께 참여하는 공동체 중심의 마라톤대회입니다. 오리역 낭만축제와 연계해 건강, 먹거리, 공연 등을 함께 즐길 수 있습니다. 참가 신청은 선착순으로 마감되며 최종 참가자는 2026년 10월 8일 개별 안내 예정입니다."
+    },
+    "event": {
+      "startDate": "2026-10-31",
+      "endDate": "2026-10-31",
+      "startTime": "09:00",
+      "endTime": "11:00",
+      "site": "https://www.snymca.org/?c=user&mcd=sub05_01&me=bbs_detail&idx=17408",
+      "schedule": {
+        "08:00": "참가자 집결",
+        "09:00": "마라톤 대회 시작",
+        "11:00": "대회 종료 예정"
+      }
+    },
+    "registration": {
+      "startDate": "2026-09-14",
+      "endDate": "2026-10-06",
+      "startTime": "10:00",
+      "endTime": null,
+      "site": "https://www.snymca.org/?c=user&mcd=sub05_01&me=bbs_detail&idx=17408",
+      "status": "접수중",
+      "price": {
+        "10KM": 40000,
+        "5KM": 30000
+      }
+    },
+    "location": {
+      "country": "한국",
+      "region": "경기",
+      "venue": "물빛정원 탄천변",
+      "naver": "성남 물빛정원",
+      "address": "경기도 성남시 분당구 탄천상로 102",
+      "latitude": 37.340486,
+      "longitude": 127.112757
+    },
+    "hosts": {
+      "organizer": "성남YMCA",
+      "manager": "성남YMCA 체육사업위원회, 대한트레일런협회",
+      "sponsor": "성남시 육상연맹, 바른세상병원, 오리역 상인연합회, 디자인연구소 퍼즐",
+      "phone": "031-715-6016",
+      "email": null,
+      "instagram": null
+    }
+  },
+  {
+    "slug": "good-neighbors-race-gwangju-2026",
+    "name": "굿네이버스 레이스 with 띵크어스 - 광주 레이스",
+    "description": "2026 굿네이버스 레이스 with 띵크어스 광주 레이스는 광주 광산구 황룡친수공원에서 열리는 기부 러닝대회입니다. 5km 단일 코스로 총 1,500명의 참가자가 함께하며, 러닝을 통해 기후위기 대응과 취약계층을 위한 좋은 변화에 동참하는 의미 있는 행사입니다. 기록 경쟁에 대한 부담을 줄이고 가족과 친구, 초보 러너도 함께 참여하기 좋은 가을 기부 러닝 페스티벌입니다.",
+    "info": {
+      "type": "마라톤",
+      "scale": 1500,
+      "park": null,
+      "souvenir": "티셔츠, 배번호표, 완주메달, 스티커",
+      "program": "5km 기부 러닝",
+      "memo": "굿네이버스가 진행하는 기후위기 대응 기부 러닝대회입니다. 광주 레이스는 5km 단일 종목으로 총 1,500명이 참가하며, 황룡친수공원 일원에서 진행됩니다."
+    },
+    "event": {
+      "startDate": "2026-10-17",
+      "endDate": "2026-10-17",
+      "startTime": "08:00",
+      "endTime": null,
+      "site": "https://gnrace.kr/",
+      "schedule": null
+    },
+    "registration": {
+      "startDate": "2026-09-07",
+      "endDate": "2026-09-30",
+      "startTime": null,
+      "endTime": null,
+      "site": "https://gnrace.kr/category/참가신청/28/",
+      "status": null,
+      "price": {
+        "5KM": 30000
+      }
+    },
+    "location": {
+      "country": "한국",
+      "region": "광주",
+      "venue": "황룡친수공원",
+      "naver": null,
+      "address": "광주 광산구 선암동 241-31",
+      "latitude": 35.143959,
+      "longitude": 126.7743548
+    },
+    "hosts": {
+      "organizer": "굿네이버스 인터내셔날",
+      "manager": null,
+      "sponsor": null,
+      "phone": "070-4350-5635",
+      "email": null,
+      "instagram": null
+    }
+  },
+  {
+    "slug": "gwangju-seochang-silver-grass-sunset-marathon-2026",
+    "name": "2026 광주서창 억새노을마라톤",
+    "description": "2026 광주서창 억새노을마라톤은 광주 서구 상무시민공원에서 출발해 영산강변을 따라 서창억새축제장까지 달리는 선셋런입니다. 제11회 광주서창억새축제와 연계해 처음 개최되며, 은빛 억새와 가을 노을을 감상하며 달리는 10km와 5km 코스로 진행됩니다. 결승선이 축제장으로 이어져 러닝과 가을 축제를 함께 즐길 수 있는 특별한 마라톤입니다.",
+    "info": {
+      "type": "마라톤",
+      "scale": 2500,
+      "park": null,
+      "souvenir": "완주메달, 기록증, 간식, 온누리상품권, 10km 참가자 머리띠",
+      "program": "10km, 5km 선셋런 및 광주서창억새축제 연계 프로그램",
+      "memo": "해 질 무렵 영산강변의 억새와 노을을 배경으로 달리는 선셋런입니다. 상무시민공원에서 출발해 극락교를 지나 서창억새축제장으로 이어지는 편도 코스입니다. 10km 1,500명, 5km 1,000명으로 총 2,500명을 선착순 모집합니다. 기록칩을 이용해 개인 기록을 측정하며 시상 순위는 건타임을 기준으로 결정합니다. 결승점에서 출발지로 돌아가는 셔틀버스가 운영됩니다."
+    },
+    "event": {
+      "startDate": "2026-10-17",
+      "endDate": "2026-10-17",
+      "startTime": "16:00",
+      "endTime": null,
+      "site": "http://www.xn--o80b37in2b02lesgqqcj12a.kr/",
+      "schedule": null
+    },
+    "registration": {
+      "startDate": "2026-09-09",
+      "endDate": "2026-09-28",
+      "startTime": "10:00",
+      "endTime": "14:00",
+      "site": "http://www.xn--o80b37in2b02lesgqqcj12a.kr/",
+      "status": null,
+      "price": {
+        "10KM": 30000,
+        "5KM": 20000
+      }
+    },
+    "location": {
+      "country": "한국",
+      "region": "광주",
+      "venue": "상무시민공원",
+      "naver": null,
+      "address": "광주 서구 상무공원로 101",
+      "latitude": 35.1533864,
+      "longitude": 126.8410853
+    },
+    "hosts": {
+      "organizer": "광주광역시 서구",
+      "manager": null,
+      "sponsor": null,
+      "phone": "061-375-1201",
+      "email": null,
+      "instagram": null
+    }
+  },
+  {
+    "slug": "one-more-run-2026",
+    "name": "2026 원 모어 런",
+    "description": "2026 ONE MORE RUN은 인천 영종도 씨사이드파크에서 차가운 겨울 바다를 따라 달리는 연말 마라톤대회입니다. 하프, 10km, 5km 세 종목으로 진행되며 기록에 도전하는 러너부터 올해가 가기 전 새로운 완주를 만들고 싶은 참가자까지 함께할 수 있습니다. '올해, 한 번만 더 달리자!'라는 콘셉트로 2026년의 마지막 러닝 추억을 만드는 특별한 겨울 레이스입니다.",
+    "info": {
+      "type": "마라톤",
+      "scale": null,
+      "park": null,
+      "souvenir": "기념 티셔츠, 배번호, 기록칩, 완주메달, 온라인 기록증",
+      "program": "하프, 10km, 5km 마라톤",
+      "memo": "전 종목 참가비는 50,000원이며 참가 신청은 결제 완료 기준으로 확정됩니다. 참가권 양도·양수 및 판매는 불가합니다. 전 참가자에게 기록칩이 제공되고 완주자에게 완주메달과 온라인 기록증이 제공됩니다. 코스 지도와 기념 티셔츠 상세 디자인은 추후 공개 예정입니다. 참가 취소 및 환불은 2026년 10월 31일까지 가능합니다."
+    },
+    "event": {
+      "startDate": "2026-12-12",
+      "endDate": "2026-12-12",
+      "startTime": "09:00",
+      "endTime": null,
+      "site": "https://omrun.co.kr/",
+      "schedule": {
+        "08:00": "참가자 집결",
+        "09:00": "대회 출발"
+      }
+    },
+    "registration": {
+      "startDate": "2026-09-14",
+      "endDate": null,
+      "startTime": "10:00",
+      "endTime": null,
+      "site": "https://omrun.co.kr/",
+      "status": "접수중",
+      "price": {
+        "HALF": 50000,
+        "10KM": 50000,
+        "5KM": 50000
+      }
+    },
+    "location": {
+      "country": "한국",
+      "region": "인천",
+      "venue": "영종도 씨사이드파크",
+      "naver": "영종씨사이드파크",
+      "address": "인천광역시 영종구 하늘달빛로2번길 6 씨사이드파크",
+      "latitude": 37.481753,
+      "longitude": 126.5658118
+    },
+    "hosts": {
+      "organizer": "새마펄스",
+      "manager": "새마펄스",
+      "sponsor": null,
+      "phone": "1811-7978",
+      "email": "saema-run@naver.com",
+      "instagram": null
+    }
+  },
+  {
+    "slug": "seoul-bbangrun-2026",
+    "name": "서울 빵빵런 2026",
+    "description": "서울 빵빵런 2026은 서울 뚝섬한강공원에서 달리기와 빵을 함께 즐기는 이색 러닝 페스티벌입니다. 10km와 5km 두 종목으로 진행되며 완주 후에는 서울의 인기 베이커리에서 준비한 다양한 빵을 만나볼 수 있습니다. 올해는 레트로 콘셉트로 돌아와 늦가을 한강을 달리고 완주메달과 빵가방, 서울 Pick 빵 4종까지 즐기는 특별한 러닝 경험을 선사합니다.",
+    "info": {
+      "type": "마라톤",
+      "scale": null,
+      "park": null,
+      "souvenir": "공식 기능성 티셔츠, 배번호표 및 기록칩, 완주메달, 빵가방, 서울 Pick 빵 4종",
+      "program": "10km, 5km 러닝 및 서울 인기 베이커리 빵 체험",
+      "memo": "10km와 5km 모두 넷타임 방식으로 기록을 측정하며 제한시간은 10km 100분, 5km 60분입니다. 전 연령 참가 가능하며 미성년자는 반드시 보호자와 함께 참가해야 합니다. 미취학 아동은 무료 동반이 가능하지만 별도 기념품은 제공되지 않습니다. 유모차 및 반려견 동반 참가는 불가합니다. 티셔츠와 배번호표·기록칩은 11월 3일부터 순차 배송되며 나머지 기념품은 대회 당일 현장에서 제공합니다."
+    },
+    "event": {
+      "startDate": "2026-11-14",
+      "endDate": "2026-11-14",
+      "startTime": null,
+      "endTime": null,
+      "site": "https://seoul.bbangrun.com/",
+      "schedule": {
+        "07:30": "물품 보관소 운영 시작",
+        "08:30": "10K A그룹 출발",
+        "08:35": "10K B그룹 출발",
+        "08:40": "10K C그룹 출발",
+        "09:00": "빵·기념품 수령소 운영 시작",
+        "09:30": "5K A그룹 출발",
+        "09:35": "5K B그룹 출발",
+        "09:40": "5K C그룹 출발",
+        "10:30": "빵빵룩 어워즈"
+      }
+    },
+    "registration": {
+      "startDate": "2026-09-21",
+      "endDate": null,
+      "startTime": "15:00",
+      "endTime": null,
+      "site": "https://seoul.bbangrun.com/registration",
+      "status": null,
+      "price": {
+        "10KM": 59000,
+        "5KM": 59000
+      }
+    },
+    "location": {
+      "country": "한국",
+      "region": "서울",
+      "venue": "뚝섬한강공원 수변무대",
+      "naver": "뚝섬한강공원 수변무대",
+      "address": "서울특별시 광진구 자양동 427-6",
+      "latitude": 37.5288978,
+      "longitude": 127.0692186
+    },
+    "hosts": {
+      "organizer": "1986 프로덕션",
+      "manager": "1986 프로덕션",
+      "sponsor": null,
+      "phone": null,
+      "email": "1986@1986.co.kr",
+      "instagram": null
+    }
+  },
+  {
+    "slug": "gunsan-mayors-cup-short-marathon-2026",
+    "name": "2026 군산시장배 단축마라톤대회",
+    "description": "2026 군산시장배 단축마라톤대회는 전북 군산 새만금방조제 해넘이휴게소 하부도로에서 펼쳐지는 가을 러닝대회입니다. 10km와 5km 종목을 일반부와 학생부로 나누어 운영하며, 전북지역 거주 시민이 함께 참여할 수 있습니다. 새만금의 탁 트인 풍경을 따라 달리고 연령별 입상자에게 상장과 지역 특산품도 제공하는 지역 생활체육 마라톤입니다.",
+    "info": {
+      "type": "마라톤",
+      "scale": null,
+      "park": "null",
+      "souvenir": null,
+      "program": "10km, 5km 일반부·학생부 단축마라톤",
+      "memo": "대한체육회에 선수 등록하지 않은 신체 건강한 전북지역 거주 시민을 대상으로 합니다. 유소년부터 노년부까지 연령별로 구분해 진행하며 1위부터 6위까지 상장과 지역 특산품을 시상합니다. 기록칩은 사용하지 않으며 개인 기록 확인 서비스도 제공되지 않습니다. 배번호는 대회 당일 새만금 해넘이휴게소에서 지급합니다."
+    },
+    "event": {
+      "startDate": "2026-10-25",
+      "endDate": "2026-10-25",
+      "startTime": null,
+      "endTime": null,
+      "site": null,
+      "schedule": null
+    },
+    "registration": {
+      "startDate": "2026-09-28",
+      "endDate": "2026-10-08",
+      "startTime": null,
+      "endTime": "18:00",
+      "site": "https://form.naver.com/response/I9jCxUVxPDF",
+      "status": null,
+      "price": {
+        "10KM": 25000,
+        "5KM": 25000
+      }
+    },
+    "location": {
+      "country": "한국",
+      "region": "전북",
+      "venue": "새만금방조제 해넘이휴게소 하부도로",
+      "naver": "새만금해넘이휴게소",
+      "address": "전북특별자치도 군산시 새만금로 2478",
+      "latitude": 35.8919692,
+      "longitude": 126.5162903
+    },
+    "hosts": {
+      "organizer": "군산시육상연맹",
+      "manager": null,
+      "sponsor": null,
+      "phone": "010-9050-3890",
+      "email": null,
+      "instagram": "gunsan_marathon"
+    }
+  },
+  {
+    "slug": "gimje-trail-race-2026",
+    "name": "제1회 김제트레일레이스",
+    "description": "제1회 김제트레일레이스는 전북 김제 금구면 카페선암리에서 출발해 김제의 산과 트레일 코스를 달리는 트레일러닝 대회입니다. 40km 스피드런, 30km 중급코스, 20km 입문코스와 비경쟁 5km 건강걷기까지 다양한 난이도로 구성되어 있습니다. 장거리 트레일러너부터 처음 산길에 도전하는 참가자까지 자신의 수준에 맞는 코스를 선택해 즐길 수 있는 김제 지역 트레일 행사입니다.",
+    "info": {
+      "type": "트레일러닝",
+      "scale": 100,
+      "park": "카페선암리 주차장",
+      "souvenir": null,
+      "program": "40km 스피드런, 30km 중급코스, 20km 입문코스, 5km 건강걷기",
+      "memo": "대회 전날인 10월 10일 전야제 행사가 진행됩니다. 40km는 CP 3개·제한시간 9시간, 30km는 CP 2개·제한시간 7시간, 20km는 CP 1개·제한시간 5시간입니다. 5km 건강걷기는 비경쟁 종목으로 미운영 WP 1개가 안내되어 있으며 제한시간은 3시간입니다. 순위 시상은 5km를 제외하고 남녀 각각 1~3위를 대상으로 진행됩니다."
+    },
+    "event": {
+      "startDate": "2026-10-10",
+      "endDate": "2026-10-11",
+      "startTime": "07:00",
+      "endTime": null,
+      "site": "https://srtrail.kr/58",
+      "schedule": {
+        "07:00": "40km 스피드런 출발",
+        "07:30": "30km 중급코스 출발",
+        "08:00": "20km 입문코스 출발",
+        "09:00": "5km 건강걷기 출발"
+      }
+    },
+    "registration": {
+      "startDate": "2026-08-10",
+      "endDate": "2026-10-09",
+      "startTime": null,
+      "endTime": null,
+      "site": "https://srtrail.kr/58",
+      "status": null,
+      "price": {
+        "40KM": 120000,
+        "30KM": 100000,
+        "20KM": 80000,
+        "5KM": 50000
+      }
+    },
+    "location": {
+      "country": "한국",
+      "region": "전북",
+      "venue": "김제 카페선암리",
+      "naver": "카페선암리",
+      "address": "전북특별자치도 김제시 금구면 선암5길 109",
+      "latitude": 35.7550832,
+      "longitude": 127.0304486
+    },
+    "hosts": {
+      "organizer": "에스알트레일",
+      "manager": "에스알트레일",
+      "sponsor": null,
+      "phone": "010-5385-5625",
+      "email": "npooh79@naver.com",
+      "instagram": "srtrail_kr"
+    }
+  },
+  {
+    "slug": "daejeon-trail-solo-run-2026",
+    "name": "제4회 대전트레일 슬로우런",
+    "description": "제4회 대전트레일 슬로우런은 대전 장동만남공원을 출발해 약 20km의 산길을 달리는 비경쟁 트레일러닝 대회입니다. 총 100명의 참가자가 함께하며 제한시간은 6시간으로 운영됩니다. 순위 경쟁이나 시상 없이 자신의 페이스로 대전의 트레일을 즐기는 행사로, 완주메달과 배번, 네다오 비니·넥게이터 등 다양한 기념품도 제공됩니다.",
+    "info": {
+      "type": "트레일러닝",
+      "scale": 100,
+      "park": "장동산림욕장 주차장 및 도로변 주차라인 이용",
+      "souvenir": "완주메달, 배번, 네다오 비니&넥게이터, 뉴트리션, 완주 간식",
+      "program": "20km 비경쟁 트레일러닝",
+      "memo": "20km 단일 종목으로 제한시간은 6시간이며 비경쟁 방식으로 진행되어 순위 시상은 없습니다. CP는 1개소가 운영되며 12시에 철수합니다. 필수 준비물은 트레일러닝화(등산화), 개인물병, 휴대폰, 서바이벌블랭킷, 개인컵, 카드, 현금입니다. 짐은 운영본부에 보관할 수 있습니다. 응급환자 발생 또는 천재지변·재난상황·국가적 비상사태 발생 시 행사가 중단되거나 취소될 수 있습니다."
+    },
+    "event": {
+      "startDate": "2026-11-14",
+      "endDate": "2026-11-14",
+      "startTime": "09:00",
+      "endTime": "15:00",
+      "site": "https://srtrail.kr/58",
+      "schedule": {
+        "09:00": "20km 대전트레일 슬로우런 출발",
+        "12:00": "CP 운영 종료",
+        "15:00": "제한시간 종료"
+      }
+    },
+    "registration": {
+      "startDate": "2026-09-14",
+      "endDate": "2026-11-13",
+      "startTime": null,
+      "endTime": null,
+      "site": "https://srtrail.kr/58",
+      "status": null,
+      "price": {
+        "20KM": 99000
+      },
+      "refund": {
+        "endDate": "2026-09-30",
+        "policy": "8월 31일까지 전액 환불, 9월 1일~9월 30일 참가비 50% 환불, 10월 1일부터 환불 불가"
+      }
+    },
+    "location": {
+      "country": "한국",
+      "region": "대전",
+      "venue": "장동만남공원",
+      "naver": null,
+      "address": "대전광역시 대덕구 장동 353",
+      "latitude": 36.4131759,
+      "longitude": 127.4386285
+    },
+    "hosts": {
+      "organizer": "SRTrail",
+      "manager": "에스알트레일",
+      "sponsor": "OSK, 힐링진, 꼬숩네, 아람, 카페키노겐",
+      "phone": null,
+      "email": null,
+      "instagram": null
+    }
+  },
+  {
+    "slug": "chungbuk-public-interest-run-2026",
+    "name": "2026 레디, 셋, 공익런",
+    "description": "2026 충북공익활동페스티벌 레디, 셋, 공익런은 청주 무심천체육공원에서 달리기와 공익활동을 함께 즐기는 시민 참여형 마라톤입니다. 무심천을 따라 달리는 5km와 10km 코스로 진행되며 선착순 1,000명을 모집합니다. 완주메달과 모바일 완주증은 물론 공익 OX퀴즈, 체험부스, 가챠 이벤트 등 다양한 프로그램을 통해 건강한 러닝을 지역사회를 위한 나눔과 연결하는 특별한 공익런입니다.",
+    "info": {
+      "type": "마라톤",
+      "scale": 1000,
+      "park": "전용 주차장이 없어 대중교통 이용을 권장합니다. 무심천 하상공영주차장 등 주변 주차장을 이용할 수 있으나 행사 당일 혼잡할 수 있습니다.",
+      "souvenir": "완주메달, 공익가치 선언 배번호, 간식 및 음료, 모바일 완주증, 러닝 플립 벨트",
+      "program": "5km, 10km 공익런, 공익활동 홍보·체험부스, 완주 기념 포토존, 공익 OX퀴즈, 두근두근 캡슐뽑기, 스포츠 테이핑, 리커버리 스포츠 마사지",
+      "memo": "공익 목적의 마라톤으로 별도의 순위 시상은 없습니다. 건강한 달리기와 공익활동에 관심 있는 누구나 참여할 수 있으며 선착순 1,000명을 모집합니다. 10km 종목은 중학생 이상 참가할 수 있습니다. 배번호와 기록칩은 대회 당일 현장에서 배부합니다. 20인 이상 단체 참가 시 단체부스가 제공되며 선착순 5팀에서 3팀으로 변경되었습니다."
+    },
+    "event": {
+      "startDate": "2026-11-07",
+      "endDate": "2026-11-07",
+      "startTime": "09:00",
+      "endTime": "12:00",
+      "site": "http://www.cbngo.org/main.php",
+      "schedule": {
+        "07:30": "참가자 접수 및 안내",
+        "08:20": "개막식 및 준비운동",
+        "09:00": "10km·5km 그룹별 순차 출발",
+        "09:30": "체험프로그램, 가챠 이벤트, 공익 OX퀴즈 프로그램 운영"
+      }
+    },
+    "registration": {
+      "startDate": "2026-09-06",
+      "endDate": "2026-10-06",
+      "startTime": null,
+      "endTime": "23:59",
+      "site": "https://forms.gle/apRSNiLvtudFPRaJ8",
+      "status": null,
+      "price": {
+        "10KM": 25000,
+        "5KM": 25000
+      },
+      "refund": {
+        "endDate": "2026-10-06",
+        "policy": "접수기간 내 취소 시 참가비 전액 환불이 가능하며, 접수 마감 이후에는 환불이 불가합니다. 천재지변 등 불가항력적인 사유로 대회가 취소되는 경우에도 참가비 환불이 어려우며 기념품이 제공됩니다."
+      }
+    },
+    "location": {
+      "country": "한국",
+      "region": "충북",
+      "venue": "청주무심천체육공원 롤러스케이트장",
+      "naver": "무심천체육공원",
+      "address": "충청북도 청주시 서원구 무심천자전거길 550",
+      "latitude": 36.6398661,
+      "longitude": 127.4832223
+    },
+    "hosts": {
+      "organizer": "충북시민사회지원센터",
+      "manager": "충북시민사회단체연대회의",
+      "sponsor": "충청북도, 충북시민재단",
+      "phone": "043-273-0321",
+      "email": "cbngocenter@hanmail.net",
+      "instagram": "cbcsc_"
+    }
   }
 ]

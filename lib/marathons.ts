@@ -158,6 +158,10 @@ export type Marathon = {
     status: string | null;
     price: Record<string, number | string | null> | null;
     additional?: AdditionalRegistration | AdditionalRegistration[] | null;
+    refund?: {
+      endDate: string | null;
+      policy: string | null;
+    } | null;
   };
   location: {
     country: string | null;

@@ -29,11 +29,14 @@ export default function DetailRegistration({
         : []
   ).filter((registration) => Object.values(registration).some(Boolean));
   const hasAdditionalRegistrationInfo = additionalRegistrations.length > 0;
+  const refund = marathon.registration.refund;
+  const hasRefundInfo = Boolean(refund?.endDate || refund?.policy);
   const hasRegistrationInfo = Boolean(
     marathon.registration.startDate ||
       marathon.registration.endDate ||
       prices.length > 0 ||
-      hasAdditionalRegistrationInfo,
+      hasAdditionalRegistrationInfo ||
+      hasRefundInfo,
   );
   const registrationStatus = getRegistrationStatus(marathon);
 
@@ -241,6 +244,22 @@ export default function DetailRegistration({
                   )}
                 </div>
               ))}
+
+              {hasRefundInfo && refund && (
+                <div className="mt-6 rounded-xl border bg-muted/20 px-4 py-3 text-sm text-muted-foreground">
+                  <h3 className="font-medium text-foreground">환불 안내</h3>
+                  {refund.endDate && (
+                    <p className="mt-1">
+                      환불 신청 마감 : {formatMarathonDate(refund.endDate)}
+                    </p>
+                  )}
+                  {refund.policy && (
+                    <p className="mt-1 break-keep leading-5">
+                      {refund.policy}
+                    </p>
+                  )}
+                </div>
+              )}
             </>
           ) : (
             <div className="flex min-h-24 flex-1 items-center justify-center rounded-xl border bg-muted/20 px-4 text-center text-sm text-muted-foreground">
