@@ -19837,8 +19837,8 @@
       "memo": "5km는 만 8세 이상, 10km는 만 14세 이상 참가할 수 있습니다. 참가비 입금 확인 후 최종 참가가 확정되며 참가권 양도·판매 및 대리참가는 불가합니다. 참가자는 07:30까지 행사장에 도착해야 합니다. 배번호·스마트칩·안내책자는 대회 전 택배 배송되며 기념 티셔츠·완주 메달·에너지젤·지역상품권은 현장에서 지급됩니다. 배번호표가 서해랑 제부도해상케이블카 탑승권을 대신합니다."
     },
     "event": {
-      "startDate": "2026-10-04",
-      "endDate": "2026-10-04",
+      "startDate": "2026-11-14",
+      "endDate": "2026-11-14",
       "startTime": "08:30",
       "endTime": "10:30",
       "site": "https://www.jebudorun.com/",
@@ -19849,7 +19849,7 @@
     },
     "registration": {
       "startDate": "2026-08-16",
-      "endDate": "2026-09-16",
+      "endDate": "2026-11-03",
       "startTime": null,
       "endTime": null,
       "site": "https://www.jebudorun.com/",
@@ -20365,6 +20365,186 @@
       "phone": "043-273-0321",
       "email": "cbngocenter@hanmail.net",
       "instagram": "cbcsc_"
+    }
+  },
+  {
+    "slug": "adidas-dobok-run-with-kta-2026",
+    "name": "2026 아디다스 도복런 with KTA",
+    "description": "2026 아디다스 도복런 with KTA는 경기도 하남 미사경정공원에서 열리는 태권도 가족 러닝 페스티벌입니다. 태권도 유급자와 유단·품자, 가족이 함께 참여해 도복을 입고 달리는 이색 마라톤으로 5km와 10km 두 종목이 운영됩니다. 아디다스 컴뱃 티셔츠와 완주메달 등 참가 기념품도 제공되며, 태권도와 러닝을 하나의 축제로 즐길 수 있는 특별한 대회입니다.",
+    "info": {
+      "type": "마라톤",
+      "scale": 5000,
+      "park": "미사경정공원 주차장 이용가능(유료)",
+      "souvenir": "아디다스 컴뱃 티셔츠, 완주메달, 배번호, 온라인 기록증, 완주 간식",
+      "program": "5km, 10km 도복런",
+      "memo": "태권도 유급자 및 유단·품자와 가족을 대상으로 하는 태권도 가족 러닝 행사입니다. 선착순 5,000명 모집으로 정원 도달 시 조기 마감될 수 있습니다. 5km는 미사경정공원 코스를 1바퀴, 10km는 2바퀴 달립니다. 출발은 그룹별로 순차 진행됩니다."
+    },
+    "event": {
+      "startDate": "2026-11-01",
+      "endDate": "2026-11-01",
+      "startTime": "08:00",
+      "endTime": null,
+      "site": "https://dobokrun.com/",
+      "schedule": {
+        "08:00": "10km A조 출발",
+        "08:05": "10km B조 출발",
+        "08:10": "10km C조 출발",
+        "08:15": "5km A조 출발",
+        "08:20": "5km B조 출발",
+        "08:25": "5km C조 출발"
+      }
+    },
+    "registration": {
+      "startDate": "2026-09-16",
+      "endDate": "2026-10-18",
+      "startTime": null,
+      "endTime": null,
+      "site": "https://dobokrun.com/",
+      "status": "접수중",
+      "price": {
+        "10KM": 50000,
+        "5KM": 50000
+      },
+      "refund": null
+    },
+    "location": {
+      "country": "한국",
+      "region": "경기",
+      "venue": "하남 미사 경정공원",
+      "naver": "미사경정공원",
+      "address": "경기 하남시 미사동 15",
+      "latitude": 37.5593314,
+      "longitude": 127.2099161
+    },
+    "hosts": {
+      "organizer": "제우인터내셔날",
+      "manager": "ADIDAS COMBAT SPORTS, 대한태권도협회",
+      "sponsor": "대한태권도협회, IBK기업은행",
+      "phone": null,
+      "email": null,
+      "instagram": null
+    }
+  },
+  {
+    "slug": "seoul-life-marathon-2026-fall",
+    "name": "2026 서울 라이프마라톤",
+    "description": "2026 서울 라이프마라톤은 서울 상암 평화의공원 평화광장에서 전 세대가 함께 경쟁하고 즐기는 러닝 페스티벌입니다. HALF, 10K, 5K 세 종목으로 진행되며 모든 코스에 기록칩을 제공해 넷타임으로 기록을 측정합니다. 세대별 시상과 통합 우승 시상을 비롯해 완주 후 잔치국수와 찹쌀꽈배기, 무료 메달 각인, 포토존 등 달리는 즐거움과 축제 분위기를 함께 경험할 수 있는 마라톤입니다.",
+    "info": {
+      "type": "마라톤",
+      "scale": null,
+      "park": "월드컵공원 주차장 이용 가능(유료)",
+      "souvenir": "공식 티셔츠, 배번호표 및 기록칩, 완주메달, 완주 간식",
+      "program": "HALF, 10K, 5K, 세대별 시상식, 포토존, 국수집, 무료 메달 각인",
+      "memo": "HALF, 10K, 5K 모든 코스에 기록칩이 제공되며 넷타임 방식으로 기록을 측정합니다. 제한시간은 HALF 3시간, 10K 1시간 30분, 5K 1시간입니다. HALF는 미성년자 참가가 불가하며, 10K와 5K는 취학 아동 이상 미성년자도 보호자 동반 시 참가할 수 있습니다. 유모차, 휠체어, 반려견 동반은 제한됩니다. HALF와 10K는 세대별 남녀 시상 및 전 세대 통합 우승 시상이 진행됩니다."
+    },
+    "event": {
+      "startDate": "2026-11-21",
+      "endDate": "2026-11-21",
+      "startTime": "07:50",
+      "endTime": "12:00",
+      "site": "https://seoul.lifemarathon.co.kr/",
+      "schedule": {
+        "07:00": "리셉션 및 물품보관소 운영 시작",
+        "07:50": "HALF 전체 그룹 출발",
+        "08:00": "10K A·B·C·D 그룹 및 5K 순차 출발",
+        "08:30": "무료 메달 각인 부스 운영 시작",
+        "09:00": "국수집 및 기념품 수령소 운영 시작",
+        "10:30": "HALF 및 10K 시상식",
+        "12:00": "대회 및 현장 프로그램 종료"
+      }
+    },
+    "registration": {
+      "startDate": "2026-08-20",
+      "endDate": "2026-11-20",
+      "startTime": null,
+      "endTime": null,
+      "site": "https://seoul.lifemarathon.co.kr/registration",
+      "status": null,
+      "price": {
+        "HALF": 59000,
+        "10KM": 55000,
+        "5KM": 49000
+      },
+      "refund": {
+        "endDate": "2026-10-12",
+        "policy": "2026년 10월 12일 17:00 이전까지 참가 취소 요청 시 전액 환불이 가능합니다. 10월 12일 17:00 이후에는 취소 및 환불, 티셔츠 사이즈 변경, 코스 및 그룹 변경이 불가합니다."
+      }
+    },
+    "location": {
+      "country": "한국",
+      "region": "서울",
+      "venue": "상암동 월드컵공원 평화광장",
+      "naver": "평화의공원 평화광장",
+      "address": "서울 마포구 성산동 53",
+      "latitude": 37.5650560057921,
+      "longitude": 126.896211243867
+    },
+    "hosts": {
+      "organizer": "1986프로덕션, 푸욱",
+      "manager": "1986프로덕션, 푸욱",
+      "sponsor": null,
+      "phone": null,
+      "email": "1986@1986.co.kr",
+      "instagram": "seoullifemarathon"
+    }
+  },
+  {
+    "slug": "yeosu-eleven-bridge-marathon-2026",
+    "name": "2026 여수 일레븐브리지마라톤",
+    "description": "2026 여수 일레븐브리지마라톤은 여수와 고흥을 잇는 아름다운 백리섬섬길의 해상교량을 달리는 특별한 마라톤입니다. 여수 조발전망대 광장을 출발해 조발대교, 둔병대교, 낭도대교, 적금대교, 팔영대교 일대를 달리는 하프와 10km 코스로 진행됩니다. 바다와 섬, 다리가 어우러진 여수의 풍경을 감상하며 달릴 수 있는 이색적인 해상교량 러닝 대회입니다.",
+    "info": {
+      "type": "마라톤",
+      "scale": 1011,
+      "park": null,
+      "souvenir": "여수사랑상품권 20,000원, 완주메달, 모바일 기록증",
+      "program": "하프, 10km",
+      "memo": "하프와 10km를 합쳐 선착순 1,011명을 모집합니다. 하프코스는 만 18세 이상 참가할 수 있으며 10km는 나이 제한이 없습니다. 참가권 양도 및 대리 참가가 금지되며 배번호와 기록칩 등 참가 물품은 신청 주소로 사전 배송됩니다."
+    },
+    "event": {
+      "startDate": "2026-11-07",
+      "endDate": "2026-11-07",
+      "startTime": "09:00",
+      "endTime": "12:00",
+      "site": "http://marathontest1.s3-website.ap-northeast-2.amazonaws.com/",
+      "schedule": {
+        "08:00": "참가자 집결",
+        "09:00": "하프코스 출발",
+        "09:10": "10km 출발",
+        "12:00": "행사 종료"
+      }
+    },
+    "registration": {
+      "startDate": "2026-09-16",
+      "endDate": "2026-10-23",
+      "startTime": "09:00",
+      "endTime": "23:59",
+      "site": "http://marathontest1.s3-website.ap-northeast-2.amazonaws.com/",
+      "status": null,
+      "price": {
+        "HALF": 45000,
+        "10KM": 45000
+      },
+      "refund": {
+        "endDate": "2026-10-23",
+        "policy": "접수 마감 전까지 취소 및 환불이 가능하며 이체수수료 500원을 제외한 금액이 환불됩니다. 접수 마감 이후에는 참가 물품 제작으로 취소 및 환불이 불가합니다. 참가 물품 발송 후 기상악화·천재지변 등으로 대회가 취소되는 경우 환불되지 않으며, 참가 물품 발송 전 대회가 취소되는 경우 참가비 전액이 환불됩니다."
+      }
+    },
+    "location": {
+      "country": "한국",
+      "region": "전남",
+      "venue": "여수 조발전망대 광장",
+      "naver": "조발전망대",
+      "address": "전남광주통합특별시 여수시 화정면 화양조발대교로 151",
+      "latitude": 34.6311286,
+      "longitude": 127.5624287
+    },
+    "hosts": {
+      "organizer": "일레븐브리지마라톤조직위원회",
+      "manager": null,
+      "sponsor": null,
+      "phone": "061-921-6600",
+      "email": "namdotour89@naver.com",
+      "instagram": null
     }
   }
 ]
