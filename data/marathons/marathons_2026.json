@@ -10341,7 +10341,7 @@
       "startTime": "10:00",
       "endTime": null,
       "site": "https://hangeulrun.com/",
-      "status": "",
+      "status": "접수마감",
       "price": {
         "10.9KM": 75000,
         "5.15KM": 55000
@@ -20335,7 +20335,7 @@
     },
     "registration": {
       "startDate": "2026-09-06",
-      "endDate": "2026-10-06",
+      "endDate": "2026-10-13",
       "startTime": null,
       "endTime": "23:59",
       "site": "https://forms.gle/apRSNiLvtudFPRaJ8",
