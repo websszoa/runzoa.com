@@ -9834,7 +9834,7 @@
       "startTime": null,
       "endTime": null,
       "site": "https://mara1080.com/event/fcaa0bc8-1489-47c3-8fec-8e5a5c17284e",
-      "status": "접수중",
+      "status": "접수마감",
       "price": {
         "5KM": 25000,
         "10KM": 45000,
@@ -10034,7 +10034,7 @@
       "startTime": null,
       "endTime": null,
       "site": "https://admarathon.kr/",
-      "status": "",
+      "status": "접수마감",
       "price": {
         "5KM": 30000,
         "10KM": 50000,
@@ -10698,7 +10698,7 @@
       "startTime": null,
       "endTime": null,
       "site": "https://najumarathon.com/",
-      "status": "",
+      "status": "접수마감",
       "price": {
         "5KM": 20000,
         "10KM": 40000,
@@ -10746,11 +10746,11 @@
     },
     "registration": {
       "startDate": "2026-07-27",
-      "endDate": "2026-10-10",
+      "endDate": "2026-09-30",
       "startTime": "10:00",
-      "endTime": null,
+      "endTime": "16:00",
       "site": "https://www.pinkrun.kr/",
-      "status": "",
+      "status": null,
       "price": {
         "5KM": 50000,
         "10KM": 60000
@@ -11105,7 +11105,7 @@
       "startTime": null,
       "endTime": null,
       "site": "https://race.cjsports.or.kr/01/",
-      "status": "",
+      "status": "접수마감",
       "price": {
         "5km": 25000,
         "10km": 45000,
@@ -11157,7 +11157,7 @@
       "startTime": null,
       "endTime": null,
       "site": "https://mara1080.com/event/edaee6e1-0d92-4248-9927-06ed3b0abfd0",
-      "status": "",
+      "status": "접수마감",
       "price": {
         "4KM": 25000,
         "10KM": 45000,
@@ -11412,7 +11412,7 @@
       "startTime": "10:00",
       "endTime": null,
       "site": "https://ggcrun.kr/new_sub01/page01.php",
-      "status": "",
+      "status": "접수마감",
       "price": {
         "5KM": 25000,
         "10KM": 25000
@@ -13417,7 +13417,7 @@
       "startTime": null,
       "endTime": null,
       "site": "https://www.yonma.kr/application",
-      "status": "접수중",
+      "status": "접수마감",
       "price": {
         "하프": 80000,
         "10km": 65000,
@@ -13474,7 +13474,7 @@
       "startTime": "10:00",
       "endTime": "23:59",
       "site": "https://brand.naver.com/universalkorea/products/13727830475?nl-query=%EC%9B%94%EB%A6%AC%EB%9F%B0&nl-au=8a3cb22f02d94dbc9b817f82e5f81dc1&NaPm=ci%3D8a3cb22f02d94dbc9b817f82e5f81dc1%7Cct%3Dmt9fes9h%7Ctr%3Dnslsl%7Csn%3D1169652%7Chk%3De90458810ed603c8ae63430eb67f208a60118e15",
-      "status": null,
+      "status": "null",
       "price": {
         "10km": 66000,
         "5km 걷기": 55000
@@ -14005,7 +14005,7 @@
       "startTime": null,
       "endTime": null,
       "site": "https://mara1080.com/event/380079d2-ab1c-4351-b1f2-d21ccaba5cdd",
-      "status": null,
+      "status": "접수마감",
       "price": {
         "10km": 45000,
         "5km": 30000,
@@ -14338,7 +14338,7 @@
       "startTime": "10:00",
       "endTime": null,
       "site": "https://www.binggraegranfondo.com/main/main.html",
-      "status": null,
+      "status": "접수마감",
       "price": {
         "그란폰도 113km": 50000,
         "메디오폰도 106km": 50000
@@ -14958,7 +14958,7 @@
       "startTime": null,
       "endTime": null,
       "site": "https://mara1080.com/event/10fcc153-1bb7-403e-8f57-7571c1c324d5",
-      "status": null,
+      "status": "접수마감",
       "price": {
         "Half": 45000,
         "10km": 45000,
@@ -15214,7 +15214,7 @@
     "description": "2026 쥬라기파크 런은 쥬라기파크를 테마로 하남 미사경정공원에서 열리는 러닝 대회입니다. 쥬라기파크의 세계관과 러닝을 결합한 특별한 레이스로, 현재 개최 일정과 장소가 우선 공개되었으며 종목과 참가 신청 등 세부 정보는 추후 공개될 예정입니다.",
     "info": {
       "type": "마라톤",
-      "scale": null,
+      "scale": 4500,
       "park": null,
       "souvenir": "티셔츠, 반다나, 배번호, 양말, 스트링백",
       "program": null,
@@ -15226,17 +15226,23 @@
       "startTime": null,
       "endTime": null,
       "site": "https://jurassicparkrun.kr",
-      "schedule": null
+      "schedule": {
+        "08:00": "참가자 집결",
+        "09:00": "쥬라기파크 런 출발",
+        "10:30": "쥬라기파크 런 완주",
+        "11:20": "축하공연",
+        "12:00": "영화 상영회"
+      }
     },
     "registration": {
       "startDate": "2026-09-14",
       "endDate": "2026-10-15",
       "startTime": null,
       "endTime": null,
-      "site": null,
+      "site": "https://gift.kakao.com/product/14260006",
       "status": null,
       "price": {
-        "Half": 70000,
+        "5Km": 70000,
         "10km": 80000
       }
     },
@@ -16028,9 +16034,9 @@
     },
     "registration": {
       "startDate": "2026-08-02",
-      "endDate": "2026-10-23",
+      "endDate": "2026-10-11",
       "startTime": null,
-      "endTime": null,
+      "endTime": "17:00",
       "site": "https://marathon.newsis.com",
       "status": null,
       "price": {
@@ -16356,7 +16362,7 @@
       "startTime": "14:00",
       "endTime": "17:00",
       "site": "https://autismrace.com",
-      "status": null,
+      "status": "접수마감",
       "price": {
         "HALF": 40000,
         "10km": 40000,
@@ -17029,7 +17035,7 @@
       "startTime": "15:00",
       "endTime": null,
       "site": "https://www.superbluemarathon.kr/",
-      "status": "접수중",
+      "status": "접수마감",
       "price": {
         "10km": 30000,
         "5km": 30000,
@@ -18832,9 +18838,9 @@
     },
     "registration": {
       "startDate": "2026-08-19",
-      "endDate": "2026-10-02",
+      "endDate": "2026-09-28",
       "startTime": null,
-      "endTime": "23:59",
+      "endTime": "16:00",
       "site": "https://yangjurun.kr/",
       "status": null,
       "price": {
@@ -20544,6 +20550,299 @@
       "sponsor": null,
       "phone": "061-921-6600",
       "email": "namdotour89@naver.com",
+      "instagram": null
+    }
+  },
+  {
+    "slug": "muju-firefly-peace-marathon-2026",
+    "name": "2026 무주반딧불 평화마라톤대회",
+    "description": "2026 무주반딧불 평화마라톤대회는 전북 무주 등나무운동장에서 열리는 러닝 축제로, 청정 자연과 함께 달리며 평화와 화합의 의미를 나누는 대회입니다. HALF, 10K, 5K 세 종목으로 진행되며 성인부터 청소년, 가족까지 폭넓게 참가할 수 있습니다. 총 3,000명이 함께하는 대회로 무주의 늦가을 풍경을 즐기며 특별한 추억을 만들 수 있습니다.",
+    "info": {
+      "type": "마라톤",
+      "scale": 3000,
+      "park": null,
+      "souvenir": "티셔츠, 완주메달, 완주간식, 배번호, 온라인 기록증, HALF·10K 완주기념 쌀",
+      "program": "HALF, 10K, 5K",
+      "memo": "HALF는 성인부만 참가할 수 있으며, 10K는 성인 및 중·고등학생, 5K는 성인과 초·중·고등학생 및 청소년 가족이 참가할 수 있습니다. HALF와 10K 완주자에게 완주기념 쌀이 제공됩니다. 참가신청 완료 후 티셔츠 사이즈 변경은 불가하며, 변경을 원하는 경우 기존 신청을 취소한 뒤 재신청해야 합니다."
+    },
+    "event": {
+      "startDate": "2026-11-22",
+      "endDate": "2026-11-22",
+      "startTime": "09:00",
+      "endTime": null,
+      "site": "https://mujumarathon.com/",
+      "schedule": {
+        "09:00": "HALF, 10K, 5K 순차 출발"
+      }
+    },
+    "registration": {
+      "startDate": "2026-09-01",
+      "endDate": "2026-10-25",
+      "startTime": null,
+      "endTime": "18:00",
+      "site": "https://mujumarathon.com/",
+      "status": null,
+      "price": {
+        "HALF": 50000,
+        "10KM": 45000,
+        "10KM(청소년)": 35000,
+        "5KM": 25000,
+        "5KM(청소년)": 25000,
+        "5KM(청소년가족)": 25000
+      },
+      "refund": null
+    },
+    "location": {
+      "country": "한국",
+      "region": "전북",
+      "venue": "무주 등나무운동장",
+      "naver": "등나무운동장",
+      "address": "전북특별자치도 무주군 무주읍 한풍루로 326-14 등나무운동장",
+      "latitude": 36.0026206,
+      "longitude": 127.6614905
+    },
+    "hosts": {
+      "organizer": "무주군체육회",
+      "manager": "무주군마라톤협회, 평화마라톤조직위원회",
+      "sponsor": null,
+      "phone": "010-7469-1526",
+      "email": "samsamis@naver.com",
+      "instagram": null
+    }
+  },
+  {
+    "slug": "yeongdong-fun-and-run-2026",
+    "name": "영동을 달리며 물들일來 (FUN & RUN)",
+    "description": "영동을 달리며 물들일來 FUN & RUN은 충북 영동 레인보우힐링관광지와 산익리 일원에서 열리는 러닝 이벤트입니다. 10km와 5km 코스를 달리며 영동의 자연과 가을 풍경을 즐기고, 러닝업 존과 Rest Zone에서는 공연 관람과 스트레칭, 마사지 체험, 지역 특산물까지 함께 즐길 수 있어 달리기와 지역 문화를 연결한 특별한 러닝 축제입니다.",
+    "info": {
+      "type": "마라톤",
+      "scale": null,
+      "park": null,
+      "souvenir": null,
+      "program": "10km, 5km, 러닝업 존 공연 관람, Rest Zone 일라이트·스트레칭·마사지 체험, 영동 특산물 체험",
+      "memo": "10km와 5km 모두 제한시간은 2시간 30분이며 11시 30분에 모든 코스가 종료됩니다. 초등학생은 단체 참가 및 보호자 동반이 필수이며 5km만 참가할 수 있습니다. 중학생은 단체 참가 및 보호자 동반이 필수이고, 고등학생은 보호자 동의서가 필요합니다. 참가자는 행사 중 촬영된 사진 및 영상이 홈페이지와 SNS 등 홍보자료로 활용될 수 있습니다."
+    },
+    "event": {
+      "startDate": "2026-10-18",
+      "endDate": "2026-10-18",
+      "startTime": "09:00",
+      "endTime": "11:30",
+      "site": "https://funrun.imweb.me/",
+      "schedule": {
+        "07:20": "행사 안내소 오픈",
+        "07:30": "참가자 등록, 물품보관소 운영",
+        "08:20": "개막식, 행사 안내, 준비운동",
+        "09:00": "A팀 10km 출발",
+        "09:05": "B팀 5km 출발",
+        "11:00": "시상식 및 이벤트 시상품 증정",
+        "11:30": "모든 코스 및 행사 종료"
+      }
+    },
+    "registration": {
+      "startDate": "2026-08-28",
+      "endDate": "2026-09-21",
+      "startTime": null,
+      "endTime": "23:00",
+      "site": "https://funrun.imweb.me/",
+      "status": null,
+      "price": {
+        "10KM": 10000,
+        "5KM": 10000
+      },
+      "refund": {
+        "endDate": "2026-09-22",
+        "policy": "2026년 9월 22일 23:30까지 신청자에 한해 환불이 가능하며 송금수수료는 제외됩니다. 이후에는 환불이 불가합니다."
+      }
+    },
+    "location": {
+      "country": "한국",
+      "region": "충북",
+      "venue": "영동 레인보우힐링관광지",
+      "naver": "레인보우힐링관광지",
+      "address": "충청북도 영동군 영동읍 영동힐링로 117",
+      "latitude": 36.156363,
+      "longitude": 127.78653
+    },
+    "hosts": {
+      "organizer": "영동군, 영동군 문화관광재단",
+      "manager": "충북마라톤동호인연합회",
+      "sponsor": "영동마라톤클럽, 청남대 울트라조직위원회, 일라이트호텔앤리조트",
+      "phone": "010-6424-6830",
+      "email": null,
+      "instagram": null
+    }
+  },
+  {
+    "slug": "seoul-love-marathon-2026",
+    "name": "2026 서울사랑마라톤",
+    "description": "2026 서울사랑마라톤은 서울 성북구 석관동 중랑천 체육공원 일대에서 열리는 도심 러닝 대회입니다. HALF, 10K, 5K 세 종목으로 구성되며 총 5,000명의 러너가 참가하는 규모로 진행됩니다. 석계역 인근 중랑천을 따라 달리는 코스로 초보 러너부터 하프 도전자까지 자신의 거리에 맞춰 서울 도심 속 러닝을 즐길 수 있는 마라톤입니다.",
+    "info": {
+      "type": "마라톤",
+      "scale": 5000,
+      "park": null,
+      "souvenir": null,
+      "program": "HALF, 10K, 5K",
+      "memo": "선착순 총 5,000명을 모집하며 HALF 2,000명, 10K 2,000명, 5K 1,000명으로 운영됩니다. 제한시간은 HALF 3시간, 10K 2시간, 5K 1시간입니다. 개인 기록은 넷타임 방식으로 측정하며 입상 순위는 건타임을 기준으로 합니다. 참가권 및 번호표 양도, 대여, 판매와 대리 참가는 금지됩니다."
+    },
+    "event": {
+      "startDate": "2026-11-29",
+      "endDate": "2026-11-29",
+      "startTime": "09:00",
+      "endTime": null,
+      "site": "https://seoulloverun.com/",
+      "schedule": {
+        "08:00": "행사 준비",
+        "09:00": "HALF 출발",
+        "09:10": "5K 출발",
+        "09:20": "10K 출발"
+      }
+    },
+    "registration": {
+      "startDate": "2026-09-23",
+      "endDate": "2026-10-31",
+      "startTime": "10:00",
+      "endTime": "12:00",
+      "site": "https://seoulloverun.com/",
+      "status": null,
+      "price": {
+        "HALF": 50000,
+        "10KM": 45000,
+        "5KM": 40000
+      },
+      "refund": {
+        "endDate": "2026-10-31",
+        "policy": "접수 종료 전까지 공식 홈페이지에서 취소 및 환불 신청이 가능하며, 접수 종료 이후에는 취소·환불 및 참가정보 수정이 불가합니다. 환불은 본인 확인 후 신청자 명의 계좌로 처리되며 승인 후 지급까지 7~14일이 소요될 수 있습니다."
+      }
+    },
+    "location": {
+      "country": "한국",
+      "region": "서울",
+      "venue": "석계역 중랑천 체육공원",
+      "naver": "중랑천 체육공원",
+      "address": "서울 성북구 석관동 375-4",
+      "latitude": 37.6126035,
+      "longitude": 127.0711463
+    },
+    "hosts": {
+      "organizer": "서울특별시, 서울특별시육상연맹",
+      "manager": "서울특별시육상연맹, 서울특별시 성북구 육상연맹, 하이기어",
+      "sponsor": null,
+      "phone": "1600-4525",
+      "email": null,
+      "instagram": null
+    }
+  },
+  {
+    "slug": "jeongeup-hometown-love-donation-marathon-2026",
+    "name": "제1회 정읍시 고향사랑기부마라톤대회",
+    "description": "제1회 정읍시 고향사랑기부마라톤대회는 전북 정읍 내장산 단풍생태공원에서 열리는 기부형 러닝 행사입니다. 10km와 5km 코스로 진행되며 정읍시 외 거주자는 고향사랑기부제를 통해 정읍시에 10만원을 기부한 뒤 참가할 수 있습니다. 정읍시민은 별도의 참가비로 참여할 수 있으며, 달리기의 즐거움과 지역을 응원하는 의미를 함께 나누는 특별한 마라톤입니다.",
+    "info": {
+      "type": "마라톤",
+      "scale": 700,
+      "park": null,
+      "souvenir": "일반 참가자 고향사랑기부 답례품, 정읍시민 정읍사랑상품권 10,000원, 완주자 완주메달",
+      "program": "10km, 5km, 10km 단체전(3인 1조), 5km 가족·커플부(2인 1조)",
+      "memo": "선착순 총 700명을 모집합니다. 정읍시 외 거주자는 고향사랑e음에서 정읍시에 100,000원을 기부한 후 기부증을 제출해 참가 신청하는 방식이며, 정읍시민은 30,000원의 참가비로 참여합니다. 모집인원은 일반 10km 320명, 일반 5km 180명, 정읍시민 200명입니다. 제한시간은 10km 2시간, 5km 1시간이며 기록은 넷타임 방식으로 측정합니다."
+    },
+    "event": {
+      "startDate": "2026-12-06",
+      "endDate": "2026-12-06",
+      "startTime": "10:00",
+      "endTime": null,
+      "site": "http://love.myrunup.kr/home/main.ubs",
+      "schedule": {
+        "09:30": "개회식",
+        "10:00": "대회 출발"
+      }
+    },
+    "registration": {
+      "startDate": "2026-09-22",
+      "endDate": "2026-11-22",
+      "startTime": null,
+      "endTime": "24:00",
+      "site": "http://love.myrunup.kr/home/main.ubs",
+      "status": null,
+      "price": {
+        "10KM": 100000,
+        "5KM": 100000,
+        "10KM_정읍시민": 30000,
+        "5KM_정읍시민": 30000
+      },
+      "refund": null
+    },
+    "location": {
+      "country": "한국",
+      "region": "전북",
+      "venue": "내장산 단풍생태공원",
+      "naver": null,
+      "address": "전북특별자치도 정읍시 내장동 364-2",
+      "latitude": 35.510242,
+      "longitude": 126.9072435
+    },
+    "hosts": {
+      "organizer": "정읍시육상연맹",
+      "manager": null,
+      "sponsor": "정읍시",
+      "phone": "010-4654-0495, 010-4652-0495",
+      "email": null,
+      "instagram": null
+    }
+  },
+  {
+    "slug": "power-of-positivity-marathon-2026",
+    "name": "제3회 긍정의힘 마라톤",
+    "description": "제3회 긍정의힘 마라톤은 서울 신정교 하부 영롱이 억새구장에서 열리는 겨울 러닝 대회입니다. HALF, 10K, 5K 세 종목으로 진행되며 모든 참가자의 기록을 측정합니다. 자신의 한계에 도전하고 서로를 응원하며 긍정의 에너지를 나누는 마라톤으로, 종목별 남녀 입상자를 통한 기부도 함께 진행되는 의미 있는 러닝 행사입니다.",
+    "info": {
+      "type": "마라톤",
+      "scale": null,
+      "park": "대회장 주변 주차 공간이 매우 제한되어 대중교통 이용 권장",
+      "souvenir": "기념 티셔츠, 완주메달, 완주간식, 모바일 기록증",
+      "program": "HALF, 10K, 5K",
+      "memo": "전 종목 기록칩을 사용해 기록을 측정합니다. HALF, 10K, 5K 각 종목 남녀 1~5위를 시상하며 시상금에 해당하는 금액은 수상자를 통해 소외된 이웃을 위한 기부금으로 사용됩니다. 11월 22일까지 접수한 참가자의 배번호는 택배 발송되며, 11월 23일 이후 접수자는 현장에서 수령합니다. 참가권 양도 및 대리 참가는 금지됩니다."
+    },
+    "event": {
+      "startDate": "2026-12-12",
+      "endDate": "2026-12-12",
+      "startTime": "09:00",
+      "endTime": null,
+      "site": "https://www.powerrun.kr/",
+      "schedule": {
+        "08:00": "참가자 집결",
+        "09:00": "HALF, 10K, 5K 순차 출발"
+      }
+    },
+    "registration": {
+      "startDate": "2026-08-30",
+      "endDate": "2026-12-02",
+      "startTime": "10:00",
+      "endTime": null,
+      "site": "https://www.powerrun.kr/",
+      "status": null,
+      "price": {
+        "HALF": 50000,
+        "10KM": 50000,
+        "5KM": 50000
+      },
+      "refund": {
+        "endDate": "2026-11-22",
+        "policy": "2026년 11월 22일까지 환불 신청이 가능하며 송금수수료 500원을 제외하고 환불됩니다. 환불 마감일 이후에는 참가 취소 및 환불이 불가하며, 환불 마감 이후 신청 및 입금한 참가자도 환불되지 않습니다. 천재지변이나 자연재해 등 불가항력적인 사유로 대회가 중지되는 경우 참가비가 환불되지 않을 수 있습니다."
+      }
+    },
+    "location": {
+      "country": "한국",
+      "region": "서울",
+      "venue": "신정교 하부 영롱이 억새구장",
+      "naver": null,
+      "address": "서울특별시 영등포구 영등포로2길 62",
+      "latitude": 37.5178604,
+      "longitude": 126.8819583
+    },
+    "hosts": {
+      "organizer": "한국유튜브방송협회",
+      "manager": "한강프로젝트 주식회사",
+      "sponsor": null,
+      "phone": "02-336-1588",
+      "email": "run@powerrun.kr",
       "instagram": null
     }
   }
