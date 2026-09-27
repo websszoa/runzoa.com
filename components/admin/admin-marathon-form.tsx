@@ -68,6 +68,13 @@ export default function AdminMarathonForm({ onCancel }: { onCancel?: () => void 
           <FormInput label="접수 종료 시간" name="registrationEndTime" type="time" />
           <FormInput label="접수 홈페이지" name="registrationSite" type="url" placeholder="https://example.com" />
           <FormInput label="접수 상태" name="registrationStatus" placeholder="접수 예정, 접수 중, 접수 마감" />
+          <FormInput
+            label="통화 코드"
+            name="currency"
+            defaultValue="KRW"
+            placeholder="KRW, USD, JPY"
+            maxLength={3}
+          />
           <FormTextarea
             label="종목별 참가비"
             name="price"

@@ -128,7 +128,10 @@ export default function DetailUpcoming({
                         className="size-3.5 shrink-0 text-emerald-500"
                         aria-hidden="true"
                       />
-                      {formatMarathonPrices(marathon.registration.price)}
+                      {formatMarathonPrices(
+                        marathon.registration.price,
+                        marathon.registration.currency ?? "KRW",
+                      )}
                     </p>
                     {distances.length > 0 && (
                       <p className="flex items-center gap-1.5">

@@ -91,6 +91,7 @@ export function formatMarathonDate(date: string | null) {
 
 export function formatMarathonPrices(
   prices: Record<string, number | string | null> | null,
+  currency = "KRW",
 ) {
   const values = Object.values(prices ?? {}).filter(
     (value): value is number | string => value !== null,
@@ -102,10 +103,29 @@ export function formatMarathonPrices(
     const maximum = Math.max(...numbers);
     if (minimum === 0 && maximum === 0) return "무료";
     return minimum === maximum
-      ? `${minimum.toLocaleString("ko-KR")}원`
-      : `${minimum.toLocaleString("ko-KR")}원 ~ ${maximum.toLocaleString("ko-KR")}원`;
+      ? formatCurrency(minimum, currency)
+      : `${formatCurrency(minimum, currency)} ~ ${formatCurrency(maximum, currency)}`;
   }
   return values.slice(0, 2).join(", ");
+}
+
+export function formatCurrency(price: number, currency = "KRW") {
+  const normalizedCurrency = currency.toUpperCase();
+
+  if (normalizedCurrency === "KRW") {
+    return `${price.toLocaleString("ko-KR")}원`;
+  }
+
+  try {
+    return new Intl.NumberFormat("en-US", {
+      style: "currency",
+      currency: normalizedCurrency,
+      currencyDisplay: "narrowSymbol",
+      maximumFractionDigits: 0,
+    }).format(price);
+  } catch {
+    return `${price.toLocaleString("en-US")} ${normalizedCurrency}`;
+  }
 }
 
 export function getMarathonDDay(date: string) {

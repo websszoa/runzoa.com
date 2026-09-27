@@ -326,6 +326,7 @@ export default function CalendarAdd({
                               />
                               {formatMarathonPrices(
                                 marathon.registration.price,
+                                marathon.registration.currency ?? "KRW",
                               )}
                             </p>
                             {distances.length > 0 && (

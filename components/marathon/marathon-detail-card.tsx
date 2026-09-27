@@ -153,7 +153,10 @@ export default function MarathonDetailCard({
                 iconClassName="text-emerald-500"
                 label="가격"
               >
-                {formatMarathonPrices(marathon.registration.price)}
+                {formatMarathonPrices(
+                  marathon.registration.price,
+                  marathon.registration.currency ?? "KRW",
+                )}
               </InfoRow>
               <InfoRow icon={Users} iconClassName="text-amber-500" label="규모">
                 {marathon.info.scale

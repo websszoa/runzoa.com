@@ -109,7 +109,10 @@ export default function DetailInfo({ marathon }: { marathon: Marathon }) {
             <CircleDollarSign className="size-4 shrink-0 text-emerald-500" />
           ),
           label: "참가비",
-          value: formatMarathonPrices(registrationPrices),
+          value: formatMarathonPrices(
+            registrationPrices,
+            marathon.registration.currency ?? "KRW",
+          ),
         }
       : null,
     marathon.info.scale

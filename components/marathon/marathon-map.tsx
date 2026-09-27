@@ -501,7 +501,10 @@ function MapRaceItem({
           <p className="flex min-w-0 items-center gap-1.5">
             <WalletCards className="size-3.5 shrink-0 text-emerald-500" />
             <span className="min-w-0 truncate">
-              {formatMarathonPrices(marathon.registration.price)}
+              {formatMarathonPrices(
+                marathon.registration.price,
+                marathon.registration.currency ?? "KRW",
+              )}
             </span>
           </p>
         ) : null}

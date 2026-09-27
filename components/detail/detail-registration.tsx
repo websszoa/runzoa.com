@@ -1,7 +1,11 @@
 import Link from "next/link";
 import DialogNewsletter from "@/components/dialog/dialog-newsletter";
 import type { Marathon } from "@/lib/marathons";
-import { formatMarathonDate, getRegistrationStatus } from "@/lib/utils";
+import {
+  formatCurrency,
+  formatMarathonDate,
+  getRegistrationStatus,
+} from "@/lib/utils";
 import {
   Asterisk,
   ArrowUpRight,
@@ -187,7 +191,12 @@ export default function DetailRegistration({
                           {distance}
                         </span>
                         <span className="min-w-0 px-3 py-2.5 text-right text-sm leading-5 text-muted-foreground">
-                          {formatPrice(price)}
+                          {typeof price === "number"
+                            ? formatCurrency(
+                                price,
+                                marathon.registration.currency ?? "KRW",
+                              )
+                            : price}
                         </span>
                       </div>
                     ))}
@@ -334,10 +343,4 @@ export default function DetailRegistration({
       </article>
     </section>
   );
-}
-
-function formatPrice(price: number | string) {
-  return typeof price === "number"
-    ? `${price.toLocaleString("ko-KR")}원`
-    : price;
 }

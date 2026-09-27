@@ -4217,7 +4217,7 @@
       "startTime": null,
       "endTime": null,
       "site": "https://www.coupangplay.com/promotion/2026MudorunSeoul/",
-      "status": "",
+      "status": "접수마감",
       "price": {
         "10km": 1
       }
@@ -20844,6 +20844,358 @@
       "phone": "02-336-1588",
       "email": "run@powerrun.kr",
       "instagram": null
+    }
+  },
+  {
+    "slug": "insam-run-2026",
+    "name": "인삼런 2026",
+    "description": "인삼런 2026은 백범 김구 선생 탄생 150주년을 기념해 서울 남산 백범광장에서 열리는 3km 비경쟁 FUN RUN입니다. 남산 북측순환로를 함께 걸으며 인삼과 독립운동의 역사, 백범 정신을 되새기는 행사로, 참가비 전액이 참가자 이름으로 광복회에 기부됩니다. 인삼문화 체험과 스탬프투어, 공연 등 다양한 프로그램도 함께 즐길 수 있습니다.",
+    "info": {
+      "type": "마라톤",
+      "scale": 815,
+      "park": "행사장 내 전용 주차장이 없어 대중교통 이용 권장",
+      "souvenir": "기념 티셔츠, 스트링백, 완주 키링, 자양강장 인삼 꾸러미",
+      "program": "3km FUN RUN, 인삼문화 체험, 스탬프투어, AR 미션, 인삼 퀴즈, 포토존, 공연",
+      "memo": "3km 비경쟁 FUN RUN으로 기록 측정, 순위 경쟁 및 시상 없이 진행됩니다. 남녀노소 누구나 참가할 수 있으며 참가비 30,000원 전액은 참가자 이름으로 광복회에 기부됩니다. 총 815명 선착순 모집이며 현장 접수는 운영하지 않습니다. 참가 키트와 완주 기념품은 행사 당일 현장에서 수령합니다."
+    },
+    "event": {
+      "startDate": "2026-10-05",
+      "endDate": "2026-10-05",
+      "startTime": "09:00",
+      "endTime": "13:30",
+      "site": "https://insamrun2026.kr/",
+      "schedule": {
+        "09:00": "행사 시작 및 참가자 집결",
+        "09:50": "3km FUN RUN 그룹별 시차 출발",
+        "13:30": "행사 종료"
+      }
+    },
+    "registration": {
+      "startDate": "2026-09-17",
+      "endDate": "2026-10-04",
+      "startTime": "13:00",
+      "endTime": "16:00",
+      "site": "https://insamrun2026.kr/",
+      "status": null,
+      "price": {
+        "3KM": 30000
+      },
+      "refund": null
+    },
+    "location": {
+      "country": "한국",
+      "region": "서울",
+      "venue": "남산공원 백범광장",
+      "naver": "백범광장",
+      "address": "서울특별시 중구 회현동1가 100-115",
+      "latitude": 37.5549358,
+      "longitude": 126.9799171
+    },
+    "hosts": {
+      "organizer": "한국인삼협회",
+      "manager": null,
+      "sponsor": null,
+      "phone": "010-8857-2010",
+      "email": null,
+      "instagram": null
+    }
+  },
+  {
+    "slug": "sono-runtrip-180k-gyeongju-2026",
+    "name": "소노 런트립 180K in 경주",
+    "description": "소노 런트립 180K in 경주는 경북 경주 보문호의 아름다운 가을밤을 배경으로 펼쳐지는 체류형 야간 러닝 페스티벌입니다. 소노캄 경주에서 출발해 보문호반길을 달리는 MAIN RUN 9K와 반려견과 함께하는 PET RUN 7K로 구성됩니다. 러닝뿐 아니라 체험 부스, 시상식, 럭키드로우, 축하공연과 완주 후 풀앤스파까지 함께 즐길 수 있는 특별한 런트립입니다.",
+    "info": {
+      "type": "마라톤",
+      "scale": null,
+      "park": null,
+      "souvenir": "배번호표, 기능성 티셔츠, 짐색, LED 액세서리, 완주메달, 에너지키트, 소노캄 경주 풀앤스파 이용권 / PET RUN: 펫 등번호표, LED 블링커, 리드줄, 쿠키메달 추가",
+      "program": "MAIN RUN 9K, PET RUN 7K, 이벤트 부스, 시상식, 럭키드로우, 축하공연",
+      "memo": "보문호 별빛 레이스를 테마로 진행되는 야간 러닝 행사입니다. MAIN RUN 9K와 반려견 동반 PET RUN 7K 중 선택할 수 있습니다. 부문별 남녀 1~3위를 NET TIME 기준으로 시상합니다. 완주 기념품은 완주자에게만 제공됩니다. 행사 상해보험이 가입되어 있으며 행사 현장의 사진 및 영상은 공식 채널과 SNS 등 홍보 목적으로 활용될 수 있습니다."
+    },
+    "event": {
+      "startDate": "2026-10-04",
+      "endDate": "2026-10-04",
+      "startTime": "18:30",
+      "endTime": "21:00",
+      "site": "https://www.sonohotelsresorts.com/main/event/detail/76911",
+      "schedule": {
+        "15:00": "참가 등록 및 물품보관, 이벤트 부스 운영",
+        "18:00": "오프닝, 유의사항 안내, 스트레칭",
+        "18:30": "보문호 별빛 레이스 출발",
+        "20:00": "시상식 및 럭키드로우",
+        "20:20": "축하공연",
+        "21:00": "이벤트 부스 운영 종료"
+      }
+    },
+    "registration": {
+      "startDate": "2026-08-12",
+      "endDate": "2026-10-03",
+      "startTime": null,
+      "endTime": null,
+      "site": "https://www.sonohotelsresorts.com/reserve/ticket/dtl?salesNo=290688",
+      "status": null,
+      "price": {
+        "9K": 70000,
+        "7K(펫동반)": 70000,
+        "SONO_MEMBER": 65000
+      },
+      "refund": {
+        "endDate": "2026-09-08",
+        "policy": "2026년 9월 8일 23:59까지 전액 환불 가능합니다. 9월 9일 00:00 이후에는 참가 등록 완료로 취소·변경·환불이 불가하며 100% 위약금이 적용됩니다."
+      }
+    },
+    "location": {
+      "country": "한국",
+      "region": "경북",
+      "venue": "소노캄 경주",
+      "naver": null,
+      "address": "경상북도 경주시 보문로 402-12 소노벨",
+      "latitude": 35.8467894,
+      "longitude": 129.2817015
+    },
+    "hosts": {
+      "organizer": "소노인터내셔널",
+      "manager": "소노인터내셔널",
+      "sponsor": "경주시",
+      "phone": "1588-4888",
+      "email": null,
+      "instagram": null
+    }
+  },
+  {
+    "slug": "yeonsu-dream-connecting-road-run-2026",
+    "name": "2026 꿈이음길 러닝대회",
+    "description": "2026 연수 꿈이음길 러닝대회는 인천 연수구 한마음공원에서 출발해 승기천과 꿈이음길을 따라 달리는 러닝 행사입니다. 연수 원도심에서 송도로 이어지는 풍경을 만날 수 있는 5K와 10K 코스로 구성되며, 기록 경쟁보다는 가족과 시민이 함께 달리고 완주하는 즐거움에 의미를 둔 연수구의 감성 러닝대회입니다.",
+    "info": {
+      "type": "마라톤",
+      "scale": 950,
+      "park": null,
+      "souvenir": "기능성 티셔츠, 스포츠 타월, 완주메달, 물, 간식",
+      "program": "5K, 10K",
+      "memo": "5K와 10K를 합쳐 선착순 950명을 모집합니다. 10K와 5K 남녀 각각 1~3위를 넷타임 기준으로 시상하며, 입상자는 대회 당일 신분증을 통한 본인 확인이 필요합니다. 모든 상금은 4.4%의 제세공과금을 공제한 후 지급됩니다."
+    },
+    "event": {
+      "startDate": "2026-10-10",
+      "endDate": "2026-10-10",
+      "startTime": "15:00",
+      "endTime": null,
+      "site": "https://kyeonggiincheon.com/",
+      "schedule": {
+        "14:00": "참가자 집결",
+        "15:00": "대회 출발"
+      }
+    },
+    "registration": {
+      "startDate": "2026-09-14",
+      "endDate": "2026-09-30",
+      "startTime": "10:00",
+      "endTime": "22:00",
+      "site": "https://kyeonggiincheon.com/",
+      "status": null,
+      "price": {
+        "10KM": 20000,
+        "5KM": 20000
+      },
+      "refund": {
+        "endDate": "2026-09-30",
+        "policy": "2026년 9월 30일 22:00까지 환불 신청이 가능합니다. 1차 환불 신청은 9월 14일~9월 21일이며 환불은 9월 22일~23일 진행됩니다. 2차 환불 신청은 9월 22일~9월 30일이며 환불은 10월 1일~2일 진행됩니다. 운영 상황에 따라 별도 공지되는 일정이 우선될 수 있습니다."
+      }
+    },
+    "location": {
+      "country": "한국",
+      "region": "인천",
+      "venue": "연수구 한마음공원",
+      "naver": "한마음공원",
+      "address": "인천광역시 연수구 선학동 231-3",
+      "latitude": 37.4266521,
+      "longitude": 126.7039869
+    },
+    "hosts": {
+      "organizer": "경기일보",
+      "manager": "경기일보",
+      "sponsor": "인천광역시 연수구",
+      "phone": "010-5426-3381",
+      "email": "leefurni78@kyeonggi.com",
+      "instagram": null
+    }
+  },
+  {
+    "slug": "wonju-wind-forest-give-run-2026",
+    "name": "2026 원주 바람길숲 기부런",
+    "description": "2026 원주 바람길숲 기부런은 강원 원주 혁신페스타 행사장 인근 행복마당에서 출발해 치악산 바람길숲을 달리는 10km 기부 러닝 행사입니다. 기록과 순위 경쟁보다는 자연을 만끽하며 함께 달리고 나눔을 실천하는 데 의미를 둔 대회로, 참가비 전액이 지역사회 취약계층을 위한 기부금으로 사용됩니다. 500명의 참가자가 원주의 가을 바람길숲을 함께 달립니다.",
+    "info": {
+      "type": "마라톤",
+      "scale": 500,
+      "park": null,
+      "souvenir": "참가 기념품 제공",
+      "program": "10km 단일 코스, 기부금 전달식, 단체 준비운동, 페이스 그룹별 러닝, 럭키드로우",
+      "memo": "10km 단일 코스로 진행되며 기록칩 및 공식 기록 측정은 없습니다. 참가 대상은 자연을 만끽하며 기부 문화에 동참하고 싶은 12세 이상 누구나입니다. 참가비 전액은 지역사회 취약계층을 위한 기부금으로 사용됩니다. 참가자는 신청 시 선택한 페이스 그룹에 따라 5분 간격으로 순차 출발하며 마지막 출발은 09:45에 마감됩니다."
+    },
+    "event": {
+      "startDate": "2026-10-17",
+      "endDate": "2026-10-17",
+      "startTime": "09:20",
+      "endTime": "13:30",
+      "site": "https://cltoo.com/ko/product/379",
+      "schedule": {
+        "08:00": "등록데스크 오픈 및 현장 등록",
+        "08:40": "기부금 전달식",
+        "08:55": "출발지점으로 이동",
+        "09:05": "단체 준비운동",
+        "09:20": "Group A 출발 - 평균 페이스 05:30",
+        "09:25": "Group B 출발 - 평균 페이스 06:00",
+        "09:30": "Group C 출발 - 평균 페이스 06:30",
+        "09:35": "Group D 출발 - 평균 페이스 07:00",
+        "09:40": "Group E 출발 - 평균 페이스 07:30",
+        "09:45": "Group F 출발 - 평균 페이스 08:00 이상",
+        "10:30": "참가 기념품 지급",
+        "12:30": "럭키드로우 추첨 및 공식 행사 종료"
+      }
+    },
+    "registration": {
+      "startDate": "2026-09-23",
+      "endDate": "2026-10-13",
+      "startTime": null,
+      "endTime": null,
+      "site": "https://cltoo.com/ko/product/379",
+      "status": null,
+      "price": {
+        "10KM": 30000
+      },
+      "refund": null
+    },
+    "location": {
+      "country": "한국",
+      "region": "강원",
+      "venue": "원주 혁신페스타 행사장 행복마당",
+      "naver": "원주 혁신도시 미리내거리",
+      "address": "강원특별자치도 원주시 천사로 256-15",
+      "latitude": 37.3526801,
+      "longitude": 127.9521854
+    },
+    "hosts": {
+      "organizer": "한국관광공사, 강원혁신도시발전지원센터",
+      "manager": null,
+      "sponsor": "원주시청, 월드비전 강원지역본부, 서울 F&B",
+      "phone": null,
+      "email": null,
+      "instagram": null
+    }
+  },
+  {
+    "slug": "taean-national-eoullim-marathon-2026",
+    "name": "제7회 충청남도 태안 전국어울림마라톤",
+    "description": "제7회 충청남도 태안 전국어울림마라톤은 충남 태안 꽃지해안공원에서 장애인과 비장애인이 함께 달리는 어울림 마라톤입니다. 서해의 아름다운 바다와 안면도의 해안 풍경을 배경으로 HALF, 10K, 5K 종목이 진행되며 장애인부도 함께 운영됩니다. 장애에 대한 편견을 넘어 함께 달리는 즐거움과 화합의 의미를 나누는 태안의 대표적인 가을 러닝 행사입니다.",
+    "info": {
+      "type": "마라톤",
+      "scale": null,
+      "park": null,
+      "souvenir": null,
+      "program": "HALF, 10K, 5K, 장애인부",
+      "memo": "장애인과 비장애인이 함께 참가하는 어울림 마라톤입니다. 장애인부가 별도로 운영되며 비장애인은 HALF, 10K, 5K 종목에 참가할 수 있습니다. 참가 신청은 선착순으로 진행되며 모집인원 충족 시 조기 마감될 수 있습니다."
+    },
+    "event": {
+      "startDate": "2026-10-17",
+      "endDate": "2026-10-17",
+      "startTime": "09:00",
+      "endTime": null,
+      "site": "https://www.xn--3e0b74d44h2nczb998h9tb24ds3tnvj.kr/ko/index.html",
+      "schedule": {
+        "09:00": "대회 출발"
+      }
+    },
+    "registration": {
+      "startDate": "2026-07-22",
+      "endDate": "2026-09-17",
+      "startTime": "00:00",
+      "endTime": "23:59",
+      "site": "https://www.xn--3e0b74d44h2nczb998h9tb24ds3tnvj.kr/ko/index.html",
+      "status": "접수마감",
+      "price": {
+        "HALF": 40000,
+        "10KM": 40000,
+        "5KM": 30000
+      },
+      "refund": null
+    },
+    "location": {
+      "country": "한국",
+      "region": "충남",
+      "venue": "꽃지해안공원 주차장",
+      "naver": "꽃지해안공원유료주차장1",
+      "address": "충청남도 태안군 안면읍 승언리 339-586",
+      "latitude": 36.5022471,
+      "longitude": 126.3348935
+    },
+    "hosts": {
+      "organizer": "태안군장애인체육회",
+      "manager": null,
+      "sponsor": "대한장애인체육회, 문화체육관광부, 충청남도, 태안군, 국민체육진흥공단, 복권위원회, 한국서부발전",
+      "phone": "02-1566-1936",
+      "email": "emara@hanmail.net",
+      "instagram": null
+    }
+  },
+  {
+    "slug": "mudo-run-la-2026",
+    "name": "무한도전런 LA 2026",
+    "description": "무도런 LA 2026은 미국 로스앤젤레스 San Pedro의 West Harbor에서 펼쳐지는 무한도전 테마 글로벌 러닝 페스티벌입니다. 항구와 바다 풍경을 따라 달리는 10K 레이스와 누구나 부담 없이 즐길 수 있는 5K 펀런으로 구성되며, 무한도전 멤버들과 함께하는 프로그램부터 K-POP 콘서트, 게임, 포토존, 체험 이벤트까지 하루 동안 함께 즐길 수 있습니다.",
+    "info": {
+      "type": "마라톤",
+      "scale": null,
+      "park": "West Harbor 행사장 인근 주차장 이용 가능. 세부 주차 및 주차권 판매 안내는 추후 공지 예정",
+      "souvenir": "완주메달, 공식 이벤트 티셔츠, 공식 배번호(Bib), K-POP 콘서트 입장, 페스티벌 프로그램 이용",
+      "program": "10K Race, 5K Fun Run, 무한도전 멤버 특별 출연, K-POP 콘서트, 테마 게임 및 챌린지, 포토존, 스폰서 체험존, F&B존, 경품 이벤트",
+      "memo": "5K와 10K 모두 등록 참가자에게 칩 타이밍 기록 측정 서비스가 제공됩니다. 모든 연령이 참가할 수 있으며 유모차와 휠체어 이용이 가능합니다. 반려동물 동반은 불가합니다. 만 5세 이하 어린이는 등록한 성인과 함께 5K에 무료 참가할 수 있으나 티셔츠, 메달, 배번호, 기록 측정 및 참가자 혜택은 제공되지 않습니다."
+    },
+    "event": {
+      "startDate": "2026-10-17",
+      "endDate": "2026-10-17",
+      "startTime": null,
+      "endTime": null,
+      "site": "https://mbc-america.com/mudorun-event",
+      "schedule": {
+        "07:00": "행사장 오픈",
+        "08:00": "부스 & 게임존 오픈",
+        "09:00": "10K 레이스",
+        "10:30": "5K 펀런",
+        "13:00": "스페셜 콘서트",
+        "15:00": "K-POP 랜덤플레이 댄스 챌린지"
+      }
+    },
+    "registration": {
+      "startDate": "2026-09-17",
+      "endDate": "2026-10-16",
+      "startTime": null,
+      "endTime": null,
+      "site": "https://mstorebuy.com/",
+      "status": null,
+      "currency": "USD",
+      "price": {
+        "10KM": 110,
+        "5KM": 95
+      },
+      "refund": {
+        "endDate": null,
+        "policy": "모든 참가 등록은 환불 및 참가권 양도가 불가능합니다."
+      }
+    },
+    "location": {
+      "country": "미국",
+      "region": "캘리포니아",
+      "venue": "West Harbor, San Pedro",
+      "naver": null,
+      "address": "San Pedro, Los Angeles, California, USA",
+      "latitude": 33.731956,
+      "longitude": -118.278304
+    },
+    "hosts": {
+      "organizer": "MBC America",
+      "manager": null,
+      "sponsor": null,
+      "phone": "877-622-9650",
+      "email": "Support.Mstore@mbc24tv.com",
+      "instagram": "mudorun_la"
     }
   }
 ]

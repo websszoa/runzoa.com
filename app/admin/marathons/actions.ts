@@ -36,6 +36,7 @@ const createMarathonSchema = z.object({
   registrationEndTime: z.string().trim(),
   registrationSite: z.string().trim(),
   registrationStatus: z.string().trim().max(30),
+  currency: z.string().trim().length(3, "통화 코드는 3자리로 입력해 주세요."),
   price: z.string(),
   country: z.string().trim().max(30),
   region: optionalText,
@@ -113,6 +114,7 @@ export async function createMarathon(
         endTime: nullableTime(values.registrationEndTime),
         site: nullableUrl(values.registrationSite),
         status: values.registrationStatus,
+        currency: values.currency.toUpperCase(),
         price: parseKeyValueLines(values.price, true) ?? {},
       },
       location: {

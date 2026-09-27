@@ -39,6 +39,19 @@ interface DetailLocationProps {
 const NAVER_MAP_SCRIPT_ID = "naver-maps-sdk";
 let naverMapsPromise: Promise<void> | null = null;
 
+const KOREA_COUNTRY_NAMES = new Set([
+  "KR",
+  "KOR",
+  "한국",
+  "대한민국",
+  "REPUBLIC OF KOREA",
+  "SOUTH KOREA",
+]);
+
+function isKoreanLocation(country: string | null) {
+  return !country || KOREA_COUNTRY_NAMES.has(country.trim().toUpperCase());
+}
+
 function loadNaverMaps(naverMapKey: string) {
   const browserWindow = window as unknown as NaverWindow;
   if (browserWindow.naver?.maps) return Promise.resolve();
@@ -91,6 +104,7 @@ export default function DetailLocation({
   const [mapError, setMapError] = useState(false);
   const [addressCopied, setAddressCopied] = useState(false);
   const hasCoordinates = latitude !== null && longitude !== null;
+  const isDomestic = isKoreanLocation(country);
   const locationLabel = venue || address || [region, country].filter(Boolean).join(" ");
   const mapSearchQuery =
     naver ||
@@ -104,6 +118,11 @@ export default function DetailLocation({
   const kakaoMapUrl = hasCoordinates
     ? `https://map.kakao.com/link/map/${encodeURIComponent(mapSearchQuery)},${latitude},${longitude}`
     : `https://map.kakao.com/link/search/${encodeURIComponent(mapSearchQuery)}`;
+  const googleMapQuery = hasCoordinates
+    ? `${latitude},${longitude}`
+    : mapSearchQuery;
+  const googleMapUrl = `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(googleMapQuery)}`;
+  const googleMapEmbedUrl = `https://www.google.com/maps?q=${encodeURIComponent(googleMapQuery)}&output=embed`;
 
   const copyAddress = async () => {
     if (!address) return;
@@ -117,7 +136,8 @@ export default function DetailLocation({
   };
 
   useEffect(() => {
-    if (!naverMapKey || !hasCoordinates || !mapHostRef.current) return;
+    if (!isDomestic || !naverMapKey || !hasCoordinates || !mapHostRef.current)
+      return;
 
     const browserWindow = window as unknown as NaverWindow;
     const hostElement = mapHostRef.current;
@@ -178,7 +198,7 @@ export default function DetailLocation({
       hostElement.replaceChildren();
       delete browserWindow.navermap_authFailure;
     };
-  }, [hasCoordinates, latitude, longitude, name, naverMapKey, venue]);
+  }, [hasCoordinates, isDomestic, latitude, longitude, name, naverMapKey, venue]);
 
   return (
     <section className="overflow-hidden rounded-2xl border bg-card shadow-none">
@@ -187,44 +207,83 @@ export default function DetailLocation({
         <h2 className="font-paperlogy text-lg font-semibold">대회 위치</h2>
         {locationLabel && (
           <div className="ml-auto flex items-center gap-1.5">
-            <a
-              href={naverMapUrl}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex h-9 items-center justify-center gap-1.5 rounded-full border border-border px-3 font-anyvid text-xs text-muted-foreground transition-colors hover:border-[#03c75a]/40 hover:bg-[#03c75a]/5 hover:text-[#03a94f]"
-            >
-              <Image
-                src="/svg/naver-map.webp"
-                alt=""
-                width={20}
-                height={20}
-                className="size-5 rounded-md"
-              />
-              <span className="hidden sm:inline">네이버 지도</span>
-              <ExternalLink className="hidden size-3 sm:block" aria-hidden="true" />
-            </a>
-            <a
-              href={kakaoMapUrl}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex h-9 items-center justify-center gap-1.5 rounded-full border border-border px-3 font-anyvid text-xs text-muted-foreground transition-colors hover:border-[#fee500] hover:bg-[#fee500]/10 hover:text-foreground"
-            >
-              <Image
-                src="/svg/kakao-map.webp"
-                alt=""
-                width={20}
-                height={20}
-                className="size-5 rounded-md"
-              />
-              <span className="hidden sm:inline">카카오맵</span>
-              <ExternalLink className="hidden size-3 sm:block" aria-hidden="true" />
-            </a>
+            {isDomestic ? (
+              <>
+                <a
+                  href={naverMapUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex h-9 items-center justify-center gap-1.5 rounded-full border border-border px-3 font-anyvid text-xs text-muted-foreground transition-colors hover:border-[#03c75a]/40 hover:bg-[#03c75a]/5 hover:text-[#03a94f]"
+                >
+                  <Image
+                    src="/svg/naver-map.webp"
+                    alt=""
+                    width={20}
+                    height={20}
+                    className="size-5 rounded-md"
+                  />
+                  <span className="hidden sm:inline">네이버 지도</span>
+                  <ExternalLink
+                    className="hidden size-3 sm:block"
+                    aria-hidden="true"
+                  />
+                </a>
+                <a
+                  href={kakaoMapUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex h-9 items-center justify-center gap-1.5 rounded-full border border-border px-3 font-anyvid text-xs text-muted-foreground transition-colors hover:border-[#fee500] hover:bg-[#fee500]/10 hover:text-foreground"
+                >
+                  <Image
+                    src="/svg/kakao-map.webp"
+                    alt=""
+                    width={20}
+                    height={20}
+                    className="size-5 rounded-md"
+                  />
+                  <span className="hidden sm:inline">카카오맵</span>
+                  <ExternalLink
+                    className="hidden size-3 sm:block"
+                    aria-hidden="true"
+                  />
+                </a>
+              </>
+            ) : (
+              <a
+                href={googleMapUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex h-9 items-center justify-center gap-1.5 rounded-full border border-border px-3 font-anyvid text-xs text-muted-foreground transition-colors hover:border-blue-500/40 hover:bg-blue-500/5 hover:text-blue-600"
+              >
+                <Image
+                  src="/svg/google-maps.webp"
+                  alt=""
+                  width={20}
+                  height={20}
+                  className="size-5 rounded-md"
+                />
+                <span className="hidden sm:inline">Google 지도</span>
+                <ExternalLink
+                  className="hidden size-3 sm:block"
+                  aria-hidden="true"
+                />
+              </a>
+            )}
           </div>
         )}
       </div>
 
       <div className="relative h-80 bg-gray-100 sm:h-96">
-        {hasCoordinates && naverMapKey && !mapError ? (
+        {!isDomestic ? (
+          <iframe
+            src={googleMapEmbedUrl}
+            title={`${name} Google 지도`}
+            className="absolute inset-0 size-full border-0"
+            loading="lazy"
+            referrerPolicy="no-referrer-when-downgrade"
+            allowFullScreen
+          />
+        ) : hasCoordinates && naverMapKey && !mapError ? (
           <div ref={mapHostRef} className="absolute inset-0" aria-label={`${name} 위치 지도`} />
         ) : (
           <div className="absolute inset-0 flex flex-col items-center justify-center gap-3 px-6 text-center text-muted-foreground">
