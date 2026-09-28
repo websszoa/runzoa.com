@@ -152,5 +152,111 @@
       "email": null,
       "instagram": null
     }
+  },
+  {
+    "slug": "tcs-sydney-marathon-2027",
+    "name": "TCS 시드니 마라톤 2027",
+    "description": "TCS 시드니 마라톤 2027은 호주 시드니에서 열리는 애보트 월드 마라톤 메이저스 대회입니다. 노스 시드니에서 출발해 시드니 하버 브리지를 건너 도심의 대표 명소를 달린 뒤 시드니 오페라하우스에서 완주하는 42.195km 풀코스로 진행됩니다. 세계 각국의 러너들이 참가하는 시드니 대표 글로벌 마라톤으로, 아름다운 항구와 도심 풍경을 한 번에 경험할 수 있습니다.",
+    "info": {
+      "type": "마라톤",
+      "scale": 40000,
+      "park": null,
+      "souvenir": null,
+      "program": "42.195km 풀코스",
+      "memo": "World Athletics Platinum Label 및 Abbott World Marathon Majors 대회입니다. 풀코스 제한시간은 7시간입니다. 일반 참가자는 선착순이 아닌 무작위 추첨 방식의 Ballot을 통해 선정됩니다. Ballot 신청 자체는 무료이며 당첨자에 한해 등록된 결제수단으로 참가비가 자동 결제됩니다. 공식 홈페이지에는 Ballot 외에도 Charity Partner Program과 Official International Travel Partner Program을 통한 참가 방법이 안내되어 있습니다."
+    },
+    "event": {
+      "startDate": "2027-08-29",
+      "endDate": "2027-08-29",
+      "startTime": "06:30",
+      "endTime": null,
+      "site": "https://www.tcssydneymarathon.com/",
+      "schedule": {
+        "06:15": "엘리트 휠체어 선수 출발",
+        "06:30": "일반 참가자 출발"
+      }
+    },
+    "registration": {
+      "startDate": "2026-09-29",
+      "endDate": "2026-10-19",
+      "startTime": "10:00",
+      "endTime": "10:00",
+      "site": "https://www.tcssydneymarathon.com/sign-up",
+      "status": null,
+      "currency": "USD",
+      "price": {
+        "AU_NZ_RESIDENT": 280,
+        "INTERNATIONAL": 330
+      },
+      "refund": null
+    },
+    "location": {
+      "country": "호주",
+      "region": "뉴사우스웨일스",
+      "venue": "Miller Street, North Sydney",
+      "naver": null,
+      "address": "Miller Street, North Sydney NSW, Australia",
+      "latitude": null,
+      "longitude": null
+    },
+    "hosts": {
+      "organizer": "Pont3",
+      "manager": null,
+      "sponsor": "TCS, ASICS",
+      "phone": null,
+      "email": null,
+      "instagram": null
+    }
+  },
+  {
+    "slug": "asics-paris-marathon-2027",
+    "name": "파리 마라톤 2027",
+    "description": "ASICS 파리 마라톤 2027은 프랑스 파리 도심에서 펼쳐지는 세계적인 풀코스 마라톤으로, 2027년에는 역사적인 50회 대회를 맞이합니다. 42.195km를 달리며 파리의 대표적인 거리와 명소를 만날 수 있는 글로벌 러닝 이벤트로, 세계 각국의 러너들이 참가합니다. 일반 참가자는 선착순이 아닌 추첨을 통해 참가권을 얻으며, 당첨 후 등록을 완료해야 최종 참가가 확정됩니다.",
+    "info": {
+      "type": "마라톤",
+      "scale": null,
+      "park": null,
+      "souvenir": null,
+      "program": "FULL 42.195km",
+      "memo": "2027년 제50회 대회입니다. 일반 참가권은 선착순이 아닌 Lottery 추첨 방식으로 배정됩니다. 추첨 신청은 무료이며 당첨된 참가자는 결과 확인 후 72시간 이내 참가비를 결제하고 등록을 확정해야 합니다. 개인뿐 아니라 2~6명 팀 단위로도 추첨 신청이 가능하며 팀원 중 한 명이 당첨되면 팀 전체가 당첨됩니다. 참가자는 2007년 12월 31일 이전 출생자여야 합니다. 2027년 공식 코스와 정확한 출발·도착 장소는 추후 발표 예정입니다."
+    },
+    "event": {
+      "startDate": "2027-04-04",
+      "endDate": "2027-04-04",
+      "startTime": null,
+      "endTime": null,
+      "site": "https://www.asicsmarathondeparis.com/",
+      "schedule": null
+    },
+    "registration": {
+      "startDate": "2026-09-08",
+      "endDate": "2026-09-30",
+      "startTime": "14:00",
+      "endTime": "23:59",
+      "site": "https://in.reg.asicsmarathondeparis.com/2027",
+      "status": null,
+      "currency": "EUR",
+      "price": {
+        "FULL": 169
+      },
+      "refund": null
+    },
+    "location": {
+      "country": "프랑스",
+      "region": "파리",
+      "venue": "파리",
+      "naver": null,
+      "address": null,
+      "latitude": null,
+      "longitude": null
+    },
+    "hosts": {
+      "organizer": "Cadence Running United",
+      "manager": null,
+      "sponsor": "ASICS",
+      "phone": null,
+      "email": null,
+      "instagram": "paris.marathon"
+    }
   }
 ]
