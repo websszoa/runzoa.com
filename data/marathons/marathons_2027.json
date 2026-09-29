@@ -258,5 +258,65 @@
       "email": null,
       "instagram": "paris.marathon"
     }
+  },
+  {
+    "slug": "asics-los-angeles-marathon-2027",
+    "name": "ASICS LA 마라톤 2027",
+    "description": "ASICS LA 마라톤 2027은 미국 로스앤젤레스에서 열리는 대표적인 글로벌 풀코스 마라톤입니다. Dodger Stadium에서 출발해 LA의 다양한 지역과 유명 랜드마크를 지나 Century City의 Avenue of the Stars에서 완주하는 42.195km 코스로 진행됩니다. 세계 각국의 러너들과 함께 로스앤젤레스 도심을 가로지르며 도시의 매력을 온몸으로 경험할 수 있는 대규모 마라톤입니다.",
+    "info": {
+      "type": "마라톤",
+      "scale": 27000,
+      "park": "대회 당일 Dodger Stadium 및 Century City 일대 혼잡이 예상되며, 공식 교통·주차 및 셔틀 안내를 사전에 확인해야 합니다. 출발지에는 출발 시간 최소 90분 전 도착을 권장합니다.",
+      "souvenir": "ASICS 참가자 티셔츠, 완주메달, 배번호",
+      "program": "FULL 42.195km",
+      "memo": "2027년 제42회 ASICS Los Angeles Marathon입니다. 풀코스는 Dodger Stadium에서 출발해 Century City의 Santa Monica Blvd & Avenue of the Stars에서 완주합니다. 일반 참가자 출발은 오전 7시이며 제한시간은 마지막 참가자가 출발선을 통과한 시점부터 6시간 30분입니다. 참가자는 대회 당일 만 16세 이상이어야 하며, 만 18세 미만은 배번호 수령 시 부모 또는 법정대리인의 동의가 필요합니다. 참가 등록은 정원 소진 시 조기 마감됩니다."
+    },
+    "event": {
+      "startDate": "2027-03-07",
+      "endDate": "2027-03-07",
+      "startTime": "07:00",
+      "endTime": null,
+      "site": "https://www.mccourtfoundation.org/event/los-angeles-marathon/",
+      "schedule": {
+        "03:00": "주차장 및 보안 검색대 오픈",
+        "04:00": "물품보관소 오픈",
+        "05:00": "시드 코랄 A·B·C·D·E 오픈",
+        "06:30": "휠체어·핸드사이클·AWD 참가자 출발",
+        "06:40": "여자 프로 및 여자 엘리트 연령대 출발",
+        "07:00": "남자 프로 및 풀코스 전체 참가자 출발",
+        "08:15": "LA Charity Half Marathon 출발"
+      }
+    },
+    "registration": {
+      "startDate": null,
+      "endDate": null,
+      "startTime": null,
+      "endTime": null,
+      "site": "https://www.mccourtfoundation.org/event/los-angeles-marathon/register/",
+      "status": "접수중",
+      "currency": "USD",
+      "price": null,
+      "refund": {
+        "endDate": null,
+        "policy": "참가 등록 후에는 어떠한 사유로도 환불, 참가권 양도 또는 다음 대회로의 연기가 불가능합니다. 대회 취소, 거리 단축, 가상 대회 전환 또는 일정 변경의 경우에도 환불되지 않습니다."
+      }
+    },
+    "location": {
+      "country": "미국",
+      "region": "캘리포니아",
+      "venue": "Dodger Stadium",
+      "naver": null,
+      "address": "1000 Vin Scully Ave, Los Angeles, CA 90012, USA",
+      "latitude": null,
+      "longitude": null
+    },
+    "hosts": {
+      "organizer": "The McCourt Foundation",
+      "manager": "The McCourt Foundation",
+      "sponsor": "ASICS",
+      "phone": null,
+      "email": null,
+      "instagram": "lamarathon"
+    }
   }
 ]

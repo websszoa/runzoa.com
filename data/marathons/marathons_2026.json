@@ -21315,5 +21315,140 @@
       "email": "spon@eastern.or.kr",
       "instagram": null
     }
+  },
+  {
+    "slug": "jal-honolulu-marathon-2026",
+    "name": "호놀룰루 마라톤 2026",
+    "description": "JAL 호놀룰루 마라톤 2026은 미국 하와이 호놀룰루에서 펼쳐지는 세계적인 마라톤 대회입니다. 알라모아나 대로에서 불꽃놀이와 함께 출발해 호놀룰루 다운타운, 와이키키, 다이아몬드 헤드와 하와이 카이를 달린 뒤 카피올라니 공원에서 완주합니다. 풀코스와 10K 모두 제한시간이 없어 초보 러너부터 세계 각국의 러너까지 자신의 페이스로 하와이의 아름다운 풍경을 즐길 수 있습니다.",
+    "info": {
+      "type": "마라톤",
+      "scale": null,
+      "park": "대회 당일 출발지 주변 도로 통제가 진행되므로 와이키키에서 출발지까지 도보 이동을 권장합니다.",
+      "souvenir": "배번호 및 기록칩, 완주메달, 피니셔 티셔츠, 완주 후 말라사다 및 간식",
+      "program": "FULL 42.195km, Start to Park 10K",
+      "memo": "JAL 호놀룰루 마라톤은 참가 자격 기록이나 추첨 없이 신청할 수 있으며 참가 인원 제한도 없습니다. 풀코스와 Start to Park 10K 모두 공식 제한시간이 없어 마지막 참가자가 완주할 때까지 피니시 라인을 운영합니다. 풀코스 참가자는 만 7세 이상이어야 합니다. 배번호와 기록칩은 대회 전 Hawaii Convention Center에서 직접 수령해야 하며 우편 발송 및 대회 당일 수령은 불가능합니다."
+    },
+    "event": {
+      "startDate": "2026-12-13",
+      "endDate": "2026-12-13",
+      "startTime": "05:00",
+      "endTime": null,
+      "site": "https://www.honolulumarathon.org/",
+      "schedule": {
+        "05:00": "JAL 호놀룰루 마라톤 FULL 및 Start to Park 10K 출발"
+      }
+    },
+    "registration": {
+      "startDate": "2026-06-02",
+      "endDate": "2026-12-03",
+      "startTime": null,
+      "endTime": null,
+      "site": "https://www.honolulumarathon.org/key-information/how-to-enter",
+      "status": null,
+      "currency": "USD",
+      "price": {
+        "FULL(6.2~9.7)": 260,
+        "FULL(9.8~10.12)": 310,
+        "FULL(10.13~12.3)": 320,
+        "FULL(EXPO)": 460,
+        "10KM(6.2~9.7)": 110,
+        "10KM(9.8~10.12)": 120,
+        "10KM(10.13~12.3)": 130,
+        "10KM(EXPO)": 160
+      },
+      "refund": {
+        "endDate": null,
+        "policy": "일반 참가권은 환불 및 다음 연도 대회로의 연기가 불가능합니다. 참가 신청 시 별도의 Refund Protection을 구매한 경우 해당 보호 상품의 조건을 충족하면 환불을 신청할 수 있습니다."
+      }
+    },
+    "location": {
+      "country": "미국",
+      "region": "하와이",
+      "venue": "Ala Moana Boulevard / Queen Street Extension",
+      "naver": null,
+      "address": "Ala Moana Boulevard, Honolulu, Hawaii, USA",
+      "latitude": null,
+      "longitude": null
+    },
+    "hosts": {
+      "organizer": "Honolulu Marathon Association",
+      "manager": null,
+      "sponsor": "Japan Airlines",
+      "phone": null,
+      "email": null,
+      "instagram": null
+    }
+  },
+  {
+    "slug": "muang-thai-chiang-mai-marathon-2026",
+    "name": "무앙타이 치앙마이 마라톤 2026",
+    "description": "무앙타이 치앙마이 마라톤 2026은 태국 북부의 대표 관광도시 치앙마이에서 열리는 국제 마라톤 대회입니다. 역사적인 타패 게이트에서 출발해 치앙마이 올드시티와 주요 문화유산을 달리며, FULL·HALF·10K·3K 종목으로 진행됩니다. 비교적 평탄한 코스와 12~18℃의 선선한 예상 기온 속에서 치앙마이의 도시와 문화, 러닝을 함께 즐길 수 있는 해외 마라톤입니다.",
+    "info": {
+      "type": "마라톤",
+      "scale": 7300,
+      "park": "대회 당일 Metta Suksa School 및 Putthisophon School 주차장 이용 안내",
+      "souvenir": "참가 기념 러닝셔츠, 완주메달, 굿즈백, FULL 완주자 피니셔 티셔츠",
+      "program": "FULL 42.195km, HALF 21.1km, 10K, Smile Run 3K, Kids Run 3K",
+      "memo": "FULL은 03:00 출발 후 10:00까지 7시간, HALF는 04:00 출발 후 07:30까지 3시간 30분, 10K는 05:00 출발 후 06:30까지 1시간 30분의 제한시간이 적용됩니다. FULL과 HALF는 타패 게이트에서 출발해 Mae Rim의 King Naresuan the Great Monument에서 완주하며 무료 셔틀로 타패 게이트까지 복귀할 수 있습니다. 10K와 3K는 타패 게이트에서 출발 및 완주합니다."
+    },
+    "event": {
+      "startDate": "2026-12-20",
+      "endDate": "2026-12-20",
+      "startTime": "03:00",
+      "endTime": "10:00",
+      "site": "https://www.chiangmaimarathon.com/",
+      "schedule": {
+        "03:30": "10K 및 3K 물품보관 시작",
+        "04:00": "HALF 출발",
+        "05:00": "10K 출발",
+        "05:20": "Smile Run 3K 및 Kids Run 3K 출발",
+        "07:00": "10K 및 3K 시상식",
+        "07:30": "FULL 및 HALF 시상식"
+      }
+    },
+    "registration": {
+      "startDate": "2026-06-16",
+      "endDate": "2026-12-15",
+      "startTime": null,
+      "endTime": null,
+      "site": "https://www.chiangmaimarathon.com/",
+      "status": null,
+      "currency": "THB",
+      "price": {
+        "FULL(6.16~10.31)": 1500,
+        "FULL(11.1~11.20)": 2000,
+        "FULL(12.1~12.15)": 2500,
+        "HALF(6.16~10.31)": 1200,
+        "HALF(11.1~11.20)": 1500,
+        "HALF(12.1~12.15)": 2000,
+        "10KM(6.16~10.31)": 700,
+        "10KM(11.1~11.20)": 800,
+        "10KM(12.1~12.15)": 1000,
+        "3KM(6.16~10.31)": 600,
+        "3KM(11.1~11.20)": 700,
+        "3KM(12.1~12.15)": 800
+      },
+      "refund": {
+        "endDate": null,
+        "policy": "참가 신청 후 참가비는 어떠한 경우에도 환불되지 않습니다."
+      }
+    },
+    "location": {
+      "country": "태국",
+      "region": "치앙마이",
+      "venue": "Tha Phae Gate",
+      "naver": "타패 게이트",
+      "address": "Tha Phae Gate, Chiang Mai, Thailand",
+      "latitude": null,
+      "longitude": null
+    },
+    "hosts": {
+      "organizer": "JOG&JOY",
+      "manager": "JOG&JOY",
+      "sponsor": "Muang Thai Life Assurance",
+      "phone": "02-721-6008-9",
+      "email": "bkk@chiangmaimarathon.com",
+      "instagram": null
+    }
   }
 ]

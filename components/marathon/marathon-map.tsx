@@ -11,6 +11,7 @@ import {
   formatMarathonDate,
   formatMarathonPrices,
   getCurrentKoreanDate,
+  getMarathonDistances,
   getRegistrationBadgeClassName,
   getRegistrationLabel,
   getRegistrationStatus,
@@ -443,7 +444,7 @@ function MapRaceItem({
   onSelect: () => void;
 }) {
   const status = getRegistrationStatus(marathon);
-  const distances = Object.keys(marathon.registration.price ?? {});
+  const distances = getMarathonDistances(marathon.registration.price);
   return (
     <article
       id={`map-race-${marathon.slug}`}

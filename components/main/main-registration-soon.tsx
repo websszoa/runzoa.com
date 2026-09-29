@@ -4,6 +4,7 @@ import type { Marathon } from "@/lib/marathons";
 import {
   formatMarathonDate,
   formatMarathonPrices,
+  getMarathonDistances,
   getMarathonDDay,
   getRegistrationBadgeClassName,
   getRegistrationLabel,
@@ -78,8 +79,8 @@ export default function MainRegistrationSoon({
               )
                 ? "추가 접수"
                 : getRegistrationLabel(registrationStatus);
-              const distances = Object.keys(
-                marathon.registration.price ?? {},
+              const distances = getMarathonDistances(
+                marathon.registration.price,
               );
               const location = [
                 marathon.location.region,

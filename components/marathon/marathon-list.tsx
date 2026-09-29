@@ -39,6 +39,7 @@ import {
   formatMarathonPrices,
   getCurrentKoreanDate,
   getCurrentKoreanTodayLabel,
+  getMarathonDistances,
   getMarathonDDay,
   getRegistrationBadgeClassName,
   getRegistrationLabel,
@@ -586,7 +587,7 @@ export default function MarathonList({
 
 function MarathonListRow({ marathon }: { marathon: Marathon }) {
   const registrationStatus = getRegistrationStatus(marathon);
-  const distances = Object.keys(marathon.registration.price ?? {});
+  const distances = getMarathonDistances(marathon.registration.price);
   const site = marathon.event.site ?? marathon.registration.site;
   const weekday = formatMarathonDate(marathon.event.startDate).match(
     /\((.+)\)/,

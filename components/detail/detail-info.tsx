@@ -21,6 +21,7 @@ import {
 import {
   formatMarathonDate,
   formatMarathonPrices,
+  getMarathonDistances,
   getMarathonDDay,
 } from "@/lib/utils";
 
@@ -50,7 +51,7 @@ export default function DetailInfo({ marathon }: { marathon: Marathon }) {
   const location = [marathon.location.region, marathon.location.venue]
     .filter(Boolean)
     .join(" · ");
-  const distances = Object.keys(marathon.registration.price ?? {});
+  const distances = getMarathonDistances(marathon.registration.price);
   const registrationPrices = Object.fromEntries(
     Object.entries(marathon.registration.price ?? {}).filter(
       ([, price]) => price !== null,

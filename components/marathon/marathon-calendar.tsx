@@ -19,6 +19,7 @@ import {
   formatMarathonDate,
   formatMarathonPrices,
   getCurrentKoreanDate,
+  getMarathonDistances,
   getRegistrationBadgeClassName,
   getRegistrationLabel,
   getRegistrationStatus,
@@ -240,7 +241,7 @@ function RaceList({ marathons }: { marathons: Marathon[] }) {
     <div className="divide-y overflow-hidden rounded-2xl border bg-card">
       {marathons.map((marathon) => {
         const status = getRegistrationStatus(marathon);
-        const distances = Object.keys(marathon.registration.price ?? {});
+        const distances = getMarathonDistances(marathon.registration.price);
         return (
           <article
             key={marathon.slug}

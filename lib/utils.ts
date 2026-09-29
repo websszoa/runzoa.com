@@ -109,6 +109,23 @@ export function formatMarathonPrices(
   return values.slice(0, 2).join(", ");
 }
 
+export function getMarathonDistances(
+  prices: Record<string, number | string | null> | null,
+) {
+  return [
+    ...new Set(
+      Object.keys(prices ?? {}).map((distance) =>
+        distance
+          .replace(
+            /\s*\(\s*\d{1,2}\.\d{1,2}\s*[~～-]\s*\d{1,2}\.\d{1,2}\s*\)\s*$/,
+            "",
+          )
+          .trim(),
+      ),
+    ),
+  ].filter(Boolean);
+}
+
 export function formatCurrency(price: number, currency = "KRW") {
   const normalizedCurrency = currency.toUpperCase();
 

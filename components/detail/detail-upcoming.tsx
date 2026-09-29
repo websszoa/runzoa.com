@@ -12,6 +12,7 @@ import {
 import {
   formatMarathonDate,
   formatMarathonPrices,
+  getMarathonDistances,
   getMarathonDDay,
   getRegistrationBadgeClassName,
   getRegistrationLabel,
@@ -47,7 +48,7 @@ export default function DetailUpcoming({
           const registrationLabel = schedules.some((schedule) => schedule.isAdditional)
             ? "추가 접수"
             : getRegistrationLabel(registrationStatus);
-          const distances = Object.keys(marathon.registration.price ?? {});
+          const distances = getMarathonDistances(marathon.registration.price);
           const location = [marathon.location.region, marathon.location.venue]
             .filter(Boolean)
             .join(" · ");

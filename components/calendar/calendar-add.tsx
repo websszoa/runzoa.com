@@ -31,6 +31,7 @@ import DialogAccountNotice from "@/components/dialog/dialog-account-notice";
 import {
   formatMarathonDate,
   formatMarathonPrices,
+  getMarathonDistances,
   getMarathonDDay,
   getRegistrationBadgeClassName,
   getRegistrationLabel,
@@ -236,8 +237,8 @@ export default function CalendarAdd({
                     const added = (provider === "kakao" ? kakaoAddedSlugs : provider === "google" ? googleAddedSlugs : addedSlugs).has(marathon.slug);
                     const pending = pendingSlug === marathon.slug;
                     const registrationStatus = getRegistrationStatus(marathon);
-                    const distances = Object.keys(
-                      marathon.registration.price ?? {},
+                    const distances = getMarathonDistances(
+                      marathon.registration.price,
                     );
                     const weekday = formatMarathonDate(
                       marathon.event.startDate,
