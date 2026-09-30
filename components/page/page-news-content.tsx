@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 import {
   ArrowRight,
   CalendarDays,
@@ -101,31 +102,44 @@ export default async function PageNewsContent({ item }: PageNewsContentProps) {
                 <Link
                   key={post.title}
                   href={getPostHref(post)}
-                  className="group flex min-h-64 flex-col rounded-2xl border bg-background p-5 transition-[border-color,transform] hover:-translate-y-0.5 hover:border-brand/30 sm:p-6"
+                  className="group flex min-h-64 flex-col overflow-hidden rounded-2xl border bg-background transition-[border-color,transform] hover:-translate-y-0.5 hover:border-brand/30"
                 >
-                  <div className="flex items-center justify-between gap-3">
-                    <span className="rounded-full bg-brand/10 px-3 py-1 font-anyvid text-xs font-medium text-brand">
-                      {post.category}
-                    </span>
-                    <span className="flex items-center gap-1.5 font-anyvid text-xs text-muted-foreground">
-                      <CalendarDays aria-hidden="true" className="size-3.5" />
-                      {post.date}
-                    </span>
-                  </div>
-                  <div className="mt-auto pt-10">
-                    <h3 className="break-keep font-paperlogy font-semibold text-xl leading-7">
-                      {post.title}
-                    </h3>
-                    <p className="mt-3 line-clamp-5 break-keep font-anyvid text-sm leading-6 text-muted-foreground">
-                      {post.description}
-                    </p>
-                    <span className="mt-5 inline-flex items-center gap-1.5 font-anyvid text-sm font-medium text-brand">
-                      글 읽기
-                      <ArrowRight
-                        aria-hidden="true"
-                        className="size-4 transition-transform group-hover:translate-x-0.5"
+                  {post.type === "blog" && post.image && (
+                    <div className="relative aspect-video overflow-hidden bg-muted">
+                      <Image
+                        src={post.image}
+                        alt=""
+                        fill
+                        sizes="(min-width: 1280px) 400px, (min-width: 640px) 50vw, 100vw"
+                        className="object-cover transition-transform duration-300 group-hover:scale-[1.03]"
                       />
-                    </span>
+                    </div>
+                  )}
+                  <div className="flex flex-1 flex-col p-5 sm:p-6">
+                    <div className="flex items-center justify-between gap-3">
+                      <span className="rounded-full bg-brand/10 px-3 py-1 font-anyvid text-xs font-medium text-brand">
+                        {post.category}
+                      </span>
+                      <span className="flex items-center gap-1.5 font-anyvid text-xs text-muted-foreground">
+                        <CalendarDays aria-hidden="true" className="size-3.5" />
+                        {post.date}
+                      </span>
+                    </div>
+                    <div className="mt-auto pt-8">
+                      <h3 className="break-keep font-paperlogy font-semibold text-xl leading-7">
+                        {post.title}
+                      </h3>
+                      <p className="mt-3 line-clamp-5 break-keep font-anyvid text-sm leading-6 text-muted-foreground">
+                        {post.description}
+                      </p>
+                      <span className="mt-5 inline-flex items-center gap-1.5 font-anyvid text-sm font-medium text-brand">
+                        글 읽기
+                        <ArrowRight
+                          aria-hidden="true"
+                          className="size-4 transition-transform group-hover:translate-x-0.5"
+                        />
+                      </span>
+                    </div>
                   </div>
                 </Link>
               ))}

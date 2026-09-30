@@ -17,6 +17,7 @@ export type NewsPostMetadata = {
   title: string;
   description: string;
   date: string;
+  image?: string;
   updated?: string;
   toc?: readonly {
     id: string;

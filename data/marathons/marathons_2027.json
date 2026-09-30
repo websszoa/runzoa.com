@@ -318,5 +318,66 @@
       "email": null,
       "instagram": "lamarathon"
     }
+  },
+  {
+    "slug": "dubai-marathon-2027",
+    "name": "두바이 마라톤 2027",
+    "description": "두바이 마라톤 2027은 아랍에미리트 두바이에서 열리는 중동 대표 국제 마라톤입니다. 26회를 맞는 이번 대회는 42.195K 풀코스와 10K 로드레이스, 4K 펀런으로 구성되며 부르즈 알 아랍과 주메이라 해변 일대 등 두바이의 대표적인 풍경을 배경으로 달립니다. 빠르고 평탄한 도심 코스와 1월의 비교적 선선한 날씨를 경험할 수 있는 해외 러닝 대회입니다.",
+    "info": {
+      "type": "마라톤",
+      "scale": null,
+      "park": "출발·도착지 인근 주차는 권장하지 않으며 대중교통 이용을 권장합니다.",
+      "souvenir": "공식 레이스 티셔츠, 완주메달, 완주증",
+      "program": "FULL, 10KM, 4KM",
+      "memo": "FULL은 만 18세 이상, 10KM는 만 15세 이상 참가할 수 있으며 4KM는 연령 제한이 없습니다. FULL 제한시간은 6시간입니다. 전자 기록측정 시스템 MikaTag를 사용합니다."
+    },
+    "event": {
+      "startDate": "2027-01-17",
+      "endDate": "2027-01-17",
+      "startTime": "05:45",
+      "endTime": null,
+      "site": "https://www.dubaimarathon.org/",
+      "schedule": {
+        "05:45": "FULL 엘리트 출발",
+        "06:30": "FULL 일반 참가자 출발",
+        "08:00": "10KM 로드레이스 출발",
+        "10:00": "4KM 펀런 출발"
+      }
+    },
+    "registration": {
+      "startDate": "2026-07-03",
+      "endDate": null,
+      "startTime": null,
+      "endTime": null,
+      "site": "https://www.dubaimarathon.org/race-info/how-to-register/",
+      "status": null,
+      "currency": "USD",
+      "price": {
+        "FULL": 150,
+        "10KM": 85,
+        "4KM": 50
+      },
+      "refund": {
+        "endDate": null,
+        "policy": "참가하지 않거나 어떠한 사유로 대회가 취소되는 경우에도 참가비 환불 및 참가권 양도가 불가합니다."
+      }
+    },
+    "location": {
+      "country": "아랍에미리트",
+      "region": "두바이",
+      "venue": "Umm Suqeim · Al Sufouh 일대",
+      "naver": null,
+      "address": "Dubai, United Arab Emirates",
+      "latitude": null,
+      "longitude": null
+    },
+    "hosts": {
+      "organizer": "Dubai Marathon",
+      "manager": null,
+      "sponsor": "ASICS",
+      "phone": null,
+      "email": "info@pace-events.org",
+      "instagram": null
+    }
   }
 ]
