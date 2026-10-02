@@ -21729,5 +21729,114 @@
       "email": "vmhanoi@vnexpress.net",
       "instagram": null
     }
+  },
+  {
+    "slug": "istanbul-marathon-2026",
+    "name": "이스탄불 마라톤 2026",
+    "description": "이스탄불 마라톤 2026은 튀르키예 이스탄불에서 열리는 대표적인 국제 마라톤입니다. 아시아에서 출발해 15 Temmuz Şehitler Köprüsü를 건너 유럽으로 달리는 독특한 42.195K 코스로, 보스포루스 해협과 돌마바흐체 궁전, 갈라타 다리 등 이스탄불의 주요 명소를 지나 술탄아흐메트에서 완주하는 특별한 레이스입니다.",
+    "info": {
+      "type": "마라톤",
+      "scale": null,
+      "park": null,
+      "souvenir": "완주메달",
+      "program": "FULL",
+      "memo": "FULL은 대회일 기준 만 18세 이상 참가할 수 있습니다. 최근 2년 이내 FULL 6시간 20분 또는 HALF 3시간 25분 이내, 최근 1년 이내 15K 2시간 15분 이내 기록 중 하나를 충족해야 합니다. FULL은 6시간 20분 이내 완주 시 완주메달이 제공됩니다. 현재 42K 참가 등록은 정원이 모두 소진되어 마감되었습니다."
+    },
+    "event": {
+      "startDate": "2026-11-01",
+      "endDate": "2026-11-01",
+      "startTime": null,
+      "endTime": null,
+      "site": "https://maraton.istanbul/",
+      "schedule": null
+    },
+    "registration": {
+      "startDate": "2026-01-06",
+      "endDate": "2026-10-13",
+      "startTime": null,
+      "endTime": null,
+      "site": "https://maraton.istanbul/marathon-42k-run/?lang=en",
+      "status": null,
+      "currency": "EUR",
+      "price": {
+        "FULL(1.6~1.31)": 60,
+        "FULL(2.1~5.31)": 80,
+        "FULL(6.1~7.31)": 100,
+        "FULL(8.1~10.13)": 120
+      },
+      "refund": null
+    },
+    "location": {
+      "country": "튀르키예",
+      "region": "이스탄불",
+      "venue": "15 Temmuz Şehitler Köprüsü",
+      "naver": null,
+      "address": "15 Temmuz Şehitler Köprüsü, Istanbul, Türkiye",
+      "latitude": null,
+      "longitude": null
+    },
+    "hosts": {
+      "organizer": "İstanbul Büyükşehir Belediyesi",
+      "manager": "Spor İstanbul",
+      "sponsor": "Türkiye İş Bankası",
+      "phone": null,
+      "email": null,
+      "instagram": null
+    }
+  },
+  {
+    "slug": "k-geosang-trail-running-2026",
+    "name": "2026 K-거상 트레일 러닝 대회",
+    "description": "2026 K-거상 트레일 러닝 대회는 경남 의령의 자연과 지역의 역사·이야기를 함께 경험하며 달리는 트레일러닝 대회입니다. 의령 가례초등학교를 중심으로 19KM, 16KM, 4KM 코스가 운영되며, 초보 러너부터 트레일러닝에 도전하는 참가자까지 자신의 수준에 맞는 코스를 선택해 경남의 자연을 달릴 수 있습니다.",
+    "info": {
+      "type": "트레일러닝",
+      "scale": 1000,
+      "park": null,
+      "souvenir": null,
+      "program": "20KM, 15KM, 5KM",
+      "memo": "참가비 입금 순으로 선착순 1,000명을 모집하며 모집 인원이 충족되면 접수 기간 이전에도 조기 마감될 수 있습니다. 20KM와 15KM는 남자 청년부·장년부 및 여자 일반부, 5KM는 남녀 일반부로 운영됩니다."
+    },
+    "event": {
+      "startDate": "2026-11-21",
+      "endDate": "2026-11-21",
+      "startTime": "09:00",
+      "endTime": null,
+      "site": "https://www.kpioneertrailrun.co.kr/",
+      "schedule": {
+        "08:00": "참가자 집결",
+        "09:00": "대회 출발"
+      }
+    },
+    "registration": {
+      "startDate": "2026-09-28",
+      "endDate": "2026-10-23",
+      "startTime": "10:00",
+      "endTime": "23:59",
+      "site": "https://www.kpioneertrailrun.co.kr/",
+      "status": null,
+      "price": {
+        "20KM": 60000,
+        "15KM": 55000,
+        "5KM": 50000
+      },
+      "refund": null
+    },
+    "location": {
+      "country": "한국",
+      "region": "경남",
+      "venue": "의령 가례초등학교",
+      "naver": "가례초등학교",
+      "address": "경남 의령군 가례면 가례로 128",
+      "latitude": 35.3333428,
+      "longitude": 128.2464399
+    },
+    "hosts": {
+      "organizer": "경상남도·진주시·의령군·함안군",
+      "manager": "경남관광재단",
+      "sponsor": null,
+      "phone": "070-4443-4392",
+      "email": "dain-comm@naver.com",
+      "instagram": null
+    }
   }
 ]

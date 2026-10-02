@@ -379,5 +379,121 @@
       "email": "info@pace-events.org",
       "instagram": null
     }
+  },
+  {
+    "slug": "generali-berlin-marathon-2027",
+    "name": "베를린 마라톤 2027",
+    "description": "GENERALI 베를린 마라톤 2027은 독일 베를린에서 열리는 세계적인 국제 마라톤입니다. 빠르고 평탄한 42.195K 코스를 따라 베를린 도심을 달리고 브란덴부르크 문을 향해 결승선을 통과하는 상징적인 레이스입니다. 전 세계 러너들이 참가하는 메이저 마라톤으로 일반 참가자는 추첨을 통해 참가권을 배정받습니다.",
+    "info": {
+      "type": "마라톤",
+      "scale": null,
+      "park": "대중교통 이용 권장",
+      "souvenir": "완주메달, 개인 완주증, 피니셔 판초",
+      "program": "FULL",
+      "memo": "일반 참가권은 추첨 방식으로 배정됩니다. 2009년생 이전 출생자가 참가할 수 있으며 제한시간은 6시간 15분입니다. 참가비에는 베를린 A·B·C 구역에서 이용 가능한 4일 대중교통 이용권, 페이스메이커, 개인 완주증, 피니셔 판초, 코스 및 결승 구역 마사지 서비스가 포함됩니다."
+    },
+    "event": {
+      "startDate": "2027-09-26",
+      "endDate": "2027-09-26",
+      "startTime": "08:45",
+      "endTime": null,
+      "site": "https://www.generali-berlin-marathon.com/",
+      "schedule": {
+        "08:45": "Wave 1 · A, B, C 출발",
+        "09:05": "Wave 2 · D, E 출발",
+        "09:33": "Wave 3 · F, G 출발",
+        "10:02": "Wave 4 · H 출발",
+        "10:12": "Wave 5 · J 출발",
+        "10:27": "Wave 6 · K 출발"
+      }
+    },
+    "registration": {
+      "startDate": "2026-10-01",
+      "endDate": "2026-11-12",
+      "startTime": null,
+      "endTime": "23:59",
+      "site": "https://www.generali-berlin-marathon.com/en/registration/run",
+      "status": null,
+      "currency": "EUR",
+      "price": {
+        "FULL": 215
+      },
+      "refund": {
+        "endDate": null,
+        "policy": "참가비는 환불되지 않으며 참가권을 다른 사람에게 양도하거나 다음 연도로 이전할 수 없습니다. 참가 신청 시 별도의 GENERALI 참가 취소 보험을 선택할 수 있습니다."
+      }
+    },
+    "location": {
+      "country": "독일",
+      "region": "베를린",
+      "venue": "Straße des 17. Juni",
+      "naver": null,
+      "address": "Straße des 17. Juni, Berlin, Germany",
+      "latitude": null,
+      "longitude": null
+    },
+    "hosts": {
+      "organizer": "SCC EVENTS",
+      "manager": "SCC EVENTS",
+      "sponsor": "Generali",
+      "phone": null,
+      "email": null,
+      "instagram": null
+    }
+  },
+  {
+    "slug": "chicago-marathon-2027",
+    "name": "시카고 마라톤 2027",
+    "description": "Bank of America 시카고 마라톤 2027은 미국 시카고에서 열리는 세계적인 국제 마라톤입니다. 시카고 도심과 다양한 지역을 연결하는 빠르고 평탄한 42.195K 코스를 달리는 대회로, 세계 정상급 엘리트 선수부터 전 세계 러너들이 함께합니다. 일반 참가자는 추첨을 통해 참가권을 받을 수 있으며 기록 자격, 자선단체, 공식 투어 등 다양한 보장 참가 방법도 운영됩니다.",
+    "info": {
+      "type": "마라톤",
+      "scale": null,
+      "park": null,
+      "souvenir": null,
+      "program": "FULL",
+      "memo": "일반 참가자는 추첨 방식으로 참가권이 배정됩니다. 만 16세 이상 참가할 수 있으며 만 18세 미만 참가자는 부모 또는 법정대리인을 통해 등록해야 합니다. 기록 자격, Charity Program, 공식 Tour Operator, Legacy Finisher 등 다양한 보장 참가 방법이 운영됩니다."
+    },
+    "event": {
+      "startDate": "2027-10-10",
+      "endDate": "2027-10-10",
+      "startTime": null,
+      "endTime": null,
+      "site": "https://www.chicagomarathon.com/",
+      "schedule": null
+    },
+    "registration": {
+      "startDate": "2026-10-08",
+      "endDate": "2026-10-29",
+      "startTime": "08:00",
+      "endTime": "14:00",
+      "site": "https://www.chicagomarathon.com/apply/",
+      "status": null,
+      "currency": "USD",
+      "price": {
+        "FULL(미국 거주자)": 250,
+        "FULL(해외 참가자)": 260
+      },
+      "refund": {
+        "endDate": "2027-10-06",
+        "policy": "등록 참가자는 2027년 10월 6일까지 참가를 취소하고 2028년 대회의 보장 참가권을 받을 수 있으나 2027년 참가비와 부가상품 비용은 환불되지 않으며 2028년 참가비를 다시 납부해야 합니다. Charity 또는 Tour Operator 참가자 등 일부 참가 방식에는 해당되지 않습니다. 신청 과정에서 별도의 refundable booking 옵션을 선택할 수 있습니다."
+      }
+    },
+    "location": {
+      "country": "미국",
+      "region": "일리노이",
+      "venue": "Grant Park",
+      "naver": null,
+      "address": "Chicago, IL, USA",
+      "latitude": null,
+      "longitude": null
+    },
+    "hosts": {
+      "organizer": "Chicago Event Management",
+      "manager": null,
+      "sponsor": "Bank of America",
+      "phone": null,
+      "email": "office@chicagomarathon.com",
+      "instagram": "chimarathon"
+    }
   }
 ]
