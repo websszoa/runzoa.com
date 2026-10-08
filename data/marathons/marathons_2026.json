@@ -22404,5 +22404,168 @@
       "email": null,
       "instagram": "mexicana_official"
     }
+  },
+  {
+    "slug": "beatempo-korea-2026",
+    "name": "비템포 코리아 2026",
+    "description": "BEATEMPO KOREA 2026 × F45는 경기 고양 KINTEX 제2전시장에서 열리는 참여형 스포츠 페스티벌입니다. 5KM·10KM 러닝을 즐기는 BEATEMPO 150을 비롯해 F45 피트니스 레이스, 선명상·요가·FS8, NIGHT FUN RUN과 음악 공연까지 러닝·피트니스·웰니스·뮤직을 한 공간에서 경험할 수 있습니다.",
+    "info": {
+      "type": "마라톤",
+      "scale": null,
+      "park": "KINTEX 주차장 이용 가능(유료)",
+      "souvenir": null,
+      "program": "BEATEMPO 150(5KM·10KM RUN), BEATEMPO 180 × PEAK 500, BEATEMPO 110(SEON MEDITATION·YOGA·FS8), NIGHT FUN RUN & ANTIDOTE",
+      "memo": "러닝, F45 PEAK 500, 선명상·요가, 음악과 커뮤니티가 결합된 실내형 스포츠 페스티벌입니다. 프로그램별 모집 인원은 선착순으로 조기 마감될 수 있으며 세부 일정, 운영시간, 공간 배치 및 제공 물품은 변경될 수 있습니다."
+    },
+    "event": {
+      "startDate": "2026-12-25",
+      "endDate": "2026-12-27",
+      "startTime": null,
+      "endTime": null,
+      "site": "https://www.beatempokorea.com/home/",
+      "schedule": null
+    },
+    "registration": {
+      "startDate": "2026-10-06",
+      "endDate": "2026-10-11",
+      "startTime": null,
+      "endTime": null,
+      "site": "https://www.beatempokorea.com/home/",
+      "status": null,
+      "price": {
+        "실내 5KM": 55000,
+        "실내 10KM": 70000
+      },
+      "refund": {
+        "endDate": null,
+        "policy": "티켓 취소 및 환불은 구매한 티켓 판매 플랫폼의 정책과 행사 운영 규정에 따라 처리됩니다. 행사 당일 현장 환불은 불가하며 개인 사정, 지각, 불참, 단순 변심 등은 환불 사유에 해당하지 않을 수 있습니다."
+      }
+    },
+    "location": {
+      "country": "한국",
+      "region": "경기",
+      "venue": "KINTEX 제2전시장 7·8홀 및 부속 공간",
+      "naver": "킨텍스 제2전시장",
+      "address": "경기 고양시 일산서구 킨텍스로 217-60",
+      "latitude": 37.6646954,
+      "longitude": 126.7420642
+    },
+    "hosts": {
+      "organizer": "BEATEMPO KOREA",
+      "manager": null,
+      "sponsor": null,
+      "phone": null,
+      "email": null,
+      "instagram": null
+    }
+  },
+  {
+    "slug": "econow-run-2026",
+    "name": "2026 에코나우 런",
+    "description": "2026 ECONOW RUN은 서울 뚝섬한강공원에서 열리는 친환경 5KM 비경쟁 러닝 행사입니다. 기록 경쟁보다 함께 달리며 환경의 가치를 경험하는 데 초점을 맞춘 행사로, 폐지를 활용한 배번호와 재생 플라스틱 완주 메달, 다회용 급수컵 등을 운영합니다. 선착순 300명의 참가비는 미래세대를 위한 환경교육 활동에 사용됩니다.",
+    "info": {
+      "type": "마라톤",
+      "scale": 300,
+      "park": null,
+      "souvenir": "재생 플라스틱 완주 메달",
+      "program": "5KM 비경쟁 러닝, 친환경 캠페인",
+      "memo": "기록칩과 공식 기록 측정 없이 진행되는 5KM 비경쟁 러닝입니다. 폐지를 활용한 배번호, 재생 플라스틱 완주 메달, 다회용 급수컵 등을 사용하며 참가자는 개인컵과 기념품을 담을 가방을 지참하는 것을 권장합니다. 참가비는 미래세대를 위한 환경교육 활동에 사용됩니다."
+    },
+    "event": {
+      "startDate": "2026-11-15",
+      "endDate": "2026-11-15",
+      "startTime": "09:00",
+      "endTime": null,
+      "site": "https://econow.campaignus.me/econow_run",
+      "schedule": {
+        "08:00": "참가자 집결 및 현장 운영",
+        "08:30": "체크인 및 준비운동",
+        "09:00": "5KM 비경쟁 러닝 출발"
+      }
+    },
+    "registration": {
+      "startDate": "2026-10-01",
+      "endDate": "2026-11-08",
+      "startTime": null,
+      "endTime": null,
+      "site": "https://econow.campaignus.me/econow_run",
+      "status": null,
+      "price": {
+        "5KM": 30000
+      },
+      "refund": {
+        "endDate": "2026-11-08",
+        "policy": "11월 8일까지 참가 취소 및 변경이 가능한 것으로 안내되어 있으며, 세부 환불 조건은 공식 신청 페이지에서 확인이 필요합니다."
+      }
+    },
+    "location": {
+      "country": "한국",
+      "region": "서울",
+      "venue": "뚝섬한강공원 수변무대",
+      "naver": "뚝섬한강공원 수변무대",
+      "address": "서울특별시 광진구 자양동 427-6",
+      "latitude": 37.5288978,
+      "longitude": 127.0692186
+    },
+    "hosts": {
+      "organizer": "에코나우",
+      "manager": null,
+      "sponsor": null,
+      "phone": null,
+      "email": null,
+      "instagram": null
+    }
+  },
+  {
+    "slug": "yeosu-expo-night-run-2026",
+    "name": "2026 여수 엑스포 나이트런",
+    "description": "2026 여수 엑스포 나이트런은 11월 14일부터 15일까지 전남 여수시 엑스포광장에서 개최되는 야간 러닝 페스티벌입니다. 여수의 아름다운 밤바다와 화려한 야경을 배경으로 달리는 4KM와 10KM 코스로 구성되며, 10KM 경쟁 부문도 별도로 운영됩니다. 참가자에게 스포츠 더플백, 헤어밴드, 완주 수건 등 다양한 기념품이 제공되며, 야간 러닝의 특별한 분위기를 즐길 수 있는 행사입니다.",
+    "info": {
+      "type": "마라톤",
+      "scale": null,
+      "park": "여수엑스포역 공영주차장, 여수엑스포역 주차장, 엑스포컨벤션센터 주차장, 박람회장정문 공영주차장, 덕충동엑스포타운 주차장 이용 가능(요금 확인 필요)",
+      "souvenir": "4KM: SA 스포츠 더플백, 오스무브 헤어밴드, 배번호, 완주 수건, 파워풀엑스 크림 2매, 아리수(맛 랜덤). 10KM: SA 스포츠 더플백, 오스무브 헤어밴드, 완주 메달, LED 암밴드(색상 랜덤), 완주 수건, 파워풀엑스 크림 2매, 아리수(맛 랜덤), 배번호",
+      "program": "4KM 나이트런, 10KM 나이트런, 10KM 경쟁 부문",
+      "memo": "여수 엑스포광장에서 개최되는 야간 러닝 행사입니다. 10KM는 일반 부문과 경쟁 부문으로 구분되며 참가비가 다릅니다. 참가자격은 신체 건강한 남녀입니다. 기념품 및 현장 보급품은 현지 사정에 따라 변경될 수 있습니다. 11월 14일과 15일 중 종목별 정확한 출발 날짜 및 시간은 공식 안내 확인이 필요합니다."
+    },
+    "event": {
+      "startDate": "2026-11-14",
+      "endDate": "2026-11-15",
+      "startTime": null,
+      "endTime": null,
+      "site": "https://speedagency.co.kr/speedrun",
+      "schedule": null
+    },
+    "registration": {
+      "startDate": "2026-10-08",
+      "endDate": null,
+      "startTime": "10:00",
+      "endTime": null,
+      "site": "https://speedagency.co.kr/speedrun",
+      "status": null,
+      "price": {
+        "4KM": 40000,
+        "10KM": 60000,
+        "10KM 경쟁": 70000
+      },
+      "refund": null
+    },
+    "location": {
+      "country": "한국",
+      "region": "전남",
+      "venue": "여수시 엑스포광장",
+      "naver": "여수세계박람회장 엑스포광장",
+      "address": null,
+      "latitude": null,
+      "longitude": null
+    },
+    "hosts": {
+      "organizer": null,
+      "manager": "스피드에이전시",
+      "sponsor": "신라스테이 여수, iGPSPORT, 소노캄 여수, tradelab, Kabuto, Carbo Energy, pedla, PowerfulX",
+      "phone": null,
+      "email": null,
+      "instagram": null
+    }
   }
 ]
