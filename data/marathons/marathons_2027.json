@@ -781,5 +781,187 @@
       "email": null,
       "instagram": null
     }
+  },
+  {
+    "slug": "yeonggwang-gwangpung-marathon-2027",
+    "name": "제3회 영광 광풍 마라톤대회",
+    "description": "제3회 영광 광풍 마라톤대회는 2027년 3월 28일 전남 영광군 영광스포티움에서 개최되는 전국 마라톤 대회입니다. HALF·10KM·5KM 종목으로 진행되며, 남녀 2명이 함께 참가하는 10KM 짝꿍런과 영광군민을 위한 5KM 특별 참가 부문도 운영됩니다. 선착순 7,000명을 모집하며, HALF와 10KM 참가자에게는 지역상품권이 제공됩니다. 영광의 봄을 달리며 건강과 즐거움을 함께 나누는 러닝 축제입니다.",
+    "info": {
+      "type": "마라톤",
+      "scale": 7000,
+      "park": null,
+      "souvenir": "월드런 반팔 티셔츠, 완주메달, 모바일 기록증. HALF·10KM 참가자에게 지역상품권 5,000원 제공",
+      "program": "HALF, 10KM, 10KM 짝꿍런, 5KM, 5KM 영광군민 부문",
+      "memo": "선착순 7,000명 모집으로 조기 마감될 수 있으며 참가신청과 참가비 입금을 모두 완료해야 정상 접수됩니다. 10KM 짝꿍런은 남녀 2인 1팀으로 단체 접수만 가능합니다. HALF·10KM는 만 15세 이상 참가할 수 있으며, 5KM 영광군민 할인은 해당 부문 신청자에게만 적용됩니다. 대회 당일 현장 접수는 불가합니다."
+    },
+    "event": {
+      "startDate": "2027-03-28",
+      "endDate": "2027-03-28",
+      "startTime": "08:30",
+      "endTime": null,
+      "site": "https://mara1080.com/event/92394e8e-a27c-4c3a-b286-7233340a9e7a",
+      "schedule": {
+        "07:30": "참가자 집결",
+        "08:30": "마라톤 출발"
+      }
+    },
+    "registration": {
+      "startDate": "2026-09-17",
+      "endDate": null,
+      "startTime": null,
+      "endTime": null,
+      "site": "https://mara1080.com/event/92394e8e-a27c-4c3a-b286-7233340a9e7a",
+      "status": null,
+      "price": {
+        "HALF": 50000,
+        "10KM": 50000,
+        "5KM": 35000,
+        "5KM(영광군민)": 20000
+      },
+      "refund": {
+        "endDate": null,
+        "policy": "공식 접수 최종 마감일까지 홈페이지 참가신청 조회에서 환불 신청이 가능하며, 환불 요청 후 약 3주 이내 처리됩니다. 접수 마감 이후에는 참가 취소, 환불 및 정보 변경이 불가능합니다. 최종 환불 마감일은 공식 공지 확인이 필요합니다."
+      }
+    },
+    "location": {
+      "country": "한국",
+      "region": "전남",
+      "venue": "영광스포티움",
+      "naver": null,
+      "address": "전남광주통합특별시 영광군 영광읍 월현로 170",
+      "latitude": 35.289575,
+      "longitude": 126.4964875
+    },
+    "hosts": {
+      "organizer": "영광군민의날 추진위원회",
+      "manager": "전국마라톤협회",
+      "sponsor": null,
+      "phone": "042-638-1080",
+      "email": "jeonmahyeop@naver.com",
+      "instagram": null
+    }
+  },
+  {
+    "slug": "cheongju-musimcheon-2day-marathon-2027",
+    "name": "2027 전마협 청주무심천 투데이 마라톤대회",
+    "description": "2027 전마협 청주무심천 투데이 마라톤대회는 2027년 2월 21일 충북 청주시 무심천 롤러스케이트장에서 개최되는 마라톤 대회입니다. 무심천 일대를 배경으로 FULL·HALF·10KM·5KM 종목이 진행되며, 선착순 4,000명을 모집합니다. 참가자는 기능성 티셔츠와 월드런 국민마라톤화 중 원하는 기념품을 선택할 수 있으며, 전 종목 완주메달과 모바일 기록증이 제공됩니다. 청주의 도심 하천을 따라 달리며 건강과 도전의 즐거움을 나누는 러닝 행사입니다.",
+    "info": {
+      "type": "마라톤",
+      "scale": 4000,
+      "park": null,
+      "souvenir": "기능성 긴팔 티셔츠 또는 월드런 국민마라톤화(종목별 선택), 전 종목 완주메달, 모바일(웹) 기록증",
+      "program": "FULL, HALF, 10KM, 5KM 마라톤",
+      "memo": "선착순 4,000명 모집으로 참가 신청과 입금 완료순 마감됩니다. 5KM는 걸을 수 있는 유아부터 참가 가능하며, 10KM는 중학생 이상, HALF·FULL은 만 18세 이상 참가 가능합니다. 제한시간은 5KM 1시간, 10KM 2시간, HALF 3시간, FULL 5시간입니다. FULL 참가자는 반환점을 2시간 45분 이내에 통과해야 하며, 제한시간을 초과하면 회송 차량에 탑승해야 합니다. 마라톤화 선택 시 입금 확인 후 3일 이내 발송되며, 일반 물품은 대회 5일 전 배송됩니다."
+    },
+    "event": {
+      "startDate": "2027-02-21",
+      "endDate": "2027-02-21",
+      "startTime": "09:00",
+      "endTime": null,
+      "site": "https://mara1080.com/event/b1aef378-cf4a-43b9-b2fd-a2d1ae33bc15",
+      "schedule": {
+        "08:00": "참가자 집결",
+        "09:00": "마라톤 출발"
+      }
+    },
+    "registration": {
+      "startDate": "2026-09-21",
+      "endDate": null,
+      "startTime": null,
+      "endTime": null,
+      "site": "https://mara1080.com/event/b1aef378-cf4a-43b9-b2fd-a2d1ae33bc15",
+      "status": null,
+      "price": {
+        "5KM": 35000,
+        "10KM(티셔츠)": 50000,
+        "10KM(마라톤화)": 99000,
+        "HALF(티셔츠)": 50000,
+        "HALF(마라톤화)": 99000,
+        "FULL(티셔츠)": 55000,
+        "FULL(마라톤화)": 104000
+      },
+      "refund": {
+        "endDate": null,
+        "policy": "참가 신청 접수 마감일까지 홈페이지 참가신청 조회에서 환불 신청이 가능합니다. 접수 마감 후에는 취소·변경·환불이 불가능합니다. 공제 비용 확인 후 신청 계좌로 환불되며, 환불 처리는 접수 마감일로부터 약 3주 이내에 진행됩니다. 천재지변이나 자연재해로 대회가 취소되는 경우 참가비는 환불되지 않으며 기념품은 발송됩니다."
+      }
+    },
+    "location": {
+      "country": "한국",
+      "region": "충북",
+      "venue": "청주 무심천 롤러스케이트장",
+      "naver": null,
+      "address": "충청북도 청주시 서원구 사직동 95",
+      "latitude": 36.6389024,
+      "longitude": 127.4831852
+    },
+    "hosts": {
+      "organizer": "전국마라톤협회",
+      "manager": "전국마라톤협회",
+      "sponsor": "월드런, 전사모",
+      "phone": "042-638-1080",
+      "email": null,
+      "instagram": null
+    }
+  },
+  {
+    "slug": "garmin-run-japan-2027",
+    "name": "가민런 JAPAN 2027",
+    "description": "GARMIN RUN JAPAN 2027은 2027년 2월 14일 일본 도쿄도 다치카와시 국영 쇼와기념공원에서 개최되는 가민 주최 러닝 페스티벌입니다. 올해 새롭게 추가된 HALF 마라톤을 비롯해 10KM와 4인 EKIDEN 릴레이 종목이 운영됩니다. 일본 전역과 해외 러너들이 함께 참가하며, 가민 오리지널 티셔츠와 완주메달 등 다양한 기념품이 제공됩니다. 초보 러너부터 기록에 도전하는 참가자까지 즐길 수 있는 글로벌 러닝 행사입니다.",
+    "info": {
+      "type": "마라톤",
+      "scale": 5000,
+      "park": null,
+      "souvenir": "HALF·10KM: GARMIN RUN JAPAN 2027 한정 오리지널 티셔츠, 완주메달, 웹 기록증. EKIDEN: 오리지널 타월 및 팀별 타스키",
+      "program": "HALF, 10KM, GARMIN EKIDEN(4인 릴레이 20KM), 가민 제품 체험 및 이벤트 부스",
+      "memo": "HALF 2,500명, 10KM 1,500명, EKIDEN 250팀(1,000명)으로 총 5,000명 규모입니다. 참가 대상은 대회 당일 만 18세 이상이며 고등학생은 제외됩니다. 가민 워치가 없어도 참가할 수 있습니다. HALF 제한시간 3시간, 10KM 및 EKIDEN 제한시간 1시간 30분입니다. 종목별 웨이브 출발 방식으로 운영되며, 선착순 모집으로 조기 마감될 수 있습니다. EKIDEN은 4인 1팀으로 참가합니다."
+    },
+    "event": {
+      "startDate": "2027-02-14",
+      "endDate": "2027-02-14",
+      "startTime": "10:30",
+      "endTime": null,
+      "site": "https://www.garmin.co.jp/event/2027/garmin-run/",
+      "schedule": {
+        "08:00": "참가자 접수 시작 예정",
+        "10:30": "HALF 웨이브 출발",
+        "11:30": "HALF 웨이브 출발",
+        "12:30": "HALF 웨이브 출발"
+      }
+    },
+    "registration": {
+      "startDate": "2026-10-09",
+      "endDate": "2026-12-18",
+      "startTime": "00:00",
+      "endTime": "23:59",
+      "site": "https://runnet.jp/entry/runtes/user/pc/competitionDetailAction.do?div=1&raceId=391336&tabFlg=1",
+      "status": null,
+      "currency": "JPY",
+      "price": {
+        "HALF": 9700,
+        "10KM": 5700,
+        "EKIDEN(4인 1팀)": 15000
+      },
+      "refund": {
+        "endDate": null,
+        "policy": "참가 신청 후 개인 사정에 의한 종목 변경 및 취소는 불가능하며, 참가비는 원칙적으로 환불되지 않습니다. 정원 초과로 접수가 처리되지 않은 경우에는 수수료를 제외한 금액이 환불됩니다."
+      }
+    },
+    "location": {
+      "country": "일본",
+      "region": "도쿄도",
+      "venue": "국영 쇼와기념공원",
+      "naver": "쇼와기념공원",
+      "address": "東京都立川市緑町3173",
+      "latitude": null,
+      "longitude": null
+    },
+    "hosts": {
+      "organizer": "Garmin Japan",
+      "manager": "R-bies",
+      "sponsor": null,
+      "phone": null,
+      "email": "event.promotion@runners.co.jp",
+      "instagram": null
+    }
   }
 ]
