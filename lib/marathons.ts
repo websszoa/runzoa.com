@@ -129,6 +129,11 @@ export type AdditionalRegistration = {
   memo: string | null;
 };
 
+export type EventSchedule = Record<
+  string,
+  string | Record<string, string>
+>;
+
 export type Marathon = {
   slug: string;
   name: string;
@@ -147,7 +152,7 @@ export type Marathon = {
     startTime: string | null;
     endTime: string | null;
     site: string | null;
-    schedule: Record<string, string> | null;
+    schedule: EventSchedule | null;
   };
   registration: {
     startDate: string | null;

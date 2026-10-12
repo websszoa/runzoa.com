@@ -6,10 +6,12 @@ import {
   getRegistrationBadgeClassName,
   getRegistrationLabel,
   getRegistrationStatus,
+  isAdditionalRegistrationOpen,
 } from "@/lib/utils";
 
 export default function DetailTitle({ marathon }: { marathon: Marathon }) {
   const registrationStatus = getRegistrationStatus(marathon);
+  const additionalRegistrationOpen = isAdditionalRegistrationOpen(marathon);
   const location = [marathon.location.region, marathon.location.venue]
     .filter(Boolean)
     .join(" · ");
@@ -37,9 +39,13 @@ export default function DetailTitle({ marathon }: { marathon: Marathon }) {
           ) : null}
           <Badge
             variant="outline"
-            className={getRegistrationBadgeClassName(registrationStatus)}
+            className={getRegistrationBadgeClassName(
+              additionalRegistrationOpen ? "접수중" : registrationStatus,
+            )}
           >
-            {getRegistrationLabel(registrationStatus)}
+            {additionalRegistrationOpen
+              ? "추가접수중"
+              : getRegistrationLabel(registrationStatus)}
           </Badge>
         </div>
 

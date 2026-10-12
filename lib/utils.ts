@@ -16,6 +16,31 @@ export function normalizeSearchText(value: string) {
 
 export type RegistrationStatus = "접수예정" | "접수중" | "접수마감";
 
+export function isAdditionalRegistrationOpen(
+  marathon: Marathon,
+  now = Date.now(),
+): boolean {
+  const additional = marathon.registration.additional;
+  const registrations = Array.isArray(additional)
+    ? additional
+    : additional
+      ? [additional]
+      : [];
+
+  return registrations.some(({ startDate, endDate, startTime, endTime }) => {
+    if (!startDate && !endDate) return false;
+
+    const hasStarted = startDate
+      ? now >= getKoreanDateTime(startDate, startTime ?? "00:00").getTime()
+      : true;
+    const hasNotEnded = endDate
+      ? now < getKoreanDateTime(endDate, endTime ?? "23:59:59.999").getTime()
+      : true;
+
+    return hasStarted && hasNotEnded;
+  });
+}
+
 export function getRegistrationStatus(marathon: Marathon): RegistrationStatus {
   const explicitStatus = marathon.registration.status?.trim();
   if (explicitStatus) {

@@ -5,6 +5,7 @@ import {
   formatCurrency,
   formatMarathonDate,
   getRegistrationStatus,
+  isAdditionalRegistrationOpen,
 } from "@/lib/utils";
 import {
   Asterisk,
@@ -43,6 +44,7 @@ export default function DetailRegistration({
       hasRefundInfo,
   );
   const registrationStatus = getRegistrationStatus(marathon);
+  const additionalRegistrationOpen = isAdditionalRegistrationOpen(marathon);
 
   return (
     <section className="grid gap-4 lg:grid-cols-3">
@@ -96,6 +98,41 @@ export default function DetailRegistration({
             <div className="mt-6 overflow-hidden rounded-xl border bg-muted/20 text-sm">
               <div className="divide-y">
                 {schedule.map(([time, description]) => {
+                  if (typeof description !== "string") {
+                    return (
+                      <div key={time}>
+                        <h3 className="border-b bg-muted/40 px-3 py-2.5 text-sm font-medium text-foreground last:border-b-0">
+                          {formatMarathonDate(time)}
+                        </h3>
+                        <div className="divide-y">
+                          {Object.entries(description).map(
+                            ([nestedTime, nestedDescription]) => {
+                              const isShuttle = nestedDescription.startsWith(
+                                "셔틀버스",
+                              );
+
+                              return (
+                                <div
+                                  key={`${time}-${nestedTime}-${nestedDescription}`}
+                                  className="grid grid-cols-[85px_minmax(0,1fr)]"
+                                >
+                                  <span
+                                    className={`flex items-center justify-center border-r px-2 py-2.5 text-center text-sm tabular-nums ${isShuttle ? "bg-brand font-semibold text-white" : "text-muted-foreground"}`}
+                                  >
+                                    {nestedTime}
+                                  </span>
+                                  <span className="min-w-0 px-3 py-2.5 text-sm leading-5 text-muted-foreground">
+                                    {nestedDescription}
+                                  </span>
+                                </div>
+                              );
+                            },
+                          )}
+                        </div>
+                      </div>
+                    );
+                  }
+
                   const isShuttle = description.startsWith("셔틀버스");
                   return (
                     <div
@@ -130,7 +167,21 @@ export default function DetailRegistration({
             aria-hidden="true"
           />
           <h2 className="font-paperlogy text-lg font-semibold">접수 정보</h2>
-          {registrationStatus === "접수마감" ? (
+          {additionalRegistrationOpen && marathon.registration.site ? (
+            <a
+              href={marathon.registration.site}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="ml-auto inline-flex h-6 items-center gap-1 rounded-full bg-brand px-2.5 font-anyvid text-xs font-medium text-white transition-colors hover:bg-brand/90"
+            >
+              추가접수중
+              <ArrowUpRight className="size-3" aria-hidden="true" />
+            </a>
+          ) : additionalRegistrationOpen ? (
+            <span className="ml-auto inline-flex h-6 items-center rounded-full bg-brand px-2.5 font-anyvid text-xs font-medium text-white">
+              추가접수중
+            </span>
+          ) : registrationStatus === "접수마감" ? (
             <span className="ml-auto inline-flex h-6 items-center rounded-full bg-brand px-2.5 font-anyvid text-xs font-medium text-white">
               접수 마감
             </span>
@@ -214,18 +265,18 @@ export default function DetailRegistration({
                       {additionalRegistration.distance} 추가 접수
                     </h3>
                   )}
-                  <p className="flex items-start gap-2">
-                    <Asterisk
-                      className="size-4.5 shrink-0 text-red-400"
-                      aria-hidden="true"
-                    />
-                    <span>
-                      추가 접수 시작 :{" "}
-                      {additionalRegistration.startDate
-                        ? `${formatMarathonDate(additionalRegistration.startDate)}${additionalRegistration.startTime ? ` · ${additionalRegistration.startTime}` : ""}`
-                        : "일정 미정"}
-                    </span>
-                  </p>
+                  {additionalRegistration.startDate && (
+                    <p className="flex items-start gap-2">
+                      <Asterisk
+                        className="size-4.5 shrink-0 text-red-400"
+                        aria-hidden="true"
+                      />
+                      <span>
+                        추가 접수 시작 :{" "}
+                        {`${formatMarathonDate(additionalRegistration.startDate)}${additionalRegistration.startTime ? ` · ${additionalRegistration.startTime}` : ""}`}
+                      </span>
+                    </p>
+                  )}
                   <p className="flex items-start gap-2">
                     <Asterisk
                       className="size-4.5 shrink-0 text-blue-400"

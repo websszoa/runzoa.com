@@ -13587,6 +13587,12 @@
       "price": {
         "10km": 50000,
         "5km": 40000
+      },
+      "additional": {
+        "startDate": null,
+        "endDate": "2026-10-23",
+        "startTime": null,
+        "endTime": "17:00"
       }
     },
     "location": {
@@ -22565,6 +22571,64 @@
       "sponsor": "신라스테이 여수, iGPSPORT, 소노캄 여수, tradelab, Kabuto, Carbo Energy, pedla, PowerfulX",
       "phone": null,
       "email": null,
+      "instagram": null
+    }
+  },
+  {
+    "slug": "anyangcheon-maple-run-2026",
+    "name": "제2회 안양천 단풍길 마라톤",
+    "description": "제2회 안양천 단풍길 마라톤은 2026년 11월 14일 서울 신정교 하부 영롱이 억새구장에서 개최되는 가을 마라톤 대회입니다. 안양천을 따라 펼쳐지는 코스에서 HALF·10KM·5KM 종목을 운영하며, 모든 종목의 참가비는 50,000원으로 동일합니다. 전 종목 기록칩을 사용해 기록을 측정하고 모바일 기록증을 제공합니다. 기념 티셔츠와 완주메달 등 참가 기념품도 준비되어 있어 가을철 도심 하천의 풍경을 즐기며 달리기 좋은 대회입니다.",
+    "info": {
+      "type": "마라톤",
+      "scale": null,
+      "park": null,
+      "souvenir": "기념 티셔츠, 완주메달, 간식, 모바일 기록증. 이브자리 제품, 그린비아 에너지젤, 선글라스 등 경품 안내(구성 및 지급 대상은 공식 홈페이지 확인)",
+      "program": "HALF, 10KM, 5KM 마라톤, 전 종목 기록칩 측정, 시상 및 경품 행사",
+      "memo": "전 종목 기록칩을 사용하며 넷타임으로 기록을 측정합니다. 입상 순위는 건타임 기준으로 결정됩니다. 2026년 10월 25일까지 신청한 참가자의 배번호는 택배로 발송되며, 10월 26일 이후 신청자는 현장에서 수령합니다. 참가권 양도는 불가능합니다. 탈의실과 물품보관소를 운영하며, 코스는 운영 상황에 따라 변경될 수 있습니다."
+    },
+    "event": {
+      "startDate": "2026-11-14",
+      "endDate": "2026-11-14",
+      "startTime": "09:00",
+      "endTime": null,
+      "site": "https://maplerun.kr/",
+      "schedule": {
+        "08:00": "참가자 집결 및 대회 준비",
+        "09:00": "마라톤 출발(HALF, 10KM, 5KM 순서)"
+      }
+    },
+    "registration": {
+      "startDate": "2026-09-05",
+      "endDate": "2026-11-05",
+      "startTime": null,
+      "endTime": null,
+      "site": "https://maplerun.kr/join/register.asp",
+      "status": null,
+      "price": {
+        "HALF": 50000,
+        "10KM": 50000,
+        "5KM": 50000
+      },
+      "refund": {
+        "endDate": "2026-10-25",
+        "policy": "2026년 10월 25일까지 참가 취소 및 환불 신청이 가능합니다. 환불수수료 500원을 공제하며, 신청 건은 주 단위로 취합해 다음 주 수요일 오후에 환불합니다. 10월 25일 이후에는 신규 신청자도 취소 및 환불이 불가능합니다. 천재지변이나 자연재해로 대회가 중지되면 참가비는 환불되지 않으며, 관할기관의 국가 행사 관련 중지 요구 시 전액 환불됩니다."
+      }
+    },
+    "location": {
+      "country": "한국",
+      "region": "서울",
+      "venue": "신정교 하부 영롱이 억새구장",
+      "naver": "영롱이 억새구장",
+      "address": "서울특별시 영등포구 영등포로2길 62",
+      "latitude": 37.5183319,
+      "longitude": 126.8806433
+    },
+    "hosts": {
+      "organizer": "대한생활체육연맹",
+      "manager": "대한생활체육연맹",
+      "sponsor": null,
+      "phone": "02-888-8805",
+      "email": "run@maplerun.kr",
       "instagram": null
     }
   }
