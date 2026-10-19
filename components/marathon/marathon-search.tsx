@@ -42,7 +42,7 @@ const REGISTRATION_FILTERS: readonly {
   label: string;
 }[] = [
   { value: "접수예정", label: "접수 예정" },
-  { value: "접수중", label: "접수 중" },
+  { value: "접수중", label: "접수중" },
   { value: "접수마감", label: "접수 마감" },
 ];
 const PAST_RACE_FILTERS = [

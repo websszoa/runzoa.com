@@ -109,7 +109,7 @@ export default function MainOpenRegistration({
                           variant="outline"
                           className="shrink-0 border-brand bg-brand font-anyvid text-white"
                         >
-                          접수 중
+                          접수중
                         </Badge>
                         <h3 className="min-w-0 truncate font-paperlogy text-base font-semibold transition-colors group-hover:text-brand sm:text-lg">
                           {marathon.name}

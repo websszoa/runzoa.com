@@ -174,12 +174,12 @@ export default function DetailRegistration({
               rel="noopener noreferrer"
               className="ml-auto inline-flex h-6 items-center gap-1 rounded-full bg-brand px-2.5 font-anyvid text-xs font-medium text-white transition-colors hover:bg-brand/90"
             >
-              추가접수중
+              추가 접수중
               <ArrowUpRight className="size-3" aria-hidden="true" />
             </a>
           ) : additionalRegistrationOpen ? (
             <span className="ml-auto inline-flex h-6 items-center rounded-full bg-brand px-2.5 font-anyvid text-xs font-medium text-white">
-              추가접수중
+              추가 접수중
             </span>
           ) : registrationStatus === "접수마감" ? (
             <span className="ml-auto inline-flex h-6 items-center rounded-full bg-brand px-2.5 font-anyvid text-xs font-medium text-white">

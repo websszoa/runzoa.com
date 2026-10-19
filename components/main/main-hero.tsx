@@ -155,7 +155,7 @@ export default function MainHero({ marathons }: { marathons: Marathon[] }) {
                     <CalendarCheck className="size-5" aria-hidden="true" />
                   </span>
                   <span className="inline-flex items-center gap-1 rounded-full bg-white px-2.5 py-1 font-anyvid text-[11px] font-semibold text-brand">
-                    접수 중
+                    접수중
                     <ArrowRight
                       className="size-3 transition-transform group-hover:translate-x-0.5"
                       aria-hidden="true"

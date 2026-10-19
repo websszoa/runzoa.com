@@ -44,7 +44,7 @@ export default function DetailTitle({ marathon }: { marathon: Marathon }) {
             )}
           >
             {additionalRegistrationOpen
-              ? "추가접수중"
+              ? "추가 접수중"
               : getRegistrationLabel(registrationStatus)}
           </Badge>
         </div>

@@ -84,7 +84,7 @@ function getKoreanDateTime(date: string, time: string) {
 
 export function getRegistrationLabel(status: RegistrationStatus) {
   if (status === "접수예정") return "접수 예정";
-  if (status === "접수중") return "접수 중";
+  if (status === "접수중") return "접수중";
   if (status === "접수마감") return "접수 마감";
 }
 

@@ -44,6 +44,7 @@ import {
   getRegistrationBadgeClassName,
   getRegistrationLabel,
   getRegistrationStatus,
+  isAdditionalRegistrationOpen,
   normalizeSearchText,
 } from "@/lib/utils";
 
@@ -345,7 +346,7 @@ export default function MarathonList({
                   options={[
                     { value: "전체", label: "모든 상태" },
                     { value: "접수예정", label: "접수 예정" },
-                    { value: "접수중", label: "접수 중" },
+                    { value: "접수중", label: "접수중" },
                     { value: "접수마감", label: "접수 마감" },
                   ]}
                 />
@@ -461,7 +462,7 @@ export default function MarathonList({
                 options={[
                   { value: "전체", label: "모든 상태" },
                   { value: "접수예정", label: "접수 예정" },
-                  { value: "접수중", label: "접수 중" },
+                  { value: "접수중", label: "접수중" },
                   { value: "접수마감", label: "접수 마감" },
                 ]}
               />
@@ -587,6 +588,13 @@ export default function MarathonList({
 
 function MarathonListRow({ marathon }: { marathon: Marathon }) {
   const registrationStatus = getRegistrationStatus(marathon);
+  const additionalRegistrationOpen = isAdditionalRegistrationOpen(marathon);
+  const registrationLabel = additionalRegistrationOpen
+    ? "추가 접수중"
+    : getRegistrationLabel(registrationStatus);
+  const registrationBadgeClassName = additionalRegistrationOpen
+    ? "border-blue-500 bg-blue-500 text-white"
+    : getRegistrationBadgeClassName(registrationStatus);
   const distances = getMarathonDistances(marathon.registration.price);
   const site = marathon.event.site ?? marathon.registration.site;
   const weekday = formatMarathonDate(marathon.event.startDate).match(
@@ -625,9 +633,9 @@ function MarathonListRow({ marathon }: { marathon: Marathon }) {
           </Badge>
           <Badge
             variant="outline"
-            className={getRegistrationBadgeClassName(registrationStatus)}
+            className={registrationBadgeClassName}
           >
-            {getRegistrationLabel(registrationStatus)}
+            {registrationLabel}
           </Badge>
         </div>
       </div>
@@ -639,9 +647,9 @@ function MarathonListRow({ marathon }: { marathon: Marathon }) {
           </Badge>
           <Badge
             variant="outline"
-            className={getRegistrationBadgeClassName(registrationStatus)}
+            className={registrationBadgeClassName}
           >
-            {getRegistrationLabel(registrationStatus)}
+            {registrationLabel}
           </Badge>
         </div>
 

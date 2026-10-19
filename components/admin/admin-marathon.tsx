@@ -163,7 +163,7 @@ export default function AdminMarathon({
           featured
         />
         <StatCard
-          label="접수 중"
+          label="접수중"
           value={stats.open}
           icon={Activity}
           color="text-rose-500"

@@ -11259,7 +11259,7 @@
       "startTime": "14:00",
       "endTime": null,
       "site": "https://sejongrun26.com/",
-      "status": "",
+      "status": "접수마감",
       "price": {
         "5km": 40000,
         "10km": 50000,
@@ -11515,7 +11515,7 @@
       "startTime": null,
       "endTime": null,
       "site": "https://www.ydct.org/board/notice/read/671",
-      "status": "",
+      "status": "접수마감",
       "price": {
         "18K": 50000,
         "24K": 100000,
@@ -11726,7 +11726,7 @@
       "startTime": null,
       "endTime": null,
       "site": "https://csmarathon.co.kr/",
-      "status": "",
+      "status": "접수마감",
       "price": {
         "5KM": 30000,
         "10KM": 50000,
@@ -11896,7 +11896,7 @@
       "startTime": null,
       "endTime": null,
       "site": "https://www.utnp.kr/",
-      "status": "",
+      "status": "접수마감",
       "price": {
         "2피크": 120000,
         "5피크": 180000,
@@ -12109,7 +12109,7 @@
       "startTime": null,
       "endTime": null,
       "site": "https://mara1080.com/event/d596615e-cf32-4f20-bdbe-13b633f51c4e",
-      "status": "",
+      "status": "접수마감",
       "price": {
         "5KM": 30000,
         "10KM": 45000
@@ -12159,7 +12159,7 @@
       "startTime": null,
       "endTime": null,
       "site": "https://runyc.kr",
-      "status": "",
+      "status": "접수마감",
       "price": {
         "10KM": 40000,
         "HALF": 40000,
@@ -12263,10 +12263,16 @@
       "startTime": "10:00",
       "endTime": null,
       "site": "https://www.purmerun.com/apply/index02.php",
-      "status": "",
+      "status": "추가 접수중",
       "price": {
         "3KM": 20000,
         "10km": 50000
+      },
+      "additional": {
+        "startDate": "2026-10-14",
+        "endDate": "2026-11-06",
+        "startTime": null,
+        "endTime": "23:59"
       }
     },
     "location": {
@@ -12409,7 +12415,7 @@
     },
     "registration": {
       "startDate": "2026-04-13",
-      "endDate": "2026-11-13",
+      "endDate": null,
       "startTime": null,
       "endTime": null,
       "site": "https://pohangmarathon.com/",
@@ -12764,11 +12770,11 @@
     },
     "registration": {
       "startDate": "2026-05-15",
-      "endDate": "2026-11-14",
+      "endDate": "2026-10-31",
       "startTime": null,
-      "endTime": null,
+      "endTime": "23:59",
       "site": "https://www.cuk-sports.com/%EB%AC%B4%EB%93%B1%EC%82%B0-%ED%8A%B8%EB%A0%88%EC%9D%BC%EB%9F%B0-%EA%B0%9C%EC%9A%94",
-      "status": "",
+      "status": null,
       "price": {
         "16KM": 90000,
         "36KM": 120000,
@@ -13647,7 +13653,7 @@
       "startTime": null,
       "endTime": null,
       "site": "https://runwithgo.com/runwithgo/",
-      "status": null,
+      "status": "접수마감",
       "price": {
         "10K": 40000,
         "5K": 40000
@@ -13908,7 +13914,7 @@
       "startTime": null,
       "endTime": null,
       "site": "https://runten.co.kr/competitions/46e731b4-252b-4dce-9634-44369aceea25",
-      "status": null,
+      "status": "접수마감",
       "price": {
         "10km": 50000,
         "5km": 45000
@@ -14456,7 +14462,7 @@
       "startTime": "10:00",
       "endTime": null,
       "site": "http://speedagency.kr/parti_more.html?game_code=114",
-      "status": null,
+      "status": "접수마감",
       "price": {
         "그란폰도 131km": 70000,
         "메디오폰도 106km": 70000
@@ -16070,7 +16076,7 @@
   },
   {
     "slug": "busan-maritime-run-festa-2026",
-    "name": "2026 해양수도 부산 런페스타",
+    "name": "2026 해양수도 부산 런페스타(연기)",
     "description": "2026 해양수도 부산 런페스타는 해양수산부 부산 이전 1주년과 부산항 개항 150주년을 기념해 부산 북항친수공원에서 열리는 마라톤 대회입니다. 부산의 바다와 북항 일대를 달리는 10km 코스로 진행되는 해양수도 부산의 러닝 축제입니다.",
     "info": {
       "type": "마라톤",
@@ -16098,7 +16104,7 @@
       "startTime": null,
       "endTime": null,
       "site": "http://www.runfesta.co.kr",
-      "status": "접수중",
+      "status": "접수마감",
       "price": {
         "10km": 45000
       }
@@ -16896,7 +16902,7 @@
   },
   {
     "slug": "gaya-kingdom-marathon-2026",
-    "name": "가야왕도마라톤 2026",
+    "name": "2026 가야 왕도 마라톤 ",
     "description": "2026 가야왕 김해 전국어울림 마라톤대회는 가야 건국 신화의 숨결이 살아있는 김해 장유를 달리는 특별한 마라톤대회입니다. 장애인과 비장애인이 함께 달리며 서로를 응원하고 어울리는 뜻깊은 레이스입니다.",
     "info": {
       "type": "마라톤",
@@ -17098,7 +17104,7 @@
       "startTime": null,
       "endTime": null,
       "site": "https://www.seoulrun.com/site/",
-      "status": null,
+      "status": "접수마감",
       "price": {
         "HALF": 50000,
         "10km": 50000,
@@ -17253,16 +17259,14 @@
     },
     "registration": {
       "startDate": "2026-08-28",
-      "endDate": "2026-11-27",
+      "endDate": "2026-10-18",
       "startTime": null,
       "endTime": null,
       "site": "https://peacerun.kr/marathon/code/8051/",
       "status": null,
       "price": {
         "10km": 60000,
-        "5km": 45000,
-        "10km_하네스포함": 95000,
-        "5km_하네스포함": 80000
+        "5km": 45000
       }
     },
     "location": {
@@ -17309,7 +17313,7 @@
       "startTime": null,
       "endTime": null,
       "site": "https://projectruntrip.com/",
-      "status": "접수 대기",
+      "status": "접수마감",
       "price": {
         "29K+": 65000,
         "9K+": 55000
@@ -17335,7 +17339,7 @@
   },
   {
     "slug": "daejeon-seogu-mayor-marathon-2026",
-    "name": "제16회 대전 서구청장배 마라톤",
+    "name": "제16회 대전서구 청장배 마라톤",
     "description": "제16회 대전 서구청장배 마라톤은 대전 엑스포 다리 밑에서 열리는 러닝 대회입니다. 10km, 5km, 가족런 5km 종목으로 진행되며 선착순 3,000명을 모집합니다.",
     "info": {
       "type": "마라톤",
@@ -17350,7 +17354,7 @@
       "endDate": "2026-11-15",
       "startTime": "09:00",
       "endTime": null,
-      "site": "https://run.sysweb.co.kr/",
+      "site": "https://jgmrun.com/",
       "schedule": {
         "08:00": "집결",
         "09:00": "출발"
@@ -17358,10 +17362,10 @@
     },
     "registration": {
       "startDate": "2026-08-28",
-      "endDate": "2026-11-14",
+      "endDate": null,
       "startTime": null,
       "endTime": null,
-      "site": "https://run.sysweb.co.kr/sub/join/guide.asp",
+      "site": "https://jgmrun.com/sub/join/guide.asp",
       "status": null,
       "price": {
         "10km": 40000,
@@ -17628,7 +17632,7 @@
     },
     "registration": {
       "startDate": "2026-09-14",
-      "endDate": "2026-10-23",
+      "endDate": "2026-10-10",
       "startTime": "13:00",
       "endTime": "23:59",
       "site": "https://tongkeun-run.com/",
@@ -17637,6 +17641,12 @@
         "10KM": 30000,
         "5KM": 30000,
         "3KM": 30000
+      },
+      "additional": {
+        "startDate": "2026-10-28",
+        "endDate": "2026-10-30",
+        "startTime": "14:00",
+        "endTime": "23:59"
       }
     },
     "location": {
@@ -18009,12 +18019,12 @@
       "schedule": null
     },
     "registration": {
-      "startDate": null,
+      "startDate": "2026-09-05",
       "endDate": "2026-11-26",
       "startTime": null,
       "endTime": null,
       "site": "https://energyrun.kr/",
-      "status": "접수중",
+      "status": null,
       "price": {
         "10KM": 50000,
         "5KM": 50000
@@ -18497,7 +18507,7 @@
     },
     "registration": {
       "startDate": "2026-09-04",
-      "endDate": "2026-11-07",
+      "endDate": null,
       "startTime": null,
       "endTime": null,
       "site": "https://610run.kr/freerun/",
@@ -18505,6 +18515,12 @@
       "price": {
         "10KM": 40000,
         "6.10KM": 35000
+      },
+      "additional": {
+        "startDate": "2026-10-14",
+        "endDate": "2026-11-07",
+        "startTime": null,
+        "endTime": "23:59"
       }
     },
     "location": {
@@ -18527,7 +18543,7 @@
   },
   {
     "slug": "yangsan-half-marathon-2026",
-    "name": "제20회 양산전국 하프 마라톤대회",
+    "name": "제20회 양산 전국 하프 마라톤대회",
     "description": "제20회 양산전국하프마라톤대회는 경남 양산종합운동장에서 열리는 양산의 대표 마라톤 대회입니다. Half, 10km, 5km 세 종목으로 진행되며 총 8,000명의 참가자를 선착순 모집합니다. 올해로 20회를 맞는 전통 있는 대회로 가족과 친구, 러닝 동호인이 함께 참여할 수 있으며 Half와 10km부터 가볍게 도전할 수 있는 5km까지 자신의 수준에 맞춰 즐길 수 있습니다.",
     "info": {
       "type": "마라톤",
@@ -18554,7 +18570,7 @@
       "startTime": "09:00",
       "endTime": "17:00",
       "site": "https://ysmarathon.kr/",
-      "status": null,
+      "status": "접수마감",
       "price": {
         "HALF": 45000,
         "10KM": 45000,
@@ -18607,14 +18623,14 @@
     },
     "registration": {
       "startDate": "2026-09-14",
-      "endDate": null,
+      "endDate": "2026-10-25",
       "startTime": "10:00",
-      "endTime": null,
+      "endTime": "23:59",
       "site": "https://www.tongilmarathon.kr/ko/",
       "status": null,
       "price": {
         "5KM": 25000,
-        "5KM_초등학생이하": 10000
+        "5KM(초등학생이하)": 10000
       }
     },
     "location": {
@@ -18673,7 +18689,7 @@
       "startTime": "10:00",
       "endTime": null,
       "site": "https://www.jinma.co.kr/ko/",
-      "status": null,
+      "status": "접수마감",
       "price": {
         "FULL": 50000,
         "HALF": 45000,
@@ -19467,22 +19483,26 @@
   {
     "slug": "marvel-run-korea-2026",
     "name": "2026 마블런 KOREA",
-    "description": "MARVEL RUN 2026 KOREA는 강원 인제스피디움에서 마블의 세계관과 러닝을 함께 즐길 수 있는 특별한 테마 러닝 행사입니다. 캡틴 아메리카, 토르, 닥터 둠 등 마블을 대표하는 캐릭터와 함께하는 콘셉트로 진행되며, 2026년 10월 31일 인제스피디움을 무대로 펼쳐집니다. 세부 종목과 참가비, 프로그램 등은 추후 공식 홈페이지를 통해 공개될 예정입니다.",
+    "description": "2026 마블런 KOREA는 2026년 10월 31일 강원특별자치도 인제스피디움에서 개최되는 마블 테마 러닝 행사입니다. 자동차 경주용 서킷을 직접 달리는 특별한 경험을 제공하며, 캡틴 아메리카와 토르, 닥터 둠 등 마블 캐릭터를 테마로 한 10KM, 5KM, 2.3KM 코스로 구성됩니다. 종목별 캐릭터 완주메달과 공식 티셔츠가 제공되며, 다양한 체험 이벤트와 포토존, 엔터테인먼트 프로그램도 운영됩니다. 가족과 친구, 러닝 동호인이 함께 마블의 세계관을 즐기며 달릴 수 있는 특별한 러닝 축제입니다.",
     "info": {
       "type": "마라톤",
       "scale": null,
-      "park": null,
-      "souvenir": null,
-      "program": null,
-      "memo": "현재 공식 홈페이지에는 대회일과 장소, 접수 오픈 일정만 공개되어 있습니다. 세부 종목, 참가비, 모집 규모, 출발시간 및 프로그램은 추후 공개 예정입니다."
+      "park": "인제스피디움 주차장 이용 관련 세부 안내는 공식 홈페이지 확인",
+      "souvenir": "공식 마블런 티셔츠, 배번호, 기록칩(10KM 및 5KM), 응원 스카프, 종목별 완주메달(10KM 닥터 둠, 5KM 토르, 2.3KM 캡틴 아메리카)",
+      "program": "10KM FULL CIRCUIT, 5KM ACTION COURSE, 2.3KM FAMILY COURSE, 마블 캐릭터 테마 체험, 포토존, 엔터테인먼트, 버추얼런",
+      "memo": "자동차 경주용 서킷인 인제스피디움에서 진행되는 마블 테마 러닝 행사입니다. 10KM는 13시 30분, 5KM는 14시 30분, 2.3KM는 15시에 출발합니다. 10KM는 만 12세 이하 어린이 참가가 불가능하며 5KM와 2.3KM는 어린이 참가비가 별도로 적용됩니다. 10KM와 5KM에는 기록칩이 제공되지만 2.3KM는 기록칩이 제공되지 않습니다. 공식 티셔츠는 어린이 130·150 및 일반 S~4XL 사이즈로 안내됩니다. 종목별 캐릭터 완주메달이 제공되며 기념품 디자인과 구성은 변경될 수 있습니다. 공식 셔틀버스는 카카오모빌리티를 통해 예약할 수 있으며 강남역, 잠실역, 신도림역, 천안, 청주 등 노선이 안내되어 있습니다. 일부 셔틀 노선은 최소 신청 인원 미달 시 취소될 수 있으며 운행 여부는 10월 26일 확정 예정입니다. 종목별 모집 정원과 제한시간은 공식 홈페이지에서 별도 확인이 필요합니다."
     },
     "event": {
       "startDate": "2026-10-31",
       "endDate": "2026-10-31",
-      "startTime": null,
+      "startTime": "13:30",
       "endTime": null,
       "site": "https://marvelrunkorea2026.com/",
-      "schedule": null
+      "schedule": {
+        "13:30": "10KM FULL CIRCUIT 출발",
+        "14:30": "5KM ACTION COURSE 출발",
+        "15:00": "2.3KM FAMILY COURSE 출발"
+      }
     },
     "registration": {
       "startDate": "2026-09-22",
@@ -19490,14 +19510,31 @@
       "startTime": "14:00",
       "endTime": null,
       "site": "https://marvelrunkorea2026.com/",
-      "status": "접수 대기",
-      "price": null
+      "status": null,
+      "price": {
+        "10KM": 70000,
+        "5KM": 70000,
+        "2.3KM": 55000,
+        "5KM(어린이)": 40000,
+        "2.3KM(어린이)": 40000
+      },
+      "additional": {
+        "startDate": "2026-10-14",
+        "endDate": "2026-10-26",
+        "startTime": null,
+        "endTime": "17:00"
+      },
+      "refund": {
+        "endDate": null,
+        "policy": null
+      }
     },
     "location": {
       "country": "한국",
       "region": "강원",
+      "area": "인제군",
       "venue": "인제스피디움",
-      "naver": null,
+      "naver": "인제스피디움",
       "address": "강원 인제군 기린면 상하답로 130",
       "latitude": 38.0026931,
       "longitude": 128.2951054
@@ -19506,63 +19543,8 @@
       "organizer": "ONEUNIVERSE STUDIO",
       "manager": "FLUX SONIC",
       "sponsor": null,
-      "phone": null,
-      "email": null,
-      "instagram": null
-    }
-  },
-  {
-    "slug": "daegu-geumhogang-health-run-2026",
-    "name": "2026 대구 금호강 건강달리기",
-    "description": "2026 대구 금호강 건강달리기는 대구 동구 동촌유원지 금호강 둔치에서 열리는 건강달리기 행사입니다. 기록이나 경쟁보다는 가족, 친구, 이웃과 함께 달리는 즐거움에 초점을 맞춰 10km, 5km, 3km 세 종목으로 진행됩니다. 남녀노소 누구나 자신의 건강 상태와 체력에 맞는 거리를 선택해 금호강변을 달리며 가을 러닝을 즐길 수 있습니다.",
-    "info": {
-      "type": "마라톤",
-      "scale": 13000,
-      "park": null,
-      "souvenir": null,
-      "program": "3km 건강달리기, 5km 건강달리기, 10km 건강달리기",
-      "memo": "3km 2,000명, 5km 4,000명, 10km 7,000명으로 총 13,000명을 모집합니다. 종목별 모집인원 도달 시 접수가 조기 마감됩니다. 배번호는 별도 택배 발송 없이 대회 당일 현장에서 참가 확인 후 랜덤으로 배부합니다. 참가신청서 작성 후 참가비 결제가 확인되어야 최종 참가확정 처리됩니다. 11월 아침 기온을 고려해 참가 전 보온 준비를 권장합니다."
-    },
-    "event": {
-      "startDate": "2026-11-07",
-      "endDate": "2026-11-07",
-      "startTime": "08:00",
-      "endTime": null,
-      "site": null,
-      "schedule": {
-        "08:00": "10km 건강달리기 출발",
-        "08:30": "5km 건강달리기 출발",
-        "09:00": "3km 건강달리기 출발"
-      }
-    },
-    "registration": {
-      "startDate": "2026-09-11",
-      "endDate": "2026-10-25",
-      "startTime": null,
-      "endTime": null,
-      "site": null,
-      "status": null,
-      "price": {
-        "10KM": 50000,
-        "5KM": 35000,
-        "3KM": 30000
-      }
-    },
-    "location": {
-      "country": "한국",
-      "region": "대구",
-      "venue": "동촌유원지 금호강 둔치",
-      "naver": "동촌유원지",
-      "address": "대구광역시 동구 효목동 1314",
-      "latitude": 35.883094,
-      "longitude": 128.6498099
-    },
-    "hosts": {
-      "organizer": "국체협",
-      "manager": "국체협",
-      "sponsor": null,
-      "phone": null,
-      "email": "allrunmarathon@gmail.com",
+      "phone": "02-338-0344",
+      "email": "marvelrun2026@gmail.com",
       "instagram": null
     }
   },
@@ -19728,7 +19710,7 @@
   },
   {
     "slug": "starcall-rollingstone-retro-run-jeungpyeong-2026",
-    "name": "스타콜 x 롤링스톤 레트로 런 IN 증평",
+    "name": "스타콜 x 롤링스톤 레트로 런 IN 증평(취소)",
     "description": "스타콜 x 롤링스톤 레트로 런 IN 증평은 충북 증평 보강천 시민체육공원에서 열리는 레트로 콘셉트의 러닝 행사입니다. 5km와 10km 두 종목으로 진행되며 2026년 11월 14일부터 15일까지 이틀간 러닝과 페스티벌을 함께 즐길 수 있습니다. 기록 경쟁을 넘어 음악과 문화, 러닝이 어우러지는 색다른 분위기 속에서 가을의 증평을 달릴 수 있는 이색 러닝 페스티벌입니다.",
     "info": {
       "type": "마라톤",
@@ -19758,7 +19740,7 @@
       "startTime": null,
       "endTime": null,
       "site": "https://n-runplus.co.kr/31/?idx=6",
-      "status": null,
+      "status": "접수마감",
       "price": {
         "10KM": 79000,
         "5KM": 69000
@@ -19841,7 +19823,7 @@
   },
   {
     "slug": "jebudo-sea-road-festival-2026",
-    "name": "2026 제부도 바다 런",
+    "name": "2026 제부도 바다런",
     "description": "제부도 씨로드 페스티벌 2026은 경기 화성 제부도의 바닷길과 황금해안길을 달리는 해양문화 러닝 페스티벌입니다. 제부도 섬내를 한 바퀴 달리는 5km와 바닷길 왕복 구간에 섬 일주를 더한 10km 코스로 진행됩니다. 기록 경쟁뿐 아니라 친구, 연인, 가족과 함께 바다 풍경을 즐기며 달릴 수 있고, 러닝 후 비치바와 해변 클럽파티까지 이어지는 특별한 제부도 러닝 축제입니다.",
     "info": {
       "type": "마라톤",
@@ -19864,7 +19846,7 @@
     },
     "registration": {
       "startDate": "2026-08-16",
-      "endDate": "2026-11-03",
+      "endDate": "2026-10-25",
       "startTime": null,
       "endTime": null,
       "site": "https://www.jebudorun.com/",
@@ -19922,7 +19904,7 @@
       "startTime": "10:00",
       "endTime": null,
       "site": "https://www.snymca.org/?c=user&mcd=sub05_01&me=bbs_detail&idx=17408",
-      "status": "접수중",
+      "status": null,
       "price": {
         "10KM": 40000,
         "5KM": 30000
@@ -20135,7 +20117,7 @@
       "startTime": "15:00",
       "endTime": null,
       "site": "https://seoul.bbangrun.com/registration",
-      "status": null,
+      "status": "접수마감",
       "price": {
         "10KM": 59000,
         "5KM": 59000
@@ -20296,7 +20278,7 @@
       "startTime": null,
       "endTime": null,
       "site": "https://srtrail.kr/58",
-      "status": null,
+      "status": "접수마감",
       "price": {
         "20KM": 99000
       },
@@ -20415,7 +20397,7 @@
       "startTime": null,
       "endTime": null,
       "site": "https://dobokrun.com/",
-      "status": "접수중",
+      "status": null,
       "price": {
         "10KM": 50000,
         "5KM": 50000
@@ -20534,7 +20516,7 @@
       "startTime": "09:00",
       "endTime": "23:59",
       "site": "http://marathontest1.s3-website.ap-northeast-2.amazonaws.com/",
-      "status": null,
+      "status": "접수마감",
       "price": {
         "HALF": 45000,
         "10KM": 45000
@@ -20683,7 +20665,7 @@
   },
   {
     "slug": "seoul-love-marathon-2026",
-    "name": "2026 서울사랑마라톤",
+    "name": "2026 서울 사랑 마라톤",
     "description": "2026 서울사랑마라톤은 서울 성북구 석관동 중랑천 체육공원 일대에서 열리는 도심 러닝 대회입니다. HALF, 10K, 5K 세 종목으로 구성되며 총 5,000명의 러너가 참가하는 규모로 진행됩니다. 석계역 인근 중랑천을 따라 달리는 코스로 초보 러너부터 하프 도전자까지 자신의 거리에 맞춰 서울 도심 속 러닝을 즐길 수 있는 마라톤입니다.",
     "info": {
       "type": "마라톤",
@@ -21209,7 +21191,7 @@
   },
   {
     "slug": "justice-run-seocho-2026",
-    "name": "저스티스 런 서초 2026",
+    "name": "2026 저스티스 런 서초",
     "description": "JUSTICE RUN SEOCHO 2026은 법률신문 창간 76주년을 기념해 서울 반포한강공원 달빛광장에서 출발하는 도심 러닝 대회입니다. 반포한강공원과 서초 법조단지를 연결하는 10K와 5K 코스로 구성되며, 법조인뿐 아니라 달리기를 좋아하는 누구나 참가할 수 있습니다. 한강과 서초 도심을 함께 달리며 정의와 연결의 의미를 나누는 특별한 마라톤입니다.",
     "info": {
       "type": "마라톤",
@@ -21233,11 +21215,11 @@
     },
     "registration": {
       "startDate": "2026-09-21",
-      "endDate": "2026-10-14",
+      "endDate": "2026-10-21",
       "startTime": "14:00",
-      "endTime": "17:00",
+      "endTime": "23:59",
       "site": "https://justicerun.kr/apply",
-      "status": "접수중",
+      "status": null,
       "price": {
         "10KM": 70000,
         "5KM": 40000
@@ -21541,14 +21523,14 @@
     },
     "registration": {
       "startDate": "2026-10-03",
-      "endDate": null,
+      "endDate": "2026-10-27",
       "startTime": null,
-      "endTime": null,
+      "endTime": "23:59",
       "site": "https://runable.me/product/20831?comp=20828",
-      "status": "접수중",
+      "status": null,
       "price": {
-        "5KM": null,
-        "10KM": null
+        "5KM": 45000,
+        "10KM": 45000
       },
       "refund": null
     },
@@ -22110,12 +22092,12 @@
       }
     },
     "registration": {
-      "startDate": null,
-      "endDate": "2026-10-15",
+      "startDate": "2026-08-25",
+      "endDate": "2026-10-25",
       "startTime": null,
       "endTime": null,
       "site": "https://cymarathon.imweb.me/21",
-      "status": "접수중",
+      "status": null,
       "price": {
         "HALF": 40000,
         "14KM": 35000,
@@ -22548,7 +22530,7 @@
       "startTime": "10:00",
       "endTime": null,
       "site": "https://speedagency.co.kr/speedrun",
-      "status": null,
+      "status": "접수마감",
       "price": {
         "4KM": 40000,
         "10KM": 60000,
@@ -22561,9 +22543,9 @@
       "region": "전남",
       "venue": "여수시 엑스포광장",
       "naver": "여수세계박람회장 엑스포광장",
-      "address": null,
-      "latitude": null,
-      "longitude": null
+      "address": "전남광주통합특별시 여수시 박람회길 1 국제관",
+      "latitude": 34.7508298,
+      "longitude": 127.7469647
     },
     "hosts": {
       "organizer": null,
@@ -23289,6 +23271,125 @@
       "sponsor": "구공스테이, 오소 디퓨저, 오소만물상, 포스기어",
       "phone": null,
       "email": "doc333@naver.com",
+      "instagram": null
+    }
+  },
+  {
+    "slug": "asan-ginkgo-marathon-2026",
+    "name": "제12회 아산 은행나무길 전국마라톤대회",
+    "description": "제12회 아산 은행나무길 전국마라톤대회는 2026년 11월 8일 충남 아산시 현충사 은행나무길 광장에서 개최되는 가을 마라톤대회입니다. 아름다운 은행나무길과 곡교천 수변도로를 따라 달리는 코스로, HALF, 10KM, 5KM 종목이 마련됩니다. 총 2,500명의 참가자를 모집하며 종목별 정원에 따라 선착순으로 접수합니다. 가을 단풍과 은행나무가 어우러진 아산의 자연 풍경을 즐기며 달릴 수 있어 전국의 러너들에게 특별한 가을 레이스를 선사합니다.",
+    "info": {
+      "type": "마라톤",
+      "scale": 2500,
+      "park": null,
+      "souvenir": "온양그린햇쌀, 완주메달, 배번호",
+      "program": "HALF, 10KM, 5KM 마라톤",
+      "memo": "종목별 모집 인원은 HALF 700명, 10KM 1,300명, 5KM 500명입니다. 전 종목 참가비는 40,000원입니다. 참가자 배번호는 대회 약 일주일 전에 발송되며 기념품은 행사 당일 현장에서 지급됩니다. HALF와 10KM 코스는 골인지점 약 2KM 전 구간에 약 520m의 비포장도로가 포함되어 있습니다. 전 종목 접수가 마감되었으며 취소자가 발생하면 대기자에게 참가 기회가 안내될 수 있습니다."
+    },
+    "event": {
+      "startDate": "2026-11-08",
+      "endDate": "2026-11-08",
+      "startTime": "09:00",
+      "endTime": null,
+      "site": "https://asanmarathon.co.kr/",
+      "schedule": {
+        "08:00": "참가자 집결",
+        "09:00": "HALF 출발",
+        "09:10": "10KM 출발",
+        "09:20": "5KM 출발"
+      }
+    },
+    "registration": {
+      "startDate": "2026-08-20",
+      "endDate": null,
+      "startTime": null,
+      "endTime": null,
+      "site": "https://asanmarathon.co.kr/",
+      "status": "접수마감",
+      "price": {
+        "HALF": 40000,
+        "10KM": 40000,
+        "5KM": 40000
+      },
+      "additional": null,
+      "refund": {
+        "endDate": "2026-09-28",
+        "policy": "2026년 9월 28일 18시 이후에는 참가 취소, 환불 및 변경이 불가능합니다."
+      }
+    },
+    "location": {
+      "country": "한국",
+      "region": "충남",
+      "area": "아산시",
+      "venue": "현충사 은행나무길 광장",
+      "naver": "현충사 은행나무길 광장",
+      "address": "충남 아산시 염치읍 백암리 502-3",
+      "latitude": 36.8000495,
+      "longitude": 127.0181349
+    },
+    "hosts": {
+      "organizer": "아산시체육회",
+      "manager": "아산시마라톤협회",
+      "sponsor": null,
+      "phone": "041-543-4592",
+      "email": "ljy4592@daum.net",
+      "instagram": null
+    }
+  },
+  {
+    "slug": "global-6k-for-water-daegu-2026",
+    "name": "2026 GLOBAL 6K FOR WATER 마라톤 대구대회",
+    "description": "2026 GLOBAL 6K FOR WATER 마라톤 대구대회는 11월 14일 대구 동구 율하체육공원에서 개최되는 나눔 마라톤대회입니다. 개발도상국 아이들이 깨끗한 물을 얻기 위해 매일 걷는 평균 거리인 6KM를 함께 달리며 물의 소중함과 나눔의 가치를 알리는 행사입니다. 월드비전이 주최하며 참가비는 지역 위기아동가정 지원과 개발도상국 식수사업에 사용됩니다. 참가자에게는 공식 티셔츠와 완주메달을 제공하고 다양한 후원 기념품도 현장에서 증정합니다. 달리기를 통해 건강과 기부의 의미를 함께 나눌 수 있는 특별한 러닝 행사입니다.",
+    "info": {
+      "type": "마라톤",
+      "scale": null,
+      "park": "주차 및 집결 장소는 추후 공지 예정",
+      "souvenir": "GLOBAL 6K 공식 티셔츠, 6KM 완주메달, 비타그란 유기농 레몬즙, 파티온 노스카나인 스팟 패치, 풀무원샘물 500ml, 리플로 ORS 100ml, 대회 기념 손잡이, 슈퍼 에너지젤 PLUS",
+      "program": "6KM 나눔 마라톤, 지역 위기아동가정 지원, 개발도상국 식수사업 지원, 글로벌 식수 문제 인식 개선 캠페인",
+      "memo": "개발도상국 아이들이 깨끗한 물을 얻기 위해 매일 걷는 평균 거리 6KM를 함께 달리는 기부 마라톤입니다. 참가비 30,000원은 지역 위기아동가정 지원과 개발도상국 식수사업에 사용됩니다. 공식 티셔츠와 완주메달이 제공되며 추가 후원 기념품은 현장에서 지급됩니다. 기념품 이미지는 예시로 실제 제공 품목과 다를 수 있습니다. 행사 당일 사진 및 영상 촬영이 진행되며 촬영 자료는 월드비전 홈페이지, SNS 및 홍보 자료 등에 활용될 수 있습니다. 주차 및 집결 장소에 관한 자세한 내용은 추후 공지됩니다."
+    },
+    "event": {
+      "startDate": "2026-11-14",
+      "endDate": "2026-11-14",
+      "startTime": "10:00",
+      "endTime": null,
+      "site": "https://daegu6k-social-welfare.vercel.app/#intro",
+      "schedule": {
+        "10:00": "6KM 마라톤대회 시작"
+      }
+    },
+    "registration": {
+      "startDate": "2026-09-14",
+      "endDate": null,
+      "startTime": null,
+      "endTime": null,
+      "site": "https://daegu6k-social-welfare.vercel.app/#intro",
+      "status": null,
+      "price": {
+        "6KM": 30000
+      },
+      "additional": null,
+      "refund": {
+        "endDate": null,
+        "policy": null
+      }
+    },
+    "location": {
+      "country": "한국",
+      "region": "대구",
+      "area": "동구",
+      "venue": "율하체육공원",
+      "naver": "대구 율하체육공원",
+      "address": "대구광역시 동구 금호강변로 278",
+      "latitude": 35.8598925,
+      "longitude": 128.6927021
+    },
+    "hosts": {
+      "organizer": "월드비전",
+      "manager": null,
+      "sponsor": "동아제약, 풀무원, 오바이오틱, VS, Alive!",
+      "phone": null,
+      "email": null,
       "instagram": null
     }
   }
