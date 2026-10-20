@@ -4,8 +4,8 @@ import type { Marathon } from "@/lib/marathons";
 import {
   formatCurrency,
   formatMarathonDate,
+  getAdditionalRegistrationStatus,
   getRegistrationStatus,
-  isAdditionalRegistrationOpen,
 } from "@/lib/utils";
 import {
   Asterisk,
@@ -44,7 +44,8 @@ export default function DetailRegistration({
       hasRefundInfo,
   );
   const registrationStatus = getRegistrationStatus(marathon);
-  const additionalRegistrationOpen = isAdditionalRegistrationOpen(marathon);
+  const additionalRegistrationStatus = getAdditionalRegistrationStatus(marathon);
+  const additionalRegistrationOpen = additionalRegistrationStatus === "접수중";
 
   return (
     <section className="grid gap-4 lg:grid-cols-3">
@@ -180,6 +181,10 @@ export default function DetailRegistration({
           ) : additionalRegistrationOpen ? (
             <span className="ml-auto inline-flex h-6 items-center rounded-full bg-brand px-2.5 font-anyvid text-xs font-medium text-white">
               추가 접수중
+            </span>
+          ) : additionalRegistrationStatus === "접수예정" ? (
+            <span className="ml-auto inline-flex h-6 items-center rounded-full bg-blue-500 px-2.5 font-anyvid text-xs font-medium text-white">
+              추가 접수 예정
             </span>
           ) : registrationStatus === "접수마감" ? (
             <span className="ml-auto inline-flex h-6 items-center rounded-full bg-brand px-2.5 font-anyvid text-xs font-medium text-white">

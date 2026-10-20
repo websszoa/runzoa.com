@@ -41,10 +41,10 @@ import {
   getCurrentKoreanTodayLabel,
   getMarathonDistances,
   getMarathonDDay,
+  getAdditionalRegistrationStatus,
   getRegistrationBadgeClassName,
   getRegistrationLabel,
   getRegistrationStatus,
-  isAdditionalRegistrationOpen,
   normalizeSearchText,
 } from "@/lib/utils";
 
@@ -588,11 +588,14 @@ export default function MarathonList({
 
 function MarathonListRow({ marathon }: { marathon: Marathon }) {
   const registrationStatus = getRegistrationStatus(marathon);
-  const additionalRegistrationOpen = isAdditionalRegistrationOpen(marathon);
-  const registrationLabel = additionalRegistrationOpen
-    ? "추가 접수중"
-    : getRegistrationLabel(registrationStatus);
-  const registrationBadgeClassName = additionalRegistrationOpen
+  const additionalRegistrationStatus = getAdditionalRegistrationStatus(marathon);
+  const registrationLabel =
+    additionalRegistrationStatus === "접수중"
+      ? "추가 접수중"
+      : additionalRegistrationStatus === "접수예정"
+        ? "추가 접수 예정"
+        : getRegistrationLabel(registrationStatus);
+  const registrationBadgeClassName = additionalRegistrationStatus
     ? "border-blue-500 bg-blue-500 text-white"
     : getRegistrationBadgeClassName(registrationStatus);
   const distances = getMarathonDistances(marathon.registration.price);

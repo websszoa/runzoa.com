@@ -15,33 +15,60 @@ export function normalizeSearchText(value: string) {
 }
 
 export type RegistrationStatus = "접수예정" | "접수중" | "접수마감";
+export type AdditionalRegistrationStatus = RegistrationStatus | null;
+
+export function getAdditionalRegistrationStatus(
+  marathon: Marathon,
+  now = Date.now(),
+): AdditionalRegistrationStatus {
+  const additional = marathon.registration.additional;
+  const registrations = (Array.isArray(additional)
+    ? additional
+    : additional
+      ? [additional]
+      : []
+  ).filter(({ startDate, endDate }) => startDate || endDate);
+
+  if (registrations.length === 0) return null;
+
+  const statuses = registrations.map(
+    ({ startDate, endDate, startTime, endTime }): RegistrationStatus => {
+      if (
+        startDate &&
+        now < getKoreanDateTime(startDate, startTime ?? "00:00").getTime()
+      ) {
+        return "접수예정";
+      }
+      if (
+        endDate &&
+        now >=
+          getKoreanDateTime(endDate, endTime ?? "23:59:59.999").getTime()
+      ) {
+        return "접수마감";
+      }
+      return "접수중";
+    },
+  );
+
+  if (statuses.includes("접수중")) return "접수중";
+  if (statuses.includes("접수예정")) return "접수예정";
+  return "접수마감";
+}
 
 export function isAdditionalRegistrationOpen(
   marathon: Marathon,
   now = Date.now(),
 ): boolean {
-  const additional = marathon.registration.additional;
-  const registrations = Array.isArray(additional)
-    ? additional
-    : additional
-      ? [additional]
-      : [];
-
-  return registrations.some(({ startDate, endDate, startTime, endTime }) => {
-    if (!startDate && !endDate) return false;
-
-    const hasStarted = startDate
-      ? now >= getKoreanDateTime(startDate, startTime ?? "00:00").getTime()
-      : true;
-    const hasNotEnded = endDate
-      ? now < getKoreanDateTime(endDate, endTime ?? "23:59:59.999").getTime()
-      : true;
-
-    return hasStarted && hasNotEnded;
-  });
+  return getAdditionalRegistrationStatus(marathon, now) === "접수중";
 }
 
-export function getRegistrationStatus(marathon: Marathon): RegistrationStatus {
+export function getRegistrationStatus(
+  marathon: Marathon,
+  now = Date.now(),
+): RegistrationStatus {
+  const additionalStatus = getAdditionalRegistrationStatus(marathon, now);
+  if (additionalStatus) return additionalStatus;
+
   const explicitStatus = marathon.registration.status?.trim();
   if (explicitStatus) {
     const normalizedStatus = explicitStatus.replace(/\s/g, "");
@@ -56,7 +83,6 @@ export function getRegistrationStatus(marathon: Marathon): RegistrationStatus {
     }
   }
 
-  const now = Date.now();
   const { startDate, endDate, startTime, endTime } = marathon.registration;
   if (!startDate && !endDate) return "접수예정";
   if (
@@ -220,11 +246,14 @@ export function getUpcomingRegistrations(marathons: Marathon[], now = Date.now()
             ).getTime() > now,
         )
         .map((schedule) => ({ ...schedule, isAdditional: true }));
+      const regularStartDate = marathon.registration.startDate;
       const regularSchedules =
-        hasRegistrationStartDate(marathon) &&
-        getRegistrationStatus(marathon) === "접수예정"
+        regularStartDate &&
+        new Date(
+          `${regularStartDate}T${marathon.registration.startTime ?? "00:00"}+09:00`,
+        ).getTime() > now
           ? [{
-              startDate: marathon.registration.startDate,
+              startDate: regularStartDate,
               startTime: marathon.registration.startTime,
               distance: undefined,
               isAdditional: false,

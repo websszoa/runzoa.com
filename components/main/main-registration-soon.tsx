@@ -77,7 +77,7 @@ export default function MainRegistrationSoon({
               const registrationLabel = schedules.some(
                 (schedule) => schedule.isAdditional,
               )
-                ? "추가 접수"
+                ? "추가 접수 예정"
                 : getRegistrationLabel(registrationStatus);
               const distances = getMarathonDistances(
                 marathon.registration.price,

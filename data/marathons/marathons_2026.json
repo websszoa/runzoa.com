@@ -12674,10 +12674,16 @@
       "startTime": "14:00",
       "endTime": "17:00",
       "site": "https://runable.me/product/18977?comp=18962",
-      "status": "접수마감",
+      "status": null,
       "price": {
         "10KM": 60000,
         "HALF": 80000
+      },
+      "additional": {
+        "startDate": "2026-10-20",
+        "endDate": "2026-10-22",
+        "startTime": "14:00",
+        "endTime": "17:00"
       }
     },
     "location": {
@@ -13190,15 +13196,15 @@
   },
   {
     "slug": "goldrun-race-2026",
-    "name": "2026 골드런 레이스(취소)",
+    "name": "2026 골드런 레이스",
     "description": "2026 골드런 레이스는 충남 금산에서 열리는 특별한 러닝 축제로, 자연 속 코스를 달리며 건강과 즐거움을 함께 누릴 수 있는 마라톤입니다. 12km와 5km 코스로 구성되어 초보 러너부터 가족 참가자까지 누구나 부담 없이 참여할 수 있으며, 다양한 참가 혜택과 기념품이 준비되어 더욱 특별한 추억을 선사합니다. 금산의 아름다운 풍경을 만끽하며 활기찬 에너지를 느껴보세요.",
     "info": {
       "type": "마라톤",
-      "scale": null,
-      "park": null,
+      "scale": 3000,
+      "park": "금산세계인삼엑스포 주차장 이용. 대회 당일 주차 및 차량 통제는 주최 측 안내 확인",
       "souvenir": "완주메달, 기념 티셔츠",
-      "program": null,
-      "memo": null
+      "program": "HALF, 10KM, 5KM, 기록 측정, 종목별 시상",
+      "memo": "전국마라톤협회가 주최하고 충청남도와 금산군이 후원하는 대회입니다. 기존 12KM와 5KM로 안내되었던 골드런 레이스는 한때 취소되었으나 2026년 12월 5일 정상 재개최되는 것으로 변경되었습니다. 재개최 요강에 따라 종목은 HALF, 10KM, 5KM로 변경되었습니다. 오전 8시 집결, 오전 9시 대회 시작이며 HALF 제한시간은 3시간, 10KM는 2시간, 5KM는 1시간입니다. 일반 참가비는 HALF와 10KM 45,000원, 5KM 30,000원입니다. 레츠고 마라톤화 포함 참가 상품은 종목별 99,000원입니다. 선착순 3,000명 모집으로 신청과 입금이 완료되어야 접수되며 정원 마감 후 추가 접수는 받지 않습니다. 기존 대회에 안내되었던 2026년 6월 30일 접수 시작일과 9월 1일 마감일은 재개최 접수 일정과 다르므로 적용하지 않습니다. 일부 외부 대회 정보 사이트에는 취소 이전 정보가 남아 있으므로 반드시 최신 공식 대회 페이지를 확인해야 합니다."
     },
     "event": {
       "startDate": "2026-12-05",
@@ -13206,7 +13212,10 @@
       "startTime": "09:00",
       "endTime": null,
       "site": "https://mara1080.com/event/df4b4e7d-4fbc-4843-858c-f15c032e92cb",
-      "schedule": null
+      "schedule": {
+        "08:00": "참가자 집결",
+        "09:00": "마라톤대회 시작"
+      }
     },
     "registration": {
       "startDate": "2026-06-30",
@@ -13214,10 +13223,11 @@
       "startTime": null,
       "endTime": null,
       "site": "https://mara1080.com/event/df4b4e7d-4fbc-4843-858c-f15c032e92cb",
-      "status": "접수마감",
+      "status": null,
       "price": {
-        "5KM": 30000,
-        "12KM": 45000
+        "HALF": 45000,
+        "10KM": 45000,
+        "5KM": 30000
       }
     },
     "location": {
@@ -13245,18 +13255,20 @@
     "info": {
       "type": "마라톤",
       "scale": 12000,
-      "park": null,
-      "souvenir": null,
-      "program": null,
-      "memo": "Full 5,000명, 10K 7,000명 선착순 모집"
+      "park": "벡스코 주차장 이용 가능 여부 및 대회 당일 교통 통제 안내는 공식 홈페이지 확인",
+      "souvenir": "공식 기념 티셔츠, 양말, 헤어밴드, 배번호, 기록칩, 완주메달, 기록증",
+      "program": "FULL 42.195KM, 10KM 로드레이스, 기록 측정, 종목별 시상",
+      "memo": "기존 부산국제마라톤에서 부산브릿지마라톤으로 명칭이 변경된 대회입니다."
     },
     "event": {
       "startDate": "2026-12-06",
       "endDate": "2026-12-06",
-      "startTime": null,
+      "startTime": "07:30",
       "endTime": null,
       "site": "https://busanmarathon.com/",
-      "schedule": null
+      "schedule": {
+        "07:30": "FULL 출발"
+      }
     },
     "registration": {
       "startDate": "2026-08-24",
@@ -13264,14 +13276,24 @@
       "startTime": "10:00",
       "endTime": null,
       "site": "https://ticket.yes24.com/Perf/59670",
-      "status": "접수마감",
+      "status": null,
       "price": {
         "10KM": 60000,
         "FULL": 80000
+      },
+      "additional": {
+        "startDate": "2026-10-26",
+        "endDate": "2026-10-30",
+        "startTime": "10:00",
+        "endTime": "18:00"
+      },
+      "refund": {
+        "endDate": "2026-10-08",
+        "policy": "기존 참가 신청의 환불 신청은 2026년 10월 8일 18시까지 안내되었습니다. 추가 접수분의 취소 및 환불 규정은 별도 공식 안내를 확인해야 합니다."
       }
     },
     "location": {
-      "country": "KR",
+      "country": "한국",
       "region": "부산",
       "venue": "부산 벡스코 제1전시장",
       "naver": null,
@@ -13282,7 +13304,7 @@
     "hosts": {
       "organizer": "부산광역시, KNN, 대한육상연맹",
       "manager": "부산광역시육상연맹",
-      "sponsor": null,
+      "sponsor": "문화체육관광부",
       "phone": "070-4111-5620",
       "email": "busanmarathon@knn.co.k",
       "instagram": "busanmarathon.official"

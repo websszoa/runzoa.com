@@ -3,15 +3,15 @@ import { CalendarDays, MapPin, Users } from "lucide-react";
 import type { Marathon } from "@/lib/marathons";
 import {
   formatMarathonDate,
+  getAdditionalRegistrationStatus,
   getRegistrationBadgeClassName,
   getRegistrationLabel,
   getRegistrationStatus,
-  isAdditionalRegistrationOpen,
 } from "@/lib/utils";
 
 export default function DetailTitle({ marathon }: { marathon: Marathon }) {
   const registrationStatus = getRegistrationStatus(marathon);
-  const additionalRegistrationOpen = isAdditionalRegistrationOpen(marathon);
+  const additionalRegistrationStatus = getAdditionalRegistrationStatus(marathon);
   const location = [marathon.location.region, marathon.location.venue]
     .filter(Boolean)
     .join(" · ");
@@ -40,12 +40,14 @@ export default function DetailTitle({ marathon }: { marathon: Marathon }) {
           <Badge
             variant="outline"
             className={getRegistrationBadgeClassName(
-              additionalRegistrationOpen ? "접수중" : registrationStatus,
+              additionalRegistrationStatus ?? registrationStatus,
             )}
           >
-            {additionalRegistrationOpen
+            {additionalRegistrationStatus === "접수중"
               ? "추가 접수중"
-              : getRegistrationLabel(registrationStatus)}
+              : additionalRegistrationStatus === "접수예정"
+                ? "추가 접수 예정"
+                : getRegistrationLabel(registrationStatus)}
           </Badge>
         </div>
 
