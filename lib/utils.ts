@@ -17,6 +17,14 @@ export function normalizeSearchText(value: string) {
 export type RegistrationStatus = "접수예정" | "접수중" | "접수마감";
 export type AdditionalRegistrationStatus = RegistrationStatus | null;
 
+const CLOSED_STATUS_KEYWORDS = ["접수마감", "접수종료", "마감", "종료"];
+
+function isExplicitlyClosed(marathon: Marathon) {
+  const explicitStatus = marathon.registration.status?.trim();
+  if (!explicitStatus) return false;
+  return CLOSED_STATUS_KEYWORDS.includes(explicitStatus.replace(/\s/g, ""));
+}
+
 export function getAdditionalRegistrationStatus(
   marathon: Marathon,
   now = Date.now(),
@@ -30,6 +38,9 @@ export function getAdditionalRegistrationStatus(
   ).filter(({ startDate, endDate }) => startDate || endDate);
 
   if (registrations.length === 0) return null;
+
+  // 관리자가 status를 접수마감으로 명시하면 추가 접수 일정이 남아 있어도 마감으로 취급한다.
+  if (isExplicitlyClosed(marathon)) return "접수마감";
 
   const statuses = registrations.map(
     ({ startDate, endDate, startTime, endTime }): RegistrationStatus => {
@@ -75,7 +86,7 @@ export function getRegistrationStatus(
     if (["접수중", "진행중", "진행"].includes(normalizedStatus)) {
       return "접수중";
     }
-    if (["접수마감", "접수종료", "마감", "종료"].includes(normalizedStatus)) {
+    if (CLOSED_STATUS_KEYWORDS.includes(normalizedStatus)) {
       return "접수마감";
     }
     if (["접수예정", "접수미정", "예정", "미정"].includes(normalizedStatus)) {

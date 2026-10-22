@@ -85,7 +85,9 @@ export function LinkBioPage() {
                 <BadgeCheck className="size-4!" />
               </AvatarBadge>
             </Avatar>
-            <h1 className="mt-4 text-xl">@runzoa_official</h1>
+            <h1 className="mt-4 text-xl font-paperlogy font-semibold">
+              @runzoa_official
+            </h1>
             <p className="mt-2 text-sm leading-5.5 text-muted-foreground break-keep">
               &ldquo;2026 마라톤 일정&rdquo; &amp; &ldquo;접수중인 대회&rdquo;
               <br />

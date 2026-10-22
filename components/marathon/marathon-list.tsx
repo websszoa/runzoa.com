@@ -595,9 +595,11 @@ function MarathonListRow({ marathon }: { marathon: Marathon }) {
       : additionalRegistrationStatus === "접수예정"
         ? "추가 접수 예정"
         : getRegistrationLabel(registrationStatus);
-  const registrationBadgeClassName = additionalRegistrationStatus
-    ? "border-blue-500 bg-blue-500 text-white"
-    : getRegistrationBadgeClassName(registrationStatus);
+  const registrationBadgeClassName =
+    additionalRegistrationStatus === "접수중" ||
+    additionalRegistrationStatus === "접수예정"
+      ? "border-blue-500 bg-blue-500 text-white"
+      : getRegistrationBadgeClassName(registrationStatus);
   const distances = getMarathonDistances(marathon.registration.price);
   const site = marathon.event.site ?? marathon.registration.site;
   const weekday = formatMarathonDate(marathon.event.startDate).match(

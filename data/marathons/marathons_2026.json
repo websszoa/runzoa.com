@@ -11934,13 +11934,6 @@
       "price": {
         "10km": 100000,
         "FULL": 150000
-      },
-      "additional": {
-        "startDate": "2026-09-08",
-        "endDate": null,
-        "startTime": "14:00",
-        "endTime": null,
-        "memo": null
       }
     },
     "location": {
@@ -12245,7 +12238,7 @@
       "startTime": "10:00",
       "endTime": null,
       "site": "https://www.purmerun.com/apply/index02.php",
-      "status": "추가 접수중",
+      "status": "접수마감",
       "price": {
         "3KM": 20000,
         "10km": 50000
@@ -19193,7 +19186,7 @@
       "startTime": null,
       "endTime": null,
       "site": "https://giverun.kr/home/main.ubs",
-      "status": "접수 대기",
+      "status": "접수마감",
       "price": null
     },
     "location": {
@@ -19242,7 +19235,7 @@
       "startTime": "11:00",
       "endTime": null,
       "site": "https://giverun.kr/shop/main.ubs",
-      "status": null,
+      "status": "접수마감",
       "price": {
         "10KM": 45000,
         "5KM": 45000
