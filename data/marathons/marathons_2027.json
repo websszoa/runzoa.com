@@ -1290,5 +1290,65 @@
       "email": "jeonmahyeop@naver.com",
       "instagram": null
     }
+  },
+
+  {
+    "slug": "incheon-k-marathon-2027",
+    "name": "2027 인천 K-마라톤대회",
+    "description": "2027 인천 K-마라톤대회는 2027년 4월 11일 인천아시아드주경기장에서 개최 예정인 마라톤대회입니다. FULL, 10KM, 5KM 세 종목으로 진행되며 오전 8시에 출발합니다. FULL 참가자는 일정 기준을 충족하는 공식 완주 기록증을 제출해야 하며, 10KM와 5KM는 누구나 참가할 수 있습니다. 지속 가능한 러닝문화 만들기를 목표로 진행되는 대회로, 인천에서 봄철 기록 도전에 나서려는 러너들에게 좋은 기회가 될 것입니다. 참가 신청은 2026년 10월 22일부터 11월 12일까지 선착순으로 진행됩니다.",
+    "info": {
+      "type": "마라톤",
+      "scale": null,
+      "park": null,
+      "souvenir": null,
+      "program": "FULL 42.195KM, 10KM, 5KM",
+      "memo": "지속 가능한 러닝문화 만들기 실천 활동에 동의해야 참가할 수 있습니다. FULL 참가자는 2027년 3월 31일까지 하프 2시간 20분 이내 또는 풀코스 5시간 이내 완주 기록증을 제출할 수 있어야 합니다. 10KM와 5KM는 남녀 누구나 참가할 수 있습니다. 출발지와 도착지는 인천아시아드주경기장으로 예정되어 있으며 집결지와 코스는 변경될 수 있습니다. 접수는 선착순으로 진행됩니다."
+    },
+    "event": {
+      "startDate": "2027-04-11",
+      "endDate": "2027-04-11",
+      "startTime": "08:00",
+      "endTime": null,
+      "site": "https://k-player.or.kr/incheon2027",
+      "schedule": {
+        "08:00": "마라톤 출발"
+      }
+    },
+    "registration": {
+      "startDate": "2026-10-22",
+      "endDate": "2026-11-12",
+      "startTime": null,
+      "endTime": null,
+      "site": "https://k-player.or.kr/incheon2027",
+      "status": null,
+      "price": {
+        "FULL": 80000,
+        "10KM": 60000,
+        "5KM": 40000
+      },
+      "additional": null,
+      "refund": {
+        "endDate": null,
+        "policy": null
+      }
+    },
+    "location": {
+      "country": "한국",
+      "region": "인천",
+      "area": "서구",
+      "venue": "인천아시아드주경기장",
+      "naver": "인천아시아드주경기장",
+      "address": "인천 서구 봉수대로 806",
+      "latitude": 37.5476153,
+      "longitude": 126.6666172
+    },
+    "hosts": {
+      "organizer": "2027인천 K-마라톤대회 사무국",
+      "manager": null,
+      "sponsor": null,
+      "phone": "1661-1291",
+      "email": "kstma0320@naver.com",
+      "instagram": null
+    }
   }
 ]

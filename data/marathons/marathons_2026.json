@@ -23519,5 +23519,133 @@
       "email": null,
       "instagram": "goyangwindroad"
     }
+  },
+
+  {
+    "slug": "earth-ulsan-run-2026",
+    "name": "2026 어울런(Earth Ulsan RUN)",
+    "description": "2026 어울런(Earth Ulsan RUN)은 12월 5일 울산 태화강 남구 둔치에서 열리는 친환경 러닝대회이자 자원순환 바자회입니다. '함께 뛰자! 다같이 즐기자!'라는 슬로건 아래 5KM와 10KM 코스를 운영하며, 러닝과 함께 문화공연, 먹거리, 럭키드로우 등을 즐길 수 있습니다. 참가자에게는 재활용 플라스틱으로 만든 완주메달과 러닝 기록, 바자회 쿠폰 등이 제공됩니다. 달리기와 나눔을 함께 경험할 수 있는 행사입니다.",
+    "info": {
+      "type": "마라톤",
+      "scale": null,
+      "park": null,
+      "souvenir": "배번호, 러닝 기록, 재활용 플라스틱 완주메달, 비빔밥 및 음료, 럭키드로우 응모 기회, 바자회 5,000원 쿠폰",
+      "program": "5KM·10KM 러닝, 자원순환 바자회, 문화공연, 비빔밥 나눔, 럭키드로우",
+      "memo": "10KM는 대회일 기준 만 18세 이상 참가 가능하며, 5KM는 누구나 참가할 수 있습니다. 만 14세 미만은 보호자 동반 신청이 필수입니다. 접수는 선착순이며 참가비 입금 확인 후 확정됩니다. 최종 참가 신청자는 11월 9일 12시에 발표할 예정입니다. 가벼운 비에는 정상 진행하며 악천후 시 행사 3일 전 안내합니다."
+    },
+    "event": {
+      "startDate": "2026-12-05",
+      "endDate": "2026-12-05",
+      "startTime": "08:00",
+      "endTime": "15:00",
+      "site": "https://earth-ulsan.run/awool",
+      "schedule": {
+        "08:00": "러닝 프로그램 시작",
+        "09:00": "자원순환 바자회 시작",
+        "11:30": "러닝 프로그램 종료 및 문화공연 시작",
+        "13:30": "문화공연 종료",
+        "14:00": "자원순환 바자회 종료",
+        "15:00": "행사 종료"
+      }
+    },
+    "registration": {
+      "startDate": "2026-10-22",
+      "endDate": "2026-10-27",
+      "startTime": "10:00",
+      "endTime": "17:00",
+      "site": "https://earth-ulsan.run/awool",
+      "status": null,
+      "price": {
+        "10KM": 20000,
+        "5KM": 20000,
+        "5KM(14세 미만)": 10000
+      },
+      "additional": null,
+      "refund": {
+        "endDate": "2026-11-01",
+        "policy": "2026년 11월 1일 17:00까지 본인이 취소 요청하면 참가비 전액 환불 가능합니다. 이후 환불 및 참가권 양도는 불가능하며, 환불 승인 후 실제 입금까지 3~5영업일이 소요될 수 있습니다."
+      }
+    },
+    "location": {
+      "country": "한국",
+      "region": "울산",
+      "area": "남구",
+      "venue": "태화강 남구 둔치",
+      "naver": "태화강 남구 둔치",
+      "address": "울산광역시 남구 신정동 1468",
+      "latitude": 35.5503455,
+      "longitude": 129.3055657
+    },
+    "hosts": {
+      "organizer": "리부트울산, 콜라보윈, 더맑음",
+      "manager": "리부트울산, 콜라보윈, 더맑음",
+      "sponsor": "현대해상",
+      "phone": null,
+      "email": null,
+      "instagram": null
+    }
+  },
+
+  {
+    "slug": "goodbye-jamsil-last-run-2026",
+    "name": "2026 더라스트런 : 굿바이 잠실",
+    "description": "2026 The Last Run : 굿바이 잠실은 11월 22일 서울 잠실종합운동장에서 열리는 10KM 러닝대회입니다. 1982년부터 2026년까지 수많은 스포츠의 순간을 함께한 잠실에 마지막 인사를 전하는 특별한 행사로, LG 트윈스 굿바이 잠실 콘셉트로 진행됩니다. 참가자는 오전 7시 30분 출발해 1시간 30분의 제한시간 안에 10KM 코스를 달리게 됩니다. 송파구민과 LG 연간회원, 일반 참가자 및 포브스코리아 구독자를 대상으로 접수가 진행됩니다.",
+    "info": {
+      "type": "마라톤",
+      "scale": null,
+      "park": null,
+      "souvenir": null,
+      "program": "10KM 단일 종목",
+      "memo": "만 14세 이상 참가할 수 있으며 제한시간은 1시간 30분입니다. 집결은 06:30, 준비운동은 07:00에 진행됩니다. 바퀴 달린 이동수단은 반입할 수 없습니다. 접수 유형별 일정과 참가비가 다르며 예매 수수료 1,000원이 별도 부과됩니다. 코스맵은 확정 후 공개됩니다."
+    },
+    "event": {
+      "startDate": "2026-11-22",
+      "endDate": "2026-11-22",
+      "startTime": "07:30",
+      "endTime": null,
+      "site": "https://web.runit.co.kr/races/1458",
+      "schedule": {
+        "06:30": "참가자 집결",
+        "07:00": "준비운동",
+        "07:30": "10KM 출발"
+      }
+    },
+    "registration": {
+      "startDate": "2026-10-22",
+      "endDate": "2026-10-23",
+      "startTime": "10:00",
+      "endTime": null,
+      "site": "https://web.runit.co.kr/races/1458",
+      "status": null,
+      "price": {
+        "10KM(송파구민)": 85000,
+        "10KM(포브스코리아 구독자)": 94900,
+        "10KM(LG 연간회원)": 85000,
+        "10KM(일반)": 85000
+      },
+      "additional": null,
+      "refund": {
+        "endDate": "2026-10-31",
+        "policy": "참가 취소 마감일은 2026년 10월 31일 00:00입니다. 상세 환불 기준은 접수처 안내를 확인해야 합니다."
+      }
+    },
+    "location": {
+      "country": "한국",
+      "region": "서울",
+      "area": "송파구",
+      "venue": "잠실종합운동장",
+      "naver": "잠실종합운동장",
+      "address": "서울 송파구 올림픽로 25",
+      "latitude": 37.5148022,
+      "longitude": 127.0736261
+    },
+    "hosts": {
+      "organizer": "중앙일보S",
+      "manager": "중앙일보S",
+      "sponsor": null,
+      "phone": null,
+      "email": null,
+      "instagram": null
+    }
   }
 ]
