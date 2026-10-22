@@ -11781,25 +11781,7 @@
       "price": {
         "10KM": 100000,
         "FULL": 150000
-      },
-      "additional": [
-        {
-          "distance": "FULL",
-          "startDate": "2026-09-08",
-          "endDate": null,
-          "startTime": "14:00",
-          "endTime": null,
-          "memo": null
-        },
-        {
-          "distance": "10km",
-          "startDate": "2026-09-09",
-          "endDate": null,
-          "startTime": "14:00",
-          "endTime": null,
-          "memo": null
-        }
-      ]
+      }
     },
     "location": {
       "country": "KR",

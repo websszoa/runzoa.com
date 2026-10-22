@@ -1,19 +1,16 @@
-import Image from "next/image";
 import Link from "next/link";
 import {
   BadgeCheck,
   BookOpen,
-  CalendarDays,
-  CalendarRange,
   ChevronRight,
-  MapPin,
-  Mail,
+  Home,
+  Star,
   Megaphone,
-  Newspaper,
   type LucideIcon,
 } from "lucide-react";
 
 import { CopyLinkButton } from "@/components/link/copy-link-button";
+import { buttonVariants } from "@/components/ui/button";
 import {
   Avatar,
   AvatarBadge,
@@ -22,12 +19,7 @@ import {
 } from "@/components/ui/avatar";
 import { SOCIAL_LINKS } from "@/lib/navigation";
 import { cn } from "@/lib/utils";
-import {
-  APP_COPYRIGHT,
-  APP_EVENTZOA_URL,
-  APP_KCALZOA_URL,
-  APP_NAME,
-} from "@/lib/constants";
+import { APP_COPYRIGHT, APP_EVENTZOA_URL, APP_NAME } from "@/lib/constants";
 
 type LinkItem = {
   title: string;
@@ -45,87 +37,39 @@ const sections: LinkSection[] = [
   {
     items: [
       {
-        title: "2026 마라톤 전체 일정 보기",
-        href: "/marathon-list",
-        icon: CalendarDays,
+        title: "런조아 홈",
+        href: "/",
+        icon: Star,
       },
       {
-        title: "지금 접수중인 대회 모아보기",
-        href: "/marathon-search",
+        title: "접수중인 대회",
+        href: "/marathon-list?status=open",
         icon: Megaphone,
       },
       {
-        title: "런조아 블로그 둘러보기",
-        href: "/blog",
+        title: "접수예정 중인 대회",
+        href: "/marathon-list?status=upcoming",
         icon: BookOpen,
       },
     ],
-  },
-  {
-    label: "뉴스레터 & 소식",
-    items: [
-      {
-        title: "뉴스레터 구독하기",
-        href: "/newsletter",
-        icon: Mail,
-      },
-      {
-        title: "최신 러닝 소식 보기",
-        href: "/news",
-        icon: Newspaper,
-      },
-    ],
-  },
-  {
-    label: "캘린더 & 지도",
-    items: [
-      {
-        title: "마라톤 캘린더로 보기",
-        href: "/marathon-calendar",
-        icon: CalendarRange,
-      },
-      {
-        title: "지도에서 대회 찾기",
-        href: "/marathon-map",
-        icon: MapPin,
-      },
-    ],
-  },
-];
-
-const familyServices = [
-  {
-    name: "이벤트조아",
-    tagline: "전국 이벤트 모음",
-    href: APP_EVENTZOA_URL,
-    className: "from-brand to-[#ff7a5c]",
-  },
-  {
-    name: "칼조아",
-    tagline: "칼로리 계산 도우미",
-    href: APP_KCALZOA_URL,
-    className: "from-neutral-800 to-neutral-600",
   },
 ];
 
 export function LinkBioPage() {
   return (
-    <div className="min-h-screen bg-muted/30 px-4 py-10 sm:py-16">
+    <div className="min-h-screen bg-muted/30 px-4 py-6">
       <div className="mx-auto w-full max-w-110">
         <div className="rounded-[2rem] border border-border bg-background px-5 py-7 sm:px-7 sm:py-9">
           <div className="mb-6 flex items-center justify-between">
             <Link
               href="/"
               aria-label={`${APP_NAME} 홈으로`}
-              className="flex size-9 items-center justify-center rounded-full bg-foreground"
+              className={cn(
+                buttonVariants({ variant: "outline", size: "icon" }),
+                "rounded-full",
+              )}
             >
-              <Image
-                src="/icons/icon192.png"
-                alt=""
-                width={20}
-                height={20}
-                className="size-5 rounded-full"
-              />
+              <Home className="size-4" />
             </Link>
             <CopyLinkButton />
           </div>
@@ -141,7 +85,7 @@ export function LinkBioPage() {
                 <BadgeCheck className="size-4!" />
               </AvatarBadge>
             </Avatar>
-            <h1 className="mt-4 text-xl font-bold">@runzoa_official</h1>
+            <h1 className="mt-4 text-xl">@runzoa_official</h1>
             <p className="mt-2 text-sm leading-5.5 text-muted-foreground break-keep">
               &ldquo;2026 마라톤 일정&rdquo; &amp; &ldquo;접수중인 대회&rdquo;
               <br />
@@ -153,10 +97,10 @@ export function LinkBioPage() {
             {sections.map((section, index) => (
               <div
                 key={section.label ?? `section-${index}`}
-                className="space-y-2.5"
+                className="space-y-3"
               >
                 {section.label && (
-                  <h2 className="pt-1 text-center text-sm font-bold text-foreground">
+                  <h2 className="pt-1 text-center text-sm text-foreground">
                     {section.label}
                   </h2>
                 )}
@@ -165,38 +109,6 @@ export function LinkBioPage() {
                 ))}
               </div>
             ))}
-          </div>
-
-          <div className="mt-8">
-            <h2 className="mb-3 text-center text-sm font-bold text-foreground">
-              런조아 패밀리 서비스
-            </h2>
-            <div className="-mx-1 flex gap-3 overflow-x-auto px-1 pb-1 [scrollbar-width:none] [&::-webkit-scrollbar]:hidden">
-              {familyServices.map((service) => (
-                <a
-                  key={service.name}
-                  href={service.href}
-                  target="_blank"
-                  rel="noreferrer"
-                  className={cn(
-                    "flex w-36 shrink-0 flex-col justify-between gap-6 rounded-2xl bg-linear-to-br p-4 text-white",
-                    service.className,
-                  )}
-                >
-                  <span className="text-[11px] font-medium text-white/70">
-                    Runzoa Family
-                  </span>
-                  <span>
-                    <span className="block text-base font-bold">
-                      {service.name}
-                    </span>
-                    <span className="block text-xs text-white/70">
-                      {service.tagline}
-                    </span>
-                  </span>
-                </a>
-              ))}
-            </div>
           </div>
 
           <div className="mt-8 flex items-center justify-center gap-2">
@@ -236,14 +148,12 @@ function LinkRow({ title, href, icon: Icon, external }: LinkItem) {
       href={href}
       target={external ? "_blank" : undefined}
       rel={external ? "noreferrer" : undefined}
-      className="group relative flex items-center justify-center rounded-2xl border border-border bg-background px-4 py-3.5 transition-colors hover:border-brand/40 hover:bg-brand/5"
+      className="group relative flex items-center justify-center rounded-2xl border border-border bg-background px-4 py-4 transition-colors hover:border-brand/40 hover:bg-brand/5"
     >
       <span className="absolute left-3 flex size-9 items-center justify-center rounded-xl bg-brand/10 text-brand">
         <Icon className="size-4" />
       </span>
-      <span className="px-10 text-center text-sm font-semibold text-foreground">
-        {title}
-      </span>
+      <span className="px-10 text-center text-sm text-foreground">{title}</span>
       <ChevronRight className="absolute right-3 size-4 shrink-0 text-muted-foreground transition-transform group-hover:translate-x-0.5" />
     </Link>
   );
