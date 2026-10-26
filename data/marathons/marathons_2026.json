@@ -3859,7 +3859,7 @@
       "startTime": null,
       "endTime": null,
       "site": "https://www.namhae250k.com/",
-      "status": "",
+      "status": "접수마감",
       "price": {
         "10KM": 70000,
         "20KM": 100000
@@ -12394,7 +12394,7 @@
       "startTime": null,
       "endTime": null,
       "site": "https://pohangmarathon.com/",
-      "status": "",
+      "status": "접수마감",
       "price": {
         "5KM": 30000,
         "10KM": 50000
@@ -15592,7 +15592,7 @@
   },
   {
     "slug": "asics-seoul-shinmun-go-free-run-2026",
-    "name": "2026 ASICS SEOUL SHINMUN GO FREE RUN",
+    "name": "2026 아식스 서울신문 고프리런",
     "description": "2026 ASICS SEOUL SHINMUN GO FREE RUN은 ASICS와 서울신문이 함께 서울 여의도공원 문화의마당에서 개최하는 마라톤 대회입니다. HALF와 10km 종목으로 진행되며 총 3,000명의 참가자를 선착순 모집합니다.",
     "info": {
       "type": "마라톤",
@@ -15783,7 +15783,7 @@
       "startTime": "10:00",
       "endTime": null,
       "site": "https://kw-marathon.com",
-      "status": null,
+      "status": "접수마감",
       "price": {
         "HALF": 55000,
         "10km": 50000,
@@ -17363,7 +17363,7 @@
       "startTime": null,
       "endTime": null,
       "site": "https://jgmrun.com/sub/join/guide.asp",
-      "status": null,
+      "status": "접수마감",
       "price": {
         "10km": 40000,
         "5km": 35000,
@@ -22754,7 +22754,7 @@
       "startTime": null,
       "endTime": null,
       "site": "https://runten.co.kr/competitions/5c0b58a2-577e-4cc3-8bc5-4234820ea4ab",
-      "status": null,
+      "status": "접수마감",
       "price": {
         "5KM": 45000,
         "10KM": 50000
@@ -23001,7 +23001,7 @@
       "startTime": null,
       "endTime": null,
       "site": "https://jbr-marathon2026.lovable.app/",
-      "status": null,
+      "status": "접수마감",
       "price": {
         "HALF": 50000,
         "10KM": 50000,
@@ -23554,7 +23554,7 @@
       "startTime": "10:00",
       "endTime": "17:00",
       "site": "https://earth-ulsan.run/awool",
-      "status": null,
+      "status": "접수마감",
       "price": {
         "10KM": 20000,
         "5KM": 20000,
@@ -23646,6 +23646,69 @@
       "phone": null,
       "email": null,
       "instagram": null
+    }
+  },
+  {
+    "slug": "sokcho-give-run-2026",
+    "name": "제2회 속초 기부런",
+    "description": "2026 제2회 속초 기부런은 11월 14일 강원특별자치도 속초시 영랑호 잔디광장과 영랑호 일원에서 개최되는 기부형 러닝 행사입니다. '한 걸음의 나눔, 모두의 행복'을 주제로 열리는 2026 사회복지대축제의 일환으로, 7KM와 3.5KM 코스를 운영합니다. 참가자는 달리기를 통해 나눔의 의미를 함께하고, 행사장에서는 공연과 사회복지 홍보 부스 등 다양한 프로그램을 즐길 수 있습니다. 영유아와 반려견도 함께할 수 있는 행사입니다.",
+    "info": {
+      "type": "마라톤",
+      "scale": 1000,
+      "park": null,
+      "souvenir": "2026 완주메달, 넥워머, 에너지 간식 등",
+      "program": "7KM·3.5KM 기부런, 재능기부공연, 개회식, 특별게스트 션 무대인사 및 준비운동, 스페셜 완주축하공연, 사회복지 부스",
+      "memo": "참가금 10,000원은 기부금으로 안내되어 있습니다. 선착순 1,000명을 모집하며 참가 대상에 별도 제한은 없습니다. 36개월 이하 영유아와 반려견은 무료로 동반할 수 있지만 별도의 배번호표는 제공되지 않습니다. 배번호표를 원하는 영유아 동반자는 별도 티켓을 구매해야 합니다. 반려견 동반 시 목줄 또는 가슴줄 등 안전수칙을 준수해야 합니다."
+    },
+    "event": {
+      "startDate": "2026-11-14",
+      "endDate": "2026-11-14",
+      "startTime": "13:00",
+      "endTime": "17:00",
+      "site": "https://event-us.kr/sokchogiverun/event/136567",
+      "schedule": {
+        "13:00": "참여자 등록 및 재능기부공연",
+        "14:00": "개회식",
+        "14:20": "특별게스트 션 무대인사 및 준비운동",
+        "14:30": "기부런 진행",
+        "15:00": "스페셜 완주축하공연",
+        "17:00": "행사 종료"
+      }
+    },
+    "registration": {
+      "startDate": "2026-10-19",
+      "endDate": "2026-11-08",
+      "startTime": null,
+      "endTime": null,
+      "site": "https://event-us.kr/sokchogiverun/event/136567",
+      "status": null,
+      "price": {
+        "7KM": 10000,
+        "3.5KM": 10000
+      },
+      "additional": {},
+      "refund": {
+        "endDate": null,
+        "policy": null
+      }
+    },
+    "location": {
+      "country": "한국",
+      "region": "강원",
+      "area": "속초시",
+      "venue": "영랑호 잔디광장 및 영랑호 일원",
+      "naver": "영랑호 잔디광장",
+      "address": "강원특별자치도 속초시 금호동 610-22",
+      "latitude": 38.2133876,
+      "longitude": 128.5757453
+    },
+    "hosts": {
+      "organizer": "속초시",
+      "manager": "속초시지역사회보장협의체",
+      "sponsor": null,
+      "phone": "033-639-2959",
+      "email": null,
+      "instagram": "sokcho_giverun"
     }
   }
 ]
