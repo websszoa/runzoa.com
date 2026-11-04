@@ -18104,7 +18104,7 @@
     "description": "2026 자이스 스마일 레이스는 서울 여의도공원 문화의마당에서 열리는 눈 건강 나눔 마라톤입니다. '다 함께 밝게 보는 세상'을 주제로 10km와 5km 두 종목에 총 7,000명의 러너가 함께합니다. 일반 참가와 하네스가 포함된 참가권을 선택할 수 있으며, 달리기를 통해 눈 건강의 중요성과 나눔의 의미를 함께 전하는 특별한 서울 러닝 행사입니다.",
     "info": {
       "type": "마라톤",
-      "scale": 7000,
+      "scale": 5000,
       "park": null,
       "souvenir": "프로스펙스 티셔츠, 경량 백팩, 배번호, 기록칩, 완주메달, 완주 패키지",
       "program": "10km, 5km 마라톤 및 눈 건강 나눔 캠페인",
@@ -18120,9 +18120,9 @@
     },
     "registration": {
       "startDate": "2026-09-01",
-      "endDate": "2026-11-21",
+      "endDate": "2026-11-08",
       "startTime": null,
-      "endTime": null,
+      "endTime": "23:59",
       "site": "https://zeiss-smilerace.kr/marathon/code/8050/",
       "status": null,
       "price": {
@@ -20247,7 +20247,7 @@
   },
   {
     "slug": "daejeon-trail-solo-run-2026",
-    "name": "제4회 대전트레일 슬로우런",
+    "name": "제4회 대전트레일 슬로우런(취소)",
     "description": "제4회 대전트레일 슬로우런은 대전 장동만남공원을 출발해 약 20km의 산길을 달리는 비경쟁 트레일러닝 대회입니다. 총 100명의 참가자가 함께하며 제한시간은 6시간으로 운영됩니다. 순위 경쟁이나 시상 없이 자신의 페이스로 대전의 트레일을 즐기는 행사로, 완주메달과 배번, 네다오 비니·넥게이터 등 다양한 기념품도 제공됩니다.",
     "info": {
       "type": "트레일러닝",
@@ -22412,7 +22412,7 @@
     },
     "registration": {
       "startDate": "2026-10-06",
-      "endDate": "2026-10-11",
+      "endDate": null,
       "startTime": null,
       "endTime": null,
       "site": "https://www.beatempokorea.com/home/",
@@ -22693,7 +22693,7 @@
     },
     "registration": {
       "startDate": "2026-10-06",
-      "endDate": "2026-10-21",
+      "endDate": "2026-11-09",
       "startTime": null,
       "endTime": "17:00",
       "site": "https://bithumbnanumrun.com/",
@@ -24072,6 +24072,131 @@
     "hosts": {
       "organizer": null,
       "manager": null,
+      "sponsor": null,
+      "phone": null,
+      "email": null,
+      "instagram": null
+    }
+  },
+
+  {
+    "slug": "hwaseong-race-2026",
+    "name": "2026 화성레이스",
+    "description": "2026 화성레이스는 12월 12일 경기도 화성시 봉담생태체육공원에서 개최되는 러닝대회입니다. 'RUN TO A BRIGHTER TOMORROW'라는 슬로건 아래 화성의 러너들이 함께 달리는 행사로, 10KM와 5KM 건강 달리기 종목이 진행됩니다. 봉담생태체육공원을 출발점으로 달리며 건강한 러닝 문화를 함께 즐길 수 있는 대회입니다.",
+    "info": {
+      "type": "마라톤",
+      "scale": 500,
+      "park": null,
+      "souvenir": "대회 기념 티셔츠, 배번호표",
+      "program": "10KM 건강 달리기, 5KM 건강 달리기",
+      "memo": "10KM 300명, 5KM 200명 모집. 참가자는 오전 8시까지 집결해야 하며, 배번호표와 티셔츠는 오전 7시부터 현장에서 배부합니다. 미성년자는 보호자 동의가 필요합니다. 배번호 양도 및 대리 참가 불가. 코스와 출발시간은 운영 상황에 따라 변경될 수 있습니다. 참가 정보 수정 마감은 2026년 11월 20일 23:59입니다."
+    },
+    "event": {
+      "startDate": "2026-12-12",
+      "endDate": "2026-12-12",
+      "startTime": "09:00",
+      "endTime": null,
+      "site": "https://web.runit.co.kr/races/1479",
+      "schedule": {
+        "07:00": "배번호표 및 기념 티셔츠 현장 배부",
+        "08:00": "참가자 집결",
+        "09:00": "대회 출발"
+      }
+    },
+    "registration": {
+      "startDate": "2026-11-04",
+      "endDate": "2026-11-14",
+      "startTime": "14:00",
+      "endTime": "23:59",
+      "site": "https://web.runit.co.kr/races/1479",
+      "status": null,
+      "currency": "KRW",
+      "price": {
+        "10KM": 50000,
+        "5KM": 40000
+      },
+      "refund": {
+        "endDate": "2026-11-14",
+        "policy": "2026년 11월 14일 23:59까지 참가 취소 및 환불 신청이 가능하며, 마감 이전 취소 시 참가비 전액을 환불합니다. 마감 이후에는 원칙적으로 환불이 불가능합니다. 천재지변, 자연재해, 정부 행정명령 등으로 대회가 취소 또는 중단되는 경우 주최 측의 별도 공지 및 환불 기준에 따릅니다. 환불 처리 기간은 결제 수단 및 금융기관 사정에 따라 달라질 수 있습니다."
+      }
+    },
+    "location": {
+      "country": "한국",
+      "region": "경기",
+      "area": "화성시",
+      "venue": "봉담생태체육공원",
+      "naver": "봉담생태체육공원",
+      "address": "경기도 화성시 효행구 봉담읍 상리1길 87",
+      "latitude": 37.2255294,
+      "longitude": 126.9426382
+    },
+    "hosts": {
+      "organizer": null,
+      "manager": null,
+      "sponsor": null,
+      "phone": null,
+      "email": null,
+      "instagram": null
+    }
+  },
+
+  {
+    "slug": "ryu-gwan-sun-peace-marathon-2026",
+    "name": "2026 유관순 평화 마라톤 대회",
+    "description": "2026 유관순 평화 마라톤 대회는 12월 5일 충청남도 천안시 독립기념관 겨레의 큰 마당에서 개최되는 마라톤대회입니다. 유관순 열사의 독립정신과 평화의 의미를 되새기며 달리는 행사로, 독립기념관을 출발해 목천 일대를 달리는 10KM와 5KM 코스로 진행됩니다. 국가유공자 참가비 50% 할인과 10KM 단체 참가팀 지원 혜택도 마련되어 있습니다.",
+    "info": {
+      "type": "마라톤",
+      "scale": null,
+      "park": null,
+      "souvenir": "기념 티셔츠",
+      "program": "10KM 넷타임 기록 측정, 5KM 건타임 기록 측정",
+      "memo": "대회 운영시간은 08:00~13:00. 10KM는 오전 09:10 출발, 제한시간 2시간, 넷타임 기록 측정. 5KM는 오전 09:20 출발, 제한시간 1시간, 건타임 기록 측정. 국가유공자는 참가비 50% 할인(10KM 15,000원, 5KM 10,000원). 10KM 참가자 20명 이상으로 구성된 단체 참가팀에는 보조금 100,000원과 부스 제공. 5KM 참가자는 단체 지원 인원에 포함되지 않음. 참가비를 납부해야 기념품 제공. 참가 인원은 추후 공지 예정이며 대회 운영 방침에 따라 일부 내용이 변경될 수 있음."
+    },
+    "event": {
+      "startDate": "2026-12-05",
+      "endDate": "2026-12-05",
+      "startTime": "09:10",
+      "endTime": "13:00",
+      "site": "https://ryugwansun.co.kr/",
+      "schedule": {
+        "08:00": "대회 행사 시작",
+        "09:10": "10KM 출발",
+        "09:20": "5KM 출발",
+        "13:00": "대회 행사 종료"
+      }
+    },
+    "registration": {
+      "startDate": "2026-11-06",
+      "endDate": "2026-11-18",
+      "startTime": null,
+      "endTime": null,
+      "site": "https://ryugwansun.co.kr/apply/solo",
+      "status": null,
+      "currency": "KRW",
+      "price": {
+        "10KM": 30000,
+        "5KM": 20000,
+        "10KM 국가유공자": 15000,
+        "5KM 국가유공자": 10000
+      },
+      "refund": {
+        "endDate": null,
+        "policy": null
+      }
+    },
+    "location": {
+      "country": "한국",
+      "region": "충남",
+      "area": "천안시",
+      "venue": "독립기념관 겨레의 큰 마당",
+      "naver": "독립기념관",
+      "address": "충청남도 천안시 동남구 목천읍 독립기념관로 1",
+      "latitude": 36.7828393,
+      "longitude": 127.2237657
+    },
+    "hosts": {
+      "organizer": "천안시체육회",
+      "manager": "대전일보사",
       "sponsor": null,
       "phone": null,
       "email": null,
