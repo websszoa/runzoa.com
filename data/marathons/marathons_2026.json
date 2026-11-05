@@ -10750,7 +10750,7 @@
       "startTime": "10:00",
       "endTime": "16:00",
       "site": "https://www.pinkrun.kr/",
-      "status": null,
+      "status": "접수마감",
       "price": {
         "5KM": 50000,
         "10KM": 60000
@@ -12185,7 +12185,7 @@
       "startTime": null,
       "endTime": null,
       "site": "https://mara1080.com/event/ffc023fc-7a54-4610-bdd6-2bb9a1028122",
-      "status": "",
+      "status": "접수마감",
       "price": {
         "5KM": 30000,
         "10km": 45000,
@@ -12649,7 +12649,7 @@
       "startTime": "14:00",
       "endTime": "17:00",
       "site": "https://runable.me/product/18977?comp=18962",
-      "status": null,
+      "status": "접수마감",
       "price": {
         "10KM": 60000,
         "HALF": 80000
@@ -12705,7 +12705,7 @@
       "startTime": null,
       "endTime": "16:00",
       "site": "https://happytrailrun.com",
-      "status": "",
+      "status": "접수마감",
       "price": {
         "10KM": 60000,
         "20KM": 70000
@@ -12755,7 +12755,7 @@
       "startTime": null,
       "endTime": "23:59",
       "site": "https://www.cuk-sports.com/%EB%AC%B4%EB%93%B1%EC%82%B0-%ED%8A%B8%EB%A0%88%EC%9D%BC%EB%9F%B0-%EA%B0%9C%EC%9A%94",
-      "status": null,
+      "status": "접수마감",
       "price": {
         "16KM": 90000,
         "36KM": 120000,
@@ -12806,7 +12806,7 @@
       "startTime": null,
       "endTime": null,
       "site": "https://sjrun.com/",
-      "status": null,
+      "status": "접수마감",
       "price": {
         "10km": 55000,
         "5km 일반부": 50000,
@@ -12990,7 +12990,7 @@
       "startTime": "10:00",
       "endTime": null,
       "site": "https://urfesta.com/",
-      "status": "",
+      "status": "접수마감",
       "price": {
         "5KM": 50000,
         "10KM": 50000
@@ -13144,7 +13144,7 @@
       "startTime": null,
       "endTime": "12:00",
       "site": "http://www.hangangmarathon.kr/",
-      "status": "",
+      "status": "접수마감",
       "price": {
         "5KM": 50000,
         "10KM": 50000,
@@ -13364,7 +13364,7 @@
       "startTime": "14:00",
       "endTime": "17:00",
       "site": "https://www.jeongseojin.co.kr/",
-      "status": null,
+      "status": "접수마감",
       "price": {
         "5km": 45000,
         "10km": 50000,
@@ -13753,7 +13753,7 @@
       "startTime": "10:00",
       "endTime": "17:00",
       "site": "https://www.saverace.co.kr/",
-      "status": null,
+      "status": "접수마감",
       "price": {
         "10K": 50000
       }
@@ -14121,7 +14121,7 @@
       "startTime": null,
       "endTime": null,
       "site": "https://mara1080.com/event/53b338c6-d38a-47b3-9479-080b00c6113a",
-      "status": null,
+      "status": "접수마감",
       "price": {
         "10km": 50000,
         "5km": 30000
@@ -14236,7 +14236,7 @@
       "startTime": "14:00",
       "endTime": null,
       "site": "https://runmusicfestival.localvibehub.com/",
-      "status": null,
+      "status": "접수마감",
       "price": {
         "스타런 패스": 49000,
         "올인원 패스": 109000,
@@ -14404,7 +14404,7 @@
       "startTime": "11:00",
       "endTime": null,
       "site": "https://www.bianchigranfondo.kr/application/info",
-      "status": null,
+      "status": "접수마감",
       "price": {
         "그란폰도": 70000,
         "메디오폰도": 70000
@@ -14798,7 +14798,7 @@
       "startTime": "14:00",
       "endTime": "17:00",
       "site": "https://www.oxfamtrailwalker.or.kr",
-      "status": null,
+      "status": "접수마감",
       "price": {
         "20K 4인 1팀": 150000
       }
@@ -14850,7 +14850,7 @@
       "startTime": "10:00",
       "endTime": null,
       "site": "https://www.univrun.co.kr/",
-      "status": null,
+      "status": "접수마감",
       "price": {
         "10km": 50000,
         "5km": 50000,
@@ -14912,7 +14912,7 @@
       "startTime": "11:00",
       "endTime": null,
       "site": "https://mgmarathon.kr/",
-      "status": null,
+      "status": "접수마감",
       "price": {
         "Half": 40000,
         "10km": 40000,
@@ -15025,7 +15025,7 @@
       "startTime": "10:00",
       "endTime": "13:00",
       "site": "https://www.runsense.co.kr/",
-      "status": null,
+      "status": "접수마감",
       "price": {
         "10km": 50000,
         "5km": 45000
@@ -15081,7 +15081,7 @@
       "startTime": "12:00",
       "endTime": "18:00",
       "site": "https://www.goodrunner.co.kr/race/info.html?id=111",
-      "status": null,
+      "status": "접수마감",
       "price": {
         "21K": 60000,
         "10K": 50000
@@ -15131,7 +15131,7 @@
       "startTime": "14:00",
       "endTime": "11:59",
       "site": null,
-      "status": null,
+      "status": "접수마감",
       "price": {
         "5km": 50000
       }
@@ -15248,7 +15248,7 @@
       "startTime": null,
       "endTime": null,
       "site": "https://gift.kakao.com/product/14260006",
-      "status": null,
+      "status": "접수마감",
       "price": {
         "5Km": 70000,
         "10km": 80000
@@ -15303,7 +15303,7 @@
       "startTime": null,
       "endTime": null,
       "site": "https://docs.google.com/forms/d/e/1FAIpQLScITbxTg3iX5iLx0n6PDBFH0rpOB8wnDPUDvdy-SXP3anrIMw/viewform",
-      "status": null,
+      "status": "접수마감",
       "price": {
         "10km": 45000,
         "5km": 40000
@@ -15460,7 +15460,7 @@
       "startTime": null,
       "endTime": "17:00",
       "site": "https://futurerun.co.kr",
-      "status": null,
+      "status": "접수마감",
       "price": {
         "10km": 50000,
         "5km": 45000
@@ -15676,7 +15676,7 @@
       "startTime": null,
       "endTime": null,
       "site": "https://mastershalf.kr",
-      "status": null,
+      "status": "접수마감",
       "price": {
         "HALF": 50000,
         "10km": 50000,
@@ -15729,7 +15729,7 @@
       "startTime": "10:00",
       "endTime": null,
       "site": "https://run.uaf.co.kr",
-      "status": null,
+      "status": "접수마감",
       "price": {
         "HALF": 45000,
         "10km": 40000,
@@ -15836,7 +15836,7 @@
       "startTime": null,
       "endTime": null,
       "site": "https://aychalf.kr",
-      "status": null,
+      "status": "접수마감",
       "price": {
         "HALF": 50000,
         "10km": 50000,
@@ -15889,7 +15889,7 @@
       "startTime": null,
       "endTime": null,
       "site": "https://mokyokrun.shop",
-      "status": null,
+      "status": "접수마감",
       "price": {
         "10km": 60000,
         "5km": 50000
@@ -15939,7 +15939,7 @@
       "startTime": null,
       "endTime": null,
       "site": "https://sc-marathon.kr",
-      "status": null,
+      "status": "접수마감",
       "price": {
         "FULL": 50000,
         "HALF": 40000,
@@ -15994,7 +15994,7 @@
       "startTime": null,
       "endTime": null,
       "site": "https://n-runplus.co.kr",
-      "status": null,
+      "status": "접수마감",
       "price": {
         "5km": 40000,
         "10km": 45000
@@ -16046,7 +16046,7 @@
       "startTime": null,
       "endTime": "17:00",
       "site": "https://marathon.newsis.com",
-      "status": null,
+      "status": "접수마감",
       "price": {
         "HALF": 50000,
         "10km": 50000,
@@ -16152,7 +16152,7 @@
       "startTime": null,
       "endTime": null,
       "site": "https://goodneighbors001.cafe24.com",
-      "status": null,
+      "status": "접수마감",
       "price": {
         "10km": 30000,
         "5km": 30000
@@ -16319,7 +16319,7 @@
       "startTime": null,
       "endTime": "18:00",
       "site": "https://ujb.my-race.kr",
-      "status": null,
+      "status": "접수마감",
       "price": {
         "HALF": 40000,
         "10km": 40000,
@@ -16480,7 +16480,7 @@
       "startTime": "14:00",
       "endTime": null,
       "site": "https://samsamis.com/55",
-      "status": null,
+      "status": "접수마감",
       "price": {
         "10km": 45000,
         "5km": 40000
@@ -16706,7 +16706,7 @@
       "startTime": null,
       "endTime": null,
       "site": "https://leisure-web.yanolja.com/leisure/10359880",
-      "status": null,
+      "status": "접수마감",
       "price": {
         "2km 러닝 + 보물찾기런": 61000
       }
@@ -16757,7 +16757,7 @@
       "startTime": "14:00",
       "endTime": "23:59",
       "site": "https://www.2tm.co.kr/ticket-sport/10645",
-      "status": null,
+      "status": "접수마감",
       "price": {
         "10km": 59000,
         "5km": 59000
@@ -16932,7 +16932,7 @@
       "startTime": null,
       "endTime": null,
       "site": "https://gimhaemarathon.imweb.me/",
-      "status": null,
+      "status": "접수마감",
       "price": {
         "HALF": 50000,
         "10km": 50000,
@@ -17160,7 +17160,7 @@
       "startTime": "10:00",
       "endTime": "18:00",
       "site": "https://maraton.dbsfa365.co.kr/",
-      "status": null,
+      "status": "접수마감",
       "price": {
         "10km": 25000,
         "5km": 15000
@@ -17210,7 +17210,7 @@
       "startTime": null,
       "endTime": null,
       "site": "https://nanumrun.or.kr/main.php",
-      "status": null,
+      "status": "접수마감",
       "price": {
         "15km": 80000,
         "10km": 70000
@@ -17260,7 +17260,7 @@
       "startTime": null,
       "endTime": null,
       "site": "https://peacerun.kr/marathon/code/8051/",
-      "status": null,
+      "status": "접수마감",
       "price": {
         "10km": 60000,
         "5km": 45000
@@ -17419,7 +17419,7 @@
       "startTime": "13:00",
       "endTime": "24:00",
       "site": "https://r1run.com/",
-      "status": null,
+      "status": "접수마감",
       "price": {
         "10K": 60000
       }
@@ -17583,7 +17583,7 @@
       "startTime": "10:00",
       "endTime": null,
       "site": "https://www.mindrun.co.kr/",
-      "status": null,
+      "status": "접수마감",
       "price": {
         "10KM": 60000,
         "5KM": 55000
@@ -17633,7 +17633,7 @@
       "startTime": "13:00",
       "endTime": "23:59",
       "site": "https://tongkeun-run.com/",
-      "status": null,
+      "status": "접수마감",
       "price": {
         "10KM": 30000,
         "5KM": 30000,
@@ -17696,7 +17696,7 @@
       "startTime": "12:00",
       "endTime": null,
       "site": "https://www.namhae250k.com/RTV-INFO/",
-      "status": null,
+      "status": "접수마감",
       "price": {
         "22K": 120000,
         "36K": 150000
@@ -17749,7 +17749,7 @@
       "startTime": "10:00",
       "endTime": "17:00",
       "site": "https://www.dema.mil.kr/marathon/intro/mainPoint.do",
-      "status": null,
+      "status": "접수마감",
       "price": {
         "10KM": 20000,
         "5KM": 20000
@@ -17854,7 +17854,7 @@
       "startTime": "11:00",
       "endTime": "17:00",
       "site": "https://www.fila.co.kr/pages/fila-run-espresso-10k-seoul",
-      "status": null,
+      "status": "접수마감",
       "price": {
         "10KM": 70000,
         "10KM_ESPRESSO_PACKAGE": 179000
@@ -17914,7 +17914,7 @@
       "startTime": "10:00",
       "endTime": "23:59",
       "site": "https://asrun.co.kr/register",
-      "status": null,
+      "status": "접수마감",
       "price": {
         "10KM": 55000,
         "5KM": 50000
@@ -17971,7 +17971,7 @@
       "startTime": "20:00",
       "endTime": null,
       "site": "https://youth1strun.com/",
-      "status": null,
+      "status": "접수마감",
       "price": {
         "5.8KM(러닝)": 30000,
         "5.8KM(걷기)": 25000
@@ -18176,7 +18176,7 @@
       "startTime": null,
       "endTime": "23:59",
       "site": "http://www.djrun.kr/",
-      "status": null,
+      "status": "접수마감",
       "price": {
         "HALF": 40000,
         "10KM": 40000,
@@ -18280,7 +18280,7 @@
       "startTime": "13:00",
       "endTime": null,
       "site": "https://kiccrace.com/hwasung1",
-      "status": null,
+      "status": "접수마감",
       "price": {
         "HALF": 60000,
         "10KM": 60000,
@@ -18343,7 +18343,7 @@
       "startTime": null,
       "endTime": "18:00",
       "site": "https://cafe.naver.com/seoultrailrun/828",
-      "status": null,
+      "status": "접수마감",
       "price": {
         "35KM": 120000,
         "15KM": 70000
@@ -18396,7 +18396,7 @@
       "startTime": null,
       "endTime": null,
       "site": "https://www.leaveit.co.kr/match/apply/2026-yeongjong-airway",
-      "status": null,
+      "status": "접수마감",
       "price": {
         "HALF": 55000,
         "10KM": 55000,
@@ -18624,7 +18624,7 @@
       "startTime": "10:00",
       "endTime": "23:59",
       "site": "https://www.tongilmarathon.kr/ko/",
-      "status": null,
+      "status": "접수마감",
       "price": {
         "5KM": 25000,
         "5KM(초등학생이하)": 10000
@@ -18748,7 +18748,7 @@
       "startTime": "15:00",
       "endTime": null,
       "site": "https://dangdangrun.com/reservation2026",
-      "status": null,
+      "status": "접수마감",
       "price": {
         "5KM_기록경쟁": 59000,
         "5KM_일반": 55000,
@@ -18806,7 +18806,7 @@
       "startTime": null,
       "endTime": null,
       "site": "https://xn--439ar1m25cg1c810a7ro.com/",
-      "status": null,
+      "status": "접수마감",
       "price": {
         "HALF": 70000,
         "10KM": 60000,
@@ -18860,7 +18860,7 @@
       "startTime": null,
       "endTime": "16:00",
       "site": "https://yangjurun.kr/",
-      "status": null,
+      "status": "접수마감",
       "price": {
         "HALF": 50000,
         "10KM": 50000,
@@ -18915,7 +18915,7 @@
       "startTime": null,
       "endTime": null,
       "site": "https://www.jnrun.co.kr/",
-      "status": null,
+      "status": "접수마감",
       "price": {
         "HALF": 50000,
         "10KM": 50000,
@@ -19025,7 +19025,7 @@
       "startTime": "16:00",
       "endTime": null,
       "site": "https://rocknrun.kr/jinangowon_forestival_registration",
-      "status": null,
+      "status": "접수마감",
       "price": {
         "16KM": 50000,
         "6KM": 30000
@@ -19344,7 +19344,7 @@
       "startTime": null,
       "endTime": "17:00",
       "site": "https://comport11.oopy.io/gangnamhalfmarathon/course",
-      "status": null,
+      "status": "접수마감",
       "price": {
         "HALF": 65000,
         "10KM": 60000
@@ -19399,7 +19399,7 @@
       "startTime": null,
       "endTime": null,
       "site": "https://sqnc.global/buldak-burning-festa-with-peppo",
-      "status": null,
+      "status": "접수마감",
       "price": {
         "23KM": 90000,
         "13KM": 70000,
@@ -19452,7 +19452,7 @@
       "startTime": null,
       "endTime": "23:59",
       "site": "https://storyrun.kr/",
-      "status": null,
+      "status": "접수마감",
       "price": {
         "HALF": 50000,
         "10KM": 50000,
@@ -19575,7 +19575,7 @@
       "startTime": null,
       "endTime": null,
       "site": "https://seoultongilrun.org/",
-      "status": null,
+      "status": "접수마감",
       "price": {
         "10KM": 50000,
         "5KM": 35000,
@@ -19682,7 +19682,7 @@
       "startTime": null,
       "endTime": null,
       "site": "https://leisure-web.yanolja.com/leisure/10365567?utm_source=ig&utm_medium=social&utm_content=link_in_bio&fbclid=PAcGRvZgJleHRuA2FlbQIxMQBzcnRjBmFwcF9pZA85MzY2MTk3NDMzOTI0NTkAAafP93J0BBKty6PezFF0amqLGZZuPWheQzoMvWAV1WdPzfLT8Nt84jF3GB9wJQ_aem_r_72kfjFvpULfy8iv_-Ggw",
-      "status": null,
+      "status": "접수마감",
       "price": {
         "1.8KM_UPHILL": 55000
       }
@@ -19847,7 +19847,7 @@
       "startTime": null,
       "endTime": null,
       "site": "https://www.jebudorun.com/",
-      "status": null,
+      "status": "접수마감",
       "price": {
         "10KM": 60000,
         "5KM": 60000
@@ -19901,7 +19901,7 @@
       "startTime": "10:00",
       "endTime": null,
       "site": "https://www.snymca.org/?c=user&mcd=sub05_01&me=bbs_detail&idx=17408",
-      "status": null,
+      "status": "접수마감",
       "price": {
         "10KM": 40000,
         "5KM": 30000
@@ -19951,7 +19951,7 @@
       "startTime": null,
       "endTime": null,
       "site": "https://gnrace.kr/category/참가신청/28/",
-      "status": null,
+      "status": "접수마감",
       "price": {
         "5KM": 30000
       }
@@ -20000,7 +20000,7 @@
       "startTime": "10:00",
       "endTime": "14:00",
       "site": "http://www.xn--o80b37in2b02lesgqqcj12a.kr/",
-      "status": null,
+      "status": "접수마감",
       "price": {
         "10KM": 30000,
         "5KM": 20000
@@ -20164,7 +20164,7 @@
       "startTime": null,
       "endTime": "18:00",
       "site": "https://form.naver.com/response/I9jCxUVxPDF",
-      "status": null,
+      "status": "접수마감",
       "price": {
         "10KM": 25000,
         "5KM": 25000
@@ -20219,7 +20219,7 @@
       "startTime": null,
       "endTime": null,
       "site": "https://srtrail.kr/58",
-      "status": null,
+      "status": "접수마감",
       "price": {
         "40KM": 120000,
         "30KM": 100000,
@@ -20333,7 +20333,7 @@
       "startTime": null,
       "endTime": "23:59",
       "site": "https://forms.gle/apRSNiLvtudFPRaJ8",
-      "status": null,
+      "status": "접수마감",
       "price": {
         "10KM": 25000,
         "5KM": 25000
@@ -20394,7 +20394,7 @@
       "startTime": null,
       "endTime": null,
       "site": "https://dobokrun.com/",
-      "status": null,
+      "status": "접수마감",
       "price": {
         "10KM": 50000,
         "5KM": 50000
@@ -20569,7 +20569,7 @@
       "startTime": null,
       "endTime": "18:00",
       "site": "https://mujumarathon.com/",
-      "status": null,
+      "status": "접수마감",
       "price": {
         "HALF": 50000,
         "10KM": 45000,
@@ -20632,7 +20632,7 @@
       "startTime": null,
       "endTime": "23:00",
       "site": "https://funrun.imweb.me/",
-      "status": null,
+      "status": "접수마감",
       "price": {
         "10KM": 10000,
         "5KM": 10000
@@ -20691,7 +20691,7 @@
       "startTime": "10:00",
       "endTime": "12:00",
       "site": "https://seoulloverun.com/",
-      "status": null,
+      "status": "접수마감",
       "price": {
         "HALF": 50000,
         "10KM": 45000,
@@ -20864,7 +20864,7 @@
       "startTime": "13:00",
       "endTime": "16:00",
       "site": "https://insamrun2026.kr/",
-      "status": null,
+      "status": "접수마감",
       "price": {
         "3KM": 30000
       },
@@ -20979,7 +20979,7 @@
       "startTime": "10:00",
       "endTime": "22:00",
       "site": "https://kyeonggiincheon.com/",
-      "status": null,
+      "status": "접수마감",
       "price": {
         "10KM": 20000,
         "5KM": 20000
@@ -21046,7 +21046,7 @@
       "startTime": null,
       "endTime": null,
       "site": "https://cltoo.com/ko/product/379",
-      "status": null,
+      "status": "접수마감",
       "price": {
         "10KM": 30000
       },
@@ -21157,7 +21157,7 @@
       "startTime": null,
       "endTime": null,
       "site": "https://mstorebuy.com/",
-      "status": null,
+      "status": "접수마감",
       "currency": "USD",
       "price": {
         "10KM": 110,
@@ -21216,7 +21216,7 @@
       "startTime": "14:00",
       "endTime": "23:59",
       "site": "https://justicerun.kr/apply",
-      "status": null,
+      "status": "접수마감",
       "price": {
         "10KM": 70000,
         "5KM": 40000
@@ -21465,7 +21465,7 @@
       "startTime": "10:00",
       "endTime": "17:00",
       "site": "https://runable.me/product/20861?comp=20795",
-      "status": null,
+      "status": "접수마감",
       "price": {
         "경쟁런": 25000,
         "비경쟁런": 25000,
@@ -21524,7 +21524,7 @@
       "startTime": null,
       "endTime": "23:59",
       "site": "https://runable.me/product/20831?comp=20828",
-      "status": null,
+      "status": "접수마감",
       "price": {
         "5KM": 45000,
         "10KM": 45000
@@ -21575,7 +21575,7 @@
       "startTime": null,
       "endTime": null,
       "site": "https://oaktreeproject.com",
-      "status": null,
+      "status": "접수마감",
       "price": {
         "HALF": 50000,
         "10KM": 50000,
@@ -21751,7 +21751,7 @@
       "startTime": null,
       "endTime": null,
       "site": "https://maraton.istanbul/marathon-42k-run/?lang=en",
-      "status": null,
+      "status": "접수마감",
       "currency": "EUR",
       "price": {
         "FULL(1.6~1.31)": 60,
@@ -21808,7 +21808,7 @@
       "startTime": "10:00",
       "endTime": "23:59",
       "site": "https://www.kpioneertrailrun.co.kr/",
-      "status": null,
+      "status": "접수마감",
       "price": {
         "20KM": 60000,
         "15KM": 55000,
@@ -21974,7 +21974,7 @@
       "startTime": "00:00",
       "endTime": "24:00",
       "site": "https://xn--q20bn3kn1bg9oekd84a785cnfg.kr/",
-      "status": null,
+      "status": "접수마감",
       "price": {
         "HALF": 50000,
         "10KM": 50000,
@@ -22031,7 +22031,7 @@
       "startTime": null,
       "endTime": "16:00",
       "site": "https://1004.tbc.co.kr/sub3_1.php",
-      "status": null,
+      "status": "접수마감",
       "price": {
         "HALF": 45000,
         "10KM": 40000,
@@ -22094,7 +22094,7 @@
       "startTime": null,
       "endTime": null,
       "site": "https://cymarathon.imweb.me/21",
-      "status": null,
+      "status": "접수마감",
       "price": {
         "HALF": 40000,
         "14KM": 35000,
@@ -22152,7 +22152,7 @@
       "startTime": "14:00",
       "endTime": "23:59",
       "site": "https://gcrun.co.kr/gcrun/",
-      "status": null,
+      "status": "접수마감",
       "price": {
         "HALF": 45000,
         "10KM": 40000,
@@ -22266,7 +22266,7 @@
       "startTime": "14:00",
       "endTime": "23:59",
       "site": null,
-      "status": null,
+      "status": "접수마감",
       "price": {
         "10KM": 60000
       },
@@ -22366,7 +22366,7 @@
       "startTime": null,
       "endTime": null,
       "site": "https://www.mexicana.co.kr/",
-      "status": null,
+      "status": "접수마감",
       "price": {
         "5KM": 20000
       },
@@ -22640,7 +22640,7 @@
       "startTime": "10:00",
       "endTime": null,
       "site": "http://inno.ynmarathon.kr/home/main.ubs",
-      "status": null,
+      "status": "접수마감",
       "price": {
         "10KM": 40000,
         "5KM": 25000
@@ -22812,7 +22812,7 @@
       "startTime": null,
       "endTime": null,
       "site": "http://www.metarun.kr/",
-      "status": null,
+      "status": "접수마감",
       "price": {
         "8KM": 30000,
         "5KM": 30000
@@ -22874,7 +22874,7 @@
       "startTime": null,
       "endTime": null,
       "site": "https://gnrace.kr/",
-      "status": null,
+      "status": "접수마감",
       "price": {
         "10KM": 30000,
         "5KM": 30000
@@ -22931,7 +22931,7 @@
       "startTime": "10:00",
       "endTime": "23:59",
       "site": "https://oncorun1885.com/",
-      "status": null,
+      "status": "접수마감",
       "price": {
         "5KM": 50000,
         "3.2KM 걷기": 50000,
@@ -23616,7 +23616,7 @@
       "startTime": "10:00",
       "endTime": null,
       "site": "https://web.runit.co.kr/races/1458",
-      "status": null,
+      "status": "접수마감",
       "price": {
         "10KM(송파구민)": 85000,
         "10KM(포브스코리아 구독자)": 94900,
@@ -24139,7 +24139,6 @@
       "instagram": null
     }
   },
-
   {
     "slug": "ryu-gwan-sun-peace-marathon-2026",
     "name": "2026 유관순 평화 마라톤 대회",
@@ -24197,6 +24196,130 @@
     "hosts": {
       "organizer": "천안시체육회",
       "manager": "대전일보사",
+      "sponsor": null,
+      "phone": null,
+      "email": null,
+      "instagram": null
+    }
+  },
+  {
+    "slug": "spotv-night-run-2026",
+    "name": "2026 스포티비 나이트런",
+    "description": "2026 한국마사회와 함께하는 SPOTV NIGHT RUN은 11월 28일 경기도 과천시 렛츠런파크 서울에서 개최되는 야간 러닝 대회입니다. 평소 일반인이 달리기 어려운 경마장 경주로를 직접 달리는 이색 행사로, 7KM와 3.5KM 기록레이스 및 가족이 함께 참여하는 450m 패밀리런으로 진행됩니다. 경마 관람과 러닝 체험 프로그램도 함께 즐길 수 있습니다.",
+    "info": {
+      "type": "마라톤",
+      "scale": 2000,
+      "park": "렛츠런파크 서울 주차장 이용 가능",
+      "souvenir": "7KM·3.5KM: 뉴발란스 티셔츠, 완주메달, 기록칩, 말마프렌즈 타포린백 및 협찬품. 450m 패밀리런: 입장팔찌, 배번표, 타포린백 및 협찬품(티셔츠·완주메달 미제공)",
+      "program": "7KM 기록레이스, 3.5KM 기록레이스, 450m 패밀리런, 경마 관람, 러닝용품 체험 부스, 말 문화 체험",
+      "memo": "총 모집 인원 2,000명(7KM 1,000명, 3.5KM 500명, 450m 패밀리런 500명). 7KM는 모래 경주로와 아스팔트 구간, 3.5KM는 모래 경주로에서 진행. 450m 패밀리런은 만 4세 이상 참가 가능하며 비경쟁·비기록 종목. 기록레이스는 기록칩 제공 및 건타임 기준 시상. 7KM와 3.5KM 중복 신청 불가. 패밀리런과 기록레이스 1개 종목은 중복 신청 가능. 기록레이스 참가자는 코스튬 착용 불가. 경주로 특성상 모래 유입과 미끄러짐 주의. 출발시간 및 세부 운영 일정은 최종 공식 공지 확인 필요."
+    },
+    "event": {
+      "startDate": "2026-11-28",
+      "endDate": "2026-11-28",
+      "startTime": "19:00",
+      "endTime": null,
+      "site": "https://www.spotvrun.co.kr/",
+      "schedule": {
+        "14:00": "참가자 접수 및 체험 부스 운영",
+        "18:30": "대회 안내 및 준비운동",
+        "19:00": "450m 패밀리런 출발",
+        "19:30": "7KM 기록레이스 출발",
+        "19:40": "3.5KM 기록레이스 출발"
+      }
+    },
+    "registration": {
+      "startDate": "2026-10-31",
+      "endDate": null,
+      "startTime": null,
+      "endTime": null,
+      "site": "https://www.spotvrun.co.kr/",
+      "status": null,
+      "currency": "KRW",
+      "price": {
+        "7KM": 70000,
+        "3.5KM": 40000,
+        "450m 패밀리런": 15000
+      },
+      "refund": {
+        "endDate": "2026-11-15",
+        "policy": "2026년 11월 15일까지 유선으로 취소 및 환불 신청 가능. 이후 취소·환불 불가. 환불금은 대회 종료 후 2주 이내 지급 예정. 세부 수수료 기준은 공식 안내 확인 필요."
+      }
+    },
+    "location": {
+      "country": "한국",
+      "region": "경기",
+      "area": "과천시",
+      "venue": "렛츠런파크 서울 경주로",
+      "naver": "렛츠런파크 서울",
+      "address": "경기도 과천시 경마공원대로 107",
+      "latitude": 37.4459287,
+      "longitude": 127.0116959
+    },
+    "hosts": {
+      "organizer": "SPOTV, 한국마사회",
+      "manager": "SPOTV",
+      "sponsor": "ACDelco",
+      "phone": "031-821-9949",
+      "email": null,
+      "instagram": null
+    }
+  },
+  {
+    "slug": "bongdam-alps-trail-running-2026",
+    "name": "2026 봉담알프스 트레일 러닝 대회",
+    "description": "2026 봉담알프스 트레일 러닝 대회는 12월 12일 경기도 화성시 봉담읍 화성시어린이문화센터 뒤 공원에서 개최되는 트레일러닝 대회입니다. 익숙한 도로를 벗어나 봉담의 자연과 산길을 달리는 행사로, 16KM와 11KM 두 종목으로 진행됩니다. 초보 러너에게는 새로운 도전을, 숙련된 러너에게는 자신의 한계를 넘어설 기회를 제공하며, 기록보다 도전하는 마음과 함께 달리는 즐거움을 강조하는 대회입니다.",
+    "info": {
+      "type": "트레일러닝",
+      "scale": null,
+      "park": null,
+      "souvenir": "봉담알프스 대회 메달, 배번표, 럭키박스, 경품 응모권, 점심식사",
+      "program": "16KM 트레일러닝, 11KM 트레일러닝, 럭키박스, 경품 추첨",
+      "memo": "성인만 참가 가능한 대회. 16KM 참가비 70,000원, 11KM 참가비 50,000원. 종목별 모집 인원은 각각 100명으로 안내되어 있으나 총 모집 인원은 100명으로 별도 표기되어 확인 필요. 오전 08:00 집결 및 등록, 08:50 전체 스트레칭 및 안내, 09:00 16KM 출발, 09:20 11KM 출발. 참가자는 정해진 시간 내 도착하여 배번표를 수령해야 함. 코스 및 출발시간은 운영 상황에 따라 변경될 수 있음. 참가자에게 점심식사 제공. 기록보다 도전과 완주의 즐거움을 강조하는 트레일러닝 행사."
+    },
+    "event": {
+      "startDate": "2026-12-12",
+      "endDate": "2026-12-12",
+      "startTime": "09:00",
+      "endTime": null,
+      "site": "https://link.inpock.co.kr/bdalps_2026",
+      "schedule": {
+        "08:00": "참가자 등록 및 배번표 배부",
+        "08:50": "전체 스트레칭 및 대회 안내",
+        "09:00": "16KM 출발",
+        "09:20": "11KM 출발"
+      }
+    },
+    "registration": {
+      "startDate": "2026-10-26",
+      "endDate": "2026-11-22",
+      "startTime": "06:00",
+      "endTime": "23:59",
+      "site": "https://link.inpock.co.kr/bdalps_2026",
+      "status": null,
+      "currency": "KRW",
+      "price": {
+        "16KM": 70000,
+        "11KM": 50000
+      },
+      "refund": {
+        "endDate": "2026-11-06",
+        "policy": "2026년 11월 6일 23:59까지 취소 및 환불 신청 폼을 등록해야 함. 이후 취소 및 환불 가능 여부와 세부 환불 규정은 공식 안내 확인 필요."
+      }
+    },
+    "location": {
+      "country": "한국",
+      "region": "경기",
+      "area": "화성시",
+      "venue": "화성시어린이문화센터 뒤 공원",
+      "naver": "화성시어린이문화센터",
+      "address": "경기도 화성시 효행구 봉담읍 동화길 146",
+      "latitude": 37.2123338,
+      "longitude": 126.9608021
+    },
+    "hosts": {
+      "organizer": "봉담러닝크루(BDRC)",
+      "manager": "OiEium",
       "sponsor": null,
       "phone": null,
       "email": null,
