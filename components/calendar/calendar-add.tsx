@@ -1,10 +1,9 @@
 "use client";
 
 import Link from "next/link";
-import { useDeferredValue, useMemo, useState } from "react";
+import { useMemo, useState } from "react";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
-import { Input } from "@/components/ui/input";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import type { Marathon } from "@/lib/marathons";
 import {
@@ -12,9 +11,9 @@ import {
   CalendarPlus2,
   Check,
   CircleAlert,
+  ClipboardCheck,
   LoaderCircle,
   MapPin,
-  Search,
   Tag,
   Users,
   WalletCards,
@@ -27,7 +26,6 @@ import {
   DialogHeader,
   DialogTitle,
 } from "@/components/ui/dialog";
-import DialogAccountNotice from "@/components/dialog/dialog-account-notice";
 import {
   formatMarathonDate,
   formatMarathonPrices,
@@ -36,8 +34,19 @@ import {
   getRegistrationBadgeClassName,
   getRegistrationLabel,
   getRegistrationStatus,
-  normalizeSearchText,
+  cn,
+  type RegistrationStatus,
 } from "@/lib/utils";
+
+type EventKind = "race" | "registration";
+
+type StatusFilter = "전체" | RegistrationStatus;
+
+const STATUS_FILTERS: { value: StatusFilter; label: string }[] = [
+  { value: "전체", label: "전체" },
+  { value: "접수중", label: "접수중" },
+  { value: "접수예정", label: "접수예정" },
+];
 
 type CalendarAddProps = {
   marathons: Marathon[];
@@ -46,7 +55,8 @@ type CalendarAddProps = {
   naverConnected: boolean;
   googleConnected: boolean;
   kakaoConnected: boolean;
-  initialKakaoAddedSlugs: string[];
+  initialKakaoRaceAddedSlugs: string[];
+  initialKakaoRegistrationAddedSlugs: string[];
   initialProvider: "naver" | "google" | "kakao";
   initialGoogleAddedSlugs: string[];
   initialAddedSlugs: string[];
@@ -54,8 +64,14 @@ type CalendarAddProps = {
 
 type ResultDialog = {
   marathonName: string;
+  kind: EventKind;
   alreadyAdded: boolean;
   warning?: string;
+};
+
+const EVENT_KIND_LABEL: Record<EventKind, string> = {
+  race: "대회 일정",
+  registration: "접수 일정",
 };
 
 const PAGE_SIZE = 30;
@@ -68,53 +84,52 @@ export default function CalendarAdd({
   naverConnected,
   googleConnected,
   kakaoConnected,
-  initialKakaoAddedSlugs,
+  initialKakaoRaceAddedSlugs,
+  initialKakaoRegistrationAddedSlugs,
   initialProvider,
   initialGoogleAddedSlugs,
   initialAddedSlugs,
 }: CalendarAddProps) {
   const [provider, setProvider] = useState<string>(initialProvider);
   const providerName = provider === "kakao" ? "카카오톡" : provider === "google" ? "구글" : "네이버";
-  const [kakaoAddedSlugs, setKakaoAddedSlugs] = useState(() => new Set(initialKakaoAddedSlugs));
+  const [kakaoRaceAddedSlugs, setKakaoRaceAddedSlugs] = useState(() => new Set(initialKakaoRaceAddedSlugs));
+  const [kakaoRegistrationAddedSlugs, setKakaoRegistrationAddedSlugs] = useState(() => new Set(initialKakaoRegistrationAddedSlugs));
   const [kakaoReconnectRequired, setKakaoReconnectRequired] = useState(false);
   const [googleAddedSlugs, setGoogleAddedSlugs] = useState(() => new Set(initialGoogleAddedSlugs));
   const [googleReconnectRequired, setGoogleReconnectRequired] = useState(false);
-  const [query, setQuery] = useState("");
+  const [statusFilter, setStatusFilter] = useState<StatusFilter>("전체");
   const [visibleCount, setVisibleCount] = useState(PAGE_SIZE);
-  const [pendingSlug, setPendingSlug] = useState<string | null>(null);
+  const [pendingKey, setPendingKey] = useState<string | null>(null);
   const [addedSlugs, setAddedSlugs] = useState(
     () => new Set(initialAddedSlugs),
   );
   const [resultDialog, setResultDialog] = useState<ResultDialog | null>(null);
   const [errorMessage, setErrorMessage] = useState<string | null>(null);
   const [reconnectRequired, setReconnectRequired] = useState(false);
-  const deferredQuery = useDeferredValue(normalizeSearchText(query));
   const canUseCalendar = isLoggedIn && (provider === "kakao" ? kakaoConnected && !kakaoReconnectRequired : provider === "google" ? googleConnected && !googleReconnectRequired : naverConnected && !reconnectRequired);
 
-  const filteredMarathons = useMemo(() => {
-    if (!deferredQuery) return marathons;
-    return marathons.filter((marathon) =>
-      normalizeSearchText([
-        marathon.name,
-        marathon.location.region,
-        marathon.location.venue,
-        marathon.location.address,
-      ]
-        .filter(Boolean)
-        .join(" "))
-        .includes(deferredQuery),
-    );
-  }, [deferredQuery, marathons]);
+  const isAdded = (slug: string, kind: EventKind) => {
+    if (provider === "kakao") {
+      return kind === "registration" ? kakaoRegistrationAddedSlugs.has(slug) : kakaoRaceAddedSlugs.has(slug);
+    }
+    return provider === "google" ? googleAddedSlugs.has(slug) : addedSlugs.has(slug);
+  };
 
-  const addToCalendar = async (marathon: Marathon) => {
-    setPendingSlug(marathon.slug);
+  const filteredMarathons = useMemo(() => {
+    if (statusFilter === "전체") return marathons;
+    return marathons.filter((marathon) => getRegistrationStatus(marathon) === statusFilter);
+  }, [statusFilter, marathons]);
+
+  const addToCalendar = async (marathon: Marathon, kind: EventKind = "race") => {
+    const key = `${marathon.slug}:${kind}`;
+    setPendingKey(key);
     setErrorMessage(null);
 
     try {
       const response = await fetch(`/api/calendar/${provider}`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ slug: marathon.slug }),
+        body: JSON.stringify({ slug: marathon.slug, kind }),
       });
       const result = (await response.json()) as {
         success?: boolean;
@@ -134,43 +149,49 @@ export default function CalendarAdd({
         return;
       }
 
-      (provider === "kakao" ? setKakaoAddedSlugs : provider === "google" ? setGoogleAddedSlugs : setAddedSlugs)((current) => new Set(current).add(marathon.slug));
+      const addSlug = provider === "kakao"
+        ? (kind === "registration" ? setKakaoRegistrationAddedSlugs : setKakaoRaceAddedSlugs)
+        : provider === "google" ? setGoogleAddedSlugs : setAddedSlugs;
+      addSlug((current) => new Set(current).add(marathon.slug));
       setResultDialog({
         marathonName: marathon.name,
+        kind,
         alreadyAdded: Boolean(result.alreadyAdded),
         warning: result.warning,
       });
     } catch {
       setErrorMessage("네트워크 연결을 확인한 뒤 다시 시도해 주세요.");
     } finally {
-      setPendingSlug(null);
+      setPendingKey(null);
     }
   };
 
   return (
     <>
-      <DialogAccountNotice notice="calendar-test" />
-
-      <Tabs value={provider} onValueChange={(value) => { if (!pendingSlug && !resultDialog) { setProvider(String(value)); setErrorMessage(null); } }} className="gap-0">
+      <Tabs value={provider} onValueChange={(value) => { if (!pendingKey && !resultDialog) { setProvider(String(value)); setErrorMessage(null); } }} className="gap-0">
         <TabsList className="block h-auto w-full overflow-visible rounded-none border-b bg-background/90 p-0 backdrop-blur group-data-horizontal/tabs:h-auto">
           <div className="mx-auto flex w-full max-w-7xl gap-1 overflow-x-auto px-4 py-3 sm:px-6 lg:px-8">
-            <TabsTrigger
-              value="naver"
-              className="h-9 flex-none rounded-md bg-gray-50 px-4 font-anyvid text-sm text-muted-foreground shadow-none after:hidden data-active:bg-brand/10 data-active:font-medium data-active:text-brand group-data-[variant=default]/tabs-list:data-active:shadow-none!"
-            >
-              네이버
-            </TabsTrigger>
-            <TabsTrigger
-              value="google"
-              className="h-9 flex-none rounded-md bg-gray-50 px-4 font-anyvid text-sm text-muted-foreground shadow-none after:hidden data-active:bg-brand/10 data-active:font-medium data-active:text-brand group-data-[variant=default]/tabs-list:data-active:shadow-none!"
-            >
-              구글
-            </TabsTrigger>
             <TabsTrigger
               value="kakao"
               className="h-9 flex-none rounded-md bg-gray-50 px-4 font-anyvid text-sm text-muted-foreground shadow-none after:hidden data-active:bg-brand/10 data-active:font-medium data-active:text-brand group-data-[variant=default]/tabs-list:data-active:shadow-none!"
             >
               카카오톡
+            </TabsTrigger>
+            <TabsTrigger
+              value="naver"
+              disabled
+              className="h-9 flex-none gap-1.5 rounded-md bg-gray-50 px-4 font-anyvid text-sm text-muted-foreground shadow-none after:hidden data-active:bg-brand/10 data-active:font-medium data-active:text-brand group-data-[variant=default]/tabs-list:data-active:shadow-none!"
+            >
+              네이버
+              <Badge variant="secondary" className="font-anyvid text-[10px]">준비 중</Badge>
+            </TabsTrigger>
+            <TabsTrigger
+              value="google"
+              disabled
+              className="h-9 flex-none gap-1.5 rounded-md bg-gray-50 px-4 font-anyvid text-sm text-muted-foreground shadow-none after:hidden data-active:bg-brand/10 data-active:font-medium data-active:text-brand group-data-[variant=default]/tabs-list:data-active:shadow-none!"
+            >
+              구글
+              <Badge variant="secondary" className="font-anyvid text-[10px]">준비 중</Badge>
             </TabsTrigger>
           </div>
         </TabsList>
@@ -209,20 +230,30 @@ export default function CalendarAdd({
                       {filteredMarathons.length.toLocaleString("ko-KR")}개
                     </p>
                   </div>
-                  <div className="relative w-full sm:w-80">
-                    <Search
-                      aria-hidden="true"
-                      className="absolute left-3 top-1/2 size-4 -translate-y-1/2 text-muted-foreground"
-                    />
-                    <Input
-                      value={query}
-                      onChange={(event) => {
-                        setQuery(event.target.value);
-                        setVisibleCount(PAGE_SIZE);
-                      }}
-                      placeholder="대회명, 지역 또는 장소 검색"
-                      className="h-10 pl-9"
-                    />
+                  <div role="group" aria-label="접수 상태 필터" className="flex gap-1.5">
+                    {STATUS_FILTERS.map((item) => {
+                      const isActive = statusFilter === item.value;
+                      return (
+                        <Button
+                          key={item.value}
+                          type="button"
+                          size="sm"
+                          variant={isActive ? "default" : "outline"}
+                          aria-pressed={isActive}
+                          onClick={() => {
+                            setStatusFilter(item.value);
+                            setVisibleCount(PAGE_SIZE);
+                          }}
+                          className={cn(
+                            isActive
+                              ? "bg-brand text-white hover:bg-brand/85"
+                              : "text-muted-foreground hover:border-brand/40 hover:bg-brand/5 hover:text-brand",
+                          )}
+                        >
+                          {item.label}
+                        </Button>
+                      );
+                    })}
                   </div>
                 </div>
               </div>
@@ -230,13 +261,16 @@ export default function CalendarAdd({
               {hasError ? (
                 <EmptyState message="대회 목록을 불러오지 못했습니다." />
               ) : filteredMarathons.length === 0 ? (
-                <EmptyState message="검색 조건에 맞는 대회가 없습니다." />
+                <EmptyState message="선택한 조건에 맞는 대회가 없습니다." />
               ) : (
                 <div className="divide-y overflow-hidden bg-card">
                   {filteredMarathons.slice(0, visibleCount).map((marathon) => {
-                    const added = (provider === "kakao" ? kakaoAddedSlugs : provider === "google" ? googleAddedSlugs : addedSlugs).has(marathon.slug);
-                    const pending = pendingSlug === marathon.slug;
+                    const raceAdded = isAdded(marathon.slug, "race");
+                    const registrationAdded = isAdded(marathon.slug, "registration");
+                    const racePending = pendingKey === `${marathon.slug}:race`;
+                    const registrationPending = pendingKey === `${marathon.slug}:registration`;
                     const registrationStatus = getRegistrationStatus(marathon);
+                    const showRegistrationButton = registrationStatus === "접수예정" && Boolean(marathon.registration.startDate);
                     const distances = getMarathonDistances(
                       marathon.registration.price,
                     );
@@ -301,6 +335,8 @@ export default function CalendarAdd({
                           <h3 className="truncate font-paperlogy text-xl font-semibold">
                             <Link
                               href={`/marathon/${encodeURIComponent(marathon.slug)}`}
+                              target="_blank"
+                              rel="noreferrer"
                             >
                               {marathon.name}
                             </Link>
@@ -352,35 +388,115 @@ export default function CalendarAdd({
                           </div>
                         </div>
 
-                        <Button
-                          type="button"
-                          variant={added ? "outline" : "default"}
-                          size="icon-sm"
-                          className="group/calendar self-end rounded-full sm:self-center"
-                          disabled={
-                            !canUseCalendar || added || Boolean(pendingSlug)
-                          }
-                          onClick={() => void addToCalendar(marathon)}
-                          aria-label={
-                            pending
-                              ? `${marathon.name} 추가 중`
-                              : added
-                                ? `${marathon.name} 추가 완료`
-                                : `${marathon.name} ${providerName} 캘린더에 추가`
-                          }
-                          title={added ? "추가 완료" : "캘린더에 추가"}
-                        >
-                          {pending ? (
-                            <LoaderCircle
-                              className="animate-spin"
-                              aria-hidden="true"
-                            />
-                          ) : added ? (
-                            <Check aria-hidden="true" />
-                          ) : (
-                            <CalendarPlus2 aria-hidden="true" />
-                          )}
-                        </Button>
+                        {provider === "kakao" ? (
+                          <div className="flex w-full shrink-0 flex-col gap-2 border-t pt-3 sm:w-56 sm:border-t-0 sm:border-l sm:pt-0 sm:pl-5">
+                            <div className="flex items-center gap-3">
+                              <Button
+                                type="button"
+                                size="icon-sm"
+                                variant="ghost"
+                                className={cn(
+                                  "size-9 shrink-0 rounded-full",
+                                  raceAdded
+                                    ? "bg-emerald-50 text-emerald-600 hover:bg-emerald-50"
+                                    : "bg-brand/10 text-brand hover:bg-brand/15",
+                                )}
+                                disabled={!canUseCalendar || raceAdded || Boolean(pendingKey)}
+                                onClick={() => void addToCalendar(marathon, "race")}
+                                aria-label={
+                                  racePending
+                                    ? `${marathon.name} 대회 일정 추가 중`
+                                    : raceAdded
+                                      ? `${marathon.name} 대회 일정 추가 완료`
+                                      : `${marathon.name} 대회 일정 ${providerName} 캘린더에 추가`
+                                }
+                              >
+                                {racePending ? (
+                                  <LoaderCircle className="size-4 animate-spin" aria-hidden="true" />
+                                ) : raceAdded ? (
+                                  <Check className="size-4" aria-hidden="true" />
+                                ) : (
+                                  <CalendarPlus2 className="size-4" aria-hidden="true" />
+                                )}
+                              </Button>
+                              <div className="min-w-0 font-anyvid">
+                                <p className="text-xs text-muted-foreground">대회 날짜</p>
+                                <p className="mt-0.5 text-sm text-foreground">
+                                  {formatMarathonDate(marathon.event.startDate)}
+                                </p>
+                              </div>
+                            </div>
+
+                            {showRegistrationButton && (
+                              <div className="flex items-center gap-3">
+                                <Button
+                                  type="button"
+                                  size="icon-sm"
+                                  variant="ghost"
+                                  className={cn(
+                                    "size-9 shrink-0 rounded-full",
+                                    registrationAdded
+                                      ? "bg-emerald-50 text-emerald-600 hover:bg-emerald-50"
+                                      : "bg-brand/10 text-brand hover:bg-brand/15",
+                                  )}
+                                  disabled={!canUseCalendar || registrationAdded || Boolean(pendingKey)}
+                                  onClick={() => void addToCalendar(marathon, "registration")}
+                                  aria-label={
+                                    registrationPending
+                                      ? `${marathon.name} 접수 일정 추가 중`
+                                      : registrationAdded
+                                        ? `${marathon.name} 접수 일정 추가 완료`
+                                        : `${marathon.name} 접수 일정 ${providerName} 캘린더에 추가`
+                                  }
+                                >
+                                  {registrationPending ? (
+                                    <LoaderCircle className="size-4 animate-spin" aria-hidden="true" />
+                                  ) : registrationAdded ? (
+                                    <Check className="size-4" aria-hidden="true" />
+                                  ) : (
+                                    <ClipboardCheck className="size-4" aria-hidden="true" />
+                                  )}
+                                </Button>
+                                <div className="min-w-0 font-anyvid">
+                                  <p className="text-xs text-muted-foreground">접수 날짜</p>
+                                  <p className="mt-0.5 text-sm text-foreground">
+                                    {formatMarathonDate(marathon.registration.startDate)}
+                                  </p>
+                                </div>
+                              </div>
+                            )}
+                          </div>
+                        ) : (
+                          <Button
+                            type="button"
+                            variant={raceAdded ? "outline" : "default"}
+                            size="icon-sm"
+                            className="group/calendar self-end rounded-full sm:self-center"
+                            disabled={
+                              !canUseCalendar || raceAdded || Boolean(pendingKey)
+                            }
+                            onClick={() => void addToCalendar(marathon)}
+                            aria-label={
+                              racePending
+                                ? `${marathon.name} 추가 중`
+                                : raceAdded
+                                  ? `${marathon.name} 추가 완료`
+                                  : `${marathon.name} ${providerName} 캘린더에 추가`
+                            }
+                            title={raceAdded ? "추가 완료" : "캘린더에 추가"}
+                          >
+                            {racePending ? (
+                              <LoaderCircle
+                                className="animate-spin"
+                                aria-hidden="true"
+                              />
+                            ) : raceAdded ? (
+                              <Check aria-hidden="true" />
+                            ) : (
+                              <CalendarPlus2 aria-hidden="true" />
+                            )}
+                          </Button>
+                        )}
                       </article>
                     );
                   })}
@@ -421,20 +537,21 @@ export default function CalendarAdd({
                 : "캘린더에 추가했어요!"}
             </DialogTitle>
             <DialogDescription className="break-keep font-anyvid leading-6">
-              {resultDialog?.marathonName} 일정을 {providerName} 캘린더에 저장했습니다.
+              {resultDialog?.marathonName} {resultDialog ? EVENT_KIND_LABEL[resultDialog.kind] : ""}을 {providerName} 캘린더에 저장했습니다.
               마이페이지에서 추가 내역을 확인할 수 있어요.
               {resultDialog?.warning ? ` ${resultDialog.warning}` : ""}
             </DialogDescription>
           </DialogHeader>
-          <DialogFooter>
+          <DialogFooter className="flex-col sm:flex-col">
             <Button
-              type="button"
-              variant="outline"
-              onClick={() => setResultDialog(null)}
+              className="w-full"
+              nativeButton={false}
+              render={<Link href="/mypage#my-calendar" />}
             >
-              계속 둘러보기
+              마이페이지에서 확인
             </Button>
             <Button
+              className="w-full"
               variant="outline"
               nativeButton={false}
               render={
@@ -444,10 +561,12 @@ export default function CalendarAdd({
               {providerName} 캘린더에서 확인
             </Button>
             <Button
-              nativeButton={false}
-              render={<Link href="/mypage#my-calendar" />}
+              type="button"
+              variant="ghost"
+              className="w-full"
+              onClick={() => setResultDialog(null)}
             >
-              마이페이지에서 확인
+              계속 둘러보기
             </Button>
           </DialogFooter>
         </DialogContent>
@@ -468,6 +587,7 @@ function ConnectionStatus({
   reconnectRequired: boolean;
 }) {
   const providerName = provider === "kakao" ? "카카오톡" : provider === "google" ? "구글" : "네이버";
+  const toParticle = provider === "kakao" ? "으로" : "로";
   const loginUrl = provider === "kakao" ? "/auth/kakao/start" : provider === "google" ? "/auth/google/start" : "/auth/naver/start?next=/calendar-add";
   return (
     <section className="flex flex-col gap-4 rounded-2xl border bg-muted/20 p-5 sm:flex-row sm:items-center sm:justify-between sm:p-6">
@@ -491,7 +611,7 @@ function ConnectionStatus({
             {connected
               ? `${providerName} 캘린더가 연결되어 선택한 대회를 바로 추가할 수 있습니다.`
               : reconnectRequired
-                ? `캘린더 권한이 없거나 연결이 만료되었습니다. ${providerName}로 다시 연결해 주세요.`
+                ? `캘린더 권한이 없거나 연결이 만료되었습니다. ${providerName}${toParticle} 다시 연결해 주세요.`
                 : `${providerName} 로그인과 캘린더 이용 동의가 필요합니다.`}
           </p>
           {provider !== "naver" && !connected && (
@@ -503,9 +623,24 @@ function ConnectionStatus({
         <Button
           nativeButton={false}
           render={<a href={loginUrl} />}
-          className={provider === "naver" ? "shrink-0 bg-[#03c75a] text-white hover:bg-[#02b351]" : provider === "kakao" ? "shrink-0 bg-[#fee500] text-black hover:bg-[#fee500]/80" : "shrink-0"}
+          className={provider === "naver" ? "shrink-0 bg-[#03c75a] text-white hover:bg-[#02b351]" : provider === "kakao" ? "shrink-0 gap-2 bg-[#FEE500] text-black hover:bg-[#FEE500]/80" : "shrink-0"}
         >
-          {providerName}로 {isLoggedIn ? "다시 로그인" : "로그인"}
+          {provider === "kakao" && (
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="18"
+              height="18"
+              viewBox="0 0 21 21"
+              className="shrink-0"
+              aria-hidden="true"
+            >
+              <path
+                fill="#3C1E1E"
+                d="M10.5 3.217c4.514 0 8 2.708 8 6.004 0 3.758-4.045 6.184-8 5.892-1.321-.093-1.707-.17-2.101-.23-1.425.814-2.728 2.344-3.232 2.334-.325-.19.811-2.896.533-3.114-.347-.244-3.157-1.329-3.2-4.958 0-3.199 3.486-5.928 8-5.928Z"
+              />
+            </svg>
+          )}
+          {providerName}{toParticle} {isLoggedIn ? "다시 로그인" : "로그인"}
         </Button>
       )}
     </section>

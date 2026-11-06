@@ -18508,7 +18508,7 @@
       "startTime": null,
       "endTime": null,
       "site": "https://610run.kr/freerun/",
-      "status": null,
+      "status": "접수마감",
       "price": {
         "10KM": 40000,
         "6.10KM": 35000

@@ -58,6 +58,7 @@ type CalendarEventRow = {
   provider: "naver" | "google" | "kakao";
   marathon_slug: string;
   marathon_name: string;
+  event_kind: "race" | "registration";
   event_start_date: string;
   event_location: string | null;
   created_at: string;
@@ -96,7 +97,7 @@ export default async function MyPage() {
     supabase
       .from("calendar_events")
       .select(
-        "id, provider, marathon_slug, marathon_name, event_start_date, event_location, created_at",
+        "id, provider, marathon_slug, marathon_name, event_kind, event_start_date, event_location, created_at",
       )
       .eq("user_id", user.id)
       .eq("status", "created")
@@ -241,6 +242,11 @@ export default async function MyPage() {
                       <Badge variant="outline" className="font-anyvid text-[11px]">
                         {calendarProviderLabel(event.provider)}
                       </Badge>
+                      {event.event_kind === "registration" && (
+                        <Badge className="bg-brand font-anyvid text-[11px] text-white hover:bg-brand">
+                          접수
+                        </Badge>
+                      )}
                       <span className="font-anyvid text-xs text-muted-foreground">
                         {formatKoreanDate(event.event_start_date)}
                       </span>

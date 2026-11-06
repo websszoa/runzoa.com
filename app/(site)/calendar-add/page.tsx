@@ -11,7 +11,7 @@ import { getCurrentKoreanDate } from "@/lib/utils";
 export const metadata: Metadata = {
   title: "내 캘린더에 추가",
   description:
-    "마라톤 대회 일정을 네이버, 구글, 카카오 캘린더에 간편하게 추가하세요.",
+    "마라톤 대회 일정을 카카오톡 캘린더에 간편하게 추가하세요.",
   alternates: { canonical: "/calendar-add" },
 };
 
@@ -26,7 +26,8 @@ const kakaoConnectionErrors: Record<string, string> = {
 export default async function CalendarAddPage({ searchParams }: { searchParams: Promise<{ provider?: string; calendarError?: string }> }) {
   const params = await searchParams;
   let kakaoConnected = false;
-  let kakaoAddedSlugs: string[] = [];
+  let kakaoRaceAddedSlugs: string[] = [];
+  let kakaoRegistrationAddedSlugs: string[] = [];
   let googleConnected = false;
   let googleAddedSlugs: string[] = [];
   const [{ marathons, error }, supabase] = await Promise.all([
@@ -56,10 +57,15 @@ export default async function CalendarAddPage({ searchParams }: { searchParams: 
       admin.from("google_connections").select("user_id").eq("user_id", user.id).maybeSingle(),
       admin.from("calendar_events").select("marathon_slug").eq("user_id", user.id).eq("provider", "google").eq("status", "created"),
       admin.from("kakao_connections").select("user_id").eq("user_id", user.id).maybeSingle(),
-      admin.from("calendar_events").select("marathon_slug").eq("user_id", user.id).eq("provider", "kakao").eq("status", "created"),
+      admin.from("calendar_events").select("marathon_slug, event_kind").eq("user_id", user.id).eq("provider", "kakao").eq("status", "created"),
     ]);
     kakaoConnected = Boolean(kakaoConnection.data);
-    kakaoAddedSlugs = (kakaoEvents.data ?? []).map((item) => item.marathon_slug);
+    kakaoRaceAddedSlugs = (kakaoEvents.data ?? [])
+      .filter((item) => item.event_kind !== "registration")
+      .map((item) => item.marathon_slug);
+    kakaoRegistrationAddedSlugs = (kakaoEvents.data ?? [])
+      .filter((item) => item.event_kind === "registration")
+      .map((item) => item.marathon_slug);
     googleConnected = Boolean(googleConnection.data);
     googleAddedSlugs = (googleEvents.data ?? []).map((item) => item.marathon_slug);
     naverConnected = Boolean(connectionResult.data);
@@ -85,10 +91,11 @@ export default async function CalendarAddPage({ searchParams }: { searchParams: 
         hasError={error}
         isLoggedIn={Boolean(user)}
         kakaoConnected={kakaoConnected}
-        initialKakaoAddedSlugs={kakaoAddedSlugs}
+        initialKakaoRaceAddedSlugs={kakaoRaceAddedSlugs}
+        initialKakaoRegistrationAddedSlugs={kakaoRegistrationAddedSlugs}
         googleConnected={googleConnected}
         initialGoogleAddedSlugs={googleAddedSlugs}
-        initialProvider={params.provider === "kakao" ? "kakao" : params.provider === "google" ? "google" : "naver"}
+        initialProvider={params.provider === "naver" ? "naver" : params.provider === "google" ? "google" : "kakao"}
         naverConnected={naverConnected}
         initialAddedSlugs={addedSlugs}
       />

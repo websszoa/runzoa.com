@@ -48,6 +48,42 @@ BEGIN
   END IF;
 END $$;
 
+-- 한 대회에 대해 "대회 일정"과 "접수 일정"을 각각 별도 캘린더 일정으로 추가할 수 있도록 구분합니다.
+ALTER TABLE public.calendar_events
+  ADD COLUMN IF NOT EXISTS event_kind TEXT NOT NULL DEFAULT 'race';
+
+DO $$
+BEGIN
+  IF NOT EXISTS (
+    SELECT 1
+    FROM pg_constraint
+    WHERE conname = 'calendar_events_event_kind_check'
+      AND conrelid = 'public.calendar_events'::regclass
+  ) THEN
+    ALTER TABLE public.calendar_events
+      ADD CONSTRAINT calendar_events_event_kind_check
+      CHECK (event_kind IN ('race', 'registration'));
+  END IF;
+END $$;
+
+-- 기존 UNIQUE(user_id, provider, marathon_slug)는 event_kind를 포함하도록 교체합니다.
+ALTER TABLE public.calendar_events
+  DROP CONSTRAINT IF EXISTS calendar_events_user_id_provider_marathon_slug_key;
+
+DO $$
+BEGIN
+  IF NOT EXISTS (
+    SELECT 1
+    FROM pg_constraint
+    WHERE conname = 'calendar_events_user_provider_slug_kind_key'
+      AND conrelid = 'public.calendar_events'::regclass
+  ) THEN
+    ALTER TABLE public.calendar_events
+      ADD CONSTRAINT calendar_events_user_provider_slug_kind_key
+      UNIQUE (user_id, provider, marathon_slug, event_kind);
+  END IF;
+END $$;
+
 CREATE INDEX IF NOT EXISTS idx_calendar_events_user_created
   ON public.calendar_events (user_id, created_at DESC);
 

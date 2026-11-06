@@ -5,6 +5,7 @@ import { getMarathons } from "@/lib/marathons";
 import {
   createKakaoCalendarEvent,
   getValidKakaoAccessToken,
+  type EventKind,
   type KakaoConnection,
 } from "@/lib/kakao/calendar";
 import { createAdminClient } from "@/lib/supabase/admin";
@@ -12,6 +13,7 @@ import { createClient } from "@/lib/supabase/server";
 
 const requestSchema = z.object({
   slug: z.string().trim().min(1).max(200),
+  kind: z.enum(["race", "registration"]).default("race"),
 });
 
 export async function POST(request: Request) {
@@ -72,6 +74,15 @@ export async function POST(request: Request) {
     );
   }
 
+  const kind = parsed.data.kind;
+  const schedule = kind === "registration" ? marathon.registration : marathon.event;
+  if (!schedule.startDate) {
+    return NextResponse.json(
+      { error: "접수 일정이 아직 공개되지 않았어요.", code: "NO_REGISTRATION_SCHEDULE" },
+      { status: 400 },
+    );
+  }
+
   const location = [marathon.location.venue, marathon.location.address]
     .filter(Boolean)
     .join(" · ");
@@ -79,8 +90,9 @@ export async function POST(request: Request) {
     userId: user.id,
     slug: marathon.slug,
     name: marathon.name,
-    startDate: marathon.event.startDate,
-    endDate: marathon.event.endDate ?? marathon.event.startDate,
+    kind,
+    startDate: schedule.startDate,
+    endDate: schedule.endDate ?? schedule.startDate,
     location: location || null,
   });
 
@@ -101,7 +113,7 @@ export async function POST(request: Request) {
     );
   }
 
-  const result = await createKakaoCalendarEvent(accessToken, marathon);
+  const result = await createKakaoCalendarEvent(accessToken, marathon, kind);
   if (!result.success) {
     await admin
       .from("calendar_events")
@@ -146,6 +158,7 @@ type CalendarReservationValues = {
   userId: string;
   slug: string;
   name: string;
+  kind: EventKind;
   startDate: string;
   endDate: string;
   location: string | null;
@@ -163,6 +176,7 @@ async function reserveCalendarEvent(
       provider: "kakao",
       marathon_slug: values.slug,
       marathon_name: values.name,
+      event_kind: values.kind,
       event_start_date: values.startDate,
       event_end_date: values.endDate,
       event_location: values.location,
@@ -188,6 +202,7 @@ async function reserveCalendarEvent(
     .eq("user_id", values.userId)
     .eq("provider", "kakao")
     .eq("marathon_slug", values.slug)
+    .eq("event_kind", values.kind)
     .single();
 
   if (existing.error || !existing.data) {

@@ -19,7 +19,7 @@ import {
 } from "@/components/ui/dialog";
 import { APP_ENG_NAME } from "@/lib/constants";
 
-export type AccountNotice = "calendar-test" | "deleted" | "withdrawn";
+export type AccountNotice = "deleted" | "withdrawn";
 
 const noticeContent: Record<
   AccountNotice,
@@ -30,13 +30,6 @@ const noticeContent: Record<
     buttonLabel: string;
   }
 > = {
-  "calendar-test": {
-    title: "현재 테스트 중인 기능입니다",
-    description:
-      "캘린더 연동 기능을 테스트하고 있습니다. 아직 작동되지 않습니다.",
-    tone: "info",
-    buttonLabel: "확인했습니다",
-  },
   deleted: {
     title: "탈퇴한 계정입니다",
     description:
@@ -65,9 +58,7 @@ export default function DialogAccountNotice({
 
   const closeNotice = () => {
     setOpen(false);
-    if (notice !== "calendar-test") {
-      router.replace("/", { scroll: false });
-    }
+    router.replace("/", { scroll: false });
   };
 
   return (
