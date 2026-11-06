@@ -88,7 +88,7 @@ export default function MainHero({ marathons }: { marathons: Marathon[] }) {
                 id="hero-race-query"
                 name="q"
                 placeholder="대회명, 지역, 장소 검색"
-                className="h-10 flex-1 border-0 bg-transparent px-2 font-anyvid text-sm shadow-none focus-visible:ring-0"
+                className="h-10 flex-1 border-0 bg-transparent px-2 font-anyvid text-base shadow-none focus-visible:ring-0"
               />
               <Button
                 type="submit"
