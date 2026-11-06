@@ -15513,7 +15513,7 @@
       "startTime": "09:00",
       "endTime": null,
       "site": "https://sonkeechungrun.com",
-      "status": null,
+      "status": "접수마감",
       "price": {
         "FULL": 70000,
         "HALF": 65000,
@@ -15565,7 +15565,7 @@
       "startTime": "10:00",
       "endTime": null,
       "site": "https://runwithus.co.kr",
-      "status": null,
+      "status": "null",
       "price": {
         "10km": 39000,
         "5km": 39000,
@@ -17444,7 +17444,7 @@
   },
   {
     "slug": "korea-season-race-2026",
-    "name": "2026 코리아 시즌 레이스",
+    "name": "2026 코리아 시즌 레이스(취소)",
     "description": "2026 코리아 시즌 레이스는 서울 상암월드컵공원 평화광장에서 열리는 겨울 마라톤 대회입니다. 한 해의 러닝 시즌을 마무리하며 하프, 10km, 5km 세 종목을 즐길 수 있어 기록에 도전하는 러너부터 가볍게 달리고 싶은 참가자까지 함께하기 좋습니다. 12월의 월드컵공원 일대를 달리며 올 한 해의 러닝을 뜻깊게 마무리하고 새로운 시즌을 준비할 수 있는 연말 러닝 대회입니다.",
     "info": {
       "type": "마라톤",
@@ -17468,7 +17468,7 @@
       "startTime": null,
       "endTime": null,
       "site": "https://k-run.kr/",
-      "status": null,
+      "status": "접수마감",
       "price": {
         "HALF": 50000,
         "10KM": 50000,
@@ -17997,7 +17997,7 @@
   },
   {
     "slug": "hanam-misa-lake-energy-run-2026",
-    "name": "2026 하남 미사 호수 에너지런",
+    "name": "2026 하남 미사 호수 에너지런(취소)",
     "description": "2026 하남 미사 호수 에너지런은 경기 하남 미사경정공원에서 열리는 겨울 마라톤 대회입니다. 미사 호수를 배경으로 10km와 5km 두 종목이 진행되며 전 종목 기록을 측정합니다. 참가자에게 기념 티셔츠와 완주메달, 완주 간식 및 모바일 기록증이 제공되고 현장에서는 특별 경품 이벤트도 함께 진행되어 겨울 러닝의 즐거움을 더합니다.",
     "info": {
       "type": "마라톤",
@@ -18021,7 +18021,7 @@
       "startTime": null,
       "endTime": null,
       "site": "https://energyrun.kr/",
-      "status": null,
+      "status": "접수마감",
       "price": {
         "10KM": 50000,
         "5KM": 50000
@@ -19106,7 +19106,7 @@
   },
   {
     "slug": "youth-relay-marathon-2026",
-    "name": "제2회 청춘 릴레이 마라톤",
+    "name": "제2회 청춘 릴레이 마라톤(취소)",
     "description": "제2회 청춘 릴레이 마라톤은 서울 상암동 월드컵공원 평화의광장에서 열리는 겨울 마라톤대회입니다. Half, 10km, 5km 세 종목으로 진행되며 신체 건강한 남녀노소 누구나 참가할 수 있습니다. 전 종목 기록칩을 사용해 기록을 측정하며, 월드컵공원 일대를 달리며 한 해의 러닝을 즐겁게 마무리할 수 있는 생활체육 마라톤입니다.",
     "info": {
       "type": "마라톤",
@@ -19133,7 +19133,7 @@
       "startTime": null,
       "endTime": null,
       "site": "https://youngrun.kr/join/register.asp",
-      "status": null,
+      "status": "접수마감",
       "price": {
         "HALF": 50000,
         "10KM": 50000,
@@ -20778,7 +20778,7 @@
   },
   {
     "slug": "power-of-positivity-marathon-2026",
-    "name": "제3회 긍정의힘 마라톤",
+    "name": "제3회 긍정의힘 마라톤(취소)",
     "description": "제3회 긍정의힘 마라톤은 서울 신정교 하부 영롱이 억새구장에서 열리는 겨울 러닝 대회입니다. HALF, 10K, 5K 세 종목으로 진행되며 모든 참가자의 기록을 측정합니다. 자신의 한계에 도전하고 서로를 응원하며 긍정의 에너지를 나누는 마라톤으로, 종목별 남녀 입상자를 통한 기부도 함께 진행되는 의미 있는 러닝 행사입니다.",
     "info": {
       "type": "마라톤",
@@ -20805,7 +20805,7 @@
       "startTime": "10:00",
       "endTime": null,
       "site": "https://www.powerrun.kr/",
-      "status": null,
+      "status": "접수마감",
       "price": {
         "HALF": 50000,
         "10KM": 50000,
@@ -22474,7 +22474,7 @@
       "startTime": null,
       "endTime": null,
       "site": "https://econow.campaignus.me/econow_run",
-      "status": null,
+      "status": "접수마감",
       "price": {
         "5KM": 30000
       },
@@ -23240,7 +23240,7 @@
       "startTime": null,
       "endTime": null,
       "site": "https://runwithus.co.kr/join",
-      "status": null,
+      "status": "접수마감",
       "price": {
         "10KM": 39000,
         "5KM": 39000,
