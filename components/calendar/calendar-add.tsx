@@ -11,7 +11,7 @@ import {
   CalendarPlus2,
   Check,
   CircleAlert,
-  ClipboardCheck,
+  CirclePlus,
   LoaderCircle,
   MapPin,
   Tag,
@@ -44,7 +44,6 @@ type StatusFilter = "전체" | RegistrationStatus;
 
 const STATUS_FILTERS: { value: StatusFilter; label: string }[] = [
   { value: "전체", label: "전체" },
-  { value: "접수미정", label: "접수미정" },
   { value: "접수중", label: "접수중" },
   { value: "접수예정", label: "접수예정" },
 ];
@@ -399,8 +398,8 @@ export default function CalendarAdd({
                                 className={cn(
                                   "size-9 shrink-0 rounded-full",
                                   raceAdded
-                                    ? "bg-emerald-50 text-emerald-600 hover:bg-emerald-50"
-                                    : "bg-brand/10 text-brand hover:bg-brand/15",
+                                    ? "bg-emerald-700 text-white hover:bg-emerald-600 hover:text-white disabled:opacity-100"
+                                    : "bg-destructive text-white hover:bg-destructive/80 hover:text-white",
                                 )}
                                 disabled={!canUseCalendar || raceAdded || Boolean(pendingKey)}
                                 onClick={() => void addToCalendar(marathon, "race")}
@@ -417,7 +416,7 @@ export default function CalendarAdd({
                                 ) : raceAdded ? (
                                   <Check className="size-4" aria-hidden="true" />
                                 ) : (
-                                  <CalendarPlus2 className="size-4" aria-hidden="true" />
+                                  <CirclePlus className="size-5" aria-hidden="true" />
                                 )}
                               </Button>
                               <div className="min-w-0 font-anyvid">
@@ -437,8 +436,8 @@ export default function CalendarAdd({
                                   className={cn(
                                     "size-9 shrink-0 rounded-full",
                                     registrationAdded
-                                      ? "bg-emerald-50 text-emerald-600 hover:bg-emerald-50"
-                                      : "bg-brand/10 text-brand hover:bg-brand/15",
+                                      ? "bg-emerald-700 text-white hover:bg-emerald-600 hover:text-white disabled:opacity-100"
+                                      : "bg-destructive text-white hover:bg-destructive/80 hover:text-white",
                                   )}
                                   disabled={!canUseCalendar || registrationAdded || Boolean(pendingKey)}
                                   onClick={() => void addToCalendar(marathon, "registration")}
@@ -455,7 +454,7 @@ export default function CalendarAdd({
                                   ) : registrationAdded ? (
                                     <Check className="size-4" aria-hidden="true" />
                                   ) : (
-                                    <ClipboardCheck className="size-4" aria-hidden="true" />
+                                    <CirclePlus className="size-5" aria-hidden="true" />
                                   )}
                                 </Button>
                                 <div className="min-w-0 font-anyvid">

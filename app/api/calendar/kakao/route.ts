@@ -92,7 +92,7 @@ export async function POST(request: Request) {
     name: marathon.name,
     kind,
     startDate: schedule.startDate,
-    endDate: schedule.endDate ?? schedule.startDate,
+    endDate: schedule.startDate,
     location: location || null,
   });
 
