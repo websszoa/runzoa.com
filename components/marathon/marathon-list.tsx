@@ -71,6 +71,7 @@ export type ScaleFilter =
   | "2만명 이상";
 export type RegistrationFilter =
   | "전체"
+  | "접수미정"
   | "접수예정"
   | "접수중"
   | "접수마감";
@@ -112,6 +113,8 @@ export default function MarathonList({
       "status",
       status === "접수중"
         ? "open"
+        : status === "접수미정"
+          ? "undecided"
         : status === "접수예정"
           ? "upcoming"
           : status === "접수마감"
@@ -345,6 +348,7 @@ export default function MarathonList({
                   }
                   options={[
                     { value: "전체", label: "모든 상태" },
+                    { value: "접수미정", label: "접수 미정" },
                     { value: "접수예정", label: "접수 예정" },
                     { value: "접수중", label: "접수중" },
                     { value: "접수마감", label: "접수 마감" },
@@ -461,6 +465,7 @@ export default function MarathonList({
                 }
                 options={[
                   { value: "전체", label: "모든 상태" },
+                  { value: "접수미정", label: "접수 미정" },
                   { value: "접수예정", label: "접수 예정" },
                   { value: "접수중", label: "접수중" },
                   { value: "접수마감", label: "접수 마감" },

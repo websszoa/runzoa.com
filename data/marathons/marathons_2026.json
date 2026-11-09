@@ -24387,5 +24387,129 @@
       "email": "contact@cospomkt.com",
       "instagram": null
     }
+  },
+  {
+    "slug": "namhae-trail-race-fall-2026",
+    "name": "2026 남해트레일레이스 FALL",
+    "description": "2026 남해트레일레이스는 11월 21일 경상남도 남해공설운동장에서 개최되는 트레일러닝 대회입니다. 남해의 산과 바다, 망운산의 아름다운 자연을 달리는 레이스로, 41K, 30K, 12K 세 종목이 진행됩니다. 남해의 가을 풍경을 즐기며 산악 코스에 도전할 수 있는 대회입니다.",
+    "info": {
+      "type": "트레일러닝",
+      "scale": null,
+      "park": null,
+      "souvenir": "참가 레이스팩, 완주 기념품",
+      "program": "종목별 남녀 1~3위 시상식",
+      "memo": "만 18세 이상 참가 가능. 신분증 및 필수장비 검사 후 배번호 수령 가능하며 대리 수령 불가. 참가권 양도 및 종목 변경 불가. GPX 파일 사전 확인 필수."
+    },
+    "event": {
+      "startDate": "2026-11-21",
+      "endDate": "2026-11-21",
+      "startTime": "07:00",
+      "endTime": "19:00",
+      "site": "https://www.rocknrun.kr/2026NTR",
+      "schedule": {
+        "05:00": "참가자 체크인 및 레이스팩 수령",
+        "07:00": "41K 및 30K 출발",
+        "07:30": "12K 출발",
+        "14:00": "시상식",
+        "19:00": "대회 종료"
+      }
+    },
+    "registration": {
+      "startDate": "2026-09-24",
+      "endDate": null,
+      "startTime": "14:00",
+      "endTime": null,
+      "site": "https://www.rocknrun.kr/2026NTR_REGISTRATION",
+      "status": null,
+      "currency": "KRW",
+      "price": {
+        "41K": 160000,
+        "30K": 120000,
+        "12K": 70000
+      },
+      "refund": {
+        "endDate": "2026-10-20",
+        "policy": "결제 후 24시간 이내 전액 환불(10월 21일 이후 제외). 10월 20일 23:59까지 취소 시 수수료 10,000원 공제 후 환불. 10월 21일부터 취소 및 환불 불가."
+      }
+    },
+    "location": {
+      "country": "한국",
+      "region": "경남",
+      "area": "남해군",
+      "venue": "남해공설운동장",
+      "naver": "남해공설운동장",
+      "address": "경상남도 남해군 남해읍 망운로9번길 42-17",
+      "latitude": 34.8342535,
+      "longitude": 127.8916614
+    },
+    "hosts": {
+      "organizer": "남해군",
+      "manager": "주식회사 락앤런",
+      "sponsor": null,
+      "phone": null,
+      "email": "info@rocknrun.kr",
+      "instagram": null
+    }
+  },
+  {
+    "slug": "moak-trail-run-2026",
+    "name": "2026 모악 트레일런",
+    "description": "2026 모악트레일런은 12월 5일 전북특별자치도 완주군 대한민국술테마박물관에서 개최되는 트레일러닝 대회입니다. 모악산 일대의 자연과 산길을 달리는 23K와 10K 두 종목으로 진행되며, 23K 코스는 ITRA 1포인트와 UTMB INDEX 20K 인증이 안내되어 있습니다.",
+    "info": {
+      "type": "트레일러닝",
+      "scale": null,
+      "park": null,
+      "souvenir": null,
+      "program": "종목별 남녀 1~3위 시상",
+      "memo": "23K 제한시간 5시간, 10K 제한시간 2시간. 시상 순위는 건타임 기준. 23K는 ITRA 1포인트 및 UTMB INDEX 20K 인증."
+    },
+    "event": {
+      "startDate": "2026-12-05",
+      "endDate": "2026-12-05",
+      "startTime": "08:00",
+      "endTime": "13:00",
+      "site": "https://samsam3315.imweb.me/75",
+      "schedule": {
+        "06:00": "참가자 체크인 및 레이스팩 수령",
+        "08:00": "23K 및 10K 동시 출발",
+        "10:00": "10K 레이스 종료",
+        "13:00": "23K 레이스 종료"
+      }
+    },
+    "registration": {
+      "startDate": "2026-10-26",
+      "endDate": null,
+      "startTime": "14:00",
+      "endTime": null,
+      "site": "https://samsam3315.imweb.me/77",
+      "status": null,
+      "currency": "KRW",
+      "price": {
+        "23K": 60000,
+        "10K": 40000
+      },
+      "refund": {
+        "endDate": null,
+        "policy": null
+      }
+    },
+    "location": {
+      "country": "한국",
+      "region": "전북",
+      "area": "완주군",
+      "venue": "대한민국술테마박물관",
+      "naver": "대한민국술테마박물관",
+      "address": "전북특별자치도 완주군 구이면 덕천전원길 232-58",
+      "latitude": 35.726017,
+      "longitude": 127.1361627
+    },
+    "hosts": {
+      "organizer": "완주군, 완주군체육회",
+      "manager": "삼삼이즈",
+      "sponsor": null,
+      "phone": null,
+      "email": "samsamis@naver.com",
+      "instagram": null
+    }
   }
 ]

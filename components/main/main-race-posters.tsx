@@ -27,7 +27,15 @@ export default async function MainRacePosters({ marathons }: { marathons: Marath
       const schedules = upcoming.get(race.slug) ?? [];
       const additional = schedules.some((schedule) => schedule.isAdditional);
       const status = additional ? "접수예정" : getRegistrationStatus(race);
-      const priority = additional ? 0 : status === "접수중" ? 1 : status === "접수예정" ? 2 : 3;
+      const priority = additional
+        ? 0
+        : status === "접수중"
+          ? 1
+          : status === "접수예정"
+            ? 2
+            : status === "접수미정"
+              ? 3
+              : 4;
       return { race, schedules, additional, status, priority };
     })
     .sort((a, b) => a.priority - b.priority || a.race.event.startDate.localeCompare(b.race.event.startDate));

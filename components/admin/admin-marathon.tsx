@@ -70,8 +70,9 @@ export default function AdminMarathon({
         total: marathons.length,
         open: registrationStatuses.filter((status) => status === "접수중")
           .length,
-        waiting: registrationStatuses.filter((status) => status === "접수예정")
-          .length,
+        undecided: registrationStatuses.filter(
+          (status) => status === "접수미정" || status === "접수예정",
+        ).length,
         closed: registrationStatuses.filter((status) => status === "접수마감")
           .length,
       },
@@ -170,7 +171,7 @@ export default function AdminMarathon({
         />
         <StatCard
           label="접수 예정"
-          value={stats.waiting}
+          value={stats.undecided}
           icon={CalendarClock}
           color="text-sky-500"
         />

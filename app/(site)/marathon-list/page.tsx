@@ -86,6 +86,7 @@ function getFirstParam(value?: string | string[]): string | undefined {
 
 function getInitialStatus(value?: string): RegistrationFilter {
   if (value === "open") return "접수중";
+  if (value === "undecided") return "접수미정";
   if (value === "upcoming") return "접수예정";
   if (value === "closed") return "접수마감";
   return "전체";

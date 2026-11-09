@@ -44,6 +44,7 @@ type StatusFilter = "전체" | RegistrationStatus;
 
 const STATUS_FILTERS: { value: StatusFilter; label: string }[] = [
   { value: "전체", label: "전체" },
+  { value: "접수미정", label: "접수미정" },
   { value: "접수중", label: "접수중" },
   { value: "접수예정", label: "접수예정" },
 ];

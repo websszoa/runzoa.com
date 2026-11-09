@@ -186,6 +186,10 @@ export default function DetailRegistration({
             <span className="ml-auto inline-flex h-6 items-center rounded-full bg-blue-500 px-2.5 font-anyvid text-xs font-medium text-white">
               추가 접수 예정
             </span>
+          ) : registrationStatus === "접수미정" ? (
+            <span className="ml-auto inline-flex h-6 items-center rounded-full bg-emerald-600 px-2.5 font-anyvid text-xs font-medium text-white">
+              접수 미정
+            </span>
           ) : registrationStatus === "접수마감" ? (
             <span className="ml-auto inline-flex h-6 items-center rounded-full bg-brand px-2.5 font-anyvid text-xs font-medium text-white">
               접수 마감
