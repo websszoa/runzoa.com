@@ -3,6 +3,7 @@
 import { useEffect, useRef, useState } from "react";
 import Image from "next/image";
 import { Check, Copy, ExternalLink, MapPin } from "lucide-react";
+import { isKoreanLocation } from "@/lib/utils";
 
 type NaverMap = {
   destroy: () => void;
@@ -38,19 +39,6 @@ interface DetailLocationProps {
 
 const NAVER_MAP_SCRIPT_ID = "naver-maps-sdk";
 let naverMapsPromise: Promise<void> | null = null;
-
-const KOREA_COUNTRY_NAMES = new Set([
-  "KR",
-  "KOR",
-  "한국",
-  "대한민국",
-  "REPUBLIC OF KOREA",
-  "SOUTH KOREA",
-]);
-
-function isKoreanLocation(country: string | null) {
-  return !country || KOREA_COUNTRY_NAMES.has(country.trim().toUpperCase());
-}
 
 function loadNaverMaps(naverMapKey: string) {
   const browserWindow = window as unknown as NaverWindow;

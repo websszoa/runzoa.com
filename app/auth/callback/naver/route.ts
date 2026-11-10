@@ -225,10 +225,15 @@ export async function GET(request: NextRequest) {
       return clearOAuthCookies(NextResponse.redirect(successUrl));
     }
   } catch (error) {
-    console.error(
-      "네이버 로그인 실패:",
-      error instanceof Error ? error.message : error,
-    );
+    const message = error instanceof Error ? error.message : String(error);
+    console.error("네이버 로그인 실패:", message);
+
+    if (process.env.NODE_ENV !== "production") {
+      const destination = new URL("/", baseUrl);
+      destination.searchParams.set("authError", "naver_login_failed");
+      destination.searchParams.set("authErrorDetail", message);
+      return clearOAuthCookies(NextResponse.redirect(destination));
+    }
   }
 
   return clearOAuthCookies(

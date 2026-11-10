@@ -15540,57 +15540,6 @@
     }
   },
   {
-    "slug": "cheonan-independence-hall-marathon-2026",
-    "name": "제2회 천안독립기념관 마라톤대회",
-    "description": "제2회 천안독립기념관 마라톤대회는 충남 천안 독립기념관 겨레의큰마당에서 열리는 마라톤 대회입니다. 독립운동의 정신과 역사를 되새기며 달리는 행사로, 10km와 5km 러닝 및 3.65km 걷기 코스로 진행됩니다.",
-    "info": {
-      "type": "마라톤",
-      "scale": null,
-      "park": null,
-      "souvenir": "완주메달, 간식",
-      "program": "독립운동가 배지 만들기, 유묵 쓰기 체험, 페이스 스티커, 가족 참여 프로그램",
-      "memo": "10km와 5km는 기록을 측정하며 3.65km 걷기 코스도 함께 운영됩니다."
-    },
-    "event": {
-      "startDate": "2026-11-29",
-      "endDate": "2026-11-29",
-      "startTime": "08:00",
-      "endTime": "14:00",
-      "site": "https://runwithus.co.kr",
-      "schedule": null
-    },
-    "registration": {
-      "startDate": "2026-07-31",
-      "endDate": "2026-11-28",
-      "startTime": "10:00",
-      "endTime": null,
-      "site": "https://runwithus.co.kr",
-      "status": "null",
-      "price": {
-        "10km": 39000,
-        "5km": 39000,
-        "3.65km 걷기": 19000
-      }
-    },
-    "location": {
-      "country": "한국",
-      "region": "충남",
-      "venue": "독립기념관 겨레의큰마당",
-      "naver": null,
-      "address": "충남 천안시 동남구 목천읍 남화리 230-1",
-      "latitude": 36.7834644730181,
-      "longitude": 127.223056438656
-    },
-    "hosts": {
-      "organizer": "안중근의사기념사업회",
-      "manager": "안중근의사기념사업회 충남지부",
-      "sponsor": null,
-      "phone": null,
-      "email": "doc333@naver.com ",
-      "instagram": null
-    }
-  },
-  {
     "slug": "asics-seoul-shinmun-go-free-run-2026",
     "name": "2026 아식스 서울신문 고프리런",
     "description": "2026 ASICS SEOUL SHINMUN GO FREE RUN은 ASICS와 서울신문이 함께 서울 여의도공원 문화의마당에서 개최하는 마라톤 대회입니다. HALF와 10km 종목으로 진행되며 총 3,000명의 참가자를 선착순 모집합니다.",
@@ -16783,7 +16732,7 @@
   },
   {
     "slug": "saehan-media-marathon-2026",
-    "name": "2026 새한미디어 마라톤",
+    "name": "2026 새한미디어 마라톤(취소)",
     "description": "2026 새한미디어 마라톤은 백범 김구 선생의 '높은 문화의 힘'을 품고 평화의 길을 달리는 국제형 마라톤 대회입니다. 서울 월드컵공원 평화광장에서 하프코스, 10km, 5km 종목으로 진행되며 총 4,000명의 참가자를 모집합니다.",
     "info": {
       "type": "마라톤",
@@ -16814,7 +16763,7 @@
       "startTime": null,
       "endTime": null,
       "site": "https://sh-run.co.kr/",
-      "status": null,
+      "status": "접수마감",
       "price": {
         "HALF": 50000,
         "10km": 50000,
@@ -21281,6 +21230,12 @@
         "10KM": 60000,
         "5KM": 50000
       },
+      "additional": {
+        "startDate": "2026-11-09",
+        "endDate": null,
+        "startTime": "09:00",
+        "endTime": null
+      },
       "refund": {
         "endDate": "2026-11-08",
         "policy": "2026년 11월 8일 23:59까지 참가 변경·취소 및 환불 신청이 가능하며 별도의 취소 수수료는 없습니다. 이후에는 참가비가 기부금으로 처리되어 환불이 불가능합니다. 천재지변 등 불가항력으로 대회가 중단되는 경우에도 참가비는 환불되지 않습니다."
@@ -21919,7 +21874,7 @@
       "startTime": "10:00",
       "endTime": null,
       "site": "https://wonju.raceplan.co.kr/",
-      "status": null,
+      "status": "접수마감",
       "price": {
         "HALF": 50000,
         "10KM": 45000,

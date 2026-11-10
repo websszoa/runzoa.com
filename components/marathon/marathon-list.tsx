@@ -41,10 +41,12 @@ import {
   getCurrentKoreanTodayLabel,
   getMarathonDistances,
   getMarathonDDay,
+  getMarathonRegion,
   getAdditionalRegistrationStatus,
   getRegistrationBadgeClassName,
   getRegistrationLabel,
   getRegistrationStatus,
+  isAdditionalRegistrationActive,
   normalizeSearchText,
 } from "@/lib/utils";
 
@@ -74,6 +76,7 @@ export type RegistrationFilter =
   | "접수미정"
   | "접수예정"
   | "접수중"
+  | "추가모집"
   | "접수마감";
 
 const PAGE_SIZE = 30;
@@ -117,9 +120,11 @@ export default function MarathonList({
           ? "undecided"
         : status === "접수예정"
           ? "upcoming"
-          : status === "접수마감"
-            ? "closed"
-            : null,
+          : status === "추가모집"
+            ? "additional"
+            : status === "접수마감"
+              ? "closed"
+              : null,
     );
     setFilterParam(url.searchParams, "year", year);
     setFilterParam(url.searchParams, "month", month);
@@ -134,15 +139,14 @@ export default function MarathonList({
     );
   }, [includePast, month, raceType, region, scale, status, year]);
 
-  const regions = useMemo(
-    () =>
-      [
-        ...new Set(
-          marathons.map((item) => item.location.region).filter(Boolean),
-        ),
-      ].sort(),
-    [marathons],
-  ) as string[];
+  const regions = useMemo(() => {
+    const uniqueRegions = [
+      ...new Set(marathons.map((item) => getMarathonRegion(item)).filter(Boolean)),
+    ] as string[];
+    return uniqueRegions.sort((a, b) =>
+      a === "해외" ? 1 : b === "해외" ? -1 : a.localeCompare(b, "ko"),
+    );
+  }, [marathons]);
   const types = useMemo(
     () =>
       [
@@ -176,12 +180,15 @@ export default function MarathonList({
         (!deferredQuery || searchable.includes(deferredQuery)) &&
         (includePast || marathon.event.startDate >= today) &&
         (raceType === "전체" || marathon.info.type === raceType) &&
-        (status === "전체" || getRegistrationStatus(marathon) === status) &&
+        (status === "전체" ||
+          (status === "추가모집"
+            ? isAdditionalRegistrationActive(marathon)
+            : getRegistrationStatus(marathon) === status)) &&
         (year === null ||
           Number(marathon.event.startDate.slice(0, 4)) === year) &&
         (month === null ||
           Number(marathon.event.startDate.slice(5, 7)) === month) &&
-        (region === "전체" || marathon.location.region === region) &&
+        (region === "전체" || getMarathonRegion(marathon) === region) &&
         matchesScale(marathon.info.scale, scale)
       );
     });
@@ -351,6 +358,7 @@ export default function MarathonList({
                     { value: "접수미정", label: "접수 미정" },
                     { value: "접수예정", label: "접수 예정" },
                     { value: "접수중", label: "접수중" },
+                    { value: "추가모집", label: "추가모집" },
                     { value: "접수마감", label: "접수 마감" },
                   ]}
                 />
@@ -468,6 +476,7 @@ export default function MarathonList({
                   { value: "접수미정", label: "접수 미정" },
                   { value: "접수예정", label: "접수 예정" },
                   { value: "접수중", label: "접수중" },
+                  { value: "추가모집", label: "추가모집" },
                   { value: "접수마감", label: "접수 마감" },
                 ]}
               />
@@ -603,7 +612,7 @@ function MarathonListRow({ marathon }: { marathon: Marathon }) {
   const registrationBadgeClassName =
     additionalRegistrationStatus === "접수중" ||
     additionalRegistrationStatus === "접수예정"
-      ? "border-blue-500 bg-blue-500 text-white"
+      ? "border-violet-500 bg-violet-500 text-white"
       : getRegistrationBadgeClassName(registrationStatus);
   const distances = getMarathonDistances(marathon.registration.price);
   const site = marathon.event.site ?? marathon.registration.site;

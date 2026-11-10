@@ -91,6 +91,7 @@ export default async function AnalyticsPage({
                     <Link
                       key={item.date}
                       href={`/analytics?date=${item.date}`}
+                      scroll={false}
                       aria-current={isCurrent ? "page" : undefined}
                       className={cn(
                         "flex items-center justify-between rounded-xl px-3 py-2.5 font-anyvid text-sm transition-colors",
@@ -190,27 +191,14 @@ export default async function AnalyticsPage({
                     </CardTitle>
                   </CardHeader>
                   <CardContent className="gap-5">
-                    <FunnelRow
-                      label="Instagram 조회"
-                      value="105.6만"
-                      width="100%"
-                    />
-                    <FunnelRow
-                      label="Instagram 도달"
-                      value="24.5만"
-                      width="72%"
-                    />
-                    <FunnelRow
-                      label="Instagram 반응"
-                      value="3.4만"
-                      width="45%"
-                    />
-                    <FunnelRow label="프로필 방문" value="9,645" width="28%" />
-                    <FunnelRow
-                      label="외부 링크 클릭"
-                      value="1,552"
-                      width="16%"
-                    />
+                    {report.funnel.map((step) => (
+                      <FunnelRow
+                        key={step.label}
+                        label={step.label}
+                        value={step.value}
+                        width={step.width}
+                      />
+                    ))}
                     <p className="border-t pt-4 font-anyvid text-xs leading-5 text-muted-foreground">
                       서로 다른 집계 기준의 지표이므로 직접 전환율이 아닌 개선
                       방향을 보는 참고 흐름입니다.

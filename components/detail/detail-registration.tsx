@@ -191,7 +191,7 @@ export default function DetailRegistration({
               접수 미정
             </span>
           ) : registrationStatus === "접수마감" ? (
-            <span className="ml-auto inline-flex h-6 items-center rounded-full bg-brand px-2.5 font-anyvid text-xs font-medium text-white">
+            <span className="ml-auto inline-flex h-6 items-center rounded-full bg-gray-400 px-2.5 font-anyvid text-xs font-medium text-white">
               접수 마감
             </span>
           ) : marathon.registration.site ? (

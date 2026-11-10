@@ -19,13 +19,19 @@ export default function AuthStatusToast() {
   const router = useRouter();
   const searchParams = useSearchParams();
   const authError = searchParams.get("authError");
+  const authErrorDetail = searchParams.get("authErrorDetail");
   const login = searchParams.get("login");
 
   useEffect(() => {
     if (!authError && !login) return;
 
     if (authError) {
-      toast.error(authErrorMessages[authError] ?? "로그인에 실패했습니다. 다시 시도해 주세요.");
+      const message = authErrorMessages[authError] ?? "로그인에 실패했습니다. 다시 시도해 주세요.";
+      toast.error(
+        process.env.NODE_ENV !== "production" && authErrorDetail
+          ? `${message} [디버그: ${authErrorDetail}]`
+          : message,
+      );
     } else if (login === "welcome") {
       toast.success("런조아 가입을 환영합니다!");
     } else if (login === "success") {
@@ -34,10 +40,11 @@ export default function AuthStatusToast() {
 
     const next = new URL(window.location.href);
     next.searchParams.delete("authError");
+    next.searchParams.delete("authErrorDetail");
     next.searchParams.delete("login");
     router.replace(`${next.pathname}${next.search}`, { scroll: false });
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [authError, login]);
+  }, [authError, authErrorDetail, login]);
 
   return null;
 }

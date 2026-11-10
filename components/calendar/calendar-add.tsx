@@ -179,11 +179,9 @@ export default function CalendarAdd({
             </TabsTrigger>
             <TabsTrigger
               value="naver"
-              disabled
-              className="h-9 flex-none gap-1.5 rounded-md bg-gray-50 px-4 font-anyvid text-sm text-muted-foreground shadow-none after:hidden data-active:bg-brand/10 data-active:font-medium data-active:text-brand group-data-[variant=default]/tabs-list:data-active:shadow-none!"
+              className="h-9 flex-none rounded-md bg-gray-50 px-4 font-anyvid text-sm text-muted-foreground shadow-none after:hidden data-active:bg-brand/10 data-active:font-medium data-active:text-brand group-data-[variant=default]/tabs-list:data-active:shadow-none!"
             >
               네이버
-              <Badge variant="secondary" className="font-anyvid text-[10px]">준비 중</Badge>
             </TabsTrigger>
             <TabsTrigger
               value="google"

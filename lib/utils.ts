@@ -23,6 +23,24 @@ export type AdditionalRegistrationStatus = RegistrationStatus | null;
 
 const CLOSED_STATUS_KEYWORDS = ["접수마감", "접수종료", "마감", "종료"];
 
+const KOREA_COUNTRY_NAMES = new Set([
+  "KR",
+  "KOR",
+  "한국",
+  "대한민국",
+  "REPUBLIC OF KOREA",
+  "SOUTH KOREA",
+]);
+
+export function isKoreanLocation(country: string | null | undefined) {
+  return !country || KOREA_COUNTRY_NAMES.has(country.trim().toUpperCase());
+}
+
+export function getMarathonRegion(marathon: Marathon): string | null {
+  if (!isKoreanLocation(marathon.location.country)) return "해외";
+  return marathon.location.region;
+}
+
 function isExplicitlyClosed(marathon: Marathon) {
   const explicitStatus = marathon.registration.status?.trim();
   if (!explicitStatus) return false;
@@ -75,6 +93,14 @@ export function isAdditionalRegistrationOpen(
   now = Date.now(),
 ): boolean {
   return getAdditionalRegistrationStatus(marathon, now) === "접수중";
+}
+
+export function isAdditionalRegistrationActive(
+  marathon: Marathon,
+  now = Date.now(),
+): boolean {
+  const status = getAdditionalRegistrationStatus(marathon, now);
+  return status === "접수중" || status === "접수예정";
 }
 
 export function getRegistrationStatus(
@@ -138,7 +164,7 @@ export function getRegistrationBadgeClassName(status: RegistrationStatus) {
     status === "접수미정" && "border-emerald-600 bg-emerald-600 text-white",
     status === "접수중" && "border-brand bg-brand text-white",
     status === "접수예정" && "border-blue-500 bg-blue-500 text-white",
-    status === "접수마감" && "border border-gray-400 text-foreground",
+    status === "접수마감" && "border-gray-400 bg-gray-400 text-white",
   );
 }
 

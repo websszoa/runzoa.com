@@ -11,7 +11,7 @@ import { getCurrentKoreanDate } from "@/lib/utils";
 export const metadata: Metadata = {
   title: "내 캘린더에 추가",
   description:
-    "마라톤 대회 일정을 카카오톡 캘린더에 간편하게 추가하세요.",
+    "마라톤 대회 일정을 카카오톡, 네이버 캘린더에 간편하게 추가하세요.",
   alternates: { canonical: "/calendar-add" },
 };
 

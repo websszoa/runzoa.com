@@ -6,6 +6,7 @@ import MarathonList, {
   type ScaleFilter,
 } from "@/components/marathon/marathon-list";
 import { getMarathons, MARATHON_HEADERS } from "@/lib/marathons";
+import { getMarathonRegion } from "@/lib/utils";
 
 export const metadata: Metadata = {
   title: "마라톤 리스트",
@@ -45,7 +46,7 @@ export default async function MarathonListPage({
     marathons.map((marathon) => marathon.info.type).filter(Boolean),
   );
   const availableRegions = new Set(
-    marathons.map((marathon) => marathon.location.region).filter(Boolean),
+    marathons.map((marathon) => getMarathonRegion(marathon)).filter(Boolean),
   );
 
   return (
@@ -88,6 +89,7 @@ function getInitialStatus(value?: string): RegistrationFilter {
   if (value === "open") return "접수중";
   if (value === "undecided") return "접수미정";
   if (value === "upcoming") return "접수예정";
+  if (value === "additional") return "추가모집";
   if (value === "closed") return "접수마감";
   return "전체";
 }
