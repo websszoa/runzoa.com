@@ -76,7 +76,7 @@ export type RegistrationFilter =
   | "접수미정"
   | "접수예정"
   | "접수중"
-  | "추가모집"
+  | "추가접수"
   | "접수마감";
 
 const PAGE_SIZE = 30;
@@ -120,7 +120,7 @@ export default function MarathonList({
           ? "undecided"
         : status === "접수예정"
           ? "upcoming"
-          : status === "추가모집"
+          : status === "추가접수"
             ? "additional"
             : status === "접수마감"
               ? "closed"
@@ -181,7 +181,7 @@ export default function MarathonList({
         (includePast || marathon.event.startDate >= today) &&
         (raceType === "전체" || marathon.info.type === raceType) &&
         (status === "전체" ||
-          (status === "추가모집"
+          (status === "추가접수"
             ? isAdditionalRegistrationActive(marathon)
             : getRegistrationStatus(marathon) === status)) &&
         (year === null ||
@@ -358,7 +358,7 @@ export default function MarathonList({
                     { value: "접수미정", label: "접수 미정" },
                     { value: "접수예정", label: "접수 예정" },
                     { value: "접수중", label: "접수중" },
-                    { value: "추가모집", label: "추가모집" },
+                    { value: "추가접수", label: "추가 접수" },
                     { value: "접수마감", label: "접수 마감" },
                   ]}
                 />
@@ -476,7 +476,7 @@ export default function MarathonList({
                   { value: "접수미정", label: "접수 미정" },
                   { value: "접수예정", label: "접수 예정" },
                   { value: "접수중", label: "접수중" },
-                  { value: "추가모집", label: "추가모집" },
+                  { value: "추가접수", label: "추가 접수" },
                   { value: "접수마감", label: "접수 마감" },
                 ]}
               />

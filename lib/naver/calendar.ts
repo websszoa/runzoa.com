@@ -3,10 +3,18 @@ import "server-only";
 import type { SupabaseClient } from "@supabase/supabase-js";
 
 import type { Marathon } from "@/lib/marathons";
+import {
+  formatMarathonDate,
+  formatMarathonPrices,
+  getEffectiveRegistrationSchedule,
+  getMarathonVenueAddress,
+} from "@/lib/utils";
 
 const NAVER_CALENDAR_URL =
   "https://openapi.naver.com/calendar/createSchedule.json";
 const NAVER_TOKEN_URL = "https://nid.naver.com/oauth2.0/token";
+
+export type EventKind = "race" | "registration";
 
 export type NaverConnection = {
   user_id: string;
@@ -81,10 +89,24 @@ export async function createNaverCalendarEvent(
   accessToken: string,
   marathon: Marathon,
   uid: string,
+  kind: EventKind = "race",
 ) {
+  const schedule =
+    kind === "registration"
+      ? getEffectiveRegistrationSchedule(marathon)
+      : marathon.event;
+  if (!schedule.startDate) {
+    return {
+      success: false as const,
+      uncertain: false,
+      reconnectRequired: false,
+      message: "접수 일정이 아직 공개되지 않았어요.",
+    };
+  }
+
   const body = new URLSearchParams({
     calendarId: "defaultCalendarId",
-    scheduleIcalString: buildICalendar(marathon, uid),
+    scheduleIcalString: buildICalendar(marathon, uid, kind),
   });
   let response: Response;
   try {
@@ -134,20 +156,38 @@ export async function createNaverCalendarEvent(
   };
 }
 
-function buildICalendar(marathon: Marathon, uid: string) {
-  const startDate = compactDate(marathon.event.startDate);
+function buildICalendar(marathon: Marathon, uid: string, kind: EventKind) {
+  const isRegistration = kind === "registration";
+  const schedule = isRegistration
+    ? getEffectiveRegistrationSchedule(marathon)
+    : marathon.event;
+  const startDate = compactDate(schedule.startDate!);
   const endDate = compactDate(
-    addDays(marathon.event.endDate ?? marathon.event.startDate, 1),
+    addDays(schedule.endDate ?? schedule.startDate!, 1),
   );
-  const location = [marathon.location.venue, marathon.location.address]
-    .filter(Boolean)
-    .join(" · ");
+  const venue = marathon.location.venue;
+  const address = marathon.location.address;
+  const location = getMarathonVenueAddress(marathon);
+  const price = formatMarathonPrices(
+    marathon.registration.price,
+    marathon.registration.currency ?? "KRW",
+  );
+  const site =
+    (isRegistration ? marathon.registration.site : marathon.event.site) ??
+    (isRegistration ? marathon.event.site : marathon.registration.site);
+  const title = isRegistration ? `[접수] ${marathon.name}` : marathon.name;
   const description = [
-    marathon.description,
-    marathon.event.site ? `대회 홈페이지: ${marathon.event.site}` : null,
-    "런조아에서 추가한 마라톤 일정입니다.",
+    `제목 : ${marathon.name}`,
+    `일정 : ${formatMarathonDate(schedule.startDate)}${schedule.startTime ? ` ${schedule.startTime}` : ""}`,
+    venue ? `장소 : ${venue}` : null,
+    address ? `주소 : ${address}` : null,
+    `가격 : ${price}`,
+    site ? `링크 : ${site}` : null,
+    "",
+    "런조아에서 추가한 마라톤 일정, 완주까지 응원할게요!",
+    "https://runzoa.com",
   ]
-    .filter(Boolean)
+    .filter((line): line is string => line !== null)
     .join("\n");
   const now = new Date().toISOString().replaceAll(/[-:]/g, "").split(".")[0] + "Z";
 
@@ -163,7 +203,7 @@ function buildICalendar(marathon: Marathon, uid: string) {
     `UID:${escapeICal(uid)}`,
     `DTSTART;VALUE=DATE:${startDate}`,
     `DTEND;VALUE=DATE:${endDate}`,
-    `SUMMARY:${escapeICal(marathon.name)}`,
+    `SUMMARY:${escapeICal(title)}`,
     `DESCRIPTION:${escapeICal(description)}`,
     `LOCATION:${escapeICal(location)}`,
     `CREATED:${now}`,

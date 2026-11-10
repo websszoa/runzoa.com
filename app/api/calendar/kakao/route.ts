@@ -1,15 +1,19 @@
 import { NextResponse } from "next/server";
 import { z } from "zod";
 
-import { getMarathons } from "@/lib/marathons";
+import { reserveCalendarEvent } from "@/lib/calendar/reserve-event";
 import {
   createKakaoCalendarEvent,
   getValidKakaoAccessToken,
-  type EventKind,
   type KakaoConnection,
 } from "@/lib/kakao/calendar";
+import { getMarathons } from "@/lib/marathons";
 import { createAdminClient } from "@/lib/supabase/admin";
 import { createClient } from "@/lib/supabase/server";
+import {
+  getEffectiveRegistrationSchedule,
+  getMarathonVenueAddress,
+} from "@/lib/utils";
 
 const requestSchema = z.object({
   slug: z.string().trim().min(1).max(200),
@@ -18,7 +22,10 @@ const requestSchema = z.object({
 
 export async function POST(request: Request) {
   if (request.headers.get("origin") !== new URL(request.url).origin) {
-    return NextResponse.json({ error: "허용되지 않은 요청입니다." }, { status: 403 });
+    return NextResponse.json(
+      { error: "허용되지 않은 요청입니다.", code: "INVALID_ORIGIN" },
+      { status: 403 },
+    );
   }
   const supabase = await createClient();
   const {
@@ -75,7 +82,10 @@ export async function POST(request: Request) {
   }
 
   const kind = parsed.data.kind;
-  const schedule = kind === "registration" ? marathon.registration : marathon.event;
+  const schedule =
+    kind === "registration"
+      ? getEffectiveRegistrationSchedule(marathon)
+      : marathon.event;
   if (!schedule.startDate) {
     return NextResponse.json(
       { error: "접수 일정이 아직 공개되지 않았어요.", code: "NO_REGISTRATION_SCHEDULE" },
@@ -83,11 +93,10 @@ export async function POST(request: Request) {
     );
   }
 
-  const location = [marathon.location.venue, marathon.location.address]
-    .filter(Boolean)
-    .join(" · ");
+  const location = getMarathonVenueAddress(marathon);
   const reservation = await reserveCalendarEvent(admin, {
     userId: user.id,
+    provider: "kakao",
     slug: marathon.slug,
     name: marathon.name,
     kind,
@@ -152,79 +161,4 @@ export async function POST(request: Request) {
   }
 
   return NextResponse.json({ success: true });
-}
-
-type CalendarReservationValues = {
-  userId: string;
-  slug: string;
-  name: string;
-  kind: EventKind;
-  startDate: string;
-  endDate: string;
-  location: string | null;
-};
-
-async function reserveCalendarEvent(
-  admin: ReturnType<typeof createAdminClient>,
-  values: CalendarReservationValues,
-) {
-  const now = new Date().toISOString();
-  const inserted = await admin
-    .from("calendar_events")
-    .insert({
-      user_id: values.userId,
-      provider: "kakao",
-      marathon_slug: values.slug,
-      marathon_name: values.name,
-      event_kind: values.kind,
-      event_start_date: values.startDate,
-      event_end_date: values.endDate,
-      event_location: values.location,
-      status: "pending",
-      updated_at: now,
-    })
-    .select("id")
-    .single();
-
-  if (!inserted.error && inserted.data) {
-    return { status: "reserved" as const, id: inserted.data.id };
-  }
-  if (inserted.error?.code !== "23505") {
-    return {
-      status: "error" as const,
-      message: inserted.error?.message ?? "일정 예약 실패",
-    };
-  }
-
-  const existing = await admin
-    .from("calendar_events")
-    .select("id, status")
-    .eq("user_id", values.userId)
-    .eq("provider", "kakao")
-    .eq("marathon_slug", values.slug)
-    .eq("event_kind", values.kind)
-    .single();
-
-  if (existing.error || !existing.data) {
-    return {
-      status: "error" as const,
-      message: existing.error?.message ?? "기존 일정 확인 실패",
-    };
-  }
-  if (existing.data.status === "created") return { status: "exists" as const };
-  if (existing.data.status === "pending") return { status: "pending" as const };
-
-  const retried = await admin
-    .from("calendar_events")
-    .update({ status: "pending", error_message: null, updated_at: now })
-    .eq("id", existing.data.id)
-    .eq("status", "failed")
-    .select("id")
-    .maybeSingle();
-
-  if (retried.error) {
-    return { status: "error" as const, message: retried.error.message };
-  }
-  if (!retried.data) return { status: "pending" as const };
-  return { status: "reserved" as const, id: retried.data.id };
 }

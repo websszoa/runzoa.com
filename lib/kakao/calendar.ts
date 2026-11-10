@@ -6,7 +6,7 @@ import type { Marathon } from "@/lib/marathons";
 import {
   formatMarathonDate,
   formatMarathonPrices,
-  getMarathonDistances,
+  getEffectiveRegistrationSchedule,
 } from "@/lib/utils";
 
 const KAKAO_TOKEN_URL = "https://kauth.kakao.com/oauth/token";
@@ -102,7 +102,7 @@ function buildEventTime(
         all_day: false as const,
         time_zone: "Asia/Seoul",
       },
-      reminders: [1440, 60],
+      reminders: [1440, 10],
     };
   }
 
@@ -129,25 +129,27 @@ function buildEventContent(marathon: Marathon, kind: EventKind) {
     .slice(0, 50)
     .join("");
 
-  const location = [marathon.location.venue, marathon.location.address].filter(Boolean).join(" · ") || null;
-  const distances = getMarathonDistances(marathon.registration.price).join(" / ") || null;
+  const schedule = isRegistration
+    ? getEffectiveRegistrationSchedule(marathon)
+    : marathon.event;
+  const venue = marathon.location.venue;
+  const address = marathon.location.address;
   const price = formatMarathonPrices(marathon.registration.price, marathon.registration.currency ?? "KRW");
   const site = (isRegistration ? marathon.registration.site : marathon.event.site)
     ?? (isRegistration ? marathon.event.site : marathon.registration.site);
 
   const lines = [
-    `제목: ${marathon.name}`,
-    `대회 일정: ${formatScheduleStart(marathon.event.startDate, marathon.event.startTime)}`,
-    isRegistration && marathon.registration.startDate
-      ? `접수 일정: ${formatScheduleStart(marathon.registration.startDate, marathon.registration.startTime)}`
+    `제목 : ${marathon.name}`,
+    schedule.startDate
+      ? `일정 : ${formatScheduleStart(schedule.startDate, schedule.startTime)}`
       : null,
-    location ? `장소: ${location}` : null,
-    distances ? `종목: ${distances}` : null,
-    `가격: ${price}`,
-    site ? `대회 사이트 링크: ${site}` : null,
+    venue ? `장소 : ${venue}` : null,
+    address ? `주소 : ${address}` : null,
+    `가격 : ${price}`,
+    site ? `링크 : ${site}` : null,
     "",
-    "런조아에서 추가한 마라톤 일정입니다.",
-    "런조아: https://runzoa.com",
+    "런조아에서 추가한 마라톤 일정, 완주까지 응원할게요!",
+    "https://runzoa.com",
   ].filter((line): line is string => line !== null);
 
   return { title, description: Array.from(lines.join("\n")).slice(0, 5000).join("") };
@@ -158,7 +160,10 @@ export async function createKakaoCalendarEvent(
   marathon: Marathon,
   kind: EventKind = "race",
 ) {
-  const schedule = kind === "registration" ? marathon.registration : marathon.event;
+  const schedule =
+    kind === "registration"
+      ? getEffectiveRegistrationSchedule(marathon)
+      : marathon.event;
   const { startDate, startTime, endTime } = schedule;
   if (!startDate) {
     return {

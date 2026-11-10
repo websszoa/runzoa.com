@@ -41,51 +41,94 @@ export function getMarathonRegion(marathon: Marathon): string | null {
   return marathon.location.region;
 }
 
+export function getMarathonVenueAddress(marathon: Marathon): string {
+  return [marathon.location.venue, marathon.location.address]
+    .filter(Boolean)
+    .join(" · ");
+}
+
 function isExplicitlyClosed(marathon: Marathon) {
   const explicitStatus = marathon.registration.status?.trim();
   if (!explicitStatus) return false;
   return CLOSED_STATUS_KEYWORDS.includes(explicitStatus.replace(/\s/g, ""));
 }
 
+type RegistrationSchedule = {
+  startDate: string | null;
+  endDate: string | null;
+  startTime: string | null;
+  endTime: string | null;
+};
+
+function getAdditionalRegistrationEntries(
+  marathon: Marathon,
+): RegistrationSchedule[] {
+  const additional = marathon.registration.additional;
+  return (
+    Array.isArray(additional) ? additional : additional ? [additional] : []
+  ).filter(({ startDate, endDate }) => startDate || endDate);
+}
+
+function getScheduleEntryStatus(
+  { startDate, endDate, startTime, endTime }: RegistrationSchedule,
+  now: number,
+): RegistrationStatus {
+  if (
+    startDate &&
+    now < getKoreanDateTime(startDate, startTime ?? "00:00").getTime()
+  ) {
+    return "접수예정";
+  }
+  if (
+    endDate &&
+    now >= getKoreanDateTime(endDate, endTime ?? "23:59:59.999").getTime()
+  ) {
+    return "접수마감";
+  }
+  return "접수중";
+}
+
 export function getAdditionalRegistrationStatus(
   marathon: Marathon,
   now = Date.now(),
 ): AdditionalRegistrationStatus {
-  const additional = marathon.registration.additional;
-  const registrations = (Array.isArray(additional)
-    ? additional
-    : additional
-      ? [additional]
-      : []
-  ).filter(({ startDate, endDate }) => startDate || endDate);
+  const registrations = getAdditionalRegistrationEntries(marathon);
 
   if (registrations.length === 0) return null;
 
   // 관리자가 status를 접수마감으로 명시하면 추가 접수 일정이 남아 있어도 마감으로 취급한다.
   if (isExplicitlyClosed(marathon)) return "접수마감";
 
-  const statuses = registrations.map(
-    ({ startDate, endDate, startTime, endTime }): RegistrationStatus => {
-      if (
-        startDate &&
-        now < getKoreanDateTime(startDate, startTime ?? "00:00").getTime()
-      ) {
-        return "접수예정";
-      }
-      if (
-        endDate &&
-        now >=
-          getKoreanDateTime(endDate, endTime ?? "23:59:59.999").getTime()
-      ) {
-        return "접수마감";
-      }
-      return "접수중";
-    },
+  const statuses = registrations.map((entry) =>
+    getScheduleEntryStatus(entry, now),
   );
 
   if (statuses.includes("접수중")) return "접수중";
   if (statuses.includes("접수예정")) return "접수예정";
   return "접수마감";
+}
+
+// 추가 접수가 진행 중이거나 예정이면 그 일정을, 아니면 기본 접수 일정을 반환한다.
+export function getEffectiveRegistrationSchedule(
+  marathon: Marathon,
+  now = Date.now(),
+): RegistrationSchedule {
+  const entries = getAdditionalRegistrationEntries(marathon);
+  if (entries.length === 0 || isExplicitlyClosed(marathon)) {
+    return marathon.registration;
+  }
+
+  const open = entries.find(
+    (entry) => getScheduleEntryStatus(entry, now) === "접수중",
+  );
+  if (open) return open;
+
+  const upcoming = entries
+    .filter((entry) => getScheduleEntryStatus(entry, now) === "접수예정")
+    .sort((a, b) => (a.startDate ?? "").localeCompare(b.startDate ?? ""))[0];
+  if (upcoming) return upcoming;
+
+  return marathon.registration;
 }
 
 export function isAdditionalRegistrationOpen(

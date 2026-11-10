@@ -2,6 +2,10 @@
 
 import Link from "next/link";
 import { useDeferredValue, useMemo, useState } from "react";
+import type { Marathon } from "@/lib/marathons";
+import { Badge } from "@/components/ui/badge";
+import { Button } from "@/components/ui/button";
+import MarathonSearchForm from "@/components/marathon/marathon-search-form";
 import {
   ChevronLeft,
   ChevronRight,
@@ -10,10 +14,6 @@ import {
   Users,
   WalletCards,
 } from "lucide-react";
-
-import MarathonSearchForm from "@/components/marathon/marathon-search-form";
-import { Badge } from "@/components/ui/badge";
-import { Button } from "@/components/ui/button";
 import {
   cn,
   formatMarathonDate,
@@ -25,7 +25,6 @@ import {
   getRegistrationStatus,
   normalizeSearchText,
 } from "@/lib/utils";
-import type { Marathon } from "@/lib/marathons";
 
 const WEEKDAYS = ["일", "월", "화", "수", "목", "금", "토"];
 
@@ -52,14 +51,16 @@ export default function MarathonCalendar({
   const filteredMarathons = useMemo(() => {
     return marathons
       .filter((marathon) => {
-        const searchable = normalizeSearchText([
-          marathon.name,
-          marathon.location.region,
-          marathon.location.venue,
-          marathon.hosts.organizer,
-        ]
-          .filter(Boolean)
-          .join(" "));
+        const searchable = normalizeSearchText(
+          [
+            marathon.name,
+            marathon.location.region,
+            marathon.location.venue,
+            marathon.hosts.organizer,
+          ]
+            .filter(Boolean)
+            .join(" "),
+        );
         return !deferredQuery || searchable.includes(deferredQuery);
       })
       .sort((a, b) => a.event.startDate.localeCompare(b.event.startDate));

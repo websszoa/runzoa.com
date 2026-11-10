@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect } from "react";
+import { useEffect, useRef } from "react";
 import { useRouter, useSearchParams } from "next/navigation";
 import { toast } from "sonner";
 
@@ -21,9 +21,15 @@ export default function AuthStatusToast() {
   const authError = searchParams.get("authError");
   const authErrorDetail = searchParams.get("authErrorDetail");
   const login = searchParams.get("login");
+  const handledRef = useRef(false);
 
   useEffect(() => {
-    if (!authError && !login) return;
+    if (!authError && !login) {
+      handledRef.current = false;
+      return;
+    }
+    if (handledRef.current) return;
+    handledRef.current = true;
 
     if (authError) {
       const message = authErrorMessages[authError] ?? "로그인에 실패했습니다. 다시 시도해 주세요.";
