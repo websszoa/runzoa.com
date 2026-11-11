@@ -13140,11 +13140,11 @@
     },
     "registration": {
       "startDate": "2026-08-01",
-      "endDate": "2026-10-28",
+      "endDate": "2026-11-16",
       "startTime": null,
       "endTime": "12:00",
       "site": "http://www.hangangmarathon.kr/",
-      "status": "접수마감",
+      "status": null,
       "price": {
         "5KM": 50000,
         "10KM": 50000,
@@ -23919,23 +23919,23 @@
   {
     "slug": "chuncheon-sunset-island-give-run-2026",
     "name": "2026 춘천 선셋 아일랜드 기부런",
-    "description": "2026 춘천 선셋 아일랜드 기부런은 11월 14일 강원특별자치도 춘천시 하중도 일원에서 개최되는 기부형 러닝대회입니다. 춘천의 아름다운 섬과 늦가을 풍경을 배경으로 12KM와 6KM 종목이 진행됩니다. 달리기와 나눔을 결합한 행사로, 참가자들이 춘천의 자연을 즐기며 기부의 의미를 함께 나누는 특별한 러닝 이벤트입니다.",
+    "description": "2026 춘천 선셋 아일랜드 기부런은 11월 14일 강원특별자치도 춘천시 하중도에서 개최되는 기부형 러닝 대회입니다. 하중도를 한 바퀴 달리는 6KM 선셋 코스와 두 바퀴 달리는 12KM 아일랜드 코스로 진행됩니다. 참가비 일부가 기부금으로 사용되며, 늦가을 춘천의 아름다운 섬 풍경을 즐기면서 나눔의 의미까지 함께할 수 있는 특별한 레이스입니다.",
     "info": {
       "type": "마라톤",
-      "scale": null,
+      "scale": 1000,
       "park": null,
       "souvenir": null,
-      "program": "12KM, 6KM 기부런",
-      "memo": "춘천 하중도 일원에서 진행되는 기부형 러닝대회. 세부 운영사항은 공식 안내 확인."
+      "program": null,
+      "memo": "참가비 중 1인당 5,000원 기부."
     },
     "event": {
       "startDate": "2026-11-14",
       "endDate": "2026-11-14",
       "startTime": "15:30",
       "endTime": null,
-      "site": "https://www.clt.or.kr/kr/contents.do?cid=102ea6b58f1a4b98b578cc50283da825",
+      "site": "https://chun1960.com/bbs/board.php?bo_table=race_info&wr_id=62",
       "schedule": {
-        "15:30": "대회 시작"
+        "15:30": "12KM 아일랜드 코스 및 6KM 선셋 코스 출발"
       }
     },
     "registration": {
@@ -23943,16 +23943,16 @@
       "endDate": "2026-11-06",
       "startTime": null,
       "endTime": null,
-      "site": null,
-      "status": null,
+      "site": "https://chun1960.com/bbs/board.php?bo_table=race_info&wr_id=62",
+      "status": "접수마감",
       "currency": "KRW",
       "price": {
-        "12KM": null,
-        "6KM": null
+        "12KM": 35000,
+        "6KM": 35000
       },
       "refund": {
         "endDate": null,
-        "policy": null
+        "policy": "대회 안내 자료상 참가 신청 후 환불 불가. 구체적인 예외 및 취소 규정은 주최 측에 확인 필요."
       }
     },
     "location": {

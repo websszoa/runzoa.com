@@ -75,6 +75,13 @@ const PROVIDER_LABEL: Record<Provider, string> = {
   naver: "네이버",
 };
 
+const PROVIDER_SHORT_LABEL: Record<Provider, string> = {
+  kakao: "카카오",
+  naver: "네이버",
+};
+
+const PROVIDERS: Provider[] = ["kakao", "naver"];
+
 const PAGE_SIZE = 30;
 
 export default function CalendarAdd({
@@ -108,11 +115,13 @@ export default function CalendarAdd({
 
   const kakaoCanUse = isLoggedIn && kakaoConnected && !kakaoReconnectRequired;
   const naverCanUse = isLoggedIn && naverConnected && !naverReconnectRequired;
-  const activeProvider: Provider = kakaoConnected
-    ? "kakao"
-    : naverConnected
-      ? "naver"
-      : "kakao";
+  const canUseByProvider: Record<Provider, boolean> = {
+    kakao: kakaoCanUse,
+    naver: naverCanUse,
+  };
+  const connectedProviders = PROVIDERS.filter((p) => canUseByProvider[p]);
+  const visibleProviders =
+    connectedProviders.length > 0 ? connectedProviders : (["kakao"] as const);
 
   const isAdded = (slug: string, kind: EventKind, provider: Provider) => {
     if (provider === "kakao") {
@@ -276,23 +285,6 @@ export default function CalendarAdd({
             ) : (
               <div className="divide-y overflow-hidden bg-card">
                 {filteredMarathons.slice(0, visibleCount).map((marathon) => {
-                  const activeCanUse =
-                    activeProvider === "kakao" ? kakaoCanUse : naverCanUse;
-                  const raceAdded = isAdded(
-                    marathon.slug,
-                    "race",
-                    activeProvider,
-                  );
-                  const registrationAdded = isAdded(
-                    marathon.slug,
-                    "registration",
-                    activeProvider,
-                  );
-                  const racePending =
-                    pendingKey === `${activeProvider}:${marathon.slug}:race`;
-                  const registrationPending =
-                    pendingKey ===
-                    `${activeProvider}:${marathon.slug}:registration`;
                   const registrationStatus = getRegistrationStatus(marathon);
                   const additionalRegistrationStatus =
                     getAdditionalRegistrationStatus(marathon);
@@ -415,26 +407,45 @@ export default function CalendarAdd({
                               {formatMarathonDate(marathon.event.startDate)}
                             </p>
                           </div>
-                          <ProviderActionButton
-                            added={raceAdded}
-                            pending={racePending}
-                            disabled={!activeCanUse || Boolean(pendingKey)}
-                            onClick={() =>
-                              void addToCalendar(
-                                marathon,
-                                activeProvider,
+                          <div className="flex shrink-0 flex-wrap items-center justify-end gap-1.5">
+                            {visibleProviders.map((provider) => {
+                              const added = isAdded(
+                                marathon.slug,
                                 "race",
-                              )
-                            }
-                            title="대회 일정"
-                            label={
-                              racePending
-                                ? `${marathon.name} 대회 일정 ${PROVIDER_LABEL[activeProvider]} 캘린더에 추가 중`
-                                : raceAdded
-                                  ? `${marathon.name} 대회 일정 ${PROVIDER_LABEL[activeProvider]} 캘린더에 추가 완료`
-                                  : `${marathon.name} 대회 일정 ${PROVIDER_LABEL[activeProvider]} 캘린더에 추가`
-                            }
-                          />
+                                provider,
+                              );
+                              const pending =
+                                pendingKey ===
+                                `${provider}:${marathon.slug}:race`;
+                              return (
+                                <ProviderActionButton
+                                  key={provider}
+                                  provider={provider}
+                                  added={added}
+                                  pending={pending}
+                                  disabled={
+                                    !canUseByProvider[provider] ||
+                                    Boolean(pendingKey)
+                                  }
+                                  onClick={() =>
+                                    void addToCalendar(
+                                      marathon,
+                                      provider,
+                                      "race",
+                                    )
+                                  }
+                                  title={`${PROVIDER_LABEL[provider]} 대회 일정`}
+                                  label={
+                                    pending
+                                      ? `${marathon.name} 대회 일정 ${PROVIDER_LABEL[provider]} 캘린더에 추가 중`
+                                      : added
+                                        ? `${marathon.name} 대회 일정 ${PROVIDER_LABEL[provider]} 캘린더에 추가 완료`
+                                        : `${marathon.name} 대회 일정 ${PROVIDER_LABEL[provider]} 캘린더에 추가`
+                                  }
+                                />
+                              );
+                            })}
+                          </div>
                         </div>
 
                         {showRegistrationButton && (
@@ -449,26 +460,45 @@ export default function CalendarAdd({
                                 )}
                               </p>
                             </div>
-                            <ProviderActionButton
-                              added={registrationAdded}
-                              pending={registrationPending}
-                              disabled={!activeCanUse || Boolean(pendingKey)}
-                              onClick={() =>
-                                void addToCalendar(
-                                  marathon,
-                                  activeProvider,
+                            <div className="flex shrink-0 flex-wrap items-center justify-end gap-1.5">
+                              {visibleProviders.map((provider) => {
+                                const added = isAdded(
+                                  marathon.slug,
                                   "registration",
-                                )
-                              }
-                              title="접수 일정"
-                              label={
-                                registrationPending
-                                  ? `${marathon.name} 접수 일정 ${PROVIDER_LABEL[activeProvider]} 캘린더에 추가 중`
-                                  : registrationAdded
-                                    ? `${marathon.name} 접수 일정 ${PROVIDER_LABEL[activeProvider]} 캘린더에 추가 완료`
-                                    : `${marathon.name} 접수 일정 ${PROVIDER_LABEL[activeProvider]} 캘린더에 추가`
-                              }
-                            />
+                                  provider,
+                                );
+                                const pending =
+                                  pendingKey ===
+                                  `${provider}:${marathon.slug}:registration`;
+                                return (
+                                  <ProviderActionButton
+                                    key={provider}
+                                    provider={provider}
+                                    added={added}
+                                    pending={pending}
+                                    disabled={
+                                      !canUseByProvider[provider] ||
+                                      Boolean(pendingKey)
+                                    }
+                                    onClick={() =>
+                                      void addToCalendar(
+                                        marathon,
+                                        provider,
+                                        "registration",
+                                      )
+                                    }
+                                    title={`${PROVIDER_LABEL[provider]} 접수 일정`}
+                                    label={
+                                      pending
+                                        ? `${marathon.name} 접수 일정 ${PROVIDER_LABEL[provider]} 캘린더에 추가 중`
+                                        : added
+                                          ? `${marathon.name} 접수 일정 ${PROVIDER_LABEL[provider]} 캘린더에 추가 완료`
+                                          : `${marathon.name} 접수 일정 ${PROVIDER_LABEL[provider]} 캘린더에 추가`
+                                    }
+                                  />
+                                );
+                              })}
+                            </div>
                           </div>
                         )}
                       </div>
@@ -502,6 +532,7 @@ export default function CalendarAdd({
 }
 
 function ProviderActionButton({
+  provider,
   added,
   pending,
   disabled,
@@ -509,6 +540,7 @@ function ProviderActionButton({
   label,
   title,
 }: {
+  provider: Provider;
   added: boolean;
   pending: boolean;
   disabled: boolean;
@@ -516,6 +548,7 @@ function ProviderActionButton({
   label: string;
   title: string;
 }) {
+  const isKakao = provider === "kakao";
   return (
     <Button
       type="button"
@@ -526,7 +559,9 @@ function ProviderActionButton({
         "shrink-0 rounded-full px-4 font-anyvid text-xs",
         added
           ? "border border-brand/25 bg-brand/10 text-brand hover:bg-brand/10 hover:text-brand disabled:opacity-100"
-          : "bg-brand text-white hover:bg-brand/85 hover:text-white",
+          : isKakao
+            ? "bg-[#FEE500] text-[#3C1E1E] hover:bg-[#F5DC00]"
+            : "bg-[#03c75a] text-white hover:bg-[#02b351]",
       )}
       disabled={disabled || added}
       onClick={onClick}
@@ -545,7 +580,7 @@ function ProviderActionButton({
       ) : (
         <>
           <CalendarPlus2 className="size-4" aria-hidden="true" />
-          추가하기
+          {PROVIDER_SHORT_LABEL[provider]} 추가
         </>
       )}
     </Button>
