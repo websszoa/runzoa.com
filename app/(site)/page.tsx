@@ -1,4 +1,5 @@
 import MainHero from "@/components/main/main-hero";
+import MainCalendarConnectBanner from "@/components/main/main-calendart";
 import MainNewsletter from "@/components/main/main-newsletter";
 import MainOpenRegistration from "@/components/main/main-open-registration";
 import MainPromoBanner from "@/components/main/main-promo-banner";
@@ -77,6 +78,7 @@ export default async function Home({ searchParams }: HomeProps) {
       <MainRaceFinder />
       <MainPromoBanner />
       <MainRegistrationSoon marathons={marathons} />
+      <MainCalendarConnectBanner />
       <MainThisMonth marathons={marathons} />
       {/* <MainRacePosters marathons={marathons} /> */}
       {/* <MainMarathonStory /> */}
