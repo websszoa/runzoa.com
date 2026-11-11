@@ -563,6 +563,7 @@ function ConnectionStatus({
   connected: boolean;
   reconnectRequired: boolean;
 }) {
+  const [isNavigating, setIsNavigating] = useState(false);
   const providerName = PROVIDER_LABEL[provider];
   const toParticle = provider === "kakao" ? "으로" : "로";
   const loginUrl =
@@ -627,6 +628,8 @@ function ConnectionStatus({
           <Button
             nativeButton={false}
             render={<a href={loginUrl} />}
+            disabled={isNavigating}
+            onClick={() => setIsNavigating(true)}
             className={cn(
               "h-11 w-full justify-between rounded-lg px-4 font-anyvid font-semibold",
               isKakao
@@ -634,12 +637,21 @@ function ConnectionStatus({
                 : "bg-[#03c75a] text-white hover:bg-[#02b351]",
             )}
           >
-            <span className="flex items-center gap-2.5">
-              <ProviderLogo provider={provider} />
-              {providerName}
-              {toParticle} {isLoggedIn ? "다시 로그인" : "로그인"}
-            </span>
-            <ArrowRight className="size-4" aria-hidden="true" />
+            {isNavigating ? (
+              <span className="flex items-center gap-2.5">
+                <LoaderCircle className="size-4 animate-spin" aria-hidden="true" />
+                로그인 중...
+              </span>
+            ) : (
+              <>
+                <span className="flex items-center gap-2.5">
+                  <ProviderLogo provider={provider} />
+                  {providerName}
+                  {toParticle} {isLoggedIn ? "다시 로그인" : "로그인"}
+                </span>
+                <ArrowRight className="size-4" aria-hidden="true" />
+              </>
+            )}
           </Button>
         )}
       </CardContent>

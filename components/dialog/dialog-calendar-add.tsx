@@ -126,11 +126,14 @@ export default function DialogCalendarAdd({
         <div className="rounded-xl border bg-muted/35 p-4 font-anyvid">
           <dl className="space-y-2.5">
             {result?.entries.map((entry) => (
-              <div key={`${entry.label}:${entry.value}`} className="flex gap-2">
-                <dt className="text-sm font-medium text-muted-foreground">
+              <div
+                key={`${entry.label}:${entry.value}`}
+                className="flex items-start gap-2"
+              >
+                <dt className="shrink-0 text-sm whitespace-nowrap text-muted-foreground">
                   {entry.label} :
                 </dt>
-                <dd className="wrap-break-word text-sm leading-5 text-foreground">
+                <dd className="min-w-0 flex-1 wrap-break-word text-sm leading-5 text-foreground">
                   {entry.href ? (
                     <a
                       href={entry.href}
@@ -163,7 +166,7 @@ export default function DialogCalendarAdd({
           <Button
             size="lg"
             className={cn(
-              "w-full border-transparent font-anyvid font-semibold",
+              "w-full border-transparent font-anyvid",
               result?.provider === "kakao"
                 ? "bg-[#FEE500] text-[#3C1E1E] hover:bg-[#F5DC00] hover:text-[#3C1E1E]"
                 : "bg-[#03c75a] text-white hover:bg-[#02b351] hover:text-white",
@@ -184,7 +187,7 @@ export default function DialogCalendarAdd({
             type="button"
             size="lg"
             variant="outline"
-            className="w-full bg-background font-anyvid font-semibold hover:bg-muted"
+            className="w-full bg-background font-anyvid hover:bg-muted"
             onClick={onClose}
           >
             계속 둘러보기
