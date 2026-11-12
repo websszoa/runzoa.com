@@ -19975,7 +19975,7 @@
   },
   {
     "slug": "one-more-run-2026",
-    "name": "2026 원 모어 런",
+    "name": "2026 원 모어 런(취소)",
     "description": "2026 ONE MORE RUN은 인천 영종도 씨사이드파크에서 차가운 겨울 바다를 따라 달리는 연말 마라톤대회입니다. 하프, 10km, 5km 세 종목으로 진행되며 기록에 도전하는 러너부터 올해가 가기 전 새로운 완주를 만들고 싶은 참가자까지 함께할 수 있습니다. '올해, 한 번만 더 달리자!'라는 콘셉트로 2026년의 마지막 러닝 추억을 만드는 특별한 겨울 레이스입니다.",
     "info": {
       "type": "마라톤",
@@ -20002,7 +20002,7 @@
       "startTime": "10:00",
       "endTime": null,
       "site": "https://omrun.co.kr/",
-      "status": "접수중",
+      "status": "접수마감",
       "price": {
         "HALF": 50000,
         "10KM": 50000,
@@ -24464,6 +24464,65 @@
       "sponsor": null,
       "phone": null,
       "email": "samsamis@naver.com",
+      "instagram": null
+    }
+  },
+
+  {
+    "slug": "yeongcheon-garlic-run-2026",
+    "name": "2026 영천 갈릭런",
+    "description": "2026 영천 갈릭런은 12월 5일 경상북도 영천시 영천강변공원에서 개최되는 비경쟁형 러닝 행사입니다. '마늘 한 쪽, 영천 한 바퀴!'라는 슬로건 아래 영천강변공원부터 영록교 일원까지 6.3KM를 달리는 펀런으로 진행됩니다. 기록 경쟁 없이 영천의 강변 풍경을 즐기며 달리고, 마늘을 활용한 특별한 기념품도 받을 수 있는 이색 러닝 행사입니다.",
+    "info": {
+      "type": "마라톤",
+      "scale": 500,
+      "park": null,
+      "souvenir": "마늘 인형 메달, 깐마늘, 갈릭런 스티커, 비닐 백팩, 생수",
+      "program": null,
+      "memo": "만 14세 이상 참가 가능하며 미성년자는 보호자 동반 필수. 비경쟁형 펀런으로 진행."
+    },
+    "event": {
+      "startDate": "2026-12-05",
+      "endDate": "2026-12-05",
+      "startTime": "10:00",
+      "endTime": null,
+      "site": "https://yc-garlicrun.netlify.app/",
+      "schedule": {
+        "09:00": "참가자 집결",
+        "10:00": "6.3KM 비경쟁형 펀런 출발"
+      }
+    },
+    "registration": {
+      "startDate": "2026-10-28",
+      "endDate": "2026-11-28",
+      "startTime": null,
+      "endTime": null,
+      "site": "https://form.naver.com/response/1ZaAjCCPSKv",
+      "status": null,
+      "currency": "KRW",
+      "price": {
+        "6.3KM": 20000
+      },
+      "refund": {
+        "endDate": "2026-12-02",
+        "policy": "2026년 11월 28일까지 취소 시 전액 환불. 11월 29일부터 12월 2일까지 취소 시 50% 환불. 12월 3일 이후 및 대회 당일 환불 불가."
+      }
+    },
+    "location": {
+      "country": "한국",
+      "region": "경북",
+      "area": "영천시",
+      "venue": "영천강변공원",
+      "naver": "영천강변공원",
+      "address": "경상북도 영천시 최무선로 364 영천강변공원",
+      "latitude": 35.9703778,
+      "longitude": 128.938074
+    },
+    "hosts": {
+      "organizer": "영천시",
+      "manager": "주식회사 에이컴바인",
+      "sponsor": null,
+      "phone": "070-4177-4523",
+      "email": null,
       "instagram": null
     }
   }

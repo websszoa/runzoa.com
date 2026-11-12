@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import { useRouter } from "next/navigation";
 import { useDeferredValue, useEffect, useMemo, useState } from "react";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
@@ -106,6 +107,7 @@ export default function MarathonList({
   const [visibleCount, setVisibleCount] = useState(PAGE_SIZE);
   const [isFilterOpen, setIsFilterOpen] = useState(false);
   const deferredQuery = useDeferredValue(normalizeSearchText(query));
+  const router = useRouter();
 
   useEffect(() => {
     const url = new URL(window.location.href);
@@ -132,12 +134,13 @@ export default function MarathonList({
     setFilterParam(url.searchParams, "scale", scale, "전체");
     setFilterParam(url.searchParams, "past", includePast ? "true" : null);
 
-    window.history.replaceState(
-      null,
-      "",
-      `${url.pathname}${url.search}${url.hash}`,
-    );
-  }, [includePast, month, raceType, region, scale, status, year]);
+    // router.replace (not window.history.replaceState) keeps Next's client-side
+    // history/cache in sync, so back/forward and in-app navigation restore this
+    // filtered URL instead of the stale pre-filter one.
+    router.replace(`${url.pathname}${url.search}${url.hash}`, {
+      scroll: false,
+    });
+  }, [includePast, month, raceType, region, router, scale, status, year]);
 
   const regions = useMemo(() => {
     const uniqueRegions = [

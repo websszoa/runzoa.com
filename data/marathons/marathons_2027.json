@@ -2428,5 +2428,128 @@
       "email": "bskrun@naver.com",
       "instagram": null
     }
+  },
+  {
+    "slug": "samsam-trail-run-2027",
+    "name": "2027 삼삼트레일런",
+    "description": "2027 삼삼트레일런은 5월 29일 경기도 의정부시 예총광장에서 개최되는 트레일러닝 대회입니다. 홍복산과 천보산을 달리는 36KM, 홍복산을 중심으로 달리는 16KM 두 종목으로 진행됩니다. 36KM는 누적고도 약 1,900m, 16KM는 약 900m로 구성되며, ITRA 포인트와 UTMB INDEX 인증을 받을 수 있는 산악 러닝 대회입니다.",
+    "info": {
+      "type": "트레일러닝",
+      "scale": null,
+      "park": null,
+      "souvenir": null,
+      "program": "크루대항전, 커플런, 종목별 개인전 시상",
+      "memo": "36K 누적고도 ±1,900m, 제한시간 9시간, ITRA 2포인트 및 UTMB INDEX 50K. 16K 누적고도 ±900m, 제한시간 4시간, ITRA 1포인트 및 UTMB INDEX 20K. 참가권 양도 및 양수 불가. 참가자는 개인 보험 가입 권장."
+    },
+    "event": {
+      "startDate": "2027-05-29",
+      "endDate": "2027-05-29",
+      "startTime": "07:00",
+      "endTime": "17:00",
+      "site": "https://samsamis.com/47",
+      "schedule": {
+        "04:00": "선수 등록, 배번호 수령 및 짐 보관",
+        "06:30": "출발지 이동",
+        "07:00": "36K 및 16K 개인전 출발",
+        "07:05": "크루대항전 출발",
+        "13:00": "시상식",
+        "17:00": "대회 종료",
+        "18:00": "대회장 주변 정리 및 마무리"
+      }
+    },
+    "registration": {
+      "startDate": "2026-12-10",
+      "endDate": "2026-12-11",
+      "startTime": "14:00",
+      "endTime": null,
+      "site": "https://samsamis.com/48",
+      "status": null,
+      "currency": "KRW",
+      "price": {
+        "36KM": null,
+        "16KM": null
+      },
+      "refund": {
+        "endDate": "2027-04-20",
+        "policy": "2027년 4월 20일 오전 10시까지 취소 시 환불수수료 10,000원을 공제하고 환불. 이후 취소 및 환불 불가. 참가권 양도 및 양수 불가. 단체명, 크루인, 기념품 사이즈 등은 4월 20일까지 네이버 폼으로 변경 가능."
+      }
+    },
+    "location": {
+      "country": "한국",
+      "region": "경기",
+      "area": "의정부시",
+      "venue": "의정부 예총광장",
+      "naver": "의정부 예총광장",
+      "address": "경기도 의정부시 의정로80번길 18 의정부시특설야외무대",
+      "latitude": 37.7396817,
+      "longitude": 127.0358445
+    },
+    "hosts": {
+      "organizer": "삼삼이즈",
+      "manager": "주식회사 삼삼이즈",
+      "sponsor": null,
+      "phone": null,
+      "email": "samsamis@naver.com",
+      "instagram": null
+    }
+  },
+
+  {
+    "slug": "daejeon-trail-speed-run-2027",
+    "name": "제5회 대전트레일 스피드런",
+    "description": "제5회 대전트레일 스피드런 with NEDAO는 2027년 3월 6일 대전 계족산 일대에서 개최되는 트레일러닝 대회입니다. 약 30KM의 산악 코스와 누적고도 약 1,000m를 달리는 경쟁형 레이스로, 제한시간은 7시간입니다. 약 16KM 숏컷 코스도 운영되며, 소규모 100명 모집과 네다오 러닝 기념품, 특별한 순위 시상이 특징입니다.",
+    "info": {
+      "type": "트레일러닝",
+      "scale": 100,
+      "park": "장동산림욕장 주차장 및 인근 도로변 주차 가능",
+      "souvenir": "2027 시즌 네다오 반팔 티셔츠, 핫팩, 뉴트리션, 식혜, 토마토주스, 성심당 빵, 완주 메달, 뽑기 기념품, 완주 후 식사",
+      "program": "남녀 1~5위 시상, 럭키 랭킹 시상 및 완주 후 뽑기 이벤트",
+      "memo": "30KM 제한시간 7시간. 약 16KM 숏컷 코스 이용 가능하나 시상 제외. NET TIME 기준 기록 집계. 배번호와 기념품은 현장 신분증 및 필수 장비 확인 후 지급하며 대리 수령 불가. UTMB INDEX 지급 예정."
+    },
+    "event": {
+      "startDate": "2027-03-06",
+      "endDate": "2027-03-06",
+      "startTime": "09:00",
+      "endTime": null,
+      "site": "https://srtrail.kr/index",
+      "schedule": {
+        "08:00": "참가자 접수 및 배번호 수령",
+        "09:00": "30KM 트레일러닝 출발"
+      }
+    },
+    "registration": {
+      "startDate": "2026-11-14",
+      "endDate": null,
+      "startTime": "13:00",
+      "endTime": null,
+      "site": "https://srtrail.kr/39",
+      "status": null,
+      "currency": "KRW",
+      "price": {
+        "30KM": 130000
+      },
+      "refund": {
+        "endDate": null,
+        "policy": null
+      }
+    },
+    "location": {
+      "country": "한국",
+      "region": "대전",
+      "area": "대덕구",
+      "venue": "장동 만남공원",
+      "naver": "장동 만남공원",
+      "address": "대전광역시 대덕구 장동 353",
+      "latitude": 36.4131759,
+      "longitude": 127.4386285
+    },
+    "hosts": {
+      "organizer": "에스알트레일",
+      "manager": "에스알트레일",
+      "sponsor": "네다오, OSK",
+      "phone": "010-5385-5635",
+      "email": "npooh79@naver.com",
+      "instagram": "srtrail_kr"
+    }
   }
 ]
