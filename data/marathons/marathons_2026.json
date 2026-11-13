@@ -24525,5 +24525,65 @@
       "email": null,
       "instagram": null
     }
+  },
+
+  {
+    "slug": "toji-goobo-sarabong-trailrace-2026",
+    "name": "2026 사라봉 트레일레이스",
+    "description": "제주 사라봉과 별도봉, 제주항 일원을 달리며 원도심과 자연을 함께 경험하는 약 10km 트레일러닝 대회입니다.",
+    "info": {
+      "type": "트레일러닝",
+      "scale": 200,
+      "park": null,
+      "souvenir": "TOJI BREEZE CAP, 구보 기념 티셔츠, 반다나, 완주메달, 선크림 등",
+      "program": "완주 후 돔베고기 등 식음료 제공, 현장 럭키드로우 및 이벤트",
+      "memo": "누적 상승고도 약 400m. 티셔츠 사이즈 선택 및 사전 지정 불가, 신청 순서대로 선착순 배부. 신청서 제출과 참가비 입금이 모두 확인되어야 참가 확정. 미성년자는 보호자 동반 필수. 모집인원 충족 시 조기 마감."
+    },
+    "event": {
+      "startDate": "2026-11-22",
+      "endDate": "2026-11-22",
+      "startTime": "08:30",
+      "endTime": null,
+      "site": "https://docs.google.com/forms/d/e/1FAIpQLSfABBtWsgJJbpY5sJs5oxMmdrHGRWYK9WmwIBceQPbLPJnSag/viewform",
+      "schedule": {
+        "07:30": "행사장 오픈",
+        "07:50": "참가자 집결",
+        "08:30": "10KM 트레일레이스 출발"
+      }
+    },
+    "registration": {
+      "startDate": "2026-11-06",
+      "endDate": "2026-11-15",
+      "startTime": null,
+      "endTime": null,
+      "site": "https://docs.google.com/forms/d/e/1FAIpQLSfABBtWsgJJbpY5sJs5oxMmdrHGRWYK9WmwIBceQPbLPJnSag/viewform",
+      "status": null,
+      "currency": "KRW",
+      "price": {
+        "10KM": 50000
+      },
+      "refund": {
+        "endDate": "2026-11-15",
+        "policy": "2026년 11월 15일 23:59까지 전액 환불 가능. 11월 16일부터 참가자 개인 사유에 따른 환불 불가."
+      }
+    },
+    "location": {
+      "country": "한국",
+      "region": "제주",
+      "area": "제주시",
+      "venue": "모다드렁숲",
+      "naver": "모다드렁숲",
+      "address": "제주특별자치도 제주시 건입동 482",
+      "latitude": 33.5156858,
+      "longitude": 126.5459236
+    },
+    "hosts": {
+      "organizer": "사단법인 구보",
+      "manager": null,
+      "sponsor": "TOJI",
+      "phone": "010-5183-6636",
+      "email": null,
+      "instagram": null
+    }
   }
 ]

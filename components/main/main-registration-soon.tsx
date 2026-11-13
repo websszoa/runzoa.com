@@ -4,10 +4,12 @@ import type { Marathon } from "@/lib/marathons";
 import {
   formatMarathonDate,
   formatMarathonPrices,
+  getCurrentKoreanDate,
   getEffectiveRegistrationSchedule,
   getMarathonDistances,
   getMarathonDDay,
   getRegistrationBadgeClassName,
+  getRegistrationStatus,
   getUpcomingRegistrations,
   isAdditionalRegistrationOpen,
 } from "@/lib/utils";
@@ -15,6 +17,7 @@ import {
   AlarmClock,
   ArrowRight,
   CalendarCheck,
+  CircleHelp,
   MapPin,
   Tag,
   Users,
@@ -38,8 +41,20 @@ export default function MainRegistrationSoon({
         b.schedule.endDate ?? "9999-12-31",
       ),
     );
+  const today = getCurrentKoreanDate();
+  const undecidedMarathons = marathons
+    .filter(
+      (marathon) =>
+        marathon.event.startDate >= today &&
+        getRegistrationStatus(marathon) === "접수미정",
+    )
+    .sort((a, b) => a.event.startDate.localeCompare(b.event.startDate));
 
-  if (upcomingMarathons.length === 0 && additionalOpenMarathons.length === 0)
+  if (
+    upcomingMarathons.length === 0 &&
+    additionalOpenMarathons.length === 0 &&
+    undecidedMarathons.length === 0
+  )
     return null;
 
   return (
@@ -141,6 +156,35 @@ export default function MainRegistrationSoon({
                         ? `${formatMarathonDate(schedule.endDate)}${schedule.endTime ? ` · ${schedule.endTime}` : ""}`
                         : "선착순 마감",
                     },
+                  ]}
+                />
+              ))}
+            </div>
+          </div>
+        )}
+
+        {undecidedMarathons.length > 0 && (
+          <div className="mt-4 overflow-hidden rounded-2xl border bg-background sm:mt-5">
+            <div className="flex items-center gap-2 border-b bg-muted/30 px-5 py-3 font-anyvid text-xs text-muted-foreground sm:px-7">
+              <CircleHelp
+                className="size-4 text-emerald-600"
+                aria-hidden="true"
+              />
+              접수 미정
+              <strong className="font-semibold text-emerald-600">
+                {undecidedMarathons.length}개
+              </strong>
+            </div>
+
+            <div className="divide-y">
+              {undecidedMarathons.map((marathon) => (
+                <RegistrationRow
+                  key={marathon.slug}
+                  marathon={marathon}
+                  badgeLabel="접수 미정"
+                  badgeClassName={getRegistrationBadgeClassName("접수미정")}
+                  scheduleItems={[
+                    { label: "접수 일정", value: "아직 공개되지 않았어요" },
                   ]}
                 />
               ))}

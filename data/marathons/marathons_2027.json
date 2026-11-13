@@ -2493,7 +2493,6 @@
       "instagram": null
     }
   },
-
   {
     "slug": "daejeon-trail-speed-run-2027",
     "name": "제5회 대전트레일 스피드런",
@@ -2550,6 +2549,122 @@
       "phone": "010-5385-5635",
       "email": "npooh79@naver.com",
       "instagram": "srtrail_kr"
+    }
+  },
+
+  {
+    "slug": "muju-firefly-half-marathon-2027",
+    "name": "2027 무주 반딧불 하프 마라톤대회",
+    "description": "2027년 3월 7일 전북 무주 등나무운동장에서 개최되는 마라톤 대회입니다. 하프, 10KM, 5KM 종목으로 운영되며 무주군민을 위한 별도의 5KM 참가 부문도 마련되어 있습니다.",
+    "info": {
+      "type": "마라톤",
+      "scale": 3000,
+      "park": null,
+      "souvenir": null,
+      "program": null,
+      "memo": "5KM는 유아부터 참가 가능하며, 10KM·하프는 완주 가능한 만 15세 이상 신청 가능. 5KM 제한시간 1시간, 10KM 2시간, 하프 3시간. 전 종목 칩 사용. 신청과 입금이 모두 확인되어야 접수 확정. 신청 인원 3,000명 및 입금 완료 시 조기 마감."
+    },
+    "event": {
+      "startDate": "2027-03-07",
+      "endDate": "2027-03-07",
+      "startTime": "08:30",
+      "endTime": null,
+      "site": "https://mara1080.com/event/6b68a627-24cf-4844-ac1d-9358b2a54227",
+      "schedule": {
+        "08:30": "대회 출발"
+      }
+    },
+    "registration": {
+      "startDate": "2026-11-04",
+      "endDate": null,
+      "startTime": null,
+      "endTime": null,
+      "site": "https://mara1080.com/event/6b68a627-24cf-4844-ac1d-9358b2a54227",
+      "status": null,
+      "currency": "KRW",
+      "price": {
+        "HALF": 50000,
+        "10KM": 50000,
+        "5KM": 35000,
+        "5KM(무주군민)": 25000
+      },
+      "refund": {
+        "endDate": null,
+        "policy": "접수 최종 마감일까지만 환불 신청 가능하며, 마감 이후에는 환불 불가. 게시판 또는 전화로 환불 요청 시 접수하며 요청 후 3주 이내 처리. 천재지변이나 자연재해로 대회가 취소되는 경우 참가비는 환불되지 않으며 기념품 발송."
+      }
+    },
+    "location": {
+      "country": "한국",
+      "region": "전북",
+      "area": "무주군",
+      "venue": "무주 등나무운동장",
+      "naver": "무주 등나무운동장",
+      "address": "전북특별자치도 무주군 무주읍 한풍루로 326-14 등나무운동장",
+      "latitude": 36.0026206,
+      "longitude": 127.6614905
+    },
+    "hosts": {
+      "organizer": "무주군체육회",
+      "manager": "무주군 마라톤협회, 전국마라톤협회",
+      "sponsor": "전북특별자치도, 무주군",
+      "phone": "042-638-1080",
+      "email": "jeonmahyeop@naver.com",
+      "instagram": null
+    }
+  },
+  {
+    "slug": "adidas-10k-paris-2027",
+    "name": "아디다스 파리 10K 2027",
+    "description": "2027년 5월 23일 프랑스 파리에서 개최되는 대규모 10KM 도로 마라톤 대회입니다. 파리 도심의 명소를 배경으로 달리는 레이스로, 초보 러너부터 기록에 도전하는 숙련된 러너까지 참가할 수 있습니다.",
+    "info": {
+      "type": "마라톤",
+      "scale": 40000,
+      "park": null,
+      "souvenir": null,
+      "program": "완주 후 이벤트 빌리지 운영, DJ 공연 및 다양한 현장 프로그램",
+      "memo": "2027년 정식 접수는 11월 26일 시작 예정이며 현재 사전등록 가능. 사전등록은 정식 참가권 확보가 아닌 접수 일정 안내 목적. 2027년 세부 코스와 출발시간은 추후 발표."
+    },
+    "event": {
+      "startDate": "2027-05-23",
+      "endDate": "2027-05-23",
+      "startTime": null,
+      "endTime": null,
+      "site": "https://www.adidas10kparis.fr/en/",
+      "schedule": {}
+    },
+    "registration": {
+      "startDate": "2026-11-26",
+      "endDate": null,
+      "startTime": null,
+      "endTime": null,
+      "site": "https://www.adidas10kparis.fr/en/participate/register",
+      "status": null,
+      "currency": "EUR",
+      "price": {
+        "10KM": null
+      },
+      "refund": {
+        "endDate": null,
+        "policy": null
+      }
+    },
+    "location": {
+      "country": "프랑스",
+      "region": "프랑스",
+      "area": "파리",
+      "venue": "파리 도심",
+      "naver": "Paris, France",
+      "address": null,
+      "latitude": null,
+      "longitude": null
+    },
+    "hosts": {
+      "organizer": "Amaury Sport Organisation (A.S.O.)",
+      "manager": null,
+      "sponsor": "adidas",
+      "phone": null,
+      "email": null,
+      "instagram": null
     }
   }
 ]
