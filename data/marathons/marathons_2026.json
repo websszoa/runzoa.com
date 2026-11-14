@@ -15573,7 +15573,7 @@
       "startTime": "10:00",
       "endTime": null,
       "site": "https://gofree.seoul.co.kr",
-      "status": null,
+      "status": "접수마감",
       "price": {
         "HALF": 70000,
         "10km": 70000
@@ -23316,7 +23316,7 @@
       "startTime": null,
       "endTime": null,
       "site": "https://daegu6k-social-welfare.vercel.app/#intro",
-      "status": null,
+      "status": "접수마감",
       "price": {
         "6KM": 30000
       },
