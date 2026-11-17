@@ -18179,7 +18179,7 @@
       "startTime": "10:00",
       "endTime": null,
       "site": "https://mara1080.com/event/ccf77de8-1b14-4170-afcb-c2eeaee1a78d/registration/apply",
-      "status": "접수중",
+      "status": "접수마감",
       "price": {
         "14KM_티셔츠패키지": 100000,
         "14KM_페바카본마라톤화패키지": 250000
@@ -19000,7 +19000,7 @@
   },
   {
     "slug": "youth-family-dolbom-gibu-run-2026",
-    "name": "2026 소년소녀 가장 돌보기 기부런",
+    "name": "2026 소년소녀 가장 돌보기 기부런(취소)",
     "description": "2026 소년소녀 가장 돌보기 기부런은 서울 월드컵공원 평화광장에서 열리는 시민 참여형 기부 마라톤입니다. 10km, 5km 러닝과 걷기 종목으로 진행되며 약 5,000명이 함께합니다. 달리기와 기부를 결합해 참가비 일부를 소년소녀 가장 지원에 기부하고, 시민 건강 증진과 나눔 문화 확산, 사회공헌을 함께 실천하는 의미 있는 러닝 행사입니다.",
     "info": {
       "type": "마라톤",
@@ -19028,7 +19028,7 @@
       "startTime": null,
       "endTime": null,
       "site": "https://gibukidsrun.kr/",
-      "status": null,
+      "status": "접수마감",
       "price": {
         "10KM": 50000,
         "5KM": 50000,
@@ -20402,7 +20402,7 @@
       "startTime": null,
       "endTime": null,
       "site": "https://seoul.lifemarathon.co.kr/registration",
-      "status": null,
+      "status": "접수마감",
       "price": {
         "HALF": 59000,
         "10KM": 55000,
@@ -21585,7 +21585,7 @@
       "startTime": null,
       "endTime": null,
       "site": "https://ssrun.kr/",
-      "status": null,
+      "status": "접수마감",
       "price": {
         "HALF": 50000,
         "10KM": 45000,
@@ -22245,25 +22245,31 @@
       "instagram": "kakaopay.official"
     }
   },
+
   {
     "slug": "yonhap-hanam-trailrun-festival-2026",
-    "name": "2026 연합뉴스 하남 국제트레일런 페스티벌",
-    "description": "2026 연합뉴스 하남 국제트레일런 페스티벌은 경기 하남 미사경정공원에서 출발해 한강 수변길과 검단산, 남한산성을 달리는 국제 러닝 축제입니다. 황영조 감독이 코스 설계를 주도했으며 28KM·15KM 트레일러닝과 10KM·5KM 로드레이스로 구성됩니다. 초보 러너와 가족 참가자부터 트레일러너까지 함께 즐길 수 있는 하남의 새로운 러닝 페스티벌입니다.",
+    "name": "2026 연합뉴스 하남 국제 트레일런 페스티벌",
+    "description": "2026 연합뉴스 하남 국제 트레일런 페스티벌은 12월 12일부터 13일까지 경기 하남 미사경정공원 및 하남시 일대에서 개최되는 러닝 축제입니다. 15KM·28KM 트레일런과 5KM·10KM 러닝 종목으로 구성되며, 검단산과 남한산성 일대의 자연 코스부터 미사경정공원의 평지 코스까지 다양한 레이스를 즐길 수 있습니다. 스포츠·러닝 엑스포, 황영조 감독 러닝 클래스, 문화공연과 경품 추첨 등 다양한 부대행사도 마련됩니다.",
     "info": {
       "type": "트레일러닝",
-      "scale": null,
-      "park": "미사경정공원 주차장 이용가능(유료)",
-      "souvenir": null,
-      "program": "28KM, 15KM, 10KM, 5KM",
-      "memo": "28KM와 15KM는 트레일러닝, 10KM와 5KM는 로드레이스로 운영됩니다. 황영조 감독이 코스 설계를 주도했으며 트레일 코스는 미사경정공원에서 출발해 수변길과 검단산을 거쳐 남한산성으로 이어집니다. 5KM와 10KM는 미사경정공원 조정경기장 호수 주변의 평지 코스로 구성됩니다."
+      "scale": 5000,
+      "park": "미사경정공원 주차장 이용 가능(유료)",
+      "souvenir": "2026 YHITF 기념 메달, KEEN 콜라보 기념 티셔츠, 황영조 감독 사인 모자, 네이처밸리 간식 2종, 샘트리 병아리콩, 타포린백, 기능성 마스크, 헤세드 스포츠 양말. 15KM·28KM 참가자 추가 제공: 아미노리젠 에너지젤 2종, 완주 기념 자켓(완주 시)",
+      "program": "12월 11일 스포츠·러닝 EXPO, 황영조 감독 러닝 클래스, 인순이 축하공연, 문화공연, K-FOOD 및 지역 먹거리 부스, 12월 13일 14시 기아 PV5 캠핑카 경품 추첨",
+      "memo": "15KM·28KM는 트레일런, 5KM·10KM는 로드러닝으로 운영. 15KM 제한시간 4시간, 28KM 제한시간 7시간 30분(CP2 4시간 30분, CP3 6시간 30분). 5KM·10KM 배번호와 사전 기념품은 택배 발송, 15KM·28KM는 현장 수령 및 필수 장비 검사. 20명 이상 단체 신청 시 선착순으로 단체 부스 제공. 경품 추첨은 12월 13일 현장 참석자만 참여 가능하며 대리 수령 불가."
     },
     "event": {
       "startDate": "2026-12-12",
       "endDate": "2026-12-13",
-      "startTime": null,
+      "startTime": "10:00",
       "endTime": null,
       "site": "https://yhitf.co.kr/",
-      "schedule": null
+      "schedule": {
+        "08:00": "12월 13일 28KM 트레일런 출발",
+        "10:00": "12월 12일 15KM 트레일런·10KM·5KM 순차 출발 / 12월 13일 10KM 러닝 출발",
+        "12:00": "종목별 러닝 시상식",
+        "14:00": "종목별 트레일런 시상식 및 12월 13일 경품 추첨"
+      }
     },
     "registration": {
       "startDate": "2026-10-08",
@@ -22272,22 +22278,32 @@
       "endTime": null,
       "site": "https://yhitf.co.kr/",
       "status": null,
-      "price": null,
-      "refund": null
+      "currency": "KRW",
+      "price": {
+        "5KM": 30000,
+        "10KM": 50000,
+        "15KM": 80000,
+        "28KM": 100000
+      },
+      "refund": {
+        "endDate": "2026-11-10",
+        "policy": "2026년 11월 10일 23:59까지 참가 취소 및 환불 신청 가능. 11월 11일 00:00부터 취소·환불·종목 및 날짜 변경·기념품 사이즈 교환 불가. 11월 11일 이후 신규 신청자는 결제 이후 취소 및 환불 불가. 15KM·28KM 추가 접수도 취소·환불 및 종목 변경 불가."
+      }
     },
     "location": {
       "country": "한국",
       "region": "경기",
-      "venue": "하남 미사 경정공원",
+      "area": "하남시",
+      "venue": "미사경정공원 및 하남시 일대",
       "naver": "미사경정공원",
       "address": "경기 하남시 미사동 15",
       "latitude": 37.5593314,
       "longitude": 127.2099161
     },
     "hosts": {
-      "organizer": "한국체육대학교, 하남시, 연합뉴스",
-      "manager": null,
-      "sponsor": "문화체육관광부",
+      "organizer": "연합뉴스, 하남시, 한국체육대학교",
+      "manager": "대한트레일런협회",
+      "sponsor": "문화체육관광부, 서울올림픽기념국민체육진흥공단",
       "phone": "010-2167-2013",
       "email": "ktra2000@naver.com",
       "instagram": null
@@ -23131,7 +23147,7 @@
       "startTime": null,
       "endTime": null,
       "site": "https://krun.or.kr/main.php",
-      "status": null,
+      "status": "접수마감",
       "price": {
         "10KM": 60000,
         "5KM": 50000
@@ -24375,7 +24391,7 @@
       "startTime": "14:00",
       "endTime": null,
       "site": "https://www.rocknrun.kr/2026NTR_REGISTRATION",
-      "status": null,
+      "status": "접수마감",
       "currency": "KRW",
       "price": {
         "41K": 160000,

@@ -19,6 +19,7 @@ import {
   CalendarCheck,
   CalendarDays,
   Flag,
+  Smartphone,
   Sparkles,
   TimerReset,
 } from "lucide-react";
@@ -246,6 +247,30 @@ export default function MainHero({ marathons }: { marathons: Marathon[] }) {
               </span>
               <ArrowRight
                 className="ml-auto size-4 shrink-0 text-muted-foreground transition-transform group-hover:translate-x-1 group-hover:text-brand"
+                aria-hidden="true"
+              />
+            </a>
+
+            <a
+              href="https://tossminiapp.com/s/ZeWGJPQx"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="토스 앱에서 런조아 새 창으로 열기"
+              className="group flex items-center gap-3 border-t bg-background px-5 py-4 transition-colors hover:bg-muted/30 focus-visible:bg-muted/30 focus-visible:outline-none sm:px-6"
+            >
+              <span className="flex size-9 shrink-0 items-center justify-center rounded-full bg-blue-500/10 text-blue-500">
+                <Smartphone className="size-4.5" aria-hidden="true" />
+              </span>
+              <span className="min-w-0 font-anyvid">
+                <span className="block text-sm font-medium text-foreground">
+                  이제 토스 앱에서도 런조아를 만나보세요
+                </span>
+                <span className="block text-xs text-muted-foreground">
+                  앱 설치 없이 토스에서 바로 시작해요
+                </span>
+              </span>
+              <ArrowRight
+                className="ml-auto size-4 shrink-0 text-blue-500 transition-transform group-hover:translate-x-1"
                 aria-hidden="true"
               />
             </a>

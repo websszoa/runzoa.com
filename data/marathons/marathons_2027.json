@@ -1063,7 +1063,7 @@
       "startTime": null,
       "endTime": null,
       "site": "https://mara1080.com/event/f3c362bc-532f-4f3c-bc21-76d3023bfb3a",
-      "status": null,
+      "status": "접수마감",
       "price": {
         "FULL(1회)": 55000,
         "FULL(2회)": 110000,
@@ -1690,7 +1690,7 @@
       "startTime": null,
       "endTime": null,
       "site": "https://mara1080.com/event/15658a1d-d102-42e7-8123-9e20c73aa767",
-      "status": null,
+      "status": "접수마감",
       "currency": "KRW",
       "price": {
         "10KM": 50000
@@ -1907,66 +1907,70 @@
       "instagram": null
     }
   },
-
   {
     "slug": "jecheon-uirimji-naked-marathon-2027",
-    "name": "제19회 제천 의림지 알몸 마라톤대회",
-    "description": "2027 제19회 제천의림지삼한초록길알몸마라톤대회는 1월 10일 충청북도 제천시 의림지 수변무대에서 개최되는 새해맞이 겨울 마라톤대회입니다. 제천의 대표 명소인 의림지와 삼한초록길 일대를 배경으로 7KM 코스가 진행됩니다. 겨울 추위에 도전하며 건강과 활력을 다지는 이색 러닝 행사로, 참가자 전원에게 기록증과 완주메달, 비치타월이 제공됩니다.",
+    "name": "제19회 제천 의림지 알몸마라톤대회",
+    "description": "2027년 1월 10일 충청북도 제천시 의림지역사박물관에서 개최되는 제19회 제천의림지삼한초록길알몸마라톤대회입니다. 제천의 대표 명소인 의림지와 삼한초록길 일대를 달리는 7KM 겨울 마라톤으로, 남성은 상의를 탈의하고 여성은 반팔 티셔츠를 착용하는 특별한 복장 규정이 특징입니다. 새해를 맞아 겨울 추위에 도전하며 건강과 활력을 다지는 이색 러닝 행사입니다.",
     "info": {
       "type": "마라톤",
       "scale": null,
       "park": null,
       "souvenir": "기록증, 완주메달, 비치타월",
-      "program": "7KM 알몸마라톤",
-      "memo": "대회 집결시간 오전 9시, 출발시간 오전 11시. 제한시간 1시간 30분. 남성은 상의 탈의, 하의 반바지 착용이 기본이며 롱 타이즈, 장갑, 모자 착용 가능. 여성은 상의 반팔 티셔츠, 하의 반바지 착용이 기본이며 롱 타이즈, 장갑, 모자 착용 가능. 기념품은 완주 후 현장에서 지급되며 경품 추첨이 진행됩니다. 계좌이체 및 무통장 입금 가능하며, 참가자와 입금자 명의가 다를 경우 주최 측에 연락해야 합니다."
+      "program": "바디페인팅, 식전공연, 시상식 및 경품 추첨",
+      "memo": "남성은 상의 탈의 및 반바지 착용, 여성은 반팔 티셔츠 및 반바지 착용이 기본"
     },
     "event": {
       "startDate": "2027-01-10",
       "endDate": "2027-01-10",
       "startTime": "11:00",
-      "endTime": null,
+      "endTime": "13:00",
       "site": "http://jcaaf.com/theme/jcaaf/html/company/01.php",
       "schedule": {
-        "09:00": "참가자 집결",
-        "11:00": "7KM 알몸마라톤 출발"
+        "09:00": "참가자 대회장 집결",
+        "10:00": "식전공연",
+        "10:20": "개회식",
+        "10:45": "스트레칭",
+        "10:50": "대회 참가자 출발선 이동",
+        "11:00": "7KM 알몸마라톤 출발",
+        "12:00": "시상식 및 기록기념품 배부",
+        "13:00": "대회 종료"
       }
     },
     "registration": {
-      "startDate": "2026-11-10",
+      "startDate": "2026-11-14",
       "endDate": "2026-12-31",
-      "startTime": null,
-      "endTime": null,
+      "startTime": "09:00",
+      "endTime": "18:00",
       "site": "http://jcaaf.com/",
-      "status": null,
+      "status": "접수중",
       "currency": "KRW",
       "price": {
         "7KM": 40000
       },
       "refund": {
         "endDate": "2026-12-20",
-        "policy": "2026년 12월 20일 오후 6시까지 환불 신청 시 참가비 100% 환불이 가능합니다. 이후에는 환불이 불가능합니다. 천재지변이나 자연재해로 대회가 중지될 경우 참가비는 환불되지 않습니다."
+        "policy": "2026년 12월 20일 오후 6시까지 환불 신청 시 참가비 100% 환불 가능. 이후 환불 불가. 천재지변이나 자연재해로 대회가 중지될 경우 참가비는 환불되지 않음."
       }
     },
     "location": {
       "country": "한국",
       "region": "충북",
       "area": "제천시",
-      "venue": "의림지 수변무대",
-      "naver": "의림지 수변무대",
-      "address": "충청북도 제천시 의림지로 32",
-      "latitude": 37.1744901,
-      "longitude": 128.208116
+      "venue": "의림지역사박물관",
+      "naver": "의림지역사박물관",
+      "address": "충청북도 제천시 의림대로47길 7 의림지역사박물관",
+      "latitude": 37.1761298,
+      "longitude": 128.2095155
     },
     "hosts": {
       "organizer": "제천시체육회",
       "manager": "제천시육상연맹",
-      "sponsor": "제천시, 제천시체육회, 제천농협, CK식자재마트, 제천농·축협",
+      "sponsor": "제천시, 제천농협, CK식자재마트, 제천농·축협",
       "phone": null,
       "email": null,
       "instagram": null
     }
   },
-
   {
     "slug": "sunyang-naked-marathon-2027",
     "name": "2027 선양 맨몸마라톤",
@@ -2263,36 +2267,43 @@
       "instagram": null
     }
   },
-
   {
     "slug": "hapcheon-cherry-blossom-marathon-2027",
-    "name": "제26회 합천 벚꽃 마라톤대회",
-    "description": "제26회 합천벚꽃마라톤대회는 2027년 3월 28일 경상남도 합천군에서 개최 예정인 봄 마라톤 대회입니다. 합천공설운동장을 중심으로 황강변과 합천 100리 벚꽃길을 따라 달리는 아름다운 코스로, 봄의 정취를 느끼며 기록에 도전할 수 있는 대회입니다. 풀코스, 하프코스, 10KM, 5KM 종목으로 진행될 예정입니다.",
+    "name": "제26회 합천벚꽃마라톤대회",
+    "description": "제26회 합천벚꽃마라톤대회는 2027년 3월 28일 경상남도 합천군에서 개최되는 봄 마라톤 대회입니다. 합천공설운동장을 집결 장소로 하여 합천군 100리 벚꽃마라톤코스 일원을 달리며, 풀코스, 하프코스, 10KM, 5KM 종목으로 진행됩니다. 벚꽃이 피어나는 봄철 합천의 아름다운 자연을 배경으로 달릴 수 있는 대표적인 마라톤 대회입니다.",
     "info": {
       "type": "마라톤",
       "scale": null,
       "park": null,
       "souvenir": null,
-      "program": null,
-      "memo": "2027년 세부 대회 요강 및 참가 접수 일정 추후 공지."
+      "program": "단체 대항전 운영",
+      "memo": "풀·하프는 2026년 12월 1일, 10KM·5KM는 12월 2일, 단체 대항전은 12월 7일 오전 10시부터 접수. 온라인 신청 후 참가비 입금 시 본인 성명 및 생년월일 기재. 무통장 입금 시 본인 성명 또는 단체명으로 입금."
     },
     "event": {
       "startDate": "2027-03-28",
       "endDate": "2027-03-28",
-      "startTime": null,
+      "startTime": "09:00",
       "endTime": null,
       "site": "https://hcmrt.or.kr/ko/index.html",
-      "schedule": {}
+      "schedule": {
+        "08:30": "참가자 집결",
+        "09:00": "대회 출발"
+      }
     },
     "registration": {
-      "startDate": null,
+      "startDate": "2026-12-01",
       "endDate": null,
-      "startTime": null,
+      "startTime": "10:00",
       "endTime": null,
       "site": "https://hcmrt.or.kr/ko/index.html",
-      "status": null,
+      "status": "접수대기",
       "currency": "KRW",
-      "price": {},
+      "price": {
+        "FULL": 50000,
+        "HALF": 45000,
+        "10KM": 40000,
+        "5KM": 20000
+      },
       "refund": {
         "endDate": null,
         "policy": null
@@ -2302,7 +2313,7 @@
       "country": "한국",
       "region": "경남",
       "area": "합천군",
-      "venue": "합천공설운동장",
+      "venue": "합천군 100리 벚꽃마라톤코스 일원",
       "naver": "합천공설운동장",
       "address": "경상남도 합천군 합천읍 장수로 1-1",
       "latitude": 35.5619098,
@@ -2311,13 +2322,12 @@
     "hosts": {
       "organizer": "합천군",
       "manager": "합천군체육회",
-      "sponsor": null,
+      "sponsor": "합천군의회, 경남육상연맹",
       "phone": "055-931-9625",
       "email": "sportshc@naver.com",
       "instagram": null
     }
   },
-
   {
     "slug": "patagonia-jeju-international-trail-running-2027",
     "name": "2027 파타고니아 제주국제트레일러닝",
@@ -2662,6 +2672,125 @@
       "organizer": "Amaury Sport Organisation (A.S.O.)",
       "manager": null,
       "sponsor": "adidas",
+      "phone": null,
+      "email": null,
+      "instagram": null
+    }
+  },
+
+  {
+    "slug": "ulleungdo-international-trail-running-2027",
+    "name": "2027 울릉도 국제 트레일러닝 대회",
+    "description": "2027년 7월 18일 경북 울릉도에서 개최되는 국제 트레일러닝 대회입니다. 울릉도 해담길 일대를 달리는 16KM와 40KM 코스로 운영되며, 포항과 울릉도를 오가는 왕복 크루즈와 리조트 2박 숙박이 포함된 풀패키지 방식입니다. 참가 인원은 300명 이내로 제한됩니다.",
+    "info": {
+      "type": "트레일러닝",
+      "scale": 300,
+      "park": "포항 영일만항 무료 주차 가능(승용차 약 250대)",
+      "souvenir": "대회 기념 트레일러닝 용품, 배번호, 모바일 기록증, 기타 아웃도어 용품",
+      "program": null,
+      "memo": "참가비에 포항~울릉도 왕복 크루즈, 리조트 2박(3인 1실 기준), 대회 참가비, CP 간식, 완주 후 스낵, 대회 당일 셔틀버스 포함. 개인 여행자보험, 식사, 도내 교통비 및 선택 관광은 별도. 필수 장비 지참 및 1인당 여행 짐 1개 제한(60L 이하)."
+    },
+    "event": {
+      "startDate": "2027-07-18",
+      "endDate": "2027-07-18",
+      "startTime": "07:00",
+      "endTime": null,
+      "site": "https://osk.run/46",
+      "schedule": {
+        "07:00": "울릉도 국제 트레일러닝 대회 출발"
+      }
+    },
+    "registration": {
+      "startDate": "2026-11-01",
+      "endDate": null,
+      "startTime": null,
+      "endTime": null,
+      "site": "https://www.osk.run/50/?idx=1390",
+      "status": null,
+      "currency": "KRW",
+      "price": {
+        "16KM": 549000,
+        "40KM": 599000
+      },
+      "refund": {
+        "endDate": "2027-06-20",
+        "policy": "2026-12-31까지 취소 시 100% 환불, 2027-05-31까지 취소 시 10% 공제 후 환불, 2027-06-20까지 취소 시 30% 공제 후 환불. 2027-06-21부터 환불 불가. 천재지변·재난 및 국가 비상사태로 대회 취소 시 참가비 환불 불가."
+      }
+    },
+    "location": {
+      "country": "한국",
+      "region": "경북",
+      "area": "울릉군",
+      "venue": "울릉군공설운동장",
+      "naver": "울릉군공설운동장",
+      "address": "경상북도 울릉군 서면 울릉순환로 2146-56",
+      "latitude": 37.510994,
+      "longitude": 130.8139153
+    },
+    "hosts": {
+      "organizer": "아웃도어스포츠코리아",
+      "manager": "아웃도어스포츠코리아",
+      "sponsor": "울릉군, 울릉크루즈, 대아리조트",
+      "phone": "010-7325-9060",
+      "email": "osk@osk.run",
+      "instagram": "osk_kr"
+    }
+  },
+
+  {
+    "slug": "gyeonggi-suwon-international-half-marathon-2027",
+    "name": "2027 경기수원국제하프마라톤",
+    "description": "2027 경기수원국제하프마라톤은 2027년 2월 28일 일요일 경기도 수원시 수원종합운동장에서 개최되는 마라톤대회입니다. 2월의 마지막 일요일 오전 7시 30분에 출발하며, 경기신문이 주최하고 경기도육상연맹과 수원시육상연맹이 주관합니다. 참가자는 선착순 1만 명을 모집하며, 참가 접수는 2026년 11월 중 시작될 예정입니다.",
+    "info": {
+      "type": "마라톤",
+      "scale": 10000,
+      "park": null,
+      "souvenir": null,
+      "program": null,
+      "memo": "참가 접수는 2026년 11월 중 시작 예정이며 정확한 접수 시작일과 시간은 추후 공지. 세부 참가 종목, 참가비, 코스 및 기념품 정보는 추가 확인 필요."
+    },
+    "event": {
+      "startDate": "2027-02-28",
+      "endDate": "2027-02-28",
+      "startTime": "07:30",
+      "endTime": null,
+      "site": null,
+      "schedule": {
+        "07:30": "대회 출발"
+      }
+    },
+    "registration": {
+      "startDate": null,
+      "endDate": null,
+      "startTime": null,
+      "endTime": null,
+      "site": null,
+      "status": null,
+      "currency": "KRW",
+      "price": {
+        "HALF": 0,
+        "10KM": 0,
+        "5KM": 0
+      },
+      "refund": {
+        "endDate": null,
+        "policy": null
+      }
+    },
+    "location": {
+      "country": "한국",
+      "region": "경기",
+      "area": "수원시",
+      "venue": "수원종합운동장",
+      "naver": "수원종합운동장",
+      "address": "경기도 수원시 장안구 경수대로 893",
+      "latitude": 37.2977747,
+      "longitude": 127.0113659
+    },
+    "hosts": {
+      "organizer": "경기신문",
+      "manager": "경기도육상연맹, 수원시육상연맹",
+      "sponsor": "경기도, 수원특례시",
       "phone": null,
       "email": null,
       "instagram": null
