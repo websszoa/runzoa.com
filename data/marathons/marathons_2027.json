@@ -2890,7 +2890,7 @@
       "startTime": "10:00",
       "endTime": null,
       "site": "https://speedagency.kr/parti_more.html?game_code=119",
-      "status": "접수마감",
+      "status": null,
       "currency": "KRW",
       "price": {
         "GRANFONDO_A": 70000,
