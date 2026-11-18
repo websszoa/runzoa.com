@@ -140,7 +140,7 @@ export function LinkBioPage({ upcoming }: { upcoming: UpcomingLink[] }) {
             <h1 className="mt-4 font-paperlogy text-2xl font-semibold tracking-tight">
               @runzoa_official
             </h1>
-            <p className="mt-2 font-anyvid text-sm leading-5.5 break-keep text-white/75">
+            <p className="mt-2 font-nanumNeo text-sm leading-5.5 break-keep text-white/75">
               &ldquo;2026 마라톤 일정&rdquo; &amp; &ldquo;접수중인 대회&rdquo;
               <br />
               지금 바로 확인하세요
@@ -181,10 +181,10 @@ export function LinkBioPage({ upcoming }: { upcoming: UpcomingLink[] }) {
                     <AlarmClock className="size-4" />
                   </span>
                   <span className="min-w-0 flex-1 text-left">
-                    <span className="block text-xs text-amber-200">
+                    <span className="block text-xs text-amber-200 font-nanumNeo">
                       [{item.badge}]
                     </span>
-                    <span className="block truncate text-sm font-semibold">
+                    <span className="block truncate text-sm font-nanumNeo">
                       {item.title}
                     </span>
                   </span>
@@ -268,7 +268,7 @@ function LinkRow({
       target={external ? "_blank" : undefined}
       rel={external ? "noreferrer" : undefined}
       className={cn(
-        "group relative flex items-center justify-center rounded-full px-4 py-4 font-anyvid transition-colors",
+        "group relative flex items-center justify-center rounded-full px-4 py-4 font-nanumNeo transition-colors",
         featured
           ? "bg-white text-brand hover:bg-white/90"
           : "border border-white/30 bg-white/10 text-white hover:bg-white/20",
@@ -282,7 +282,7 @@ function LinkRow({
       >
         <Icon className="size-4" />
       </span>
-      <span className="px-10 text-center text-sm font-semibold">{title}</span>
+      <span className="px-10 text-center text-sm font-nanumNeo">{title}</span>
       <ArrowRight
         className={cn(
           "absolute right-4 size-4 shrink-0 transition-transform group-hover:translate-x-0.5",
