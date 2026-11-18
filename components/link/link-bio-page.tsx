@@ -175,12 +175,12 @@ export function LinkBioPage({ upcoming }: { upcoming: UpcomingLink[] }) {
                 <Link
                   key={item.href}
                   href={item.href}
-                  className="group relative flex items-center rounded-full border border-white/30 bg-white/10 py-3 pr-10 pl-14 font-anyvid text-white transition-colors hover:bg-white/20"
+                  className="group relative flex items-center rounded-full border border-white/30 bg-white/10 py-2 pr-10 pl-14 font-anyvid text-white transition-colors hover:bg-white/20"
                 >
                   <span className="absolute left-2.5 flex size-9 items-center justify-center rounded-full bg-amber-300 text-red-700">
                     <AlarmClock className="size-4" />
                   </span>
-                  <span className="min-w-0 flex-1 text-left">
+                  <span className="min-w-0 flex-1 text-left mt-0.5">
                     <span className="block text-xs text-amber-200 font-nanumNeo">
                       [{item.badge}]
                     </span>
