@@ -138,7 +138,7 @@ export default function MainHero({ marathons }: { marathons: Marathon[] }) {
                   <span className="font-anyvid text-sm text-muted-foreground">
                     현재 확인 가능한 대회
                   </span>
-                  <strong className="mt-1 block font-paperlogy text-5xl leading-none font-semibold tracking-tight tabular-nums">
+                  <strong className="mt-1 block font-nanumNeo text-5xl leading-none font-semibold tracking-tight tabular-nums">
                     {availableMarathons.length.toLocaleString("ko-KR")}
                     <span className="ml-1.5 font-anyvid text-base font-normal text-muted-foreground">
                       개
@@ -167,7 +167,7 @@ export default function MainHero({ marathons }: { marathons: Marathon[] }) {
                   <span className="font-anyvid text-sm text-white/75">
                     지금 접수 중인 대회
                   </span>
-                  <strong className="mt-1 block font-paperlogy text-5xl leading-none font-semibold tracking-tight tabular-nums">
+                  <strong className="mt-1 block font-nanumNeo text-5xl leading-none font-semibold tracking-tight tabular-nums">
                     {openCount.toLocaleString("ko-KR")}
                     <span className="ml-1.5 font-anyvid text-base font-normal text-white/70">
                       개
