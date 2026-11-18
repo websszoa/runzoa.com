@@ -1719,7 +1719,6 @@
       "instagram": null
     }
   },
-
   {
     "slug": "geumsan-ginseng-wellbeing-marathon-2027",
     "name": "2027 금산인삼 웰빙마라톤대회",
@@ -2677,7 +2676,6 @@
       "instagram": null
     }
   },
-
   {
     "slug": "ulleungdo-international-trail-running-2027",
     "name": "2027 울릉도 국제 트레일러닝 대회",
@@ -2736,7 +2734,6 @@
       "instagram": "osk_kr"
     }
   },
-
   {
     "slug": "gyeonggi-suwon-international-half-marathon-2027",
     "name": "2027 경기수원국제하프마라톤",
@@ -2747,30 +2744,31 @@
       "park": null,
       "souvenir": null,
       "program": null,
-      "memo": "참가 접수는 2026년 11월 중 시작 예정이며 정확한 접수 시작일과 시간은 추후 공지. 세부 참가 종목, 참가비, 코스 및 기념품 정보는 추가 확인 필요."
+      "memo": null
     },
     "event": {
       "startDate": "2027-02-28",
       "endDate": "2027-02-28",
       "startTime": "07:30",
       "endTime": null,
-      "site": null,
+      "site": "https://www.ggimarathon.com/ggimarathon/",
       "schedule": {
+        "06:30": "집결",
         "07:30": "대회 출발"
       }
     },
     "registration": {
-      "startDate": null,
+      "startDate": "2026-11-20",
       "endDate": null,
-      "startTime": null,
+      "startTime": "10:00",
       "endTime": null,
-      "site": null,
+      "site": "https://www.ggimarathon.com/ggimarathon/",
       "status": null,
       "currency": "KRW",
       "price": {
-        "HALF": 0,
-        "10KM": 0,
-        "5KM": 0
+        "HALF": 60000,
+        "10KM": 60000,
+        "5KM": 50000
       },
       "refund": {
         "endDate": null,
@@ -2793,6 +2791,196 @@
       "sponsor": "경기도, 수원특례시",
       "phone": null,
       "email": null,
+      "instagram": null
+    }
+  },
+
+  {
+    "slug": "jeonbuk-march-first-marathon-2027",
+    "name": "2027 전북특별자치도 3.1절 마라톤",
+    "description": "2027 전북특별자치도 3.1절 마라톤은 2027년 2월 28일 전북 전주시 전주월드컵경기장에서 개최되는 마라톤대회입니다. 3.1절의 역사적 의미를 되새기며 전북의 문화와 지역 공동체를 러닝으로 연결하는 행사로, 31KM·하프·10KM·5KM 총 4개 종목에 12,000명의 참가자를 모집할 계획입니다. 전주월드컵경기장에서 출발해 전주 번영로 일대를 달리는 코스로 운영되며, 가족과 초보 러너부터 장거리 러너까지 참여할 수 있습니다.",
+    "info": {
+      "type": "마라톤",
+      "scale": 12000,
+      "park": null,
+      "souvenir": "31KM·HALF: 기능성 티셔츠, 헤어밴드, 완주메달, 기록칩, 먹거리 부스. 10KM: 기능성 티셔츠, 헤어밴드, 기록칩. 5KM: 기능성 티셔츠, 간식 제공",
+      "program": "5KM 커플런 및 패밀리런 현장 접수, 종목별 시상식",
+      "memo": "종목별 모집 목표는 31KM 2,000명, HALF 4,000명, 10KM 4,000명, 5KM 2,000명. 접수는 종목별 오전 9시부터 선착순 진행 예정이며 참가 신청과 참가비 입금 기간이 구분됩니다. 31KM 결제 12월 4~6일, HALF 결제 12월 11~13일, 10KM·5KM 결제 12월 18~20일. 결제는 전북은행 통장입금 방식. 대한육상연맹 등록 엘리트 선수 및 최근 5년 이내 등록 이력이 있는 사람은 참가 불가. 5KM는 기록칩 미제공. 출발시간과 최종 코스, 참가 자격 및 제한시간은 변경되거나 추후 확정될 수 있습니다."
+    },
+    "event": {
+      "startDate": "2027-02-28",
+      "endDate": "2027-02-28",
+      "startTime": "08:45",
+      "endTime": null,
+      "site": "https://jbrun31.com/",
+      "schedule": {
+        "07:30": "참가자 집결 및 식전 행사",
+        "08:45": "31KM 출발 예정",
+        "09:15": "HALF 출발 예정",
+        "09:30": "10KM 출발 예정",
+        "09:45": "5KM 출발 예정"
+      }
+    },
+    "registration": {
+      "startDate": "2026-11-30",
+      "endDate": "2026-12-17",
+      "startTime": "09:00",
+      "endTime": null,
+      "site": "https://jbrun31.com/event/registration/",
+      "status": "접수대기",
+      "currency": "KRW",
+      "price": {
+        "31KM": 60000,
+        "HALF": 55000,
+        "10KM": 50000,
+        "5KM": 45000
+      },
+      "refund": {
+        "endDate": null,
+        "policy": null
+      }
+    },
+    "location": {
+      "country": "한국",
+      "region": "전북",
+      "area": "전주시",
+      "venue": "전주월드컵경기장",
+      "naver": "전주월드컵경기장",
+      "address": "전북특별자치도 전주시 덕진구 기린대로 1055",
+      "latitude": 35.8680847,
+      "longitude": 127.0645093
+    },
+    "hosts": {
+      "organizer": "전북중앙신문",
+      "manager": "전북중앙신문",
+      "sponsor": "전북육상연맹, 전북특별자치도체육회, 전북특별자치도장애인체육회",
+      "phone": "1544-1193",
+      "email": "Jb31marathon@jbrun31.com",
+      "instagram": null
+    }
+  },
+  {
+    "slug": "winspace-dinosaur-granfondo-2027",
+    "name": "2027 공룡나라 그란폰도",
+    "description": "2027 WINSPACE 공룡나라 그란폰도는 2027년 4월 3일 토요일 경상남도 고성군종합운동장에서 개최되는 비경쟁 사이클 대회입니다. 그란폰도 A와 그란폰도 B 두 코스로 운영되며, 그란폰도 A 코스에서는 KOM 구간 시상이 진행됩니다. 참가자에게는 대회 중 보급, 기념품, 보험 등의 혜택이 제공됩니다.",
+    "info": {
+      "type": "그란폰도",
+      "scale": 2000,
+      "park": null,
+      "souvenir": "대회 기념품 제공",
+      "program": null,
+      "memo": "비경쟁 사이클 그란폰도 대회. 그란폰도 A는 KOM 구간 시상, 그란폰도 B는 KOM 시상 없음. 대회일 기준 만 19세 이상 참가 가능(2008년 4월 3일 이전 출생자). 단체 신청은 3인 이상부터 가능하며 별도 엑셀 양식 이메일 제출 및 참가비 입금 확인 후 접수 완료. 배번 및 기념품은 대회 당일 현장 수령. 코스별 거리와 모집 인원은 확인되지 않음."
+    },
+    "event": {
+      "startDate": "2027-04-03",
+      "endDate": "2027-04-03",
+      "startTime": "08:00",
+      "endTime": null,
+      "site": "https://speedagency.kr/parti_more.html?game_code=119",
+      "schedule": {
+        "06:00": "대회 준비 및 배번호 수령",
+        "07:00": "개회식",
+        "07:30": "그란폰도 A·B 참가자 출발",
+        "14:00": "시상식 및 폐회식"
+      }
+    },
+    "registration": {
+      "startDate": "2026-11-19",
+      "endDate": null,
+      "startTime": "10:00",
+      "endTime": null,
+      "site": "https://speedagency.kr/parti_more.html?game_code=119",
+      "status": "접수마감",
+      "currency": "KRW",
+      "price": {
+        "GRANFONDO_A": 70000,
+        "GRANFONDO_B": 70000
+      },
+      "refund": {
+        "endDate": "2026-12-03",
+        "policy": "2026년 12월 3일(목) 24:00까지 참가 취소 및 환불 신청 가능. 이후 환불 가능 여부와 세부 처리 기준은 공식 안내에서 확인되지 않음."
+      }
+    },
+    "location": {
+      "country": "한국",
+      "region": "경남",
+      "area": "고성군",
+      "venue": "고성군종합운동장",
+      "naver": "고성군종합운동장",
+      "address": "경상남도 고성군 고성읍 송학고분로 193",
+      "latitude": 34.980288,
+      "longitude": 128.3107035
+    },
+    "hosts": {
+      "organizer": "고성군사이클연맹",
+      "manager": "고성군사이클연맹",
+      "sponsor": "윈스페이스, 고성군, 고성군의회, 고성군체육회",
+      "phone": "033-256-1269",
+      "email": "speed2561269@naver.com",
+      "instagram": null
+    }
+  },
+  {
+    "slug": "jeongeup-donghak-marathon-2027",
+    "name": "제133주년 정읍동학마라톤대회",
+    "description": "제133주년 동학농민혁명기념 정읍동학마라톤대회는 2027년 2월 28일 전북특별자치도 정읍시 정읍체육트레이닝센터에서 개최되는 마라톤대회입니다. 동학농민혁명의 역사적 의미를 기념하는 행사로 FULL, 30KM, 10KM, 5KM 총 4개 종목이 운영됩니다. 정읍의 자연경관을 배경으로 달리는 대회로, 장거리 러너부터 초보 참가자까지 자신의 체력에 맞는 종목에 도전할 수 있습니다.",
+    "info": {
+      "type": "마라톤",
+      "scale": null,
+      "park": null,
+      "souvenir": "정읍사랑상품권 1만원, 기념품",
+      "program": null,
+      "memo": "2027년 대회는 FULL, 30KM, 10KM, 5KM 종목으로 운영되며 선착순 접수입니다. 풀코스는 공인코스로 안내됩니다. 종목별 제한시간, 모집 인원, 기념품 구성 및 세부 운영 규정은 추가 확인 필요."
+    },
+    "event": {
+      "startDate": "2027-02-28",
+      "endDate": "2027-02-28",
+      "startTime": "08:30",
+      "endTime": null,
+      "site": "http://jp.myrunup.kr/home/main.ubs",
+      "schedule": {
+        "08:00": "개회식",
+        "08:20": "준비운동",
+        "08:30": "FULL 및 30KM 출발",
+        "08:40": "10KM 출발",
+        "08:50": "5KM 출발"
+      }
+    },
+    "registration": {
+      "startDate": "2026-11-17",
+      "endDate": "2027-01-20",
+      "startTime": null,
+      "endTime": null,
+      "site": "http://jp.myrunup.kr/home/main.ubs",
+      "status": null,
+      "currency": "KRW",
+      "price": {
+        "FULL": 50000,
+        "30KM": 50000,
+        "10KM": 45000,
+        "5KM": 35000
+      },
+      "refund": {
+        "endDate": null,
+        "policy": null
+      }
+    },
+    "location": {
+      "country": "한국",
+      "region": "전북",
+      "area": "정읍시",
+      "venue": "정읍체육트레이닝센터",
+      "naver": "정읍체육트레이닝센터",
+      "address": "전북특별자치도 정읍시 서부산업도로 138-5",
+      "latitude": 35.5610767,
+      "longitude": 126.8360942
+    },
+    "hosts": {
+      "organizer": "정읍시체육회",
+      "manager": "정읍시육상연맹",
+      "sponsor": "정읍시",
+      "phone": "063-535-0495",
+      "email": "stk-1007@hanmail.net",
       "instagram": null
     }
   }

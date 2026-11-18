@@ -2,6 +2,8 @@ import type { Metadata } from "next";
 
 import { LinkBioPage } from "@/components/link/link-bio-page";
 import { APP_DESCRIPTION, APP_NAME } from "@/lib/constants";
+import { getMarathons } from "@/lib/marathons";
+import { getUpcomingRegistrations } from "@/lib/utils";
 
 export const metadata: Metadata = {
   title: `${APP_NAME} 링크 모음`,
@@ -11,6 +13,24 @@ export const metadata: Metadata = {
   },
 };
 
-export default function Page() {
-  return <LinkBioPage />;
+// 접수 시작 시각이 지난 대회가 목록에서 빠지도록 10분마다 다시 생성합니다.
+export const revalidate = 600;
+
+export default async function Page() {
+  const { marathons } = await getMarathons();
+  const upcoming = getUpcomingRegistrations(marathons).map(
+    ({ marathon, schedules }) => {
+      const [, month, day] = (schedules[0].startDate ?? "")
+        .split("-")
+        .map(Number);
+      const time = schedules[0].startTime ? ` ${schedules[0].startTime}` : "";
+      return {
+        title: marathon.name,
+        href: `/marathon/${marathon.slug}`,
+        badge: `${month}.${day}일${time} 접수`,
+      };
+    },
+  );
+
+  return <LinkBioPage upcoming={upcoming} />;
 }

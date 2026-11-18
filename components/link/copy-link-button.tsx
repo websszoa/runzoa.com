@@ -4,8 +4,9 @@ import { useState } from "react";
 import { Check, Share2 } from "lucide-react";
 import { toast } from "sonner";
 import { Button } from "@/components/ui/button";
+import { cn } from "@/lib/utils";
 
-export function CopyLinkButton() {
+export function CopyLinkButton({ className }: { className?: string }) {
   const [copied, setCopied] = useState(false);
 
   async function handleCopy() {
@@ -26,13 +27,9 @@ export function CopyLinkButton() {
       size="icon"
       onClick={handleCopy}
       aria-label="페이지 링크 복사"
-      className="rounded-full"
+      className={cn("rounded-full", className)}
     >
-      {copied ? (
-        <Check className="size-4 text-brand" />
-      ) : (
-        <Share2 className="size-4" />
-      )}
+      {copied ? <Check className="size-4" /> : <Share2 className="size-4" />}
     </Button>
   );
 }
