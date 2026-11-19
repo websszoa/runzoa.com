@@ -2794,7 +2794,6 @@
       "instagram": null
     }
   },
-
   {
     "slug": "jeonbuk-march-first-marathon-2027",
     "name": "2027 전북특별자치도 3.1절 마라톤",
@@ -2981,6 +2980,68 @@
       "sponsor": "정읍시",
       "phone": "063-535-0495",
       "email": "stk-1007@hanmail.net",
+      "instagram": null
+    }
+  },
+
+  {
+    "slug": "yeongju-sobaeksan-marathon-2027",
+    "name": "2027 영주 소백산 마라톤대회",
+    "description": "2027 영주 소백산 마라톤대회는 2027년 4월 4일 경상북도 영주시 영주시민운동장에서 개최되는 봄 마라톤대회입니다. 벚꽃이 만개하는 영주의 봄 풍경과 소백산의 자연을 배경으로 풀코스, 하프코스, 10KM, 5KM 종목이 진행됩니다. 풀코스는 대한육상연맹 공인코스로 운영되며, 완주메달 각인 서비스, 개인별 기록 포토존, 완주 후 무료 먹거리, 경품 추첨, 전국 7개 지역 무료 셔틀버스 등 다양한 참가자 편의 서비스를 제공합니다.",
+    "info": {
+      "type": "마라톤",
+      "scale": null,
+      "park": null,
+      "souvenir": "완주메달, 완주 후 무료 먹거리 제공. 신청 시 완주메달 이름·기록 각인 옵션 선택 가능",
+      "program": "완주메달 각인 서비스, 개인별 기록 포토존, 현장 경품 추첨, 전국 7개 지역 무료 셔틀버스",
+      "memo": "풀코스는 대한육상연맹 공인코스로 운영됩니다. 완주메달 각인 옵션을 선택하면 이름과 기록을 새길 수 있습니다. 개인별 기록 포토존에서는 배번호 입력 후 완주 인증 사진을 남길 수 있습니다. 대회 당일 현장 추첨을 통해 경품을 제공합니다. 무료 셔틀버스는 서울, 인천, 수원, 대전, 대구, 울산, 부산에서 영주까지 왕복 운행하며 탑승 장소와 시간은 공식 홈페이지에서 별도 안내됩니다. 종목별 참가비, 모집 인원, 접수 마감일은 추가 확인이 필요합니다."
+    },
+    "event": {
+      "startDate": "2027-04-04",
+      "endDate": "2027-04-04",
+      "startTime": "09:00",
+      "endTime": null,
+      "site": "https://sobaekmarathon.go.kr/",
+      "schedule": {
+        "08:00": "참가자 집결",
+        "09:00": "대회 출발"
+      }
+    },
+    "registration": {
+      "startDate": "2026-11-23",
+      "endDate": null,
+      "startTime": "10:00",
+      "endTime": null,
+      "site": "https://sobaekmarathon.go.kr/",
+      "status": null,
+      "currency": "KRW",
+      "price": {
+        "FULL": null,
+        "HALF": null,
+        "10KM": null,
+        "5KM": null
+      },
+      "refund": {
+        "endDate": null,
+        "policy": null
+      }
+    },
+    "location": {
+      "country": "한국",
+      "region": "경북",
+      "area": "영주시",
+      "venue": "영주시민운동장",
+      "naver": "영주시민운동장",
+      "address": "경상북도 영주시 가흥동 산21-10",
+      "latitude": 36.8071141,
+      "longitude": 128.6101831
+    },
+    "hosts": {
+      "organizer": "영주시, 매일신문사",
+      "manager": "영주시체육회",
+      "sponsor": null,
+      "phone": null,
+      "email": null,
       "instagram": null
     }
   }
