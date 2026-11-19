@@ -26,7 +26,11 @@ export default async function Page() {
       const time = schedules[0].startTime ? ` ${schedules[0].startTime}` : "";
       return {
         title: marathon.name,
-        href: `/marathon/${marathon.slug}`,
+        // 공식 접수 페이지 → 대회 홈페이지 → 런조아 상세 페이지 순으로 연결합니다.
+        href:
+          marathon.registration.site ??
+          marathon.event.site ??
+          `/marathon/${marathon.slug}`,
         badge: `${month}.${day}일${time} 접수`,
       };
     },

@@ -173,8 +173,12 @@ export function LinkBioPage({ upcoming }: { upcoming: UpcomingLink[] }) {
             <div className="mt-6 space-y-3 border-t border-white/25 pt-6">
               {upcoming.map((item) => (
                 <Link
-                  key={item.href}
+                  key={item.title}
                   href={item.href}
+                  {...(item.href.startsWith("http") && {
+                    target: "_blank",
+                    rel: "noreferrer",
+                  })}
                   className="group relative flex items-center rounded-full border border-white/30 bg-white/10 py-2 pr-10 pl-14 font-anyvid text-white transition-colors hover:bg-white/20"
                 >
                   <span className="absolute left-2.5 flex size-9 items-center justify-center rounded-full bg-amber-300 text-red-700">
