@@ -24200,7 +24200,7 @@
       "startTime": null,
       "endTime": null,
       "site": "https://www.spotvrun.co.kr/",
-      "status": null,
+      "status": "접수마감",
       "currency": "KRW",
       "price": {
         "7KM": 70000,

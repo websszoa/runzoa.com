@@ -34,6 +34,7 @@ export type UpcomingLink = {
   title: string;
   href: string;
   badge: string;
+  isToday: boolean;
 };
 
 type LinkSection = {
@@ -181,11 +182,25 @@ export function LinkBioPage({ upcoming }: { upcoming: UpcomingLink[] }) {
                   })}
                   className="group relative flex items-center rounded-full border border-white/30 bg-white/10 py-2 pr-10 pl-14 font-anyvid text-white transition-colors hover:bg-white/20"
                 >
-                  <span className="absolute left-2.5 flex size-9 items-center justify-center rounded-full bg-amber-300 text-red-700">
+                  <span
+                    className={cn(
+                      "absolute left-2.5 flex size-9 items-center justify-center rounded-full",
+                      item.isToday
+                        ? "bg-purple-600 text-white"
+                        : "bg-amber-300 text-red-700",
+                    )}
+                  >
                     <AlarmClock className="size-4" />
                   </span>
                   <span className="min-w-0 flex-1 text-left mt-0.5">
-                    <span className="block text-xs text-amber-200 font-nanumNeo">
+                    <span
+                      className={cn(
+                        "block font-nanumNeo text-xs",
+                        item.isToday
+                          ? "font-semibold text-purple-200"
+                          : "text-amber-200",
+                      )}
+                    >
                       [{item.badge}]
                     </span>
                     <span className="block truncate text-sm font-nanumNeo">

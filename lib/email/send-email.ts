@@ -3,7 +3,7 @@ import "server-only";
 import { Resend } from "resend";
 
 const DEFAULT_FROM = "RUNZOA <noreply@runzoa.com>";
-export const ADMIN_EMAIL = "webstoryboy@naver.com";
+export const ADMIN_EMAIL = "helpzoa@naver.com";
 
 export async function sendEmail({
   to,

@@ -63,13 +63,9 @@ export const metadata: Metadata = {
   creator: "webstoryboy",
   publisher: APP_NAME,
   category: "sports",
-  alternates: {
-    canonical: "/",
-  },
   openGraph: {
     type: "website",
     locale: "ko_KR",
-    url: "/",
     siteName: APP_NAME,
     title: `${APP_NAME} | 전국 마라톤 대회 정보`,
     description: APP_DESCRIPTION,

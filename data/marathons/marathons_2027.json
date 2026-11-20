@@ -2983,7 +2983,6 @@
       "instagram": null
     }
   },
-
   {
     "slug": "yeongju-sobaeksan-marathon-2027",
     "name": "2027 영주 소백산 마라톤대회",
@@ -3041,6 +3040,67 @@
       "manager": "영주시체육회",
       "sponsor": null,
       "phone": null,
+      "email": null,
+      "instagram": null
+    }
+  },
+  {
+    "slug": "yangcheon-marathon-2027",
+    "name": "제16회 양천마라톤대회",
+    "description": "제16회 양천마라톤대회는 2027년 4월 10일 서울 양천구 안양천 해마루축구장에서 개최되는 봄 마라톤대회입니다. 안양천 일대를 배경으로 하프, 10KM, 5KM, 5KM 패밀리런 종목이 진행됩니다. 선착순 7,000명을 모집하며, 가족과 함께 봄날의 안양천을 달릴 수 있는 러닝 행사입니다.",
+    "info": {
+      "type": "마라톤",
+      "scale": 7000,
+      "park": null,
+      "souvenir": "기능성 티셔츠, 대회기념품, 번호표, 안내책자, 완주메달, 기록증",
+      "program": null,
+      "memo": "5KM 패밀리런은 가족이 함께 참가하는 종목이며 참가비는 1인 기준입니다. 선착순 7,000명 모집으로 정원 도달 시 조기 마감될 수 있습니다. 참가정보 수정 및 환불 신청은 2027년 2월 5일 16:00까지 가능합니다. 대회 당일 집결시간은 08:00이며 하프코스가 가장 먼저 출발합니다."
+    },
+    "event": {
+      "startDate": "2027-04-10",
+      "endDate": "2027-04-10",
+      "startTime": "08:30",
+      "endTime": null,
+      "site": "https://ycrun.com/",
+      "schedule": {
+        "08:00": "참가자 집결",
+        "08:30": "하프코스 출발"
+      }
+    },
+    "registration": {
+      "startDate": "2027-01-05",
+      "endDate": null,
+      "startTime": null,
+      "endTime": null,
+      "site": "https://ycrun.com/",
+      "status": null,
+      "currency": "KRW",
+      "price": {
+        "HALF": 40000,
+        "10KM": 40000,
+        "5KM": 20000,
+        "5KM_FAMILY": 20000
+      },
+      "refund": {
+        "endDate": "2027-02-05",
+        "policy": "2027년 2월 5일 16:00까지 환불 신청이 가능합니다. 이후 환불 가능 여부 및 세부 환불 규정은 공식 홈페이지에서 확인해야 합니다."
+      }
+    },
+    "location": {
+      "country": "한국",
+      "region": "서울",
+      "area": "양천구",
+      "venue": "안양천 해마루축구장",
+      "naver": "안양천 해마루축구장",
+      "address": "서울특별시 양천구 안양천로 812",
+      "latitude": 37.5183647,
+      "longitude": 126.8776954
+    },
+    "hosts": {
+      "organizer": "양천구",
+      "manager": "양천구체육회",
+      "sponsor": "양천구의회, 양천구자원봉사센터",
+      "phone": "02-2647-4488, 02-2647-4499",
       "email": null,
       "instagram": null
     }

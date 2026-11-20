@@ -322,6 +322,14 @@ export function getCurrentKoreanYear() {
   return Number(getCurrentKoreanDate().slice(0, 4));
 }
 
+/**
+ * 오늘(한국 시간) 0시 직전의 타임스탬프.
+ * getUpcomingRegistrations의 기준 시각으로 넘기면 오늘 접수가 시작된 대회도 자정까지 포함됩니다.
+ */
+export function getStartOfKoreanToday() {
+  return getKoreanDateTime(getCurrentKoreanDate(), "00:00").getTime() - 1;
+}
+
 export function getUpcomingRegistrations(marathons: Marathon[], now = Date.now()) {
   const today = getCurrentKoreanDate();
   return marathons

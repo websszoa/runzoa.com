@@ -12,6 +12,8 @@ import DialogAccountNotice, {
 // import DialogSiteMaintenance from "@/components/dialog/dialog-site-maintenance";
 // import MainRacePosters from "@/components/main/main-race-posters";
 
+import type { Metadata } from "next";
+
 import { getMarathons } from "@/lib/marathons";
 import {
   APP_DESCRIPTION,
@@ -19,6 +21,13 @@ import {
   APP_NAME,
   APP_SITE_URL,
 } from "@/lib/constants";
+
+// canonical은 홈에만 지정합니다. 루트 레이아웃에 두면 canonical이 없는 하위 페이지가 홈을 가리키게 됩니다.
+export const metadata: Metadata = {
+  alternates: {
+    canonical: "/",
+  },
+};
 
 type HomeProps = {
   searchParams: Promise<{

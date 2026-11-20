@@ -10,6 +10,7 @@ import {
   getMarathonDDay,
   getRegistrationBadgeClassName,
   getRegistrationStatus,
+  getStartOfKoreanToday,
   getUpcomingRegistrations,
   isAdditionalRegistrationOpen,
 } from "@/lib/utils";
@@ -29,9 +30,21 @@ export default function MainRegistrationSoon({
 }: {
   marathons: Marathon[];
 }) {
-  const upcomingMarathons = getUpcomingRegistrations(marathons);
+  const today = getCurrentKoreanDate();
+  // 오늘 접수가 시작된 대회는 그날 자정까지 "오늘 접수 시작"으로 남겨 둡니다.
+  const upcomingMarathons = getUpcomingRegistrations(
+    marathons,
+    getStartOfKoreanToday(),
+  );
+  const upcomingSlugs = new Set(
+    upcomingMarathons.map(({ marathon }) => marathon.slug),
+  );
   const additionalOpenMarathons = marathons
-    .filter((marathon) => isAdditionalRegistrationOpen(marathon))
+    .filter(
+      (marathon) =>
+        isAdditionalRegistrationOpen(marathon) &&
+        !upcomingSlugs.has(marathon.slug),
+    )
     .map((marathon) => ({
       marathon,
       schedule: getEffectiveRegistrationSchedule(marathon),
@@ -41,7 +54,6 @@ export default function MainRegistrationSoon({
         b.schedule.endDate ?? "9999-12-31",
       ),
     );
-  const today = getCurrentKoreanDate();
   const undecidedMarathons = marathons
     .filter(
       (marathon) =>
@@ -106,10 +118,17 @@ export default function MainRegistrationSoon({
                 const isAdditional = schedules.some(
                   (schedule) => schedule.isAdditional,
                 );
-                const badgeLabel = isAdditional ? "추가 접수 예정" : "접수 예정";
-                const badgeClassName = isAdditional
-                  ? "border-violet-500 bg-violet-500 text-white"
-                  : getRegistrationBadgeClassName("접수예정");
+                const isToday = schedules[0].startDate === today;
+                const badgeLabel = isToday
+                  ? "오늘 접수 시작"
+                  : isAdditional
+                    ? "추가 접수 예정"
+                    : "접수 예정";
+                const badgeClassName = isToday
+                  ? "border-purple-600 bg-purple-600 text-white"
+                  : isAdditional
+                    ? "border-violet-500 bg-violet-500 text-white"
+                    : getRegistrationBadgeClassName("접수예정");
                 const scheduleItems = schedules.map((schedule) => ({
                   label: `${schedule.distance ? `${schedule.distance} ` : ""}${schedule.isAdditional ? "추가 접수 시작" : "접수 시작일"}`,
                   value: `${formatMarathonDate(schedule.startDate)}${schedule.startTime ? ` · ${schedule.startTime}` : ""}`,
