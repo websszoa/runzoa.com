@@ -4,6 +4,7 @@ import type { Marathon } from "@/lib/marathons";
 import {
   formatMarathonDate,
   formatMarathonPrices,
+  getAdditionalRegistrationStatus,
   getCurrentKoreanDate,
   getEffectiveRegistrationSchedule,
   getMarathonDistances,
@@ -12,7 +13,6 @@ import {
   getRegistrationStatus,
   getStartOfKoreanToday,
   getUpcomingRegistrations,
-  isAdditionalRegistrationOpen,
 } from "@/lib/utils";
 import {
   AlarmClock,
@@ -31,29 +31,43 @@ export default function MainRegistrationSoon({
   marathons: Marathon[];
 }) {
   const today = getCurrentKoreanDate();
-  // 오늘 접수가 시작된 대회는 그날 자정까지 "오늘 접수 시작"으로 남겨 둡니다.
+  // 일반 접수만 모읍니다. 오늘 접수가 시작된 대회는 그날 자정까지 "오늘 접수 시작"으로 남겨 둡니다.
   const upcomingMarathons = getUpcomingRegistrations(
     marathons,
     getStartOfKoreanToday(),
-  );
-  const upcomingSlugs = new Set(
-    upcomingMarathons.map(({ marathon }) => marathon.slug),
-  );
-  const additionalOpenMarathons = marathons
-    .filter(
-      (marathon) =>
-        isAdditionalRegistrationOpen(marathon) &&
-        !upcomingSlugs.has(marathon.slug),
-    )
+  )
+    .map(({ marathon, schedules }) => ({
+      marathon,
+      schedules: schedules.filter((schedule) => !schedule.isAdditional),
+    }))
+    .filter(({ schedules }) => schedules.length > 0);
+  // 추가 접수는 별도 표에서 "추가 접수 예정" → 시작 시각부터 "추가 접수중"으로 보여 줍니다.
+  const additionalMarathons = marathons
+    .filter((marathon) => marathon.event.startDate >= today)
     .map((marathon) => ({
       marathon,
+      status: getAdditionalRegistrationStatus(marathon),
       schedule: getEffectiveRegistrationSchedule(marathon),
     }))
-    .sort((a, b) =>
-      (a.schedule.endDate ?? "9999-12-31").localeCompare(
-        b.schedule.endDate ?? "9999-12-31",
-      ),
-    );
+    .filter(
+      (item): item is typeof item & { status: "접수중" | "접수예정" } =>
+        item.status === "접수중" || item.status === "접수예정",
+    )
+    .sort((a, b) => {
+      if (a.status !== b.status) return a.status === "접수중" ? -1 : 1;
+      return a.status === "접수중"
+        ? (a.schedule.endDate ?? "9999-12-31").localeCompare(
+            b.schedule.endDate ?? "9999-12-31",
+          )
+        : `${a.schedule.startDate}T${a.schedule.startTime ?? "00:00"}`.localeCompare(
+            `${b.schedule.startDate}T${b.schedule.startTime ?? "00:00"}`,
+          );
+    });
+  const additionalOpenCount = additionalMarathons.filter(
+    ({ status }) => status === "접수중",
+  ).length;
+  const additionalUpcomingCount =
+    additionalMarathons.length - additionalOpenCount;
   const undecidedMarathons = marathons
     .filter(
       (marathon) =>
@@ -64,7 +78,7 @@ export default function MainRegistrationSoon({
 
   if (
     upcomingMarathons.length === 0 &&
-    additionalOpenMarathons.length === 0 &&
+    additionalMarathons.length === 0 &&
     undecidedMarathons.length === 0
   )
     return null;
@@ -115,22 +129,13 @@ export default function MainRegistrationSoon({
 
             <div className="divide-y">
               {upcomingMarathons.map(({ marathon, schedules }) => {
-                const isAdditional = schedules.some(
-                  (schedule) => schedule.isAdditional,
-                );
                 const isToday = schedules[0].startDate === today;
-                const badgeLabel = isToday
-                  ? "오늘 접수 시작"
-                  : isAdditional
-                    ? "추가 접수 예정"
-                    : "접수 예정";
+                const badgeLabel = isToday ? "오늘 접수 시작" : "접수 예정";
                 const badgeClassName = isToday
                   ? "border-purple-600 bg-purple-600 text-white"
-                  : isAdditional
-                    ? "border-violet-500 bg-violet-500 text-white"
-                    : getRegistrationBadgeClassName("접수예정");
+                  : getRegistrationBadgeClassName("접수예정");
                 const scheduleItems = schedules.map((schedule) => ({
-                  label: `${schedule.distance ? `${schedule.distance} ` : ""}${schedule.isAdditional ? "추가 접수 시작" : "접수 시작일"}`,
+                  label: "접수 시작일",
                   value: `${formatMarathonDate(schedule.startDate)}${schedule.startTime ? ` · ${schedule.startTime}` : ""}`,
                 }));
 
@@ -148,36 +153,70 @@ export default function MainRegistrationSoon({
           </div>
         )}
 
-        {additionalOpenMarathons.length > 0 && (
+        {additionalMarathons.length > 0 && (
           <div className="mt-4 overflow-hidden rounded-2xl border bg-background sm:mt-5">
             <div className="flex items-center gap-2 border-b bg-muted/30 px-5 py-3 font-anyvid text-xs text-muted-foreground sm:px-7">
               <CalendarCheck
                 className="size-4 text-violet-500"
                 aria-hidden="true"
               />
-              추가 접수 중
-              <strong className="font-semibold text-violet-500">
-                {additionalOpenMarathons.length}개
-              </strong>
+              추가 접수
+              {additionalOpenCount > 0 && (
+                <strong className="font-semibold text-violet-500">
+                  진행 {additionalOpenCount}개
+                </strong>
+              )}
+              {additionalUpcomingCount > 0 && (
+                <strong className="font-semibold text-violet-400">
+                  예정 {additionalUpcomingCount}개
+                </strong>
+              )}
             </div>
 
             <div className="divide-y">
-              {additionalOpenMarathons.map(({ marathon, schedule }) => (
-                <RegistrationRow
-                  key={marathon.slug}
-                  marathon={marathon}
-                  badgeLabel="추가 접수중"
-                  badgeClassName="border-violet-500 bg-violet-500 text-white"
-                  scheduleItems={[
-                    {
-                      label: "추가 접수 마감일",
-                      value: schedule.endDate
-                        ? `${formatMarathonDate(schedule.endDate)}${schedule.endTime ? ` · ${schedule.endTime}` : ""}`
-                        : "선착순 마감",
-                    },
-                  ]}
-                />
-              ))}
+              {additionalMarathons.map(({ marathon, status, schedule }) => {
+                const distance =
+                  "distance" in schedule && schedule.distance
+                    ? `${schedule.distance} `
+                    : "";
+                const endValue = schedule.endDate
+                  ? `${formatMarathonDate(schedule.endDate)}${schedule.endTime ? ` · ${schedule.endTime}` : ""}`
+                  : "선착순 마감";
+
+                return (
+                  <RegistrationRow
+                    key={marathon.slug}
+                    marathon={marathon}
+                    badgeLabel={
+                      status === "접수중" ? "추가 접수중" : "추가 접수 예정"
+                    }
+                    badgeClassName={
+                      status === "접수중"
+                        ? "border-violet-500 bg-violet-500 text-white"
+                        : "border-violet-300 bg-violet-50 text-violet-600"
+                    }
+                    scheduleItems={
+                      status === "접수중"
+                        ? [
+                            {
+                              label: `${distance}추가 접수 마감일`,
+                              value: endValue,
+                            },
+                          ]
+                        : [
+                            {
+                              label: `${distance}추가 접수 시작`,
+                              value: `${formatMarathonDate(schedule.startDate)}${schedule.startTime ? ` · ${schedule.startTime}` : ""}`,
+                            },
+                            {
+                              label: `${distance}추가 접수 마감`,
+                              value: endValue,
+                            },
+                          ]
+                    }
+                  />
+                );
+              })}
             </div>
           </div>
         )}

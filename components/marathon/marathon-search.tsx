@@ -17,7 +17,6 @@ import {
   cn,
   getCurrentKoreanDate,
   getRegistrationStatus,
-  hasRegistrationStartDate,
   normalizeSearchText,
 } from "@/lib/utils";
 
@@ -121,9 +120,6 @@ export default function MarathonSearch({
         .join(" "));
 
       return (
-        (hasRegistrationStartDate(marathon) ||
-          status === "접수미정" ||
-          (Boolean(deferredQuery) && status === null)) &&
         (!deferredQuery || searchable.includes(deferredQuery)) &&
         (pastRaces === "include" ||
           marathon.event.startDate >= getCurrentKoreanDate()) &&

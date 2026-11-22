@@ -11,7 +11,6 @@ import type { Marathon } from "@/lib/marathons";
 import {
   getCurrentKoreanDate,
   getRegistrationStatus,
-  hasRegistrationStartDate,
 } from "@/lib/utils";
 import {
   Search,
@@ -27,8 +26,7 @@ import {
 export default function MainHero({ marathons }: { marathons: Marathon[] }) {
   const today = getCurrentKoreanDate();
   const availableMarathons = marathons.filter(
-    (marathon) =>
-      hasRegistrationStartDate(marathon) && marathon.event.startDate >= today,
+    (marathon) => marathon.event.startDate >= today,
   );
   const weekendCount = getWeekendMarathonCount(availableMarathons, today);
   const currentMonth = today.slice(0, 7);
