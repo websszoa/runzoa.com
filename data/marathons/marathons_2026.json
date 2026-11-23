@@ -10062,7 +10062,7 @@
   },
   {
     "slug": "seoul-open-marathon-2026",
-    "name": "2026 서울 오픈 마라톤 대회",
+    "name": "2026 서울 오픈 마라톤 대회(취소)",
     "description": "서울 도심을 배경으로 펼쳐지는 대표 하프마라톤 대회로, 시민과 러너들이 함께 달리며 서울의 주요 명소를 경험할 수 있는 도심형 러닝 이벤트입니다.",
     "info": {
       "type": "마라톤",
@@ -10086,7 +10086,7 @@
       "startTime": null,
       "endTime": null,
       "site": "https://seoulopen.or.kr/sub02/sub01_01.php",
-      "status": "",
+      "status": "접수마감",
       "price": {
         "10KM": 60000,
         "HALF": 80000

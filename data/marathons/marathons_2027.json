@@ -3022,13 +3022,13 @@
       "startTime": "10:00",
       "endTime": null,
       "site": "https://sobaekmarathon.go.kr/",
-      "status": "접수마감",
+      "status": null,
       "currency": "KRW",
       "price": {
-        "FULL": null,
-        "HALF": null,
-        "10KM": null,
-        "5KM": null
+        "FULL": 60000,
+        "HALF": 50000,
+        "10KM": 40000,
+        "5KM": 30000
       },
       "refund": {
         "endDate": null,
