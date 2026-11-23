@@ -146,6 +146,20 @@ export function isAdditionalRegistrationActive(
   return status === "접수중" || status === "접수예정";
 }
 
+// 데이터에 직접 적힌 status를 표준 상태로 바꾼다. 비어 있거나 알 수 없는 값이면 null.
+function getExplicitRegistrationStatus(
+  marathon: Marathon,
+): RegistrationStatus | null {
+  const explicitStatus = marathon.registration.status?.trim();
+  if (!explicitStatus) return null;
+  const normalizedStatus = explicitStatus.replace(/\s/g, "");
+  if (["접수중", "진행중", "진행"].includes(normalizedStatus)) return "접수중";
+  if (CLOSED_STATUS_KEYWORDS.includes(normalizedStatus)) return "접수마감";
+  if (["접수예정", "예정"].includes(normalizedStatus)) return "접수예정";
+  if (["접수미정", "미정"].includes(normalizedStatus)) return "접수미정";
+  return null;
+}
+
 export function getRegistrationStatus(
   marathon: Marathon,
   now = Date.now(),
@@ -153,22 +167,8 @@ export function getRegistrationStatus(
   const additionalStatus = getAdditionalRegistrationStatus(marathon, now);
   if (additionalStatus) return additionalStatus;
 
-  const explicitStatus = marathon.registration.status?.trim();
-  if (explicitStatus) {
-    const normalizedStatus = explicitStatus.replace(/\s/g, "");
-    if (["접수중", "진행중", "진행"].includes(normalizedStatus)) {
-      return "접수중";
-    }
-    if (CLOSED_STATUS_KEYWORDS.includes(normalizedStatus)) {
-      return "접수마감";
-    }
-    if (["접수예정", "예정"].includes(normalizedStatus)) {
-      return "접수예정";
-    }
-    if (["접수미정", "미정"].includes(normalizedStatus)) {
-      return "접수미정";
-    }
-  }
+  const explicitStatus = getExplicitRegistrationStatus(marathon);
+  if (explicitStatus) return explicitStatus;
 
   const { startDate, endDate, startTime, endTime } = marathon.registration;
   if (!startDate && !endDate) return "접수미정";
@@ -335,7 +335,16 @@ export function getUpcomingRegistrations(marathons: Marathon[], now = Date.now()
   return marathons
     .filter((marathon) => marathon.event.startDate >= today)
     .map((marathon) => {
-      const additional = marathon.registration.additional;
+      // status가 직접 적혀 있으면 1순위로 따른다.
+      // 접수예정이 아닌 값(접수중·접수마감·접수미정)이면 일반 접수 일정은 목록에서 뺀다.
+      const explicitStatus = getExplicitRegistrationStatus(marathon);
+      const allowRegular =
+        explicitStatus === null || explicitStatus === "접수예정";
+      // 추가 접수는 기존 규칙대로 status가 접수마감일 때만 뺀다.
+      const allowAdditional = explicitStatus !== "접수마감";
+      const additional = allowAdditional
+        ? marathon.registration.additional
+        : null;
       const additionalSchedules = (Array.isArray(additional)
         ? additional
         : additional
@@ -352,6 +361,7 @@ export function getUpcomingRegistrations(marathons: Marathon[], now = Date.now()
         .map((schedule) => ({ ...schedule, isAdditional: true }));
       const regularStartDate = marathon.registration.startDate;
       const regularSchedules =
+        allowRegular &&
         regularStartDate &&
         new Date(
           `${regularStartDate}T${marathon.registration.startTime ?? "00:00"}+09:00`,

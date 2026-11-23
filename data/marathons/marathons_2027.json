@@ -3022,7 +3022,7 @@
       "startTime": "10:00",
       "endTime": null,
       "site": "https://sobaekmarathon.go.kr/",
-      "status": null,
+      "status": "접수마감",
       "currency": "KRW",
       "price": {
         "FULL": null,
@@ -3350,6 +3350,175 @@
       "sponsor": "이천시",
       "phone": "042-638-1080",
       "email": null,
+      "instagram": null
+    }
+  },
+  {
+    "slug": "changnyeong-bugok-hot-spring-marathon-2027",
+    "name": "제21회 창녕부곡온천 마라톤대회",
+    "description": "경상남도 창녕군 부곡면 창녕스포츠파크에서 개최되는 제21회 창녕부곡온천마라톤대회입니다. 하프, 10km, 5km 코스로 운영되며 선착순 6,000명을 모집합니다. 부곡온천 지역에서 봄을 맞아 달리는 마라톤 대회입니다.",
+    "info": {
+      "type": "마라톤",
+      "scale": 6000,
+      "park": null,
+      "souvenir": null,
+      "program": null,
+      "memo": "참가비는 추후 공지 예정이며, 모집 인원 6,000명 도달 시 선착순 마감됩니다."
+    },
+    "event": {
+      "startDate": "2027-03-13",
+      "endDate": "2027-03-13",
+      "startTime": "09:30",
+      "endTime": null,
+      "site": "https://cngmarathon.co.kr/ko/",
+      "schedule": {
+        "09:00": "대회 행사 시작",
+        "09:30": "마라톤 출발"
+      }
+    },
+    "registration": {
+      "startDate": "2026-12-07",
+      "endDate": null,
+      "startTime": "10:00",
+      "endTime": null,
+      "site": "https://cngmarathon.co.kr/ko/",
+      "status": null,
+      "currency": "KRW",
+      "price": {
+        "HALF": null,
+        "10KM": null,
+        "5KM": null
+      },
+      "refund": {
+        "endDate": null,
+        "policy": null
+      }
+    },
+    "location": {
+      "country": "한국",
+      "region": "경남",
+      "area": "창녕군",
+      "venue": "창녕스포츠파크",
+      "naver": "창녕스포츠파크",
+      "address": "경상남도 창녕군 부곡면 상사창길 58",
+      "latitude": 35.4329866,
+      "longitude": 128.595273
+    },
+    "hosts": {
+      "organizer": "창녕군체육회",
+      "manager": "경남신문",
+      "sponsor": "경상남도, 창녕군, 창녕군의회, 경남육상연맹, 창녕군육상연맹, 부곡온천관광협의회, 창녕군마라톤동호회",
+      "phone": "055-210-6104",
+      "email": null,
+      "instagram": null
+    }
+  },
+  {
+    "slug": "jeju-mbc-international-peace-marathon-2027",
+    "name": "2027 제주MBC 국제평화마라톤",
+    "description": "2027년 3월 28일 제주 한림종합운동장에서 개최되는 제주MBC국제평화마라톤입니다. 한국실업육상연맹과 제주MBC가 주최하고 제주특별자치도육상연맹이 주관하는 대회로, 제주에서 평화와 희망의 의미를 담아 달리는 마라톤 행사입니다.",
+    "info": {
+      "type": "마라톤",
+      "scale": null,
+      "park": null,
+      "souvenir": null,
+      "program": null,
+      "memo": "2027년 대회 세부 요강, 참가 종목, 출발 시간, 참가비 및 기념품은 공식 홈페이지에서 준비 중입니다."
+    },
+    "event": {
+      "startDate": "2027-03-28",
+      "endDate": "2027-03-28",
+      "startTime": null,
+      "endTime": null,
+      "site": "https://marathon.jejumbc.com/",
+      "schedule": {}
+    },
+    "registration": {
+      "startDate": null,
+      "endDate": null,
+      "startTime": null,
+      "endTime": null,
+      "site": "https://marathon.jejumbc.com/",
+      "status": null,
+      "currency": "KRW",
+      "price": {},
+      "refund": {
+        "endDate": null,
+        "policy": null
+      }
+    },
+    "location": {
+      "country": "한국",
+      "region": "제주",
+      "area": "제주시",
+      "venue": "한림종합운동장",
+      "naver": "한림종합운동장",
+      "address": "제주특별자치도 제주시 한림읍 한림중앙로 71-9",
+      "latitude": 33.4101151,
+      "longitude": 126.2681695
+    },
+    "hosts": {
+      "organizer": "한국실업육상연맹, 제주MBC",
+      "manager": "제주특별자치도육상연맹",
+      "sponsor": null,
+      "phone": "064-748-9021, 064-740-2730",
+      "email": "marathon@jejumbc.com",
+      "instagram": null
+    }
+  },
+  {
+    "slug": "cheongju-musimcheon-sunset-marathon-2027",
+    "name": "2027 청주 무심천 노을마라톤대회",
+    "description": "2027년 2월 20일 충북 청주시 무심천 롤러스케이트장에서 개최되는 청주 무심천 노을마라톤대회입니다. 5km와 10km 두 종목으로 운영되며, 참가자는 기능성 티셔츠 또는 월드런 선글라스가 포함된 일반 참가 옵션과 렛츠고 마라톤화가 포함된 특별 참가 옵션을 선택할 수 있습니다. 무심천을 따라 달리는 겨울 마라톤 대회입니다.",
+    "info": {
+      "type": "마라톤",
+      "scale": null,
+      "park": null,
+      "souvenir": "일반 참가 시 기능성 티셔츠 또는 월드런 선글라스 선택, 특별 참가 시 렛츠고 마라톤화 선택",
+      "program": null,
+      "memo": "5km 제한시간 1시간, 10km 제한시간 2시간이며 두 종목 모두 칩을 사용합니다. 유모차 동반 참가가 가능하고 10km는 만 15세 이상부터 신청할 수 있습니다. 일반 참가비 외에 러닝화 선택 시 참가비는 99,000원입니다."
+    },
+    "event": {
+      "startDate": "2027-02-20",
+      "endDate": "2027-02-20",
+      "startTime": null,
+      "endTime": null,
+      "site": "https://mara1080.com/event/b8949d3b-ed3e-4cc5-86d1-49f7e1b02546",
+      "schedule": {}
+    },
+    "registration": {
+      "startDate": "2026-11-02",
+      "endDate": null,
+      "startTime": "15:00",
+      "endTime": null,
+      "site": "https://mara1080.com/event/b8949d3b-ed3e-4cc5-86d1-49f7e1b02546",
+      "status": null,
+      "currency": "KRW",
+      "price": {
+        "5KM": 35000,
+        "10KM": 50000
+      },
+      "refund": {
+        "endDate": null,
+        "policy": "접수는 선착순으로 마감되며 입금, 변경 및 환불 요청은 최종 마감일까지 가능합니다. 환불은 신청 조회 화면에서 직접 환불 요청이 가능하며 요청 후 3주 이내에 전액 환불됩니다. 코스나 개인 사유로 인한 변경 및 환불은 최종 마감일까지만 가능합니다. 최종 마감일 이후에는 취소할 수 있으며 참가비는 환불되지 않습니다."
+      }
+    },
+    "location": {
+      "country": "한국",
+      "region": "충북",
+      "area": "청주시",
+      "venue": "청주 무심천 롤러스케이트장",
+      "naver": "무심천 롤러스케이트장",
+      "address": "충청북도 청주시 서원구 사직동 95",
+      "latitude": 36.638902,
+      "longitude": 127.4831851
+    },
+    "hosts": {
+      "organizer": "전국마라톤협회",
+      "manager": null,
+      "sponsor": "월드런, 주시모",
+      "phone": "042-638-1080",
+      "email": "jeonmahyeop@naver.com",
       "instagram": null
     }
   }
