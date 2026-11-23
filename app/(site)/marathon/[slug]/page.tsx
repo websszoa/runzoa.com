@@ -16,6 +16,17 @@ type MarathonDetailPageProps = {
   params: Promise<{ slug: string }>;
 };
 
+// 빌드 시 전체 상세 페이지를 정적 생성한다.
+// 메타데이터가 <head>에 확정되어 내려가고, 데이터에 없는 슬러그는 실제 404가 된다(soft 404 해소).
+export const dynamicParams = false;
+// 접수 상태·D-day가 바뀌므로 1시간마다 갱신한다.
+export const revalidate = 3600;
+
+export async function generateStaticParams() {
+  const { marathons } = await getMarathons();
+  return marathons.map(({ slug }) => ({ slug }));
+}
+
 function truncate(text: string, maxLength: number) {
   return text.length > maxLength
     ? `${text.slice(0, maxLength - 1)}…`

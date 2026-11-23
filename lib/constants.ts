@@ -23,8 +23,10 @@ export const APP_SHORT_DESCRIPTION =
 export const APP_KEYWORDS =
   "런조아, runzoa, 마라톤 일정, 전국 마라톤 대회, 마라톤 접수, 하프마라톤 일정, 러닝 대회, 2026 마라톤 일정, 트레일런 대회, 해외 마라톤, 마라톤 참가 신청, 초보 마라톤 준비, 전국 마라톤 캘린더, 접수 중 마라톤 대회, 마라톤 대회 정보, 마라톤 코스 안내, 마라톤 참가비, 마라톤 대회 후기, 마라톤 대회 추천";
 
-export const MARATHON_COVER_BASE_URL =
-  "https://websszoa.github.io/runzoa.com/public/marathon/cover";
+// 커버 이미지는 저장소의 public/marathon/cover 에서 직접 서빙한다.
+// (예전에는 GitHub Pages 주소 websszoa.github.io/runzoa.com/public/... 를 가리켜
+//  og:image·JSON-LD image가 다른 도메인을 지목했다.)
+export const MARATHON_COVER_BASE_URL = "https://runzoa.com/marathon/cover";
 
 export function getMarathonCoverUrl(fileName: string) {
   return `${MARATHON_COVER_BASE_URL}/${fileName}`;
