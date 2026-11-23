@@ -40,7 +40,13 @@ export default function MainRegistrationSoon({
       marathon,
       schedules: schedules.filter((schedule) => !schedule.isAdditional),
     }))
-    .filter(({ schedules }) => schedules.length > 0);
+    .filter(({ schedules }) => schedules.length > 0)
+    // 추가 접수 일정을 뺀 뒤 일반 접수 시작일(·시간) 순으로 다시 정렬합니다.
+    .sort((a, b) =>
+      `${a.schedules[0].startDate}T${a.schedules[0].startTime ?? "00:00"}`.localeCompare(
+        `${b.schedules[0].startDate}T${b.schedules[0].startTime ?? "00:00"}`,
+      ),
+    );
   // 추가 접수는 별도 표에서 "추가 접수 예정" → 시작 시각부터 "추가 접수중"으로 보여 줍니다.
   const additionalMarathons = marathons
     .filter((marathon) => marathon.event.startDate >= today)
