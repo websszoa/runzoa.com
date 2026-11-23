@@ -12,9 +12,9 @@
       "memo": null
     },
     "event": {
-      "startDate": "2026-04-02",
-      "endDate": "2026-04-02",
-      "startTime": "20:00",
+      "startDate": "2026-04-04",
+      "endDate": "2026-04-04",
+      "startTime": "08:00",
       "endTime": null,
       "site": "https://www.cherrymarathon.co.kr/",
       "schedule": {
@@ -221,9 +221,9 @@
       "memo": null
     },
     "event": {
-      "startDate": "2026-04-25",
-      "endDate": "2026-04-25",
-      "startTime": "23:00",
+      "startDate": "2026-04-26",
+      "endDate": "2026-04-26",
+      "startTime": "08:00",
       "endTime": null,
       "site": "https://mara1080.com/event/e40f1082-eb59-40b3-9fbe-b05afe6bf741",
       "schedule": null
@@ -273,9 +273,9 @@
       "memo": null
     },
     "event": {
-      "startDate": "2026-04-25",
+      "startDate": "2026-04-26",
       "endDate": "2026-04-26",
-      "startTime": "22:30",
+      "startTime": "07:30",
       "endTime": "03:00",
       "site": "https://www.seoulhalfmarathon.com/",
       "schedule": null
@@ -728,9 +728,9 @@
       "memo": null
     },
     "event": {
-      "startDate": "2026-05-02",
-      "endDate": "2026-05-02",
-      "startTime": "23:00",
+      "startDate": "2026-05-03",
+      "endDate": "2026-05-03",
+      "startTime": "08:00",
       "endTime": null,
       "site": "https://urmarathon.com/ko/index.html",
       "schedule": null
@@ -1030,9 +1030,9 @@
       "memo": null
     },
     "event": {
-      "startDate": "2026-05-02",
-      "endDate": "2026-05-02",
-      "startTime": "22:30",
+      "startDate": "2026-05-03",
+      "endDate": "2026-05-03",
+      "startTime": "07:30",
       "endTime": null,
       "site": "https://heartsignalrunfesta.com/",
       "schedule": null
@@ -2239,9 +2239,9 @@
       "memo": null
     },
     "event": {
-      "startDate": "2026-05-16",
-      "endDate": "2026-05-16",
-      "startTime": "23:30",
+      "startDate": "2026-05-17",
+      "endDate": "2026-05-17",
+      "startTime": "08:30",
       "endTime": null,
       "site": "https://incheonafcup.co.kr/",
       "schedule": null
@@ -2493,9 +2493,9 @@
       "memo": null
     },
     "event": {
-      "startDate": "2026-05-16",
-      "endDate": "2026-05-16",
-      "startTime": "23:30",
+      "startDate": "2026-05-17",
+      "endDate": "2026-05-17",
+      "startTime": "08:30",
       "endTime": null,
       "site": "https://mara1080.com/event/29a34ee9-32a9-4a3b-b92f-37b3772cc183",
       "schedule": null
@@ -2544,9 +2544,9 @@
       "memo": null
     },
     "event": {
-      "startDate": "2026-05-16",
-      "endDate": "2026-05-16",
-      "startTime": "23:00",
+      "startDate": "2026-05-17",
+      "endDate": "2026-05-17",
+      "startTime": "08:00",
       "endTime": null,
       "site": "https://daejeon.therace.co.kr/index.php",
       "schedule": null
@@ -5314,9 +5314,9 @@
       "memo": null
     },
     "event": {
-      "startDate": "2026-06-20",
-      "endDate": "2026-06-20",
-      "startTime": "22:50",
+      "startDate": "2026-06-21",
+      "endDate": "2026-06-21",
+      "startTime": "07:50",
       "endTime": null,
       "site": "https://mara1080.com/event/cfa1bea4-b545-4df9-8ae1-5ce280ca0e3d",
       "schedule": null
