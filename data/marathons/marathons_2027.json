@@ -1512,10 +1512,10 @@
       "status": null,
       "currency": "KRW",
       "price": {
-        "FULL": 40000,
-        "HALF": 35000,
-        "10KM": 25000,
-        "5KM": 10000
+        "FULL": 60000,
+        "HALF": 40000,
+        "10KM": 30000,
+        "5KM": 20000
       },
       "refund": {
         "endDate": null,
@@ -2899,7 +2899,7 @@
       "startTime": "10:00",
       "endTime": null,
       "site": "https://speedagency.kr/parti_more.html?game_code=119",
-      "status": null,
+      "status": "접수마감",
       "currency": "KRW",
       "price": {
         "GRANFONDO_A": 70000,
@@ -3520,6 +3520,185 @@
       "phone": "042-638-1080",
       "email": "jeonmahyeop@naver.com",
       "instagram": null
+    }
+  },
+
+  {
+    "slug": "chuncheon-soyanggang-spring-marathon-2027",
+    "name": "제2회 입춘대길 춘천 소양강마라톤대회",
+    "description": "2027년 3월 27일 강원특별자치도 춘천 소양강댐 하류 주차장에서 개최되는 제2회 입춘대길 춘천 소양강마라톤대회입니다. 5km 입춘대길과 10km 운수대통 두 코스로 진행되며 선착순 3,000명을 모집합니다. 소양강을 따라 달리는 봄 마라톤으로 공식 기념티, 멀티스카프, 에너지 회복세트 등 다양한 참가 기념품과 춘천역 무료 셔틀버스를 제공합니다.",
+    "info": {
+      "type": "마라톤",
+      "scale": 3000,
+      "park": "소양강댐 제1·2·3공영주차장 이용 가능(총 약 300대). 주차 공간이 부족할 수 있어 춘천역 인근 주차장 및 무료 셔틀버스 이용 권장",
+      "souvenir": "프로스펙스 공식 기념티, 멀티스카프, 아이엠프로틴 에너지 회복세트, 배번(기록칩), 안내책자, 완주메달, 간식꾸러미, 생수",
+      "program": "종목별 남녀 1~5위 시상, 춘천역 무료 셔틀버스 운행",
+      "memo": "5km 제한시간 1시간, 10km 제한시간 2시간. 기록칩으로 기록 측정하며 순위는 Net Time 기준으로 결정합니다. 기념티와 멀티스카프 디자인은 추후 확정 예정입니다."
+    },
+    "event": {
+      "startDate": "2027-03-27",
+      "endDate": "2027-03-27",
+      "startTime": "09:00",
+      "endTime": null,
+      "site": "https://ccpmarathon.kr/spring/info.html",
+      "schedule": {
+        "07:00": "춘천역 무료 셔틀버스 첫차 출발",
+        "08:25": "춘천역 무료 셔틀버스 마지막 출발",
+        "09:00": "대회 시작",
+        "10:00": "행사장 귀가 셔틀버스 첫차 출발",
+        "11:25": "행사장 귀가 셔틀버스 마지막 출발"
+      }
+    },
+    "registration": {
+      "startDate": "2026-11-24",
+      "endDate": "2027-02-12",
+      "startTime": "20:00",
+      "endTime": "18:00",
+      "site": "https://ccpmarathon.kr/spring/",
+      "status": null,
+      "currency": "KRW",
+      "price": {
+        "5KM": 50000,
+        "10KM": 50000
+      },
+      "refund": {
+        "endDate": "2027-02-12",
+        "policy": "접수 마감 전까지 신청진행조회 메뉴의 취소요청을 통해 취소 및 환불을 신청할 수 있습니다. 선착순 모집으로 조기 마감될 수 있으며, 접수 마감 후에는 취소 및 환불이 불가능합니다."
+      }
+    },
+    "location": {
+      "country": "한국",
+      "region": "강원",
+      "area": "춘천시",
+      "venue": "춘천 소양강댐 하류 주차장",
+      "naver": "소양강댐 주차장",
+      "address": "강원특별자치도 춘천시 신북읍 신샘밭로 860",
+      "latitude": 37.9367095,
+      "longitude": 127.8008586
+    },
+    "hosts": {
+      "organizer": "강원도민일보",
+      "manager": "강원도민일보, 춘천시육상연맹",
+      "sponsor": "춘천시, 프로스펙스",
+      "phone": "033-260-9351, 033-260-9361",
+      "email": "yunsw@kado.net",
+      "instagram": null
+    }
+  },
+  {
+    "slug": "choco-run-marathon-2027",
+    "name": "2027 초코런",
+    "description": "2027년 2월 14일 서울 영등포구 신정교하부육상트랙구장에서 개최 예정인 초코런 마라톤대회입니다. 10km와 5km 두 종목으로 운영되며 참가자에게 기능성 하프집업 긴팔 티셔츠, 완주메달, 간식, 모바일 기록증 등을 제공합니다. 초콜릿을 테마로 한 러닝 이벤트로, 기록칩을 이용해 참가자의 기록을 측정합니다.",
+    "info": {
+      "type": "마라톤",
+      "scale": null,
+      "park": null,
+      "souvenir": "기능성 하프집업 긴팔 티셔츠, 배번호, 기록칩, 완주메달, 간식, 모바일 기록증",
+      "program": "다양한 경품 행사 예정",
+      "memo": "10km 제한시간 2시간, 5km 제한시간 1시간. 두 종목 모두 기록 측정용 칩을 사용합니다. 기념품은 대회 약 1주일 전 택배 발송 예정이며, 완주메달과 간식, 모바일 기록증은 현장에서 제공됩니다. 단체 20인 이상 신청 시 부스 운영 관련 문의가 가능합니다."
+    },
+    "event": {
+      "startDate": "2027-02-14",
+      "endDate": "2027-02-14",
+      "startTime": "09:00",
+      "endTime": null,
+      "site": "http://www.chocorun.kr/run/9000.asp?T=1",
+      "schedule": {
+        "09:00": "마라톤 출발"
+      }
+    },
+    "registration": {
+      "startDate": null,
+      "endDate": "2027-01-27",
+      "startTime": null,
+      "endTime": "12:00",
+      "site": "http://www.chocorun.kr/run/9000.asp?T=1",
+      "status": "접수대기",
+      "currency": "KRW",
+      "price": {
+        "10KM": 50000,
+        "5KM": 50000
+      },
+      "refund": {
+        "endDate": "2027-01-27",
+        "policy": "2027년 1월 27일 낮 12시까지 환불 및 참가정보 수정이 가능합니다. 환불 시 제반비용 5%를 제외한 금액이 환불됩니다. 환불 신청 시 성함, 전화번호, 참가코스, 환불받을 은행명 및 계좌번호를 정확히 기재해야 합니다. 선착순 조기 마감 시 환불 및 수정 가능 기간이 변경될 수 있습니다."
+      }
+    },
+    "location": {
+      "country": "한국",
+      "region": "서울",
+      "area": "영등포구",
+      "venue": "신정교하부육상트랙구장",
+      "naver": "신정교하부육상트랙구장",
+      "address": "서울특별시 영등포구 영등포로2길 62",
+      "latitude": 37.5178604,
+      "longitude": 126.8819583
+    },
+    "hosts": {
+      "organizer": "한국마라톤TV",
+      "manager": "한국마라톤TV, 열린사회자원봉사연합",
+      "sponsor": "SAFE DUCK, TV서울, SAMIK",
+      "phone": null,
+      "email": "km4219@daum.net",
+      "instagram": null
+    }
+  },
+
+  {
+    "slug": "burning-run-2027",
+    "name": "2027 버닝런",
+    "description": "2027년 4월 3일 서울 여의도 한강공원 너른들판에서 개최되는 제13회 버닝런 캐주얼 러닝 페스티벌입니다. 10km, 7km, 5km 세 가지 코스로 운영되며, 10km와 7km 종목은 기록이 측정됩니다. 봄날 한강을 따라 달리는 러닝 축제로 참가자에게 러닝 조끼, 러닝 양말, 간식, 음료 등의 기념품이 제공됩니다.",
+    "info": {
+      "type": "마라톤",
+      "scale": null,
+      "park": null,
+      "souvenir": "러닝 조끼, 러닝 양말, 간식, 음료 등",
+      "program": null,
+      "memo": "제13회 버닝런 캐주얼 러닝 페스티벌입니다. 10km와 7km 종목은 기록이 측정되며, 5km 종목의 기록 측정 여부는 공식 안내에 명시되지 않았습니다. 공식 홈페이지는 2026년 12월 오픈 예정입니다."
+    },
+    "event": {
+      "startDate": "2027-04-03",
+      "endDate": "2027-04-03",
+      "startTime": null,
+      "endTime": null,
+      "site": "http://www.burningrun.co.kr",
+      "schedule": {}
+    },
+    "registration": {
+      "startDate": "2027-01-04",
+      "endDate": null,
+      "startTime": "10:00",
+      "endTime": null,
+      "site": "http://www.burningrun.co.kr",
+      "status": null,
+      "currency": "KRW",
+      "price": {
+        "10KM": null,
+        "7KM": null,
+        "5KM": null
+      },
+      "refund": {
+        "endDate": null,
+        "policy": null
+      }
+    },
+    "location": {
+      "country": "한국",
+      "region": "서울",
+      "area": "영등포구",
+      "venue": "여의도 한강공원 너른들판",
+      "naver": "여의도 한강공원 너른들판",
+      "address": "서울특별시 영등포구 여의도동 83-6",
+      "latitude": 37.5267106,
+      "longitude": 126.9347112
+    },
+    "hosts": {
+      "organizer": "비즈한국, 런앤런",
+      "manager": null,
+      "sponsor": null,
+      "phone": "070-7706-1011",
+      "email": "run@runandrun3.com",
+      "instagram": "burning_run"
     }
   }
 ]

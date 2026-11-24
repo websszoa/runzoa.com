@@ -3,10 +3,11 @@ import {
   ArrowRight,
   AlarmClock,
   BadgeCheck,
-  BookOpen,
+  CalendarCheck,
+  CalendarPlus2,
   Home,
   Megaphone,
-  Sparkles,
+  Smartphone,
   Star,
   type LucideIcon,
 } from "lucide-react";
@@ -21,7 +22,7 @@ import {
 } from "@/components/ui/avatar";
 import { SOCIAL_LINKS } from "@/lib/navigation";
 import { cn } from "@/lib/utils";
-import { APP_COPYRIGHT, APP_EVENTZOA_URL, APP_NAME } from "@/lib/constants";
+import { APP_COPYRIGHT, APP_NAME } from "@/lib/constants";
 
 type LinkItem = {
   title: string;
@@ -35,6 +36,12 @@ export type UpcomingLink = {
   href: string;
   badge: string;
   isToday: boolean;
+};
+
+export type OpenLink = {
+  title: string;
+  href: string;
+  badge: string;
 };
 
 type LinkSection = {
@@ -51,14 +58,15 @@ const sections: LinkSection[] = [
         icon: Star,
       },
       {
-        title: "접수중인 대회",
-        href: "/marathon-list?status=open",
-        icon: Megaphone,
+        title: "토스 미니앱으로 보기",
+        href: "https://tossminiapp.com/d/runzoa/launch?referrer=appsintoss.common_module_share",
+        icon: Smartphone,
+        external: true,
       },
       {
-        title: "접수예정 중인 대회",
-        href: "/marathon-list?status=upcoming",
-        icon: BookOpen,
+        title: "카카오톡 캘린더에 추가하기",
+        href: "/calendar-add",
+        icon: CalendarPlus2,
       },
     ],
   },
@@ -91,7 +99,15 @@ const runners = [
   },
 ];
 
-export function LinkBioPage({ upcoming }: { upcoming: UpcomingLink[] }) {
+export function LinkBioPage({
+  upcoming,
+  open,
+  openTotal,
+}: {
+  upcoming: UpcomingLink[];
+  open: OpenLink[];
+  openTotal: number;
+}) {
   return (
     <div className="relative isolate min-h-screen overflow-hidden bg-[linear-gradient(135deg,#f1170f_0%,#e9231b_48%,#ff6a3d_100%)] px-4 pt-6 pb-24 text-white">
       <div
@@ -120,10 +136,6 @@ export function LinkBioPage({ upcoming }: { upcoming: UpcomingLink[] }) {
             >
               <Home className="size-4" />
             </Link>
-            <p className="inline-flex items-center gap-1.5 rounded-full border border-white/25 bg-white/10 px-3 py-1.5 font-anyvid text-xs font-semibold tracking-wide text-white/90 uppercase">
-              <Sparkles className="size-3.5" aria-hidden="true" />
-              RunZoa Link
-            </p>
             <CopyLinkButton className="border-white/30 bg-white/10 text-white hover:bg-white/20 hover:text-white" />
           </div>
 
@@ -171,7 +183,15 @@ export function LinkBioPage({ upcoming }: { upcoming: UpcomingLink[] }) {
           </div>
 
           {upcoming.length > 0 && (
-            <div className="mt-6 space-y-3 border-t border-white/25 pt-6">
+            <div className="mt-6 space-y-3 border-y border-white/25 py-6">
+              <div className="flex items-center justify-between px-2 font-anyvid text-xs text-white/80">
+                <span className="inline-flex items-center gap-1.5">
+                  <AlarmClock className="size-4" aria-hidden="true" />
+                  접수 예정인 대회
+                </span>
+                <span>{upcoming.length}개</span>
+              </div>
+
               {upcoming.map((item) => (
                 <Link
                   key={item.title}
@@ -210,6 +230,51 @@ export function LinkBioPage({ upcoming }: { upcoming: UpcomingLink[] }) {
                   <ArrowRight className="absolute right-4 size-4 shrink-0 text-white/70 transition-transform group-hover:translate-x-0.5" />
                 </Link>
               ))}
+            </div>
+          )}
+
+          {open.length > 0 && (
+            <div className="mt-6 space-y-3">
+              <div className="flex items-center justify-between px-2 font-anyvid text-xs text-white/80">
+                <span className="inline-flex items-center gap-1.5">
+                  <CalendarCheck className="size-4" aria-hidden="true" />
+                  지금 접수 중인 대회
+                </span>
+                <span>{openTotal}개</span>
+              </div>
+
+              {open.map((item) => (
+                <Link
+                  key={item.title}
+                  href={item.href}
+                  {...(item.href.startsWith("http") && {
+                    target: "_blank",
+                    rel: "noreferrer",
+                  })}
+                  className="group relative flex items-center rounded-full border border-white/30 bg-white/10 py-2 pr-10 pl-14 font-anyvid text-white transition-colors hover:bg-white/20"
+                >
+                  <span className="absolute left-2.5 flex size-9 items-center justify-center rounded-full bg-white text-brand">
+                    <Megaphone className="size-4" aria-hidden="true" />
+                  </span>
+                  <span className="min-w-0 flex-1 text-left mt-0.5">
+                    <span className="block font-nanumNeo text-xs font-semibold text-amber-200">
+                      [{item.badge}]
+                    </span>
+                    <span className="block truncate font-nanumNeo text-sm">
+                      {item.title}
+                    </span>
+                  </span>
+                  <ArrowRight className="absolute right-4 size-4 shrink-0 text-white/70 transition-transform group-hover:translate-x-0.5" />
+                </Link>
+              ))}
+
+              <Link
+                href="/marathon-list?status=open"
+                className="group flex items-center justify-center gap-1.5 rounded-full border border-white/30 bg-white px-4 py-3.5 font-nanumNeo text-sm font-semibold text-brand transition-colors hover:bg-white/90"
+              >
+                접수 중인 대회 더보기
+                <ArrowRight className="size-4 transition-transform group-hover:translate-x-0.5" />
+              </Link>
             </div>
           )}
 

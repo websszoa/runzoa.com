@@ -22,7 +22,6 @@ import {
 import type { Marathon } from "@/lib/marathons";
 import {
   ArrowRight,
-  CalendarCheck,
   CalendarPlus2,
   Check,
   CircleAlert,
@@ -62,25 +61,20 @@ type CalendarAddProps = {
   marathons: Marathon[];
   hasError: boolean;
   isLoggedIn: boolean;
-  naverConnected: boolean;
   kakaoConnected: boolean;
   initialKakaoRaceAddedSlugs: string[];
   initialKakaoRegistrationAddedSlugs: string[];
-  initialNaverRaceAddedSlugs: string[];
-  initialNaverRegistrationAddedSlugs: string[];
 };
 
 const PROVIDER_LABEL: Record<Provider, string> = {
   kakao: "카카오톡",
-  naver: "네이버",
 };
 
 const PROVIDER_SHORT_LABEL: Record<Provider, string> = {
   kakao: "카카오",
-  naver: "네이버",
 };
 
-const PROVIDERS: Provider[] = ["kakao", "naver"];
+const PROVIDERS: Provider[] = ["kakao"];
 
 const PAGE_SIZE = 30;
 
@@ -88,12 +82,9 @@ export default function CalendarAdd({
   marathons,
   hasError,
   isLoggedIn,
-  naverConnected,
   kakaoConnected,
   initialKakaoRaceAddedSlugs,
   initialKakaoRegistrationAddedSlugs,
-  initialNaverRaceAddedSlugs,
-  initialNaverRegistrationAddedSlugs,
 }: CalendarAddProps) {
   const [kakaoRaceAddedSlugs, setKakaoRaceAddedSlugs] = useState(
     () => new Set(initialKakaoRaceAddedSlugs),
@@ -101,37 +92,25 @@ export default function CalendarAdd({
   const [kakaoRegistrationAddedSlugs, setKakaoRegistrationAddedSlugs] =
     useState(() => new Set(initialKakaoRegistrationAddedSlugs));
   const [kakaoReconnectRequired, setKakaoReconnectRequired] = useState(false);
-  const [naverRaceAddedSlugs, setNaverRaceAddedSlugs] = useState(
-    () => new Set(initialNaverRaceAddedSlugs),
-  );
-  const [naverRegistrationAddedSlugs, setNaverRegistrationAddedSlugs] =
-    useState(() => new Set(initialNaverRegistrationAddedSlugs));
-  const [naverReconnectRequired, setNaverReconnectRequired] = useState(false);
-  const [statusFilter, setStatusFilter] = useState<StatusFilter>("전체");
+  const [statusFilter, setStatusFilter] =
+    useState<StatusFilter>("접수예정");
   const [visibleCount, setVisibleCount] = useState(PAGE_SIZE);
   const [pendingKey, setPendingKey] = useState<string | null>(null);
   const [resultDialog, setResultDialog] = useState<CalendarAddResult | null>(null);
   const [errorMessage, setErrorMessage] = useState<string | null>(null);
 
   const kakaoCanUse = isLoggedIn && kakaoConnected && !kakaoReconnectRequired;
-  const naverCanUse = isLoggedIn && naverConnected && !naverReconnectRequired;
   const canUseByProvider: Record<Provider, boolean> = {
     kakao: kakaoCanUse,
-    naver: naverCanUse,
   };
   const connectedProviders = PROVIDERS.filter((p) => canUseByProvider[p]);
   const visibleProviders =
     connectedProviders.length > 0 ? connectedProviders : (["kakao"] as const);
 
-  const isAdded = (slug: string, kind: EventKind, provider: Provider) => {
-    if (provider === "kakao") {
-      return kind === "registration"
-        ? kakaoRegistrationAddedSlugs.has(slug)
-        : kakaoRaceAddedSlugs.has(slug);
-    }
+  const isAdded = (slug: string, kind: EventKind) => {
     return kind === "registration"
-      ? naverRegistrationAddedSlugs.has(slug)
-      : naverRaceAddedSlugs.has(slug);
+      ? kakaoRegistrationAddedSlugs.has(slug)
+      : kakaoRaceAddedSlugs.has(slug);
   };
 
   const filteredMarathons = useMemo(() => {
@@ -174,27 +153,22 @@ export default function CalendarAdd({
           result.code === "RECONNECT_REQUIRED" ||
           result.code === "AUTH_REQUIRED"
         ) {
-          if (provider === "kakao") setKakaoReconnectRequired(true);
-          else setNaverReconnectRequired(true);
+          setKakaoReconnectRequired(true);
         }
         setErrorMessage(result.error ?? "일정을 추가하지 못했습니다.");
         return;
       }
 
       const addSlug =
-        provider === "kakao"
-          ? kind === "registration"
-            ? setKakaoRegistrationAddedSlugs
-            : setKakaoRaceAddedSlugs
-          : kind === "registration"
-            ? setNaverRegistrationAddedSlugs
-            : setNaverRaceAddedSlugs;
+        kind === "registration"
+          ? setKakaoRegistrationAddedSlugs
+          : setKakaoRaceAddedSlugs;
       addSlug((current) => new Set(current).add(marathon.slug));
       setResultDialog({
         marathonName: marathon.name,
         kind,
         provider,
-        entries: buildCalendarPreviewEntries(marathon, provider, kind),
+        entries: buildCalendarPreviewEntries(marathon, kind),
         alreadyAdded: Boolean(result.alreadyAdded),
         warning: result.warning,
       });
@@ -216,12 +190,7 @@ export default function CalendarAdd({
               connected={kakaoCanUse}
               reconnectRequired={kakaoReconnectRequired}
             />
-            <ConnectionStatus
-              provider="naver"
-              isLoggedIn={isLoggedIn}
-              connected={naverCanUse}
-              reconnectRequired={naverReconnectRequired}
-            />
+            <KakaoReminderGuide />
           </div>
 
           {errorMessage && (
@@ -358,15 +327,15 @@ export default function CalendarAdd({
                               aria-hidden="true"
                             />
                             <span className="truncate">
-                              {[
-                                marathon.location.region,
-                                marathon.location.venue,
-                              ]
-                                .filter(Boolean)
-                                .join(" · ") || "장소 확인"}
+                              {marathon.location.region || "지역 확인"}
+                              {marathon.location.venue && (
+                                <span className="hidden sm:inline">
+                                  {` · ${marathon.location.venue}`}
+                                </span>
+                              )}
                             </span>
                           </p>
-                          <p className="flex items-center gap-1.5">
+                          <p className="hidden items-center gap-1.5 sm:flex">
                             <WalletCards
                               className="size-3.5 shrink-0 text-emerald-500"
                               aria-hidden="true"
@@ -377,7 +346,7 @@ export default function CalendarAdd({
                             )}
                           </p>
                           {distances.length > 0 && (
-                            <p className="flex items-center gap-1.5">
+                            <p className="hidden items-center gap-1.5 sm:flex">
                               <Tag
                                 className="size-3.5 shrink-0 text-violet-500"
                                 aria-hidden="true"
@@ -386,7 +355,7 @@ export default function CalendarAdd({
                             </p>
                           )}
                           {marathon.info.scale && (
-                            <p className="flex items-center gap-1.5">
+                            <p className="hidden items-center gap-1.5 sm:flex">
                               <Users
                                 className="size-3.5 shrink-0 text-amber-500"
                                 aria-hidden="true"
@@ -412,7 +381,6 @@ export default function CalendarAdd({
                               const added = isAdded(
                                 marathon.slug,
                                 "race",
-                                provider,
                               );
                               const pending =
                                 pendingKey ===
@@ -465,7 +433,6 @@ export default function CalendarAdd({
                                 const added = isAdded(
                                   marathon.slug,
                                   "registration",
-                                  provider,
                                 );
                                 const pending =
                                   pendingKey ===
@@ -548,7 +515,6 @@ function ProviderActionButton({
   label: string;
   title: string;
 }) {
-  const isKakao = provider === "kakao";
   return (
     <Button
       type="button"
@@ -558,10 +524,8 @@ function ProviderActionButton({
       className={cn(
         "shrink-0 rounded-full px-4 font-anyvid text-xs",
         added
-          ? "border border-brand/25 bg-brand/10 text-brand hover:bg-brand/10 hover:text-brand disabled:opacity-100"
-          : isKakao
-            ? "bg-[#FEE500] text-[#3C1E1E] hover:bg-[#F5DC00]"
-            : "bg-[#03c75a] text-white hover:bg-[#02b351]",
+          ? "bg-[#3C1E1E] text-[#FEE500] hover:bg-[#3C1E1E] hover:text-[#FEE500] disabled:opacity-100"
+          : "bg-[#FEE500] text-[#3C1E1E] hover:bg-[#F5DC00]",
       )}
       disabled={disabled || added}
       onClick={onClick}
@@ -573,10 +537,7 @@ function ProviderActionButton({
           추가 중
         </>
       ) : added ? (
-        <>
-          <CalendarCheck className="size-4" aria-hidden="true" />
-          추가완료
-        </>
+        "추가완료"
       ) : (
         <>
           <CalendarPlus2 className="size-4" aria-hidden="true" />
@@ -584,6 +545,43 @@ function ProviderActionButton({
         </>
       )}
     </Button>
+  );
+}
+
+function KakaoReminderGuide() {
+  return (
+    <Card className="overflow-hidden rounded-2xl py-0">
+      <div className="grid h-full sm:grid-cols-[minmax(0,1fr)_11rem]">
+        <div className="flex flex-col justify-center px-5 py-6 sm:px-6">
+          <Badge
+            variant="outline"
+            className="w-fit border-amber-200 bg-amber-50 font-anyvid text-amber-800"
+          >
+            톡캘린더 자동 알림
+          </Badge>
+          <h2 className="mt-3 font-paperlogy text-lg font-semibold">
+            중요한 일정을 놓치지 마세요
+          </h2>
+          <p className="mt-2 break-keep font-anyvid text-sm leading-6 text-muted-foreground">
+            시간이 등록된 대회와 접수 일정은 하루 전과 1시간 전에
+            카카오톡 톡캘린더 알림으로 다시 알려드려요.
+          </p>
+          <div className="mt-4 flex flex-wrap gap-2 font-anyvid text-xs font-semibold text-foreground">
+            <span className="rounded-full bg-muted px-3 py-1.5">하루 전</span>
+            <span className="rounded-full bg-muted px-3 py-1.5">1시간 전</span>
+          </div>
+        </div>
+        <div className="relative min-h-64 border-t bg-[#c8deec] sm:min-h-full sm:border-t-0 sm:border-l">
+          <Image
+            src="/images/calendar/kakao-talk-calendar-reminders.png"
+            alt="카카오톡 톡캘린더에서 하루 전과 1시간 전에 받은 마라톤 일정 알림 예시"
+            fill
+            sizes="(max-width: 640px) 100vw, 176px"
+            className="object-cover object-top"
+          />
+        </div>
+      </div>
+    </Card>
   );
 }
 
@@ -600,12 +598,7 @@ function ConnectionStatus({
 }) {
   const [isNavigating, setIsNavigating] = useState(false);
   const providerName = PROVIDER_LABEL[provider];
-  const toParticle = provider === "kakao" ? "으로" : "로";
-  const loginUrl =
-    provider === "kakao"
-      ? "/auth/kakao/start"
-      : "/auth/naver/start?next=/calendar-add";
-  const isKakao = provider === "kakao";
+  const loginUrl = "/auth/kakao/start";
   const description = connected
     ? `${providerName} 캘린더에 대회 일정을 바로 추가할 수 있어요.`
     : reconnectRequired
@@ -615,7 +608,7 @@ function ConnectionStatus({
   return (
     <Card className="gap-0 rounded-2xl py-0">
       <CardHeader className="flex-row items-start gap-4 px-5 pt-6 pb-4 sm:px-6">
-        <ProviderIcon provider={provider} />
+        <ProviderIcon />
         <div className="min-w-0 flex-1">
           <div className="flex flex-wrap items-center gap-2">
             <h2 className="font-paperlogy text-lg font-semibold">
@@ -648,12 +641,7 @@ function ConnectionStatus({
         {connected ? (
           <div className="flex items-center gap-2 font-anyvid text-sm font-medium text-emerald-700">
             <span
-              className={cn(
-                "flex size-6 items-center justify-center rounded-full",
-                isKakao
-                  ? "bg-[#FEE500] text-[#3C1E1E]"
-                  : "bg-[#03c75a] text-white",
-              )}
+              className="flex size-6 items-center justify-center rounded-full bg-[#FEE500] text-[#3C1E1E]"
             >
               <Check className="size-3.5" aria-hidden="true" />
             </span>
@@ -665,12 +653,7 @@ function ConnectionStatus({
             render={<a href={loginUrl} />}
             disabled={isNavigating}
             onClick={() => setIsNavigating(true)}
-            className={cn(
-              "h-11 w-full justify-between rounded-lg px-4 font-anyvid font-semibold",
-              isKakao
-                ? "bg-[#FEE500] text-[#3C1E1E] hover:bg-[#F5DC00]"
-                : "bg-[#03c75a] text-white hover:bg-[#02b351]",
-            )}
+            className="h-11 w-full justify-between rounded-lg bg-[#FEE500] px-4 font-anyvid font-semibold text-[#3C1E1E] hover:bg-[#F5DC00]"
           >
             {isNavigating ? (
               <span className="flex items-center gap-2.5">
@@ -680,9 +663,9 @@ function ConnectionStatus({
             ) : (
               <>
                 <span className="flex items-center gap-2.5">
-                  <ProviderLogo provider={provider} />
+                  <ProviderLogo />
                   {providerName}
-                  {toParticle} {isLoggedIn ? "다시 로그인" : "로그인"}
+                  으로 {isLoggedIn ? "다시 로그인" : "로그인"}
                 </span>
                 <ArrowRight className="size-4" aria-hidden="true" />
               </>
@@ -694,22 +677,19 @@ function ConnectionStatus({
   );
 }
 
-function ProviderIcon({ provider }: { provider: Provider }) {
+function ProviderIcon() {
   return (
     <div
-      className={cn(
-        "flex size-12 shrink-0 items-center justify-center rounded-xl",
-        provider === "kakao" ? "bg-[#FEE500]" : "bg-[#03c75a]",
-      )}
+      className="flex size-12 shrink-0 items-center justify-center rounded-xl bg-[#FEE500]"
       aria-hidden="true"
     >
-      <ProviderLogo provider={provider} />
+      <ProviderLogo />
     </div>
   );
 }
 
-function ProviderLogo({ provider }: { provider: Provider }) {
-  return provider === "kakao" ? (
+function ProviderLogo() {
+  return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
       width="22"
@@ -723,15 +703,6 @@ function ProviderLogo({ provider }: { provider: Provider }) {
         d="M10.5 3.217c4.514 0 8 2.708 8 6.004 0 3.758-4.045 6.184-8 5.892-1.321-.093-1.707-.17-2.101-.23-1.425.814-2.728 2.344-3.232 2.334-.325-.19.811-2.896.533-3.114-.347-.244-3.157-1.329-3.2-4.958 0-3.199 3.486-5.928 8-5.928Z"
       />
     </svg>
-  ) : (
-    <Image
-      src="/svg/naver.svg"
-      alt=""
-      width={14}
-      height={14}
-      unoptimized
-      className="shrink-0 brightness-0 invert"
-    />
   );
 }
 

@@ -102,7 +102,7 @@ function buildEventTime(
         all_day: false as const,
         time_zone: "Asia/Seoul",
       },
-      reminders: [1440, 10],
+      reminders: [1440, 60],
     };
   }
 

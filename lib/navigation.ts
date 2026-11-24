@@ -2,6 +2,7 @@ import { APP_EMAIL, APP_INSTAGRAM_URL, APP_THREADS_URL } from "@/lib/constants";
 import {
   BookOpenText,
   CalendarDays,
+  CalendarPlus2,
   Info,
   List,
   Map,
@@ -38,7 +39,7 @@ export const SERVICE_MENU: MenuItem[] = [
   { icon: List, label: "리스트", href: "/marathon-list" },
   { icon: CalendarDays, label: "캘린더", href: "/marathon-calendar" },
   { icon: Map, label: "지도", href: "/marathon-map" },
-  { icon: BookOpenText, label: "블로그", href: "/blog" },
+  { icon: CalendarPlus2, label: "카카오 캘린더", href: "/calendar-add" },
 ];
 
 // 사이드 시트 메뉴

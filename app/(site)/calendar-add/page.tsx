@@ -10,9 +10,9 @@ import { createClient } from "@/lib/supabase/server";
 import { getCurrentKoreanDate } from "@/lib/utils";
 
 export const metadata: Metadata = {
-  title: "내 캘린더에 추가",
+  title: "카카오 캘린더에 추가",
   description:
-    "마라톤 대회 일정을 카카오톡, 네이버 캘린더에 간편하게 추가하세요.",
+    "마라톤 대회 일정을 카카오톡 캘린더에 추가하고 알림을 받아보세요.",
   alternates: { canonical: "/calendar-add" },
 };
 
@@ -43,49 +43,29 @@ export default async function CalendarAddPage({
   const {
     data: { user },
   } = await supabase.auth.getUser();
-  let naverConnected = false;
-  let naverRaceAddedSlugs: string[] = [];
-  let naverRegistrationAddedSlugs: string[] = [];
-
+  const admin = createAdminClient();
+  const { count: kakaoUserCount } = await admin
+    .from("kakao_connections")
+    .select("user_id", { count: "exact", head: true });
   if (user) {
-    const admin = createAdminClient();
-    const [connectionResult, naverEvents, kakaoConnection, kakaoEvents] =
-      await Promise.all([
-        admin
-          .from("naver_connections")
-          .select("user_id")
-          .eq("user_id", user.id)
-          .maybeSingle(),
-        admin
-          .from("calendar_events")
-          .select("marathon_slug, event_kind")
-          .eq("user_id", user.id)
-          .eq("provider", "naver")
-          .eq("status", "created"),
-        admin
-          .from("kakao_connections")
-          .select("user_id")
-          .eq("user_id", user.id)
-          .maybeSingle(),
-        admin
-          .from("calendar_events")
-          .select("marathon_slug, event_kind")
-          .eq("user_id", user.id)
-          .eq("provider", "kakao")
-          .eq("status", "created"),
-      ]);
+    const [kakaoConnection, kakaoEvents] = await Promise.all([
+      admin
+        .from("kakao_connections")
+        .select("user_id")
+        .eq("user_id", user.id)
+        .maybeSingle(),
+      admin
+        .from("calendar_events")
+        .select("marathon_slug, event_kind")
+        .eq("user_id", user.id)
+        .eq("provider", "kakao")
+        .eq("status", "created"),
+    ]);
     kakaoConnected = Boolean(kakaoConnection.data);
     kakaoRaceAddedSlugs = (kakaoEvents.data ?? [])
       .filter((item) => item.event_kind !== "registration")
       .map((item) => item.marathon_slug);
     kakaoRegistrationAddedSlugs = (kakaoEvents.data ?? [])
-      .filter((item) => item.event_kind === "registration")
-      .map((item) => item.marathon_slug);
-    naverConnected = Boolean(connectionResult.data);
-    naverRaceAddedSlugs = (naverEvents.data ?? [])
-      .filter((item) => item.event_kind !== "registration")
-      .map((item) => item.marathon_slug);
-    naverRegistrationAddedSlugs = (naverEvents.data ?? [])
       .filter((item) => item.event_kind === "registration")
       .map((item) => item.marathon_slug);
   }
@@ -100,8 +80,8 @@ export default async function CalendarAddPage({
       <PageTitle
         icon={CalendarPlus2}
         eyebrow="RUNZOA CALENDAR CONNECT"
-        title="내 캘린더에 추가"
-        description="카카오톡 캘린더는 대회 일정과 접수 일정 모두 하루전, 10분 전 알림을 지원합니다."
+        title="카카오 캘린더에 추가"
+        description={`카카오톡 캘린더에 대회와 접수 일정을 저장하고 하루 전, 1시간 전 알림을 받아보세요. 현재 ${(kakaoUserCount ?? 0).toLocaleString("ko-KR")}명이 이용하고 있습니다.`}
       />
       {params.calendarError && params.provider === "kakao" && (
         <p
@@ -123,9 +103,6 @@ export default async function CalendarAddPage({
         kakaoConnected={kakaoConnected}
         initialKakaoRaceAddedSlugs={kakaoRaceAddedSlugs}
         initialKakaoRegistrationAddedSlugs={kakaoRegistrationAddedSlugs}
-        naverConnected={naverConnected}
-        initialNaverRaceAddedSlugs={naverRaceAddedSlugs}
-        initialNaverRegistrationAddedSlugs={naverRegistrationAddedSlugs}
       />
     </>
   );

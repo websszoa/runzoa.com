@@ -18023,7 +18023,7 @@
       "startTime": null,
       "endTime": "17:00",
       "site": "https://roadracing.co.kr/",
-      "status": "접수중",
+      "status": "접수마감",
       "price": {
         "HALF": 50000,
         "10KM": 50000

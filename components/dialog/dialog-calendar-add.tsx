@@ -20,7 +20,7 @@ import {
 } from "@/lib/utils";
 
 export type CalendarEventKind = "race" | "registration";
-export type CalendarProvider = "kakao" | "naver";
+export type CalendarProvider = "kakao";
 
 type CalendarPreviewEntry = {
   label: string;
@@ -39,17 +39,14 @@ export type CalendarAddResult = {
 
 const PROVIDER_LABEL: Record<CalendarProvider, string> = {
   kakao: "카카오톡",
-  naver: "네이버",
 };
 
 const PROVIDER_CALENDAR_URL: Record<CalendarProvider, string> = {
   kakao: "https://calendar.kakao.com/",
-  naver: "https://calendar.naver.com/",
 };
 
 export function buildCalendarPreviewEntries(
   marathon: Marathon,
-  provider: CalendarProvider,
   kind: CalendarEventKind,
 ): CalendarPreviewEntry[] {
   const isRegistration = kind === "registration";
@@ -68,10 +65,7 @@ export function buildCalendarPreviewEntries(
     ? `${formatMarathonDate(schedule.startDate)}${schedule.startTime ? ` ${schedule.startTime}` : ""}`
     : "일정 미정";
   const baseTitle = isRegistration ? `[접수] ${marathon.name}` : marathon.name;
-  const title =
-    provider === "kakao"
-      ? Array.from(baseTitle).slice(0, 50).join("")
-      : baseTitle;
+  const title = Array.from(baseTitle).slice(0, 50).join("");
 
   return [
     { label: "제목", value: title },
@@ -89,10 +83,7 @@ export function buildCalendarPreviewEntries(
     ...(site ? [{ label: "링크", value: site, href: site }] : []),
     {
       label: "알림",
-      value:
-        provider === "kakao"
-          ? "하루전, 10분전"
-          : "네이버 캘린더에서 설정할 수 있어요",
+      value: "하루 전, 1시간 전",
     },
   ];
 }
@@ -167,9 +158,7 @@ export default function DialogCalendarAdd({
             size="lg"
             className={cn(
               "w-full border-transparent font-anyvid",
-              result?.provider === "kakao"
-                ? "bg-[#FEE500] text-[#3C1E1E] hover:bg-[#F5DC00] hover:text-[#3C1E1E]"
-                : "bg-[#03c75a] text-white hover:bg-[#02b351] hover:text-white",
+              "bg-[#FEE500] text-[#3C1E1E] hover:bg-[#F5DC00] hover:text-[#3C1E1E]",
             )}
             nativeButton={false}
             render={
