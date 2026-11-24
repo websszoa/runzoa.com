@@ -259,14 +259,16 @@ export function getMarathonDistances(
 ) {
   return [
     ...new Set(
-      Object.keys(prices ?? {}).map((distance) =>
-        distance
-          .replace(
-            /\s*\(\s*\d{1,2}\.\d{1,2}\s*[~～-]\s*\d{1,2}\.\d{1,2}\s*\)\s*$/,
-            "",
-          )
-          .trim(),
-      ),
+      Object.keys(prices ?? {})
+        .filter((distance) => distance !== "5KM_FAMILY")
+        .map((distance) =>
+          distance
+            .replace(
+              /\s*\(\s*\d{1,2}\.\d{1,2}\s*[~～-]\s*\d{1,2}\.\d{1,2}\s*\)\s*$/,
+              "",
+            )
+            .trim(),
+        ),
     ),
   ].filter(Boolean);
 }
