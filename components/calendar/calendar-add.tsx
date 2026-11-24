@@ -329,9 +329,7 @@ export default function CalendarAdd({
                             <span className="truncate">
                               {marathon.location.region || "지역 확인"}
                               {marathon.location.venue && (
-                                <span className="hidden sm:inline">
-                                  {` · ${marathon.location.venue}`}
-                                </span>
+                                <span>{` · ${marathon.location.venue}`}</span>
                               )}
                             </span>
                           </p>
