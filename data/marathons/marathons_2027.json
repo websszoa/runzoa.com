@@ -3707,5 +3707,58 @@
       "email": "run@runandrun3.com",
       "instagram": "burning_run"
     }
+  },
+  {
+    "slug": "hyrox-incheon-2027",
+    "name": "2027 하이록스 인천",
+    "description": "2027년 5월 13일부터 16일까지 인천 송도컨벤시아에서 개최되는 BYD 하이록스 인천 대회입니다. 1km 러닝 8회와 8개의 기능성 운동 스테이션을 번갈아 수행하는 실내 피트니스 레이스로, 개인전 Open·Pro, 2인 더블, 4인 릴레이 등 다양한 부문으로 운영됩니다. 러닝과 근력, 지구력을 함께 겨루는 글로벌 피트니스 대회입니다.",
+    "info": {
+      "type": "마라톤",
+      "scale": null,
+      "park": null,
+      "souvenir": "완주자 HYROX 피니셔 패치",
+      "program": "연령대별 시상식, 종목별 기록 및 구간 기록 제공, 일부 프로 부문 세계선수권 출전권 배정",
+      "memo": "일반 마라톤이 아닌 하이브리드 피트니스 레이스입니다. 1km 러닝 8회와 기능성 운동 8개 스테이션으로 구성됩니다. 개인 Open·Pro, 더블 Open·Pro, 릴레이 부문 등이 운영됩니다. 2027년 참가비와 티켓 판매 시작일은 아직 발표되지 않았습니다. 대회 일정은 잠정 일정으로 변경될 수 있습니다."
+    },
+    "event": {
+      "startDate": "2027-05-13",
+      "endDate": "2027-05-16",
+      "startTime": null,
+      "endTime": null,
+      "site": "https://hyrox.com/event/hyrox-incheon/",
+      "schedule": {}
+    },
+    "registration": {
+      "startDate": "2026-12-03",
+      "endDate": null,
+      "startTime": null,
+      "endTime": null,
+      "site": "https://hyrox.com/event/hyrox-incheon/",
+      "status": null,
+      "currency": "KRW",
+      "price": {},
+      "refund": {
+        "endDate": null,
+        "policy": null
+      }
+    },
+    "location": {
+      "country": "한국",
+      "region": "인천",
+      "area": "연수구",
+      "venue": "송도컨벤시아",
+      "naver": "송도컨벤시아",
+      "address": "인천광역시 연수구 센트럴로 123",
+      "latitude": 37.3889608,
+      "longitude": 126.6463237
+    },
+    "hosts": {
+      "organizer": "HYROX",
+      "manager": null,
+      "sponsor": "BYD",
+      "phone": null,
+      "email": null,
+      "instagram": null
+    }
   }
 ]
