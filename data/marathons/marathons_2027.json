@@ -3760,5 +3760,118 @@
       "email": null,
       "instagram": null
     }
+  },
+  {
+    "slug": "just-run10-sejong-first-half-2027",
+    "name": "2027 JUST RUN10 세종 상반기",
+    "description": "2027년 2월 27일 세종특별자치시 세종마루공원 아래 금강변 인근에서 개최되는 JUST RUN10 세종 상반기 대회입니다. 5km와 10km 두 종목으로 진행되며, 금강변을 따라 달리는 러닝 대회입니다. 참가자에게 공식 티셔츠, 완주메달, 배번호 및 기록칩, 음료와 간식 등이 제공됩니다.",
+    "info": {
+      "type": "마라톤",
+      "scale": 3000,
+      "park": null,
+      "souvenir": "공식 티셔츠, 완주메달, 배번호표, 기록칩, 음료 및 간식",
+      "program": null,
+      "memo": "공식 티셔츠와 배번호표 및 기록칩은 사전 배송되며, 완주메달과 음료 및 간식은 현장에서 제공됩니다. 공개된 기념품 이미지는 예시로 실제 디자인은 추후 공개 예정입니다."
+    },
+    "event": {
+      "startDate": "2027-02-27",
+      "endDate": "2027-02-27",
+      "startTime": "09:00",
+      "endTime": null,
+      "site": "https://runten.co.kr/competitions/a6d83a00-01d5-44f2-8bca-9449612e5c90",
+      "schedule": {
+        "09:00": "대회 시작"
+      }
+    },
+    "registration": {
+      "startDate": "2026-11-07",
+      "endDate": null,
+      "startTime": null,
+      "endTime": null,
+      "site": "https://runten.co.kr/competitions/a6d83a00-01d5-44f2-8bca-9449612e5c90",
+      "status": null,
+      "currency": "KRW",
+      "price": {
+        "5KM": 45000,
+        "10KM": 50000
+      },
+      "refund": {
+        "endDate": null,
+        "policy": null
+      }
+    },
+    "location": {
+      "country": "한국",
+      "region": "세종",
+      "area": "세종시",
+      "venue": "세종마루공원 밑 금강변 인근",
+      "naver": "세종마루공원",
+      "address": "세종특별자치시 보람동 624-1",
+      "latitude": 36.4820943,
+      "longitude": 127.2911707
+    },
+    "hosts": {
+      "organizer": "(주)러닝브레이커",
+      "manager": "전국러닝협회",
+      "sponsor": null,
+      "phone": "042-710-2058",
+      "email": "runningbreaker@naver.com",
+      "instagram": null
+    }
+  },
+  {
+    "slug": "lee-bong-ju-marathon-2027",
+    "name": "2027 이봉주 마라톤",
+    "description": "2027년 4월 18일 인천대학교에서 개최 예정인 이봉주 마라톤대회입니다. 대한민국 마라톤의 전설이자 보스턴 마라톤 우승자인 이봉주 선수와 함께 21km를 달리는 특별한 러닝 행사입니다. 2027년 봄, 이봉주 선수와 함께 새로운 도전과 잊지 못할 레이스를 경험할 수 있는 대회입니다.",
+    "info": {
+      "type": "마라톤",
+      "scale": null,
+      "park": null,
+      "souvenir": null,
+      "program": "이봉주 선수와 함께하는 21K 러닝",
+      "memo": "공식 홈페이지 오픈 및 참가 접수 일정은 추후 안내 예정입니다. 세부 대회 요강과 참가비, 기념품 등은 아직 공개되지 않았습니다."
+    },
+    "event": {
+      "startDate": "2027-04-18",
+      "endDate": "2027-04-18",
+      "startTime": null,
+      "endTime": null,
+      "site": null,
+      "schedule": {}
+    },
+    "registration": {
+      "startDate": null,
+      "endDate": null,
+      "startTime": null,
+      "endTime": null,
+      "site": null,
+      "status": null,
+      "currency": "KRW",
+      "price": {
+        "21KM": null
+      },
+      "refund": {
+        "endDate": null,
+        "policy": null
+      }
+    },
+    "location": {
+      "country": "한국",
+      "region": "인천",
+      "area": "연수구",
+      "venue": "인천대학교",
+      "naver": "인천대학교 송도캠퍼스",
+      "address": "인천광역시 연수구 아카데미로 119",
+      "latitude": 37.3754977,
+      "longitude": 126.6332532
+    },
+    "hosts": {
+      "organizer": null,
+      "manager": null,
+      "sponsor": null,
+      "phone": null,
+      "email": null,
+      "instagram": null
+    }
   }
 ]

@@ -16,6 +16,16 @@ type MarathonDetailPageProps = {
   params: Promise<{ slug: string }>;
 };
 
+// 데이터에 없는 slug는 200 + noindex(soft 404) 대신 실제 404를 반환합니다.
+export const dynamicParams = false;
+// 접수 상태·D-day가 날짜에 따라 바뀌므로 1시간마다 다시 생성합니다.
+export const revalidate = 3600;
+
+export async function generateStaticParams() {
+  const { marathons } = await getMarathons();
+  return marathons.map((marathon) => ({ slug: marathon.slug }));
+}
+
 function truncate(text: string, maxLength: number) {
   return text.length > maxLength
     ? `${text.slice(0, maxLength - 1)}…`
