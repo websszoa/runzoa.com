@@ -100,7 +100,10 @@ function buildMarathonStructuredData(marathon: Marathon) {
       : registrationStatus === "접수마감"
         ? "https://schema.org/SoldOut"
         : "https://schema.org/PreOrder";
-  const offers = Object.entries(marathon.registration.price ?? {})
+  const validFrom = marathon.registration.startDate
+    ? `${marathon.registration.startDate}T${marathon.registration.startTime ?? "00:00"}:00+09:00`
+    : undefined;
+  const offers =Object.entries(marathon.registration.price ?? {})
     .filter((entry): entry is [string, number] => typeof entry[1] === "number")
     .map(([distance, price]) => ({
       "@type": "Offer",
@@ -108,6 +111,7 @@ function buildMarathonStructuredData(marathon: Marathon) {
       price,
       priceCurrency: marathon.registration.currency ?? "KRW",
       availability,
+      ...(validFrom && { validFrom }),
       url: marathon.registration.site ?? url,
     }));
 
@@ -125,6 +129,10 @@ function buildMarathonStructuredData(marathon: Marathon) {
     eventAttendanceMode: "https://schema.org/OfflineEventAttendanceMode",
     eventStatus: "https://schema.org/EventScheduled",
     ...(location && { location }),
+    performer: {
+      "@type": "PerformingGroup",
+      name: `${marathon.name} 참가자`,
+    },
     ...(organizerName && {
       organizer: {
         "@type": "Organization",
